@@ -1,0 +1,26 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Neo4j / data dumps
+neo4j/
+*.dump
+*.jsonl
+
+# Source publications (PDFs etc.) — kept locally, tracked via checksums.json
+data/publications/*
+!data/publications/.gitkeep
+
+# Large ontology files
+ontology/matsci-v10-semantic-closure.owl
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
