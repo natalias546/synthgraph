@@ -1,0 +1,50 @@
+{
+  "request_sha256": "189791166a68ce2d947d701cfd9bb1636b0e887dda61f7105d3392bbc8f27a21",
+  "provider": "openrouter",
+  "model": "xingchen-agi/xing4.0-29b-a4b:free",
+  "response_id": "gen-1792724943-wFjt76hcW4R20RnDV3sD",
+  "usage": {
+    "completion_tokens": 91,
+    "prompt_tokens": 359,
+    "total_tokens": 450,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": 0
+    },
+    "compute_units": null,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": 0
+    },
+    "cost": 0,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "data": {
+    "phrases": [
+      "powder",
+      "flake",
+      "Riemann analysis",
+      "Science+Business Media, LLC",
+      "electrical transport measurements",
+      "grown crystal",
+      "Springer Nature",
+      "metallic behavior",
+      "temperature",
+      "magnetoresistance",
+      "variation in magnetoresistance (MR) values"
+    ]
+  }
+}

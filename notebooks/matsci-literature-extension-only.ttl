@@ -1,0 +1,557 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/matsci/ontology/literature/BandGapMeasurementRecord> a owl:Class ;
+    rdfs:label "BandGapMeasurementRecord" ;
+    rdfs:comment "Reported experimentally determined electronic or optical band-gap value and determination method." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificMeasurementRecord> .
+
+<https://w3id.org/matsci/ontology/literature/ChemicalVaporDepositionMethod> a owl:Class ;
+    rdfs:label "ChemicalVaporDepositionMethod" ;
+    rdfs:comment "Plan or method for chemical vapor deposition (CVD), distinct from the actual process run." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/ExperimentalMethod> .
+
+<https://w3id.org/matsci/ontology/literature/ChemicalVaporDepositionRun> a owl:Class ;
+    rdfs:label "ChemicalVaporDepositionRun" ;
+    rdfs:comment "An actual occurrence of chemical vapor deposition processing." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/ProcessRun> .
+
+<https://w3id.org/matsci/ontology/literature/ChemicalVaporTransportMethod> a owl:Class ;
+    rdfs:label "ChemicalVaporTransportMethod" ;
+    rdfs:comment "Plan or method for chemical vapor transport (CVT), distinct from the actual process run." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/ExperimentalMethod> .
+
+<https://w3id.org/matsci/ontology/literature/ChemicalVaporTransportRun> a owl:Class ;
+    rdfs:label "ChemicalVaporTransportRun" ;
+    rdfs:comment "An actual occurrence of chemical vapor transport processing." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/ProcessRun> .
+
+<https://w3id.org/matsci/ontology/literature/DopingLevelDescription> a owl:Class ;
+    rdfs:label "DopingLevelDescription" ;
+    rdfs:comment "Reported dopant, composition variable, site or fractional doping level." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificParameterDescription> .
+
+<https://w3id.org/matsci/ontology/literature/FirstPrinciplesCalculationRun> a owl:Class ;
+    rdfs:label "FirstPrinciplesCalculationRun" ;
+    rdfs:comment "Actual first-principles or density-functional-theory calculation." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/ComputationRun> .
+
+<https://w3id.org/matsci/ontology/literature/SpectrumDataDescription> a owl:Class ;
+    rdfs:label "SpectrumDataDescription" ;
+    rdfs:comment "Description of a spectral data product, axes, signal type and data provenance." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/TemperatureParameterDescription> a owl:Class ;
+    rdfs:label "TemperatureParameterDescription" ;
+    rdfs:comment "Context-qualified symbolic temperature parameter including transition or annealing temperature." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificParameterDescription> .
+
+<https://w3id.org/matsci/ontology/literature/UVVisibleMeasurementRecord> a owl:Class ;
+    rdfs:label "UVVisibleMeasurementRecord" ;
+    rdfs:comment "Recorded ultraviolet-visible optical measurement and its wavelength or energy range." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificMeasurementRecord> .
+
+<https://w3id.org/matsci/ontology/literature/UVVisibleSpectroscopyMethod> a owl:Class ;
+    rdfs:label "UVVisibleSpectroscopyMethod" ;
+    rdfs:comment "Specification for ultraviolet-visible spectroscopic characterization." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/ExperimentalMethod> .
+
+<https://w3id.org/matsci/ontology/literature/causalStatus> a owl:DatatypeProperty ;
+    rdfs:label "causalStatus" ;
+    rdfs:comment "observed_trend, asserted_cause, predicted, or unknown." .
+
+<https://w3id.org/matsci/ontology/literature/claimModality> a owl:DatatypeProperty ;
+    rdfs:label "claimModality" ;
+    rdfs:comment "Might, likely, necessary, sufficient etc. as stated." .
+
+<https://w3id.org/matsci/ontology/literature/claimPolarity> a owl:DatatypeProperty ;
+    rdfs:label "claimPolarity" ;
+    rdfs:comment "affirmed, negated or uncertain." .
+
+<https://w3id.org/matsci/ontology/literature/compositionExpression> a owl:DatatypeProperty ;
+    rdfs:label "compositionExpression" ;
+    rdfs:comment "Chemical composition expression with variables e.g. Fe1-xCox." .
+
+<https://w3id.org/matsci/ontology/literature/computationMethodName> a owl:DatatypeProperty ;
+    rdfs:label "computationMethodName" ;
+    rdfs:comment "Reported first-principles or other computational method." .
+
+<https://w3id.org/matsci/ontology/literature/computationalSettings> a owl:DatatypeProperty ;
+    rdfs:label "computationalSettings" ;
+    rdfs:comment "Reported calculation parameters in the publication." .
+
+<https://w3id.org/matsci/ontology/literature/computedPropertyName> a owl:DatatypeProperty ;
+    rdfs:label "computedPropertyName" ;
+    rdfs:comment "Property whose value is produced by a simulation." .
+
+<https://w3id.org/matsci/ontology/literature/crystalSystemName> a owl:DatatypeProperty ;
+    rdfs:label "crystalSystemName" ;
+    rdfs:comment "Published crystal system name." .
+
+<https://w3id.org/matsci/ontology/literature/denotesOntologyConcept> a owl:ObjectProperty ;
+    rdfs:label "denotesOntologyConcept" ;
+    rdfs:comment "Points to an existing ontology concept, when reviewed and unambiguous." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificTerminologyEntry> .
+
+<https://w3id.org/matsci/ontology/literature/dependentChange> a owl:DatatypeProperty ;
+    rdfs:label "dependentChange" ;
+    rdfs:comment "Reported direction of the dependent parameter." .
+
+<https://w3id.org/matsci/ontology/literature/dependentVariableSymbol> a owl:DatatypeProperty ;
+    rdfs:label "dependentVariableSymbol" ;
+    rdfs:comment "Parameter reported as responding in trend." .
+
+<https://w3id.org/matsci/ontology/literature/describesComposition> a owl:ObjectProperty ;
+    rdfs:label "describesComposition" ;
+    rdfs:comment "Links the textual material mention to composition expression." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/MaterialMention> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/VariableCompositionDescription> .
+
+<https://w3id.org/matsci/ontology/literature/describesRun> a owl:ObjectProperty ;
+    rdfs:label "describesRun" ;
+    rdfs:comment "Points to an experiment or simulation occurrence, where explicitly identified." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/elementSymbol> a owl:DatatypeProperty ;
+    rdfs:label "elementSymbol" ;
+    rdfs:comment "Periodic-table symbol from a documented composition member." .
+
+<https://w3id.org/matsci/ontology/literature/epistemicStatus> a owl:DatatypeProperty ;
+    rdfs:label "epistemicStatus" ;
+    rdfs:comment "observed, computed, hypothesized, inferred or author_proposed." .
+
+<https://w3id.org/matsci/ontology/literature/extractionConfidence> a owl:DatatypeProperty ;
+    rdfs:label "extractionConfidence" ;
+    rdfs:comment "Model confidence, uncalibrated." .
+
+<https://w3id.org/matsci/ontology/literature/extractionModel> a owl:DatatypeProperty ;
+    rdfs:label "extractionModel" ;
+    rdfs:comment "Model identifier used to extract this record." .
+
+<https://w3id.org/matsci/ontology/literature/hasAcronymDefinition> a owl:ObjectProperty ;
+    rdfs:label "hasAcronymDefinition" ;
+    rdfs:comment "Links term to its abbreviation-expansion entry." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificTerminologyEntry> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/AcronymDefinition> .
+
+<https://w3id.org/matsci/ontology/literature/hasCrystalDescription> a owl:ObjectProperty ;
+    rdfs:label "hasCrystalDescription" ;
+    rdfs:comment "Links a material mention to its reported crystallography." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/MaterialMention> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/CrystallographicDescription> .
+
+<https://w3id.org/matsci/ontology/literature/hasDependentParameter> a owl:ObjectProperty ;
+    rdfs:label "hasDependentParameter" ;
+    rdfs:comment "Dependent variable in a reported trend." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/DirectionalTrendClaim> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/ScientificParameterDescription> .
+
+<https://w3id.org/matsci/ontology/literature/hasEvidence> a owl:ObjectProperty ;
+    rdfs:label "hasEvidence" ;
+    rdfs:comment "Links a recorded statement to the passage from which it was extracted." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/LiteratureEvidenceSpan> .
+
+<https://w3id.org/matsci/ontology/literature/hasExperimentalCondition> a owl:ObjectProperty ;
+    rdfs:label "hasExperimentalCondition" ;
+    rdfs:comment "Links a result or process description with an experiment condition." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/ExperimentalConditionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/hasIndependentParameter> a owl:ObjectProperty ;
+    rdfs:label "hasIndependentParameter" ;
+    rdfs:comment "Independent variable in a reported trend." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/DirectionalTrendClaim> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/ScientificParameterDescription> .
+
+<https://w3id.org/matsci/ontology/literature/hasMeasurementRecord> a owl:ObjectProperty ;
+    rdfs:label "hasMeasurementRecord" ;
+    rdfs:comment "Connects material mention with an associated measurement result." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/MaterialMention> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/ScientificMeasurementRecord> .
+
+<https://w3id.org/matsci/ontology/literature/hasOccupancy> a owl:ObjectProperty ;
+    rdfs:label "hasOccupancy" ;
+    rdfs:comment "Links composition to element or site coefficients." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/VariableCompositionDescription> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/CompositionOccupancyDescription> .
+
+<https://w3id.org/matsci/ontology/literature/hasProcessDescription> a owl:ObjectProperty ;
+    rdfs:label "hasProcessDescription" ;
+    rdfs:comment "Connects a material mention with a reported processing method or history." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/MaterialMention> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/ProcessDescription> .
+
+<https://w3id.org/matsci/ontology/literature/hasSimulationResult> a owl:ObjectProperty ;
+    rdfs:label "hasSimulationResult" ;
+    rdfs:comment "Connects material mention with reported computed result." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/MaterialMention> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/SimulationResultRecord> .
+
+<https://w3id.org/matsci/ontology/literature/hasSiteDescription> a owl:ObjectProperty ;
+    rdfs:label "hasSiteDescription" ;
+    rdfs:comment "Connects crystallographic information to atomic site descriptions." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/CrystallographicDescription> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/WyckoffSiteDescription> .
+
+<https://w3id.org/matsci/ontology/literature/hasSoftwareConfiguration> a owl:ObjectProperty ;
+    rdfs:label "hasSoftwareConfiguration" ;
+    rdfs:comment "Links simulation result to reproducibility details about software." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/SimulationResultRecord> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/SoftwareConfiguration> .
+
+<https://w3id.org/matsci/ontology/literature/hasSpaceGroupAssignment> a owl:ObjectProperty ;
+    rdfs:label "hasSpaceGroupAssignment" ;
+    rdfs:comment "Connects crystallographic information to space group assignment." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/CrystallographicDescription> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/SpaceGroupAssignment> .
+
+<https://w3id.org/matsci/ontology/literature/hasUnitCellDatum> a owl:ObjectProperty ;
+    rdfs:label "hasUnitCellDatum" ;
+    rdfs:comment "Connects a crystal description to cell parameters." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/CrystallographicDescription> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/UnitCellParameterDatum> .
+
+<https://w3id.org/matsci/ontology/literature/independentChange> a owl:DatatypeProperty ;
+    rdfs:label "independentChange" ;
+    rdfs:comment "Reported direction of the independent parameter." .
+
+<https://w3id.org/matsci/ontology/literature/independentVariableSymbol> a owl:DatatypeProperty ;
+    rdfs:label "independentVariableSymbol" ;
+    rdfs:comment "Parameter changed or treated as independent in trend." .
+
+<https://w3id.org/matsci/ontology/literature/isNewTermCandidate> a owl:DatatypeProperty ;
+    rdfs:label "isNewTermCandidate" ;
+    rdfs:comment "Flag that an extraction considers a term unfamiliar; requires review." .
+
+<https://w3id.org/matsci/ontology/literature/latticeParametersLexical> a owl:DatatypeProperty ;
+    rdfs:label "latticeParametersLexical" ;
+    rdfs:comment "Raw lattice parameter expression; individual parameters also have typed nodes." .
+
+<https://w3id.org/matsci/ontology/literature/materialName> a owl:DatatypeProperty ;
+    rdfs:label "materialName" ;
+    rdfs:comment "Reported material or specimen name; not yet globally reconciled." .
+
+<https://w3id.org/matsci/ontology/literature/measuredPropertyName> a owl:DatatypeProperty ;
+    rdfs:label "measuredPropertyName" ;
+    rdfs:comment "Reported name of a property being measured." .
+
+<https://w3id.org/matsci/ontology/literature/measurementMode> a owl:DatatypeProperty ;
+    rdfs:label "measurementMode" ;
+    rdfs:comment "experiment, simulation, analysis or unclassified as reported." .
+
+<https://w3id.org/matsci/ontology/literature/measurementTechniqueName> a owl:DatatypeProperty ;
+    rdfs:label "measurementTechniqueName" ;
+    rdfs:comment "Reported experimental measurement modality such as UV-VIS." .
+
+<https://w3id.org/matsci/ontology/literature/mentionsMaterial> a owl:ObjectProperty ;
+    rdfs:label "mentionsMaterial" ;
+    rdfs:comment "Identifies a material mention described by a scientific record." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/MaterialMention> .
+
+<https://w3id.org/matsci/ontology/literature/normalizedNotation> a owl:DatatypeProperty ;
+    rdfs:label "normalizedNotation" ;
+    rdfs:comment "Safe normalized representation, retaining original separately." .
+
+<https://w3id.org/matsci/ontology/literature/occupancyExpression> a owl:DatatypeProperty ;
+    rdfs:label "occupancyExpression" ;
+    rdfs:comment "Reported occupancy expression for a constituent." .
+
+<https://w3id.org/matsci/ontology/literature/originalNotation> a owl:DatatypeProperty ;
+    rdfs:label "originalNotation" ;
+    rdfs:comment "Original formula, scientific variable or term before normalization." .
+
+<https://w3id.org/matsci/ontology/literature/parameterSymbol> a owl:DatatypeProperty ;
+    rdfs:label "parameterSymbol" ;
+    rdfs:comment "Literal parameter symbol, preserving Tc, Ta, etc." .
+
+<https://w3id.org/matsci/ontology/literature/parameterUnit> a owl:DatatypeProperty ;
+    rdfs:label "parameterUnit" ;
+    rdfs:comment "Unit attached to a parameter or measurement." .
+
+<https://w3id.org/matsci/ontology/literature/processAcronym> a owl:DatatypeProperty ;
+    rdfs:label "processAcronym" ;
+    rdfs:comment "Reported shorthand for a process." .
+
+<https://w3id.org/matsci/ontology/literature/processConditions> a owl:DatatypeProperty ;
+    rdfs:label "processConditions" ;
+    rdfs:comment "Reported precursors, duration, atmosphere and temperature program." .
+
+<https://w3id.org/matsci/ontology/literature/processDescriptionText> a owl:DatatypeProperty ;
+    rdfs:label "processDescriptionText" ;
+    rdfs:comment "Literal published process or procedure description." .
+
+<https://w3id.org/matsci/ontology/literature/processTypeName> a owl:DatatypeProperty ;
+    rdfs:label "processTypeName" ;
+    rdfs:comment "Reported type of process such as annealing, CVT or CVD." .
+
+<https://w3id.org/matsci/ontology/literature/referencesTerminology> a owl:ObjectProperty ;
+    rdfs:label "referencesTerminology" ;
+    rdfs:comment "Links record with its lexical terminology entry." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/ScientificTerminologyEntry> .
+
+<https://w3id.org/matsci/ontology/literature/refersToMeasurement> a owl:ObjectProperty ;
+    rdfs:label "refersToMeasurement" ;
+    rdfs:comment "Links scientific claim to reported measurement data." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/QualifiedScientificClaim> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/ScientificMeasurementRecord> .
+
+<https://w3id.org/matsci/ontology/literature/refersToSimulation> a owl:ObjectProperty ;
+    rdfs:label "refersToSimulation" ;
+    rdfs:comment "Links scientific claim to computed result." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/QualifiedScientificClaim> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/SimulationResultRecord> .
+
+<https://w3id.org/matsci/ontology/literature/relationshipStatementText> a owl:DatatypeProperty ;
+    rdfs:label "relationshipStatementText" ;
+    rdfs:comment "Literal source description of a parameter relationship." .
+
+<https://w3id.org/matsci/ontology/literature/reportedEquipmentName> a owl:DatatypeProperty ;
+    rdfs:label "reportedEquipmentName" ;
+    rdfs:comment "Exact instrument/equipment product or type." .
+
+<https://w3id.org/matsci/ontology/literature/reportedSoftwareName> a owl:DatatypeProperty ;
+    rdfs:label "reportedSoftwareName" ;
+    rdfs:comment "Exact software name and version as printed." .
+
+<https://w3id.org/matsci/ontology/literature/reportedSymmetry> a owl:DatatypeProperty ;
+    rdfs:label "reportedSymmetry" ;
+    rdfs:comment "Reported symmetry or point-group label, preserving original notation." .
+
+<https://w3id.org/matsci/ontology/literature/reportedUncertainty> a owl:DatatypeProperty ;
+    rdfs:label "reportedUncertainty" ;
+    rdfs:comment "As-reported uncertainty and its notation." .
+
+<https://w3id.org/matsci/ontology/literature/reportedValue> a owl:DatatypeProperty ;
+    rdfs:label "reportedValue" ;
+    rdfs:comment "Literal measured or computed value, including inequalities and uncertainty." .
+
+<https://w3id.org/matsci/ontology/literature/sampleConditions> a owl:DatatypeProperty ;
+    rdfs:label "sampleConditions" ;
+    rdfs:comment "Sample condition, field, pressure and environment as reported." .
+
+<https://w3id.org/matsci/ontology/literature/scientificClaimText> a owl:DatatypeProperty ;
+    rdfs:label "scientificClaimText" ;
+    rdfs:comment "The reported claim text with qualification and negation preserved." .
+
+<https://w3id.org/matsci/ontology/literature/scientificTermLabel> a owl:DatatypeProperty ;
+    rdfs:label "scientificTermLabel" ;
+    rdfs:comment "Reported specialized term or phrase, including unusual words." .
+
+<https://w3id.org/matsci/ontology/literature/softwareVersion> a owl:DatatypeProperty ;
+    rdfs:label "softwareVersion" ;
+    rdfs:comment "Reported software version or release." .
+
+<https://w3id.org/matsci/ontology/literature/sourceDocumentSha256> a owl:DatatypeProperty ;
+    rdfs:label "sourceDocumentSha256" ;
+    rdfs:comment "SHA-256 checksum of the source PDF." .
+
+<https://w3id.org/matsci/ontology/literature/sourceEndOffset> a owl:DatatypeProperty ;
+    rdfs:label "sourceEndOffset" ;
+    rdfs:comment "Exclusive character offset into normalized extracted page text; -1 means unanchored." .
+
+<https://w3id.org/matsci/ontology/literature/sourcePage> a owl:DatatypeProperty ;
+    rdfs:label "sourcePage" ;
+    rdfs:comment "One-based physical page number of the PDF." .
+
+<https://w3id.org/matsci/ontology/literature/sourceQuote> a owl:DatatypeProperty ;
+    rdfs:label "sourceQuote" ;
+    rdfs:comment "Exact contiguous surface form quoted from the article." .
+
+<https://w3id.org/matsci/ontology/literature/sourceSection> a owl:DatatypeProperty ;
+    rdfs:label "sourceSection" ;
+    rdfs:comment "Section, caption, table or figure label as stated in the article." .
+
+<https://w3id.org/matsci/ontology/literature/sourceStartOffset> a owl:DatatypeProperty ;
+    rdfs:label "sourceStartOffset" ;
+    rdfs:comment "Inclusive character offset into normalized extracted page text; -1 means unanchored." .
+
+<https://w3id.org/matsci/ontology/literature/spaceGroupNumber> a owl:DatatypeProperty ;
+    rdfs:label "spaceGroupNumber" ;
+    rdfs:comment "International space-group number as extracted." .
+
+<https://w3id.org/matsci/ontology/literature/spaceGroupSymbol> a owl:DatatypeProperty ;
+    rdfs:label "spaceGroupSymbol" ;
+    rdfs:comment "Published space-group symbol, including typography." .
+
+<https://w3id.org/matsci/ontology/literature/specifiedByMethod> a owl:ObjectProperty ;
+    rdfs:label "specifiedByMethod" ;
+    rdfs:comment "Links a described process to the method or plan specification." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ProcessDescription> .
+
+<https://w3id.org/matsci/ontology/literature/structureType> a owl:DatatypeProperty ;
+    rdfs:label "structureType" ;
+    rdfs:comment "Reported crystal/structural motif such as kagome." .
+
+<https://w3id.org/matsci/ontology/literature/symbolDefinition> a owl:DatatypeProperty ;
+    rdfs:label "symbolDefinition" ;
+    rdfs:comment "Context-specific meaning of mathematical or temperature symbol." .
+
+<https://w3id.org/matsci/ontology/literature/temperatureContext> a owl:DatatypeProperty ;
+    rdfs:label "temperatureContext" ;
+    rdfs:comment "Contextual temperature statement for a measurement." .
+
+<https://w3id.org/matsci/ontology/literature/termAcronym> a owl:DatatypeProperty ;
+    rdfs:label "termAcronym" ;
+    rdfs:comment "Acronym or lexical abbreviation." .
+
+<https://w3id.org/matsci/ontology/literature/termConceptType> a owl:DatatypeProperty ;
+    rdfs:label "termConceptType" ;
+    rdfs:comment "Proposed terminology category such as lattice, effect, instrument or process." .
+
+<https://w3id.org/matsci/ontology/literature/termDefinitionText> a owl:DatatypeProperty ;
+    rdfs:label "termDefinitionText" ;
+    rdfs:comment "Document-supported textual definition of a term." .
+
+<https://w3id.org/matsci/ontology/literature/termExpansion> a owl:DatatypeProperty ;
+    rdfs:label "termExpansion" ;
+    rdfs:comment "Expansion explicitly supported by the text." .
+
+<https://w3id.org/matsci/ontology/literature/termReviewStatus> a owl:DatatypeProperty ;
+    rdfs:label "termReviewStatus" ;
+    rdfs:comment "resolved, provisional or unresolved; no automatic OWL promotion." .
+
+<https://w3id.org/matsci/ontology/literature/usedMeasurementInstrument> a owl:ObjectProperty ;
+    rdfs:label "usedMeasurementInstrument" ;
+    rdfs:comment "Names the physical equipment used for a reported measurement." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificMeasurementRecord> .
+
+<https://w3id.org/matsci/ontology/literature/usesScientificParameter> a owl:ObjectProperty ;
+    rdfs:label "usesScientificParameter" ;
+    rdfs:comment "Links a record with a contextual scientific symbol or variable." ;
+    rdfs:domain <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> ;
+    rdfs:range <https://w3id.org/matsci/ontology/literature/ScientificParameterDescription> .
+
+<https://w3id.org/matsci/ontology/literature/valueQualifier> a owl:DatatypeProperty ;
+    rdfs:label "valueQualifier" ;
+    rdfs:comment "Qualifier such as approximate, upper bound, minimum or at room temperature." .
+
+<https://w3id.org/matsci/ontology/literature/wyckoffSitesLexical> a owl:DatatypeProperty ;
+    rdfs:label "wyckoffSitesLexical" ;
+    rdfs:comment "Raw Wyckoff and atomic-site expressions; individual sites also have typed nodes." .
+
+<https://w3id.org/matsci/ontology/literature/AcronymDefinition> a owl:Class ;
+    rdfs:label "AcronymDefinition" ;
+    rdfs:comment "An acronym and its explicit expansion or a candidate expansion requiring review." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificTerminologyEntry> .
+
+<https://w3id.org/matsci/ontology/literature/CompositionOccupancyDescription> a owl:Class ;
+    rdfs:label "CompositionOccupancyDescription" ;
+    rdfs:comment "Information on an element, site and coefficient in a chemical formula." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/ExperimentalConditionRecord> a owl:Class ;
+    rdfs:label "ExperimentalConditionRecord" ;
+    rdfs:comment "Reported process or measurement condition with quantity, unit and scope." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/LiteratureEvidenceSpan> a owl:Class ;
+    rdfs:label "LiteratureEvidenceSpan" ;
+    rdfs:comment "Quoted span of a publication with page and character offsets; evidence is an information artifact, not a physical observation." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/EvidenceInformation> .
+
+<https://w3id.org/matsci/ontology/literature/SoftwareConfiguration> a owl:Class ;
+    rdfs:label "SoftwareConfiguration" ;
+    rdfs:comment "Reported software name, release and computational settings associated with a calculation." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/SpaceGroupAssignment> a owl:Class ;
+    rdfs:label "SpaceGroupAssignment" ;
+    rdfs:comment "Documented space-group symbol, number and crystal system assignment." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/UnitCellParameterDatum> a owl:Class ;
+    rdfs:label "UnitCellParameterDatum" ;
+    rdfs:comment "Reported unit-cell parameter (a, b, c, alpha, beta, gamma) with its value and unit." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/WyckoffSiteDescription> a owl:Class ;
+    rdfs:label "WyckoffSiteDescription" ;
+    rdfs:comment "Documented Wyckoff letter, fractional coordinate or site occupancy." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/DirectionalTrendClaim> a owl:Class ;
+    rdfs:label "DirectionalTrendClaim" ;
+    rdfs:comment "Scientific assertion about how a dependent quantity changes with an independent variable, without implied causality." ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/Claim>,
+        <https://w3id.org/matsci/ontology/EvidenceInformation>,
+        <https://w3id.org/matsci/ontology/Prediction> ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/QualifiedScientificClaim> .
+
+<https://w3id.org/matsci/ontology/literature/ProcessDescription> a owl:Class ;
+    rdfs:label "ProcessDescription" ;
+    rdfs:comment "A written description of a synthesis, annealing, doping, measurement or other experimental process." ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/Doping>,
+        <https://w3id.org/matsci/ontology/ExperimentalMethod>,
+        <https://w3id.org/matsci/ontology/ProcessRun>,
+        <https://w3id.org/matsci/ontology/TemperatureProgram> ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/VariableCompositionDescription> a owl:Class ;
+    rdfs:label "VariableCompositionDescription" ;
+    rdfs:comment "Documented chemical composition with element occupancy expressions or a substitution variable." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/QualifiedScientificClaim> a owl:Class ;
+    rdfs:label "QualifiedScientificClaim" ;
+    rdfs:comment "Claim reported in literature with epistemic status, source, negation and hedging preserved." ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/Claim>,
+        <https://w3id.org/matsci/ontology/Hypothesis>,
+        <https://w3id.org/matsci/ontology/Prediction>,
+        <https://w3id.org/matsci/ontology/SourceAssertion> ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/Claim>,
+        <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/SimulationResultRecord> a owl:Class ;
+    rdfs:label "SimulationResultRecord" ;
+    rdfs:comment "Published computed prediction or simulation output with run configuration and software details." ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/ComputationRun>,
+        <https://w3id.org/matsci/ontology/ComputationalMethod>,
+        <https://w3id.org/matsci/ontology/ComputedBandGap>,
+        <https://w3id.org/matsci/ontology/integration/mseo/SimulationSoftware> ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/CrystallographicDescription> a owl:Class ;
+    rdfs:label "CrystallographicDescription" ;
+    rdfs:comment "Published description of crystal structure, space group, lattice parameters, symmetry or atomic sites." ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/CrystalLattice>,
+        <https://w3id.org/matsci/ontology/CrystalStructure>,
+        <https://w3id.org/matsci/ontology/CrystallographicUnitCell>,
+        <https://w3id.org/matsci/ontology/integration/matonto/SpaceGroup> ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/ScientificTerminologyEntry> a owl:Class ;
+    rdfs:label "ScientificTerminologyEntry" ;
+    rdfs:comment "A reported scientific term, including uncommon words and provisional, unresolved vocabulary." ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/CrystalStructure>,
+        <https://w3id.org/matsci/ontology/DocumentReference> ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/ScientificMeasurementRecord> a owl:Class ;
+    rdfs:label "ScientificMeasurementRecord" ;
+    rdfs:comment "Provenance-bearing report of a measured quantity, its unit, uncertainty and experimental conditions." ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/BandGap>,
+        <https://w3id.org/matsci/ontology/CriticalTemperature>,
+        <https://w3id.org/matsci/ontology/MeasurementRun>,
+        <https://w3id.org/matsci/ontology/OpticalMeasurement> ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/ScientificParameterDescription> a owl:Class ;
+    rdfs:label "ScientificParameterDescription" ;
+    rdfs:comment "Symbolic scientific parameter, including contextual definition such as Tc, Ta, or x." ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/MaterialMention> a owl:Class ;
+    rdfs:label "MaterialMention" ;
+    rdfs:comment "Textual description of a material, sample or composition in a document, linked to a material entity when possible." ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/Material>,
+        <https://w3id.org/matsci/ontology/integration/matonto/ChemicalFormula> ;
+    rdfs:subClassOf <https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> .
+
+<https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord> a owl:Class ;
+    rdfs:label "ScientificExtractionRecord" ;
+    rdfs:comment "Provenance-bearing scientific record extracted from a publication, independent of the truth of a reported result." ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+

@@ -1,0 +1,529 @@
+{
+  "materials_crystals": {
+    "$defs": {
+      "CrystallographyItem": {
+        "properties": {
+          "material_name": {
+            "default": "",
+            "title": "Material Name",
+            "type": "string"
+          },
+          "structure_type": {
+            "default": "",
+            "title": "Structure Type",
+            "type": "string"
+          },
+          "space_group_symbol": {
+            "default": "",
+            "title": "Space Group Symbol",
+            "type": "string"
+          },
+          "space_group_number": {
+            "default": "",
+            "title": "Space Group Number",
+            "type": "string"
+          },
+          "symmetry": {
+            "default": "",
+            "title": "Symmetry",
+            "type": "string"
+          },
+          "lattice_parameters": {
+            "items": {
+              "$ref": "#/$defs/LatticeValue"
+            },
+            "title": "Lattice Parameters",
+            "type": "array"
+          },
+          "wyckoff_sites": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Wyckoff Sites",
+            "type": "array"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_quote"
+        ],
+        "title": "CrystallographyItem",
+        "type": "object"
+      },
+      "LatticeValue": {
+        "properties": {
+          "symbol": {
+            "description": "a, b, c, alpha, beta, or gamma exactly as reported",
+            "title": "Symbol",
+            "type": "string"
+          },
+          "value_original": {
+            "description": "Literal reported value, including uncertainty",
+            "title": "Value Original",
+            "type": "string"
+          },
+          "unit": {
+            "default": "",
+            "title": "Unit",
+            "type": "string"
+          }
+        },
+        "required": [
+          "symbol",
+          "value_original"
+        ],
+        "title": "LatticeValue",
+        "type": "object"
+      },
+      "MaterialItem": {
+        "properties": {
+          "material_name": {
+            "title": "Material Name",
+            "type": "string"
+          },
+          "formula_original": {
+            "default": "",
+            "title": "Formula Original",
+            "type": "string"
+          },
+          "formula_ascii": {
+            "default": "",
+            "title": "Formula Ascii",
+            "type": "string"
+          },
+          "doping_variable": {
+            "default": "",
+            "title": "Doping Variable",
+            "type": "string"
+          },
+          "doping_level": {
+            "default": "",
+            "title": "Doping Level",
+            "type": "string"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "material_name",
+          "evidence_quote"
+        ],
+        "title": "MaterialItem",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "materials": {
+        "items": {
+          "$ref": "#/$defs/MaterialItem"
+        },
+        "title": "Materials",
+        "type": "array"
+      },
+      "crystallography": {
+        "items": {
+          "$ref": "#/$defs/CrystallographyItem"
+        },
+        "title": "Crystallography",
+        "type": "array"
+      }
+    },
+    "title": "MaterialsAndCrystals",
+    "type": "object"
+  },
+  "measurements_methods": {
+    "$defs": {
+      "MeasurementItem": {
+        "properties": {
+          "material_name": {
+            "default": "",
+            "title": "Material Name",
+            "type": "string"
+          },
+          "property_name": {
+            "title": "Property Name",
+            "type": "string"
+          },
+          "measurement_type": {
+            "default": "",
+            "title": "Measurement Type",
+            "type": "string"
+          },
+          "value_original": {
+            "default": "",
+            "title": "Value Original",
+            "type": "string"
+          },
+          "unit": {
+            "default": "",
+            "title": "Unit",
+            "type": "string"
+          },
+          "uncertainty": {
+            "default": "",
+            "title": "Uncertainty",
+            "type": "string"
+          },
+          "symbol": {
+            "default": "",
+            "title": "Symbol",
+            "type": "string"
+          },
+          "symbol_meaning": {
+            "default": "",
+            "title": "Symbol Meaning",
+            "type": "string"
+          },
+          "instrument": {
+            "default": "",
+            "title": "Instrument",
+            "type": "string"
+          },
+          "temperature_context": {
+            "default": "",
+            "title": "Temperature Context",
+            "type": "string"
+          },
+          "sample_conditions": {
+            "default": "",
+            "title": "Sample Conditions",
+            "type": "string"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "property_name",
+          "evidence_quote"
+        ],
+        "title": "MeasurementItem",
+        "type": "object"
+      },
+      "ProcessItem": {
+        "properties": {
+          "material_name": {
+            "default": "",
+            "title": "Material Name",
+            "type": "string"
+          },
+          "process_type": {
+            "title": "Process Type",
+            "type": "string"
+          },
+          "acronym": {
+            "default": "",
+            "title": "Acronym",
+            "type": "string"
+          },
+          "procedure_description": {
+            "default": "",
+            "title": "Procedure Description",
+            "type": "string"
+          },
+          "equipment": {
+            "default": "",
+            "title": "Equipment",
+            "type": "string"
+          },
+          "temperature_symbol": {
+            "default": "",
+            "title": "Temperature Symbol",
+            "type": "string"
+          },
+          "temperature_value": {
+            "default": "",
+            "title": "Temperature Value",
+            "type": "string"
+          },
+          "temperature_unit": {
+            "default": "",
+            "title": "Temperature Unit",
+            "type": "string"
+          },
+          "conditions": {
+            "default": "",
+            "title": "Conditions",
+            "type": "string"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "process_type",
+          "evidence_quote"
+        ],
+        "title": "ProcessItem",
+        "type": "object"
+      },
+      "SimulationItem": {
+        "properties": {
+          "material_name": {
+            "default": "",
+            "title": "Material Name",
+            "type": "string"
+          },
+          "method": {
+            "default": "",
+            "title": "Method",
+            "type": "string"
+          },
+          "software_name": {
+            "default": "",
+            "title": "Software Name",
+            "type": "string"
+          },
+          "software_version": {
+            "default": "",
+            "title": "Software Version",
+            "type": "string"
+          },
+          "settings": {
+            "default": "",
+            "title": "Settings",
+            "type": "string"
+          },
+          "computed_property": {
+            "default": "",
+            "title": "Computed Property",
+            "type": "string"
+          },
+          "value_original": {
+            "default": "",
+            "title": "Value Original",
+            "type": "string"
+          },
+          "unit": {
+            "default": "",
+            "title": "Unit",
+            "type": "string"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "evidence_quote"
+        ],
+        "title": "SimulationItem",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "measurements": {
+        "items": {
+          "$ref": "#/$defs/MeasurementItem"
+        },
+        "title": "Measurements",
+        "type": "array"
+      },
+      "simulations": {
+        "items": {
+          "$ref": "#/$defs/SimulationItem"
+        },
+        "title": "Simulations",
+        "type": "array"
+      },
+      "processes": {
+        "items": {
+          "$ref": "#/$defs/ProcessItem"
+        },
+        "title": "Processes",
+        "type": "array"
+      }
+    },
+    "title": "MeasurementsAndMethods",
+    "type": "object"
+  },
+  "statements_terms": {
+    "$defs": {
+      "ClaimItem": {
+        "properties": {
+          "claim_text": {
+            "title": "Claim Text",
+            "type": "string"
+          },
+          "epistemic_status": {
+            "enum": [
+              "observed",
+              "computed",
+              "hypothesized",
+              "inferred",
+              "author_proposed",
+              "unclear"
+            ],
+            "title": "Epistemic Status",
+            "type": "string"
+          },
+          "modality": {
+            "default": "",
+            "title": "Modality",
+            "type": "string"
+          },
+          "polarity": {
+            "enum": [
+              "affirmed",
+              "negated",
+              "uncertain"
+            ],
+            "title": "Polarity",
+            "type": "string"
+          },
+          "material_name": {
+            "default": "",
+            "title": "Material Name",
+            "type": "string"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim_text",
+          "epistemic_status",
+          "polarity",
+          "evidence_quote"
+        ],
+        "title": "ClaimItem",
+        "type": "object"
+      },
+      "TermItem": {
+        "properties": {
+          "term": {
+            "title": "Term",
+            "type": "string"
+          },
+          "acronym": {
+            "default": "",
+            "title": "Acronym",
+            "type": "string"
+          },
+          "expansion": {
+            "default": "",
+            "title": "Expansion",
+            "type": "string"
+          },
+          "concept_type": {
+            "default": "",
+            "title": "Concept Type",
+            "type": "string"
+          },
+          "definition": {
+            "default": "",
+            "title": "Definition",
+            "type": "string"
+          },
+          "is_new_term": {
+            "default": false,
+            "title": "Is New Term",
+            "type": "boolean"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "term",
+          "evidence_quote"
+        ],
+        "title": "TermItem",
+        "type": "object"
+      },
+      "TrendItem": {
+        "properties": {
+          "material_name": {
+            "default": "",
+            "title": "Material Name",
+            "type": "string"
+          },
+          "independent_variable": {
+            "title": "Independent Variable",
+            "type": "string"
+          },
+          "independent_change": {
+            "title": "Independent Change",
+            "type": "string"
+          },
+          "dependent_variable": {
+            "title": "Dependent Variable",
+            "type": "string"
+          },
+          "dependent_change": {
+            "title": "Dependent Change",
+            "type": "string"
+          },
+          "relationship_text": {
+            "title": "Relationship Text",
+            "type": "string"
+          },
+          "causal_status": {
+            "enum": [
+              "observed_trend",
+              "asserted_cause",
+              "predicted",
+              "unknown"
+            ],
+            "title": "Causal Status",
+            "type": "string"
+          },
+          "conditions": {
+            "default": "",
+            "title": "Conditions",
+            "type": "string"
+          },
+          "evidence_quote": {
+            "title": "Evidence Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "independent_variable",
+          "independent_change",
+          "dependent_variable",
+          "dependent_change",
+          "relationship_text",
+          "causal_status",
+          "evidence_quote"
+        ],
+        "title": "TrendItem",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "trends": {
+        "items": {
+          "$ref": "#/$defs/TrendItem"
+        },
+        "title": "Trends",
+        "type": "array"
+      },
+      "claims": {
+        "items": {
+          "$ref": "#/$defs/ClaimItem"
+        },
+        "title": "Claims",
+        "type": "array"
+      },
+      "terminology": {
+        "items": {
+          "$ref": "#/$defs/TermItem"
+        },
+        "title": "Terminology",
+        "type": "array"
+      }
+    },
+    "title": "ScientificStatements",
+    "type": "object"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "request_sha256": "3dc1fe9367fc8ffe009e2b071d1a7ff5d26d7169ab0ec3965f0edf6a81f4442a",
+  "provider": "openrouter",
+  "model": "dots-studio/dots-3-note-preview:free",
+  "response_id": "gen-1792725782-OKfLDd41H7fOVvloVpdK",
+  "usage": {
+    "completion_tokens": 1973,
+    "prompt_tokens": 401,
+    "total_tokens": 2374,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 1719,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": 0
+    },
+    "compute_units": null,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": 0
+    },
+    "cost": 0,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "data": {
+    "phrases": [
+      "Rigaku Miniflex-II X-ray diffractometer",
+      "X-ray diffractometer",
+      "Rigaku Miniflex-II",
+      "lattice parameters of Ni In S single crystal",
+      "Ni In S single crystal",
+      "lattice parameters",
+      "Rietveld refinement",
+      "Full-Prof software",
+      "surface morphology and elemental compositions",
+      "surface morphology",
+      "elemental compositions",
+      "scanning electron microscopy (SEM)",
+      "scanning electron microscopy",
+      "energy-dispersive",
+      "XRD pattern of mechanically cleaved thin flakes of obtained Ni In S single crystal",
+      "mechanically cleaved thin flakes",
+      "thin flakes",
+      "obtained Ni In S single crystal",
+      "XRD pattern",
+      "high-intensity peaks"
+    ]
+  }
+}

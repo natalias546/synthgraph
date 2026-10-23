@@ -1,0 +1,282 @@
+{
+  "base_ontology": "https://w3id.org/matsci/ontology/",
+  "extension_namespace": "https://w3id.org/matsci/ontology/literature/",
+  "ontology_file": "matsci-v10-literature-enriched.owl",
+  "record_type_mappings": {
+    "materials": {
+      "extension_class": "https://w3id.org/matsci/ontology/literature/MaterialMention",
+      "existing_classes": [
+        "https://w3id.org/matsci/ontology/Material",
+        "https://w3id.org/matsci/ontology/integration/matonto/ChemicalFormula"
+      ],
+      "fields": [
+        "material_name",
+        "formula_original",
+        "formula_ascii",
+        "doping_variable",
+        "doping_level",
+        "evidence_quote"
+      ]
+    },
+    "crystallography": {
+      "extension_class": "https://w3id.org/matsci/ontology/literature/CrystallographicDescription",
+      "existing_classes": [
+        "https://w3id.org/matsci/ontology/CrystalStructure",
+        "https://w3id.org/matsci/ontology/CrystallographicUnitCell",
+        "https://w3id.org/matsci/ontology/CrystalLattice",
+        "https://w3id.org/matsci/ontology/integration/matonto/SpaceGroup"
+      ],
+      "fields": [
+        "material_name",
+        "structure_type",
+        "space_group_symbol",
+        "space_group_number",
+        "symmetry",
+        "lattice_parameters",
+        "wyckoff_sites",
+        "evidence_quote"
+      ]
+    },
+    "measurements": {
+      "extension_class": "https://w3id.org/matsci/ontology/literature/ScientificMeasurementRecord",
+      "existing_classes": [
+        "https://w3id.org/matsci/ontology/MeasurementRun",
+        "https://w3id.org/matsci/ontology/OpticalMeasurement",
+        "https://w3id.org/matsci/ontology/BandGap",
+        "https://w3id.org/matsci/ontology/CriticalTemperature"
+      ],
+      "fields": [
+        "material_name",
+        "property_name",
+        "measurement_type",
+        "value_original",
+        "unit",
+        "uncertainty",
+        "symbol",
+        "symbol_meaning",
+        "instrument",
+        "temperature_context",
+        "sample_conditions",
+        "evidence_quote"
+      ]
+    },
+    "simulations": {
+      "extension_class": "https://w3id.org/matsci/ontology/literature/SimulationResultRecord",
+      "existing_classes": [
+        "https://w3id.org/matsci/ontology/ComputationRun",
+        "https://w3id.org/matsci/ontology/ComputationalMethod",
+        "https://w3id.org/matsci/ontology/ComputedBandGap",
+        "https://w3id.org/matsci/ontology/integration/mseo/SimulationSoftware"
+      ],
+      "fields": [
+        "material_name",
+        "method",
+        "software_name",
+        "software_version",
+        "settings",
+        "computed_property",
+        "value_original",
+        "unit",
+        "evidence_quote"
+      ]
+    },
+    "processes": {
+      "extension_class": "https://w3id.org/matsci/ontology/literature/ProcessDescription",
+      "existing_classes": [
+        "https://w3id.org/matsci/ontology/ProcessRun",
+        "https://w3id.org/matsci/ontology/ExperimentalMethod",
+        "https://w3id.org/matsci/ontology/Doping",
+        "https://w3id.org/matsci/ontology/TemperatureProgram"
+      ],
+      "fields": [
+        "material_name",
+        "process_type",
+        "acronym",
+        "procedure_description",
+        "equipment",
+        "temperature_symbol",
+        "temperature_value",
+        "temperature_unit",
+        "conditions",
+        "evidence_quote"
+      ]
+    },
+    "trends": {
+      "extension_class": "https://w3id.org/matsci/ontology/literature/DirectionalTrendClaim",
+      "existing_classes": [
+        "https://w3id.org/matsci/ontology/Claim",
+        "https://w3id.org/matsci/ontology/Prediction",
+        "https://w3id.org/matsci/ontology/EvidenceInformation"
+      ],
+      "fields": [
+        "material_name",
+        "independent_variable",
+        "independent_change",
+        "dependent_variable",
+        "dependent_change",
+        "relationship_text",
+        "causal_status",
+        "conditions",
+        "evidence_quote"
+      ]
+    },
+    "claims": {
+      "extension_class": "https://w3id.org/matsci/ontology/literature/QualifiedScientificClaim",
+      "existing_classes": [
+        "https://w3id.org/matsci/ontology/Claim",
+        "https://w3id.org/matsci/ontology/Hypothesis",
+        "https://w3id.org/matsci/ontology/Prediction",
+        "https://w3id.org/matsci/ontology/SourceAssertion"
+      ],
+      "fields": [
+        "claim_text",
+        "epistemic_status",
+        "modality",
+        "polarity",
+        "material_name",
+        "evidence_quote"
+      ]
+    },
+    "terminology": {
+      "extension_class": "https://w3id.org/matsci/ontology/literature/ScientificTerminologyEntry",
+      "existing_classes": [
+        "https://w3id.org/matsci/ontology/DocumentReference",
+        "https://w3id.org/matsci/ontology/CrystalStructure"
+      ],
+      "fields": [
+        "term",
+        "acronym",
+        "expansion",
+        "concept_type",
+        "definition",
+        "is_new_term",
+        "evidence_quote"
+      ]
+    }
+  },
+  "new_classes": {
+    "LiteratureEvidenceSpan": "https://w3id.org/matsci/ontology/literature/LiteratureEvidenceSpan",
+    "ScientificExtractionRecord": "https://w3id.org/matsci/ontology/literature/ScientificExtractionRecord",
+    "MaterialMention": "https://w3id.org/matsci/ontology/literature/MaterialMention",
+    "VariableCompositionDescription": "https://w3id.org/matsci/ontology/literature/VariableCompositionDescription",
+    "CompositionOccupancyDescription": "https://w3id.org/matsci/ontology/literature/CompositionOccupancyDescription",
+    "CrystallographicDescription": "https://w3id.org/matsci/ontology/literature/CrystallographicDescription",
+    "UnitCellParameterDatum": "https://w3id.org/matsci/ontology/literature/UnitCellParameterDatum",
+    "SpaceGroupAssignment": "https://w3id.org/matsci/ontology/literature/SpaceGroupAssignment",
+    "WyckoffSiteDescription": "https://w3id.org/matsci/ontology/literature/WyckoffSiteDescription",
+    "ScientificMeasurementRecord": "https://w3id.org/matsci/ontology/literature/ScientificMeasurementRecord",
+    "BandGapMeasurementRecord": "https://w3id.org/matsci/ontology/literature/BandGapMeasurementRecord",
+    "UVVisibleMeasurementRecord": "https://w3id.org/matsci/ontology/literature/UVVisibleMeasurementRecord",
+    "SpectrumDataDescription": "https://w3id.org/matsci/ontology/literature/SpectrumDataDescription",
+    "SimulationResultRecord": "https://w3id.org/matsci/ontology/literature/SimulationResultRecord",
+    "SoftwareConfiguration": "https://w3id.org/matsci/ontology/literature/SoftwareConfiguration",
+    "ProcessDescription": "https://w3id.org/matsci/ontology/literature/ProcessDescription",
+    "ExperimentalConditionRecord": "https://w3id.org/matsci/ontology/literature/ExperimentalConditionRecord",
+    "ScientificParameterDescription": "https://w3id.org/matsci/ontology/literature/ScientificParameterDescription",
+    "TemperatureParameterDescription": "https://w3id.org/matsci/ontology/literature/TemperatureParameterDescription",
+    "DopingLevelDescription": "https://w3id.org/matsci/ontology/literature/DopingLevelDescription",
+    "QualifiedScientificClaim": "https://w3id.org/matsci/ontology/literature/QualifiedScientificClaim",
+    "DirectionalTrendClaim": "https://w3id.org/matsci/ontology/literature/DirectionalTrendClaim",
+    "ScientificTerminologyEntry": "https://w3id.org/matsci/ontology/literature/ScientificTerminologyEntry",
+    "AcronymDefinition": "https://w3id.org/matsci/ontology/literature/AcronymDefinition",
+    "UVVisibleSpectroscopyMethod": "https://w3id.org/matsci/ontology/literature/UVVisibleSpectroscopyMethod",
+    "ChemicalVaporTransportMethod": "https://w3id.org/matsci/ontology/literature/ChemicalVaporTransportMethod",
+    "ChemicalVaporDepositionMethod": "https://w3id.org/matsci/ontology/literature/ChemicalVaporDepositionMethod",
+    "ChemicalVaporTransportRun": "https://w3id.org/matsci/ontology/literature/ChemicalVaporTransportRun",
+    "ChemicalVaporDepositionRun": "https://w3id.org/matsci/ontology/literature/ChemicalVaporDepositionRun",
+    "FirstPrinciplesCalculationRun": "https://w3id.org/matsci/ontology/literature/FirstPrinciplesCalculationRun"
+  },
+  "new_object_properties": {
+    "hasEvidence": "https://w3id.org/matsci/ontology/literature/hasEvidence",
+    "mentionsMaterial": "https://w3id.org/matsci/ontology/literature/mentionsMaterial",
+    "describesComposition": "https://w3id.org/matsci/ontology/literature/describesComposition",
+    "hasOccupancy": "https://w3id.org/matsci/ontology/literature/hasOccupancy",
+    "hasCrystalDescription": "https://w3id.org/matsci/ontology/literature/hasCrystalDescription",
+    "hasUnitCellDatum": "https://w3id.org/matsci/ontology/literature/hasUnitCellDatum",
+    "hasSpaceGroupAssignment": "https://w3id.org/matsci/ontology/literature/hasSpaceGroupAssignment",
+    "hasSiteDescription": "https://w3id.org/matsci/ontology/literature/hasSiteDescription",
+    "hasMeasurementRecord": "https://w3id.org/matsci/ontology/literature/hasMeasurementRecord",
+    "hasSimulationResult": "https://w3id.org/matsci/ontology/literature/hasSimulationResult",
+    "hasProcessDescription": "https://w3id.org/matsci/ontology/literature/hasProcessDescription",
+    "hasSoftwareConfiguration": "https://w3id.org/matsci/ontology/literature/hasSoftwareConfiguration",
+    "hasExperimentalCondition": "https://w3id.org/matsci/ontology/literature/hasExperimentalCondition",
+    "usesScientificParameter": "https://w3id.org/matsci/ontology/literature/usesScientificParameter",
+    "hasIndependentParameter": "https://w3id.org/matsci/ontology/literature/hasIndependentParameter",
+    "hasDependentParameter": "https://w3id.org/matsci/ontology/literature/hasDependentParameter",
+    "refersToMeasurement": "https://w3id.org/matsci/ontology/literature/refersToMeasurement",
+    "refersToSimulation": "https://w3id.org/matsci/ontology/literature/refersToSimulation",
+    "referencesTerminology": "https://w3id.org/matsci/ontology/literature/referencesTerminology",
+    "hasAcronymDefinition": "https://w3id.org/matsci/ontology/literature/hasAcronymDefinition",
+    "denotesOntologyConcept": "https://w3id.org/matsci/ontology/literature/denotesOntologyConcept",
+    "describesRun": "https://w3id.org/matsci/ontology/literature/describesRun",
+    "usedMeasurementInstrument": "https://w3id.org/matsci/ontology/literature/usedMeasurementInstrument",
+    "specifiedByMethod": "https://w3id.org/matsci/ontology/literature/specifiedByMethod"
+  },
+  "new_datatype_properties": {
+    "sourceQuote": "https://w3id.org/matsci/ontology/literature/sourceQuote",
+    "sourcePage": "https://w3id.org/matsci/ontology/literature/sourcePage",
+    "sourceStartOffset": "https://w3id.org/matsci/ontology/literature/sourceStartOffset",
+    "sourceEndOffset": "https://w3id.org/matsci/ontology/literature/sourceEndOffset",
+    "sourceSection": "https://w3id.org/matsci/ontology/literature/sourceSection",
+    "sourceDocumentSha256": "https://w3id.org/matsci/ontology/literature/sourceDocumentSha256",
+    "originalNotation": "https://w3id.org/matsci/ontology/literature/originalNotation",
+    "normalizedNotation": "https://w3id.org/matsci/ontology/literature/normalizedNotation",
+    "compositionExpression": "https://w3id.org/matsci/ontology/literature/compositionExpression",
+    "elementSymbol": "https://w3id.org/matsci/ontology/literature/elementSymbol",
+    "occupancyExpression": "https://w3id.org/matsci/ontology/literature/occupancyExpression",
+    "spaceGroupSymbol": "https://w3id.org/matsci/ontology/literature/spaceGroupSymbol",
+    "spaceGroupNumber": "https://w3id.org/matsci/ontology/literature/spaceGroupNumber",
+    "crystalSystemName": "https://w3id.org/matsci/ontology/literature/crystalSystemName",
+    "symbolDefinition": "https://w3id.org/matsci/ontology/literature/symbolDefinition",
+    "parameterSymbol": "https://w3id.org/matsci/ontology/literature/parameterSymbol",
+    "parameterUnit": "https://w3id.org/matsci/ontology/literature/parameterUnit",
+    "reportedValue": "https://w3id.org/matsci/ontology/literature/reportedValue",
+    "reportedUncertainty": "https://w3id.org/matsci/ontology/literature/reportedUncertainty",
+    "measurementMode": "https://w3id.org/matsci/ontology/literature/measurementMode",
+    "valueQualifier": "https://w3id.org/matsci/ontology/literature/valueQualifier",
+    "reportedEquipmentName": "https://w3id.org/matsci/ontology/literature/reportedEquipmentName",
+    "reportedSoftwareName": "https://w3id.org/matsci/ontology/literature/reportedSoftwareName",
+    "softwareVersion": "https://w3id.org/matsci/ontology/literature/softwareVersion",
+    "computationalSettings": "https://w3id.org/matsci/ontology/literature/computationalSettings",
+    "processConditions": "https://w3id.org/matsci/ontology/literature/processConditions",
+    "dependentChange": "https://w3id.org/matsci/ontology/literature/dependentChange",
+    "independentChange": "https://w3id.org/matsci/ontology/literature/independentChange",
+    "causalStatus": "https://w3id.org/matsci/ontology/literature/causalStatus",
+    "epistemicStatus": "https://w3id.org/matsci/ontology/literature/epistemicStatus",
+    "claimModality": "https://w3id.org/matsci/ontology/literature/claimModality",
+    "claimPolarity": "https://w3id.org/matsci/ontology/literature/claimPolarity",
+    "termAcronym": "https://w3id.org/matsci/ontology/literature/termAcronym",
+    "termExpansion": "https://w3id.org/matsci/ontology/literature/termExpansion",
+    "termReviewStatus": "https://w3id.org/matsci/ontology/literature/termReviewStatus",
+    "extractionModel": "https://w3id.org/matsci/ontology/literature/extractionModel",
+    "extractionConfidence": "https://w3id.org/matsci/ontology/literature/extractionConfidence",
+    "materialName": "https://w3id.org/matsci/ontology/literature/materialName",
+    "structureType": "https://w3id.org/matsci/ontology/literature/structureType",
+    "reportedSymmetry": "https://w3id.org/matsci/ontology/literature/reportedSymmetry",
+    "measuredPropertyName": "https://w3id.org/matsci/ontology/literature/measuredPropertyName",
+    "measurementTechniqueName": "https://w3id.org/matsci/ontology/literature/measurementTechniqueName",
+    "temperatureContext": "https://w3id.org/matsci/ontology/literature/temperatureContext",
+    "sampleConditions": "https://w3id.org/matsci/ontology/literature/sampleConditions",
+    "computationMethodName": "https://w3id.org/matsci/ontology/literature/computationMethodName",
+    "computedPropertyName": "https://w3id.org/matsci/ontology/literature/computedPropertyName",
+    "processTypeName": "https://w3id.org/matsci/ontology/literature/processTypeName",
+    "processAcronym": "https://w3id.org/matsci/ontology/literature/processAcronym",
+    "processDescriptionText": "https://w3id.org/matsci/ontology/literature/processDescriptionText",
+    "relationshipStatementText": "https://w3id.org/matsci/ontology/literature/relationshipStatementText",
+    "independentVariableSymbol": "https://w3id.org/matsci/ontology/literature/independentVariableSymbol",
+    "dependentVariableSymbol": "https://w3id.org/matsci/ontology/literature/dependentVariableSymbol",
+    "scientificClaimText": "https://w3id.org/matsci/ontology/literature/scientificClaimText",
+    "scientificTermLabel": "https://w3id.org/matsci/ontology/literature/scientificTermLabel",
+    "termConceptType": "https://w3id.org/matsci/ontology/literature/termConceptType",
+    "termDefinitionText": "https://w3id.org/matsci/ontology/literature/termDefinitionText",
+    "isNewTermCandidate": "https://w3id.org/matsci/ontology/literature/isNewTermCandidate",
+    "latticeParametersLexical": "https://w3id.org/matsci/ontology/literature/latticeParametersLexical",
+    "wyckoffSitesLexical": "https://w3id.org/matsci/ontology/literature/wyckoffSitesLexical"
+  },
+  "notes": [
+    "Newly defined classes and properties are additive. Original RDF descriptions remain intact.",
+    "Mappings to original class IRIs are conceptual references; no owl:equivalentClass axioms are asserted.",
+    "Reported measurements and simulation results are information records, not automatically the underlying physical qualities.",
+    "High-volume source ontologies and run data are best imported separately."
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "noun_phrases": {
+    "properties": {
+      "phrases": {
+        "items": {
+          "type": "string"
+        },
+        "title": "Phrases",
+        "type": "array"
+      }
+    },
+    "required": [
+      "phrases"
+    ],
+    "title": "NounPhrases",
+    "type": "object"
+  },
+  "entities": {
+    "$defs": {
+      "Entity": {
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "string"
+          },
+          "name": {
+            "title": "Name",
+            "type": "string"
+          },
+          "aliases": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Aliases",
+            "type": "array"
+          },
+          "category": {
+            "enum": [
+              "person",
+              "organization",
+              "location",
+              "dataset",
+              "device",
+              "model",
+              "method",
+              "metric",
+              "physical_quantity",
+              "physical_phenomenon",
+              "task",
+              "software",
+              "publication",
+              "other"
+            ],
+            "title": "Category",
+            "type": "string"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/$defs/Evidence"
+            },
+            "title": "Evidence",
+            "type": "array"
+          },
+          "confidence": {
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Confidence",
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "aliases",
+          "category",
+          "evidence",
+          "confidence"
+        ],
+        "title": "Entity",
+        "type": "object"
+      },
+      "Evidence": {
+        "properties": {
+          "page": {
+            "title": "Page",
+            "type": "integer"
+          },
+          "quote": {
+            "title": "Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "page",
+          "quote"
+        ],
+        "title": "Evidence",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "entities": {
+        "items": {
+          "$ref": "#/$defs/Entity"
+        },
+        "title": "Entities",
+        "type": "array"
+      }
+    },
+    "required": [
+      "entities"
+    ],
+    "title": "Entities",
+    "type": "object"
+  },
+  "relations": {
+    "$defs": {
+      "Evidence": {
+        "properties": {
+          "page": {
+            "title": "Page",
+            "type": "integer"
+          },
+          "quote": {
+            "title": "Quote",
+            "type": "string"
+          }
+        },
+        "required": [
+          "page",
+          "quote"
+        ],
+        "title": "Evidence",
+        "type": "object"
+      },
+      "Rejection": {
+        "properties": {
+          "subject_id": {
+            "title": "Subject Id",
+            "type": "string"
+          },
+          "predicate": {
+            "title": "Predicate",
+            "type": "string"
+          },
+          "object_id": {
+            "title": "Object Id",
+            "type": "string"
+          },
+          "reason": {
+            "title": "Reason",
+            "type": "string"
+          }
+        },
+        "required": [
+          "subject_id",
+          "predicate",
+          "object_id",
+          "reason"
+        ],
+        "title": "Rejection",
+        "type": "object"
+      },
+      "Relation": {
+        "properties": {
+          "subject_id": {
+            "title": "Subject Id",
+            "type": "string"
+          },
+          "predicate": {
+            "minLength": 1,
+            "title": "Predicate",
+            "type": "string"
+          },
+          "predicate_definition": {
+            "minLength": 1,
+            "title": "Predicate Definition",
+            "type": "string"
+          },
+          "object_id": {
+            "title": "Object Id",
+            "type": "string"
+          },
+          "category": {
+            "minLength": 1,
+            "title": "Category",
+            "type": "string"
+          },
+          "category_definition": {
+            "minLength": 1,
+            "title": "Category Definition",
+            "type": "string"
+          },
+          "support_type": {
+            "enum": [
+              "direct",
+              "indirect_document",
+              "external_knowledge"
+            ],
+            "title": "Support Type",
+            "type": "string"
+          },
+          "polarity": {
+            "enum": [
+              "affirmed",
+              "negated",
+              "hypothetical"
+            ],
+            "title": "Polarity",
+            "type": "string"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/$defs/Evidence"
+            },
+            "title": "Evidence",
+            "type": "array"
+          },
+          "bridge_entity_ids": {
+            "items": {
+              "type": "string"
+            },
+            "title": "Bridge Entity Ids",
+            "type": "array"
+          },
+          "support_summary": {
+            "title": "Support Summary",
+            "type": "string"
+          },
+          "confidence": {
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Confidence",
+            "type": "number"
+          }
+        },
+        "required": [
+          "subject_id",
+          "predicate",
+          "predicate_definition",
+          "object_id",
+          "category",
+          "category_definition",
+          "support_type",
+          "polarity",
+          "evidence",
+          "bridge_entity_ids",
+          "support_summary",
+          "confidence"
+        ],
+        "title": "Relation",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "relations": {
+        "items": {
+          "$ref": "#/$defs/Relation"
+        },
+        "title": "Relations",
+        "type": "array"
+      },
+      "rejected_candidates": {
+        "items": {
+          "$ref": "#/$defs/Rejection"
+        },
+        "title": "Rejected Candidates",
+        "type": "array"
+      }
+    },
+    "required": [
+      "relations",
+      "rejected_candidates"
+    ],
+    "title": "Relations",
+    "type": "object"
+  }
+}

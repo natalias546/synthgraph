@@ -1,0 +1,48 @@
+{
+  "request_sha256": "630f47430a81ff04bd10f9717b82e145f133b765aa82ff08e5f345b04822ceb8",
+  "provider": "openrouter",
+  "model": "liquid/lfm-2.5-2.6b:free",
+  "response_id": "gen-1792725802-Kle6qUegsNBkRMNAfaax",
+  "usage": {
+    "completion_tokens": 1486,
+    "prompt_tokens": 390,
+    "total_tokens": 1876,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 1420,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": 0
+    },
+    "compute_units": null,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": 0
+    },
+    "cost": 0,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "data": {
+    "phrases": [
+      "3 2 2 compositions",
+      "electron microscopy (SEM)",
+      "diffraction planes",
+      "X-ray analysis (EDAX)",
+      "Zeiss crystal growth",
+      "c-axis",
+      "optical bandgap",
+      "UV–VIS spectroscopy",
+      "EVO-50"
+    ]
+  }
+}

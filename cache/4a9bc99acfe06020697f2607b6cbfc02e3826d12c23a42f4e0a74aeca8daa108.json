@@ -1,0 +1,47 @@
+{
+  "request_sha256": "4a9bc99acfe06020697f2607b6cbfc02e3826d12c23a42f4e0a74aeca8daa108",
+  "provider": "openrouter",
+  "model": "liquid/lfm-2.5-2.6b:free",
+  "response_id": "gen-1792726098-fTqyTgwrq3nQJogzfNYw",
+  "usage": {
+    "completion_tokens": 1835,
+    "prompt_tokens": 324,
+    "total_tokens": 2159,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 1780,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": 0
+    },
+    "compute_units": null,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": 0
+    },
+    "cost": 0,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "data": {
+    "phrases": [
+      "The inset of Fig. 2a",
+      "the image",
+      "single Shimadzu spectrometer",
+      "The conventional four-probe crystal",
+      "arrangement",
+      "transport properties",
+      "phase purity",
+      "the as"
+    ]
+  }
+}

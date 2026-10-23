@@ -1,0 +1,54 @@
+{
+  "request_sha256": "bf650aeedf8e2db43a7a73b2d00d05cf9cc988c560d76d108aa9439d53325413",
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "response_id": "gen-1792726068-DEKnlee6cweNUh02BnrV",
+  "usage": {
+    "completion_tokens": 3752,
+    "prompt_tokens": 361,
+    "total_tokens": 4113,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 3660,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": 0
+    },
+    "compute_units": null,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": 0
+    },
+    "cost": 0,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "data": {
+    "phrases": [
+      "X-ray analysis",
+      "(EDAX)",
+      "measurements",
+      "Zeiss",
+      "crystal growth",
+      "c-axis",
+      "EVO-50",
+      "optical bandgap",
+      "(003n)",
+      "UV–VIS spectroscopy",
+      "UV 1800",
+      "Fig. 2a",
+      "image",
+      "single Shimadzu spectrometer",
+      "Shimadzu spectrometer"
+    ]
+  }
+}

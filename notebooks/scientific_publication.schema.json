@@ -1,0 +1,1219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:scientific-publication:structure:1.1",
+  "title": "Generic scientific publication structural schema",
+  "description": "A reusable recursive structure for scientific articles, reviews, conference papers, reports, and preprints. Every structural node has inclusive one-based PDF page boundaries. Absent elements are metadata, not pageless nodes. Content may be partial if review flags and extraction limitations describe omissions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source",
+    "extraction",
+    "document"
+  ],
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "1.0",
+        "1.1"
+      ],
+      "description": "New producers use 1.1; legacy 1.0 documents remain readable."
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pages"
+      ],
+      "properties": {
+        "pdf": {
+          "type": "string",
+          "description": "Optional PDF-specific source path retained for PDF extraction adapters."
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "uri": {
+          "type": "string",
+          "description": "Stable URL, URI, or path identifying the publication source."
+        },
+        "media_type": {
+          "type": "string"
+        },
+        "page_numbering": {
+          "type": "string",
+          "description": "Describe logical or physical page numbering; extracted example uses one-based PDF pages."
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "uri"
+          ]
+        },
+        {
+          "required": [
+            "pdf"
+          ]
+        }
+      ]
+    },
+    "extraction": {
+      "type": "object",
+      "required": [
+        "library",
+        "version",
+        "method",
+        "limitations"
+      ],
+      "properties": {
+        "library": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "absent_elements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "page_policy": {
+          "type": "string"
+        }
+      }
+    },
+    "document": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "article"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "source_location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "page",
+        "bbox"
+      ],
+      "properties": {
+        "page": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "bbox": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "element": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "page_start",
+        "page_end",
+        "children"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "article",
+            "front_matter",
+            "body",
+            "back_matter",
+            "title",
+            "subtitle",
+            "abstract",
+            "authors",
+            "author",
+            "affiliations",
+            "affiliation",
+            "author_note",
+            "publication_metadata",
+            "keywords",
+            "keyword",
+            "section",
+            "subsection",
+            "subsubsection",
+            "paragraph",
+            "text_block",
+            "figure",
+            "figure_panel",
+            "caption",
+            "caption_text",
+            "image",
+            "table",
+            "table_title",
+            "table_header",
+            "table_row",
+            "table_row_text",
+            "table_cell",
+            "equation",
+            "equation_group",
+            "list",
+            "list_item",
+            "references",
+            "reference",
+            "appendix",
+            "acknowledgements",
+            "funding",
+            "ethics_statement",
+            "data_availability",
+            "code_availability",
+            "author_contributions",
+            "competing_interests",
+            "supplementary_material",
+            "contributor_list",
+            "collaboration_text",
+            "footnote",
+            "endnote",
+            "custom",
+            "citation",
+            "citation_year",
+            "citation_venue",
+            "citation_volume",
+            "citation_issue",
+            "citation_pages",
+            "citation_identifier",
+            "citation_publisher",
+            "citation_edition",
+            "citation_editors"
+          ],
+          "description": "citation_identifier uses label for identifier kind (for example DOI, ISBN, URL) and text for its literal value. citation_pages is the cited work page range; page_start/page_end always refer to the source publication."
+        },
+        "page_start": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "First one-based source page occupied by this element or its descendants."
+        },
+        "page_end": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Last one-based source page occupied by this element or its descendants, inclusive."
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/element"
+          },
+          "description": "Ordered structural children. A back_matter node may contain zero or more appendix nodes; each appendix may contain nested section/subsection/subsubsection nodes. Acknowledgements is optional with zero or one paragraph. References contains reference entries; each entry preserves its source text and may contain one parsed citation."
+        },
+        "text": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "label_inferred": {
+          "type": "boolean"
+        },
+        "review_required": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source_location"
+          }
+        },
+        "attributes": {
+          "type": "object",
+          "description": "Extensible metadata for extraction rules, scientific identifiers, or domain-specific roles."
+        },
+        "affiliation_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "affiliation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "note_markers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "article"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "front_matter",
+                        "body",
+                        "back_matter"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "authors"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "author"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "affiliations"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "affiliation",
+                        "author_note"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "keywords"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "keyword"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "references"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "reference"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "figure"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "caption",
+                        "caption_text",
+                        "figure_panel",
+                        "image"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "table"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "table_title",
+                        "caption",
+                        "caption_text",
+                        "table_header",
+                        "table_row",
+                        "table_row_text",
+                        "table_cell",
+                        "footnote"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "table_row"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "table_cell"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "title",
+                  "subtitle",
+                  "author",
+                  "affiliation",
+                  "keyword",
+                  "paragraph",
+                  "table_cell",
+                  "table_row_text",
+                  "caption",
+                  "caption_text",
+                  "image",
+                  "text_block",
+                  "collaboration_text",
+                  "citation_year",
+                  "citation_venue",
+                  "citation_volume",
+                  "citation_issue",
+                  "citation_pages",
+                  "citation_identifier",
+                  "citation_publisher",
+                  "citation_edition"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "custom"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "attributes"
+            ],
+            "properties": {
+              "attributes": {
+                "required": [
+                  "custom_type"
+                ],
+                "properties": {
+                  "custom_type": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "appendix"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "section",
+                        "subsection",
+                        "subsubsection",
+                        "paragraph",
+                        "text_block",
+                        "figure",
+                        "table",
+                        "equation",
+                        "equation_group",
+                        "list",
+                        "footnote",
+                        "references",
+                        "custom"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "acknowledgements"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "paragraph"
+                      ]
+                    }
+                  }
+                },
+                "maxItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "reference"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "citation"
+                      ]
+                    }
+                  }
+                },
+                "maxItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "citation"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "authors",
+                        "title",
+                        "citation_year",
+                        "citation_venue",
+                        "citation_volume",
+                        "citation_issue",
+                        "citation_pages",
+                        "citation_identifier",
+                        "citation_publisher",
+                        "citation_edition",
+                        "citation_editors"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "citation_editors"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "author"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "legacy_element": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "page_start",
+        "page_end",
+        "children"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "article",
+            "front_matter",
+            "body",
+            "back_matter",
+            "title",
+            "subtitle",
+            "abstract",
+            "authors",
+            "author",
+            "affiliations",
+            "affiliation",
+            "author_note",
+            "publication_metadata",
+            "keywords",
+            "keyword",
+            "section",
+            "subsection",
+            "subsubsection",
+            "paragraph",
+            "text_block",
+            "figure",
+            "figure_panel",
+            "caption",
+            "caption_text",
+            "image",
+            "table",
+            "table_title",
+            "table_header",
+            "table_row",
+            "table_row_text",
+            "table_cell",
+            "equation",
+            "equation_group",
+            "list",
+            "list_item",
+            "references",
+            "reference",
+            "appendix",
+            "acknowledgements",
+            "funding",
+            "ethics_statement",
+            "data_availability",
+            "code_availability",
+            "author_contributions",
+            "competing_interests",
+            "supplementary_material",
+            "contributor_list",
+            "collaboration_text",
+            "footnote",
+            "endnote",
+            "custom",
+            "citation",
+            "citation_year",
+            "citation_venue",
+            "citation_volume",
+            "citation_issue",
+            "citation_pages",
+            "citation_identifier",
+            "citation_publisher",
+            "citation_edition",
+            "citation_editors"
+          ],
+          "description": "citation_identifier uses label for identifier kind (for example DOI, ISBN, URL) and text for its literal value. citation_pages is the cited work page range; page_start/page_end always refer to the source publication."
+        },
+        "page_start": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "First one-based source page occupied by this element or its descendants."
+        },
+        "page_end": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Last one-based source page occupied by this element or its descendants, inclusive."
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/legacy_element"
+          },
+          "description": "Ordered structural children. A back_matter node may contain zero or more appendix nodes; each appendix may contain nested section/subsection/subsubsection nodes. Acknowledgements is optional with zero or one paragraph. References contains reference entries; each entry preserves its source text and may contain one parsed citation."
+        },
+        "text": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "number": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "label_inferred": {
+          "type": "boolean"
+        },
+        "review_required": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source_location"
+          }
+        },
+        "attributes": {
+          "type": "object",
+          "description": "Extensible metadata for extraction rules, scientific identifiers, or domain-specific roles."
+        },
+        "affiliation_labels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "affiliation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "note_markers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "urls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "article"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "front_matter",
+                        "body",
+                        "back_matter"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "authors"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "author"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "affiliations"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "affiliation",
+                        "author_note"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "keywords"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "keyword"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "references"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "reference"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "figure"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "caption",
+                        "caption_text",
+                        "figure_panel",
+                        "image"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "table"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "table_title",
+                        "caption",
+                        "caption_text",
+                        "table_header",
+                        "table_row",
+                        "table_row_text",
+                        "table_cell",
+                        "footnote"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "table_row"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "items": {
+                  "properties": {
+                    "type": {
+                      "enum": [
+                        "table_cell"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "title",
+                  "subtitle",
+                  "author",
+                  "affiliation",
+                  "keyword",
+                  "paragraph",
+                  "table_cell",
+                  "table_row_text",
+                  "caption",
+                  "caption_text",
+                  "image",
+                  "text_block",
+                  "collaboration_text",
+                  "reference"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "children": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "custom"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "attributes"
+            ],
+            "properties": {
+              "attributes": {
+                "required": [
+                  "custom_type"
+                ],
+                "properties": {
+                  "custom_type": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "schema_version": {
+            "const": "1.0"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "document": {
+            "$ref": "#/$defs/legacy_element"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "document": {
+            "$ref": "#/$defs/element"
+          }
+        }
+      }
+    }
+  ]
+}

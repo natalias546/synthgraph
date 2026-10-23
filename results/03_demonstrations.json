@@ -1,0 +1,301 @@
+{
+  "positive": [
+    {
+      "text": "The Atlas model predicts plasma disruptions.",
+      "candidate": {
+        "subject": "Atlas",
+        "predicate": "predicts",
+        "object": "plasma disruptions"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "The verb explicitly asserts prediction."
+    },
+    {
+      "text": "Orion was evaluated on Dataset R.",
+      "candidate": {
+        "subject": "Orion",
+        "predicate": "evaluated_on",
+        "object": "Dataset R"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "Evaluation is distinct from training."
+    },
+    {
+      "text": "The benchmark uses Dataset S. Dataset S was produced by Device T.",
+      "candidate": {
+        "subject": "benchmark",
+        "predicate": "associated_with",
+        "object": "Device T"
+      },
+      "correct_decision": "indirect_document",
+      "explanation": "Two explicit provenance statements support an indirect association, not device ownership."
+    },
+    {
+      "text": "Aster includes Module B. Module B measures density.",
+      "candidate": {
+        "subject": "Module B",
+        "predicate": "measures",
+        "object": "density"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "The subject is Module B, not automatically Aster."
+    },
+    {
+      "text": "Dr Lin designed Model K. It predicts temperature.",
+      "candidate": {
+        "subject": "Model K",
+        "predicate": "predicts",
+        "object": "temperature"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "The singular pronoun resolves to Model K."
+    },
+    {
+      "text": "PAGE 1: Project Vega introduces Model Q. PAGE 8: The model introduced by Project Vega uses Bayesian inference.",
+      "candidate": {
+        "subject": "Model Q",
+        "predicate": "uses",
+        "object": "Bayesian inference"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "The distant explicit description identifies the same model."
+    },
+    {
+      "text": "The report compares Model D with Model E.",
+      "candidate": {
+        "subject": "Model D",
+        "predicate": "compared_with",
+        "object": "Model E"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "Comparison does not assert superiority."
+    },
+    {
+      "text": "Model F beats Model G on recall in Experiment 2.",
+      "candidate": {
+        "subject": "Model F",
+        "predicate": "outperforms",
+        "object": "Model G"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "Keep the recall and Experiment 2 scope in the evidence."
+    },
+    {
+      "text": "Probe H measures electron density.",
+      "candidate": {
+        "subject": "Probe H",
+        "predicate": "measures",
+        "object": "electron density"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "A measurement relation connects a device and physical quantity."
+    },
+    {
+      "text": "The research center is in City U.",
+      "candidate": {
+        "subject": "research center",
+        "predicate": "located_in",
+        "object": "City U"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "An explicit spatial relation."
+    },
+    {
+      "text": "Ana, after years of work in Site W and several setbacks, developed Algorithm Z.",
+      "candidate": {
+        "subject": "Ana",
+        "predicate": "produced_by_inverse",
+        "object": "Algorithm Z"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "Long intervening syntax does not remove the explicit developed relation; production extraction reverses it to Algorithm Z produced_by Ana."
+    },
+    {
+      "text": "Collection V (CV) contains magnetic signals. Later, CV supports forecasting.",
+      "candidate": {
+        "subject": "Collection V",
+        "predicate": "supports_task",
+        "object": "forecasting"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "The alias is explicitly defined."
+    }
+  ],
+  "negative": [
+    {
+      "text": "Orion was not trained on Dataset R.",
+      "candidate": {
+        "subject": "Orion",
+        "predicate": "trained_on",
+        "object": "Dataset R"
+      },
+      "correct_decision": "negated",
+      "explanation": "Do not drop not or invent positive training."
+    },
+    {
+      "text": "Model A and Dataset B appear in the introduction.",
+      "candidate": {
+        "subject": "Model A",
+        "predicate": "trained_on",
+        "object": "Dataset B"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "Co-occurrence is not training evidence."
+    },
+    {
+      "text": "The method may eventually predict instabilities.",
+      "candidate": {
+        "subject": "method",
+        "predicate": "predicts",
+        "object": "instabilities"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "May eventually is hypothetical, not an achieved capability."
+    },
+    {
+      "text": "Model C uses Model D, which uses Model E.",
+      "candidate": {
+        "subject": "Model C",
+        "predicate": "uses",
+        "object": "Model E"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "Uses is not generally transitive."
+    },
+    {
+      "text": "A predicts B; B is associated with C.",
+      "candidate": {
+        "subject": "A",
+        "predicate": "predicts",
+        "object": "C"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "Prediction cannot be composed with generic association."
+    },
+    {
+      "text": "Device F records Dataset G.",
+      "candidate": {
+        "subject": "Dataset G",
+        "predicate": "produced_by",
+        "object": "Device F"
+      },
+      "correct_decision": "affirmed",
+      "explanation": "Reject the reversed claim Device F produced_by Dataset G; entity roles determine direction."
+    },
+    {
+      "text": "Model H has higher precision but lower recall than Model I.",
+      "candidate": {
+        "subject": "Model H",
+        "predicate": "outperforms",
+        "object": "Model I"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "Unqualified overall superiority is not supported by conflicting metrics."
+    },
+    {
+      "text": "Two unrelated groups each call their method Nova.",
+      "candidate": {
+        "subject": "first Nova",
+        "predicate": "same_as",
+        "object": "second Nova"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "Matching strings do not prove identical referents."
+    },
+    {
+      "text": "The paper cites a study titled Models for Earthquakes.",
+      "candidate": {
+        "subject": "current model",
+        "predicate": "predicts",
+        "object": "earthquakes"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "A cited title is not a capability claim about the current model."
+    },
+    {
+      "text": "Mina lives in North Park, San Diego. She has never visited Balboa Park.",
+      "candidate": {
+        "subject": "Balboa Park",
+        "predicate": "in_or_near",
+        "object": "San Diego"
+      },
+      "correct_decision": "external_knowledge",
+      "explanation": "The sentence does not locate Balboa Park; geography would require outside verification."
+    },
+    {
+      "text": "Model J improves on Model K in a simulated experiment.",
+      "candidate": {
+        "subject": "Model J",
+        "predicate": "outperforms",
+        "object": "Model K in real deployment"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "Do not transfer simulated results to deployment."
+    },
+    {
+      "text": "Method L might use Dataset M; no implementation is reported.",
+      "candidate": {
+        "subject": "Method L",
+        "predicate": "uses",
+        "object": "Dataset M"
+      },
+      "correct_decision": "unsupported",
+      "explanation": "A proposal is not observed use."
+    }
+  ],
+  "phrase_and_entity": [
+    {
+      "text": "A robust disruption prediction model uses electron density.",
+      "include": [
+        "a robust disruption prediction model",
+        "electron density"
+      ],
+      "exclude": [
+        "uses electron",
+        "prediction model uses"
+      ],
+      "reason": "Noun phrases cannot cross a finite verb."
+    },
+    {
+      "text": "The classifier was not trained on the test set.",
+      "entities": [
+        {
+          "name": "classifier",
+          "category": "model"
+        },
+        {
+          "name": "test set",
+          "category": "dataset"
+        }
+      ],
+      "wrong_entity": "was not trained",
+      "reason": "Verb phrases are not semantic entities."
+    },
+    {
+      "text": "Accuracy measures the fraction of correct predictions.",
+      "entities": [
+        {
+          "name": "Accuracy",
+          "category": "metric"
+        }
+      ],
+      "wrong_category": "physical_quantity",
+      "reason": "Evaluation metrics and physical observables are different categories."
+    },
+    {
+      "text": "Electron density is measured by Probe P.",
+      "entities": [
+        {
+          "name": "Electron density",
+          "category": "physical_quantity"
+        },
+        {
+          "name": "Probe P",
+          "category": "device"
+        }
+      ],
+      "wrong_category": "person",
+      "reason": "Capitalization does not determine the entity type."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "request_sha256": "9bb1e81df0f291886bdf97f70e1749c08e452f37e1836e859450c4d4000a9ae0",
+  "provider": "openrouter",
+  "model": "dots-studio/dots-3-note-preview:free",
+  "response_id": "gen-1792724929-WGsDFAK2lL6dcaIvtiLr",
+  "usage": {
+    "completion_tokens": 1318,
+    "prompt_tokens": 297,
+    "total_tokens": 1615,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 1357,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": 0
+    },
+    "compute_units": null,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": 0
+    },
+    "cost": 0,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "data": {
+    "phrases": [
+      "growth direction of single crystal",
+      "single crystal",
+      "XRD",
+      "exclusive licence to Springer",
+      "powder and flake",
+      "Rietveld analysis",
+      "Science+Business Media, LLC",
+      "electrical transport measurements"
+    ]
+  }
+}

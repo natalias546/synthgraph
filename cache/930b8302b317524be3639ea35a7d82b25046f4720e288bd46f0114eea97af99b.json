@@ -1,0 +1,70 @@
+{
+  "request_sha256": "930b8302b317524be3639ea35a7d82b25046f4720e288bd46f0114eea97af99b",
+  "provider": "openrouter",
+  "model": "dots-studio/dots-3-note-preview:free",
+  "response_id": "gen-1792724945-rFbGa4SKxvVzbwyaDoZ7",
+  "usage": {
+    "completion_tokens": 2707,
+    "prompt_tokens": 608,
+    "total_tokens": 3315,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 2319,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": 0
+    },
+    "compute_units": null,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": 0
+    },
+    "cost": 0,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "data": {
+    "phrases": [
+      "ρ /ρ ratio",
+      "300K 2.5Κ variation",
+      "magnetoresistance (MR) values",
+      "temperature",
+      "applied field",
+      "low T (2.5 K)",
+      "v-type characteristic TI cusp",
+      "TI cusp",
+      "Magnetoconductivity data",
+      "low fields (± 1Tesla)",
+      "Hikami Larkin Nagaoka (HLN) model",
+      "weak anti-localization effect",
+      "synthesized Ni In S crystal",
+      "Ni In S crystal",
+      "single-phase Ni In S",
+      "TI behavior",
+      "magneto-transport measurements",
+      "combination of different elements",
+      "structure",
+      "Nickel",
+      "transition metal",
+      "metallic and conductive characteristics",
+      "Indium",
+      "post-transition metal",
+      "electronic and structural properties",
+      "compound",
+      "Sulfur",
+      "non-metal",
+      "chemical reactivity and bonding",
+      "chalcogenides",
+      "Kagome lattice"
+    ]
+  }
+}

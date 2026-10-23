@@ -1,0 +1,62 @@
+{
+  "request_sha256": "6a428da6483815f25fe8ccb74f8c7f579d1474f8c15bdfe518971d1dce94c70a",
+  "provider": "openrouter",
+  "model": "nvidia/nemotron-3.5-super-vl:free",
+  "response_id": "gen-1792724899-faYIxVwACY1AJgOrhVnR",
+  "usage": {
+    "completion_tokens": 3848,
+    "prompt_tokens": 351,
+    "total_tokens": 4199,
+    "completion_tokens_details": {
+      "accepted_prediction_tokens": null,
+      "audio_tokens": 0,
+      "reasoning_tokens": 3722,
+      "rejected_prediction_tokens": null,
+      "text_tokens": null,
+      "image_tokens": 0
+    },
+    "compute_units": null,
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cache_write_tokens": 0,
+      "cached_tokens": 0,
+      "image_tokens": null,
+      "text_tokens": null,
+      "video_tokens": 0
+    },
+    "cost": 0,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    }
+  },
+  "data": {
+    "phrases": [
+      "materials",
+      "the same",
+      "MR",
+      "low-temperature regime",
+      "crystal growth",
+      "structural",
+      "micro-structural",
+      "magneto-transport",
+      "study",
+      "Ni In S",
+      "2.5 K",
+      "applied field",
+      "applied field of up to 14Tesla",
+      "14Tesla",
+      "The phase",
+      "The Author(s)",
+      "purity",
+      "growth direction",
+      "single crystal",
+      "growth direction of single crystal",
+      "XRD",
+      "exclusive licence",
+      "Springer"
+    ]
+  }
+}

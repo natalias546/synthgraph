@@ -1,0 +1,2 @@
+.owl filter=lfs diff=lfs merge=lfs -text
+data/matsci-v10-literature-enriched.owl filter=lfs diff=lfs merge=lfs -text

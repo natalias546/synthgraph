@@ -1,0 +1,29 @@
+{
+  "provider": "openrouter",
+  "model": "liquid/lfm-2.5-2.6b:free",
+  "response_id": "gen-1792723234-ob2gDJecA5kRuIHIZU2B",
+  "data": {
+    "phrases": [
+      "Rigaku Miniflex-II X-ray diffractometer",
+      "Rietveld refinement",
+      "Full- profile software",
+      "XRD pattern",
+      "mechanically cleaved thin flakes",
+      "Ni In S single crystal",
+      "scanning electron microscopy (SEM)",
+      "energy-dispersive X-ray analysis (EDAX)",
+      "Zeiss crystal growth EVO-50",
+      "optical bandgap",
+      "UV-VIS spectroscopy",
+      "Shimadzu spectrometer",
+      "four-probe crystal",
+      "Quantum Design Physics Property Measurement System (QD-PPMS)",
+      "transport measurements",
+      "electrical contacts",
+      "R3m space group",
+      "rhombohedral crystal structure",
+      "diffraction planes",
+      "unit cell structure"
+    ]
+  }
+}
