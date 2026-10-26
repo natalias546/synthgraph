@@ -208,6 +208,9 @@ def char_line_records(chars):
         return []
     from pdfplumber.utils import chars_to_textmap
 
+    # pdfplumber lists a ligature glyph ("ffi") once per letter; rebuilding text from
+    # those copies would print it three times ("diffiffifficult").
+    chars = list({id(c): c for c in chars}.values())
     return chars_to_textmap(
         chars, layout=False, x_tolerance_ratio=0.15, y_tolerance=3
     ).extract_text_lines(strip=True, return_chars=True)
@@ -398,7 +401,119 @@ def ordered_page_lines(page, pno, body_font_size=None):
         band_layouts=band_layouts,
         raw_line_count=len(raw_lines),
     )
+    ordered = attach_scripts(ordered)
+    for line in ordered:
+        line["text"] = clean_text(line["text"])
     return ordered, summary
+
+
+# Repair text-layer defects that pdfplumber passes through unchanged.
+def clean_text(text):
+    if "\x00" in text:
+        text = repair_ligatures(text)
+    if "(cid:" in text:
+        # A glyph without a Unicode mapping prints as "(cid:N)", often repeated because the
+        # PDF draws it several times. Show each as one replacement character instead.
+        text = re.sub(r"(\(cid:\d+\))\1*", "�", text)
+    return text
+
+
+# Fold subscript/superscript lines back into the line they belong to, so that
+# "Ni In" + "3" becomes "Ni3In". A script line is set in a clearly smaller font
+# and sits inside the height and width of a larger-font host line.
+def attach_scripts(lines):
+    def size(line):
+        sizes = sorted(c.get("size", 0) for c in line["chars"] if c.get("text", "").strip())
+        return sizes[len(sizes) // 2] if sizes else 0
+
+    def bounds(line):
+        chars = line["chars"]
+        return (
+            min(c["x0"] for c in chars),
+            min(c["top"] for c in chars),
+            max(c["x1"] for c in chars),
+            max(c["bottom"] for c in chars),
+        )
+
+    info = {id(l): (size(l), bounds(l)) for l in lines if l.get("chars")}
+    hosts = {}
+    for script in lines:
+        if id(script) not in info:
+            continue
+        s_size, (sx0, stop, _, sbottom) = info[id(script)]
+        best, best_overlap = None, 0
+        for host in lines:
+            if host is script or id(host) not in info or id(host) in hosts:
+                continue
+            h_size, (hx0, htop, hx1, hbottom) = info[id(host)]
+            if not s_size or s_size > h_size * 0.85:
+                continue
+            # A script at the end of a line extends past it, so only its start must fall inside.
+            if not hx0 - 2 <= sx0 <= hx1 + 2:
+                continue
+            overlap = min(sbottom, hbottom) - max(stop, htop)
+            if overlap > 0.4 * (sbottom - stop) and overlap > best_overlap:
+                best, best_overlap = host, overlap
+        if best is not None:
+            hosts[id(script)] = best
+
+    if not hosts:
+        return lines
+    merged = {}
+    for script in lines:
+        host = hosts.get(id(script))
+        if host is not None:
+            merged.setdefault(id(host), [host]).append(script)
+    result = []
+    for line in lines:
+        if id(line) in hosts:
+            continue
+        group = merged.get(id(line))
+        if group:
+            unique = {id(c): c for l in group for c in l["chars"]}
+            chars = sorted(unique.values(), key=lambda c: c["x0"])
+            # Give every character the host's vertical position so they read as one line.
+            first = group[0]["chars"][0]
+            rebuilt = char_line_records(
+                [
+                    dict(c, top=first["top"], bottom=first["bottom"], doctop=first.get("doctop", first["top"]))
+                    for c in chars
+                ]
+            )
+            line = dict(
+                line,
+                text=" ".join(r["text"] for r in rebuilt),
+                chars=chars,
+                top=min(c["top"] for c in chars),
+                bottom=max(c["bottom"] for c in chars),
+            )
+        result.append(line)
+    return result
+
+
+_WORDS = None
+
+
+# Some fonts map the fi/fl ligature glyphs to a NUL character ("signi\x00cant").
+# Pick the ligature that turns the word into a dictionary word; default to "fi".
+def repair_ligatures(text):
+    global _WORDS
+    if _WORDS is None:
+        try:
+            _WORDS = set(Path("/usr/share/dict/words").read_text().lower().split())
+        except OSError:
+            _WORDS = set()
+
+    def fix(match):
+        word = match.group(0)
+        for ligature in ("fi", "fl", "ff", "ffi", "ffl"):
+            candidate = word.replace("\x00", ligature)
+            stem = candidate.lower().rstrip("s")
+            if candidate.lower() in _WORDS or stem in _WORDS:
+                return candidate
+        return word.replace("\x00", "fi")
+
+    return re.sub(r"\w*\x00[\w\x00]*", fix, text)
 
 
 # ---------------------------------------------------------------------------
@@ -422,7 +537,8 @@ def first_pass(pdf_path, ctx):
                 if c.get("text", "").strip()
             ).most_common(1)[0][0]
             for page in pdf.pages
-            if page.chars
+            # A page can hold only whitespace characters, which leaves nothing to count.
+            if any(c.get("text", "").strip() for c in page.chars)
         )
         body_size = sizes.most_common(1)[0][0] if sizes else 10
         families = Counter(
@@ -1974,6 +2090,11 @@ def extract_publication(
                 },
             )
             joined["page_end"] = children[-1]["page_end"]
+            # Point figure/table mentions from the merged paragraphs at the joined one.
+            merged_ids = {c["id"] for c in children}
+            for r in relations:
+                if r["from"] in merged_ids:
+                    r["from"] = joined["id"]
             acknowledgement["children"] = [joined]
 
     # Build a coverage ledger: every observed text block should have exactly one primary owner.

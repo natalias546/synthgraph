@@ -68,3 +68,4 @@ typing_extensions==4.16.0
 tzdata==2026.5
 uvicorn==0.54.0
 wcwidth==0.9.3
+anthropic==2.3.0
