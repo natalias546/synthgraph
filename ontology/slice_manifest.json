@@ -1,0 +1,263 @@
+{
+  "_comment": [
+    "Slice manifest: which part of the ontology the extractor may use.",
+    "ontology_file: the OWL file in ontology/ to load (RDF/XML, Turtle or OWL/XML). If missing, the first other .owl/.rdf/.ttl file is used, then the starter ontology.",
+    "entity_groups: classes are referenced by rdfs:label (case-insensitive) or full IRI. Every root found is used together with all its subclasses; roots that do not exist are reported as warnings, so alternatives can be listed.",
+    "The allowed labels become enums in Claude's output schema. Anything that fits none of them comes back as OTHER plus a proposed class label; those proposals end up in data/graph/ontology_gaps.csv.",
+    "relations: 'ontology_property' lists candidate object-property labels/IRIs; if none is found the relation is still extracted but flagged as an ontology gap. pass=implicit: produced by the structure of passes 1-2; pass=relations: offered to Claude in pass 3."
+  ],
+  "ontology_file": "matsci-v10-semantic-closure.owl",
+  "entity_groups": {
+    "material": {
+      "description": "Chemical identity / phase of matter (e.g. c-Si, a-Si:H, SiNx, a dopant element, a precursor gas).",
+      "roots": [
+        "material"
+      ]
+    },
+    "sample": {
+      "description": "A specific physical specimen made or measured in this paper (wafer, film, stack, device), identified by its process history.",
+      "roots": [
+        "sample"
+      ]
+    },
+    "process": {
+      "description": "Steps that create or modify a sample (deposition, annealing, doping, etching, cleaning, growth, simulation).",
+      "roots": [
+        "process"
+      ]
+    },
+    "process_attribute": {
+      "description": "Kinds of process parameters (temperature, pressure, duration, gas flow, power, atmosphere...).",
+      "roots": [
+        "process attribute"
+      ]
+    },
+    "technique": {
+      "description": "Measurement / characterization / computational methods.",
+      "roots": [
+        "measurement technique"
+      ]
+    },
+    "property": {
+      "description": "Measured or computed properties, including device performance metrics.",
+      "roots": [
+        "material property",
+        "quality"
+      ],
+      "exclude": [
+        "function",
+        "application"
+      ]
+    },
+    "application": {
+      "description": "Intended application of a material or device.",
+      "roots": [
+        "application"
+      ]
+    },
+    "other": {
+      "description": "Other entities worth keeping (charge carriers, data products...).",
+      "roots": [
+        "charge carrier",
+        "Data Product",
+        "generically dependent continuant"
+      ]
+    }
+  },
+  "relations": [
+    {
+      "name": "has_input",
+      "pass": "implicit",
+      "definition": "A process step consumes or modifies this sample/material.",
+      "subject_groups": [
+        "process"
+      ],
+      "object_groups": [
+        "sample",
+        "material"
+      ],
+      "ontology_property": [
+        "has input",
+        "has_input",
+        "hasInput",
+        "has specified input"
+      ]
+    },
+    {
+      "name": "has_output",
+      "pass": "implicit",
+      "definition": "A process step produces this sample.",
+      "subject_groups": [
+        "process"
+      ],
+      "object_groups": [
+        "sample"
+      ],
+      "ontology_property": [
+        "has output",
+        "has_output",
+        "hasOutput",
+        "has specified output"
+      ]
+    },
+    {
+      "name": "precedes",
+      "pass": "implicit",
+      "definition": "One process step happens before another in the same sample's history.",
+      "subject_groups": [
+        "process"
+      ],
+      "object_groups": [
+        "process"
+      ],
+      "ontology_property": [
+        "precedes"
+      ]
+    },
+    {
+      "name": "has_parameter",
+      "pass": "implicit",
+      "definition": "A process step is run with this parameter value.",
+      "subject_groups": [
+        "process"
+      ],
+      "object_groups": [
+        "process_attribute"
+      ],
+      "ontology_property": [
+        "has attribute",
+        "has_attribute",
+        "has parameter"
+      ]
+    },
+    {
+      "name": "measured_on",
+      "pass": "implicit",
+      "definition": "A measurement was performed on this sample.",
+      "subject_groups": [
+        "technique"
+      ],
+      "object_groups": [
+        "sample"
+      ],
+      "ontology_property": [
+        "measured on",
+        "has specified input"
+      ]
+    },
+    {
+      "name": "has_property_value",
+      "pass": "implicit",
+      "definition": "A sample has a reported value of a property.",
+      "subject_groups": [
+        "sample"
+      ],
+      "object_groups": [
+        "property"
+      ],
+      "ontology_property": [
+        "has quality",
+        "has_quality",
+        "bearer of"
+      ]
+    },
+    {
+      "name": "part_of",
+      "pass": "relations",
+      "definition": "A layer/component is physically part of a larger sample or device (e.g. a SiNx layer is part of a passivation stack).",
+      "subject_groups": [
+        "sample",
+        "material"
+      ],
+      "object_groups": [
+        "sample"
+      ],
+      "ontology_property": [
+        "part of",
+        "part_of",
+        "BFO_0000050"
+      ]
+    },
+    {
+      "name": "composed_of",
+      "pass": "relations",
+      "definition": "A sample is made of / contains this material (e.g. a film composed of a-Si:H, a wafer doped with boron).",
+      "subject_groups": [
+        "sample"
+      ],
+      "object_groups": [
+        "material"
+      ],
+      "ontology_property": [
+        "has part",
+        "composed of",
+        "has component"
+      ]
+    },
+    {
+      "name": "intended_for",
+      "pass": "relations",
+      "definition": "The paper states the material or device is developed or used for this application.",
+      "subject_groups": [
+        "sample",
+        "material"
+      ],
+      "object_groups": [
+        "application"
+      ],
+      "ontology_property": [
+        "intended for",
+        "has function"
+      ]
+    },
+    {
+      "name": "influences",
+      "pass": "relations",
+      "definition": "The paper reports that changing a process parameter or step changes a property (give the trend).",
+      "subject_groups": [
+        "process",
+        "process_attribute"
+      ],
+      "object_groups": [
+        "property"
+      ],
+      "ontology_property": [
+        "influences",
+        "affects"
+      ]
+    },
+    {
+      "name": "derived_from",
+      "pass": "relations",
+      "definition": "A sample was made from another sample (e.g. an annealed film derived from the as-deposited film).",
+      "subject_groups": [
+        "sample"
+      ],
+      "object_groups": [
+        "sample"
+      ],
+      "ontology_property": [
+        "derives from",
+        "derived from"
+      ]
+    },
+    {
+      "name": "compared_with",
+      "pass": "relations",
+      "definition": "The paper explicitly compares two samples, materials or processes (no superiority implied).",
+      "subject_groups": [
+        "sample",
+        "material",
+        "process"
+      ],
+      "object_groups": [
+        "sample",
+        "material",
+        "process"
+      ],
+      "ontology_property": [
+        "compared with"
+      ]
+    }
+  ]
+}
