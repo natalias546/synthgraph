@@ -10,6 +10,7 @@ httpcore2==2.16.0
 httpx2==2.16.0
 idna==3.20
 jiter==0.17.0
+jsonschema==4.26.0
 neo4j==6.4.1
 opentelemetry-api==1.45.1
 owlready2==0.51
