@@ -13,6 +13,8 @@ neo4j/
 *.dump
 *.jsonl
 
+data/*
+
 # Source publications (PDFs etc.) — kept locally, tracked via checksums.json
 data/publications/*
 !data/publications/.gitkeep
