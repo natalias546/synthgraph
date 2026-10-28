@@ -1,0 +1,1772 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2023_QM045_Phosphorus_Solubility_and_Critical_Temperature_in_RbEuFe4As4xPx.pdf",
+    "pages": 23,
+    "sha256": "859df2792a486be11243d9933ebc1c8ca17a51376ee3573bcdb922e4239d27b4",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 12.0,
+    "body_font_family": "TimesNewRomanPSMT"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 23,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 23,
+        "children": [
+          {
+            "id": "heading_p1_l1",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 12,
+            "children": [
+              {
+                "id": "unidentified_p1_1",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "Mohammad Usman,1,2 Xiuquan Zhou,1 Christos D. Malliakas,2 Ulrich Welp,1 Wai-Kwong\nKwok,1 Duck Young Chung,1 and Mercouri G. Kanatzidis*,1,2\n1Materials Science Division, Argonne National Laboratory, Lemont, Illinois 60439, United\nStates\n2Department of Chemistry, Northwestern University, Evanston, Illinois 60208, United States\n*Corresponding Author: Mercouri G. Kanatzidis (E-mail: m-kanatzidis@northwestern.edu)\nAbstract: RbEuFe4As4 exhibits a rare combination of high-temperature superconductivity and\nnon-collinear magnetism, originating from the FeAs and Eu layers, respectively. In order to fine-\ntune its superconducting and magnetic properties, we studied P-doped RbEuFe4As4-xPx. To\ndetermine the value of x for which RbEuFe4As4-xPx exists, members of the series have been\nsynthesized in the form of relatively large-sized single crystals by high-temperature flux growth\ntechnique using RbAs flux as well polycrystalline powder by direct combination reactions between\nRbFe2As2 and EuFe2As2-xPx. The flux crystal growth reactions indicate that RbEuFe4As4-xPx forms\nwith the values of x ≤ 0.12 which is corroborated by Rietveld refinement analysis on the products\nobtained from direct combination reactions. The solubility limit exists primarily due to the\npreferential site As(2) occupation by P in the RbEuFe4As4 crystal structure. As x increases in\nRbEuFe4As4-xPx, magnetization measurements reveal that the superconducting critical transition\ntemperature (Tc) decreases while the magnetic ordering temperature (TN) remains almost\nunchanged in comparison to undoped RbEuFe4As4.\n1",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l4",
+                    "p1_l5",
+                    "p1_l6",
+                    "p1_l7",
+                    "p1_l8",
+                    "p1_l9",
+                    "p1_l10",
+                    "p1_l11",
+                    "p1_l12",
+                    "p1_l13",
+                    "p1_l14",
+                    "p1_l15",
+                    "p1_l16",
+                    "p1_l17",
+                    "p1_l18",
+                    "p1_l19",
+                    "p1_l20",
+                    "p1_l21",
+                    "p1_l22",
+                    "p1_l23"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "heading_p2_l1",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p2_1",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "The discovery of layered, Eu-containing compounds of composition AEuFe4As4 (A = Rb,\nCs) (1144 compounds, for short) has introduced new members to the family of materials that\ndisplay superconductivity coexisting with three-dimensional long-range local moment magnetic\norder. [1–6] Eu2+ ions carry a large, spin-only moment of 7 µB and enter a long-range ordered state\nat TN = 15 K. The moments have an easy-plane anisotropy and order ferromagnetically within one\nEu-plane and exhibit a helical stacking with a period of four c-axis lattice constant along the c-\naxis. [7,8] The superconducting transition occurs at Tc ~ 36.5 – 37.0 K. [2–4,9] Next to EuFe2As2\nderived materials [10] and the family of (Li1-xMx)OH-intercalated FeSe (M = Fe, Mn, Co; Tc = 43\nK) [11,12], RbEuFe4As4 has the highest Tc of any magnetic superconductor. The Eu-Fe-based\n1144 superconductors are unique because they simultaneously display two mutually antagonistic\nphysical orders, high magnetic ordering and superconductivity, implying sizable magnetic\nexchange interactions in the presence of strong superconducting pairing. Furthermore, the helical\nmagnetic structure may induce topological states and Majorana zero-modes on the c-surfaces of\nAEuFe4As4 [13] the realization of which depends on the interplay of the magnetic exchange energy\nand the superconducting gap. Previous work on Eu-1144 [14,15] has shown that the application of\nhydrostatic pressure induces a decrease of Tc and an increase of TC such that they become\napproximately equal near 7 GPa, thereby opening a way to tune the magnetic and superconducting\nenergy scales. Alternatively, work on inducing superconductivity by iso-valent P substitution in\nEuFe2(As1-xPx)2 (Eu-122) compounds revealed that the primary effect of P substitution is the\ngeneration of chemical pressure. [10] A highly stoichiometric form of RbEuFe4As4 is intrinsically\ndoped with approximately 1/4 hole per Fe, which is in line with the optimal substitution levels\nobserved in the 122 compounds. It is expected that introducing relatively low levels of P-doping\nin RbEuFe4As4-xPx will result in a decrease in Tc and an increase in TN, which could create\nconditions conducive to the emergence of topological states and other exotic situations where the\ntwo orders occur at the same temperature, leading to fascinating phenomena.\nHerein, we present a detailed investigation of the system of RbEuFe4As4-xPx using direct\ncombination reactions and flux synthesis methods. We found a relatively low solubility limit of x\n~ 0.12 beyond which the 1144 structure does not crystallize. This is in sharp contrast to the\ncomplete solubility of phosphorus in EuFe2As2, giving access to the full series EuFe2As2-xPx. X-\nray diffraction reveals that this limit arises due to the asymmetric surrounding of the Fe2As2 layers\n2",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l2",
+                        "p2_l3",
+                        "p2_l4",
+                        "p2_l5",
+                        "p2_l6",
+                        "p2_l7",
+                        "p2_l8",
+                        "p2_l9",
+                        "p2_l10",
+                        "p2_l11",
+                        "p2_l12",
+                        "p2_l13",
+                        "p2_l14",
+                        "p2_l15",
+                        "p2_l16",
+                        "p2_l17",
+                        "p2_l18",
+                        "p2_l19",
+                        "p2_l20",
+                        "p2_l21",
+                        "p2_l22",
+                        "p2_l23",
+                        "p2_l24",
+                        "p2_l25",
+                        "p2_l26",
+                        "p2_l27",
+                        "p2_l28",
+                        "p2_l29",
+                        "p2_l30",
+                        "p2_l31",
+                        "p2_l32"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p3_1",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "such that the As(1) site faces the (smaller) Eu2+ ions whereas As(2) faces the larger Rb+ ions in the\nRbEuFe4As4 crystal structure. The solubility is limited by the preferential incorporation of the\nsmaller (than As) P-ion on the As(2) site. At higher values of x, other phases, such as EuFe2As2\nand Fe2As1-xPx appear. Magnetization measurements reveal that with increasing x-values, Tc\ndecreases from 36.8 K for undoped RbEuFe4As4 to 35.2(1) K in RbEuFe4As3.88(3)P0.12(3) while TN\nis essentially unchanged at 14.5(2) K.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l1",
+                        "p3_l2",
+                        "p3_l3",
+                        "p3_l4",
+                        "p3_l5",
+                        "p3_l6"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Introduction",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p2_l1"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l7",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 6,
+                "children": [
+                  {
+                    "id": "heading_p3_l8",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [
+                      {
+                        "id": "unidentified_p3_2",
+                        "type": "custom",
+                        "page_start": 3,
+                        "page_end": 3,
+                        "children": [],
+                        "text": "Rubidium metal sealed under argon (99%, Johnson Matthey), europium chunks (99.9%,\nAlfa Aesar), iron powder (99.998% Alfa Aesar), red phosphorus powder (99%, Beantown\nChemical), and arsenic powder (99.9999% Alfa Aesar) were used for the synthesis of all starting\nmaterials. All reactions were carried out in alumina crucibles placed in evacuated fused silica tubes\nsealed under a vacuum below 10-3 mbar and employed binaries and ternaries instead of using pure\nelements for the ease of handling and safety purposes. Synthetic operations were carried out under\nan argon atmosphere in an M-Braun glovebox with O2 and H2O concentrations at <0.1 ppm.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p3_l9",
+                            "p3_l10",
+                            "p3_l11",
+                            "p3_l12",
+                            "p3_l13",
+                            "p3_l14",
+                            "p3_l15"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      }
+                    ],
+                    "title": "Methods and Materials",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p3_l8"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p3_l16",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [
+                      {
+                        "id": "unidentified_p3_3",
+                        "type": "custom",
+                        "page_start": 3,
+                        "page_end": 3,
+                        "children": [],
+                        "text": "their loading, synthesis, handling, and disposal. Pnicogens and alkali metals (K and Rb) may react\nspontaneously even in the glovebox during loading.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p3_l17",
+                            "p3_l18"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      }
+                    ],
+                    "title": "Caution! The syntheses of RbAs and RbP are nontrivial and extreme caution must be taken during",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p3_l16"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p3_l19",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p3_4",
+                        "type": "custom",
+                        "page_start": 3,
+                        "page_end": 3,
+                        "children": [],
+                        "text": "RbAs was synthesized by directly combining Rb and As, on an approximately 10 g scale.\nThe mixture loaded in an alumina crucible and sealed in a fused silica ampoule was heated at a\nrate of 8 °C/h to 200 °C, held there for 24-36 h, after which the furnace was turned off. RbP was\nsynthesized similarly, albeit using a slower heating rate of 3-5 °C/h. Upon reaction completion,\nthe ampoule was carefully opened in the glovebox and black granular powder was collected as\nproduct which was homogenized thoroughly before use.\nEuAs1-xPx and Fe2As1-xPx binaries were prepared by heating a stoichiometric mixture of\nthe elements in a fused silica ampoule at 800 °C for 24 h. RbFe2As2 was synthesized by directly\ncombining RbAs and Fe2As in an alumina crucible sealed in a Nb tube under argon atmosphere by\narc welding. The Nb tube was finally placed in a large, fused silica ampoule (18 mm OD and 16\n3",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p3_l20",
+                            "p3_l21",
+                            "p3_l22",
+                            "p3_l23",
+                            "p3_l24",
+                            "p3_l25",
+                            "p3_l26",
+                            "p3_l27",
+                            "p3_l28",
+                            "p3_l29",
+                            "p3_l30"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      },
+                      {
+                        "id": "unidentified_p4_1",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "mm ID). The pictorial description of this assembly is reported elsewhere. [4]The mixture in the\ntube was heated to 800 °C in 24 h and held there for 48 h, followed by shutting the furnace off.\nSimilarly, RbFe2P2 was synthesized by heating a mixture of RbP and Fe2P in a similar tube\nassembly but using a lower dwelling temperature 600 °C.\nEuFe2As2-xPx ternaries were synthesized by loading a stoichiometric mixture of small Eu\npieces and Fe, As and red P powders in a fused silica ampoule, which was flame-sealed under\nvacuum and heated to 900 °C in 12 h, and held there for 24 h, followed by shutting off the furnace.\nThe product was homogenized and reannealed two more times for each composition.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l1",
+                            "p4_l2",
+                            "p4_l3",
+                            "p4_l4",
+                            "p4_l5",
+                            "p4_l6",
+                            "p4_l7",
+                            "p4_l8"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Direct Combination Reactions",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p3_l19"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l9",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_2",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "RbEuFe4As3.91(3)P0.09(3) and RbEuFe4As3.88(4)P0.12(4) were crystallized out of a RbAs flux by\nlayering a homogenized mixture of RbFe2As2 (0.15 g), EuFe2As1.75P0.25 (0.174 g), RbFe2As2 (0.15\ng), and of EuFe2As1.5P0.5 (0.174 g) under RbAs (1.50 g) in an alumina crucible which was later\nsealed in a Nb tube under an argon atmosphere. The Nb tube was sealed in an evacuated fused-\nsilica ampoule (18 mm OD, 16 mm ID). The reaction mixture was heated to 920 °C in 20 h, soaked\nfor 12–24 h, slowly cooled to 500 °C at a rate of 2 °C/h at which point the furnace was shut off.\nCrystals measuring approximately 0.05 mm in size (Figure 1) were harvested for both\ncompositions. RbEuFe4As4-xPx crystals can also be synthesized using P-doped EuAs and Fe2As\nbinaries, but this approach, so far, has not proven successful in offering good control over\ncircumventing the formation of RbFe2As2 that typically forms as a parasitic phase in 1144\nreactions. [4] After completion of the reaction, the remaining RbAs flux in the final product was\nwashed off using a 70/30 water/methanol mixture in a fume hood under N2 gas flow. It is important\nthat the reaction is worked-up under N2 flow as the product might contain pyrophoric residues.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l10",
+                            "p4_l11",
+                            "p4_l12",
+                            "p4_l13",
+                            "p4_l14",
+                            "p4_l15",
+                            "p4_l16",
+                            "p4_l17",
+                            "p4_l18",
+                            "p4_l19",
+                            "p4_l20",
+                            "p4_l21",
+                            "p4_l22"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Crystal Growth",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p4_l9"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l23",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_3",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "Intensity data of plate-like black single crystals were collected at 100 K. Suitable single\ncrystals were mounted on a glass fiber with paratone oil on a Rigaku XtaLAB Synergy\ndiffractometer equipped with a micro-focus sealed X-ray tube PhotonJet (Mo) X-ray source and a\nHybrid Pixel Array Detector (HyPix) detector. The temperature of the crystal was controlled with\nan Oxford Cryosystems low-temperature device. Data reduction was performed with the\nCrysAlisPro software using an empirical absorption correction. The structure was solved with the\nShelXS structure solution program using the direct methods solution method and by using Olex2\nas the graphical interface. [16] The model was refined with ShelXL [17] using least squares\n4",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l24",
+                            "p4_l25",
+                            "p4_l26",
+                            "p4_l27",
+                            "p4_l28",
+                            "p4_l29",
+                            "p4_l30",
+                            "p4_l31",
+                            "p4_l32"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      },
+                      {
+                        "id": "unidentified_p5_1",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "minimization. Crystallographic refinement data and the atomic coordinates for\nRbEuFe4As3.91(3)P0.09(3) and RbEuFe4As3.88(4)P0.12(4) are listed in Tables 1 and 2, respectively.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l1",
+                            "p5_l2"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Single Crystal X-ray Diffraction",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p4_l23"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l3",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_2",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "Surface imaging and the elemental analysis of RbEuFe4As4-xPx crystals were performed\nusing a Hitachi S-4700-II scanning electron microscope (SEM) equipped with an energy-\ndispersive X-ray spectroscopy (EDS) detector. The samples were mounted on an aluminum sample\nstub coated with carbon tape. The acceleration voltage and beam current used for the\nmeasurements were 20 keV and 10 μA, respectively. EDS analyses, shown in Figures S1,\nperformed on multiple crystals gave the average compositions, Rb0.99Eu0.76Fe4As4.15P0.02 and\nRb0.91Eu0.82Fe4As4.24P0.08 for RbEuFe4As3.91(3)P0.09(3) (nominal composition: RbEuFe4As3.75P0.25)\nand RbEuFe4As3.88(4)P0.12(4) (nominal composition: RbEuFe4As3.5P0.5), respectively. As shown in\nFigure 1, the morphology of RbEuFe4As4-xPx crystals is nearly rectangular consistent with\nRbEuFe4As4.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l4",
+                            "p5_l5",
+                            "p5_l6",
+                            "p5_l7",
+                            "p5_l8",
+                            "p5_l9",
+                            "p5_l10",
+                            "p5_l11",
+                            "p5_l12",
+                            "p5_l13"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Scanning Electron Microscopy and Energy Dispersive X-ray Spectroscopy",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p5_l3"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l14",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_3",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "Powder X-ray diffraction (PXRD) was used to assess phase purity using a Rigaku Miniflex\ndiffractometer with a Ni-filtered Cu Kα source (15 mA and 40 kV). Continuous scanning and\nspinning were utilized with a step size of 0.02°. Finely ground powders were dispersed on a flat\nsample holder to check for phase identification. Phase fraction and reaction completeness were\nverified with synchrotron X-ray diffraction at 11-BM (λ = 0.4137 Å, 30 keV) at the Advanced\nPhoton Source at Argonne National Laboratory. Phase fractions for all samples were obtained by\nanalyzing the powder data with the General Structure Analysis System II package. [18]\nRbEuFe4As4-xPx powders were sieved and loaded into Kapton capillaries sealed with clay at both\nends. For lattice constant determinations, powder diffraction data were analyzed using Rietveld\nrefinement and sequential refinements in Jana2006. [19] The data are shown in Figure 2.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l15",
+                            "p5_l16",
+                            "p5_l17",
+                            "p5_l18",
+                            "p5_l19",
+                            "p5_l20",
+                            "p5_l21",
+                            "p5_l22",
+                            "p5_l23",
+                            "p5_l24"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Powder X-ray Diffraction",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p5_l14"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l25",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 6,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_4",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "The magnetic and superconducting transition temperatures of polycrystalline samples with\nvarious P-substitution levels are deduced from measurements of the temperature dependence of\ntheir magnetization. The magnetic measurements were performed in a MPMS3 SQUID\nmagnetometer manufactured by Quantum Design Inc. after cooling the sample in zero-field to 2\nK, applying a field of 100 Oe, and recording the magnetic moment while the samples were warmed\nup to 50 K. For these measurements, the powder samples were sealed in a non-magnetic plastic\n5",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l26",
+                            "p5_l27",
+                            "p5_l28",
+                            "p5_l29",
+                            "p5_l30",
+                            "p5_l31",
+                            "p5_l32"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      },
+                      {
+                        "id": "unidentified_p6_1",
+                        "type": "custom",
+                        "page_start": 6,
+                        "page_end": 6,
+                        "children": [],
+                        "text": "capsule. The capsule is supported in a straw which, in turn, is mounted to the SQUID sample\nholder. Through a repeated purge cycle at room temperature, air is removed from the powder\nsample through a small opening in the lid of the capsule.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p6_l1",
+                            "p6_l2",
+                            "p6_l3"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      }
+                    ],
+                    "title": "Magnetization Measurements",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p5_l25"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "Experimental Section",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p3_l7"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p6_l4",
+                "type": "subsection",
+                "page_start": 6,
+                "page_end": 10,
+                "children": [
+                  {
+                    "id": "heading_p6_l5",
+                    "type": "subsubsection",
+                    "page_start": 6,
+                    "page_end": 7,
+                    "children": [
+                      {
+                        "id": "unidentified_p6_2",
+                        "type": "custom",
+                        "page_start": 6,
+                        "page_end": 6,
+                        "children": [],
+                        "text": "All reactions presented vide infra were carried out in Nb tubes arc-welded under an argon\natmosphere and sealed in a fused silica tube. We began by carrying out a series of direct\ncombination reactions for x = 1, 2, 3, 4 in RbEuFe4As4-xPx. Table S1 summarizes the reagents used\nfor these reactions. The starting materials for each reaction were homogenized in an agate mortar\nand pestle and heated to 850 °C in 12 h, dwelled for 84 h followed by shutting the furnace off. For\neach reaction, black polycrystalline powder was obtained as a product which was homogenized\nand reannealed at 850 °C for 48 h. Post completion, the resulting product for each reaction was\nanalyzed using PXRD and the diffraction patterns are shown in Figure 3 (top) revealing no\nevidence for the formation of the desired RbEuFe4As4-xPx phase. However, these diffraction\npatterns largely match the calculated pattern for EuFe2P2. We anticipate these products to be the\n“disordered” or solid solution phases in the form of (Rb/Eu)2Fe4(As/P)4. Although these reactions\ndid not afford the desired P-doped 1144 phase, they indicated a potential limit, x<1, to the\nphosphorus solubility in RbEuFe4As4-xPx. To further investigate the validity of this hypothesis, a\nnew series of direct combination reactions targeting smaller x-values in RbEuFe4As4-xPx (0<x≤1),\nlisted in Table S2, was carried out using reaction conditions as described above. The masses of the\nreactants and products were recorded to ensure no significant material loss occurred during the\nannealing process. Figure 3 (bottom) shows the PXRD patterns for the as-synthesized\nRbEuFe4As4-xPx (0<x≤1) nominal compositions. All reactions, with the exception to that\nnominated for RbEuFe4As3P, afforded the desired 1144 product as the major phase with small\namounts of EuFe2As2 forming as a side product. These findings indicated that the nominal P limit\nin RbEuFe4As4-xPx might be close to x ≈ 0.75. In order to determine the actual phosphorus content\nin the nominal compositions, RbEuFe4As3.75P0.25, RbEuFe4As3.5P0.5 and RbEuFe4As3.25P0.75,\nRietveld refinement analysis was performed on each of the three samples and the data are provided\nin Table 3. With this information in hand, described in detail below, the next step was the synthesis\nof high-quality single crystals for physical property measurements and accurate structural analysis.\n6",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p6_l6",
+                            "p6_l7",
+                            "p6_l8",
+                            "p6_l9",
+                            "p6_l10",
+                            "p6_l11",
+                            "p6_l12",
+                            "p6_l13",
+                            "p6_l14",
+                            "p6_l15",
+                            "p6_l16",
+                            "p6_l17",
+                            "p6_l18",
+                            "p6_l19",
+                            "p6_l20",
+                            "p6_l21",
+                            "p6_l22",
+                            "p6_l23",
+                            "p6_l24",
+                            "p6_l25",
+                            "p6_l26",
+                            "p6_l27",
+                            "p6_l28",
+                            "p6_l29",
+                            "p6_l30",
+                            "p6_l31"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      },
+                      {
+                        "id": "unidentified_p7_1",
+                        "type": "custom",
+                        "page_start": 7,
+                        "page_end": 7,
+                        "children": [],
+                        "text": "Crystal Growth of RbEuFe4As3.91(3)P0.09(3) and RbEuFe4As3.88(4)P0.12(4)\nRbAs has been shown to be an effective flux to crystallize complex alkali metal-containing\npnictides, especially arsenides, [4,20] due to its high reactivity and relatively low melting point of\n575 °C. [21]The extreme reactivity of RbAs with quartz necessitates its use in an alumina crucible\nsealed in Nb or other metal tubes. RbAs reacts with Nb to produce NbAs and to prevent this the\nalumina container containing the starting materials, including RbAs must be plugged to prevent\nRbAs from escaping the reaction mixture at elevated temperatures. The starting materials and\nconditions for all flux crystal growth reactions are provided in Table S3. It is interesting to note\nthat for pure RbEuFe4As4 crystal growth, binary precursors, EuAs and Fe2As, afforded larger\ncrystals in higher yields compared to using the ternary precursor EuFe2As2 in RbAs flux. This may\nbe attributed to the higher solubility of the binary reagents in RbAs relative to EuFe2As2. However,\nin contrast to these observations, for P-doped RbEuFe4As4, P-doped binaries, EuAs1-xPx and\nFe2As1-xPx, have so far, failed to consistently afford the desired RbEuFe4As4-xPx phase. In this case,\ncombining the P-doped ternary, EuFe2As2-xPx, with RbFe2As2 proved to be a more conducive\napproach to growing RbEuFe4As4-xPx single crystals, although they are less than 0.1 mm in size as\nshown in Figure 1. Future experiments aim to optimize the reaction conditions for growing larger\nRbEuFe4As4-xPx single crystals to realize their advanced physical property measurements. Because\nof the lower solubility of ternary starting precursors in molten RbAs as compared to binaries, the\nmass of RbAs flux was increased to 22-fold to crystallize RbEuFe4As4-xPx, in contrast to pure\nRbEuFe4As4, which can typically be crystallized out of a 8-15-fold excess of RbAs.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p7_l1",
+                            "p7_l2",
+                            "p7_l3",
+                            "p7_l4",
+                            "p7_l5",
+                            "p7_l6",
+                            "p7_l7",
+                            "p7_l8",
+                            "p7_l9",
+                            "p7_l10",
+                            "p7_l11",
+                            "p7_l12",
+                            "p7_l13",
+                            "p7_l14",
+                            "p7_l15",
+                            "p7_l16",
+                            "p7_l17",
+                            "p7_l18",
+                            "p7_l19",
+                            "p7_l20"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      }
+                    ],
+                    "title": "Direct Combination Reactions for RbEuFe4As4-xPx",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p6_l5"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p7_l21",
+                    "type": "subsubsection",
+                    "page_start": 7,
+                    "page_end": 10,
+                    "children": [
+                      {
+                        "id": "unidentified_p7_2",
+                        "type": "custom",
+                        "page_start": 7,
+                        "page_end": 7,
+                        "children": [],
+                        "text": "The 1144 compounds evolve from the 122 structure-types by introducing alternating\nhetero-cationic layers. In other words, the 1144 phase is an accurate representation of ordered\nstacking as opposed to disordered substitution. The main crystallographic difference between the\n122 and the 1144 families is the lack of the n-glide plane across the Fe-layer in 1144 compounds,\nand this causes the reduction of their symmetry from I4/mmm in 122 phases to P4/mmm. The\nreduction of symmetry that is caused by the ordered stacking of two 122 phases to form a single\nheterolayered 1144 phase may prove important in establishing the topological properties of the\nmaterial and the possible realization of Majorana zero modes. [13] [22–24]\nIn general, the formation of any ordered AEuFe4As4 (A = Rb, Cs) phase requires an ab\nplane lattice match between AFe2As2 and EuFe2As2, as well as a large ionic difference between\n7",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p7_l22",
+                            "p7_l23",
+                            "p7_l24",
+                            "p7_l25",
+                            "p7_l26",
+                            "p7_l27",
+                            "p7_l28",
+                            "p7_l29",
+                            "p7_l30",
+                            "p7_l31",
+                            "p7_l32"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      },
+                      {
+                        "id": "unidentified_p8_1",
+                        "type": "custom",
+                        "page_start": 8,
+                        "page_end": 8,
+                        "children": [],
+                        "text": "A+ and Eu2+ ions. [25] RbEuFe4As4 can be described as an intergrowth structure of RbFe2As2 and\nEuFe2As2 such that the Eu atoms end up forming a primitive tetragonal lattice running parallel to\nthe c-axis instead of being body-centered as in EuFe2As2 or EuFe2P2. Figure 4 illustrates the\ncrystals structure of RbEuFe4As4-xPx which is isostructural to RbEuFe4As4 with its unit cell\nconsisting of stacked Fe(As/P)4 layers sandwiched by layers of Eu2+ and Rb+ cations that alternate\nalong the c-axis. As shown in the figure, the Eu2+ and Rb+ cations in RbEuFe4As4-xPx are\ncoordinated to eight As(1) and As(2) atoms, respectively. The most crucial observation made in\nthis work is the preferential occupation of the As(2) site by P when doping RbEuFe4As4 with P\nusing direct combination reactions and/or flux crystal growth methods. As(2) sites form the layers\nthat sandwich the Eu2+ ions while Rb+ ions are intercalated between As(1) layers. A physically\nplausible explanation for such preferential site occupation can be attributed to the size difference\nbetween the ionic radii for Eu2+ and Rb+ cations. Eu2+ and Rb+ ions featuring 8-fold coordination\nhave ionic radii of 1.25 Å and 1.61 Å, respectively. [26] The smaller size of the Eu2+ ions between\nthe As(2) layers permits the substitution of the As(2) sites with P. Rb+ due to its relatively larger\nionic radius, allowing for the virtually negligible occupation of the As(1) layers by P. Several\ncrystals of composition RbEuFe4As3.91(3)P0.09(3)\nwere screened, most refined to zero As(1) site\noccupancy by P. For RbEuFe4As3.88(4)P0.12(4)\n, all screened crystals refined to As(1)/As(2)\n0.985(6)/0.956(6) on average, which reflects a three times higher preference of the As(2) site for\nP-occupation than the As(1) site.\nThese results from flux growth experiments agree with what was observed for powder\nRbEuFe4As4-xPx samples made from direct combination methods. P prefers occupying As(2),\nalthough the amount of P that can be incorporated into the structure using a direct combination\nreaction between RbFe2As2 and EuFe2As2-x x\nP is nearly twice than what is afforded by flux\nsynthesis methods. For the three nominal compositions prepared via direct combination reactions,\nRbEuFe4As3.75P0.25, RbEuFe4As3.5P0.5 and RbEuFe4As3.25P0.75, the calculated compositions are\nRbEuFe4As3.72(2)P0.28(2), RbEuFe4As3.75(1)P0.25(1) 4 3.75(2) 0.25(2)\nand RbEuFe As P , respectively. This\ndifference between the varying amounts of P incorporation into the powder and single crystal\nRbEuFe4As4-xPx samples could be attributed to different synthetic conditions and reaction\nenvironments. To emphasize this, it can be highlighted as an example that for the nominal\ncomposition RbEuFe4As3.25P0.75, EuFe2As2\nwas the only single crystal product when this\ncomposition was targeted via flux synthesis, however, a direct combination reaction targeting this\n8",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p8_l1",
+                            "p8_l2",
+                            "p8_l3",
+                            "p8_l4",
+                            "p8_l5",
+                            "p8_l6",
+                            "p8_l7",
+                            "p8_l8",
+                            "p8_l9",
+                            "p8_l10",
+                            "p8_l11",
+                            "p8_l12",
+                            "p8_l13",
+                            "p8_l14",
+                            "p8_l15",
+                            "p8_l16",
+                            "p8_l17",
+                            "p8_l18",
+                            "p8_l19",
+                            "p8_l20",
+                            "p8_l21",
+                            "p8_l22",
+                            "p8_l23",
+                            "p8_l24",
+                            "p8_l25",
+                            "p8_l26",
+                            "p8_l27",
+                            "p8_l28",
+                            "p8_l29",
+                            "p8_l30",
+                            "p8_l31",
+                            "p8_l32",
+                            "p8_l33",
+                            "p8_l34",
+                            "p8_l35",
+                            "p8_l36",
+                            "p8_l37"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      },
+                      {
+                        "id": "unidentified_p9_1",
+                        "type": "custom",
+                        "page_start": 9,
+                        "page_end": 9,
+                        "children": [],
+                        "text": "nominal composition yielded RbEuFe4As3.75(2)P0.25(2) as the product. Furthermore, in the case of\ndirect combination reactions, phase pure RbEuFe4As4-xPx could not be synthesized due to the\nformation of at least three undesired side products, namely, EuFe2As2, Fe2As1-xPx and an\nunidentified phase. Overall, however, it may be inferred from our investigation into P-doped\nRbEuFe4As4 that for values of x ≥ 0.12(3), RbEuFe4As4-x x\nP cannot be stabilized through flux\nsynthesis, and these compositions might only be stabilized thermodynamically via direct\ncombination methods where the value of x can be pushed to 0.28(3) together with the formation\nof some parasitic phases that also contain P, such as Fe2As1-xPx. Presumably, if the formation of\nthese side phases could be circumvented, thereby affording phase pure RbEuFe4As4-xPx, then the\nP limit values obtained from single crystal and powder data might be brought into much closer\nagreement.\nOne key structural parameter contributing to the high Tc of iron arsenide-based\nsuperconductors is the high symmetry of tetrahedral FeAs4 units in the iron arsenide layers. [27]\nIn other words, the bond angles of the FeAs4 tetrahedra are approximately equal, allowing for their\nhigh regularity. In contrast, the As–Fe–As bond angles in RbEuFe4As4-xPx are slightly different.\nThe As(1)–Fe–As(1) (α1) and As(2)–Fe–As(2) (α2) bond angles show a small increment as the P-\nsubstitution is increased going from undoped RbEuFe4As4 to RbEuFe4As3.88(4)P0.12(4). α1 and α2 for\nRbEuFe4As4, RbEuFe4As3.91(3)P0.09(3) and RbEuFe4As3.88(4) 0.12(4)\nP are 108.60(7)°, 108.81(5)°,\n108.85(4)°, and 109.01(8)°, 109.49(6)°, 109.51(4), respectively. In contrast, the As(1)–Fe–As(2)\n(β) bond angle undergoes a small reduction from 109.81(2)° in RbEuFe4As4 to 109.630(17)° in\nRbEuFe4As3.91(3)P0.09(3) to 109.624(11)° in RbEuFe4As3.88(4) 0.12(4)\nP . Overall, due to the low P\nsolubility limit in RbEuFe4As4-xPx, although the bond angles are not strictly equal, they remain\nvery close to each other. As expected, the unit cell constants and cell volume are reduced as x\nincreases in RbEuFe4As4-xPx. The cell constants (c) for RbEuFe4As4, RbEuFe4As3.91(3)P0.09(3) and\nRbEuFe4As3.88(4)P0.12(4) are 13.2733(13) Å, 13.2025(7) Å and 13.1967(8) Å, respectively.\nSimilarly, the cell volume (V) drops from 200.08 Å3 in RbEuFe4As4 to 198.85(2) Å3 in\nRbEuFe4As3.88(4)P0.12(4) consistent with substituting the As site with smaller P-ions resulting in the\nexertion of chemical pressure.\n9",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p9_l1",
+                            "p9_l2",
+                            "p9_l3",
+                            "p9_l4",
+                            "p9_l5",
+                            "p9_l6",
+                            "p9_l7",
+                            "p9_l8",
+                            "p9_l9",
+                            "p9_l10",
+                            "p9_l11",
+                            "p9_l12",
+                            "p9_l13",
+                            "p9_l14",
+                            "p9_l15",
+                            "p9_l16",
+                            "p9_l17",
+                            "p9_l18",
+                            "p9_l19",
+                            "p9_l20",
+                            "p9_l21",
+                            "p9_l22",
+                            "p9_l23",
+                            "p9_l24",
+                            "p9_l25",
+                            "p9_l26",
+                            "p9_l27",
+                            "p9_l28",
+                            "p9_l29",
+                            "p9_l30",
+                            "p9_l31",
+                            "p9_l32"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      },
+                      {
+                        "id": "unidentified_p10_1",
+                        "type": "custom",
+                        "page_start": 10,
+                        "page_end": 10,
+                        "children": [],
+                        "text": "Superconducting Properties\nFigure 5 shows the dc magnetic susceptibility data for polycrystalline RbEuFe4As4-xPx and\nsingle crystal RbEuFe4As4-xPx. Pure RbEuFe4As4 exhibits a steep superconducting transition with\nan onset temperature Tc = 36.8 K. Similarly, very sharp superconducting diamagnetic signals can\nbe seen in the figure with onset temperatures of 35.5 K, 35.08 K and 34.38 K for the nominal\ncompositions RbEuFe4As3.75P0.25, RbEuFe4As3.5P0.5 and RbEuFe4As3.25P0.75, respectively, and\n35.2(1) K for single crystal RbEuFe4As4-xPx (xcalc = 0.09(3) and 0.12(4)). This clearly reveals that\nphosphorus substitution in RbEuFe4As4 causes a decrease in its Tc, however, there is no\nappreciable change in the magnetic transition temperature (TN). While single crystalline\nRbEuFe4As4 exhibits ordering of the Eu2+ magnetic sublattices at TN = 15 K, the P-doped samples\norder at 14.5(2) K. By comparing the observed reduction of the c-axis lattice constant and of the\ncell volume upon P-substitution with results from XRD measurements under pressure [14], one\nfinds that the highest P-substitution level corresponds to a rather modest pressure of ~1 GPa. The\nreduction in Tc by ~ 1 K is in line with this observation. However, the high-pressure studies [14,15]\nalso reveal an increase of TN by approximately the same amount, which we do not observe in our\nP-doped samples. Possible causes may involve three-dimensional magnetic order being triggered\nby magnetic exchange between Eu2+ sheets along the c-axis, across two FeAs(P) layers. In addition\nto the layer spacing, this mechanism likely depends on subtle changes of the electronic structure\nbrought about by preferential site-occupancy by P, which would not arise in high-pressure\nmeasurements.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p10_l1",
+                            "p10_l2",
+                            "p10_l3",
+                            "p10_l4",
+                            "p10_l5",
+                            "p10_l6",
+                            "p10_l7",
+                            "p10_l8",
+                            "p10_l9",
+                            "p10_l10",
+                            "p10_l11",
+                            "p10_l12",
+                            "p10_l13",
+                            "p10_l14",
+                            "p10_l15",
+                            "p10_l16",
+                            "p10_l17",
+                            "p10_l18",
+                            "p10_l19",
+                            "p10_l20"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      }
+                    ],
+                    "title": "Crystal Structure of RbEuFe4As4-xPx and Phosphorus Solubility Limit",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p7_l21"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "Results and Discussion",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p6_l4"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p10_l21",
+                "type": "subsection",
+                "page_start": 10,
+                "page_end": 11,
+                "children": [
+                  {
+                    "id": "unidentified_p10_2",
+                    "type": "custom",
+                    "page_start": 10,
+                    "page_end": 10,
+                    "children": [],
+                    "text": "We successfully grew X-ray diffraction quality single crystals of P-doped RbEuFe4As4\nusing a RbAs flux and polycrystalline samples via direct combination reactions. The amount of\nphosphorus that can be doped into the RbEuFe4As4 crystal structure is limited by the preferential\nAs(2) site occupation by P. This phenomenon does not arise in EuFe2As2 where essentially 100%\nsolubility can be achieved. The smaller size of Eu2+ sublattices intercalated between the As(2) sites\nrenders them more accessible for P-substitution. Single crystal X-ray diffraction and Rietveld\nrefinements on powder diffraction data revealed that the RbEuFe4As4-xPx compositions obtained\nfrom flux crystal growth and direct combination methods are in reasonable agreement. The\nRbEuFe4As4-xPx samples showed a slight decrease in Tc with increasing P-substitution while TN\n10",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p10_l22",
+                        "p10_l23",
+                        "p10_l24",
+                        "p10_l25",
+                        "p10_l26",
+                        "p10_l27",
+                        "p10_l28",
+                        "p10_l29",
+                        "p10_l30",
+                        "p10_l31"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p11_1",
+                    "type": "custom",
+                    "page_start": 11,
+                    "page_end": 11,
+                    "children": [],
+                    "text": "remained virtually unchanged relative to undoped RbEuFe4As4. Further in-depth analysis and\nphysical characterization of these materials warrants their synthesis as mm-sized single crystals,\nwhich may be achieved by manipulating and tuning multiple reaction parameters. Achieving\nhigher fractions of phosphorus into the arsenic sites in the RbEuFe4As4-xPx structure is a\npossibility, but it will require further clarification of the synthetic conditions. Strict kinetic control\non the crystallization process is likely necessary to access these P-richer compositions.\n11",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p11_l1",
+                        "p11_l2",
+                        "p11_l3",
+                        "p11_l4",
+                        "p11_l5",
+                        "p11_l6",
+                        "p11_l7"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Conclusion",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p10_l21"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p12_l1",
+                "type": "subsection",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [
+                  {
+                    "id": "unidentified_p12_1",
+                    "type": "custom",
+                    "page_start": 12,
+                    "page_end": 12,
+                    "children": [],
+                    "text": "Supporting Information\n• Single crystal X-ray diffraction data for RbEuFe4As3.91(3)P0.03(3) and RbEuFe4As3.88(4)P0.12(4)\nin the form of crystallographic information files (CIF).\n• Powder diffraction refinement data on the nominal compositions, RbEuFe4As3.75P0.25,\nRbEuFe4As3.5P0.5, and RbEuFe4As3.25P0.75 and the refined CIF files.\n• EDS/SEM analysis for RbEuFe4As3.91(3)P0.03(3) and RbEuFe4As3.88(4)P0.12(4) single crystals.\n• Tables providing information on the reagents and conditions used for synthesizing the\nmaterials reported herein using direct combination and flux crystal growth methods.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p12_l2",
+                        "p12_l3",
+                        "p12_l4",
+                        "p12_l5",
+                        "p12_l6",
+                        "p12_l7",
+                        "p12_l8",
+                        "p12_l9"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Associated Content",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p12_l1"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p12_l10",
+                "type": "subsection",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [
+                  {
+                    "id": "heading_p12_l11",
+                    "type": "subsubsection",
+                    "page_start": 12,
+                    "page_end": 12,
+                    "children": [
+                      {
+                        "id": "unidentified_p12_2",
+                        "type": "custom",
+                        "page_start": 12,
+                        "page_end": 12,
+                        "children": [],
+                        "text": "Email: m-kanatzidis@northwestern.edu",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p12_l12"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Corresponding Author",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p12_l11"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p12_l13",
+                    "type": "subsubsection",
+                    "page_start": 12,
+                    "page_end": 12,
+                    "children": [
+                      {
+                        "id": "unidentified_p12_3",
+                        "type": "custom",
+                        "page_start": 12,
+                        "page_end": 12,
+                        "children": [],
+                        "text": "Mohammad Usman: 0000-0002-9791-4364\nXiuquan Zhou: 0000-0002-1361-3880\nChristos D. Malliakas: 0000-0003-4416-638X\nDuck Young Chung: 0000-0002-1315-2631\nMercouri G. Kanatzidis: 0000-0003-2037-4168\nUlrich Welp: 0000-0001-5357-0363\nWai-Kwong Kwok: 0000-0003-0030-084X",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p12_l14",
+                            "p12_l15",
+                            "p12_l16",
+                            "p12_l17",
+                            "p12_l18",
+                            "p12_l19",
+                            "p12_l20"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "ORCID",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p12_l13"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p12_l21",
+                    "type": "subsubsection",
+                    "page_start": 12,
+                    "page_end": 12,
+                    "children": [
+                      {
+                        "id": "unidentified_p12_4",
+                        "type": "custom",
+                        "page_start": 12,
+                        "page_end": 12,
+                        "children": [],
+                        "text": "The authors declare no competing financial interest.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p12_l22"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Notes",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 12.0,
+                      "observation_ids": [
+                        "p12_l21"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "Author Information",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p12_l10"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Probing Phosphorus Solubility and its Effect on Critical Temperature (TC) in the Helical Superconducting Magnet RbEuFe4As4-xPx",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 16.0,
+              "observation_ids": [
+                "p1_l1",
+                "p1_l2",
+                "p1_l3"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 12,
+        "page_end": 23,
+        "children": [
+          {
+            "id": "heading_p12_l23",
+            "type": "acknowledgements",
+            "page_start": 12,
+            "page_end": 20,
+            "children": [
+              {
+                "id": "unidentified_p12_5",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "This work was supported by the U.S. Department of Energy, Basic Energy Sciences, Office of\nScience, Materials Sciences and Engineering Division.EDS/SEM analysis and synchrotron X-ray\ndiffraction study were carried out by use of the Office of Science user facilities, Center for\nNanoscale Materials (CNM) and Advance Photon Source (APS) respectively at Argonne,\nsupported by the U.S. Department of Energy, Office of Science, Office of Basic Energy Sciences,\nunder Contract No. DE-AC02-06CH11357.\n12",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l24",
+                    "p12_l25",
+                    "p12_l26",
+                    "p12_l27",
+                    "p12_l28",
+                    "p12_l29",
+                    "p12_l30"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p13_1",
+                "type": "custom",
+                "page_start": 13,
+                "page_end": 13,
+                "children": [],
+                "text": "Table 1. Select single crystal refinement data for RbEuFe4\nAs4-x\nPx\n.\nEmpirical formula RbEuFe4As3.91(3)P0.09(3) RbEuFe4As3.88(4)P0.12(4)\nFormula weight (g mol-1) 756.55 755.68\nTemperature (K) 100 100\nWavelength (Å) 0.71073 0.71073\nCrystal system Tetragonal Tetragonal\nSpace group P4/mmm P4/mmm\nUnit cell dimensions (Å) a = 3.88160(11) a = 3.88182(15)\nc = 13.2025(7) c = 13.1967(8)\nVolume (Å3) 198.920(16) 198.85(2)\nZ 1 1\nDensity (calculated) (g/cm3) 6.316 6.310\nAbsorption coefficient (mm-1) 37.018 36.953\nF(000) 334 334\nIndex ranges −6≤ h ≤6, −6≤ k ≤ 6, −6≤ h ≤6, −6≤ k ≤ 6,\n−20≤ l ≤21 −13≤ l ≤22\nCrystal size (mm) 0.10 × 0.10 × 0.02 0.08 × 0.08 × 0.016\nReflections used 1628 1378\nData / restraints / parameters 373 / 0 / 16 377 / 0 / 17\nGoodness-of-fit 1.217 (all data) 1.126 (all data)\nFinal Ra indices [I>4σ(I)] Robs = 0.0362, wRobs = Robs = 0.0225, wRobs =\n0.1018 0.0546\nR indices [all data] Rall = 0.0390, wRall = Rall = 0.0262, wRall =\n0.1040 0.0564\nLargest diff. peak and hole 4.414 and −3.982 e·Å-3 2.770 and –2.079 e·Å-\n3\naR = Σ||Fo|-|Fc|| / Σ|Fo|, wR = {Σ[w(|Fo|2 - |Fc|2)2] / Σ[w(|Fo|4)]}1/2 and w = 1/[σ2 (F02 ) + (0.0670P)2\n+ 0.2606P] for RbEuFe4As3.91(3)P0.09(3) and w = 1/[σ2 (F02 ) + (0.0327P)2] for\nRbEuFe4As3.88(4)P0.12(4) where P = (F02 +2Fc2)/3\n13",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p13_l1",
+                    "p13_l2",
+                    "p13_l3",
+                    "p13_l4",
+                    "p13_l5",
+                    "p13_l6",
+                    "p13_l7",
+                    "p13_l8",
+                    "p13_l9",
+                    "p13_l10",
+                    "p13_l11",
+                    "p13_l12",
+                    "p13_l13",
+                    "p13_l14",
+                    "p13_l15",
+                    "p13_l16",
+                    "p13_l17",
+                    "p13_l18",
+                    "p13_l19",
+                    "p13_l20",
+                    "p13_l21",
+                    "p13_l22",
+                    "p13_l23",
+                    "p13_l24",
+                    "p13_l25",
+                    "p13_l26",
+                    "p13_l27",
+                    "p13_l28",
+                    "p13_l29",
+                    "p13_l30",
+                    "p13_l31",
+                    "p13_l32",
+                    "p13_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p14_1",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "Table 2. Atomic coordinates and equivalent isotropic displacement parameters (Å2) for\nRbEuFe4As4-xPx with estimated standard deviations in parentheses from single crystal data.\nRbEuFe4As3.88P0.09(3)\nLabel x y z Occupancy Ueq*\nEu(1) 1.500000 1.500000 0.500000 1 0.00448(13)\nFe(1) 0.500000 1.000000 0.27010(5) 1 0.00393(16)\nRb(1) 0.000000 0.000000 0.000000 1 0.00608(18)\nAs(1) 0.500000 0.500000 0.16479(6) 0.992(7) 0.0043(2)\nAs(2) 1.000000 1.000000 0.37403(6) 0.961(7) 0.0040(2)\nP(1) 0.500000 0.500000 0.16479(6) 0.008(7) 0.0043(2)\nP(2) 1.000000 1.000000 0.37403(6) 0.039(7) 0.0040(2)\nRbEuFe4As3.88P0.12(3)\nLabel x y z Occupancy Ueq*\nEu(1) 1.500000 1.500000 0.500000 1 0.00484(11)\nFe(1) 0.500000 1.000000 0.27010(5) 1 0.00422(13)\nRb(1) 0.000000 0.000000 0.000000 1 0.00624(16)\nAs(1) 0.500000 0.500000 0.16485(5) 0.986(6) 0.00436(17)\nAs(2) 1.000000 1.000000 0.37403(6) 0.958(6) 0.00424(17)\nP(1) 0.500000 0.500000 0.16485(5) 0.014(6) 0.00436(17)\nP(2) 1.000000 1.000000 0.37403(6) 0.042(6) 0.00424(17)\n*Ueq is defined as one third of the trace of the orthogonalized Uij tensor.\n14",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l1",
+                    "p14_l2",
+                    "p14_l3",
+                    "p14_l4",
+                    "p14_l5",
+                    "p14_l6",
+                    "p14_l7",
+                    "p14_l8",
+                    "p14_l9",
+                    "p14_l10",
+                    "p14_l11",
+                    "p14_l12",
+                    "p14_l13",
+                    "p14_l14",
+                    "p14_l15",
+                    "p14_l16",
+                    "p14_l17",
+                    "p14_l18",
+                    "p14_l19",
+                    "p14_l20",
+                    "p14_l21",
+                    "p14_l22"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p15_1",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "Table 3. Rietveld refinement data for nominal RbEuFe4As4-xPx compositions derived from\nsynchrotron powder X-ray diffraction data. The calculated compositions for RbEuFe4As3.75P0.25,\nRbEuFe4As3.5P0.5 and RbEuFe4As3.25P0.75 are RbEuFe4As3.72(2)P0.28(2), RbEuFe4As3.75(1)P0.25(1) and\nRbEuFe4As3.75(2)P0.25(2), respectively.\nComposition a/Å c/Å Volume/Å3 Space group\nRbEuFe4As3.75P0.25 3.888014(16) 13.29442(7) 200.9672(15) P4/mmm\nAtomic Coordinates\nSite x y z Occupancy\nEu 1.50000 1.50000 0.50000 1\nAs(1) 0.50000 0.50000 0.16488(8) 1\nAs(2) 1.00000 1.00000 0.37401(8) 0.858(6)\nP(2) 1.00000 1.00000 0.37401(8) 0.142(6)\nFe 0.50000 1.00000 0.27011(10) 1\nRb 0 0 0 1\nRwp 16.72%\nRbEuFe4As3.5P0.5 3.887936(16) 13.29904(7) 201.0289(15) P4/mmm\nSite x y z\nEu 1.50000 1.50000 0.50000 1\nAs(1) 0.50000 0.50000 0.16488(8) 1\nAs(2) 1.00000 1.00000 0.37403(8) 0.873(4)\nP(2) 1.00000 1.00000 0.37403(8) 0.127(4)\nFe 0.50000 1.00000 0.27011(10) 1\nRb 0 0 0 1\nRwp 15.24%\nRbEuFe4As3.25P0.75 3.887803(20) 13.29704(9) 200.9849(19) P4/mmm\nSite x y z\nEu 1.50000 1.50000 0.50000 1\nAs(1) 0.50000 0.50000 0.16518(11) 1\nAs(2) 1.00000 1.00000 0.37344(11) 0.876(6)\nP(2) 1.00000 1.00000 0.37344(11) 0.124(6)\nFe 0.0000 1.00000 0.26944(10) 1\nRb 0 0 0 1\nRwp 16.17%\n15",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l1",
+                    "p15_l2",
+                    "p15_l3",
+                    "p15_l4",
+                    "p15_l5",
+                    "p15_l6",
+                    "p15_l7",
+                    "p15_l8",
+                    "p15_l9",
+                    "p15_l10",
+                    "p15_l11",
+                    "p15_l12",
+                    "p15_l13",
+                    "p15_l14",
+                    "p15_l15",
+                    "p15_l16",
+                    "p15_l17",
+                    "p15_l18",
+                    "p15_l19",
+                    "p15_l20",
+                    "p15_l21",
+                    "p15_l22",
+                    "p15_l23",
+                    "p15_l24",
+                    "p15_l25",
+                    "p15_l26",
+                    "p15_l27",
+                    "p15_l28",
+                    "p15_l29",
+                    "p15_l30",
+                    "p15_l31",
+                    "p15_l32",
+                    "p15_l33",
+                    "p15_l34"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p16_1",
+                "type": "custom",
+                "page_start": 16,
+                "page_end": 16,
+                "children": [],
+                "text": "Figure 1. Scanning Electron Micrographs for RbEuFe4As3.91(3)P0.09(3) (left) and\nRbEuFe4As3.88(4)P0.12(4) (right) single crystals.\n16",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p16_l1",
+                    "p16_l2",
+                    "p16_l3"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p17_1",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "Figure 2. Rietveld refinement data (collected on 11-BM at the Advanced Photon Source) for the\nnominal compositions RbEuFe4As3.75P0.25 (left), RbEuFe4As3.5P0.5 (center) and RbEuFe4As3.25P0.75\n(right) obtained from synchrotron powder X-ray diffraction data. The observed and calculated line\nprofiles are shown in dark blue and green. The allowed Bragg reflections for RbEuFe4As4-xPx,\nEuFe2As2 and Fe2As1-xPx phases are shown as blue, red and turquoise ticks, respectively.\n17",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l1",
+                    "p17_l2",
+                    "p17_l3",
+                    "p17_l4",
+                    "p17_l5",
+                    "p17_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p18_1",
+                "type": "custom",
+                "page_start": 18,
+                "page_end": 18,
+                "children": [],
+                "text": "Figure 3. Laboratory pxrd patterns (top) for the products obtained from the direct combination\nreactions targeting RbEuFe4As4-xPx (x = 1, 2, 3, 4) and (bottom) x = 0.25, 0.50, 0.75, 1 obtained\nfrom laboratory powder X-diffraction data. * in the bottom figure at 2θ = 12.5° indicates RbFe2As2\nreflections.\n18",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p18_l1",
+                    "p18_l2",
+                    "p18_l3",
+                    "p18_l4",
+                    "p18_l5"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p19_1",
+                "type": "custom",
+                "page_start": 19,
+                "page_end": 19,
+                "children": [],
+                "text": "Figure 4. Polyhedral representation of RbEuFe4As4 doping with P. P prefers to occupy the As(2)\nsites due to the availability of extra space in the presence of smaller (harder Lewis acid and hence\nhigher bonding affinity to phosphide ions) Eu2+ ions compared to Rb+. Rb, Eu and Fe are shown\nin blue, green and orange, respectively. As sites in RbEuFe4As4 are shown in red while the mixed\nAs/P sites in in RbEuFe4As4-xPx are shown in red/white.\n19",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p19_l1",
+                    "p19_l2",
+                    "p19_l3",
+                    "p19_l4",
+                    "p19_l5",
+                    "p19_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p20_1",
+                "type": "custom",
+                "page_start": 20,
+                "page_end": 20,
+                "children": [],
+                "text": "Figure 5. Temperature dependent magnetic susceptibility for polycrystalline RbEuFe4As4-xPx\n(xnominal = 0.25, 0.5, 0.75 corresponding to xcalc = 0.28(2), 0.25(1), 0.25(2) xcalc is the value extracted\nfrom structure refinements) obtained from direct combination reactions (left) and polycrystalline\npowder containing RbEuFe4As4-xPx (xcalc = 0.09, 0.12) single crystals obtained from RbAs flux\n(right), measured under H = 100 G.\n20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p20_l1",
+                    "p20_l2",
+                    "p20_l3",
+                    "p20_l4",
+                    "p20_l5",
+                    "p20_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Acknowledgements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 14.0,
+              "observation_ids": [
+                "p12_l23"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p21_l1",
+            "type": "references",
+            "page_start": 21,
+            "page_end": 23,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 14.0,
+              "observation_ids": [
+                "p21_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p21_1",
+            "type": "custom",
+            "page_start": 21,
+            "page_end": 21,
+            "children": [],
+            "text": "[1] B. Q. Song, M. C. Nguyen, C. Z. Wang, P. C. Canfield, and K. M. Ho, Is It Possible to\nStabilize the 1144-Phase Pnictides with Tri-Valence Cations?, Phys Rev Mater 2, 104802\n(2018).\n[2] K. Kawashima, T. Kinjo, T. Nishio, S. Ishida, H. Fujihisa, Y. Gotoh, K. Kihou, H. Eisaki,\nY. Yoshida, and A. Iyo, Superconductivity in Fe-Based Compound EuAFe4As4 (A = Rb\nand Cs), J Physical Soc Japan 85, 064710 (2016).\n[3] Liu, Y-B. Liu, Z-T. Tang, H. Jiang, Z-C. Wang, A. Ablimit, W-H. Jiao, Q. Tao, C-M.\nFeng, Z-A. Xu, and G-H Cao, Superconductivity and Ferromagnetism in Hole-Doped\nRbEuFe4As4 Phys Rev B 93, 214503 (2016).\n[4] J.-K. Bao, K. Willa, M. P. Smylie, H. Chen, U. Welp, D. Y. Chung, and M. G. Kanatzidis,\nSingle Crystal Growth and Study of the Ferromagnetic Superconductor RbEuFe4As4,\nCryst Growth Des 18, 3517 (2018).\n[5] G.-H. Cao, W.-H. Jiao, Y.-K. Luo, Z. Ren, S. Jiang, and Z.-A. Xu, Coexistence of\nSuperconductivity and Ferromagnetism in Iron Pnictides, J Phys Conf Ser 391, 012123\n(2012).\n[6] S. J. Singh and M. I. Sturza, Bulk and Single Crystal Growth Progress of Iron-Based\nSuperconductors (FBS): 1111 and 1144, Crystals (Basel) 12, 20 (2021).\n[7] K. Iida, Y. Nagai, S. Ishida, M. Ishikado, N. Murai, A.D. Christianson, H. Yoshida, Y.\nInamura, H. Nakamura, A. Nakao, K. Munakata, D. Kagerbauer, M. Eisterer, K.\nKawashima, Y. Yoshida, H. Eisaki, and A. Iyo, Coexisting Spin Resonance and Long-\nRange Magnetic Order of Eu in EuRbFe4As4, Phys Rev B 100, 014506 (2019).\n[8] Q. Xu, Y. Liu, S. Hao, J. Qian, C. Su, C-W. Wang, T. Hansen, Z. Fu, Y. Su, W. Li, G-H.\nCao, Y. Xiao, and W. Jin, Evolution from Helical to Collinear Ferromagnetic Order of\nthe Eu2+ spins in RbEu(Fe1-xNix)4As4, Phys Rev Res 4, 013077 (2022).\n[9] M. P. Smylie, K. Willa, J-K. Bao, K. Ryan, Z. Islam, H. Claus, Y. Simsek, Z. Diao, A.\nRydh, A.E. Koshelev, W.K. Kwok, D.Y. Chung, M.G. Kanatzidis, and U.Welp,\nAnisotropic Superconductivity and Magnetism in Single-Crystal RbEuFe4As4, Phys Rev B\n98, 104503 (2018).\n[10] S. Zapf and M. Dressel, Europium-Based Iron Pnictides: A Unique Laboratory for\nMagnetism, Superconductivity and Structural Effects, Reports on Progress in Physics 80,\n016501 (2017).\n[11] X. F. Lu, N.Z. Wang, H. Wu, Y.P. Wu, D. Zhao, X.Z. Zeng, X.G. Luo, T. Wu, W. Bao,\nG.H. Zhang, F.Q. Huang, Q.Z. Huang, and X.H. Chen, Coexistence of Superconductivity\nand Antiferromagnetism in (Li0.8Fe0.2)OHFeSe, Nat Mater 14, 325 (2015).\n[12] B. Wilfong, X. Zhou, H. Zheng, N. Babra, C. M. Brown, J. W. Lynn, K. M. Taddei, J.\nPaglione, and E. E. Rodriguez, Long-Range Magnetic Order in Hydroxide-Layer-Doped\n(Li1-x-yFexMnyOD)FeSe, Phys Rev Mater 4, 034803 (2020), Phys Rev Mater 4, 034803\n(2020).\n[13] I. Martin and A. F. Morpurgo, Majorana Fermions in Superconducting Helical Magnets,\nPhys Rev B 85, 144505 (2012).\n[14] D. E. Jackson, D. VanGennep, W. Bi, D. Zhang, P. Materne, Y. Liu, G.-H. Cao, S. T.\nWeir, Y. K. Vohra, and J. J. Hamlin, Superconducting and Magnetic Phase Diagram of\nRbEuFe4As4 and CaEuFe4As4 at High Pressure , Phys Rev B 98, 014518 (2018).\n21",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p21_l2",
+                "p21_l3",
+                "p21_l4",
+                "p21_l5",
+                "p21_l6",
+                "p21_l7",
+                "p21_l8",
+                "p21_l9",
+                "p21_l10",
+                "p21_l11",
+                "p21_l12",
+                "p21_l13",
+                "p21_l14",
+                "p21_l15",
+                "p21_l16",
+                "p21_l17",
+                "p21_l18",
+                "p21_l19",
+                "p21_l20",
+                "p21_l21",
+                "p21_l22",
+                "p21_l23",
+                "p21_l24",
+                "p21_l25",
+                "p21_l26",
+                "p21_l27",
+                "p21_l28",
+                "p21_l29",
+                "p21_l30",
+                "p21_l31",
+                "p21_l32",
+                "p21_l33",
+                "p21_l34",
+                "p21_l35",
+                "p21_l36",
+                "p21_l37",
+                "p21_l38",
+                "p21_l39",
+                "p21_l40",
+                "p21_l41",
+                "p21_l42",
+                "p21_l43",
+                "p21_l44",
+                "p21_l45"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p21_l1"
+            }
+          },
+          {
+            "id": "unidentified_p22_1",
+            "type": "custom",
+            "page_start": 22,
+            "page_end": 22,
+            "children": [],
+            "text": "[15] L. Xiang, S. L. Bud’ko, J.-K. Bao, D. Y. Chung, M. G. Kanatzidis, and P. C. Canfield,\nPressure-Temperature Phase Diagram of the EuRbFe4As4 Superconductor, Phys Rev B\n99, 144509 (2019).\n[16] O. V. Dolomanov, L. J. Bourhis, R. J. Gildea, J. A. K. Howard, and H. Puschmann,\nOLEX2 : A Complete Structure Solution, Refinement and Analysis Program, J Appl\nCrystallogr 42, 339 (2009).\n[17] G. M. Sheldrick, Crystal Structure Refinement with SHELXL, Acta Crystallogr C Struct\nChem 71, 3 (2015).\n[18] B. H. Toby and R. B. Von Dreele, GSAS-II : The Genesis of a Modern Open-Source All\nPurpose Crystallography Software Package, J Appl Crystallogr 46, 544 (2013).\n[19] M. Dusek, V. Petricek, and L. Palatinus, Introduction to JANA2006, Acta Crystallogr A\n62, s46 (2006).\n[20] X. Yi, M. Li, X. Xing, Y. Meng, C. Zhao, and Z. Shi, Single Crystal Growth and Effects\nof Ni Doping on the Novel 12442-Type Iron-Based Superconductor RbCa2Fe4As4F2, New\nJ Phys 22, 073007 (2020).\n[21] J. Sangster and A. D. Pelton, The As-Rb (Arsenic-Rubidium) System, Journal of Phase\nEquilibria 14, 243 (1993).\n[22] K. Kawashima, S. Ishida, H. Fujihisa, Y. Gotoh, K. Kihou, Y. Yoshida, H. Eisaki, H.\nOgino, and A. Iyo, Superconductivity in a New 1144-Type Family of (La,Na)AFe4As4 (A =\nRb or Cs), J Phys Chem Lett 9, 868 (2018).\n[23] E. Gati, L. Xiang, S. L. Bud’ko, and P. C. Canfield, Hydrostatic and Uniaxial Pressure\nTuning of Iron‐Based Superconductors: Insights into Superconductivity, Magnetism,\nNematicity, and Collapsed Tetragonal Transitions, Ann Phys 532, 2000248 (2020).\n[24] A. E. Koshelev, Helical Structures in Layered Magnetic Superconductors Due to Indirect\nExchange Interactions Mediated by Interlayer Tunneling, Phys Rev B 100, 224503\n(2019).\n[25] A. Iyo, K. Kawashima, T. Kinjo, T. Nishio, S. Ishida, H. Fujihisa, Y. Gotoh, K. Kihou, H.\nEisaki, and Y. Yoshida, New-Structure-Type Fe-Based Superconductors: CaAFe4As4 ( A\n= K, Rb, Cs) and SrAFe4As4 ( A = Rb, Cs), J Am Chem Soc 138, 3410 (2016).\n[26] R. D. Shannon, Revised Effective Ionic Radii and Systematic Studies of Interatomic\nDistances in Halides and Chalcogenides, Acta Crystallographica Section A 32, 751\n(1976).\n[27] C.-H. Lee, A. Iyo, H. Eisaki, H. Kito, M. Teresa Fernandez-Diaz, T. Ito, K. Kihou, H.\nMatsuhata, M. Braden, and K. Yamada, Effect of Structural Parameters on\nSuperconductivity in Fluorine-Free LnFeAsO1- y (Ln = La, Nd), J Physical Soc Japan 77,\n083704 (2008).\n22",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p22_l1",
+                "p22_l2",
+                "p22_l3",
+                "p22_l4",
+                "p22_l5",
+                "p22_l6",
+                "p22_l7",
+                "p22_l8",
+                "p22_l9",
+                "p22_l10",
+                "p22_l11",
+                "p22_l12",
+                "p22_l13",
+                "p22_l14",
+                "p22_l15",
+                "p22_l16",
+                "p22_l17",
+                "p22_l18",
+                "p22_l19",
+                "p22_l20",
+                "p22_l21",
+                "p22_l22",
+                "p22_l23",
+                "p22_l24",
+                "p22_l25",
+                "p22_l26",
+                "p22_l27",
+                "p22_l28",
+                "p22_l29",
+                "p22_l30",
+                "p22_l31",
+                "p22_l32",
+                "p22_l33",
+                "p22_l34",
+                "p22_l35",
+                "p22_l36",
+                "p22_l37"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p21_l1"
+            }
+          },
+          {
+            "id": "unidentified_p23_1",
+            "type": "custom",
+            "page_start": 23,
+            "page_end": 23,
+            "children": [],
+            "text": "For Table of Contents Use Only\n23",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p23_l1",
+                "p23_l2"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p21_l1"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

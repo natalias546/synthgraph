@@ -1,0 +1,358 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "SFBX1200",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Evidence for fully-gapped superconductivity in BCS superconductor NiBi3"
+      ]
+    },
+    {
+      "font": "SFRM1000",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 395,
+      "long_prose_lines": 1,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "Atul Gangwar,1 Kunal Yadav,2 S.Patnaik,2 and Sandip Chatterjee1,∗",
+        "Topological superconductors (TSCs) have drawn grow-",
+        "ing interest in the topological family because of their"
+      ]
+    },
+    {
+      "font": "SFTI0900",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Department of Physics, Indian Institute of Technology (BHU), Varanasi 221005, India",
+        "2School of Physical Sciences, Jawaharlal Nehru University, New Delhi 110067, India"
+      ]
+    },
+    {
+      "font": "SFRM0900",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 140,
+      "long_prose_lines": 21,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "We investigate the physical characteristics, normal state and superconducting properties of NiBi3",
+        "singlecrystals. Measurementsofelectricalresistivity,magnetization,andLondonpenetrationdepth",
+        "demonstrate a superconducting transition temperature, Tc ∼ 4.0 K, with a sharp transition in"
+      ]
+    },
+    {
+      "font": "CMMI6",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        6
+      ],
+      "examples": [
+        "kBTc",
+        "kBTc",
+        "kBTc"
+      ]
+    },
+    {
+      "font": "SFBX0900",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "I. INTRODUCTION",
+        "II. EXPERIMENTAL PROCEDURE",
+        "III. RESULTS AND DISCUSSIONS"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 22,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "x 2 3",
+        "3",
+        "3"
+      ]
+    },
+    {
+      "font": "SFRM0800",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "∗ schatterji.app@itbhu.ac.in"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "32",
+        "1v47902.7062:viXra"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "luJ"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]noc-rpus.tam-dnoc["
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "examples": [
+        "α",
+        "c2",
+        "c2"
+      ]
+    },
+    {
+      "font": "CMEX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "examples": [
+        "� �",
+        "� �2",
+        "c2 c2 � �2"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "examples": [
+        "dH",
+        ".9",
+        "T"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 18,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "examples": [
+        "H (0) = −0.693 T c2 (1)",
+        "1 − T",
+        "H (T) = H (0) Tc (2)"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Tc"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Φ0"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Hc2"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "√"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "s ∆(T ) ∂E �E2 − ∆(T)2"
+      ]
+    },
+    {
+      "font": "CMMI5",
+      "size": 5.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "eE/kBT +1"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

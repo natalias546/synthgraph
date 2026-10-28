@@ -1,0 +1,1555 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "NimbusRomNo9L-Medi",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Field-inducedtopologicalHalleffectandbutterfly-shapedmagnetoresistanceinthe",
+        "centrosymmetricantiferromagnetEuAuAs"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 372,
+      "long_prose_lines": 9,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Yu Zhang,1 Junfa Lin,1 Huan Wang,1,2 Kun Han,1 Yiting Wang,1",
+        "Xue Dong,1 Zhenfeng Guan,1 Shengdi Xi,1 and Tian-Long Xia1,3,∗",
+        "Transport phenomena in magnetic materials have been in-"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-ReguItal",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 4,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1School of Physics and Key Laboratory of Quantum State Construction and Manipulation",
+        "(Ministry of Education), Renmin University of China, Beijing 100872, China",
+        "2SchoolofPoliceEquipmentTechnology,ChinaPeople’sPoliceUniversity,Langfang065000,Hebei,People’sRepublicofChina"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 280,
+      "long_prose_lines": 45,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "(Dated:June30,2026)",
+        "Thecouplingbetweenmagneticandelectronicdegreesoffreedomgivesrisetoavarietyofintriguingtrans-",
+        "portphenomena. Amongthem,thetopologicalHalleffect,originatingfromthereal-spaceBerryphaseassoci-"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Medi",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "examples": [
+        "I. INTRODUCTION",
+        "II.EXPERIMENTALMETHODS",
+        "III. CRYSTAL STRUCTURE AND RESISTIVITY"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "nuJ",
+        "92"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]ics-lrtm.tam-dnoc["
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "2 0 4 0 6 0 8 0",
+        "2 0 4 0 6 0 8 0",
+        "2 0 4 0 6 0 8 0"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "1 In-plane up-up-down-down AFM: Collinear antiferromagnetic",
+        "withaspinconfigurationofup-up-down-downalongthecaxis.",
+        "2 ICphase:Theincommensuratehelimagneticphase."
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 0.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 151,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "examples": [
+        "). u.",
+        "a(",
+        "yti"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "����������",
+        "����������"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Y obs"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3
+      ],
+      "examples": [
+        "Y cals Y obs-Y cals B ra g g p o sitio n",
+        "* B i",
+        "T = 2 K 0 -6 0.0 0.4 0.8 �0H (T )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "����������"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3
+      ],
+      "examples": [
+        "R wp = 4 .7 4 %",
+        "R p = 3 .3 3 %",
+        "2 . 0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3
+      ],
+      "examples": [
+        "* *",
+        "2 K 1 0 K",
+        "4 K 1 5 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        5
+      ],
+      "examples": [
+        "5 5",
+        "4 3",
+        "T = 2 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5
+      ],
+      "examples": [
+        "4",
+        "3 � 21",
+        "0 10 20 30"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        5
+      ],
+      "examples": [
+        "������2",
+        "�",
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "� z z",
+        "� x x × 3"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "T (K )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "�������201("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 18,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5,
+        6
+      ],
+      "examples": [
+        "( a )",
+        "E u",
+        "A u"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5
+      ],
+      "examples": [
+        "b",
+        "c a",
+        "a b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "1 m m"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "TN��������",
+        "TN�������� 1 m m ×3"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "T (K )"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 42,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "Z F C",
+        "1 . 8 Z F C",
+        "C u r i e - w e i s s f i t t i n g"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "T ( K )",
+        "T ( K )",
+        "T ( K )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "�",
+        "�",
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "�",
+        "�"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "1 . 5 1 . 5",
+        "1 . 0 1 . 0"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "��",
+        "�"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 4.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "N"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "H / / c Z F C",
+        "H / / c F C",
+        "H / / a b Z F C"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "T N �� �� �� �� H / / a b F C",
+        "( a ) T �� �� �� �� ( b )"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "T ( K )",
+        "2 K 1 0 K",
+        "4 K 1 5 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "� 0 H = 0 . 1 T"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "3",
+        "2",
+        "1"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 0.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 17,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5,
+        6
+      ],
+      "examples": [
+        "M",
+        "M",
+        "M"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 9.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "H / / a b",
+        "H / / c"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "B �",
+        "A x �"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 1.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "- 3 ��� B 1"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 9.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "H / / c",
+        "H / / a b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "� 0 H = 0 . 1 T",
+        "H / / a b 1 0",
+        "� 0 H = 0 . 1 T"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "0 3 6"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        6
+      ],
+      "examples": [
+        "T = 2 K",
+        "� 0 H ( T )",
+        "� 0 H ( T )"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 0.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "d/",
+        "d/"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 6.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "H a t b H / / a b"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "H / / c"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "� 0 H ( T )"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5,
+        6
+      ],
+      "examples": [
+        "( d ) ( e )",
+        "( c )",
+        "( f )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "� 0 H ( T )"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "√"
+      ]
+    },
+    {
+      "font": "CMEX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        6
+      ],
+      "examples": [
+        "ab",
+        "ab",
+        "ab"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ρxz = ρNxz + ρAxz + ρTxz = µ0R0H + µ0RSM + ρTxz (1)"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "���",
+        "���",
+        "���"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 4.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�",
+        "�",
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "��",
+        "��",
+        "��"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�",
+        "�",
+        "�"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "2 K 1 0 K H / / a b I / / c",
+        "S 1",
+        "� x z H / / a b I / / c S 1"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� 0 H ( T )",
+        "� 0 H ( T )"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 24,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "6",
+        "4",
+        "0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "0 . 2 4",
+        "2 0 . 1 6",
+        "0 . 0 8"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "���"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� Nx z + � Ax z 2 K",
+        "x z"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� T"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� 0 H ( T )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "��������"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� 0 H ( T )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 10.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� 0 H"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6
+      ],
+      "examples": [
+        "�",
+        "� 0",
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 3.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 10.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "H"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� T � � � �� � �"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "y x"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "- 0 . 1 5 0 0 . 1 5 0 . 3"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "H / / a b I / / c",
+        "H / / a b I / / c"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "S 1 H"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 6.3,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "a",
+        "s",
+        "b"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 6.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "H / / a b I / / c"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "8 K 4 K",
+        "6 K 2 K",
+        "5 K"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�������"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� 0 H ( T )"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "( T )",
+        "H / / a b 2 K",
+        "/ / a b I / / c 2 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "H a s b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 19,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "- 6 - 3 0 3 6",
+        "4 5",
+        "0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "H / / a b I / / c 24 KK 11 05 KK",
+        "5 K 2 0 K",
+        "6 K 3 0 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "1 8 0",
+        "1 2 0",
+        "6 0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "2 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "3 0 %"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "� 0 H ( T )",
+        "� 0 H ( T )"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "H / / a b",
+        "H / / a b",
+        "I / / c"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "H / / c I / / a b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "H a t b 2 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "H a s b"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

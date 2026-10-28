@@ -1,0 +1,214 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "SFBX1200",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Topological and Planar Hall Effect in Monoclinic van der Waals Ferromagnet NbFeTe2"
+      ]
+    },
+    {
+      "font": "SFRM1000",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 525,
+      "long_prose_lines": 3,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Suchanda Mondal,1 Shubhankar Roy,2 Poulami Manna,1 and Ravi Prakash Singh1,∗",
+        "I. INTRODUCTION thatexhibitsaclearFMmetallicbehavior[16,19]. Monte",
+        "Carlo simulations suggest that in monoclinic NbFeTe2,"
+      ]
+    },
+    {
+      "font": "SFTI0900",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 2,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Department of Physics, Indian Institute of Science Education and Research Bhopal,",
+        "Bhopal Bypass Road, Bhauri, Madhya Pradesh 462-066, India",
+        "2Vidyasagar Metropolitan College, 39 Sankar Ghosh Lane, Kolkata 700006, India"
+      ]
+    },
+    {
+      "font": "SFRM0900",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 203,
+      "long_prose_lines": 40,
+      "pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "examples": [
+        "(Dated: February 10, 2026)",
+        "Two-dimensional (2D) van der Waals (vdW) ferromagnets have emerged as a critical class of",
+        "quantum materials for next-generation, low-dimensional spintronic devices. In this study, we report"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "beF",
+        "7"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]noc-rpus.tam-dnoc["
+      ]
+    },
+    {
+      "font": "SFBX0900",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        8
+      ],
+      "examples": [
+        "II. EXPERIMENTAL DETAILS",
+        "III. RESULTS AND DISCUSSIONS",
+        "IV. CONCLUSIONS"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ρyz = ρ0yz + ρAyz = R0H + 4πRsM, where ρ0yz and ρAyz"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "ρPyzHE = ∆ρ sin θ cos θ, (1)"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "ρpyylanar = ρ⊥ + ∆ρ cos2 θ (2)"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "∆ρ = ρ∥ − ρ⊥, (3)"
+      ]
+    },
+    {
+      "font": "CMSY7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "∥ 2",
+        "∥"
+      ]
+    },
+    {
+      "font": "CMR6",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "1.61 2 2-75"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

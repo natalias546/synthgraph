@@ -1,0 +1,796 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "High-quality single crystals of the kagome metals Ni3In and Ni3Sn grown from Pb flux"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 423,
+      "long_prose_lines": 8,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "F.Garmroudi,1,∗ J.Coulter,2,† C.S.T.Kengle,1 J.D.Thompson,1 E.D.Bauer,1 S.M.Thomas,1 andP.F.S.Rosa1,‡",
+        "Kagome metals have emerged as a fertile platform for",
+        "exploring how lattice geometry, band topology, and elec-"
+      ]
+    },
+    {
+      "font": "CMTI9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 2,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Materials Physics Applications–Quantum, Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA",
+        "2Center for Computational Quantum Physics, Flatiron Institute, New York 10010, USA"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 172,
+      "long_prose_lines": 69,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "The bilayer kagome metal Ni3In has recently attracted attention due to the presence of a flat",
+        "band located near the Fermi level, which has been associated with unconventional thermodynamic",
+        "and electronic transport properties [Ye et al., Nat. Phys. 20, 610–614 (2024)]. However, further"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        5
+      ],
+      "examples": [
+        "f.u.",
+        "f.u.",
+        "f.u."
+      ]
+    },
+    {
+      "font": "CMR8",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "∗ fgarmroudi@lanl.gov",
+        "† jcoulter@flatironinstitute.org",
+        "‡ pfsrosa@lanl.gov"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "nuJ",
+        "22"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]ics-lrtm.tam-dnoc["
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 6.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 21,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4
+      ],
+      "examples": [
+        "a Ni 3 (In,Sn) b",
+        "Ni",
+        "In/Sn"
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 5.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "c",
+        "b",
+        "a"
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 6.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "c",
+        "x",
+        "a"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        ")",
+        "XDE",
+        ")"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 2.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        6
+      ],
+      "examples": [
+        "1-",
+        "1-",
+        "1-"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Ve(",
+        "Ve("
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 5.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "SOD",
+        "SOD"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 68,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4
+      ],
+      "examples": [
+        "14",
+        "12",
+        "10"
+      ]
+    },
+    {
+      "font": "Verdana-Bold",
+      "size": 6.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "c",
+        "Ni3In",
+        "d"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 4.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        6
+      ],
+      "examples": [
+        "20 28 72",
+        "80 3 4 3 2 1-x x",
+        "ume"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 5.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "%) 30"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "In",
+        "(a"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 6.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5
+      ],
+      "examples": [
+        "n",
+        "T (K)",
+        "μ H (T)"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 5.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        6
+      ],
+      "examples": [
+        "(",
+        "0 5 10 15 20",
+        "c 120 120"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 5.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "at.",
+        "t.%"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5
+      ],
+      "examples": [
+        "nominal",
+        "3",
+        "Ωμ(ρ"
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 3.9,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "x"
+      ]
+    },
+    {
+      "font": "CMBX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "I. RESULTS AND DISCUSSION",
+        "A. Pb flux growth of Ni3In1–x Snx",
+        "B. Electrical transport properties"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")mc",
+        ")mc"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 4.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        6
+      ],
+      "examples": [
+        "Ωμ(ρ",
+        "lom",
+        "lom"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 4.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        6
+      ],
+      "examples": [
+        "Ωμ(ρ",
+        "ume("
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "C",
+        "χ(T) = χ + ,",
+        "0 T − θ"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 5.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 38,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6
+      ],
+      "examples": [
+        "0 5 10 15 20",
+        "10",
+        "9"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6
+      ],
+      "examples": [
+        ")mc",
+        ")mc",
+        "Jm(T/C"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 5.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "5 0"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ")%("
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "RM"
+      ]
+    },
+    {
+      "font": "Verdana-Bold",
+      "size": 6.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "T 2 (K2)",
+        "T (K)"
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 5.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "ρ−"
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 4.3,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "ρ"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 2.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "0"
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 3.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ")T(α"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "T (K)",
+        "Ni3In",
+        "T (K)"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        ")",
+        ")",
+        ")χ 0"
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 4.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "χ"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 4.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "10-2",
+        "10-3",
+        "10-4"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0",
+        "3 01("
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 5.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "−"
+      ]
+    },
+    {
+      "font": "Verdana-Italic",
+      "size": 3.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "χ("
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "K"
+      ]
+    },
+    {
+      "font": "CMR6",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "f.u.",
+        "f.u."
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

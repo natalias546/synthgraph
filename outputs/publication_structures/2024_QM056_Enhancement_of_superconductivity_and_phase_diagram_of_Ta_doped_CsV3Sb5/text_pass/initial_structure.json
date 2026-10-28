@@ -1,0 +1,1468 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2024_QM056_Enhancement_of_superconductivity_and_phase_diagram_of_Ta_doped_CsV3Sb5.pdf",
+    "pages": 8,
+    "sha256": "296129474c21dbd4a52d555c8f1ff51f9b4b200f14128a1422a4e9f94acc2aaa",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 9.0,
+    "body_font_family": "MinionPro-Regular"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 8,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": [
+          {
+            "id": "publication_title",
+            "type": "title",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "OPEN Enhancement of superconductivity and phase diagram of Ta‑doped Kagome superconductor CsV3Sb5",
+            "attributes": {
+              "method": "largest bold front-page typography",
+              "observation_ids": [
+                "p1_l2",
+                "p1_l3",
+                "p1_l4"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 8,
+        "children": [
+          {
+            "id": "unidentified_p1_furniture_p1_l1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "www.nature.com/scientificreports",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p1_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p1_1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Jinjin Liu 1,4, Qing Li 2, Yongkai Li 1,4,5, Xinwei Fan 2, Jun Li 3*, Peng Zhu 1,4,5, Hanbin Deng 6,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l5"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_2",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Jia‑Xin Yin 6, Huaixin Yang 3, Jianqi Li 3, Hai‑Hu Wen 2* & Zhiwei Wang 1,4,5*",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l6"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_furniture_p1_l50",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p1_l50"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p1_3",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Kagome superconductors AV3Sb5 (A=K, Rb, and Cs) have attracted enormous interest due to\nthe coexistence of charge density wave (CDW) order, unconventional superconductivity (SC) and\nanomalous Hall effect (AHE). In this paper, we reported an intensive investigation on Cs(V1−xTax)3Sb5\nsingle crystals with systematic Ta doping. Ta was confirmed to be doped into V‑site in the Kagome\nlayer from both single crystal X‑ray diffraction structural refinement and scanning transmission\nelectron microscopy observation. The highest Ta doping level was found to be about 16%, which is\nmore than twice as much as 7% in Nb‑doped CsV3Sb5. With the increase ofTa doping, CDW order\nwas gradually suppressed and finally vanished when the doping level reached to more than 8%.\nMeanwhile, superconductivity was enhanced with a maximum critical temperature (Tc) of 5.3 K, which\nis the highest Tc in the bulk crystal of this Kagome system at ambient pressure so far.The μ0Hc2(T)\nbehavior demonstrates that the system is still a two‑band superconductor after Ta doping. Based on\nthe electrical transport measurement, a phase diagram was set up to exhibit the evolution of CDW and\nSC in the Cs(V1−xTax)3Sb5 system.These findings pave a new way to search for new superconductors\nwith higher Tc in the AV3Sb5 family and establish a new platform for tuning and controlling the\nmultiple orders and superconducting states.\nThe newly discovered Kagome superconductor AV3Sb5 (A=K, Rb, Cs) family attracted tremendous attention\nbecause it is considered to be a good platform for studying electron correlation, lattice geometry and\nnontrivial band topology. Different kinds of techniques have already revealed that this material exhibits many\nexotic properties such as charge density wave (CDW), anomalous Hall effect (AHE), and unconventional\nsuperconductivity (SC)1–10. Generally speaking, AV3Sb5 undergoes a CDW transition at TCDW about 78, 103,\nand 94 K for A = K, Rb, and Cs, respectively, accompanied with a three-dimensional (3D) chiral 2 × 2 × 2 charge\no rder11–16, which attributes to the Kagome structural distortion of two possible types, namely Star of David\n(SoD) and Tri-hexagonal (TrH)17,18. At low temperature, superconductivity with a critical temperature (Tc)\nfrom about 0.9 to 3 K has been reported2,4,19. Nuclear magnetic resonance (NMR) and muon spin rotation/\nrelaxation technique (μSR) have evidenced the unconventional superconductor for CsV3Sb5 (CVS) on account\nof multiple s-wave and nodeless superconducting gaps20,21. Although thermal conductivity measurements have\nexhibited node superconducting g aps22, ultrahigh-resolution and low-temperature angle-resolved photoemission\nspectroscopy (ARPES) observation clearly revealed a nodeless and nearly isotropic superconducting gap in CVS\nvery r ecently23.\nThe CDW and SC can be tuned by applying external pressure. Wang et al. reported that CDW was suppressed\ngradually with the increase of pressure and finally vanished, while superconductivity showed nonmonotonic\nbehavior and two SC domes appeared with the maximum Tc enhanced to about 8 K24. Similar phenomena were\nreported independently by several other groups as well25–29. Besides pressurization, chemical doping with hole\n1Centre for Quantum Physics, Key Laboratory of Advanced Optoelectronic Quantum Architecture and\nMeasurement (MOE), School of Physics, Beijing Institute of Technology, Beijing 100081, People’s Republic\nof China. 2National Laboratory of Solid State Microstructures and Department of Physics, Collaborative\nInnovation Center of Advanced Microstructures, Nanjing University, Nanjing 210093, People’s Republic of\nChina. 3Beijing National Laboratory for Condensed Matter Physics, Institute of Physics, Chinese Academy\nof Sciences, Beijing 100190, People’s Republic of China. 4Beijing Key Lab of Nanophotonics and Ultrafine\nOptoelectronic Systems, Beijing Institute of Technology, Beijing 100081, People’s Republic of China. 5Material\nScience Center, Yangtze Delta Region Academy of Beijing Institute of Technology, Jiaxing 314011, People’s\nRepublic of China. 6Department of Physics, Southern University of Science and Technology, Shenzhen, Guangdong,\nPeople’s Republic of China. *email: junli@iphy.ac.cn; hhwen@nju.edu.cn; zhiweiwang@bit.edu.cn",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l7",
+                "p1_l8",
+                "p1_l9",
+                "p1_l10",
+                "p1_l11",
+                "p1_l12",
+                "p1_l13",
+                "p1_l14",
+                "p1_l15",
+                "p1_l16",
+                "p1_l17",
+                "p1_l18",
+                "p1_l19",
+                "p1_l20",
+                "p1_l21",
+                "p1_l22",
+                "p1_l23",
+                "p1_l24",
+                "p1_l25",
+                "p1_l26",
+                "p1_l27",
+                "p1_l28",
+                "p1_l29",
+                "p1_l30",
+                "p1_l31",
+                "p1_l32",
+                "p1_l33",
+                "p1_l34",
+                "p1_l35",
+                "p1_l36",
+                "p1_l37",
+                "p1_l38",
+                "p1_l39",
+                "p1_l40",
+                "p1_l41",
+                "p1_l42",
+                "p1_l43",
+                "p1_l44",
+                "p1_l45",
+                "p1_l46",
+                "p1_l47",
+                "p1_l48",
+                "p1_l49"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_4",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Vol.:(0123456789)",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l51"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_furniture_p2_l1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "www.nature.com/scientificreports/",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p2_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p2_1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "or electron is also an effective way to tune CDW and SC. For example, CDW was suppressed very rapidly in\nSn-doped CsV3Sb5−xSnx and almost vanished when the doping level x>0.05. At the same time, superconductivity\nexhibits a nonmonotonic evolution with the Sn doping resulting in two “domes” peaked at 3.6 and 4.1 K30,31. Yang\net al. and Liu et al. reported independently that Ti doping can kill the CDW very quickly, however, the evolution\nof SC exhibited quite different b ehavior32,33. Tc behaved V-shape in Ref.32 and single-dome-shape in Ref.33 as the\nTi concentration increased. In addition, Cr and Mo were also reported to be successfully doped into V-site, and\nboth caused the suppression of SC, but CDW showed completely opposite evolution: Cr suppressed CDW while\nMo promoted i t34,35. Our recent work on Nb-doped CVS demonstrated a different situation, with x increased\nto the solution limit of 7%, Tc was monotonously enhanced up to a maximum of 4.45 K, while CDW was not\ncompletely s uppressed36. Further ARPES study and band calculation revealed an unconventional competition\nmechanism between SC and CDW in light of the band structure modification near the Fermi surface37.\nIn this letter, we reported the successful growth of Ta-doped Cs(V1−xTax)3Sb5 single crystals with the highest\ndoping level up to x = 0.16. We investigated evolution of CDW and superconductivity with various doping\nlevels, although samples with the low doping ratio of x ≤ 0.04 have been reported35. The Ta doping level was\nalso more than twice as much as in our previous Nb-doped CVS. Both TEM and XRD analysis demonstrated\nthat Ta was effectively substituted for V-site in the Kagome layer. CDW transitions were suppressed gradually\nwith the increase of doping level, and finally vanished when the doping level x is higher than 0.10. Meanwhile,\nsuperconductivity was enhanced gradually with the increase of Ta content and the highest Tc of 5.3 K was\nobserved in the x=0.16 sample, which is the highest value at ambient pressure in the bulk samples of the AV3Sb5\nfamily so far. A comprehensive phase diagram has been established to illustrate the evolution of CDW and SC\nin the Cs(V1−xTax)3Sb5 system.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l2",
+                "p2_l3",
+                "p2_l4",
+                "p2_l5",
+                "p2_l6",
+                "p2_l7",
+                "p2_l8",
+                "p2_l9",
+                "p2_l10",
+                "p2_l11",
+                "p2_l12",
+                "p2_l13",
+                "p2_l14",
+                "p2_l15",
+                "p2_l16",
+                "p2_l17",
+                "p2_l18",
+                "p2_l19",
+                "p2_l20",
+                "p2_l21",
+                "p2_l22"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_2",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Experiments\nCrystal growth\nCs(V1−xTax)3Sb5 (x=0, 0.04, 0.05, 0.08, 0.1, 0.14 and 0.16) single crystals were synthesized from Cs bulk (Alfa\nAesar, 99.8%), V piece (Aladdin, 99.97%), Ta powder (Alfa Aesar, 99.99%) and Sb shot (Alfa Aesar, 99.9999%)\nvia a flux method as described in our previous report. Flux mixtures containing 5 mol percent Cs(V1−xTax)3Sb5\nwere loaded into a crucible, and then placed in a quartz tube in an Ar-filled glove box. After the quartz tube was\nsealed, it was heated slowly to 1000 °C and maintained for 24 h, followed by cooling down to 200 °C at the rate\nof 3 °C/h. Finally, the furnace was brought down to room temperature with the power switched off. To remove\nthe flux, the obtained samples need to be soaked in deionized water. At last, high-quality single crystals with\nhexagonal shapes were obtained. We would like to point out that the highest doping level of Ta was x = 0.16, even\nif we tried to raise the nominal concentration to x = 0.5.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l23",
+                "p2_l24",
+                "p2_l25",
+                "p2_l26",
+                "p2_l27",
+                "p2_l28",
+                "p2_l29",
+                "p2_l30",
+                "p2_l31",
+                "p2_l32",
+                "p2_l33"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_3",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Measurement method\nA specimen of Cs(V0.86Ta0.14)3Sb5 was used for the single crystal X-ray crystallographic analysis, which was taken\nfrom a Bruker D8 QUEST single crystal diffractometer at 293 K, equipped with the APEX III software and Mo\nradiation. The structure was solved and refined by using the Bruker SHELXTL Software Package to obtain the\ninformation on crystal structure. After that, Cs(V1−xTax)3Sb5 single crystals were structurally and chemically\ncharacterized by X-ray diffraction (XRD) using a Bruker D8 Advance diffractometer with Cu-Kα radiation, and\nenergy dispersive X-ray spectroscopy (EDX) equipped on a JEOL scanning electron microscope (SEM, JSM-\n7500F) to confirm the content of Ta, respectively.\nA physical property measurement system (PPMS, Quantum Design) was used for electronic transport\nmeasurements with the temperature from 300 K down to 1.8 K. Cs(V1−xTax)3Sb5 samples were measured using\na five-terminal configuration, in which the longitudinal resistivity (ρxx) and the Hall resistivity (ρyx) can be\nmeasured simultaneously. Temperature dependence of DC magnetic susceptibility was measured in a SQUID\nmagnetometer (Quantum Design MPMS).\nBefore transmission electron microscope (TEM) analysis, the single crystalline foils with an average thickness\nof around 50 nm were mechanically exfoliated from the bulk crystal using adhesive tape, and then transferred\nto the copper grid with the aid of Crystalbond adhesives and acetone. An aberration-corrected JEOL JEM-\nARM200CF transmission electron microscope (TEM) was employed to acquire high angle annular dark field\n(HAADF) image, selected area electron diffraction pattern, and energy dispersive X-ray spectroscopy (EDX)\nmapping, operated at 200 kV.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l34",
+                "p2_l35",
+                "p2_l36",
+                "p2_l37",
+                "p2_l38",
+                "p2_l39",
+                "p2_l40",
+                "p2_l41",
+                "p2_l42",
+                "p2_l43",
+                "p2_l44",
+                "p2_l45",
+                "p2_l46",
+                "p2_l47",
+                "p2_l48",
+                "p2_l49",
+                "p2_l50",
+                "p2_l51",
+                "p2_l52"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "heading_p2_l53",
+            "type": "section",
+            "page_start": 2,
+            "page_end": 7,
+            "children": [
+              {
+                "id": "heading_p2_l54",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p2_4",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "A series of Ta-doped Cs(V1−xTax)3Sb5 (CVTS) single crystals with x =0, 0.04, 0.05, 0.08, 0.10, 0.14, and 0.16\nwere synthesized for the first time. Utilizing the SHELXTL software package for single crystal X-ray diffraction\nanalysis (see section “Method”), the crystal structure of CVTS was obtained, as illustrated in Fig. 1a,b. The\nCVTS samples maintain the same hexagonal structure as the parent phase, with Ta atoms successfully occupying\nthe V sites as expected. X-ray diffraction pattern on x = 0.14 sample, as shown in Fig. 1c, also confirmed that\nthe crystal structure can be well indexed with hexagonal structure with the space group of P6/mmm, which is\nthe same as CVS single crystal. Comprehensive structural details are summarized in Tables 1, 2. Notably, the\nlattice parameters a(= b) and c, were calculated to be 5.5587 Å and 9.3020 Å, respectively, show a discernible\nexpansion compared to the parent CsV3Sb5 (a=5.4949 Å and c=9.3085 Å). This indicates Ta doping primarily\nenlarges the ab plane while having a relatively small impact on the c-axis direction. EDS results in Fig. 1d show\na clear Ta peak, which means the successful doping of Ta. In addition, subsequent measurements of electronic\ntransport and magnetic properties showed that the superconducting transition temperature and CDW transition",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l55",
+                        "p2_l56",
+                        "p2_l57",
+                        "p2_l58",
+                        "p2_l59",
+                        "p2_l60",
+                        "p2_l61",
+                        "p2_l62",
+                        "p2_l63",
+                        "p2_l64",
+                        "p2_l65",
+                        "p2_l66"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "heading_p2_l68",
+                    "type": "subsubsection",
+                    "page_start": 2,
+                    "page_end": 3,
+                    "children": [
+                      {
+                        "id": "unidentified_p3_1",
+                        "type": "custom",
+                        "page_start": 3,
+                        "page_end": 3,
+                        "children": [],
+                        "text": "Figure 1. Structure and chemical composition of Cs(V1−xTax)3Sb5 crystals. (a) Side view and (b) top view of\nCs(V1−xTax)3Sb5 crystal structure. (c) XRD pattern of Cs(V0.86Ta0.14)3Sb5 single crystal with (00l) reflections. (d)\nEDS results of Cs(V0.86Ta0.14)3Sb5 sample, the presence of Ta peak confirms Ta was doped into CVS.\nEmpirical formula\nFormula weight (g/mol)\nTemperature\nCrystal system\nSpace group\nUnit cell dimensions\na (Å)\nb (Å)\nc (Å)\nα\nβ\nγ\nVolume (Å3)\nZ\nDensity (g/cm3)\nAbsorption coefficient (mm−1)\nF(000)\nR1, wR2\nCs(V0.86Ta0.14)3Sb5\n949.44\n293(2) K\nhexagonal\nP 6/m m m\n5.5587 (12)\n5.5587 (12)\n9.302 (3)\n90°\n90°\n120°\n248.92 (13)\n1\n6.334\n23.801\n400\n0.0577; 0.1660\nTable 1. Crystal data and structural refinement for Cs(V0.86Ta0.14)3Sb5.\ntemperature changed gradually, also indicating that Ta had been successfully doped. We would like to point out\nthat the doping concentration x adopted in the whole text reflect the actual Ta content determined through EDS\nanalysis, and the doping limit of Ta in CVTS is about 16%, i.e. x = 0.16.\nAtomic-resolution STEM and HAADF images of Cs(V0.86Ta0.14)3Sb5 which were taken along the [001] axis\ndirection at room temperature, as shown in Fig. 2a, provide further details on the lattice structure. Given the\nspecimen thickness is relatively thin, the brightness of the atomic columns in the HAADF images scales with\nthe specimen thickness and the constituent elements of atomic number Z (approximately ~ Z1.7). Therefore,",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p3_l2",
+                            "p3_l3",
+                            "p3_l4",
+                            "p3_l5",
+                            "p3_l6",
+                            "p3_l7",
+                            "p3_l8",
+                            "p3_l9",
+                            "p3_l10",
+                            "p3_l11",
+                            "p3_l12",
+                            "p3_l13",
+                            "p3_l14",
+                            "p3_l15",
+                            "p3_l16",
+                            "p3_l17",
+                            "p3_l18",
+                            "p3_l19",
+                            "p3_l20",
+                            "p3_l21",
+                            "p3_l22",
+                            "p3_l23",
+                            "p3_l24",
+                            "p3_l25",
+                            "p3_l26",
+                            "p3_l27",
+                            "p3_l28",
+                            "p3_l29",
+                            "p3_l30",
+                            "p3_l31",
+                            "p3_l32",
+                            "p3_l33",
+                            "p3_l34",
+                            "p3_l35",
+                            "p3_l36",
+                            "p3_l37",
+                            "p3_l38",
+                            "p3_l39",
+                            "p3_l40",
+                            "p3_l41",
+                            "p3_l42",
+                            "p3_l43",
+                            "p3_l44",
+                            "p3_l45",
+                            "p3_l46",
+                            "p3_l47"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Vol:.(1234567890)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 8.0,
+                      "observation_ids": [
+                        "p2_l68"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p3_l49",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_1",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "Atom\nSb1\nSb2\nV1\nTa1\nCs1\nx/a y/b z/c U (eq)\n0.666667 0.333333 0.25561 (11) 0.0218 (8)\n0.0 0.0 0.5 0.0208 (8)\n0.5 0.5 0.5 0.0179 (9)\n0.5 0.5 0.5 0.0179 (9)\n0.0 0.0 0.0 0.0364 (9)\nTable 2. Atomic coordinates and equivalent isotropic atomic displacement parameters (Å2) for\nCs(V0.86 0.14 3 5\nTa ) Sb .\nFigure 2. Microstructure characterization of Cs(V1−xTax)3Sb5. (a) Atomic resolution HRTEM images of CVTS,\nthe inset is FFT pattern. (b) electron diffraction pattern taken along the [001] axis direction. (c) ADF of CVTS\nsingle crystal. (d–g) elemental mapping of Cs, V, Ta, and Sb elements, respectively.\nthe relatively heavier elements like Cs and Sb appear brighter than V. Despite Ta being the heaviest among the\nconstituent elements, its low concentration results in negligible contrast alteration. The derived structural model\nsuperimposed on the STEM image confirms the isostructure with CsV3Sb5, and the Kagome lattice can be clearly\nidentified. Both the fast Fourier transform (FFT) (insert in Fig. 2a) and electron diffraction pattern (Fig. 2b)\nexhibit hexagonal symmetry devoid of any superstructural feature. Besides, to further confirm the successful\ndoping of Ta into the CsV3Sb5 lattice, the EDX elemental mapping was carried and shown in Fig. 2c–g, validates\nthe presence of Ta dopants and homogeneous distribution.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l2",
+                            "p4_l3",
+                            "p4_l4",
+                            "p4_l5",
+                            "p4_l6",
+                            "p4_l7",
+                            "p4_l8",
+                            "p4_l9",
+                            "p4_l10",
+                            "p4_l11",
+                            "p4_l12",
+                            "p4_l13",
+                            "p4_l14",
+                            "p4_l15",
+                            "p4_l16",
+                            "p4_l17",
+                            "p4_l18",
+                            "p4_l19",
+                            "p4_l20",
+                            "p4_l21",
+                            "p4_l22",
+                            "p4_l23",
+                            "p4_l24",
+                            "p4_l25",
+                            "p4_l26"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Vol.:(0123456789)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 8.0,
+                      "observation_ids": [
+                        "p3_l49"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "Structure characterization",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l54"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l27",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 7,
+                "children": [
+                  {
+                    "id": "unidentified_p4_2",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "Electronic transport and magnetic properties measurements were performed to elucidate the interaction between\nSC and CDW order. Figure 3 shows temperature dependence of resistivity and magnetization of CVTS, one\ncan see a clear competition between SC and CDW with the increasing of Ta content. As the Ta increases, CDW\ntransition temperature progressively decreases from 93.6 K for parent CVS to 40.5 K for sample with x = 0.08, and\nthen faded away completely in samples with the doping content of x = 0.10, 0.14 and 0.16, as shown in Fig. 3a.\nThis behavior is more visible from the dρ/dT curves, as shown in Fig. 3b, which suggests that Ta doping can\nweaken CDW effectively and ultimately suppress it. Meanwhile, the resistivity at normal state increased with the\nincrease of doping level, this is because the scattering effect could become stronger after Ta doping. Concurrently,\nsuperconducting transition temperature Tc was significantly increased, as indicated in Fig. 3c, here Tc is defined\nas the temperature corresponding to the midpoint of the resistivity drop. With the increasing of Ta, Tc increased\ngradually and reached to 5.3 K for x=0.16 sample, which is the highest Tc observed in the bulk of AV3Sb5 family\nat ambient pressure so far. Since the highest Tc was observed in the sample with the highest Ta content, and\nneither peak nor saturation was observed as Ta doping, we can expect that Tc could be higher if one can introduce\nmore Ta into CVS by any other methods. To further check superconductivity of CVTS, temperature dependence\nof magnetization measurement was conducted under an applied magnetic field of 5 Oe from 2 to 10 K. Both the\nzero-field-cooled (ZFC) and field-cooled (FC) results are shown in Fig. 3d. One can see distinct diamagnetic\ntransitions for all measured samples, which affirmed the occurrence of SC in CVTS. We would like to point out",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l28",
+                        "p4_l29",
+                        "p4_l30",
+                        "p4_l31",
+                        "p4_l32",
+                        "p4_l33",
+                        "p4_l34",
+                        "p4_l35",
+                        "p4_l36",
+                        "p4_l37",
+                        "p4_l38",
+                        "p4_l39",
+                        "p4_l40",
+                        "p4_l41",
+                        "p4_l42",
+                        "p4_l43",
+                        "p4_l44"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l46",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_1",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "Figure 3. Electrical and magnetic properties of Cs(V1−xTax)3Sb5. (a) Temperature dependence of longitudinal\nresistivity from 2 to 300 K. The inset shows the quadratic temperature dependence from 7 to 50 K. (b)\nTemperature dependence of dρ/dT from 30 to 100 K to illustrate CDW transitions. (c) ρ(T) curves around SC\ntransition temperature. (d) Temperature dependence of magnetic susceptibility for CVTS measured with the\napplied field of 5 Oe, both ZFC and FC curves are presented.\nthat the diamagnetic data here cannot reflect the superconducting volume fraction accurately since we focused\non the evolution of Tc and the applied magnetic field is perpendicular to the ab-plane. The higher Ta samples\nhave higher Tc, consistent with that in resistivity measurement. The sharp transitions in both ρ(T) and M(T)\ncurves indicate the high quality of our CVTS crystals. In addition, in the low temperature region(7–50 K) for\nx=0.14, the ρ(T) curve can be well fitted using the formula ρ(T)=ρ0 +AT2 as shown in the inset of Fig. 3a, where\nρ0 is the residual resistivity, AT2 term originates from the electron–electron. The fitting gives ρ0 =25.4 μΩ cm,\nA = 3.1 × 10−3 μΩ cm K −2. The electron–electron scattering process dominates low-temperature resistivity. The\nquadratic relationship indicates the normal Fermi liquid behavior37.\nTo examine the evolution of SC under applied magnetic field, we measured the temperature dependence of\nresistivity at varying magnetic fields on x = 0.14 sample with the fields perpendicular to the ab plane. Figure 4a\npresents the ρ(T) curves measured from 2 to 6 K under various magnetic fields up to 4 T. One can clearly see a\ngradual suppression of Tc with the magnetic field increasing. There is still a SC transition sign around 2 K even\nthe magnetic field was applied as high as 3.5 T. But when the field was applied to 4 T, almost no SC transition was\ndetected. To better analyze the resistive transitions and determine upper critical field μ0Hc2, the 90%, 50% and\n10% levels of normal-state resistivity ρN (shown by dashed lines) are taken to mark the transition. The difference\nbetween these three criteria gives an idea about the uncertainty in determining μ0Hc2. The summary of μ0Hc2 is\nplotted in Fig. 4b. The two-band theory38 fits all the three sets of data well and yields μ0Hc2(0) to be 4.6 T, 3.2 T,\nand 2.4 T, corresponding to 90%, 50%, and 10% criteria, respectively. The detailed fitting process was described\nin Supplementary file. According to the equation of coherence length ξ √�0/2πµ0 H c2 , we can estimate the\n=\nξ to be 11.7 nm, 10.1 nm, and 8.5 nm, respectively, where �0 is the magnetic flux quantum.\nFigure 5 summarize the phase diagram of CVTS single crystals established from the resistivity measurements\nand the effect of Ta doping on CDW and SC is presented. It is evident that TCDW decreased monotonically\nwith increasing Ta content, and was completely suppressed when x is more than 0.1. While superconductivity\nwas enhanced with the Tc gradually increased spontaneously. Interestingly, the enhancement of SC has two\ndistinct regions: when x is less than 0.08, i.e. CDW order is coexisted with SC, Tc enhanced slowly; however,\nTc increased more quickly after CDW was completely suppressed, i.e. in samples with x more than 0.1. Tc does\nnot get saturated as the Ta content increasing. Since the doping limit is 16% in our study by using flux method\nto grow CVTS crystals, if one can raise the doping limit by using any other different crystal growth techniques,\nwe can expect to obtain higher Tc sample. This competition behavior between CDW and SC seems similar to\nthat in Nb-doped, Ti-doped and Sn-doped CVS. What’s different is that CDW was not completely suppressed\nin Nb-doped c ase36, while there appeared two distinct SC regions in Ti-doped32,33 and Sn-doped cases30,31. These",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l2",
+                            "p5_l3",
+                            "p5_l4",
+                            "p5_l5",
+                            "p5_l6",
+                            "p5_l7",
+                            "p5_l8",
+                            "p5_l9",
+                            "p5_l10",
+                            "p5_l11",
+                            "p5_l12",
+                            "p5_l13",
+                            "p5_l14",
+                            "p5_l15",
+                            "p5_l16",
+                            "p5_l17",
+                            "p5_l18",
+                            "p5_l19",
+                            "p5_l20",
+                            "p5_l21",
+                            "p5_l22",
+                            "p5_l23",
+                            "p5_l24",
+                            "p5_l25",
+                            "p5_l26",
+                            "p5_l27",
+                            "p5_l28",
+                            "p5_l29",
+                            "p5_l30",
+                            "p5_l31",
+                            "p5_l32",
+                            "p5_l33",
+                            "p5_l34",
+                            "p5_l35",
+                            "p5_l36",
+                            "p5_l37",
+                            "p5_l38"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Vol:.(1234567890)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 8.0,
+                      "observation_ids": [
+                        "p4_l46"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l40",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 6,
+                    "children": [
+                      {
+                        "id": "unidentified_p6_1",
+                        "type": "custom",
+                        "page_start": 6,
+                        "page_end": 6,
+                        "children": [],
+                        "text": "Figure 4. Temperature dependence of longitudinal resistivity under various magnetic fields. (a) ρ(T) curves\nof Cs(V0.84Ta0.16)3Sb5 measured under the applied magnetic field up to 4 T, the current was applied in the ab\nplane and the magnetic field applied along the c axis. (b) The temperature dependence of the upper critical field\nextracted from the resistivity curves. The data are fitted well by two band theory.\nFigure 5. Phase diagram of the Cs(V1−xTax)3Sb5 crystals. TCDW decreased gradually and finally vanished when\nx is more than 0.1, while Tc increased significantly with x increasing, shows an obvious competition between\nCDW and SC.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p6_l2",
+                            "p6_l3",
+                            "p6_l4",
+                            "p6_l5",
+                            "p6_l6",
+                            "p6_l7",
+                            "p6_l8"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Vol.:(0123456789)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 8.0,
+                      "observation_ids": [
+                        "p5_l40"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p6_l10",
+                    "type": "subsubsection",
+                    "page_start": 6,
+                    "page_end": 7,
+                    "children": [
+                      {
+                        "id": "unidentified_p7_1",
+                        "type": "custom",
+                        "page_start": 7,
+                        "page_end": 7,
+                        "children": [],
+                        "text": "differences reflect complicated competition mechanism between CDW and SC. Nb and Ta are electrically neutral\ndoping and will not introduce additional charge in principle, but since the doping limit of Nb (7%) is smaller\nthan that of Ta (16%), Nb is not enough to suppress CDW completely in Nb-doped CVS. However, Ti or Sn\ndoping will introduce additional electron or hole, which can tune the Fermi level more effectively than Nb and\nTa doping. This complicated competition of CDW and SC was also seen in our previous work on ARPES, STM\nand magnetization measurements23,32,39–42.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p7_l2",
+                            "p7_l3",
+                            "p7_l4",
+                            "p7_l5",
+                            "p7_l6",
+                            "p7_l7"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "single_or_uncertain",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Vol:.(1234567890)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 8.0,
+                      "observation_ids": [
+                        "p6_l10"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "Superconductivity, CDW order and their competition",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l27"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Discussion",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.0,
+              "observation_ids": [
+                "p2_l53"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p2_furniture_p2_l67",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p2_l67"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p3_furniture_p3_l1",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "text": "www.nature.com/scientificreports/",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p3_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p3_furniture_p3_l48",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "text": "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 3",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p3_l48"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p4_furniture_p4_l1",
+            "type": "custom",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [],
+            "text": "www.nature.com/scientificreports/",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p4_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p4_furniture_p4_l45",
+            "type": "custom",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [],
+            "text": "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 4",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p4_l45"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p5_furniture_p5_l1",
+            "type": "custom",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [],
+            "text": "www.nature.com/scientificreports/",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p5_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p5_furniture_p5_l39",
+            "type": "custom",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [],
+            "text": "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 5",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p5_l39"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p6_furniture_p6_l1",
+            "type": "custom",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [],
+            "text": "www.nature.com/scientificreports/",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p6_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p6_furniture_p6_l9",
+            "type": "custom",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [],
+            "text": "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 6",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p6_l9"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p7_furniture_p7_l1",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "www.nature.com/scientificreports/",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p7_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p7_l8",
+            "type": "section",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [
+              {
+                "id": "unidentified_p7_2",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "High-quality single crystals of Ta-doped Cs(V1−xTax)3Sb5 were synthesized with the highest doping level of\nx = 0.16, and the competition between CDW and SC was investigated from electronic transport measurements.\nWith the increasing of Ta, the superconducting critical temperature enhanced gradually and reached to a\nmaximum of 5.3 K, which is the highest Tc in the bulk of this system at ambient pressure so far. Meanwhile,\nCDW order became weaker and weaker, and finally suppressed completely when x is more than 0.1. The upper\ncritical field μ0Hc2(0) was increased after Ta doping and estimated to be about 4.6 T, its temperature dependent\nbehavior can be well characterized by two-band theory. Our work provides a platform to study the competition\nmechanism between SC and CDW in Kagome superconductors, as well as provides a new idea for exploring\nexotic Kagome superconducting materials with higher Tc.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l9",
+                    "p7_l10",
+                    "p7_l11",
+                    "p7_l12",
+                    "p7_l13",
+                    "p7_l14",
+                    "p7_l15",
+                    "p7_l16",
+                    "p7_l17"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p7_3",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Received: 10 January 2024; Accepted: 11 April 2024",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l18"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Conclusions",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.0,
+              "observation_ids": [
+                "p7_l8"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p7_furniture_p7_l72",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 7",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p7_l72"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p7_5",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "Vol.:(0123456789)",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p7_l73"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p7_l19"
+            }
+          },
+          {
+            "id": "unidentified_p8_furniture_p8_l1",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "www.nature.com/scientificreports/",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p8_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p8_1",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "33. Liu, Y. et al. Doping evolution of superconductivity, charge order, and band topology in hole-doped topological kagome\nsuperconductors CsV1−xTix3Sb5. Phys. Rev. Mater. 7, 064801 (2023).\n34. Ding, G., Wo, H., Gu, Y., Gu, Y. & Zhao, J. Effect of chromium doping on superconductivity and charge density wave order in the\nkagome metal Cs(V1−xCrx)3Sb5. Phys. Rev. B 106, 235151 (2022).\n35. Liu, M. et al. Evolution of superconductivity and charge density wave through Ta and Mo doping in CsV3Sb5. Phys. Rev. B 106,\nL140501 (2022).\n36. Li, Y. et al. Tuning the competition between superconductivity and charge order in the kagome superconductor Cs(V1−xNbx)3Sb5.\nPhys. Rev. B 105, L180507 (2022).\n37. Tsuei, C. C., Gupta, A. & Koren, G. Quadratic temperature dependence of the in-plane resistivity in superconducting Nd1.85CuO4—\nEvidence for fermi-liquid normal state. Phys. C Supercond. 161, 415 (1989).\n38. Alex, G. Enhancement of the upper critical field by nonmagnetic impurities in dirty two-ga superconductors. Phys. Rev. B 67,\n184515 (2003).\n39. Kato, T. et al. Fermiology and origin of Tc enhancement in a kagome superconductor Cs(V1−xNbx)3Sb5. Phys. Rev. Lett. 129, 206402\n(2022).\n40. Luo, Y. et al. A unique van Hove singularity in kagome superconductor CsV3−xTaxSb5 with enhanced superconductivity. Nat.\nCommun. 14, 3819 (2023).\n41. Le, T., Pan, Z., Xu, Z., Liu, J., Wang, J., Lou, Z., Wang, Z., Yao, Y., Wu, C. &Lin, X. Evidence for chiral superconductivity in Kagome\nsuperconductor CsV3Sb5. preprint arXiv:2309.00264 (2023).\n42. Li, J. et al. Strong-coupling superconductivity and weak vortex pinning in Ta-doped CsV3Sb5 single crystals. Phys. Rev. B 106,\n214529 (2022).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p8_l2",
+                "p8_l3",
+                "p8_l4",
+                "p8_l5",
+                "p8_l6",
+                "p8_l7",
+                "p8_l8",
+                "p8_l9",
+                "p8_l10",
+                "p8_l11",
+                "p8_l12",
+                "p8_l13",
+                "p8_l14",
+                "p8_l15",
+                "p8_l16",
+                "p8_l17",
+                "p8_l18",
+                "p8_l19",
+                "p8_l20",
+                "p8_l21"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p7_l19"
+            }
+          },
+          {
+            "id": "heading_p8_l34",
+            "type": "section",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p8_5",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Supplementary Information The online version contains supplementary material available at https:// doi. org/\n10. 1038/ s41598- 024- 59518-1.\nCorrespondence and requests for materials should be addressed to J.L., H.-H.W. or Z.W.\nReprints and permissions information is available at www.nature.com/reprints.\nPublisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and\ninstitutional affiliations.\nOpen Access This article is licensed under a Creative Commons Attribution 4.0 International\nLicense, which permits use, sharing, adaptation, distribution and reproduction in any medium or\nformat, as long as you give appropriate credit to the original author(s) and the source, provide a link to the\nCreative Commons licence, and indicate if changes were made. The images or other third party material in this\narticle are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the\nmaterial. If material is not included in the article’s Creative Commons licence and your intended use is not\npermitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from\nthe copyright holder. To view a copy of this licence, visit http:// creat iveco mmons. org/ licen ses/ by/4. 0/.\n© The Author(s) 2024",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l35",
+                    "p8_l36",
+                    "p8_l37",
+                    "p8_l38",
+                    "p8_l39",
+                    "p8_l40",
+                    "p8_l41",
+                    "p8_l42",
+                    "p8_l43",
+                    "p8_l44",
+                    "p8_l45",
+                    "p8_l46",
+                    "p8_l47",
+                    "p8_l48",
+                    "p8_l49"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p8_6",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Vol:.(1234567890)",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l51"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Additional information",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.0,
+              "observation_ids": [
+                "p8_l34"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p8_furniture_p8_l50",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 8",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p8_l50"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 7,
+        "page_end": 8,
+        "children": [
+          {
+            "id": "heading_p7_l19",
+            "type": "references",
+            "page_start": 7,
+            "page_end": 8,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.0,
+              "observation_ids": [
+                "p7_l19"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p7_4",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "1. Ortiz, B. R. et al. New kagome prototype materials: Discovery of KV3Sb5, RbV3Sb5, and CsV3Sb5. Phys. Rev. Mater. 3, 094407 (2019).\n2. Ortiz, B. R. et al. Superconductivity in the Z2 kagome metal KV3Sb5. Phys. Rev. Mater. 5, 034801 (2021).\n3. Yang, S. Y. et al. Giant, unconventional anomalous Hall effect in the metallic frustrated magnet candidate, KV3Sb5. Sci. Adv. 6,\neabb6003 (2020).\n4. Yin, Q. et al. Superconductivity and normal-state properties of kagome metal RbV3Sb5 single crystals. Chin. Phys. Lett. 38, 037403\n(2021).\n5. Yu, F. H. et al. Concurrence of anomalous Hall effect and charge density wave in a superconducting topological kagome metal.\nPhys. Rev. B 104, L041103 (2021).\n6. Chen, H. et al. Roton pair density wave in a strong-coupling kagome superconductor. Nature 599, 222–228 (2021).\n7. Nie, L. et al. Charge-density-wave-driven electronic nematicity in a kagome superconductor. Nature 604, 59–64 (2022).\n8. Zhao, H. et al. Cascade of correlated electron states in the kagome superconductor CsV3Sb5. Nature 599, 216–221 (2021).\n9. Mielke, C. et al. Time-reversal symmetry-breaking charge order in a kagome superconductor. Nature 602, 245–250 (2022).\n10. Jiang, Y. X. et al. Unconventional chiral charge order in kagome superconductor KV3Sb5. Nat Mater 20, 1353–1357 (2021).\n11. Nakayama, K. et al. Multiple energy scales and anisotropic energy gap in the charge-density-wave phase of the kagome\nsuperconductor CsV3Sb5. Phys. Rev. B 104, L161112 (2021).\n12. Tan, H., Liu, Y., Wang, Z. & Yan, B. Charge density waves and electronic properties of superconducting kagome metals. Phys. Rev.\nLett. 127, 046401 (2021).\n13. Wang, Z. et al. Electronic nature of chiral charge order in the kagome superconductor CsV3Sb5. Phys. Rev. B 104, 075148 (2021).\n14. Zhou, X. et al. Origin of charge density wave in the kagome metal CsV3Sb5 as revealed by optical spectroscopy. Phys. Rev. B 104,\nL041101 (2021).\n15. Kato, T. et al. Polarity-dependent charge density wave in the kagome superconductor CsV3Sb5. Phys. Rev. B 106, L121112 (2022).\n16. Kato, T. et al. Three-dimensional energy gap and origin of charge-density wave in kagome superconductor KV3Sb5. Commun.\nMater. 3, 30 (2022).\n17. Luo, J. et al. Possible star-of-David pattern charge density wave with additional modulation in the kagome superconductor CsV3Sb5.\nnpj Quantum Mater. 7, 30 (2022).\n18. Hu, Y. et al. Coexistence of trihexagonal and star-of-David pattern in the charge density wave of the kagome superconductor\nAV3Sb5. Phys. Rev. B 106, L241106 (2022).\n19. Xiang, Y. et al. Twofold symmetry of c-axis resistivity in topological kagome superconductor CsV3Sb5 with in-plane rotating\nmagnetic field. Nat. Commun. 12, 6727 (2021).\n20. Mu, C. et al. S-wave superconductivity in kagome metal CsV3Sb5 revealed by 121/123Sb NQR and 51V NMR measurements. Chin.\nPhys. Lett. 38, 077402 (2021).\n21. Gupta, R. et al. Microscopic evidence for anisotropic multigap superconductivity in the CsV3Sb5 kagome superconductor. npj\nQuantum Mater. 7, 49 (2022).\n22. Duan, W. Y. et al. Nodeless superconductivity in the kagome metal CsV3Sb5. Sci. China Phys. Mech. 64, 107462 (2021).\n23. Zhong, Y. et al. Nodeless electron pairing in CsV3Sb5-derived kagome superconductors. Nature 617, 488–492 (2023).\n24. Wang, Q. et al. Charge density wave orders and enhanced superconductivity under pressure in the kagome metal CsV3Sb5. Adv.\nMater. 33, 2102813 (2021).\n25. Zhu, C. C. et al. Double-dome superconductivity under pressure in the V-based kagome metals AV3Sb5 (A=Rb and K). Phys. Rev.\nB 105, 094507 (2022).\n26. Roppongi, M. et al. Bulk evidence of anisotropic s-wave pairing with no sign change in the kagome superconductor CsV3Sb5. Nat.\nCommun. 14, 667 (2023).\n27. Du, F. et al. Superconductivity modulated by structural phase transitions in pressurized vanadium-based kagome metals. Phys.\nRev. B 106, 024516 (2022).\n28. Du, F. et al. Pressure-induced double superconducting domes and charge instability in the kagome metal KV3Sb5. Phys. Rev. B 103,\nL220504 (2021).\n29. Yu, F. et al. Unusual competition of superconductivity and charge-density-wave state in a compressed topological kagome metal.\nNat. Commun. 12, 3645 (2021).\n30. Oey, Y. M. et al. Fermi level tuning and double-dome superconductivity in the kagome metal CsV3Sb5−xSnx. Phys. Rev. Mater. 6,\nL041801 (2022).\n31. Oey, Y. M., Kaboudvand, F., Ortiz, B. R., Seshadri, R. & Wilson, S. D. Tuning charge density wave order and superconductivity in\nthe kagome metals KV3Sb5−xSnx and RbV3Sb5−xSnx. Phys. Rev. Mater. 6, 074802 (2022).\n32. Yang, H. et al. Titanium doped kagome superconductor CsV3−xTixSb5 and two distinct phases. Sci. Bull. 67, 2176–2185 (2022).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p7_l20",
+                "p7_l21",
+                "p7_l22",
+                "p7_l23",
+                "p7_l24",
+                "p7_l25",
+                "p7_l26",
+                "p7_l27",
+                "p7_l28",
+                "p7_l29",
+                "p7_l30",
+                "p7_l31",
+                "p7_l32",
+                "p7_l33",
+                "p7_l34",
+                "p7_l35",
+                "p7_l36",
+                "p7_l37",
+                "p7_l38",
+                "p7_l39",
+                "p7_l40",
+                "p7_l41",
+                "p7_l42",
+                "p7_l43",
+                "p7_l44",
+                "p7_l45",
+                "p7_l46",
+                "p7_l47",
+                "p7_l48",
+                "p7_l49",
+                "p7_l50",
+                "p7_l51",
+                "p7_l52",
+                "p7_l53",
+                "p7_l54",
+                "p7_l55",
+                "p7_l56",
+                "p7_l57",
+                "p7_l58",
+                "p7_l59",
+                "p7_l60",
+                "p7_l61",
+                "p7_l62",
+                "p7_l63",
+                "p7_l64",
+                "p7_l65",
+                "p7_l66",
+                "p7_l67",
+                "p7_l68",
+                "p7_l69",
+                "p7_l70",
+                "p7_l71"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p7_l19"
+            }
+          },
+          {
+            "id": "heading_p8_l22",
+            "type": "acknowledgements",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p8_2",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "This work was supported by the Beijing Natural Science Foundation (Grants No. Z210006), the National Natural\nScience Foundation of China (Grants Nos. 92065109, 12204231, 12374060, 12074408), and the National Key\nR&D Program of China (Grant Nos. 2020YFA0308800, 2022YFA1403400, 2023YFA1407300, 2023YFF0718400).\nZ. W. thanks the Analysis & Testing Center at BIT for assistance in facility support.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l23",
+                    "p8_l24",
+                    "p8_l25",
+                    "p8_l26"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Acknowledgements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.0,
+              "observation_ids": [
+                "p8_l22"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p8_l27",
+            "type": "author_contributions",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p8_3",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Z.W. conceived the project. Jinjin Liu, Y.L., and P.Z. grew single crystals and characterized them. Q.L., X.F., and\nH.-H. W., carried out the transoprt and magnetic measurements. Jun Li, H.Y., and Jianqi Li performed STEM\nobservation. Jinjin Liu, Jun Li and Z.W. analyzed the data and wrote the manuscript. H.D. and J.Y. discussed the\ndata. All authors reviewed the manuscript.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l28",
+                    "p8_l29",
+                    "p8_l30",
+                    "p8_l31"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Author contributions",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.0,
+              "observation_ids": [
+                "p8_l27"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p8_l32",
+            "type": "competing_interests",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p8_4",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "The authors declare no competing interests.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Competing interests",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.0,
+              "observation_ids": [
+                "p8_l32"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

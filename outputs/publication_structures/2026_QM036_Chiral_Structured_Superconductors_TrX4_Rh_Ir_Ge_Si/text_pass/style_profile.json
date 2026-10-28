@@ -1,0 +1,348 @@
+{
+  "body_size": 12.0,
+  "styles": [
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 15.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Chiral-Structured Superconductors TrX4 (Tr = Rh, Ir; X = Ge, Si): A",
+        "Platform for Mixed-Parity Pairing and Topological States"
+      ]
+    },
+    {
+      "font": "Times",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 574,
+      "long_prose_lines": 427,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "examples": [
+        "Zhenhai Yu1†, Yunguan Ye1†, Yuwei Zhou2†, Chaoyang Chu1†, Congcong Le3†, Lin Wu4, Jian Yuan1,",
+        "Tong Shi5, Qingxin Dong5, Jinggeng Zhao6, Wei Xia1,7, Xiangqi Liu1, Xia Wang1,8, Bosen Wang5,",
+        "Jinguang Cheng5, Yanhang Ma1*, Xianxin Wu9*, Xiangang Wan3,4*, Huiqiu Yuan2*, and Yanfeng Guo1,7*"
+      ]
+    },
+    {
+      "font": "Times,Italic",
+      "size": 12.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1State Key Laboratory of Quantum Functional Materials, School of Physical Science and Technology,",
+        "ShanghaiTech University, Shanghai 201210, China",
+        "2Center for Correlated Matter and School of Physics, Zhejiang University, Hangzhou 310058, China"
+      ]
+    },
+    {
+      "font": "Times,Bold",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 28,
+      "long_prose_lines": 1,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        22,
+        23,
+        24,
+        30
+      ],
+      "examples": [
+        "ABSTRACT",
+        "Chiral-structured superconductors, with simultaneous broken mirror and inversion symmetries,",
+        "promote unconventional superconductivity through parity-mixing mechanisms. Yet a few bulk"
+      ]
+    },
+    {
+      "font": "Times",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        10,
+        17
+      ],
+      "examples": [
+        "[38].",
+        "[49]:"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 1,
+      "pages": [
+        13,
+        14,
+        17,
+        18,
+        37,
+        38
+      ],
+      "examples": [
+        "1−𝑡2",
+        "𝐻 (𝑇) = 𝐻 (0) ,",
+        "𝛥"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        13,
+        14,
+        17,
+        18,
+        37,
+        38,
+        40
+      ],
+      "examples": [
+        "𝑐2 𝑐2 1+𝑡2",
+        "el res 𝑘 𝑇",
+        "𝐵"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        17,
+        40
+      ],
+      "examples": [
+        "𝑘",
+        "𝑘"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        23,
+        31,
+        32,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "examples": [
+        "Corresponding Author",
+        "Author Contributions",
+        "1. Chemical composition characterization of RhGe4 and IrGe4"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 213,
+      "long_prose_lines": 62,
+      "pages": [
+        23,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "examples": [
+        "*mayh2@shanghaitech.edu.cn (YHM), *xxwu@itp.ac.cn (XXW), *xgwan@nju.edu.cn (XGW),",
+        "*hqyuan@zju.edu.cn (HQY), *guoyf@shanghaitech.edu.cn (YFG).",
+        "†These authors contributed equally."
+      ]
+    },
+    {
+      "font": "Times,Italic",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        24,
+        26,
+        27
+      ],
+      "examples": [
+        "Nat. Commun. 2018, 9 (1), 3740.",
+        "J. Less-Common Met. 1984, 98 (1), L1–L3.",
+        "Supercond. Sci. Technol. 2006, 19(8), R41–R67."
+      ]
+    },
+    {
+      "font": "Times,Bold",
+      "size": 15.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        31
+      ],
+      "examples": [
+        "SI"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 11.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 88,
+      "long_prose_lines": 0,
+      "pages": [
+        32,
+        33
+      ],
+      "examples": [
+        "Formula weight",
+        "Temperature",
+        "Crystal system"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 57,
+      "long_prose_lines": 0,
+      "pages": [
+        38,
+        39,
+        40,
+        41
+      ],
+      "examples": [
+        "Model α, 1-α Δ (meV) Adj. R2",
+        "ⅰ s wave 1, 0",
+        "ⅱ p wave 1, 0"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 14.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        42
+      ],
+      "examples": [
+        "Reference"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        42,
+        43
+      ],
+      "examples": [
+        "CaPtAs. Phys. Rev. Lett. 2020, 124, 207001.",
+        "Low. Temp. Phys. 37, 189 (1979)."
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

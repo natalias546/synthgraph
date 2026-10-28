@@ -1,0 +1,1213 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "PalatinoLinotype-BoldItalic",
+      "size": 13.0,
+      "bold": true,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "J Mater Sci: Mater Electron (2023) 34:2302"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Bold",
+      "size": 18.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Weak anti‑localization effect in topological Ni3In2S2",
+        "single crystal"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Kapil Kumar1,2 , Yogesh Kumar1,2, and V. P. S. Awana1,2,*"
+      ]
+    },
+    {
+      "font": "MyriadPro-It",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 1,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1 CSIR-National Physical Laboratory, Dr. K. S. Krishnan Marg, New Delhi 110012, India",
+        "2 Academy of Scientific and Innovative Research (AcSIR), Ghaziabad 201002, India"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Bold2",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "ABSTRACT"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        9
+      ],
+      "examples": [
+        "Received: 1 October 2023",
+        "Publisher’s Note Springer Nature remains neutral with",
+        "regard to jurisdictional claims in published maps and"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 340,
+      "long_prose_lines": 17,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Accepted: 4 December 2023 Ni3In2S2 is the most recent (Fang in Sci. China Mater. 66:2032, 2023 and Zhang",
+        "Published online: in Npj Comput. Mater. 8:155, 2022) entrant into the family of topological insulator",
+        "13 December 2023 (TI) materials, the same exhibits very high MR in low-temperature regime. Here,"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "© The Author(s), under 3 2 2",
+        "exclusive licence to Springer",
+        "Science+Business Media, LLC,"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Bold",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        7,
+        8
+      ],
+      "examples": [
+        "1 Introduction",
+        "2 Experimental details",
+        "3 Results and discussion"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman2",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Vol.:(0123456789)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 5.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "6 0o C /h r )Co(T"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Step I Ni In S 3 2 2 48 hr",
+        "30",
+        "30"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "500",
+        "Step II Ni In S 3 2 2 48 hr",
+        "700"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 5.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "6o0C/hr )(o CT 60Co/hr"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Time (hr)",
+        "Time (hr)"
+      ]
+    },
+    {
+      "font": "MicrosoftSansSerif",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "hr"
+      ]
+    },
+    {
+      "font": "MicrosoftSansSerif",
+      "size": 6.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "C/ o 0 6"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        ")Co(T"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Step III Ni3In2S2",
+        "24 hr",
+        "950"
+      ]
+    },
+    {
+      "font": "MicrosoftSansSerif",
+      "size": 5.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "hr C/ o0"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 4.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "3 Air quenched"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Time (hr) 150 hr"
+      ]
+    },
+    {
+      "font": "STIX-Regular",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 129,
+      "long_prose_lines": 3,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "Fig. 1 Schematic of heat treatment followed to synthesize Ni3In2S2 single crystal",
+        "Fig. 2 a XRD pattern taken (a)",
+        "on crystal flake of synthe-"
+      ]
+    },
+    {
+      "font": "STIXMath-Regular",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "−"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 7.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "10 20 30 40 50 60 70 80"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "(b) (c)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ").u.a(ytisnetnI",
+        ").u.a("
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ")600(",
+        ")300("
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Ni3In2S2 )900("
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 9.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "2θ(Deg.)"
+      ]
+    },
+    {
+      "font": "Symbol2",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "# #",
+        "#"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "10 20 30 40 50 60 70 80"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 2.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ")011(",
+        ")600(",
+        ")202( )420("
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 10.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Ni In S 3 2 2"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "2θ(Deg.)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "ytisnetnI"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT2",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "#Ni"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 11.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "(b)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT3",
+      "size": 11.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "70",
+        "60",
+        "50"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ").u.a(2)�h�("
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT3",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "2.58"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT3",
+      "size": 19.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "( )"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 15.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "h�� eV"
+      ]
+    },
+    {
+      "font": "STIX-Italic",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "a = b = 90°"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT6",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "60",
+        "50",
+        "40"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT7",
+      "size": 11.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "Ni3In2S2",
+        "T (K)"
+      ]
+    },
+    {
+      "font": "SymbolMT2",
+      "size": 6.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ")mc���(��"
+      ]
+    },
+    {
+      "font": "STIXMath-Regular2",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "𝜌(H) − 𝜌(0)",
+        "MR% = × 100"
+      ]
+    },
+    {
+      "font": "STIXMathExtensions-Regular",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "[ 𝜌(0) ]"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT4",
+      "size": 8.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "50",
+        "40",
+        "30"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT5",
+      "size": 9.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "%RM"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT5",
+      "size": 11.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "Ni3In2S2",
+        "H (T)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT5",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "2.5K",
+        "50K",
+        "200K"
+      ]
+    },
+    {
+      "font": "STIXMath-Italic5",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "𝛥𝜎(H) = − 𝛼e2 ln B 𝜙 − 𝛹 1 + B 𝜙 , (2)"
+      ]
+    },
+    {
+      "font": "STIXMathExtensions-Regular2",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "𝜋h [ ( H ) (2 H )]"
+      ]
+    },
+    {
+      "font": "STIXMath-Italic4",
+      "size": 7.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "𝜙 8e𝜋L2"
+      ]
+    },
+    {
+      "font": "STIXMath-Italic4",
+      "size": 6.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "𝜙"
+      ]
+    },
+    {
+      "font": "STIX-Regular",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "(±1 T) MC of synthesized 0.00 (a). Ni3In2S2 0.000"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT8",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "3 2 2 -0.004",
+        "-0.008",
+        "-0.12 -0.016"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT8",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "-0.08",
+        "-1.0 -0.5 0.0 0.5 1.0 -1.0 -0.5 0.0 0.5 1.0 1.5",
+        "0.000"
+      ]
+    },
+    {
+      "font": "STIX-Regular",
+      "size": 7.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "temperature Expt. -0.012"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT9",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.0",
+        "-0.1 α",
+        "-0.2"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT2",
+      "size": 6.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Lφ"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT9",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "T (K)"
+      ]
+    },
+    {
+      "font": "Symbol3",
+      "size": 7.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "α"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT9",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        ")mn("
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT9",
+      "size": 5.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "L"
+      ]
+    },
+    {
+      "font": "Symbol3",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "φ"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT9",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "(c). NiInS (d).",
+        "Expt.",
+        "HLN Fit"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT9",
+      "size": 5.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "3 2 2"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT9",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "200K",
+        "H (T)",
+        "2.5K"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT9",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        ")h/2e(σ∆",
+        ")h/2e(σ∆",
+        ")h/2e(σ∆"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT8",
+      "size": 9.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "0.08",
+        "0.02",
+        "50 100 150 200 250 devices."
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "3 2 2 0.2"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT8",
+      "size": 5.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "0.1",
+        "0.0",
+        "-0.1"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT10",
+      "size": 5.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        ")g/ume("
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT10",
+      "size": 11.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "M"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT10",
+      "size": 9.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "FC",
+        "250 Oe",
+        "ZFC"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT10",
+      "size": 12.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Ni In S 3 2 2",
+        "T(K)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT10",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        ")g/ume(M"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT10",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "5K"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

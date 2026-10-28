@@ -1,0 +1,286 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "PalatinoLinotype-BoldItalic",
+      "size": 13.0,
+      "bold": true,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "J Mater Sci: Mater Electron (2026) 37:385"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Bold",
+      "size": 18.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Fluorine substitution‑dependent phase diagram",
+        "and superconducting properties of Sm‑based",
+        "oxypnictides synthesized by a high‑pressure growth"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Mohammad Azam1, Tatiana Zajarniuk2, Ryszard Diduszko2,3, Taras Palasyuk4, Cezariusz Jastrzebski4,",
+        "Andrzej Szewczyk2, Hiraku Ogino5, and Shiv J. Singh1,*"
+      ]
+    },
+    {
+      "font": "MyriadPro-It",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 4,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1 Institute of High Pressure Physics (IHPP), Polish Academy of Sciences, Sokołowska 29/37, 01‑142 Warsaw, Poland",
+        "2 Institute of Physics, Polish Academy of Sciences, Aleja Lotników 32/46, 02‑668 Warsaw, Poland",
+        "3 National Centre for Nuclear Research, Andrzeja Sołtana 7/3, 05‑400 Otwock‑Swierk, Poland"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Bold",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Received: 7 November 2025 ABSTRACT"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1134,
+      "long_prose_lines": 26,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "examples": [
+        "Accepted: 8 February 2026 A series of SmFeAsO1−xFx (Sm1111) bulk samples (0.05 ≤ x ≤ 0.40) are synthesized",
+        "Published online: by an in-situ cubic-anvil high-pressure (CA-HP) technique at 4 GPa and system-",
+        "16 February 2026 atically characterized through structural, microstructural, Raman, transport, and"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Science+Business Media, LLC,",
+        "part of Springer Nature, 2026",
+        "Address correspondence to E-mail: sjs@unipress.waw.pl"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman2",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Vol.:(0123456789)"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Bold2",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        16,
+        18,
+        19
+      ],
+      "examples": [
+        "1 Introduction",
+        "2 \u0007Experimental\u0007details",
+        "3 \u0007Results"
+      ]
+    },
+    {
+      "font": "STIX-Regular",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 330,
+      "long_prose_lines": 26,
+      "pages": [
+        5,
+        6,
+        7,
+        9,
+        12,
+        13,
+        14,
+        15,
+        17,
+        19,
+        20,
+        21
+      ],
+      "examples": [
+        "Fig. 1 a Powder X-ray",
+        "diffraction (XRD) patterns",
+        "of SmFeAsO 1-xFx samples"
+      ]
+    },
+    {
+      "font": "STIX-Regular",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "O3"
+      ]
+    },
+    {
+      "font": "STIX-Regular",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        9,
+        20
+      ],
+      "examples": [
+        "offset)",
+        "F0.2"
+      ]
+    },
+    {
+      "font": "STIX-Bold",
+      "size": 9.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "Sample type Compounds Tc Hc2 (0) ξ (0) Maki paramet Refs",
+        "(K) (T) (Å)"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Italic",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        15
+      ],
+      "examples": [
+        "Tc"
+      ]
+    },
+    {
+      "font": "PalatinoLinotype-Roman",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 2,
+      "pages": [
+        15,
+        17,
+        21
+      ],
+      "examples": [
+        "The transition temperatures are observed at approx- Fig. 7 Magnetic properties of S mFeAsO 1-xFx bulks. (a) Temper-",
+        "Fig. 8 (a) Superconducting onset transition temperature T c A/cm2 at optimal doping (x = 0.20) [5], with a slight",
+        "Publisher’s\u0007 Note Springer Nature remains neutral with"
+      ]
+    },
+    {
+      "font": "STIX-Regular",
+      "size": 7.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        20
+      ],
+      "examples": [
+        "Hx"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

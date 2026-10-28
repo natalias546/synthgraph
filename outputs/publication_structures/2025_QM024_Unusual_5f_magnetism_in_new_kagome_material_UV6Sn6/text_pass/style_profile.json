@@ -1,0 +1,920 @@
+{
+  "body_size": 9.0,
+  "styles": [
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 16.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "npj | quantum materials"
+      ]
+    },
+    {
+      "font": "AdvOT34fe1490.B",
+      "size": 14.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Article"
+      ]
+    },
+    {
+      "font": "AdvOTf0129623",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 3,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "PublishedinpartnershipwithNanjingUniversity",
+        "1LosAlamosNationalLaboratory,LosAlamos,NM,USA.2DonostiaInternationalPhysicsCenter(DIPC),SanSebastián,Spain.3Departmentof",
+        "Astronomy,RiceUniversity,Houston,TX,USA.4BrukerAXS,Madison,WI,USA.5DepartmentofPhysics,KoreaAdvancedInstituteofSciencean"
+      ]
+    },
+    {
+      "font": "AdvOTf94803d4",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "https://doi.org/10.1038/s41535-025-00783-2",
+        "Checkforupdates",
+        "npjQuantumMaterials| (2025) 10:66 1"
+      ]
+    },
+    {
+      "font": "AdvOT9d7a08b4.BI",
+      "size": 25.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "5f"
+      ]
+    },
+    {
+      "font": "AdvOTfbba3ace.B",
+      "size": 25.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Unusual magnetism in new kagome",
+        "material UV6Sn6"
+      ]
+    },
+    {
+      "font": "AdvOT34fe1490.B",
+      "size": 9.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 1,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "S.M.Thomas1 ,C.S.Kengle1,W.Simeth1,Chan-youngLim2,Z.W.Riedel1,K.Allen1,3,A.Schmidt4,",
+        "M.Ruf4,SeonggeonGim5,J.D.Thompson1,F.Ronning1,A.O.Scheie1,C.Lane1,J.D.Denlinger6,",
+        "S.Blanco-Canosa2,7,Jian-XinZhu1,E.D.Bauer1&P.F.S.Rosa1"
+      ]
+    },
+    {
+      "font": "AdvOTf0129623",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 4,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Materials in the family RV6Sn6 (R = rare earth) provide a unique platform to investigate the interplay",
+        "betweenlocalmomentsfromRlayersandnonmagneticvanadiumkagomelayers.Yet,the",
+        "investigationofactinidemembersremainsscarce.HerewereportthesynthesisofUV Sn single 6 6"
+      ]
+    },
+    {
+      "font": "AdvOT1ef757c0",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 488,
+      "long_prose_lines": 282,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "In quantum materials, many distinct mechanisms can create flat electronic",
+        "bands,whicharerealizedwhenthekineticenergyofelectrons(W) issmaller",
+        "than the on-site Coulomb repulsion (U), i.e., U/W > 11,2. The kinetic energy"
+      ]
+    },
+    {
+      "font": "AdvOTf0129623",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        ";,:)(0987654321 ;,:)(0987654321"
+      ]
+    },
+    {
+      "font": "AdvOTf0129623",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 169,
+      "long_prose_lines": 44,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "https://doi.org/10.1038/s41535-025-00783-2 Article",
+        "https://doi.org/10.1038/s41535-025-00783-2 Article",
+        "https://doi.org/10.1038/s41535-025-00783-2 Article"
+      ]
+    },
+    {
+      "font": "AdvOT34fe1490.B",
+      "size": 10.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        6,
+        8,
+        9
+      ],
+      "examples": [
+        "Results",
+        "Discussion",
+        "Methods"
+      ]
+    },
+    {
+      "font": "AdvOT34fe1490.B",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "Crystal structure determination",
+        "Low-field properties",
+        "Magnetic structure determination"
+      ]
+    },
+    {
+      "font": "AdvOT1ef757c0",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "V3"
+      ]
+    },
+    {
+      "font": "AdvOTb65e897d.B",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 3,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "Fig.1|Crystalstructuredetermination.",
+        "Fig. 2 | Temperature-dependent physical properties. a Temperature-dependent",
+        "Fig. 3 | Neutron powder diffraction. a Magnetic"
+      ]
+    },
+    {
+      "font": "AdvOT1ef757c0",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 61,
+      "long_prose_lines": 29,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "a Tentative hexagonal HfFe6Ge6-type structure of",
+        "UV6Sn6 (P6/mmm, SG 191) and its b ab plane",
+        "projection,whichshowsavanadiumkagomelayer."
+      ]
+    },
+    {
+      "font": "AdvOT7d6df7ab.I",
+      "size": 7.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "B0"
+      ]
+    },
+    {
+      "font": "AdvOT1ef757c0",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "2",
+        "γ2 mJ"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")tinu",
+        ".bra("
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 3.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "I"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ytisnetnI"
+      ]
+    },
+    {
+      "font": "Verdana",
+      "size": 8.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 17,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "(a)",
+        "UV6Sn6",
+        "15"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "v T v H",
+        "C/T:"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "35",
+        "20",
+        "15"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "30 �:",
+        "�, M:",
+        "25 �L:"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6
+      ],
+      "examples": [
+        ")K(T",
+        "Å(",
+        "Å("
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 8.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "� H (T)"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 48,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.0",
+        "-0.5",
+        "-1.0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        ")Ve(",
+        ")Ve(",
+        ")Ve("
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 5.2,
+      "bold": false,
+      "italic": true,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "E",
+        "E",
+        "E"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "-",
+        "-",
+        "1- )"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "F",
+        "F",
+        "F"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 13.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "a b",
+        "c",
+        "f"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "k y",
+        "k y"
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "102 eV",
+        "108 eV"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "dezilamroN"
+      ]
+    },
+    {
+      "font": "AdvOT7d6df7ab.I",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "X"
+      ]
+    },
+    {
+      "font": "AdvOT1ef757c0",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "6"
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "a 2 Localized f , NM c 2 DFT + U (U = 6 eV), AFM"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "1.5",
+        "1",
+        "0.5"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 2.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        ")Ve(",
+        ")Ve("
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 3.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "ygrenE",
+        "ygrenE"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "1.5",
+        "1",
+        "0.5"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 5.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "F"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "E"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "F"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 15.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "5 d"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "3d V"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "4",
+        "3",
+        "2"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        ")etis/Ve/setats(",
+        "fo",
+        ")etis/Ve/setats("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "setatS",
+        "setatS"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "ytisneD",
+        "ytisneD"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "3d V(1)",
+        "3d V(2)"
+      ]
+    },
+    {
+      "font": "AdvOTa20b42a7",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "Received: 1 April 2025; Accepted: 6 June 2025;"
+      ]
+    },
+    {
+      "font": "AdvOT3a037357.I",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 1,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "Condens. Matter 34, 243002 (2022).",
+        "Allg. Chem. 482, 40 (1981).",
+        "Alloy. Compd. 204, 59 (1994)."
+      ]
+    },
+    {
+      "font": "AdvOT34fe1490.B",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "Supplementary information The online version contains",
+        "Reprints and permissions information is available at"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

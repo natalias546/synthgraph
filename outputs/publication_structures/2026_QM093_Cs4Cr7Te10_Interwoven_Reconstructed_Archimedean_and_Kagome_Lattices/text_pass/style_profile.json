@@ -1,0 +1,151 @@
+{
+  "body_size": 12.0,
+  "styles": [
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 16.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        14
+      ],
+      "examples": [
+        "Cs4Cr7Te10: Interwoven Reconstructed Archimedean and Kagome",
+        "Lattices with a Possible Phase Transition near 130 K",
+        "Supporting Information"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Zhen Zhao1, Ruwen Wang1,2, Hua Zhang1,2, Tong Liu2, Haisen Liu1, Guojing Hu1, Ke Zhu1, Senhao Lv1,",
+        "Gang Cao1, Chenyu Bai1,2, Hui Guo1,2, Xiaoli Dong1,2, Wu Zhou2*, Haitao Yang1,2*, and Hong-Jun Gao1,2*",
+        "1 Beijing National Center for Condensed Matter Physics and Institute of Physics, Chinese Academy of"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 226,
+      "long_prose_lines": 168,
+      "pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        16
+      ],
+      "examples": [
+        "*Correspondence to: hjgao@iphy.ac.cn, htyang@iphy.ac.cn, wuzhou@ucas.ac.cn",
+        "Chromium (Cr)-based materials have attracted extensive interest in condensed matter physics and",
+        "materials science due to their unique 3d electronic configuration and moderate electron correlation effects."
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 4,
+      "pages": [
+        2,
+        10,
+        11,
+        12,
+        13
+      ],
+      "examples": [
+        "Chromium-based materials with complex lattice geometries provide an important platform for",
+        "investigating correlated electronic and magnetic states. However, Cr-based compounds with",
+        "unusual crystal geometries are still rarely reported. Here, we report a new Cr-based compound,"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 14.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 2,
+      "pages": [
+        8,
+        14,
+        15,
+        16
+      ],
+      "examples": [
+        "References",
+        "Table S1. Sample and crystal data for Cs4Cr7Te10.",
+        "Table S2. Data collection and structure refinement for Cs4Cr7Te10."
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "Phys. Rev. Lett. 125, 247002 (2020)."
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "𝐶𝐶 𝑇𝑇 𝛾𝛾 𝛽𝛽"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 14.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 68,
+      "long_prose_lines": 0,
+      "pages": [
+        14,
+        15
+      ],
+      "examples": [
+        "Chemical formula Cs4Cr7Te10",
+        "Formula weight",
+        "Temperature"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

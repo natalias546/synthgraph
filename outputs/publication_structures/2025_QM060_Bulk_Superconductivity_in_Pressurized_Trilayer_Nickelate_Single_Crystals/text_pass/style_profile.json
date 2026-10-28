@@ -1,0 +1,314 @@
+{
+  "body_size": 10.5,
+  "styles": [
+    {
+      "font": "AdvOT483a8203",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "PHYSICAL REVIEW X 15, 021008 (2025)"
+      ]
+    },
+    {
+      "font": "AdvOT19ee2aa8.B",
+      "size": 12.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Bulk Superconductivity in Pressurized Trilayer Nickelate Pr4Ni3O10 Single Crystals"
+      ]
+    },
+    {
+      "font": "AdvOT483a8203",
+      "size": 10.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 365,
+      "long_prose_lines": 10,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Enkang Zhang ,1,2,* Di Peng,3,* Yinghao Zhu ,1,* Lixing Chen,1 Bingkun Cui ,1 Xingya Wang,4",
+        "Wenbin Wang,5 Qiaoshi Zeng ,3,6,† and Jun Zhao 1,2,5,7,‡",
+        "High-temperature (high-T c) superconductivity has"
+      ]
+    },
+    {
+      "font": "AdvOTb748f40a.I",
+      "size": 9.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 76,
+      "long_prose_lines": 16,
+      "pages": [
+        1,
+        8,
+        9
+      ],
+      "examples": [
+        "1State Key Laboratory of Surface Physics and Department of Physics, Fudan University,",
+        "Shanghai 200433, China",
+        "2Shanghai Research Center for Quantum Sciences, Shanghai 201315, China"
+      ]
+    },
+    {
+      "font": "AdvOT483a8203",
+      "size": 9.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 102,
+      "long_prose_lines": 47,
+      "pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "examples": [
+        "(Received 31 January 2025; revised 3 March 2025; accepted 20 March 2025; published 8 April 2025)",
+        "Thediscoveryofsuperconductivityinpressurizedbilayerandtrilayernickelateshasgeneratedsignificant",
+        "interest. However, their superconducting properties are often dependent on sample quality and pressure"
+      ]
+    },
+    {
+      "font": "AdvOT483a8203",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "DOI: 10.1103/PhysRevX.15.021008",
+        "Subject Areas: Condensed Matter Physics,",
+        "Strongly Correlated Materials,"
+      ]
+    },
+    {
+      "font": "AdvOT19ee2aa8.B",
+      "size": 10.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        5,
+        7,
+        8
+      ],
+      "examples": [
+        "I. INTRODUCTION",
+        "II. RESULTS",
+        "III. DISCUSSION"
+      ]
+    },
+    {
+      "font": "20",
+      "size": 6.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "†",
+        "‡"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "(a) (b)",
+        "(c)",
+        "(f)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Pr",
+        "Ni",
+        "O"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        5
+      ],
+      "examples": [
+        "(a)",
+        "(b)",
+        "(a)"
+      ]
+    },
+    {
+      "font": "AdvP4C4E74",
+      "size": 10.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Hc2(T) = Hc2(0)[(1 − t2)/(1 + t2)�;"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 6.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "Temperature"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 9.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "(a)",
+        "(b)",
+        "(c)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 9.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "(a) (b)",
+        "(c)"
+      ]
+    },
+    {
+      "font": "03",
+      "size": 10.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "4πμ",
+        "χ = 4πχ = ;"
+      ]
+    },
+    {
+      "font": "AdvOT483a8203",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "SI CGS HV"
+      ]
+    },
+    {
+      "font": "AdvOT19ee2aa8.B",
+      "size": 9.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "x-ray diffraction measurement without copper, Nature (London) 372, 532 (1994)."
+      ]
+    },
+    {
+      "font": "AdvOT483a8203",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "(GrantNo.2024ZD0300103),andtheShanghaiMunicipal doped ligand holes in La3Ni2O7−δ, Nature (London) 630,"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

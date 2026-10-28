@@ -1,0 +1,107 @@
+{
+  "body_size": 10.8,
+  "styles": [
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 13.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "High Entropy Engineering of Magnetic Kagome Lattice (Gd,Tb,Dy,Ho,Er)Mn6Sn6"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 10.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 327,
+      "long_prose_lines": 288,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "examples": [
+        "Wenhao Liu1,2, Nikhil Uday Dhale1, Youzhe Chen2,3, Pramanand Joshi4, Zixin Zhai1, Xiqu Wang5, Ping Liu4,",
+        "Robert J. Birgeneau2,3, Boris Maiorov6, Christopher A. Mizzi6, Bing Lv1,*",
+        "1. Department of Physics, the University of Texas at Dallas, Richardson, TX 75080, USA"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 10.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "* to whom the correspondence to be addressed: blv@utdallas.edu"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 10.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 17,
+      "long_prose_lines": 11,
+      "pages": [
+        1,
+        9,
+        10
+      ],
+      "examples": [
+        "The magnetic kagome lattice compound RMn6Sn6 (R=rare earth) is an emerging platform to exploit",
+        "the interplay between magnetism and topological electronic states where a variety of exciting findings",
+        "such as flat bands, Dirac points as well as the dramatic dependence of magnetic order on the rare-"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 10.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "𝜌𝑥𝑦 = 𝜌𝑥0𝑦 + 𝜌𝑥𝐴𝑦 = 𝑅0𝐵 + 4𝜋𝑅𝑠𝑀"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "𝜌𝑥𝐴𝑦 = 𝜎𝑖𝑛𝑡𝜌𝑥2𝑥 + 𝜎𝑠𝑘𝑒𝑤𝜌𝑥𝑥"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

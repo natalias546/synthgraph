@@ -1,0 +1,1054 @@
+{
+  "body_size": 8.2,
+  "styles": [
+    {
+      "font": "AdvOT89719618",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 19,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Article https://doi.org/10.1038/s41467-024-53786-1",
+        "Check for updates",
+        "NatureCommunications|( 2024)1 5:9342 1"
+      ]
+    },
+    {
+      "font": "AdvOTa2fa4214.B",
+      "size": 25.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Synthesis and structure of a non-van-der-",
+        "Waals two-dimensional coordination",
+        "polymer with superconductivity"
+      ]
+    },
+    {
+      "font": "AdvOT13119950",
+      "size": 9.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Received:18June2024 ZhichaoPan1,2,14,XingHuang 3,14,YunlongFan1,2,ShaozeWang4,YiyuLiu5,",
+        "Xuzhong Cong",
+        "Yu-Qing Zheng"
+      ]
+    },
+    {
+      "font": "AdvOT89719618",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Accepted: 17 October 2024"
+      ]
+    },
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 2.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        ";,:)(0987654321 ;,:)(0987654321"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Two-dimensionalconjugatedcoordinationpolymersexhibitremarkable",
+        "chargetransportproperties,withcopper-basedbenzenehexathiol(Cu-BHT)",
+        "beingararesuperconductor.However,theatomicstructureofCu-BHThas"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 477,
+      "long_prose_lines": 63,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "Two-dimensional conjugated coordination polymers (2D c-CPs) and materialsarecharacterizedbyelectron-richconjugatedligand",
+        "conjugatedmetal-organicframeworks(2Dc-MOFs)areemergingasa as benzenehexathiolate (BHT)8–12, hexaiminobenzene (HIB)13,14,",
+        "noveltypeofelectronicmaterials1–4.Theyarefunctionalmaterialswith 2,3,6,7,10,11-hexahydroxytriphenylene (HHTP)15–17, 2,3,"
+      ]
+    },
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 11,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1NationalKeyLaboratoryofAdvancedMicroandNanoManufactureTechnology,SchoolofMaterialsScienceandEngineering,PekingUniversit",
+        "100871,China.2KeyLaboratoryofPolymerChemistryandPhysicsofMinistryofEducation,SchoolofMaterialsScienceandEngineering,Peki",
+        "Beijing100871,China.3CenterforAdvancingElectronicsDresden&FacultyofChemistryandFoodChemistry,TechnischeUniversitätDresde"
+      ]
+    },
+    {
+      "font": "AdvOT3d287b35.B",
+      "size": 10.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Results",
+        "Discussion",
+        "Methods"
+      ]
+    },
+    {
+      "font": "AdvOT70e1938e",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "examples": [
+        "Synthesis of Cu3BHT micro-crystal array",
+        "Single crystal structure characterization of Cu3BHT",
+        "Single crystal device characterization"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "a b",
+        "e",
+        "g"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "2.66 A",
+        "3.32 A",
+        "S"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "A",
+        "FC 2000 XT"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "2.26",
+        "2.33A"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "b",
+        "a c",
+        "c b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "3 μm",
+        "2 μm",
+        "2 nm"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Cu"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5,
+        6
+      ],
+      "examples": [
+        "c Ln-1",
+        "Cu n+1",
+        "n+2"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ")011( )002(",
+        ")013( )004(",
+        ")200("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ").u.bra("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5
+      ],
+      "examples": [
+        "ytisnetnI",
+        ")T(B"
+      ]
+    },
+    {
+      "font": "AdvOT3d287b35.B",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Fig. 1 | Single crystal structure of Cu3BHT. a A representation of the crystal"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 20,
+      "long_prose_lines": 18,
+      "pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "examples": [
+        "structure of Cu3BHT viewed along the c direction. b The metal-ligand connectivity",
+        "of the five-coordinate Cu atoms and layer stacking of Cu3BHT. c The charge",
+        "transport network formed by Cu–S bonds. d The SEM micrograph reveals that"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "a b",
+        "d",
+        "e"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 82,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        5
+      ],
+      "examples": [
+        "6",
+        "2",
+        "0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 24,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        5
+      ],
+      "examples": [
+        "Four-probe",
+        "4 Two-probe",
+        "Cu BHT 1"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "))T(ρ(gol",
+        ").u.bra("
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "1 μm",
+        "s",
+        "0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "log(ρ(T))",
+        "Linear fit of second regime",
+        "Linear fit of third regime"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "0"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "C",
+        "H"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "u",
+        "T",
+        "g"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "3B"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "[0",
+        "in",
+        "ta"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "]"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Au"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Ti/"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "electrode"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "le"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ry"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "l"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "3",
+        "3",
+        "3"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")Aμ("
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 2.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "I"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        5
+      ],
+      "examples": [
+        ")K003(ρ/)T(ρ",
+        ")g/ume(M",
+        ")ume/"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "f"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        5
+      ],
+      "examples": [
+        ").u.bra(",
+        ")Ω("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ytisnetnI"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "a b",
+        "d e",
+        "c"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 6.8,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "R"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "M"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "ZFC χ-1"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "0 mT",
+        "1000",
+        "225"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "1-χ"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 28,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "b*",
+        "B",
+        "D"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "3 Total",
+        "Cu",
+        "S"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        ")ω(λ,)ω(F2α"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        ")Ve("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "E-E"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "F"
+      ]
+    },
+    {
+      "font": "AdvOTcc1f6510.I",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Powder X-ray Diffraction (PXRD) analyses were performed using a",
+        "Scanning electron microscopy (SEM) studies were conducted on an",
+        "High-resolution transmission electron microscopy (HRTEM) images"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 5.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "0 ω′",
+        "C 1.2 λ�μ* × (1 + 0.62 × λ)",
+        "log log λ 0 ω"
+      ]
+    },
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 212,
+      "long_prose_lines": 35,
+      "pages": [
+        8,
+        9
+      ],
+      "examples": [
+        "1. Givaja, G., Amo-Ochoa, P., Gómez-García, C. J. & Zamora, F. Elec-",
+        "trical conductive coordination polymers. Chem. Soc. Rev. 41,",
+        "115–147 (2012)."
+      ]
+    },
+    {
+      "font": "AdvOT23e3f5cb.I",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8,
+        9
+      ],
+      "examples": [
+        "Angew. Chem. Int. Ed. 63, 202319518 (2024).",
+        "set. Comput. Mater. Sci. 6, 15–50 (1996)."
+      ]
+    },
+    {
+      "font": "AdvOT13119950",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "Supplementary information The online version contains",
+        "Peer review information Nature Communications thanks Carlos Gómez-",
+        "Reprints and permissions information is available at"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

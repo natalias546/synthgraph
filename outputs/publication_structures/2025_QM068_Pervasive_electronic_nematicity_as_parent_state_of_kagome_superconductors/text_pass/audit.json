@@ -1,0 +1,370 @@
+{
+  "source_sha256": "c878fe0b75cecd9b96c311f13b45cabeb5f0d53780683b19c2b14e39ca003b01",
+  "schema_sha256": "9b756d2cb803c07756ce13e73f0caae03d68a972bbe6506c6a8a34c380e94060",
+  "validation": {
+    "schema_valid": true,
+    "page_ranges_valid": true,
+    "unique_ids": true,
+    "nodes": 493
+  },
+  "coverage_complete": true,
+  "unowned_blocks": [],
+  "multiply_owned_blocks": {},
+  "observed_blocks": 562,
+  "unidentified_nodes": [
+    "x000047",
+    "x000055",
+    "x000056",
+    "x000057",
+    "x000058",
+    "x000072",
+    "x000080",
+    "x000081",
+    "x000099",
+    "x000107",
+    "x000111",
+    "x000113",
+    "x000123",
+    "x000126",
+    "x000129",
+    "x000131",
+    "x000133",
+    "x000138",
+    "x000139",
+    "x000142",
+    "x000146",
+    "x000148",
+    "x000150",
+    "x000154",
+    "x000170",
+    "x000175",
+    "x000190",
+    "x000191",
+    "x000206",
+    "x000215",
+    "x000216",
+    "x000239",
+    "x000240",
+    "x000416",
+    "x000417",
+    "x000418",
+    "x000419",
+    "x000420",
+    "x000421",
+    "x000422",
+    "x000423",
+    "x000424",
+    "x000425",
+    "x000426",
+    "x000428",
+    "x000429",
+    "x000430",
+    "x000432",
+    "x000434",
+    "x000435",
+    "x000436",
+    "x000437",
+    "x000439",
+    "x000440",
+    "x000001",
+    "x000002",
+    "x000003",
+    "x000004",
+    "x000005",
+    "x000006",
+    "x000007",
+    "x000008",
+    "x000009",
+    "x000010",
+    "x000011",
+    "x000012",
+    "x000013",
+    "x000014",
+    "x000015",
+    "x000016",
+    "x000017",
+    "x000018",
+    "x000019",
+    "x000020",
+    "x000021",
+    "x000022",
+    "x000023",
+    "x000024",
+    "x000025",
+    "x000026",
+    "x000027",
+    "x000028",
+    "x000029",
+    "x000030",
+    "x000031",
+    "x000032",
+    "x000033",
+    "x000034",
+    "x000035",
+    "x000036",
+    "x000037",
+    "x000038",
+    "x000039",
+    "x000040",
+    "x000041",
+    "x000042",
+    "x000043",
+    "x000044",
+    "x000045",
+    "x000046",
+    "x000247",
+    "x000263",
+    "x000279",
+    "x000295",
+    "x000296",
+    "x000304",
+    "x000320",
+    "x000327",
+    "x000337",
+    "x000344",
+    "x000346",
+    "x000355",
+    "x000359",
+    "x000374",
+    "x000383",
+    "x000384",
+    "x000385",
+    "x000386",
+    "x000387",
+    "x000388",
+    "x000389",
+    "x000390",
+    "x000391",
+    "x000392",
+    "x000393",
+    "x000394",
+    "x000395",
+    "x000396",
+    "x000397",
+    "x000398",
+    "x000399",
+    "x000402",
+    "x000405",
+    "x000407",
+    "x000408",
+    "x000409",
+    "x000410",
+    "x000411",
+    "x000412",
+    "x000413",
+    "x000414",
+    "x000415"
+  ],
+  "type_counts": {
+    "article": 1,
+    "front_matter": 1,
+    "body": 1,
+    "section": 2,
+    "custom": 142,
+    "subsection": 42,
+    "paragraph": 298,
+    "subsubsection": 3,
+    "back_matter": 1,
+    "data_availability": 1,
+    "code_availability": 1
+  },
+  "layout": [
+    {
+      "page": 1,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 23
+    },
+    {
+      "page": 2,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 36
+    },
+    {
+      "page": 3,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 37
+    },
+    {
+      "page": 4,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 41
+    },
+    {
+      "page": 5,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 40
+    },
+    {
+      "page": 6,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 40
+    },
+    {
+      "page": 7,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 36
+    },
+    {
+      "page": 8,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 40
+    },
+    {
+      "page": 9,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 31
+    },
+    {
+      "page": 10,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 39
+    },
+    {
+      "page": 11,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 38
+    },
+    {
+      "page": 12,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 34
+    },
+    {
+      "page": 13,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 24
+    },
+    {
+      "page": 14,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 57
+    },
+    {
+      "page": 15,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 57
+    },
+    {
+      "page": 16,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 18
+    },
+    {
+      "page": 17,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 47
+    }
+  ],
+  "independently_verified_correct": false,
+  "reference_numbers": [],
+  "citations": {
+    "entries": 0,
+    "field_counts": {},
+    "partial_entries": 0,
+    "all_require_review": true,
+    "policy": "Preserve raw text; parse literal spans; keep unsupported syntax unresolved; no bibliographic existence verification."
+  },
+  "association_policy": "Explicit references propose a parent; ambiguity stays unresolved; all relations require review."
+}

@@ -1,0 +1,222 @@
+{
+  "body_size": 12.0,
+  "styles": [
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 16.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Metastable MnBi2Te4 enabled by magnetic-field-assisted synthesis"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 453,
+      "long_prose_lines": 359,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "examples": [
+        "Abhinna Rajbanshi1, G. M. Zills2, A. M. Donald3, Daniel Duong1, David Graf4, James",
+        "Hamlin3, M. W. Meisel3,5, I. Vekhter2, Williams A. Shelton2,6, and Rongying Jin1,*",
+        "(Corresponding author: Rongying Jin, Email: rjin@mailbox.sc.edu)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 57,
+      "long_prose_lines": 40,
+      "pages": [
+        1,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "examples": [
+        "1SmartState Center for Experimental Nanoscale Physics, Department of Physics and",
+        "Astronomy, University of South Carolina, Columbia, SC 29208, USA",
+        "2Department of Physics and Astronomy, Louisiana State University, Baton Rouge, LA"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 14.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "ABSTRACT"
+      ]
+    },
+    {
+      "font": "Aptos",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 23,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "examples": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 11.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 25,
+      "long_prose_lines": 21,
+      "pages": [
+        6,
+        7,
+        8,
+        12,
+        15,
+        16
+      ],
+      "examples": [
+        "FIG. 1. (a) Crystalline structure of MnBi2Te4. (b) X-ray diffraction patterns for zero-field-grown (black)",
+        "and field-grown MnBi2Te4 (red) single crystals, respectively. The inset shows a photo of a field-grown",
+        "MnBi2Te4 single crystal. (c) Zoom-in around the (0 0 6) peak."
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        10
+      ],
+      "examples": [
+        "C",
+        "T−θCW",
+        "1"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        10,
+        13
+      ],
+      "examples": [
+        "C = γT + 9Rn (",
+        ")",
+        "∫"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "θ",
+        "T",
+        "θE"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 18,
+      "long_prose_lines": 7,
+      "pages": [
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "examples": [
+        "Topological Materials, Nature 603, 41 (2022).",
+        "[6] X. L. Qi and S. C. Zhang, Topological Insulators and Superconductors, Rev. Mod.",
+        "[8] W. Tian, W. Yu, J. Shi, and Y. Wang, The Property, Preparation and Application of"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

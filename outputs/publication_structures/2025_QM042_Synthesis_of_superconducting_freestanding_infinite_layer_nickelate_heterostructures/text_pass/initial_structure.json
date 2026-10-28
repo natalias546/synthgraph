@@ -1,0 +1,2798 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2025_QM042_Synthesis_of_superconducting_freestanding_infinite_layer_nickelate_heterostructures.pdf",
+    "pages": 9,
+    "sha256": "90917ea877302fff2f6173a197c87724b0540adf2cfbacc2eea9b5b1597c894f",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 8.2,
+    "body_font_family": "HardingText-Regular"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 9,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": [
+          {
+            "id": "publication_title",
+            "type": "title",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "nature synthesis Synthesis of superconducting freestanding infinite-layer nickelate heterostructures on the millimetre scale",
+            "attributes": {
+              "method": "largest bold front-page typography",
+              "observation_ids": [
+                "p1_l1",
+                "p1_l3",
+                "p1_l4",
+                "p1_l5"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 9,
+        "children": [
+          {
+            "id": "unidentified_p1_1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2\nReceived: 26 February 2024 Yonghun Lee 1,2,8\n, Xin Wei 1,3,8 , Yijun Yu 1,2, Lopa Bhatt 4, Kyuho Lee1,3,6,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l2",
+                "p1_l6",
+                "p1_l7"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_2",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Berit H. Goodge 4,5,7, Shannon P. Harvey1,2, Bai Yang Wang1,3,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l8"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_3",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Accepted: 29 November 2024",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l9"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_4",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "David A. Muller 4,5, Lena F. Kourkoutis 4,5, Wei-Sheng Lee 1, Srinivas Raghu1,3",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l10"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_5",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Published online: 10 January 2025 & Harold Y. Hwang",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l11"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_6",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Check for updates\n1,2",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l12",
+                "p1_l13"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_7",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "The development of superconductivity in infinite-layer nickelates through\nhole-doping relies on the controlled synthesis of Ni in a high oxidation\nstate, followed by topotactic reduction to a very low oxidation state. So\nfar, superconductivity has been realized only in epitaxial thin films. Here\nwe integrate these techniques with heterostructures that include an\nepitaxial soluble buffer layer, enabling the release of freestanding (Nd,Sr)",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l14",
+                "p1_l15",
+                "p1_l16",
+                "p1_l17",
+                "p1_l18",
+                "p1_l19"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_furniture_p1_l55",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 573",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p1_l55"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p1_8",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "NiO2 heterostructures. Thereleasedheterostructuresexhibitcomparable\nstructural and electronic properties to those of optimized thin films,\nwith lateral dimensions ranging from millimetres to ~100 μm, depending\non the degree of strain released with respect to the initial substrate. The\nchanges in the superconducting transition temperature upon release\nof the heterostructure mirror those reported for variations in substrate\nand pressure, suggesting a common underlying response to strain in the\ninfinite-layer nickelate superconductivity. These freestanding structures\nwill facilitate a range of experimental studies without the constraints\nofsubstrates.\nIn recent years, the application of soft chemistry techniques to oxide\nthinfilmsandheterostructureshasopenedpathwaysforsynthesizing\nmetastable materials and establishing unique sample geometries.\nThediscoveryofsuperconductivityinhole-dopedinfinite-layernick-\nelatethinfilms1 utilizedtopotacticreductiontode-intercalateplanes\nof oxygen from a parent perovskite phase. This process was initially\ndemonstrated in bulk powders2,3 and subsequently in epitaxial thin\nfilms4,5,wherethesubstratewasessentialtostabilizingtheinfinite-layer\nstructure with uniform crystalline orientation. Another important\nexample has been the creation of freestanding single-crystal oxide\nfilms and heterostructures, either by dissolving the substrate itself6,7\nor by embedding a sacrificial layer in a heterostructure8,9.\nThisArticledescribesanattempttocombinethesetwosoftchem-\nistry techniques to create superconducting freestanding nickelate\nheterostructures. There are myriad motivations, fundamentally cen-\ntred around a greater degree of materials control, to further study\nand utilize this latest addition to the family of unconventional super-\nconductors. One longstanding issue is that superconductivity in the\ninfinite-layernickelatehasonlybeenobservedinthinfilms,notthebulk\nform10,11.Althoughexcitingprogresshasbeenmadeinthesynthesisof\n1Stanford Institute for Materials and Energy Sciences, SLAC National Accelerator Laboratory, Menlo Park, CA, USA. 2Department of Applied Physics,\nStanford University, Stanford, CA, USA. 3Department of Physics, Stanford University, Stanford, CA, USA. 4School of Applied and Engineering Physics,\nCornell University, Ithaca, NY, USA. 5Kavli Institute at Cornell for Nanoscale Science, Cornell University, Ithaca, NY, USA. 6Present address: Department\nof Physics, Massachusetts Institute of Technology, Cambridge, MA, USA. 7Present address: Max Planck Institute for Chemical Physics of Solids, Dresden,\nGermany. 8These authors contributed equally: Yonghun Lee, Xin Wei. e-mail: yonghunl@stanford.edu; xinwei98@stanford.edu; hyhwang@stanford.edu",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l20",
+                "p1_l21",
+                "p1_l22",
+                "p1_l23",
+                "p1_l24",
+                "p1_l25",
+                "p1_l26",
+                "p1_l27",
+                "p1_l28",
+                "p1_l29",
+                "p1_l30",
+                "p1_l31",
+                "p1_l32",
+                "p1_l33",
+                "p1_l34",
+                "p1_l35",
+                "p1_l36",
+                "p1_l37",
+                "p1_l38",
+                "p1_l39",
+                "p1_l40",
+                "p1_l41",
+                "p1_l42",
+                "p1_l43",
+                "p1_l44",
+                "p1_l45",
+                "p1_l46",
+                "p1_l47",
+                "p1_l48",
+                "p1_l49",
+                "p1_l50",
+                "p1_l51",
+                "p1_l52",
+                "p1_l53",
+                "p1_l54"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_furniture_p2_l1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p2_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p2_1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "a b c\nSrTiO 3 SrTiO 3",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l2",
+                "p2_l3"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_2",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Nd Sr NiO Nd Sr NiO\n0.8 0.2 3 CaH 0.8 0.2 2\n2\nreduction Liftoff\nSrTiO SrTiO\n3 3",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l4",
+                "p2_l5",
+                "p2_l6",
+                "p2_l7",
+                "p2_l8",
+                "p2_l9"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_3",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Sr 2 Ca 1 Al 2 O 6 Sr 2 Ca 1 Al 2 O 6",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l10"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_4",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "SrTiO\n3\nsubstrate SrTiO3\nsubstrate\ne f g\n0.4 nm\n[10] [10]\n[00]\n–0.4 nm\nFig.1|Schematicdiagramsillustratingthesynthesisoffreestandinginfinite-\nlayernickelateheterostructuresandrepresentativeimagesofthesampleat\nvarioussteps.a,TheSTO/Nd0.80Sr0.20NiO3/STO/SCAOheterostructuregrownon\nanSTOsubstrate.b,Topochemicalreduction,selectivelyreducingthenickelate\nlayer.c,Liftoff.PolymersupportsareusedthatcompriseasheetofPDMS\nattachedontopofspin-coatedPMMAtokeeptheSTO/Nd0.80Sr0.20NiO2/STO\nheterostructurestableduringtheliftoffprocess.d,TheSTO/Nd0.80Sr0.20NiO2/\nSTOheterostructure,transferredontoatargetsubstrateandwiththepolymer\nd\nPolymer support",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l11",
+                "p2_l12",
+                "p2_l13",
+                "p2_l14",
+                "p2_l15",
+                "p2_l16",
+                "p2_l17",
+                "p2_l18",
+                "p2_l19",
+                "p2_l20",
+                "p2_l21",
+                "p2_l22",
+                "p2_l23",
+                "p2_l24",
+                "p2_l25",
+                "p2_l26",
+                "p2_l27",
+                "p2_l28",
+                "p2_l29"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_5",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "SrTiO 3 SrTiO 3\nNd 0.8 Sr 0.2 NiO 2 R su e p m p o o v r e t Nd 0.8 Sr 0.2 NiO 2",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l30",
+                "p2_l31"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_6",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "SrTiO 3 SrTiO 3",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l32"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_7",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Target substrate",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l33"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_8",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Target substrate\nh\n0.4 nm\nMembrane\nAl dot\n–0.4 nm\nsupportsremoved.e,Reflectionhigh-energyelectrondiffractionpatternof\naSTObuffergrownonSCAO,recordedalongthe[100]azimuth.f,AFMimage\nofthesurfaceoftheSTO/SCAOtemplate.Scalebar,0.5μm.g,AFMimage\nofthesurfaceofthetopSTOcappinglayerforthereducedheterostructure\nschematicallyrepresentedinb.Scalebar,0.5μm.h,Opticalmicroscopeimage\nofanSTO/Nd0.80Sr0.20NiO2/STOfreestandingheterostructure(~2 mm × 2 mm)\ntransferredontoaSiwafer.Scalebar,500 μm.\nbulk single crystals12, current limitations in the degree of accessible\nhole-dopingleaveopenthequestionwhetherepitaxialstrain,orsome\nother factor, explains the underlying distinction. Recent studies sug-\ngest that a three-dimensional network of extended defects prevents\nbulksuperconductivity13.Substratevariationshaveindicatedthatthe\nsuperconducting transition temperature Tc can be varied by strain14,\nbut the sensitivity to the formation of extended defects under vary-\ning strain conditions makes it difficult to unravel the impact of strain\nversus disorder15. Nevertheless, high-pressure studies of thin films\nindicate that the scale of Tc could exceed 30 K (ref. 16). Freestanding\nheterostructures of this material would be valuable to address this\nissue, withpotential tovarythestrainstatewithinthesamesample17.\nIn this Article we report the routine fabrication of freestanding\ninfinite-layer nickelate heterostructures with 2-mm × 2-mm lateral\ndimensions,utilizingawater-solublepseudo-perovskite(Sr,Ca)3Al2O6\nsacrificial layer8. Their crystallinity and transport properties are on\npar with those on substrates, establishing freestanding infinite-layer\nnickelate heterostructures as a viable platform to probe and manipu-\nlatesuperconductingandotherphysicalproperties.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l34",
+                "p2_l35",
+                "p2_l36",
+                "p2_l37",
+                "p2_l38",
+                "p2_l39",
+                "p2_l40",
+                "p2_l41",
+                "p2_l42",
+                "p2_l43",
+                "p2_l44",
+                "p2_l45",
+                "p2_l46",
+                "p2_l47",
+                "p2_l48",
+                "p2_l49",
+                "p2_l50",
+                "p2_l51",
+                "p2_l52",
+                "p2_l53",
+                "p2_l54",
+                "p2_l55",
+                "p2_l56",
+                "p2_l57",
+                "p2_l58",
+                "p2_l59",
+                "p2_l60",
+                "p2_l61",
+                "p2_l62",
+                "p2_l63",
+                "p2_l64",
+                "p2_l65"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "heading_p2_l66",
+            "type": "section",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [
+              {
+                "id": "unidentified_p2_9",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Toobtainlarge-areafreestandingoxideheterostructuresutilizingthe\nepitaxialpseudo-perovskiteasawater-solublesacrificiallayer,theover-\nalllattice-matchingthroughouttheheterostructureofthesubstrate,\nthesacrificiallayerandthetargetfilmiscrucialfortheminimizationof\nstraingradients17,18.Withoutreasonablecontroloftheepitaxiallattice\nmismatch,thestrainenergyreleasedduringtheetchingofthesacrifi-\nciallayerispronetogeneratingcracksandwrinklesuponrelease.The\nsynthesisoftheinfinite-layernickelatefreestandingheterostructures\nposesanadditionalchallengeinthiscontextbecauseofthesubstantial\nexpansionofthein-planelatticeconstantofthenickelateduringtopo-\nchemicalreduction,aswellasthemetastablenatureoftheinfinite-layer\nnickelate phase.\nOne approach would be to first lift off the perovskite nickelate\nheterostructure and then perform topotactic reduction, given that\nthe infinite-layer nickelate phase is susceptible to re-oxidation and\ndegradation from ambient oxygen and water19,20. In addition, the\ndirect synthesis of released perovskite nickelate heterostructures\nenablesustofocusonlattice-matchingoftheperovskitealone,which\nhas been shown to considerably impact the overall crystallinity15.\nHowever,wefoundthat,despitetheabilitytosynthesizehigh-quality\ndoped freestanding Nd0.85Sr0.15NiO3, the subsequent topochemical\nreduction resulted in insulating transport properties and very low\ncrystallinity (Supplementary Fig. 1). Although this result may not\nbe definitive, we directed our efforts to first create the infinite-layer\nphase before release.\nSeveral considerations must be taken into account for this\napproach.First,thecriterionofminimizingepitaxialmismatchneeds\ntobecentredontheinfinite-layerNd1−xSrxNiO2,whichiswell-matched\nbytheSrTiO3 (STO)substrateandSr2Ca1Al2O6 (SCAO)sacrificiallayer21,\nso that the heterostructure liftoff proceeds with a modest release of\n~0.5% compressive strain3. However, the initially grown Nd1−xSrxNiO3\nhas a large epitaxial mismatch of ~2.6% tensile strain22. As a point of\ncomparison, we also studied freestanding heterostructures synthe-\nsized on NdGaO3 (NGO) substrates using a Sr0.5Ca2.5Al2O6 sacrificial\nlayer21, which better matches the perovskite Nd1−xSrxNiO3 but results\nin higher (~1.6%) compressive strain3 with respect to Nd1−xSrxNiO2.\nAnother consideration is to minimize the risk of degradation of the\ninfinite-layernickelatephaseduringheterostructurerelease,whenthe\nfilmisexposedtowater,oxygenandmildheating.Toaddressthis,STO\ncapping layers (8–20 unit cells (u.c.)) were grown epitaxially on both\nsides of the nickelate layer to encapsulate and protect the nickelate\nfromtheenvironment23.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l68",
+                    "p2_l69",
+                    "p2_l70",
+                    "p2_l71",
+                    "p2_l72",
+                    "p2_l73",
+                    "p2_l74",
+                    "p2_l75",
+                    "p2_l76",
+                    "p2_l77",
+                    "p2_l78",
+                    "p2_l79",
+                    "p2_l80",
+                    "p2_l81",
+                    "p2_l82",
+                    "p2_l83",
+                    "p2_l84",
+                    "p2_l85",
+                    "p2_l86",
+                    "p2_l87",
+                    "p2_l88",
+                    "p2_l89",
+                    "p2_l90",
+                    "p2_l91",
+                    "p2_l92",
+                    "p2_l93",
+                    "p2_l94",
+                    "p2_l95",
+                    "p2_l96",
+                    "p2_l97",
+                    "p2_l98",
+                    "p2_l99",
+                    "p2_l100",
+                    "p2_l101",
+                    "p2_l102",
+                    "p2_l103",
+                    "p2_l104",
+                    "p2_l105",
+                    "p2_l106",
+                    "p2_l107",
+                    "p2_l108",
+                    "p2_l109"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Synthesisstrategiesforfreestanding heterostructures",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p2_l66",
+                "p2_l67"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p2_l110",
+            "type": "section",
+            "page_start": 2,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p2_10",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "We started with the epitaxial growth of 10 u.c. of STO/22 u.c. of\nNd0.80Sr0.20NiO3/10 u.c. of STO/10 u.c. of SCAO on a TiO2-terminated\nSTO substrate, as shown in Fig. 1a. Figure 2a presents the X-ray dif-\nfraction (XRD) θ–2θ symmetric scan highlighting (00l) reflections\nof Nd0.80Sr0.20NiO3, surrounded by substantial Laue thickness oscilla-\ntions. The close match of the XRD scan with a kinematic simulation24\n(Methods)confirmsthattheSCAOandSTOlayersaresingle-crystalline",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l112",
+                    "p2_l113",
+                    "p2_l114",
+                    "p2_l115",
+                    "p2_l116",
+                    "p2_l117",
+                    "p2_l118"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_1",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "20 25 30 35 40 45 50\n8.5\n9.5\n9.0\n8.0\n8.5\n8.0\n7.5 STO (103)\n7.5\n2.4 2.5 2.6 2.7 2.4 2.5 2.6 2.7\n) 1–\nmn(\nQ\n]100[\n) 1–\nmn(\nQ\n]100[\na *\nb *\n]).u.a(\nytisnetni[gol\n*\n*\n0.7\n0.7\n(a.u.)]\nlog[intensity\n2θ (deg)\ne f\nNd0.80Sr0.20NiO2\n(103)\nNd0.80Sr0.20NiO3\n(103)\n103\nSTO (103)\n0.7\n(a.u.)]\n(a.u.)]\nlog[intensity\nlog[intensity\n103\n103",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l2",
+                    "p3_l3",
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6",
+                    "p3_l7",
+                    "p3_l8",
+                    "p3_l9",
+                    "p3_l10",
+                    "p3_l11",
+                    "p3_l12",
+                    "p3_l13",
+                    "p3_l14",
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17",
+                    "p3_l18",
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21",
+                    "p3_l22",
+                    "p3_l23",
+                    "p3_l24",
+                    "p3_l25",
+                    "p3_l26",
+                    "p3_l27",
+                    "p3_l28",
+                    "p3_l29",
+                    "p3_l30",
+                    "p3_l31",
+                    "p3_l32",
+                    "p3_l33",
+                    "p3_l34",
+                    "p3_l35",
+                    "p3_l36",
+                    "p3_l37",
+                    "p3_l38",
+                    "p3_l39",
+                    "p3_l40",
+                    "p3_l41",
+                    "p3_l42",
+                    "p3_l43",
+                    "p3_l44"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_2",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Q (nm–1) Q (nm–1)\n[100] [100]\nFig.2|Structuralcharacterizationofnickelateheterostructureson\nsubstratesandinfreestandingform. a,XRDθ–2θsymmetricscanand\ncorrespondingsimulationnearthe(002)Braggpeaksbasedonakinematic\nmodel24 ofa10-u.c.,3.905 ÅSTO/22-u.c.,3.710 ÅNd0.80Sr0.20NiO3/10-u.c.,3.905 Å\nSTO/10-u.c.,15.65 ÅSCAOheterostructuregrownonanSTOsubstrate.Asterisks\ndenotesubstratepeaks.b,Sampleinaaftertopochemicalreduction.The\nsimulationparametersarethesameasthoseina,exceptthattheparametersfor\nNd0.80Sr0.20NiO2 arechangedto21 u.c.,3.329 Å.c,XRDθ–2θsymmetricscansofa\nnickelateheterostructuregrownonanSTOsubstrate(differentsamplebutthe\nsamecompositionasinb),andthereleasedheterostructuretransferredontoa\n55 60 40 45 50 55 60\n8.5\n9.5\n9.0\n8.0\n8.5\n8.0\n7.5\n7.5\n2.4 2.5 2.6 2.7 2.8 2.4 2.5 2.6 2.7 2.8\n) 1–\nmn(\nQ\n]100[\n) 1–\nmn(\nQ\n]100[\nPerovskite\nSimulation\nc *\nOn STO\nFreestanding",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l45",
+                    "p3_l46",
+                    "p3_l47",
+                    "p3_l48",
+                    "p3_l49",
+                    "p3_l50",
+                    "p3_l51",
+                    "p3_l52",
+                    "p3_l53",
+                    "p3_l54",
+                    "p3_l55",
+                    "p3_l56",
+                    "p3_l57",
+                    "p3_l58",
+                    "p3_l59",
+                    "p3_l60",
+                    "p3_l61",
+                    "p3_l62",
+                    "p3_l63",
+                    "p3_l64",
+                    "p3_l65",
+                    "p3_l66",
+                    "p3_l67",
+                    "p3_l68",
+                    "p3_l69",
+                    "p3_l70",
+                    "p3_l71",
+                    "p3_l72",
+                    "p3_l73",
+                    "p3_l74",
+                    "p3_l75",
+                    "p3_l76",
+                    "p3_l77",
+                    "p3_l78",
+                    "p3_l79"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_3",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Infinite-layer d * On NGO\nSimulation Freestanding\n2θ (deg)\n104\n1.3\n(a.u.)]\n(a.u.)]\nlog[intensity\nlog[intensity\n103\n1.3\ng h\nNd0.85Sr0.15NiO2\nNd0.85Sr0.15NiO3 (103)\n(103)\nS0.5C2.5AO (103)\nNGO (103)pc\nSTO (103)\nS0.5C2.5AO\n(103)\nNGO (103)pc\nSTO (103)\n(a.u.)]\nlog[intensity\n104\n1.3",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l80",
+                    "p3_l81",
+                    "p3_l82",
+                    "p3_l83",
+                    "p3_l84",
+                    "p3_l85",
+                    "p3_l86",
+                    "p3_l87",
+                    "p3_l88",
+                    "p3_l89",
+                    "p3_l90",
+                    "p3_l91",
+                    "p3_l92",
+                    "p3_l93",
+                    "p3_l94",
+                    "p3_l95",
+                    "p3_l96",
+                    "p3_l97",
+                    "p3_l98",
+                    "p3_l99",
+                    "p3_l100",
+                    "p3_l101",
+                    "p3_l102",
+                    "p3_l103",
+                    "p3_l104",
+                    "p3_l105"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_4",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Q (nm–1) Q (nm–1)\n[100] [100]\nSiwafer.Dashedlinesmarkthepeakpositionsforthefilmandthefreestanding\nheterostructure.d,XRDθ–2θsymmetricscanofan8-u.c.STO/14-u.c.\nNd0.85Sr0.15NiO2/8-u.c.STO/15-u.c.Sr0.5Ca2.5Al2O6 grownonanNGOsubstrate,and\ninreleasedform.e,f,RSMof~22-u.c.Nd0.80Sr0.20NiO3 and~21-u.c.Nd0.80Sr0.20NiO2,\nsandwichedbySTOandgrownon10-u.c.SCAO/STOsubstrate.g,h,RSMof~15-\nu.c.Nd0.85Sr0.15NiO3 and~14-u.c.Nd0.85Sr0.15NiO2,sandwichedbySTOandgrownon\na15-u.c.Sr0.5Ca2.5Al2O6/NGOsubstrate.Thearrowsmarkthecentrepositionsof\nthe(103)reflectionsofrespectivelayersintheheterostructure.S0.5C2.5AOrefers\ntoSr0.5Ca2.5Al2O6.\nand grown to the desired thicknesses. Reciprocal space mapping\n(RSM) near the STO(103) reflection in Fig. 2e confirms that the entire\nSTO/Nd0.80Sr0.20NiO3/STO/SCAOheterostructureiscoherentlystrained\nto the STO substrate.\nA prerequisite for the realization of superconductivity in the\ninfinite-layernickelatephaseisdetailedcontrolofthecationstoichio-\nmetryinitsprecursorperovskitephase19.Owingtothelargeepitaxial\nmismatch and the low thermodynamic stability associated with the\nhighoxidationstateofNiintheperovskite,theepitaxyofNd1−xSrxNiO3\nontheSTOsubstrateishighlysusceptibletotheformationofextended\ndefects, most prominently identified as Ruddlesden–Popper-type\nvertical stacking faults19,25,26. On that account, two metrics obtained\nfrom the XRD θ–2θ symmetric scan in Fig. 2a—the strong (001) peak\nintensity and the extracted c-axis lattice constant of 3.710 ± 0.005 Å\nfrom the simulation (reported c-axis lattice constants are generally\nlarger1,19,26,attributedtotheinclusionofverticalstackingfaults)—point\ntothelowdensityofextendeddefects,andhencewell-controlledcation\nstoichiometry,inNd0.80Sr0.20NiO3 grownon10-u.c.STO/10-u.c.SCAO/\nSTO substrate (from here on referred to as the STO/SCAO template).\nAnother challenge with the epitaxy of Nd1−xSrxNiO3 specific to this\nstudy is the sensitivity we observed with respect to the underlying\nSTO/SCAO template. An atomically smooth step-and-terrace surface\nwith no visible surface reconstructions is critical, as shown in the\natomic force microscopy (AFM) image in Fig. 1f and the reflection\nhigh-energyelectrondiffractionpatterninFig.1e(alsoSupplementary\nFig. 2). Nd0.80Sr0.20NiO3 grown in nominally the same condition on a\nsub-optimal (typically partial layer completion) STO/SCAO template\nsuffersfromtheinclusionofamuchlargerdensityofextendeddefects\n(SupplementaryFigs.3and4).\nHaving established the growth of highly crystalline heterostruc-\ntures, we employed calcium hydride for topochemical reduction\n(Fig.1b),asusedinmanypreviousstudies1,27.TheXRDθ–2θsymmetric\nscan of the reduced heterostructure shown in Fig. 2b demonstrates\nthe effectiveness of this technique for films grown on the STO/SCAO\ntemplate. The rightward shift of the Nd0.80Sr0.20NiO3 (00l) reflections\nsignifiesacollapseofthec-axislatticebytheselectiveremovalofapical\noxygenswithminimalfilmdecomposition,whichleadstoacoherently\nc-axis-oriented infinite-layer phase. The XRD simulation extracts a",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l106",
+                    "p3_l107",
+                    "p3_l108",
+                    "p3_l109",
+                    "p3_l110",
+                    "p3_l111",
+                    "p3_l112",
+                    "p3_l113",
+                    "p3_l114",
+                    "p3_l115",
+                    "p3_l116",
+                    "p3_l117",
+                    "p3_l118",
+                    "p3_l119",
+                    "p3_l120",
+                    "p3_l121",
+                    "p3_l122",
+                    "p3_l123",
+                    "p3_l124",
+                    "p3_l125",
+                    "p3_l126",
+                    "p3_l127",
+                    "p3_l128",
+                    "p3_l129",
+                    "p3_l130",
+                    "p3_l131",
+                    "p3_l132",
+                    "p3_l133",
+                    "p3_l134",
+                    "p3_l135",
+                    "p3_l136",
+                    "p3_l137",
+                    "p3_l138",
+                    "p3_l139",
+                    "p3_l140",
+                    "p3_l141",
+                    "p3_l142",
+                    "p3_l143",
+                    "p3_l144",
+                    "p3_l145",
+                    "p3_l146",
+                    "p3_l147",
+                    "p3_l148",
+                    "p3_l149",
+                    "p3_l150",
+                    "p3_l151",
+                    "p3_l152",
+                    "p3_l153",
+                    "p3_l154"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_1",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "SrTiO cap\n3\nNd Sr NiO\n0.8 0.2 2\nSrTiO buffer\n3\nc\n5 nm\nb\n3 nm\na\na\nb c\nConcentration\nTi Ni Nd (a.u.)\n0 1\nSim. ADF Ti-L 2,3 Nd-M 4,5",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l2",
+                    "p4_l3",
+                    "p4_l4",
+                    "p4_l5",
+                    "p4_l6",
+                    "p4_l7",
+                    "p4_l8",
+                    "p4_l9",
+                    "p4_l10",
+                    "p4_l11",
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15",
+                    "p4_l16",
+                    "p4_l17",
+                    "p4_l18"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_2",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Top\ninterface\nc\nSim. ADF Ti-L Nd-M\n2,3 4,5\n)mn(\necnatsiD\n)mn(\necnatsiD\nBottom\ninterface\nd\n0.5 nm\nε xx 110+ ε xx 110 (%)\nFig.3|STEMimagesofanSTO/Nd0.8Sr0.2NiO2/STOheterostructuretransferred\nontoaSiNx TEMwindow.a,Cross-sectionalHAADFSTEMimage.Yellow\ndashedlinesoutlineregionsofRuddlesden–Popperfaults.b,Plan-viewHAADF\nSTEMimage.c,(±110)compressivestrain(ε)mapoftheplane-viewimagein\nb,highlightingtheRuddlesden–Popperfaults.d,Cross-sectionalADFimage\n7.0\n0.5 nm\n0\nacquirednearthetopandbottominterfaceofSTOandNd0.8Sr0.2NiO2 (leftmost\ncolumn),alongwithcorrespondingelementalelectronenergylossspectroscopy\nmapsofTi-L2,3 andNd-M4,5 (middlecolumns),withtheirintensityprofilesinthe\nrightmostplots(Ti,green;Ni,blue;Nd,red).\nc-axis lattice constant of 3.329 ± 0.005 Å and a nickelate thickness\nof ~21 u.c. This perovskite-to-infinite-layer conversion ratio close to\nunitysuggestsanearlycompletetransitiontotheinfinite-layerphase\nwith minimal decomposition. The RSM in Fig. 2f further shows that\nthe heterostructure, post-reduction, remains epitaxially strained to\nthe STO substrate. The AFM image of the reduced heterostructure\nin Fig. 1g shows a step-and-terrace morphology, consistent with the\nlayer-by-layergrowthmodeoftheprecursorperovskiteandthepres-\nervationof an atomicallyflatsurfaceafterthereductionprocess.\nTherobustnessofthesacrificiallayerunderthestronglyreducing\nenvironment is noteworthy, and of course central to this approach to\nsynthesizingfreestandingsuperconductingnickelates.TheXRDsimu-\nlation for the reduced heterostructure in Fig. 2b was performed with\nthe same lattice and thickness parameters of the SCAO as before the\nreduction.TheclosecorrespondencewiththeXRDscanthussupports\nourschematicassumptioninFig.1b,inwhichtheregionoftopochemi-\ncalreductionisconfinedtothenickelatelayer.Importantly,theSCAO\nretains itssolubilityinwater(SupplementaryFig.5).\nBy dissolving the SCAO sacrificial layer in water with polymer\nsupports in place (Fig. 1c and Methods), we obtained a millimetre-\nscale, uniformly continuous STO/Nd0.80Sr0.20NiO2/STO freestanding\nheterostructure, as shown in the optical microscope image in Fig. 1h.\nThesizeanduniformityhighlighttheimportanceofthelattice-matched\nheterostructureforcoherentreleaseoverlargeareas.Bycontrast,STO/\nNd0.85Sr0.15NiO2/STOheterostructuresreleasedfromanNGOsubstrate\n(with a greater strain mismatch of ~1.6%) exhibit cracks and wrinkles,\nwhich limit the size of continuous segments to below ~200 μm (Sup-\nplementaryFig.6).\nTo examine the structural integrity of the infinite-layer nick-\nelate phase detached from the substrate, we carried out XRD θ–2θ\nsymmetric scans on a freestanding STO/Nd0.80Sr0.20NiO2/STO hetero-\nstructure transferred onto Si wafer covered with a 300-nm-thick SiO2\nsurface layer (Fig. 1d). In Fig. 2c, two XRD peaks are visible, one from\nthe(002)reflectionofSTOandanotherfromNd0.80Sr0.20NiO2,atapeak\npositionsimilartothatoftheparentthin-filmheterostructurebefore\nrelease. A side-by-side comparison with the XRD scan of the pristine\nfilmrevealsthataseriesofsmallshoulderpeaksconnectingSTO(002)\nandNd0.80Sr0.20NiO2 (002)reflectionstracktheLaueoscillationsgener-\natedbythesingle-crystallinephasesoftheheterostructure.Although\nthepeakpositionofNd0.80Sr0.20NiO2 (002)shiftsrightwardslightly,the\nchange in the c-axis lattice constant is negligible—this is as expected,\nbecause not only is the bulk in-plane lattice constant of Nd1−xSrxNiO2\nclosetothatofSTO3,butalsothefreestandingnickelateisstillpartially\nstrained by the surrounding STO layers. The grazing incident XRD\nscaninSupplementaryFig.7a,bfurthershowsthatthein-planelattice\nconstantofthefreestandingheterostructureisclosetothatofSTO.\nOntheotherhand,thereleaseof8-u.c.STO/14-u.c.Nd0.85Sr0.15NiO2/\n8-u.c. STO from the NGO substrate exhibits a more substantial c-axis\nrelaxation of 0.75 ± 0.30%, from 3.323 ± 0.005 Å to 3.298 ± 0.01 Å\n(Fig. 2d), due to the release from a larger epitaxial compressive\nstrain of ~1.6% (ref. 3) up to the post-reduction stage, as shown in the\nRSM scans in Fig. 2g,h. (Supplementary Fig. 8 presents the XRD",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l19",
+                    "p4_l20",
+                    "p4_l21",
+                    "p4_l22",
+                    "p4_l23",
+                    "p4_l24",
+                    "p4_l25",
+                    "p4_l26",
+                    "p4_l27",
+                    "p4_l28",
+                    "p4_l29",
+                    "p4_l30",
+                    "p4_l31",
+                    "p4_l32",
+                    "p4_l33",
+                    "p4_l34",
+                    "p4_l35",
+                    "p4_l36",
+                    "p4_l37",
+                    "p4_l38",
+                    "p4_l39",
+                    "p4_l40",
+                    "p4_l41",
+                    "p4_l42",
+                    "p4_l43",
+                    "p4_l44",
+                    "p4_l45",
+                    "p4_l46",
+                    "p4_l47",
+                    "p4_l48",
+                    "p4_l49",
+                    "p4_l50",
+                    "p4_l51",
+                    "p4_l52",
+                    "p4_l53",
+                    "p4_l54",
+                    "p4_l55",
+                    "p4_l56",
+                    "p4_l57",
+                    "p4_l58",
+                    "p4_l59",
+                    "p4_l60",
+                    "p4_l61",
+                    "p4_l62",
+                    "p4_l63",
+                    "p4_l64",
+                    "p4_l65",
+                    "p4_l66",
+                    "p4_l67",
+                    "p4_l68",
+                    "p4_l69",
+                    "p4_l70",
+                    "p4_l71",
+                    "p4_l72",
+                    "p4_l73",
+                    "p4_l74",
+                    "p4_l75",
+                    "p4_l76",
+                    "p4_l77",
+                    "p4_l78",
+                    "p4_l79",
+                    "p4_l80",
+                    "p4_l81",
+                    "p4_l82",
+                    "p4_l83",
+                    "p4_l84",
+                    "p4_l85",
+                    "p4_l86",
+                    "p4_l87",
+                    "p4_l88",
+                    "p4_l89",
+                    "p4_l90",
+                    "p4_l91",
+                    "p4_l92",
+                    "p4_l93",
+                    "p4_l94",
+                    "p4_l95",
+                    "p4_l96"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "30\n28\n26\n24\n1 mm\n22\n20\n)Vµ(\n)V(eR p\n1.6\n1.4\n1.2\n1.0\n0.8\n0.6\n0.4\n0 2 4 6 8 10 12",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12",
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16",
+                    "p5_l17",
+                    "p5_l18"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_2",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "T (K)\nIm(Vp)\na\n0.5",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_3",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "On STO",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l23"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "heading_p5_l24",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p5_4",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "0.3\n0.10\n0.2\n0.05\n0.1 0\n10 15 20",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l25",
+                        "p5_l26",
+                        "p5_l27",
+                        "p5_l28",
+                        "p5_l29",
+                        "p5_l30"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l31",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_5",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "0\n0 50 100 150 200 250 300",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l32",
+                            "p5_l33"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T (K)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 5.5,
+                      "observation_ids": [
+                        "p5_l31"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l34",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_6",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "c\n)mc\nΩm(\nρ )mc\nΩm(\nρ\nFig.4|Electricalandmagneticcharacteristicsoftheinfinite-layernickelate\nheterostructuresonsubstratesandintheirfreestandingform. a,ρ(T)plotsof\nanSTO/Nd0.80Sr0.20NiO2/STOheterostructuregrownontheSTOsubstratebefore\nandaftertransferontoaSiwafer.Theinsetshowsρ(T)nearthesuperconducting\ntransition.b,ρ(T)plotsoftheSTO/Nd0.80Sr0.20NiO2/STOfreestanding\nheterostructureina,measuredunderperpendicularmagneticfieldsof0,\n(µV)\nb 0.12\n0.10\n0.08\n0.06 14 T\n0 T\n0.04\n0.02\n0\n0 5 10 15 20",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l35",
+                            "p5_l36",
+                            "p5_l37",
+                            "p5_l38",
+                            "p5_l39",
+                            "p5_l40",
+                            "p5_l41",
+                            "p5_l42",
+                            "p5_l43",
+                            "p5_l44",
+                            "p5_l45",
+                            "p5_l46",
+                            "p5_l47",
+                            "p5_l48",
+                            "p5_l49",
+                            "p5_l50",
+                            "p5_l51",
+                            "p5_l52",
+                            "p5_l53",
+                            "p5_l54",
+                            "p5_l55",
+                            "p5_l56"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T (K)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 6.5,
+                      "observation_ids": [
+                        "p5_l34"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l57",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_7",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "d\n0.5\n0.4\n0.3\n0.2",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l58",
+                            "p5_l59",
+                            "p5_l60",
+                            "p5_l61",
+                            "p5_l62"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T (K)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 6.5,
+                      "observation_ids": [
+                        "p5_l57"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l63",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "title": "On NGO",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 5.5,
+                      "observation_ids": [
+                        "p5_l63"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "0.4 Freestanding",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 5.5,
+                  "observation_ids": [
+                    "p5_l24"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p5_l64",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p5_8",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "0\n0 50 100 150 200 250 300",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l65",
+                        "p5_l66"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l67",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_9",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": ")mc\nΩm(\nρ\n)mc\nΩm(\nρ\n50 µm\n1,2,3,4,6,8,10,12and14 T.c,Temperature-dependentrealandimaginary\ncomponentofa.c.voltagemeasuredinthepickupcoilofthemutual-inductance\nmeasurementofanSTO/Nd0.80Sr0.20NiO2/STOheterostructuretransferredonto\naSiwafer(inset).d,ρ(T)ofanSTO/Nd0.85Sr0.15NiO2/STOheterostructuregrown\nonanNGOsubstrate,beforeandaftertransferontoaSiwafer.Theinsetshowsan\nopticalmicroscopeimageofthefreestandingdevicegeometry.\ncharacterization of Nd0.85Sr0.15NiO3 and Nd0.85Sr0.15NiO2 thin films\ngrownonSTO/Sr0.5Ca2.5Al2O6/NGOsubstrate,SupplementaryFig.9the\nXRD simulations of the scans in Fig. 2d, and Supplementary Fig. 7c\nthe grazing incident XRD scan of the freestanding heterostructure\nsampleinFig. 2d.)",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l68",
+                            "p5_l69",
+                            "p5_l70",
+                            "p5_l71",
+                            "p5_l72",
+                            "p5_l73",
+                            "p5_l74",
+                            "p5_l75",
+                            "p5_l76",
+                            "p5_l77",
+                            "p5_l78",
+                            "p5_l79",
+                            "p5_l80",
+                            "p5_l81",
+                            "p5_l82",
+                            "p5_l83",
+                            "p5_l84",
+                            "p5_l85"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T (K)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 6.5,
+                      "observation_ids": [
+                        "p5_l67"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "0.1 Freestanding",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 5.5,
+                  "observation_ids": [
+                    "p5_l64"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Growth,topochemicalreductionand heterostructurerelease",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p2_l110",
+                "p2_l111"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p2_furniture_p2_l119",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 574",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p2_l119"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p3_furniture_p3_l1",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p3_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p3_furniture_p3_l155",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 575",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p3_l155"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p4_furniture_p4_l1",
+            "type": "custom",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p4_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p4_furniture_p4_l97",
+            "type": "custom",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 576",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p4_l97"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p5_furniture_p5_l1",
+            "type": "custom",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p5_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p5_l86",
+            "type": "section",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p5_10",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "Figure 3a–d presents high-angle annular dark-field (HAADF) scan-\nning transmission electron microscopy (STEM) images of an STO/\nNd0.8Sr0.2NiO2/STO heterostructure transferred onto a silicon nitride\n(SiNx) TEM window. Compared to previous studies of Nd1 − xSrxNiO2\nthin films grown on STO substrates19,25, the cross-sectional STEM\nimage in Fig. 3a shows a highly crystalline structure with a surpris-\ninglylowdensityofextendeddefects,consistentwithwhatisinferred\nfrom the XRD characterization presented above. The ADF image and\nelemental electron energy loss spectroscopy mapping in Fig. 3d\nshow sharp interfaces with limited signs of interdiffusion beyond the\nsingle-unit-cellreconstruction28,29 acrossthetwointerfacesofSTOand\nNd0.80Sr0.20NiO2.Crucially,theoverallhomogeneityoftheSTEMimage,\nalongwiththemacroscopicuniformityobservedintheopticalmicro-\nscopeimage(Fig.1h),indicatestherobustnessoftheheterostructure,\nparticularly the nickelate layer, after release from the substrate. The\nfreestandinggeometryitselfprovidesanattractiveanddirectsample\nfor plan-view imaging, as shown in the HAADF STEM image in Fig. 3b.\nTogether with the strain mapping shown in Fig. 3c highlighting the\nRuddlesden–Popper faults (Methods), the overall structure of the\nextended defects can be visualized and shows that the domains of\nfaults are sparse and isolated from each other.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l87",
+                    "p5_l88",
+                    "p5_l89",
+                    "p5_l90",
+                    "p5_l91",
+                    "p5_l92",
+                    "p5_l93",
+                    "p5_l94",
+                    "p5_l95",
+                    "p5_l96",
+                    "p5_l97",
+                    "p5_l98",
+                    "p5_l99",
+                    "p5_l100",
+                    "p5_l101",
+                    "p5_l102",
+                    "p5_l103",
+                    "p5_l104",
+                    "p5_l105",
+                    "p5_l106",
+                    "p5_l107"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Scanningtransmissionelectronmicroscopy",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p5_l86"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p5_l108",
+            "type": "section",
+            "page_start": 5,
+            "page_end": 6,
+            "children": [
+              {
+                "id": "unidentified_p5_11",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "The temperature-dependent resistivity ρ(T) of the reduced\nNd0.80Sr0.20NiO2 thin-filmheterostructureisshowninFig.4a,exhibiting\ntransport signatures characteristic of optimally doped samples with\nhigh crystallinity1,15,27: reasonable metallicity with a residual resistiv-\nityρ(20 K)of0.10 mΩ cm,aresidualresistivityratioρ(290 K)/ρ(20 K)\nof4.2,andasuperconductingtransitionatTc,onset = 17.3 K(definedasthe\ntemperatureatwhichthesecondderivativeofρ(T)becomesnegative)\nthathitsthemeasurementnoiseflooratTc,0 = 12.0 K.Animportantfind-\ning of this study is the very close similarity of the ρ(T) of the released\nSTO/Nd0.80Sr0.20NiO2/STO heterostructure (Fig. 4a) with only a slight\ndecrease in Tc,onset = 17.0 K and Tc,0 = 11.7 K.\nOverall, little to no sign of macroscopic degradation is found in\nthe electrical properties of the freestanding heterostructures, com-\nplementing the structural findings via XRD and STEM. Furthermore,\ntheoveralldecreaseofTc by~0.3 Kafterliftoffisnotconcomitantwith\nabroadeningofthetransition.Wealsoperformedmagnetotransport\nmeasurementsontheSTO/Nd0.80Sr0.20NiO2/STOfreestandinghetero-\nstructure.Figure4bshowsaseriesofρ(T)curvestakenwithincreasing\nperpendicularfieldstrengthsupto14 T.Althoughthenormalstateρ(T)",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l110",
+                    "p5_l111",
+                    "p5_l112",
+                    "p5_l113",
+                    "p5_l114",
+                    "p5_l115",
+                    "p5_l116",
+                    "p5_l117",
+                    "p5_l118",
+                    "p5_l119",
+                    "p5_l120",
+                    "p5_l121",
+                    "p5_l122",
+                    "p5_l123",
+                    "p5_l124",
+                    "p5_l125",
+                    "p5_l126",
+                    "p5_l127",
+                    "p5_l128"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "NGO\n25\n20\n15\n10\n3.85 3.87 3.89\na (Å)\n)K(\nT\ntesno,c\n3.91\nLSAT STO\nFig.5|Comparisonofthepresentresultswithpreviousreportson(Pror\nNd)1−xSrxNiO2 thinfilms.Tc,onset versusthea-axislatticeconstantof(Ndor\nPr)1−xSrxNiO2 inthin-filmandfreestandingforms.Inthecaseofhigh-pressure\ndata16,thelatticeconstantsareassumedtofollowthatoftheSTOsubstrate,\nwhichisassumedtoundergoisotropicvolumecontractionthrough\nK = P/(ΔV/V0),whereKistheSTObulkmodulus31 andV0 istheinitialvolumeof\ntheSTOsubstrate,(3.905 Å)3.Bluedottedlinesserveasguidesforthechanges\ninTc andthea-axislatticeconstantbeforeandaftertheliftoffofNd1–xSrxNiO2\nNd Sr NiO thin film on NGO (this work)\n0.85 0.15 2\nNd Sr NiO freestanding from NGO (this work)\n0.85 0.15 2\nNd Sr NiO thin film on STO (this work)\n0.8 0.2 2\nNd Sr NiO freestanding from STO (this work)\n0.8 0.2 2\nNd Sr NiO thin film (ref. 15)\n0.85 0.15 2\nNd Sr NiO thin film (ref. 27)\n0.8 0.2 2\nPr Sr NiO thin film (ref. 14)\n0.8 0.2 2\nPr Sr NiO hydrostatic pressure (ref. 16)\n0.82 0.18 2\nheterostructures,whilethereddottedlinehighlightsdifferencesinPr0.8Sr0.2NiO2\nfilmsgrownondifferentepitaxialsubstrates,asreportedinref.14.Thesymbols\nrepresenttheaveragevalueacrosssixtosevendifferentsamplesofeachtype,as\ndefinedbytherespectivesymbolsinthelegend.Verticalerrorbarsindicatethe\nextremevaluesofTc withineachsamplepool.Horizontalerrorbarsarederived\nfromthefull-widthathalf-maximumoftheVoigtpeakfitfortheNd1−xSrxNiO2\n(200)reflectionobtainedfromgrazingincidentXRDofthefreestandingsamples\ninSupplementaryFig.7.\naboveTc exhibitsanegligiblefielddependence,onenteringthesuper-\nconductingstate,themagnetoresistivetransitionsaresuppressedand\nbroadened, as foundinthinfilms.\nThe large area of the STO/Nd0.80Sr0.20NiO2/STO freestanding\nheterostructures released from the STO substrate, such as the one\nin the inset of Fig. 4c (which is actually a sample cut in half to fit the\nmeasurement), enables magnetic measurements with a two-coil\nmutual-inductance probe optimized for the thin-film geometry30—in\nparticular the diamagnetic response in the superconducting state.\nFigure 4c shows the temperature dependence of the real (Re(Vp)) and\nimaginary(Im(Vp))componentsofthea.c.voltagesignalVp,measured\nfromthepickupcoilontheothersideoftheheterostructure/Siwafer\nfrom the coaxial drive coil (Methods). Im(Vp) exhibits a dissipation\npeak, the width of which is a measure of the superconducting transi-\ntiononthescaleofthedimensions(millimetres)probedbythecoil30.\nTherelativelysharppeakwithawidthof~2 Kissimilartothatobserved\nin optimized films, consistent with what is inferred from the resistive\ntransition (Fig. 4a). Re(Vp) represents the diamagnetic screening of\nthemagneticfieldfromthedrivecoil,whichincreaseswithdecreasing\ntemperaturewithgrowthofthesuperfluiddensity.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10",
+                    "p6_l11",
+                    "p6_l12",
+                    "p6_l13",
+                    "p6_l14",
+                    "p6_l15",
+                    "p6_l16",
+                    "p6_l17",
+                    "p6_l18",
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24",
+                    "p6_l25",
+                    "p6_l26",
+                    "p6_l27",
+                    "p6_l28",
+                    "p6_l29",
+                    "p6_l30",
+                    "p6_l31",
+                    "p6_l32",
+                    "p6_l33",
+                    "p6_l34",
+                    "p6_l35",
+                    "p6_l36",
+                    "p6_l37",
+                    "p6_l38",
+                    "p6_l39",
+                    "p6_l40",
+                    "p6_l41",
+                    "p6_l42",
+                    "p6_l43",
+                    "p6_l44",
+                    "p6_l45",
+                    "p6_l46",
+                    "p6_l47",
+                    "p6_l48",
+                    "p6_l49",
+                    "p6_l50",
+                    "p6_l51",
+                    "p6_l52",
+                    "p6_l53",
+                    "p6_l54",
+                    "p6_l55",
+                    "p6_l56",
+                    "p6_l57",
+                    "p6_l58",
+                    "p6_l59",
+                    "p6_l60",
+                    "p6_l61",
+                    "p6_l62",
+                    "p6_l63",
+                    "p6_l64",
+                    "p6_l65"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Superconductivityinfreestandinginfinite-layer nickelates",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p5_l108",
+                "p5_l109"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p5_furniture_p5_l129",
+            "type": "custom",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 577",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p5_l129"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p6_furniture_p6_l1",
+            "type": "custom",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p6_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p6_l66",
+            "type": "section",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [
+              {
+                "id": "unidentified_p6_2",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "AmorepronounceddecreaseinTc isfoundinthefreestandinghetero-\nstructure released from the NGO substrate. The ρ(T) of the precursor\nNd0.85Sr0.15NiO2 film in Fig. 4d shows that Tc,onset (Tc,0) reaches as high\nas 25.7 K (20.7 K). This high value is rather noteworthy in itself. This is\nalsoconsistentwiththeTc increaseattributedtocompressivestrainfor\nPr0.8Sr0.2NiO2 inducedbysubstratevariations14.Theρ(T)ofthereleased\nheterostructure (the measurement geometry shown in the inset of\nFig.4d),however,showsthatTc,onset (Tc,0)reducesto18.0 K(11.9 K)—an\n~40% drop, substantially larger than the case of release from the STO\nsubstrate.\nTheseobservationsmotivatedustocompareourcurrentresults\nwith previous reports on (Pr or Nd)1−xSrxNiO2 thin films (Fig. 5), focus-\ning on the possible correlation of Tc and strain, previously mediated\nby varying the substrate-induced epitaxial strain14,15 and by pressure\nappliedtothin-filmsamples16.(Notethatforthehigh-pressureresults16,\nthenickelatein-planelatticeconstantsareassumedtofollowthoseof\ntheSTOsubstrate,compressingunderisotropicpressureviathebulk\nSTOresponse31,andSupplementaryFig.10presentstheTc dependence\non the cell volume.) It should again be emphasized that the degree\nof disorder probably varies across the samples in this comparison,\nas discussed above, as well as the specific hole-doping values (here\nchosen in the vicinity of optimal doping). Despite these caveats, a\nrather uniform rate of increase in Tc is found with decreasing in-plane\nlattice constant, indicating that Tc is increasing with larger electronic\nbandwidth. The microscopic origin of this trend, and the ultimate\nlimit on superconductivity that is implied, is an important question\nforfurtherinvestigation.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l67",
+                    "p6_l68",
+                    "p6_l69",
+                    "p6_l70",
+                    "p6_l71",
+                    "p6_l72",
+                    "p6_l73",
+                    "p6_l74",
+                    "p6_l75",
+                    "p6_l76",
+                    "p6_l77",
+                    "p6_l78",
+                    "p6_l79",
+                    "p6_l80",
+                    "p6_l81",
+                    "p6_l82",
+                    "p6_l83",
+                    "p6_l84",
+                    "p6_l85",
+                    "p6_l86",
+                    "p6_l87",
+                    "p6_l88",
+                    "p6_l89",
+                    "p6_l90",
+                    "p6_l91",
+                    "p6_l92",
+                    "p6_l93"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "StrainresponseofTc intheinfinite-layernickelate",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p6_l66"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p6_l94",
+            "type": "section",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [
+              {
+                "id": "unidentified_p6_3",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "Insummary,wehavedemonstratedthesynthesisofhighlycrystalline\nandsuperconductinginfinite-layernickelatefreestandingheterostruc-\ntures.Forthecloselylattice-matchedheterostructuresgrownonSTO,\nmillimetre-scalecontinuoussamplescouldbereproduciblygrown.For\nthe heterostructures grown under substantial compressive strain on\nNGO,crackformationduringreleaselimitedtypicalfragmentstothe\n~0.1-mmscale.Inbothcases,theelectricalpropertieswerecomparable\nto those of optimal thin-film samples.\nOpportunitiesaboundforfutureexperimentsusingfreestanding\ninfinite-layer nickelates. To further investigate their strain response,\nanextstepistostudyandestablishtheirmechanicalproperties,such\nasfracturestrainlimits32.Ifawideregimeofelasticstrainisfoundasin\nsome other oxide systems17,33, variations in the superconducting and\nnormalstatepropertiescanbeprobedundertensilestrain.Establish-\ning whether Tc is varying due to an overall change in bandwidth, or\nviaspecificchannelssuchasNd5d–Ni3dhybridizationor O2p–Ni 3d\nhybridization, would be particularly insightful34–36. Furthermore, the\nfreestanding geometry will enable a range of experiments that are\ncurrently technicallylimitedbythepresenceofasubstrate.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l95",
+                    "p6_l96",
+                    "p6_l97",
+                    "p6_l98",
+                    "p6_l99",
+                    "p6_l100",
+                    "p6_l101",
+                    "p6_l102",
+                    "p6_l103",
+                    "p6_l104",
+                    "p6_l105",
+                    "p6_l106",
+                    "p6_l107",
+                    "p6_l108",
+                    "p6_l109",
+                    "p6_l110",
+                    "p6_l111",
+                    "p6_l112",
+                    "p6_l113"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Conclusions",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p6_l94"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p6_furniture_p6_l114",
+            "type": "custom",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 578",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p6_l114"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p7_furniture_p7_l1",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p7_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p7_l2",
+            "type": "section",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [
+              {
+                "id": "unidentified_p7_1",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Thin-film growth\nWe grew 8–20-u.c. SrTiO3/15–25-u.c. Nd1−xSrxNiO3 (x = 0.15 and 0.20)/\n8–20-u.c. SrTiO3/10–15-u.c. Sr3−xCaxAl2O6 (x = 1.0 and 2.5) hetero-\nstructures on 5 × 5-mm2 (001)-oriented single-crystalline SrTiO3 sub-\nstratesand(110)-orientedNdGaO3 substratesbypulsedlaserdeposition\n(KrF, λ = 248 nm). The SrTiO3 substrates were pre-annealed in situ\nat 930 °C under an oxygen partial pressure pO2 of 5 × 10−6 torr for\n30 mintoobtainastep-and-terracesurface,andtheNdGaO3 substrates\nwere pre-annealed at 1,000 °C for 2 h in air. The sacrificial layer\nS fl r u 3 e −x n C c a e x A o l f 2 F O = 6 w 3. a 1 s 2 g J r c o m w − n 2 ( a s t p 7 o 0 t 0 siz ° e C = w 2 it .2 h 0 a m pO m 2 o 2) f a 5 n × d 1 l 0 as − e 6 r to r r e r p , e a t l i a ti s o e n r\nfrequency f = 1 Hz. SrTiO3 buffer layers were grown at 700 °C with a\npO2 of 5 × 10−6 torr, F = 0.89 J cm−2 (spot size = 3.20 mm2) and f = 1 Hz.\nNF =d12−x.S3r7xNJ ciOm3−t2h(sinpofitlmsiszew=er2e.3g8romwmn2a)ta5n8d0f°=C2wHitzh. FainpOa2lloyf, t1h50e SmrtToiOrr3,\ncappinglayersweregrownunderthesameconditionsasNd1−xSrxNiO3\ngiven the limited stability of the hole-doped perovskite nickelate.\nA single-crystal SrTiO3 target was used for the SrTiO3 growth, and\npolycrystalline ceramic targets were used for Sr3−xCaxAl2O6 and\nNd1−xSrxNiO3 growths.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l3",
+                    "p7_l4",
+                    "p7_l5",
+                    "p7_l6",
+                    "p7_l7",
+                    "p7_l8",
+                    "p7_l9",
+                    "p7_l10",
+                    "p7_l11",
+                    "p7_l12",
+                    "p7_l13",
+                    "p7_l14",
+                    "p7_l15",
+                    "p7_l16",
+                    "p7_l17",
+                    "p7_l18",
+                    "p7_l19",
+                    "p7_l20"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_2",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Topochemical reduction\nTheas-grownheterostructureswerelooselywrappedwithaluminium\nfoil and inserted into a Pyrex glass tube along with ~0.15 g of calcium\nhydride (97% purity, Sigma-Aldrich). The tubes were pumped with a\nrotary vane pump for 10 min to reach a pressure below 5 mtorr, and\nthen sealed with a hydrogen torch. The sealed glass tubes were sub-\nsequentlyputinatubefurnaceandrampedto330–360 °Catarateof\n10 °C min−1, annealed for 2–6 h, and cooled to room temperature at a\nrateof~2 °C min−1.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l21",
+                    "p7_l22",
+                    "p7_l23",
+                    "p7_l24",
+                    "p7_l25",
+                    "p7_l26",
+                    "p7_l27",
+                    "p7_l28",
+                    "p7_l29"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_3",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Heterostructure liftoff and transfer\nThereducedheterostructurefilmswerespin-coatedwithA8950poly-\nmethyl methacrylate (PMMA) at a speed of 3,500 r.p.m. for 60 s with\na ramping rate of 1,000 r.p.m. s−1 (thickness ~1 μm) and then cured\nat 135 °C for 7.5 min. Sample edges were exposed by scratching with\na tungsten pen, where water could enter and start etching the sacri-\nficial layer. Sheets of plasma-treated polydimethylsiloxane (PDMS)\n(~2 × 2 mm2) were then applied as a mechanical support. The samples\nwere put in deionized water until the sacrificial layers had been fully\ndissolved. The released heterostructures were scooped out of the\nwater with a 3-mm-radius metal ring and transferred onto a target\nsubstrate, such as a Si/SiO2 wafer or a SiNx membrane, with circular\nholes 2 μm in diameter (Norcada). The samples were then dried at\n60 °C for 5 min and subsequently 110 °C for 10 min. After heating, the\nsamplesweredippedintoacetoneatroomtemperaturetodissolvethe\nPMMA(~10 min),untilthePDMShadnaturallybeenreleasedfromthe\nsamples. Finally, the samples were dipped in isopropanol for 5 min to\nremoveall other residues.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l30",
+                    "p7_l31",
+                    "p7_l32",
+                    "p7_l33",
+                    "p7_l34",
+                    "p7_l35",
+                    "p7_l36",
+                    "p7_l37",
+                    "p7_l38",
+                    "p7_l39",
+                    "p7_l40",
+                    "p7_l41",
+                    "p7_l42",
+                    "p7_l43",
+                    "p7_l44",
+                    "p7_l45",
+                    "p7_l46",
+                    "p7_l47"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_4",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Structural and electrical characterization\nXRDθ–2θsymmetricscansandRSMweremeasuredusingmonochro-\nmatic Cu Kα1 radiation sources (λ = 1.5406 Å). The XRD simulations\nwere derived from a MATLAB program developed in ref. 24 based\non a kinematic model adding separate contributions of scattering\nfrom all constituent layers of a thin-film heterostructure. Error bars\ninthec-axislatticeconstantsrepresentuncertaintiesfromfittingXRD\n(002)reflections.Temperature-andfield-dependentresistivityρ(T, H)\nmeasurement of the thin-film samples were conducted in a van der\nPauw geometry with aluminium electrical wire-bonded contacts. For\nthe millimetre-sized freestanding heterostructure samples, thin and\nnarrow sheets of indium were pressed on the sample in a four-point\nprobe geometry, making a robust ohmic contact at low temperature\nwhile penetrating through the thick STO capping layer. For the small\nflakesamples,theSTOcappinglayerswereremovedbyArion-milling\nbefore making electrical contacts with Ti 5-nm/Au 40-nm electrodes.\nThe mutual-inductance probe set-up used in ref. 30 was employed in\nthisstudy.Aninfinite-layernickelateheterostructurewastransferred\nonto a Si wafer and then cut in half, then placed between two coils—a\ndrive coil with 0.25-mm diameter and 50 turns and a pickup coil with\n0.5-mmdiameterand400turns.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l48",
+                    "p7_l49",
+                    "p7_l50",
+                    "p7_l51",
+                    "p7_l52",
+                    "p7_l53",
+                    "p7_l54",
+                    "p7_l55",
+                    "p7_l56",
+                    "p7_l57",
+                    "p7_l58",
+                    "p7_l59",
+                    "p7_l60",
+                    "p7_l61",
+                    "p7_l62",
+                    "p7_l63",
+                    "p7_l64",
+                    "p7_l65",
+                    "p7_l66",
+                    "p7_l67",
+                    "p7_l68"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_5",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "STEM and analysis\nElectron-transparent cross-sectional STEM samples were prepared\nwiththestandardfocused-ion-beamliftoutprocedureusingaThermo\nFisher Scientific Helios G4 UX focused ion beam. Annular dark-field\n(ADF) STEM was performed on an aberration-corrected FEI Titan\nThemis system and Thermo Fisher Scientific Spectra 300 X-CFEG\nset-up at an accelerating voltage of 300 kV with a convergence angle\nof 30 mrad and inner (outer) collection angles of 68 (340) mrad and\n66 (200) mrad, respectively. Elemental maps were recorded on the\nsameTitanThemissystemwithaGatan965GIFQuantumERspectro-\nmeter and a Gatan K2 Summit direct electron detector operated in\ncountingmode.Ruddlesden–Popperfaultsintheplan-viewADF-STEM\nimages of the film were visualized by extracting modulations in the\n(110) and (−110) pseudo-cubic lattice fringes using the phase lock-in\nmethod described in refs. 37,38. In particular, the Ruddlesden–\nPopperfaultboundariesappearasanapparentstronglocalcompres-\nsivestraininthepseudo-cubiclatticefringes.ThestrainmapinFig.3c\nwasgeneratedbytakingthepositivevaluesofthesumofthe(110)and\n(−110)compressivestrainmaps.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l69",
+                    "p7_l70",
+                    "p7_l71",
+                    "p7_l72",
+                    "p7_l73",
+                    "p7_l74",
+                    "p7_l75",
+                    "p7_l76",
+                    "p7_l77",
+                    "p7_l78",
+                    "p7_l79",
+                    "p7_l80",
+                    "p7_l81",
+                    "p7_l82",
+                    "p7_l83",
+                    "p7_l84",
+                    "p7_l85",
+                    "p7_l86",
+                    "p7_l87"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_6",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Note\nDuringthepreparationofthismanuscript,webecameawareofareport\nonLa0.80Sr0.20NiO2 freestandingheterostructures39.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l88",
+                    "p7_l89",
+                    "p7_l90"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Methods",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p7_l2"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p7_l91",
+            "type": "section",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [
+              {
+                "id": "unidentified_p7_7",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "All source data supporting the findings of this study are provided.\nSourcedataareprovidedwith thispaper.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l92",
+                    "p7_l93"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Dataavailability",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p7_l91"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p7_furniture_p7_l123",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 579",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p7_l123"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p8_furniture_p8_l1",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p8_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p8_l103",
+            "type": "section",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p8_3",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Y.L., X.W. and K.L. synthesized the nickelate freestanding hetero-\nstructures. Y.L., X.W. and Y.Y. performed transport measurements.\nY.L. and X.W. conducted XRD characterizations. L.B., B.H.G., D.A.M. and\nL.F.K. conducted STEM measurements. S.P.H. and B.Y.W. performed the\nmutual-inductance measurements. Y.L., X.W., Y.Y. and H.Y.H. wrote the\nmanuscript with input from all authors. D.A.M., L.F.K., W.-S.L., S.R. and\nH.Y.H. supervised the project.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l104",
+                    "p8_l105",
+                    "p8_l106",
+                    "p8_l107",
+                    "p8_l108",
+                    "p8_l109",
+                    "p8_l110"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Authorcontributions",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p8_l103"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p8_l111",
+            "type": "section",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p8_4",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "The authors declare no competing interests.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l112"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Competinginterests",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p8_l111"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p8_l113",
+            "type": "section",
+            "page_start": 8,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "unidentified_p8_5",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Supplementary information The online version\ncontains supplementary material available at\nhttps://doi.org/10.1038/s44160-024-00714-2.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l114",
+                    "p8_l115",
+                    "p8_l116"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_6",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Correspondence and requests for materialsshould be addressed to\nYonghun Lee, Xin Wei or Harold Y. Hwang.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l117",
+                    "p8_l118"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_7",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Peer review information Nature Synthesis thanks the anonymous\nreviewers for their contribution to the peer review of this work.\nPrimary Handling Editor: Alison Stoddart, in collaboration with the\nNature Synthesis team.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l119",
+                    "p8_l120",
+                    "p8_l121",
+                    "p8_l122"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_8",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Reprints and permissions informationis available at\nwww.nature.com/reprints.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l123",
+                    "p8_l124"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p9_1",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Publisher’s note Springer Nature remains neutral with regard\nto jurisdictional claims in published maps and institutional\naffiliations.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l2",
+                    "p9_l3",
+                    "p9_l4"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p9_2",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Springer Nature or its licensor (e.g. a society or other partner) holds\nexclusive rights to this article under a publishing agreement with\nthe author(s) or other rightsholder(s); author self-archiving of the\naccepted manuscript version of this article is solely governed by the\nterms of such publishing agreement and applicable law.\n© The Author(s), under exclusive licence to Springer Nature Limited\n2025",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l5",
+                    "p9_l6",
+                    "p9_l7",
+                    "p9_l8",
+                    "p9_l9",
+                    "p9_l10",
+                    "p9_l11"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Additionalinformation",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p8_l113"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p8_furniture_p8_l125",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 580",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p8_l125"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p9_furniture_p9_l1",
+            "type": "custom",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s44160-024-00714-2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p9_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p9_furniture_p9_l12",
+            "type": "custom",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [],
+            "text": "Nature Synthesis | Volume 4 | May 2025 | 573–581 581",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p9_l12"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 7,
+        "page_end": 9,
+        "children": [
+          {
+            "id": "heading_p7_l94",
+            "type": "references",
+            "page_start": 7,
+            "page_end": 8,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p7_l94"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p7_8",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "1. Li, D. et al. Superconductivity in an infinite-layer nickelate. Nature\n572, 624–627 (2019).\n2. Crespin, M., Levitz, P. & Gatineau, L. Reduced forms of LaNiO3\nperovskite. Part 1—Evidence for new phases: La2Ni2O5 and LaNiO2.\nJ. Chem. Soc. Faraday Trans. 2 79, 1181–1194 (1983).\n3. Hayward, M. A., Green, M. A., Rosseinsky, M. J. & Sloan, J. Sodium\nhydride as a powerful reducing agent for topotactic oxide\ndeintercalation: synthesis and characterization of the nickel(I)\noxide LaNiO2. J. Am. Chem. Soc. 121, 8843–8854 (1999).\n4. Kawai, M. et al. Reversible changes of epitaxial thin films from\nperovskite LaNiO3 to infinite-layer structure LaNiO2. Appl. Phys. Lett.\n94, 082102 (2009).\n5. Kaneko, D., Yamagishi, K., Tsukada, A., Manabe, T. & Naito, M.\nSynthesis of infinite-layer LaNiO2 films by metal organic\ndecomposition. Phys. C 469, 936–939 (2009).\n6. Gan, Q., Rao, R. A., Eom, C. B., Garrett, J. L. & Lee, M. Direct\nmeasurement of strain effects on magnetic and electrical\nproperties of epitaxial SrRuO3 thin films. Appl. Phys. Lett. 72,\n978–980 (1998).\n7. Paskiewicz, D. M., Sichel-Tissot, R., Karapetrova, E., Stan, L. &\nFong, D. D. Single-crystalline SrRuO3 nanomembranes:\na platform for flexible oxide electronics. Nano Lett. 16, 534–542\n(2016).\n8. Lu, D. et al. Synthesis of freestanding single-crystal perovskite\nfilms and heterostructures by etching of sacrificial water-soluble\nlayers. Nat. Mater. 15, 1255–1260 (2016).\n9. Bakaul, S. R. et al. Single crystal functional oxides on silicon.\nNat. Commun. 7, 10547 (2016).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p7_l95",
+                "p7_l96",
+                "p7_l97",
+                "p7_l98",
+                "p7_l99",
+                "p7_l100",
+                "p7_l101",
+                "p7_l102",
+                "p7_l103",
+                "p7_l104",
+                "p7_l105",
+                "p7_l106",
+                "p7_l107",
+                "p7_l108",
+                "p7_l109",
+                "p7_l110",
+                "p7_l111",
+                "p7_l112",
+                "p7_l113",
+                "p7_l114",
+                "p7_l115",
+                "p7_l116",
+                "p7_l117",
+                "p7_l118",
+                "p7_l119",
+                "p7_l120",
+                "p7_l121",
+                "p7_l122"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p7_l94"
+            }
+          },
+          {
+            "id": "unidentified_p8_1",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "10. Wang, B.-X. et al. Synthesis and characterization of bulk\nNd1−xSrxNiO2 and Nd1−xSrxNiO3. Phys. Rev. Mater. 4, 084409 (2020).\n11. Li, Q. et al. Absence of superconductivity in bulk Nd1−xSrxNiO2.\nCommun. Mater. 1, 16 (2020).\n12. Puphal, P. et al. Topotactic transformation of single crystals: from\nperovskite to infinite-layer nickelates. Sci. Adv. 7, eabl8091 (2021).\n13. Hu, K. et al. Atomic scale disorder and reconstruction in bulk\ninfinite-layer nickelates lacking superconductivity. Nat. Commun.\n15, 5104 (2024).\n14. Ren, X. et al. Possible strain-induced enhancement of the\nsuperconducting onset transition temperature in infinite-layer\nnickelates. Commun. Phys. 6, 341 (2023).\n15. Lee, K. et al. Linear-in-temperature resistivity for optimally\nsuperconducting (Nd,Sr)NiO2. Nature 619, 288–292 (2023).\n16. Wang, N. N. et al. Pressure-induced monotonic enhancement\nof Tc to over 30K in superconducting Pr0.82Sr0.18NiO2 thin films.\nNat. Commun. 13, 4367 (2022).\n17. Hong, S. S. et al. Extreme tensile strain states in La0.7Ca0.3MnO3\nmembranes. Science 368, 71–76 (2020).\n18. Singh, P. et al. Large-area crystalline BaSnO3 membranes with high\nelectron mobilities. ACS Appl. Electron. Mater. 1, 1269–1274 (2019).\n19. Lee, K. et al. Aspects of the synthesis of thin film superconducting\ninfinite-layer nickelates. APL Mater. 8, 041107 (2020).\n20. Raji, A. et al. Charge distribution across capped and uncapped\ninfinite-layer neodymium nickelate thin films. Small 19, 2304872\n(2023).\n21. Prodjosantoso, A. K., Kennedy, B. J. & Hunter, B. A. Synthesis and\nstructural studies of strontium-substituted tricalcium aluminate\nCa3−xSrxAl2O6. Aust. J. Chem. 53, 195–202 (2000).\n22. Lacorre, P. et al. Synthesis, crystal structure and properties\nof metallic PrNiO3: comparison with metallic NdNiO3 and\nsemiconducting SmNiO3. J. Solid State Chem. 91, 225–237 (1991).\n23. Chen, Z. et al. Freestanding crystalline YBa2Cu3O7−x hetero-\nstructure membranes. Phys. Rev. Mater. 3, 060801(R) (2019).\n24. Lichtensteiger, C. InteractiveXRDFit: a new tool to simulate and\nfit X-ray diffractograms of oxide thin films and heterostructures.\nJ. Appl. Crystallogr. 51, 1745–1751 (2018).\n25. Yang, C. et al. Generation of Ruddlesden-Popper faults in Sr\ndoped NdNiO3. Microsc. Microanal. 27, 1198–1200 (2021).\n26. Guo, Q., Farokhipoor, S., Magén, C., Rivadulla, F. & Noheda, B.\nTunable resistivity exponents in the metallic phase of epitaxial\nnickelates. Nat. Commun. 11, 2949 (2020).\n27. Zeng, S. et al. Phase diagram and superconducting dome of\ninfinite-layer Nd1−xSrxNiO2 thin films. Phys. Rev. Lett. 125, 147003\n(2020).\n28. Goodge, B. H. et al. Resolving the polar interface of infinite-layer\nnickelate thin films. Nat. Mater. 22, 466–473 (2023).\n29. Yang, C. et al. Thickness-dependent interface polarity in\ninfinite-layer nickelate superlattices. Nano Lett. 23, 3291–3297\n(2023).\n30. Harvey, S. P. et al. Evidence for nodal superconductivity in infinite-\nlayer nickelates. Preprint at http://arxiv.org/abs/2201.12971 (2022).\n31. Fischer, G. J., Wang, Z. & Karato, S. Elasticity of CaTiO3, SrTiO3 and\nBaTiO3 perovskites up to 3.0GPa: the effect of crystallographic\nstructure. Phys. Chem. Miner. 20, 97–103 (1993).\n32. Harbola, V., Xu, R., Crossley, S., Singh, P. & Hwang, H. Y. Fracture\nand fatigue of thin crystalline SrTiO3 membranes. Appl. Phys. Lett.\n119, 053102 (2021).\n33. Xu, R. et al. Strain-induced room-temperature ferroelectricity in\nSrTiO3 membranes. Nat. Commun. 11, 3141 (2020).\n34. Kitatani, M. et al. Nickelate superconductors—a renaissance of\nthe one-band Hubbard model. npj Quantum Mater. 5, 59 (2020).\n35. Zhang, G.-M., Yang, Y. & Zhang, F.-C. Self-doped Mott insulator\nfor parent compounds of nickelate superconductors. Phys. Rev. B\n101, 020501 (2020).\n36. Botana, A. S. & Norman, M. R. Similarities and differences between\nLaNiO2 and CaCuO2 and implications for superconductivity.\nPhys. Rev. X 10, 011024 (2020).\n37. Goodge, B. H. et al. Disentangling coexisting structural order\nthrough phase lock-in analysis of atomic-resolution STEM data.\nMicrosc. Microanal. 28, 404–411 (2022).\n38. Fleck, E. E. et al. Atomic-scale mapping and quantification of local\nRuddlesden-Popper phase variations. Nano Lett. 22, 10095–10101\n(2022).\n39. Yan, S. et al. Superconductivity in freestanding infinite-layer\nnickelate membranes. Adv. Mater. 36, 2402916 (2024).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p8_l2",
+                "p8_l3",
+                "p8_l4",
+                "p8_l5",
+                "p8_l6",
+                "p8_l7",
+                "p8_l8",
+                "p8_l9",
+                "p8_l10",
+                "p8_l11",
+                "p8_l12",
+                "p8_l13",
+                "p8_l14",
+                "p8_l15",
+                "p8_l16",
+                "p8_l17",
+                "p8_l18",
+                "p8_l19",
+                "p8_l20",
+                "p8_l21",
+                "p8_l22",
+                "p8_l23",
+                "p8_l24",
+                "p8_l25",
+                "p8_l26",
+                "p8_l27",
+                "p8_l28",
+                "p8_l29",
+                "p8_l30",
+                "p8_l31",
+                "p8_l32",
+                "p8_l33",
+                "p8_l34",
+                "p8_l35",
+                "p8_l36",
+                "p8_l37",
+                "p8_l38",
+                "p8_l39",
+                "p8_l40",
+                "p8_l41",
+                "p8_l42",
+                "p8_l43",
+                "p8_l44",
+                "p8_l45",
+                "p8_l46",
+                "p8_l47",
+                "p8_l48",
+                "p8_l49",
+                "p8_l50",
+                "p8_l51",
+                "p8_l52",
+                "p8_l53",
+                "p8_l54",
+                "p8_l55",
+                "p8_l56",
+                "p8_l57",
+                "p8_l58",
+                "p8_l59",
+                "p8_l60",
+                "p8_l61",
+                "p8_l62",
+                "p8_l63",
+                "p8_l64",
+                "p8_l65",
+                "p8_l66",
+                "p8_l67",
+                "p8_l68",
+                "p8_l69",
+                "p8_l70",
+                "p8_l71",
+                "p8_l72",
+                "p8_l73",
+                "p8_l74",
+                "p8_l75",
+                "p8_l76",
+                "p8_l77"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p7_l94"
+            }
+          },
+          {
+            "id": "heading_p8_l78",
+            "type": "acknowledgements",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p8_2",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "We acknowledge D. Li and V. Harbola for their contributions to\nthe initial stage of this work, W. J. Kim, E. K. Ko and A. Vailionis for\nassistance with RSM measurements, and E. K. Ko, J. Fowlie, K. J.\nCrust and J. Wang for critical reading of the manuscript. This work\nwas supported by the US Department of Energy, Office of Basic\nEnergy Sciences, Division of Materials Sciences and Engineering\n(contract no. DE-AC02-76SF00515) and the Gordon and Betty Moore\nFoundation’s Emergent Phenomena in Quantum Systems Initiative\n(grant no. GBMF9072, synthesis equipment). Electron microscopy\nby L.B., B.H.G., D.A.M. and L.F.K. was supported by Platform for\nthe Accelerated Realization, Analysis and Discovery of Interface\nMaterials (PARADIM) through NSF DMR-2039380 with additional\nsupport by the Department of Defense Air Force Office of Scientific\nResearch (grant no. FA 9550-16-1-0305) and the Packard Foundation.\nThis work made use of a Helios focused ion beam set-up supported\nby the NSF (grant no. DMR-1539918) and the Cornell Center for\nMaterials Research Shared Facilities, which are supported through\nthe NSF MRSEC programme (grant no. DMR-1719875). The Thermo\nFisher Spectra 300 X-CFEG system was acquired with support from\nPARADIM, an NSF MIP (no. DMR-2039380) and Cornell University.\nThe FEI Titan Themis was acquired through NSF-MRI-1429155, with\nadditional support from Cornell University, the Weill Institute and the\nKavli Institute at Cornell. This work is dedicated to L.F.K., who passed\naway on 24 June 2023.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l79",
+                    "p8_l80",
+                    "p8_l81",
+                    "p8_l82",
+                    "p8_l83",
+                    "p8_l84",
+                    "p8_l85",
+                    "p8_l86",
+                    "p8_l87",
+                    "p8_l88",
+                    "p8_l89",
+                    "p8_l90",
+                    "p8_l91",
+                    "p8_l92",
+                    "p8_l93",
+                    "p8_l94",
+                    "p8_l95",
+                    "p8_l96",
+                    "p8_l97",
+                    "p8_l98",
+                    "p8_l99",
+                    "p8_l100",
+                    "p8_l101",
+                    "p8_l102"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Acknowledgements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p8_l78"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

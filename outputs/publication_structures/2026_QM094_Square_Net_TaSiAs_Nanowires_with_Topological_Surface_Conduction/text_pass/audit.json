@@ -1,0 +1,755 @@
+{
+  "source_sha256": "59ae76067f1c8f0c40499a3ddd7304a0b8919572652d58c80aa27418da0b7689",
+  "schema_sha256": "9b756d2cb803c07756ce13e73f0caae03d68a972bbe6506c6a8a34c380e94060",
+  "validation": {
+    "schema_valid": true,
+    "page_ranges_valid": true,
+    "unique_ids": true,
+    "nodes": 780
+  },
+  "coverage_complete": true,
+  "unowned_blocks": [],
+  "multiply_owned_blocks": {},
+  "observed_blocks": 1257,
+  "unidentified_nodes": [
+    "x000111",
+    "x000112",
+    "x000131",
+    "x000155",
+    "x000184",
+    "x000185",
+    "x000186",
+    "x000205",
+    "x000206",
+    "x000207",
+    "x000208",
+    "x000209",
+    "x000210",
+    "x000211",
+    "x000218",
+    "x000248",
+    "x000258",
+    "x000259",
+    "x000260",
+    "x000290",
+    "x000319",
+    "x000337",
+    "x000348",
+    "x000349",
+    "x000350",
+    "x000363",
+    "x000391",
+    "x000392",
+    "x000393",
+    "x000394",
+    "x000395",
+    "x000396",
+    "x000397",
+    "x000398",
+    "x000399",
+    "x000400",
+    "x000401",
+    "x000402",
+    "x000403",
+    "x000404",
+    "x000405",
+    "x000406",
+    "x000407",
+    "x000408",
+    "x000409",
+    "x000423",
+    "x000450",
+    "x000456",
+    "x000482",
+    "x000489",
+    "x000490",
+    "x000491",
+    "x000492",
+    "x000493",
+    "x000494",
+    "x000495",
+    "x000496",
+    "x000499",
+    "x000527",
+    "x000529",
+    "x000530",
+    "x000561",
+    "x000570",
+    "x000571",
+    "x000584",
+    "x000592",
+    "x000089",
+    "x000612",
+    "x000613",
+    "x000630",
+    "x000632",
+    "x000634",
+    "x000636",
+    "x000638",
+    "x000640",
+    "x000642",
+    "x000644",
+    "x000646",
+    "x000648",
+    "x000650",
+    "x000652",
+    "x000653",
+    "x000655",
+    "x000657",
+    "x000659",
+    "x000661",
+    "x000663",
+    "x000665",
+    "x000667",
+    "x000669",
+    "x000671",
+    "x000673",
+    "x000675",
+    "x000678",
+    "x000680",
+    "x000682",
+    "x000683",
+    "x000685",
+    "x000687",
+    "x000688",
+    "x000690",
+    "x000692",
+    "x000694",
+    "x000697",
+    "x000698",
+    "x000700",
+    "x000701",
+    "x000702",
+    "x000704",
+    "x000705",
+    "x000707",
+    "x000708",
+    "x000709",
+    "x000711",
+    "x000713",
+    "x000714",
+    "x000716",
+    "x000717",
+    "x000719",
+    "x000722",
+    "x000724",
+    "x000726",
+    "x000727",
+    "x000728",
+    "x000730",
+    "x000732",
+    "x000735",
+    "x000736",
+    "x000738",
+    "x000739",
+    "x000741",
+    "x000743",
+    "x000744",
+    "x000745",
+    "x000746",
+    "x000747",
+    "x000749",
+    "x000750",
+    "x000751",
+    "x000752",
+    "x000753",
+    "x000754",
+    "x000755",
+    "x000756",
+    "x000757",
+    "x000758",
+    "x000759",
+    "x000760",
+    "x000762",
+    "x000763",
+    "x000765",
+    "x000766",
+    "x000767",
+    "x000768",
+    "x000769",
+    "x000770",
+    "x000772",
+    "x000773",
+    "x000019",
+    "x000020",
+    "x000021",
+    "x000022",
+    "x000023",
+    "x000024",
+    "x000025",
+    "x000026",
+    "x000027",
+    "x000028",
+    "x000029",
+    "x000030",
+    "x000031",
+    "x000032",
+    "x000033",
+    "x000034",
+    "x000035",
+    "x000036",
+    "x000037",
+    "x000038",
+    "x000039",
+    "x000040",
+    "x000041",
+    "x000042",
+    "x000043",
+    "x000044",
+    "x000045",
+    "x000046",
+    "x000047",
+    "x000048",
+    "x000049",
+    "x000050",
+    "x000051",
+    "x000052",
+    "x000053",
+    "x000054",
+    "x000055",
+    "x000056",
+    "x000057",
+    "x000058",
+    "x000059",
+    "x000060",
+    "x000061",
+    "x000062",
+    "x000063",
+    "x000064",
+    "x000065",
+    "x000066",
+    "x000067",
+    "x000068",
+    "x000069",
+    "x000070",
+    "x000071",
+    "x000072",
+    "x000073",
+    "x000074",
+    "x000075",
+    "x000076",
+    "x000077",
+    "x000078",
+    "x000079",
+    "x000080",
+    "x000081",
+    "x000082",
+    "x000083",
+    "x000084",
+    "x000085",
+    "x000086",
+    "x000087"
+  ],
+  "type_counts": {
+    "article": 1,
+    "front_matter": 1,
+    "abstract": 1,
+    "paragraph": 517,
+    "custom": 227,
+    "body": 1,
+    "section": 7,
+    "subsection": 4,
+    "figure": 6,
+    "caption": 6,
+    "image": 6,
+    "back_matter": 1,
+    "acknowledgements": 1,
+    "references": 1
+  },
+  "layout": [
+    {
+      "page": 1,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 32
+    },
+    {
+      "page": 2,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 37
+    },
+    {
+      "page": 3,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 42
+    },
+    {
+      "page": 4,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 39
+    },
+    {
+      "page": 5,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 26
+    },
+    {
+      "page": 6,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 29
+    },
+    {
+      "page": 7,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 39
+    },
+    {
+      "page": 8,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 37
+    },
+    {
+      "page": 9,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 39
+    },
+    {
+      "page": 10,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 36
+    },
+    {
+      "page": 11,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 43
+    },
+    {
+      "page": 12,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 31
+    },
+    {
+      "page": 13,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 40
+    },
+    {
+      "page": 14,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 12,
+      "band_layouts": [
+        "mixed",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "mixed"
+      ],
+      "raw_line_count": 80
+    },
+    {
+      "page": 15,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 36
+    },
+    {
+      "page": 16,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 37
+    },
+    {
+      "page": 17,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 65
+    },
+    {
+      "page": 18,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 41
+    },
+    {
+      "page": 19,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 39
+    },
+    {
+      "page": 20,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 38
+    },
+    {
+      "page": 21,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 36
+    },
+    {
+      "page": 22,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 28
+    },
+    {
+      "page": 23,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 48
+    },
+    {
+      "page": 24,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 48
+    },
+    {
+      "page": 25,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 49
+    },
+    {
+      "page": 26,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 48
+    },
+    {
+      "page": 27,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 8
+    },
+    {
+      "page": 28,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 29
+    },
+    {
+      "page": 29,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 8
+    },
+    {
+      "page": 30,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 19
+    },
+    {
+      "page": 31,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 11
+    },
+    {
+      "page": 32,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 8
+    },
+    {
+      "page": 33,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 10
+    },
+    {
+      "page": 34,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 8
+    },
+    {
+      "page": 35,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 14
+    },
+    {
+      "page": 36,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 8
+    },
+    {
+      "page": 37,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 30
+    },
+    {
+      "page": 38,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 11
+    },
+    {
+      "page": 39,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 4
+    },
+    {
+      "page": 40,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 7
+    },
+    {
+      "page": 41,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 38
+    },
+    {
+      "page": 42,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 50
+    },
+    {
+      "page": 43,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 16
+    }
+  ],
+  "independently_verified_correct": false,
+  "reference_numbers": [],
+  "citations": {
+    "entries": 0,
+    "field_counts": {},
+    "partial_entries": 0,
+    "all_require_review": true,
+    "policy": "Preserve raw text; parse literal spans; keep unsupported syntax unresolved; no bibliographic existence verification."
+  },
+  "association_policy": "Explicit references propose a parent; ambiguity stays unresolved; all relations require review."
+}

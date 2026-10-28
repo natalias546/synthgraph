@@ -1,0 +1,216 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "CharterBT-Bold",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Intricate magnetic landscape in antiferromagnetic kagome metal TbTi3Bi4 and interplay",
+        "with Ln2−xTi6+xBi9 (Ln: Tb· · · Lu) shurikagome metals"
+      ]
+    },
+    {
+      "font": "CharterBT-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 943,
+      "long_prose_lines": 2,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "examples": [
+        "Brenden R. Ortiz,1,∗ Heda Zhang,1 Karolina Go´rnicka,1 David S. Parker,1 German D. Samolyuk,1 Fazhi",
+        "Yang,1 Hu Miao,1 Qiangsheng Lu,1 Robert G. Moore,1 Andrew F. May,1 and Michael A. McGuire1",
+        "Spurred on by continued discoveries in the AM3X5,"
+      ]
+    },
+    {
+      "font": "CharterBT-Italic",
+      "size": 9.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Materials Science and Technology Division, Oak Ridge National Laboratory, Oak Ridge, TN 37831, USA"
+      ]
+    },
+    {
+      "font": "CharterBT-Roman",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 376,
+      "long_prose_lines": 52,
+      "pages": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "examples": [
+        "(Dated: July17,2024)",
+        "Here we present the discovery and characterization of the kagome metal TbTi3Bi4 in tandem with a",
+        "new series of compounds, the Ln2−xTi6+xBi9 (Ln: Tb–Lu) shurikagome metals. We previously reported"
+      ]
+    },
+    {
+      "font": "CharterBT-Bold",
+      "size": 9.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        5,
+        10,
+        12,
+        13
+      ],
+      "examples": [
+        "I. INTRODUCTION",
+        "II. METHODS",
+        "A. Single Crystal Synthesis"
+      ]
+    },
+    {
+      "font": "CharterBT-Roman",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "∗ ortizbr@ornl.gov",
+        "a Notice: This manuscript has been authored by UT-Battelle, LLC,",
+        "under contract DE-AC05-00OR22725 with the US Department of"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "4202",
+        "51",
+        "2v87311.5042:viXra"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "luJ"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]ics-lrtm.tam-dnoc["
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "√"
+      ]
+    },
+    {
+      "font": "CharterBT-Roman",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Tb2−xTi6+xBi9."
+      ]
+    },
+    {
+      "font": "CharterBT-Roman",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        12
+      ],
+      "examples": [
+        "Sat Sat"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

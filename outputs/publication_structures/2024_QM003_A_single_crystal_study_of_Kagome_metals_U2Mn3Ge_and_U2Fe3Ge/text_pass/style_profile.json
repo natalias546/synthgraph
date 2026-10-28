@@ -1,0 +1,382 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "Helvetica",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Journal of Physics:",
+        "Condensed Matter"
+      ]
+    },
+    {
+      "font": "Helvetica-Bold",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "PAPER • OPEN ACCESS You may also like"
+      ]
+    },
+    {
+      "font": "ArialUnicodeMS",
+      "size": 16.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 1,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "A single crystal study of Kagome metals U Mn Ge -A bird’s eye view on the flat and conic",
+        "and U Fe Ge"
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "2 3 band world of the honeycomb and",
+        "Kagome lattices: towards an",
+        "understanding of 2D metal-organic"
+      ]
+    },
+    {
+      "font": "ArialUnicodeMS",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "To cite this article: Wanyue Lin et al 2024 J. Phys.: Condens. Matter 36 345602 -Design of 2D V 6 S n Se 6n Cl 6 (n=0, 2"
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "View the article online for updates and enhancements. -The kagome Heisenberg antiferromagnet",
+        "This content was downloaded from IP address 128.54.45.115 on 15/10/2026 at 00:20"
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 5.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "3 6.5 2.5"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Roman",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "JournalofPhysics:CondensedMatter",
+        "J.Phys.:Condens.Matter36(2024)345602(6pp) https://doi.org/10.1088/1361-648X/ad4df8",
+        "1"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Bold",
+      "size": 24.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "A single crystal study of Kagome metals",
+        "U Mn Ge and U Fe Ge"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Bold",
+      "size": 20.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "2 3 2 3"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Bold",
+      "size": 11.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Wanyue Lin1,2, Yuchen Wu1,3, Christopher Broyles1, Tai Kong4 and Sheng Ran1,∗ "
+      ]
+    },
+    {
+      "font": "TimesLTStd-Roman",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 97,
+      "long_prose_lines": 7,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "1DepartmentofPhysics,WashingtonUniversityinSt.Louis,St.Louis,MO63130,UnitedStatesof",
+        "America",
+        "2DepartmentofElectricalandSystemEngineering,WashingtonUniversityinSt.Louis,St.Louis,MO"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Bold",
+      "size": 9.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Abstract"
+      ]
+    },
+    {
+      "font": "TimesLTStd-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 265,
+      "long_prose_lines": 7,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "Single crystals of U2Mn3Ge and U2Fe3Ge with a Kagome lattice structure were synthesized",
+        "usingahigh-temperatureself-fluxcrystalgrowthmethod.Thephysicalpropertiesofthese",
+        "crystalswerecharacterizedthroughmeasurementsofresistivity,magnetism,andspecificheat."
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Bold",
+      "size": 10.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        7
+      ],
+      "examples": [
+        "1. Introduction",
+        "2. Experimental methods",
+        "3. Results and discussions"
+      ]
+    },
+    {
+      "font": "CMSY5",
+      "size": 5.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "∗"
+      ]
+    },
+    {
+      "font": "TimesLTStd-Roman",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 1,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Author to whom any correspondence should be addressed.",
+        "Original Content from this work may be used under the",
+        "terms of the Creative Commons Attribution 4.0 licence. Any"
+      ]
+    },
+    {
+      "font": "CMSY7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "◦",
+        "◦"
+      ]
+    },
+    {
+      "font": "HelveticaLTStd-Obl",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "3.1. U2Fe3Ge",
+        "3.2. U2Mn3Ge"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Ω−1"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "− −"
+      ]
+    },
+    {
+      "font": "TimesLTStd-Italic",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Chem. Soc. 144 10978",
+        "Commun. 147 217",
+        "a single crystal study J. Phys.: Condens. Matter"
+      ]
+    },
+    {
+      "font": "TimesLTStd-Bold",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "464 199"
+      ]
+    },
+    {
+      "font": "TimesLTStd-Italic",
+      "size": 9.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Metallurgical Society of the Aime ed n w miner",
+        "Alloys Compd. 509 5447",
+        "Nat. Commun. 14 527"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

@@ -1,0 +1,1367 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2026_QM039_Electrochemical_Growth_of_Full_Volume_Meissner_Effect_Superconducting_BKBO.pdf",
+    "pages": 18,
+    "sha256": "42254df238a0699ccaf2a4ed7b220145a86cc2d807573ef53c6e05695df7b083",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 12.0,
+    "body_font_family": "CMR12"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 18,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 2,
+        "children": [
+          {
+            "id": "publication_title",
+            "type": "title",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Electrochemical Growth of Full Volume Meissner Effect Superconducting Ba1−xKxBiO3",
+            "attributes": {
+              "method": "largest bold front-page typography",
+              "observation_ids": [
+                "p1_l1",
+                "p1_l2"
+              ]
+            }
+          },
+          {
+            "id": "heading_p1_l10",
+            "type": "abstract",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [
+              {
+                "id": "unidentified_p1_6",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "In this work we show the results of electrochemical synthesis of Ba1−xKxBiO3 crys-\ntals using three different experimental setup configurations. The setups differ between\neach other by varying level of control over physical variables and progressing from a\ntwo-electrodetoathree-electrodeconfigurationusinghighlyorientedplatinumcounter\nelectrode. By systematic analysis of the temperature dependence of the magnetic sus-\nceptibility at the superconducting transition of the collected crystals we observe that\nanorderofmagnitudesharpersuperconductingtransitionisachievedforthemostcom-\nprehensive three-electrode setup. In addition, the level of chemical substitution can be\ncontrolledbythevalueoftheoverpotentialversusreferenceelectrode. Wedemonstrate\nthat with this technique a full volume Meissner effect can be achieved with a sharp\ntransition temperature for the superconducting crystal.\n1\n6202\npeS\n52\n]noc-rpus.tam-dnoc[\n1v77603.9062:viXra",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l11",
+                    "p1_l12",
+                    "p1_l13",
+                    "p1_l14",
+                    "p1_l15",
+                    "p1_l16",
+                    "p1_l17",
+                    "p1_l18",
+                    "p1_l19",
+                    "p1_l20",
+                    "p1_l21",
+                    "p1_l22",
+                    "p1_l23",
+                    "p1_l24",
+                    "p1_l25",
+                    "p1_l26",
+                    "p1_l27"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Abstract",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.9,
+              "observation_ids": [
+                "p1_l10"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p2_l1",
+            "type": "keywords",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "title": "Keywords",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 17.2,
+              "observation_ids": [
+                "p2_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p2_1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Superconductivity,Crystalgrowth,Bismuthates,Electrocrystallization,ElectrochemicalImpedance\nSpectroscopy",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l2",
+                "p2_l3"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p2_l1"
+            }
+          }
+        ]
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 18,
+        "children": [
+          {
+            "id": "unidentified_p1_1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Oleksandr Foyevtsov,† Kateryna Foyevtsova,† Mohamed Oudah,† Dan",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l3"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_2",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Bizzotto,∗,‡ and George Sawatzky†\n†Department of Physics & Astronomy, Stewart Blusson Quantum Matter Institute,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l4",
+                "p1_l5"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_3",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "University of British Columbia, Vancouver, British Columbia, Canada V6T 1Z1\n‡Department of Chemistry, University of British Columbia, Vancouver, British Columbia,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l6",
+                "p1_l7"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_4",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Canada V6T 1Z1",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l8"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_5",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "E-mail: bizzotto@chem.ubc.ca",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l9"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "heading_p2_l4",
+            "type": "section",
+            "page_start": 2,
+            "page_end": 4,
+            "children": [
+              {
+                "id": "unidentified_p2_2",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Shortly after the discovery of high-temperature superconductivity in cuprates it was also\nobserved in a perovskite insulator BaBiO3 upon chemical substitution.1–3 Such chemical sub-\nstitution is realized by partial substitution of Ba with K cations in Ba1−xKxBiO3 (BKBO)\nstructure. Upon increasing K concentration x, BKBO undergoes an insulator to metal\ntransition which coincides with the structural monoclinic to tetragonal transition.4 Further\nincrease of K concentration leads to superconductivity with the highest Tc of about 32 K.\nUnlike the cuprates the BKBO crystal structure is three-dimensional and its phase diagram\nhas no sign of magnetic ordering. Extensive experimental research shows a number of un-\nconventional features of superconductivity in BKBO, for example, absence of discontinuities\nin the magnetic susceptibility and specific heat5 at Tc but a sharp transition in electronic\ntransport, complex electron-phonon coupling.6 BKBO also exhibits an unusual electronic\nstructure together with strong electron–lattice coupling and unconventional critical-field be-\nhavior. The temperature dependence of the critical field also deviates significantly from the\nuniversal behaviour for weak electron-phonon coupling superconductors.8 Due to a number\nof such unconventional properties the microscopic origin of superconductivity in BKBO is\nstill highly debatable.\nThe conductivity in metallic BKBO is isotropic, however the temperature dependence\nvaries strongly in the published reports. Varying from metallic to pseudogap like and chang-\ning slope behaviour with temperature.9–11 It is not clear if this varying behaviour is due\nto crystal quality or inhomogeneities. Some reports suggest that the variation in electronic\ntransport along with spectroscopic data can be the result of coexistence of metallic and insu-\n2",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l5",
+                    "p2_l6",
+                    "p2_l7",
+                    "p2_l8",
+                    "p2_l9",
+                    "p2_l10",
+                    "p2_l11",
+                    "p2_l12",
+                    "p2_l13",
+                    "p2_l14",
+                    "p2_l15",
+                    "p2_l16",
+                    "p2_l17",
+                    "p2_l18",
+                    "p2_l19",
+                    "p2_l20",
+                    "p2_l21",
+                    "p2_l22",
+                    "p2_l23",
+                    "p2_l24",
+                    "p2_l25",
+                    "p2_l26"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p3_1",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "latingphases12–14 and/orinhomogeneitiesofpotassiumdistribution.15 Thissuggestionisalso\nconsistent with the reported small Meissner phase volume11 in the superconducting state,\nwhich shows a large scattering among the published reports but values of less than 50% are\nvery common. Poly and single crystalline BKBO samples can be synthesized with a variety\nof techniques. While historically it was first synthesized using electrochemical growth, high\npressure and high temperature growth,16,17 thermal evaporation,18 direct precipitation,19,20\nfloating zone11 as well as post-growth annealing2,21 to compensate for oxygen vacancies were\nexplored in order to improve crystal quality. The system crystallizes easily in these tech-\nniques. However, the low structural phase purity, which results in a very broad transition\nwidth in the magnetic susceptibility, is a downside of the techniques mentioned above. To\ndate the most successful approaches were electrochemical growth22 and post-growth anneal-\ning in oxygen flow15,21 for which up to an order of magnitude sharper transition widths were\nreported. The post-growth annealing in oxygen is an effective approach that can largely fill\noxygen vacancies. However, the potassium homogeneity is set during the crystal growth. If\nsuch inhomogeneity is present, then a part of the crystal volume will not be superconduct-\ning and remain as undoped BaBiO3 phase or insufficiently doped BKBO phase.15 Thus, it\nis highly desirable to achieve targeted stoichiometry and uniform homogeneity during the\ncrystal synthesis.\nIn this work we demonstrate that high quality BKBO single crystals with sharp super-\nconducting transition and full volume Meissner phase can be systematically grown electro-\nchemically via anodic electrocrystallization.23,24\n2BiO33− + K+ + Ba2+ ⇀↽ 2(BaK)BiO3 + 3e−\nWe show in detail how improvement of the electrochemical setup which includes adding\nan appropriate reference electrode, a symmetric counter electrode, and monitoring the crys-\ntal growth in-situ using electrochemical impedance spectroscopy (EIS) influences supercon-\nducting properties of the grown BKBO crystals. We believe that revisiting a number of\n3",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l1",
+                    "p3_l2",
+                    "p3_l3",
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6",
+                    "p3_l7",
+                    "p3_l8",
+                    "p3_l9",
+                    "p3_l10",
+                    "p3_l11",
+                    "p3_l12",
+                    "p3_l13",
+                    "p3_l14",
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17",
+                    "p3_l18",
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21",
+                    "p3_l22",
+                    "p3_l23",
+                    "p3_l24",
+                    "p3_l25",
+                    "p3_l26",
+                    "p3_l27"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p4_1",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "experiments using these electrochemically grown high quality BKBO single crystals may\nhelp to address some of the existing controversies in this system.\nFigure1summarizestheevolutionofthemagneticsusceptibilityacrossthesuperconduct-\ning transition for crystals grown using the three successive growth configurations (Methods\n1–3) investigated in this work. With progressive improvements in thermal and electro-\nchemical control, the transition becomes markedly sharper and the superconducting volume\nfraction increases, reaching the full-volume Meissner response for the final three-electrode\nconfiguration.\nFigure 1: Comparison of magnetic susceptibility for the three successive growth configura-\ntions (Methods 1–3) described in the text (H = 20 Oe).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l1",
+                    "p4_l2",
+                    "p4_l3",
+                    "p4_l4",
+                    "p4_l5",
+                    "p4_l6",
+                    "p4_l7",
+                    "p4_l8",
+                    "p4_l9",
+                    "p4_l10"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Introduction",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 17.2,
+              "observation_ids": [
+                "p2_l4"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p4_l11",
+            "type": "section",
+            "page_start": 4,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p4_2",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Threedifferentsetupsforelectrochemicalcrystalsynthesis, referredtobelowasMethods1–3,\nwereusedinthiswork,whicharediscussedinthenextsectionindetail. Forallsetupsweused\n250 ml Teflon crucibles that were loaded in a cylindrical tightly sealed stainless steel chamber\nas is schematically shown in Fig. 2(a). For all growth experiments as the starting materials\nwe used a mixture of 6 g of Ba(OH2)·8·H2O (99.9%), 15.75 g of Bi2O3 (99.9%), and 210 g of\nKOH (98%). The chosen ratio of materials results in chemical substitution corresponding to\n4",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15",
+                    "p4_l16",
+                    "p4_l17",
+                    "p4_l18"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "the highest superconducting transition temperature using setups in Fig. 2(a) and Fig. 3(a).\nPrior to every growth, the mixed materials were heated to 225◦ C and homogenized for 7\nhours in the sealed growth chamber under flow of humid nitrogen of 10 ccm regulated by a\nprecise two-membrane regulator. A Teflon magnetic stirrer (50 rpm) was used to facilitate\nhomogenization. Nitrogen (5N purity) was bubbled through a water flask that was kept at\n55◦ C first and then driven through the growth chamber. Nominal solution temperatures\nbetween 210◦ C and 270◦ C were tested, while 225◦ C resulted in the best crystal quality,\nso this temperature was used for all experiments presented in this paper. Depending on the\nsetup the crystal growth duration varied between 2 and 10 days.\nFor the constant current two-electrode setup, 0.2–10 mA was used. High purity platinum\nwires were used for electrodes, see also discussion for details. For the last, most compre-\nhensive setup shown in Fig. 4(a), a Metrohm Autolab PGSTAT204 potentiostat configured\nin a three electrode arrangement was used for growth control. The crystal batch used for\nthe magnetic-susceptibility result in Fig. 4 was grown at a nominal 50 mV versus a BKBO\nreference electrode with x ≈ 0.4. The detailed EIS analysis in Fig. 6 was obtained from a\nseparate growth at nominal 35 mV using the same three-electrode cell geometry and ther-\nmal conditions. In this setup the counter electrode was made of 19×3 cm2 oriented (100)\npolycrystalline platinum foil in a shape of a cylinder positioned around both reference and\nworking electrodes. The working electrode was a 0.5 mm diameter 5N Pt wire flame-polished\nto form an approximately 1 mm recrystallized, faceted bead at its end. In all experiments\nthe reference and working electrodes were immersed 15mm into the solution at the midpoint\nof the solution depth.\nThe temperature dependence of the superconducting transition was measured using a\nQuantum Design MPMS.\n5",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l1",
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12",
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16",
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22",
+                    "p5_l23",
+                    "p5_l24",
+                    "p5_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Experimental",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 17.2,
+              "observation_ids": [
+                "p4_l11"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p6_l1",
+            "type": "section",
+            "page_start": 6,
+            "page_end": 14,
+            "children": [
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "The BKBO system is known to crystallize rather easily using electrochemical growth even\nwith simple control over the growth conditions. However, the poor crystal quality obtained\nunder these conditions requires a closer look at how the growth conditions influence the\ncrystal quality. In our work we start with Method 1, the basic setup shown in Fig. 2(a).\nFigure 2: Method 1 – Simple electrochemical growth setup (a). Here, 1 – constant current\nsource, 2 – movable electrodes, 3 – sealed growth chamber, 4 thermal insulation, 5 – 320\nml Teflon crucible with growth solution shown in blue, 6 – spinner and a hot plate. BKBO\ncrystals (b) grown with the setup to the left, and (c) magnetic susceptibility of the crystal\nabove.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "heading_p6_l11",
+                "type": "subsection",
+                "page_start": 6,
+                "page_end": 7,
+                "children": [
+                  {
+                    "id": "unidentified_p6_2",
+                    "type": "custom",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "text": "uration\nHere, we use a two-electrode configuration in an air tight steel chamber with 1 cm thick\nperiphery wool insulation and open loop bottom heating control. Both electrodes were\nuntreated 0.5mm Pt wires at about 15mm depth into the solution. Constant electrical\ncurrent of 2.5 mA was used for growth control. Large crystals with mostly irregular shape,\n6",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p6_l12",
+                        "p6_l13",
+                        "p6_l14",
+                        "p6_l15",
+                        "p6_l16",
+                        "p6_l17"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p7_1",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "Fig. 2(b), are consistently grown on a positively biased electrode in about two days. The\nmagneticsusceptibilityofthecollectedcrystalacrossthesuperconductingtransitionisshown\nin Fig. 2(c). Here, the onset of superconductivity is observed at around 32 K for the given\nstarting ratio of materials and did not depend on the value of growth electrical current. The\ntransitionissmoothandverybroadwithMeissnerphaseatthelowestmeasuredtemperature\nreaching only 55 volume percent. The broad character of the transition may be indicative\nof the presence of multiple structural domains with varying chemical substitution levels and\ndifferent Tc. The monotonic character of this broad transition may suggest the presence of\nstatistically large number of domains. This is also consistent with the small Meissner phase\nvolume such that only about half of the sample volume becomes superconducting. It has\nto be noted that growth current variation between 500 uA and 5 mA did not significantly\nmodify superconducting transition width or its monotonicity, but larger currents results\nyielded larger growth rates.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l1",
+                        "p7_l2",
+                        "p7_l3",
+                        "p7_l4",
+                        "p7_l5",
+                        "p7_l6",
+                        "p7_l7",
+                        "p7_l8",
+                        "p7_l9",
+                        "p7_l10",
+                        "p7_l11",
+                        "p7_l12",
+                        "p7_l13"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Method 1: Constant current growth using a two-electrode config-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.3,
+                  "observation_ids": [
+                    "p6_l11"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p7_l14",
+                "type": "subsection",
+                "page_start": 7,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p7_2",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "configuration\nIn order to improve the crystal quality, we made changes to the growth setup by improving\nthe thermal insulation and switching from the bottom heating source to a circular periph-\neral heating element embedded into a closed loop regulation circuit with a thermocouple\nlocated at the bottom of the steel chamber which is shown schematically in Fig. 3(a). After\nthorough testing, such modifications resulted in smaller temperature variation across the\ngrowth solution at 225◦ C, decreasing from 20◦ C for the setup in Fig. 2(a) to under 10◦\nC for the setup in Fig. 3(a). The crystals grown using this improved setup with the same\nratio of starting materials as in the previous setup resulted in crystals shown in Fig. 3(b)\nwhen using a 2.5 mA constant growth current. The collected crystals are characterized by\nlarge cubic-shaped inter-grown domains with distinct circular defects on their surfaces, pos-\nsibly a result of screw dislocations formed during the growth. Superconducting transition\n7",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l15",
+                        "p7_l16",
+                        "p7_l17",
+                        "p7_l18",
+                        "p7_l19",
+                        "p7_l20",
+                        "p7_l21",
+                        "p7_l22",
+                        "p7_l23",
+                        "p7_l24",
+                        "p7_l25",
+                        "p7_l26",
+                        "p7_l27"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p8_1",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "probed by magnetic susceptibility for these crystals is shown in Fig. 3(c). Similarly to the\nFig. 2(c), it shows an onset of superconductivity at 32 K and a similar width with a slightly\nlarger Meissner phase volume. However, unlike in the previous experiment the transition is\nnot smooth but features a distinct step-like character. Such character suggests presence of\na fewer number of relatively homogeneously doped domains each with a different chemical\nsubstitution level, x, as compared to the previous experiment.\nFigure 3: Method 2 – An improved growth setup (a), here, in addition to the setup in\nFig. 2(a) added top thermal insulation (1), increased thickness of the side walls insulation\n(2), added evenly winded tape heating element (3), feedback thermocouple (4), and only\nspinner used in (5). BKBO crystals (b) grown with the setup to the left, and (c) magnetic\nsusceptibility of the crystal above.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l1",
+                        "p8_l2",
+                        "p8_l3",
+                        "p8_l4",
+                        "p8_l5",
+                        "p8_l6",
+                        "p8_l7",
+                        "p8_l8",
+                        "p8_l9",
+                        "p8_l10",
+                        "p8_l11"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Method 2: Constant current growth using an improved two-electrode",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.3,
+                  "observation_ids": [
+                    "p7_l14"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l12",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 9,
+                "children": [
+                  {
+                    "id": "unidentified_p8_2",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "figuration with in-situ EIS\nIn the final and most comprehensive setup in this work the top insulation is further increased\nand we also added the bottom thermal insulation as shown schematically in Fig. 4(a). The\nmost significant modification was the from a constant current two-electrode setup to a po-\ntentiostatic three-electrode setup. The final setup used for growth is shown in Fig. 4(b)\n8",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l13",
+                        "p8_l14",
+                        "p8_l15",
+                        "p8_l16",
+                        "p8_l17",
+                        "p8_l18"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p9_1",
+                    "type": "custom",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "text": "and (c) without and with top insulation respectively. Following the pioneering work in,22 a\nBKBO crystal with x ≈ 0.4, prepared using a constant-current two-electrode configuration,\nwas used as the reference electrode. Also, the counter electrode was changed to be a large\noriented (100) polycrystalline platinum foil bent into a cylinder encircling the reference and\nworking electrodes. The 0.5 mm diameter 5N Pt working electrode was flame-polished to\nform an approximately 1 mm recrystallized, faceted bead at the end in order to provide a\nreproducible initial surface for growth. Two representative potentiostatic growths are distin-\nguished here: the 50 mV batch, which produced the crystal characterized in Fig. 4(e), and\nthe 35 mV batch, which is used for the detailed EIS analysis below. For the 35 mV dataset\nanalyzed below, in addition to monitoring the dc current, EIS spectra were measured at\nthe deposition potential every 10 min using a 5 mV RMS sine wave potential perturbation\nover a frequency range of 0.1Hz to 100 kHz. The data was fit to equivalent circuits using\ndearEIS.25",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p9_l1",
+                        "p9_l2",
+                        "p9_l3",
+                        "p9_l4",
+                        "p9_l5",
+                        "p9_l6",
+                        "p9_l7",
+                        "p9_l8",
+                        "p9_l9",
+                        "p9_l10",
+                        "p9_l11",
+                        "p9_l12",
+                        "p9_l13"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Method 3: Constant potential growth using a three-electrode con-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.3,
+                  "observation_ids": [
+                    "p8_l12"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p9_l14",
+                "type": "subsection",
+                "page_start": 9,
+                "page_end": 10,
+                "children": [
+                  {
+                    "id": "unidentified_p9_2",
+                    "type": "custom",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "text": "The morphology of the grown crystals using this setup, like in the previous setup, also\nreveals the cubic character of the crystal structure with large inter-grown domains that are\nshown in Fig. 4(d). However, these crystals show no indication of circular defects and the\nsurfaces are flat and shiny. After separation of domains, we measured the temperature\ndependence of magnetic susceptibility on these single crystals that is shown in Fig. 4(e).\nThe crystal shown in Fig. 4(e) was separated from the 50 mV aggregate versus the BKBO\nreference electrode. Several qualitative differences relative to the previous experiments are\nobserved here. First, the transition width is much sharper for these crystals indicating high\nhomogeneity of chemical substitution. Second, to within the experimental error, the sample\ndemonstrates full Meissner phase. It has to be noted that despite the identical ratio of\nstarting materials and growth temperature, the crystal has a lower Tc than those obtained\nunder the previous two-electrode constant-current conditions. This indicates a different\n9",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p9_l15",
+                        "p9_l16",
+                        "p9_l17",
+                        "p9_l18",
+                        "p9_l19",
+                        "p9_l20",
+                        "p9_l21",
+                        "p9_l22",
+                        "p9_l23",
+                        "p9_l24",
+                        "p9_l25",
+                        "p9_l26",
+                        "p9_l27"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p10_1",
+                    "type": "custom",
+                    "page_start": 10,
+                    "page_end": 10,
+                    "children": [],
+                    "text": "superconducting composition or state, although Tc alone does not uniquely determine the\npotassium content across the BKBO superconducting dome. Earlier electrochemical work\nestablished that the applied potential can influence potassium incorporation.22\nFigure 4: Method 3 – The final setup used in this work (a), here the additional improvements\ninclude a potentiostat (1), three-electrode configuration (2), top thermal insulation with\nincreased thickness (3), reference BKBO electrode (4), large area Pt foil in a shape of a\ncylinder used as a counter electrode (5), and bottom thermal insulation (6). The actual\nview of the growth chamber with insulation and electrodes are shown in (b) and (c). BKBO\ncrystals (d) grown with the setup to the left, and (e) magnetic susceptibility of the crystal\nabove.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p10_l1",
+                        "p10_l2",
+                        "p10_l3",
+                        "p10_l4",
+                        "p10_l5",
+                        "p10_l6",
+                        "p10_l7",
+                        "p10_l8",
+                        "p10_l9",
+                        "p10_l10"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Crystal Characterization",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.3,
+                  "observation_ids": [
+                    "p9_l14"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p10_l11",
+                "type": "subsection",
+                "page_start": 10,
+                "page_end": 14,
+                "children": [
+                  {
+                    "id": "unidentified_p10_2",
+                    "type": "custom",
+                    "page_start": 10,
+                    "page_end": 10,
+                    "children": [],
+                    "text": "The detailed EIS analysis below was performed on the separate 35 mV growth versus the\nBKBO reference electrode. EIS was performed during the crystal growth to characterize the\nchanges in the interface during the nucleation and growth of the crystal on a flame annealed\nPt bead electrode. The EIS were performed at the growth potential. The current during\ncrystal growth was small (uA) which suggests that the interface was slowly changing which\nwas assumed to be constant over the course of the EIS measurement (a few minutes). Only\n10",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p10_l12",
+                        "p10_l13",
+                        "p10_l14",
+                        "p10_l15",
+                        "p10_l16",
+                        "p10_l17",
+                        "p10_l18"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p11_1",
+                    "type": "custom",
+                    "page_start": 11,
+                    "page_end": 11,
+                    "children": [],
+                    "text": "the data from 5 Hz to 10 kHz was used for fitting to equivalent circuit models (ECM) as\nit was the most reliable range with stray capacitance affecting the high frequency data and\nconvection/stirring affecting the data below 5Hz. The ECMs used are shown in Fig. 5.\nFigure 5: Equivalent circuit model used to fit the EIS data: Rsoln – solution resistance;\nQdl – constant phase element modeling the double layer capacitance; Rct – charge transfer\nresistance modelling the electrochemical crystal growth kinetics; W1 – Warburg impedance\nmodelling the mass transport of the reactants; L1 – inductance modelling the non-ideal\nconnectors and influence of the environment on the EIS measurement.\nThe ECM fitting results are shown in Fig. 6 along with the dc current over the 120\nh crystal growth process. The Rsoln and L (shown in SI) do not change during the crystal\ngrowth(1Ohmand0.5uHrespectively)confirmingthestabilityoftheelectrochemicalsetup.\nTheparametersfromtheequivalentcircuitfittingareshowninFig.6withtheuncertainty\nshown as error bars. A selection of the 500 fits are given in SI showing the quality of the\nfitting. The χ2 were consistently smaller than 10−5. The small errors in the parameter\nestimates shows that the equivalent circuit used did not over parameterize the analysis\nwhich suggests that the parameters are all meaningful and can be assigned to physical\ncharacteristics of the electrochemical interface.\nA constant phase element\n1\nZ =\nCPE Qdl(j2πf)n\nand was used to model the working electrode interface. A CPE can capture the non-ideal\ncapacitive nature of a changing interface where the surface area and dielectric constant\nevolves non-uniformly with time. In this case, a growing crystal was not observed to be\nuniformly occurring over the whole Pt working electrode surface necessitating the use of\na CPE. This works well for these crystal growth cases where the interface will contain\n11",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p11_l1",
+                        "p11_l2",
+                        "p11_l3",
+                        "p11_l4",
+                        "p11_l5",
+                        "p11_l6",
+                        "p11_l7",
+                        "p11_l8",
+                        "p11_l9",
+                        "p11_l10",
+                        "p11_l11",
+                        "p11_l12",
+                        "p11_l13",
+                        "p11_l14",
+                        "p11_l15",
+                        "p11_l16",
+                        "p11_l17",
+                        "p11_l18",
+                        "p11_l19",
+                        "p11_l20",
+                        "p11_l21",
+                        "p11_l22",
+                        "p11_l23",
+                        "p11_l24",
+                        "p11_l25",
+                        "p11_l26",
+                        "p11_l27"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p12_1",
+                    "type": "custom",
+                    "page_start": 12,
+                    "page_end": 12,
+                    "children": [],
+                    "text": "both Pt and Pt coated with growing crystals. The parameter n reflects this non-ideality:\nn = 1 represents a perfect capacitor, n = 0 a perfect resistor, with values in-between\ncharacterizing a leaky capacitor or resistor. In this case, n starts at 0.85 and slowly decreases\nto 0.6, representing an interface which has significant heterogeneity, reflecting the presence of\ngrowing crystals. The Qdl parameter significantly changes during the initial stages of crystal\ngrowthatshorttimes(< 20hrs). Thisisinaccordancewiththeincreaseinthedccurrentand\na decrease in the Rct. These dramatic changes can be associated with an increase in the area\nof the interface (since the crystals are conductive given that they support electrochemical\ngrowth) and a change in the interfacial composition. It appears that the initial 8 hours\nis constant with a dramatic increase in Qdl observed at 10 hours. This corresponds to an\nincrease in the crystal growth current. These dramatic changes occurring at 8 h can be\nexplained by the growth of the crystal on the Pt surface after a long period of nucleation\nsites being created until some are stable enough to grow. The rapid growth at 10 hours\nincreases the magnitude of Qdl by 25X which is most reasonably interpreted as a fast growth\nfrom a few nuceli. This is also observed as a decrease in the CPE exponent (n) which can be\ninterpreted as a rougher surface resulting in a larger surface heterogeneity. The dc current\nalso reflects increased rate of crystal growth (see electrochemical reaction). The resistance\nto charge transfer (Rct), or rate of electrochemical crystal growth decreases significantly over\nthe first 10 h. This can also be explained as initial creation of nuceli on a Pt surface which\ncan be a kinetically slow process. But after the formation of nuclei, growth on existing\nBKBO crystals is more facile which is reflected in a decrease in the Rct or increase in the\nrate (coincident with the increase in dc current and surface area (via Qdl)). The Warburg\nimpedance which characterizes the mass transport to the surface and is sensitive to the\nsurface area also shows a lower impedance when the surface area increases due to facile mass\ntransport to a surface with increased crystal growth and larger area. Overall, the ECM\nparameters are consistently describing the nucleation and growth of crystals on some parts\nof the Pt bead electrode.\n12",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p12_l1",
+                        "p12_l2",
+                        "p12_l3",
+                        "p12_l4",
+                        "p12_l5",
+                        "p12_l6",
+                        "p12_l7",
+                        "p12_l8",
+                        "p12_l9",
+                        "p12_l10",
+                        "p12_l11",
+                        "p12_l12",
+                        "p12_l13",
+                        "p12_l14",
+                        "p12_l15",
+                        "p12_l16",
+                        "p12_l17",
+                        "p12_l18",
+                        "p12_l19",
+                        "p12_l20",
+                        "p12_l21",
+                        "p12_l22",
+                        "p12_l23",
+                        "p12_l24",
+                        "p12_l25",
+                        "p12_l26",
+                        "p12_l27",
+                        "p12_l28"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p13_1",
+                    "type": "custom",
+                    "page_start": 13,
+                    "page_end": 13,
+                    "children": [],
+                    "text": "After 20 h, the growth occurs without significant changes in the ECM parameters and a\nslow decrease in the dc current. This can be explained as a consistent growth of the BKBO\ncrystal or crystals on the Pt electrode. This occurs up to 100 h where significant changes are\nobserved in the Qdl. No significant change was observed in the dc current nor other ECM\nparameters. Qdl is sensitive to the heterogeneity of the interface suggesting that this increase\nmaybe a signature of the start of a new crystal growth process occurring on another part\nof the Pt surface, or an extra phase within the growing crystal. The changes are similar to\nthe initial crystal growth parameters which suggests the presence of another growing crystal\non a different part of the Pt electrode. This observation can be useful to ensure that the\ncrystal grown is of high quality, as it is important to know when to stop the crystal growth\nto ensure high quality samples without significant overgrowth. Monitoring the in-situ EIS\ncan be a strategy for deciding when the growth should be stopped.\nThe corresponding 50 mV growth was analyzed in the same manner and the results are\nsummarized in the Supplementary Information. Compared with the 35 mV growth, the\ndeposition current is more than an order of magnitude larger, while Rct and the Warburg\nparameter (W) are substantially smaller and Qdl is approximately an order of magnitude\nlarger. The50mVdataretainthesamebroadevolutionfromaninductionstageintoincreas-\ning crystal growth, but the much larger deposition rate maintains a large electrochemically\nactive interface as growth proceeds. The mass-transport contribution does not indicate a\nsimple transition to strongly diffusion-limited growth. Thus, a change of only 15 mV pro-\nduces a pronounced change in the electrocrystallization rate, illustrating the importance of\npotentiostatic control and the additional information available from in-situ EIS informing\non the crystal growth process in-situ.\n13",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p13_l1",
+                        "p13_l2",
+                        "p13_l3",
+                        "p13_l4",
+                        "p13_l5",
+                        "p13_l6",
+                        "p13_l7",
+                        "p13_l8",
+                        "p13_l9",
+                        "p13_l10",
+                        "p13_l11",
+                        "p13_l12",
+                        "p13_l13",
+                        "p13_l14",
+                        "p13_l15",
+                        "p13_l16",
+                        "p13_l17",
+                        "p13_l18",
+                        "p13_l19",
+                        "p13_l20",
+                        "p13_l21",
+                        "p13_l22",
+                        "p13_l23",
+                        "p13_l24"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p14_1",
+                    "type": "custom",
+                    "page_start": 14,
+                    "page_end": 14,
+                    "children": [],
+                    "text": "Figure 6: Some of the ECM fitted parameters for the 35 mV batch (a) Rct, b) Warburg\nimpedance (σ), c) Qdl and d) n the CPE exponent) determined using the circuit shown in\nFig. 5 (the complete fitting results are given in SI) e) is the dc current measured during\ndeposition. The Nyquist and Bode fits are provided in SI for EIS data measured at the red\ntime points.\n14",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p14_l1",
+                        "p14_l2",
+                        "p14_l3",
+                        "p14_l4",
+                        "p14_l5",
+                        "p14_l6"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "EIS characterization",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.3,
+                  "observation_ids": [
+                    "p10_l11"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Results and Discussion",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 17.2,
+              "observation_ids": [
+                "p6_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p15_l1",
+            "type": "section",
+            "page_start": 15,
+            "page_end": 15,
+            "children": [
+              {
+                "id": "unidentified_p15_1",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "By systematic study of the importance of the control of a variety of growth conditions in the\nelectrochemical synthesis of BKBO crystals, we find that the highest crystal quality can be\nachieved with potentiostatic growth using a three-electrode setup and advanced temperature\ncontrol. Comparison of the 35 and 50 mV potentiostatic growths shows that a 15 mV change\nin controlled working-electrode potential produces a large change in deposition rate and in\nthe fitted EIS parameters. Due to the direct control over the potential difference in three-\nelectrode electrochemcial synthesis, this approach may also be relevant to other transition\nmetal oxide families where indirect physical quantities are tuned during synthesis, such as\npressure, or initial ratio of components. Moreover, the ability to monitor the growth using\nin-situ EIS measurements provides an opportunity to carefully choose the conditions where\ngrowth can be terminated in order to ensure high quality crystals are recovered",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l2",
+                    "p15_l3",
+                    "p15_l4",
+                    "p15_l5",
+                    "p15_l6",
+                    "p15_l7",
+                    "p15_l8",
+                    "p15_l9",
+                    "p15_l10",
+                    "p15_l11",
+                    "p15_l12"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Conclusions",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 17.2,
+              "observation_ids": [
+                "p15_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p15_l13",
+            "type": "section",
+            "page_start": 15,
+            "page_end": 15,
+            "children": [
+              {
+                "id": "unidentified_p15_2",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "We would like to thank David Brown for the kind help in providing us facilities for this\nresearch in his lab. This work was supported by NSERC, CIFAR, and the Max Planck –\nUBC Stewart Blusson Quantum Matter Institute.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l14",
+                    "p15_l15",
+                    "p15_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Acknowledgement",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 17.2,
+              "observation_ids": [
+                "p15_l13"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 15,
+        "page_end": 18,
+        "children": [
+          {
+            "id": "heading_p15_l17",
+            "type": "references",
+            "page_start": 15,
+            "page_end": 18,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 17.2,
+              "observation_ids": [
+                "p15_l17"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p15_3",
+            "type": "custom",
+            "page_start": 15,
+            "page_end": 15,
+            "children": [],
+            "text": "(1) Cava RJ, Batlogg B, Krajewski JJ, Farrow R, Rupp LJ, White AE, Short K, Peck\nWF, Kometani T. Superconductivity near 30 K without copper: the Ba0.6K0.4BiO3\nperovskite. Nature. 1988 Apr;332(6167):814–6.\n(2) Hinks DG, Dabrowski B, Jorgensen JD, Mitchell AW, Richards DR, Pei S, Shi D.\nSynthesis, structure and superconductivity in the Ba1−xKxBiO3−y system. Nature. 1988\nJun;333(6176):836–8.\n15",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p15_l18",
+                "p15_l19",
+                "p15_l20",
+                "p15_l21",
+                "p15_l22",
+                "p15_l23",
+                "p15_l24"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p15_l17"
+            }
+          },
+          {
+            "id": "unidentified_p16_1",
+            "type": "custom",
+            "page_start": 16,
+            "page_end": 16,
+            "children": [],
+            "text": "(3) Mattheiss LF, Gyorgy EM, Johnson Jr DW. Superconductivity above 20 K in the Ba-\nK-Bi-O system. Physical Review B. 1988 Mar 1;37(7):3745.\n(4) Pei S, Jorgensen JD, Dabrowski B, Hinks DG, Richards DR, Mitchell AW, Newsam\nJM, Sinha SK, Vaknin D, Jacobson AJ. Structural phase diagram of the Ba1−xKxBiO3\nsystem. Physical Review B. 1990 Mar 1;41(7):4126.\n(5) Kumar P, Hall D, Goodrich RG. Thermodynamics of the superconducting phase tran-\nsition in Ba0.6K0.4BiO3. Physical Review Letters. 1999 May 31;82(22):4532.\n(6) Meregalli V, Savrasov SY. Electron-phonon coupling and properties of doped BaBiO3.\nPhysical Review B. 1998 Jun 1;57(22):14453.\n(7) BatloggB,CavaRJ,RuppJrLW,MujsceAM,KrajewskiJJ,RemeikaJP,PeckJrWF,\nCooper AS, Espinosa GP. Density of states and isotope effect in BiO superconductors:\nEvidence for nonphonon mechanism. Physical Review Letters. 1988 Oct 3;61(14):1670.\n(8) Hall D, Goodrich RG, Grenier CG, Kumar P, Chaparala M, Norton ML. Magnetiza-\ntion measurements on single crystals of superconducting Ba0.6K0.4BiO3. Philosophical\nMagazine B. 2000 Jan 1;80(1):61–79.\n(9) Naamneh M, Yao M, Jandke J, Ma J, Risti´c Z, Teyssier J, Stucky A, van der\nMarel D, Gawryluk DJ, Shang T, Medarde M. Cooling a polaronic liquid: Phase\nmixture and pseudogap-like spectra in superconducting Ba1−xKxBiO3. arXiv preprint\narXiv:1808.06135. 2018 Aug 18.\n(10) Sleight AW. Bismuthates: BaBiO3 and related superconducting phases. Physica C:\nSuperconductivity and its Applications. 2015 Jul 15;514:152–65.\n(11) Noji T, Kato T, Imai Y, Koike Y. Single-Crystal Growth of the Superconducting\nBa1−xKxBiO3 by the Floating-Zone Method. In AIP Conference Proceedings 2006 Sep\n7 (Vol. 850, No. 1, pp. 671–672). American Institute of Physics.\n16",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p16_l1",
+                "p16_l2",
+                "p16_l3",
+                "p16_l4",
+                "p16_l5",
+                "p16_l6",
+                "p16_l7",
+                "p16_l8",
+                "p16_l9",
+                "p16_l10",
+                "p16_l11",
+                "p16_l12",
+                "p16_l13",
+                "p16_l14",
+                "p16_l15",
+                "p16_l16",
+                "p16_l17",
+                "p16_l18",
+                "p16_l19",
+                "p16_l20",
+                "p16_l21",
+                "p16_l22",
+                "p16_l23",
+                "p16_l24",
+                "p16_l25"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p15_l17"
+            }
+          },
+          {
+            "id": "unidentified_p17_1",
+            "type": "custom",
+            "page_start": 17,
+            "page_end": 17,
+            "children": [],
+            "text": "(12) Nagata Y, Mishiro A, Uchida T, Ohtsuka M, Samata H. Normal-state transport prop-\nerties of Ba1−xKxBiO3 crystals. Journal of Physics and Chemistry of Solids. 1999 Dec\n1;60(12):1933–42.\n(13) Tajima S, Uchida S, Masaki A, Takagi H, Kitazawa K, Tanaka S, Katsui A. Optical\nstudy of the metal-semiconductor transition in BaPb1−xBixO3. Physical Review B. 1985\nNov 15;32(10):6302.\n(14) Chainani A, Yokoya T, Kiss T, Shin S, Nishio T, Uwe H. Electron-phonon coupling\ninduced pseudogap and the superconducting transition in Ba0.67K0.33BiO3. Physical\nReview B. 2001 Oct 18;64(18):180509.\n(15) Kim BJ, Kim YC, Kim HT, Kang KY, Lee JM. EXAFS observation of two distinct Bi–\nO distances below Tc for a Ba0.6K0.4BiO3 single crystal. Physica C: Superconductivity.\n2003 Oct 1;392:286–90.\n(16) Kim DC, Baranov AN, Kim JS, Kang HR, Kim BJ, Kim YC, Pshirkov JS, Antipov\nEV, Park YW. Superconductivity of Ba1−xKxBiO3 (0.35 < x < 1) Synthesized by the\nHigh Pressure and High Temperature Technique. Journal of Superconductivity. 2002\nOct;15(5):331–4.\n(17) Kim DC, Baranov AN, Kim JS, Kang HR, Kim BJ, Kim YC, Pshirkov JS, Antipov\nEV, Park YW. High pressure synthesis and superconductivity of Ba1−xKxBiO3 (0.35 <\nx < 1). Physica C: Superconductivity. 2003 Jan 1;383(4):343–53.\n(18) Utz B, Wiest F, Prusseit W, Berberich P, Kinder H. Ba1−xKxBiO3 epitaxy on\nvarious substrate materials. IEEE Transactions on Applied Superconductivity. 1995\nJun;5(2):1351–4.\n(19) Liu SF, Fu WT. Synthesis of superconducting Ba1−xKxBiO3 by a modified molten salt\nprocess. Materials Research Bulletin. 2001 May 1;36(7-8):1505–12.\n17",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p17_l1",
+                "p17_l2",
+                "p17_l3",
+                "p17_l4",
+                "p17_l5",
+                "p17_l6",
+                "p17_l7",
+                "p17_l8",
+                "p17_l9",
+                "p17_l10",
+                "p17_l11",
+                "p17_l12",
+                "p17_l13",
+                "p17_l14",
+                "p17_l15",
+                "p17_l16",
+                "p17_l17",
+                "p17_l18",
+                "p17_l19",
+                "p17_l20",
+                "p17_l21",
+                "p17_l22",
+                "p17_l23",
+                "p17_l24",
+                "p17_l25"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p15_l17"
+            }
+          },
+          {
+            "id": "unidentified_p18_1",
+            "type": "custom",
+            "page_start": 18,
+            "page_end": 18,
+            "children": [],
+            "text": "(20) Zhao LZ, Yin B, Zhang JB, Li JW, Xu CY, Xie M, Liu SH. Synthesis of BaKBiO\nsuperconductor at 260◦ C by direct precipitation from KOH melts. Physica C: Super-\nconductivity. 1997 Aug 1;282:723–4.\n(21) Mosley WD, Liu JZ, Matsushita A, Lee YP, Klavins P, Shelton RN. Preparation and\nsuperconductivity of Ba1−xKxBiO3 single crystals. Journal of Crystal Growth. 1993\nMar;128(1-4):804–7.\n(22) Han PD, Chang L, Payne DA. Top-seeded growth of superconducting (Ba1−xKx)BiO3\ncrystals by an electrochemical method. Journal of Crystal Growth. 1993 Mar 1;128(1-\n4):798–803.\n(23) Norton ML, Tang HY. Superconductivity at 32 K in electrocrystallized bar-\nium potassium bismuth oxide. Chemistry of Materials. 1991;3(3):431–434.\ndoi:10.1021/cm00015a015.\n(24) Zheng XG, Taira M, Suzuki M, Xu CN. Growing a periodic microstructure on\nthe superconductor crystal surface by electrocrystallization. Applied Physics Letters.\n1998;72(10):1155–1157. doi:10.1063/1.120999.\n(25) Yrja¨n¨a, V. (2022). DearEIS - A GUI program for analyzing impedance spectra. Journal\nof Open Source Software, 7(80), 4808.\n18",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p18_l1",
+                "p18_l2",
+                "p18_l3",
+                "p18_l4",
+                "p18_l5",
+                "p18_l6",
+                "p18_l7",
+                "p18_l8",
+                "p18_l9",
+                "p18_l10",
+                "p18_l11",
+                "p18_l12",
+                "p18_l13",
+                "p18_l14",
+                "p18_l15",
+                "p18_l16",
+                "p18_l17",
+                "p18_l18"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p15_l17"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

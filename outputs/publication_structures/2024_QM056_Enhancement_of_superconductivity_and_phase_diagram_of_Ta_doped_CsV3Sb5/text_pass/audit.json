@@ -1,0 +1,231 @@
+{
+  "source_sha256": "296129474c21dbd4a52d555c8f1ff51f9b4b200f14128a1422a4e9f94acc2aaa",
+  "schema_sha256": "9b756d2cb803c07756ce13e73f0caae03d68a972bbe6506c6a8a34c380e94060",
+  "validation": {
+    "schema_valid": true,
+    "page_ranges_valid": true,
+    "unique_ids": true,
+    "nodes": 468
+  },
+  "coverage_complete": true,
+  "unowned_blocks": [],
+  "multiply_owned_blocks": {},
+  "observed_blocks": 388,
+  "unidentified_nodes": [
+    "x000013",
+    "x000017",
+    "x000020",
+    "x000022",
+    "x000033",
+    "x000034",
+    "x000042",
+    "x000048",
+    "x000102",
+    "x000104",
+    "x000106",
+    "x000001",
+    "x000002",
+    "x000003",
+    "x000004",
+    "x000005",
+    "x000006",
+    "x000007"
+  ],
+  "type_counts": {
+    "article": 1,
+    "front_matter": 1,
+    "title": 40,
+    "body": 1,
+    "publication_metadata": 16,
+    "paragraph": 30,
+    "custom": 18,
+    "section": 3,
+    "subsection": 2,
+    "subsubsection": 5,
+    "back_matter": 1,
+    "references": 1,
+    "reference": 42,
+    "citation": 42,
+    "citation_year": 42,
+    "authors": 42,
+    "author": 64,
+    "citation_venue": 38,
+    "citation_volume": 38,
+    "citation_pages": 38,
+    "acknowledgements": 1,
+    "author_contributions": 1,
+    "competing_interests": 1
+  },
+  "layout": [
+    {
+      "page": 1,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 3,
+      "band_layouts": [
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single"
+      ],
+      "raw_line_count": 61
+    },
+    {
+      "page": 2,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 3,
+      "band_layouts": [
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single"
+      ],
+      "raw_line_count": 80
+    },
+    {
+      "page": 3,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 5,
+      "band_layouts": [
+        "spanning_or_single",
+        "spanning_or_single",
+        "mixed",
+        "spanning_or_single",
+        "spanning_or_single"
+      ],
+      "raw_line_count": 37
+    },
+    {
+      "page": 4,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 5,
+      "band_layouts": [
+        "spanning_or_single",
+        "mixed",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single"
+      ],
+      "raw_line_count": 44
+    },
+    {
+      "page": 5,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 4,
+      "band_layouts": [
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single"
+      ],
+      "raw_line_count": 48
+    },
+    {
+      "page": 6,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 4,
+      "band_layouts": [
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single"
+      ],
+      "raw_line_count": 13
+    },
+    {
+      "page": 7,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 3,
+      "band_layouts": [
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single"
+      ],
+      "raw_line_count": 100
+    },
+    {
+      "page": 8,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 3,
+      "band_layouts": [
+        "spanning_or_single",
+        "spanning_or_single",
+        "spanning_or_single"
+      ],
+      "raw_line_count": 60
+    }
+  ],
+  "independently_verified_correct": false,
+  "reference_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "citations": {
+    "entries": 42,
+    "field_counts": {
+      "citation_year": 42,
+      "author": 64,
+      "title": 39,
+      "citation_venue": 38,
+      "citation_volume": 38,
+      "citation_pages": 38
+    },
+    "partial_entries": 37,
+    "all_require_review": true,
+    "policy": "Preserve raw text; parse literal spans; keep unsupported syntax unresolved; no bibliographic existence verification."
+  },
+  "association_policy": "Explicit references propose a parent; ambiguity stays unresolved; all relations require review."
+}

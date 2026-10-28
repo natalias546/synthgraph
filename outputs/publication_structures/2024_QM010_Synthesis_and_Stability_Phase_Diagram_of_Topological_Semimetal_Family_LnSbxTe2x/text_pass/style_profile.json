@@ -1,0 +1,445 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "MyriadPro-Regular",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "pubs.acs.org/cm Article"
+      ]
+    },
+    {
+      "font": "MyriadPro-Semibold",
+      "size": 17.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Synthesis and Stability Phase Diagram of Topological Semimetal",
+        "Family LnSbxTe2−x−δ"
+      ]
+    },
+    {
+      "font": "ArnoPro-ItalicSubhead",
+      "size": 13.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Published as part of Chemistry of Materials special issue “In Memory of Prof. Francis DiSalvo”."
+      ]
+    },
+    {
+      "font": "ArnoPro-Subhead",
+      "size": 13.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Tyger H. Salters, James Colagiuri, Andre Koch Liston, Josh Leeman, Tanya Berry, and Leslie M. Schoop*"
+      ]
+    },
+    {
+      "font": "MyriadPro-Regular",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "CiteThis:https://doi.org/10.1021/acs.chemmater.4c02198 ReadOnline"
+      ]
+    },
+    {
+      "font": "Roboto-Regular",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "ACCESS Metrics & More Article Recommendations *sı Supporting Information"
+      ]
+    },
+    {
+      "font": "TimesNewRoman",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        ".selcitra"
+      ]
+    },
+    {
+      "font": "ArnoPro-Regular",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 429,
+      "long_prose_lines": 4,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "ABSTRACT: The solid solution LnSbxTe2−x−δ (Ln = lanthanide)",
+        "isafamilyofsquare-nettopologicalsemimetalsthatexhibittunable",
+        "chargedensitywave(CDW)distortionsandbandfillingdependent"
+      ]
+    },
+    {
+      "font": "TimesNewRoman",
+      "size": 4.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        ".)CTU( dehsilbup",
+        "20:15:41",
+        "4202"
+      ]
+    },
+    {
+      "font": "TimesNewRoman",
+      "size": 2.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "ta",
+        "yletamitigel"
+      ]
+    },
+    {
+      "font": "TimesNewRoman",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        ",4"
+      ]
+    },
+    {
+      "font": "TimesNewRoman",
+      "size": 3.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "rebmeceD",
+        "erahs",
+        "aiv"
+      ]
+    },
+    {
+      "font": "TimesNewRoman",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "NOTECNIRP"
+      ]
+    },
+    {
+      "font": "TimesNewRoman",
+      "size": 3.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "ot"
+      ]
+    },
+    {
+      "font": "TimesNewRoman",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "senilediuggnirahs/gro.sca.sbup//:sptth"
+      ]
+    },
+    {
+      "font": "ArnoPro-Regular",
+      "size": 32.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        3,
+        4,
+        6
+      ],
+      "examples": [
+        "■",
+        "■",
+        "■"
+      ]
+    },
+    {
+      "font": "MyriadPro-Semibold",
+      "size": 10.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "examples": [
+        "INTRODUCTION",
+        "EXPERIMENTAL SECTION",
+        "RESULTS AND DISCUSSION"
+      ]
+    },
+    {
+      "font": "MyriadPro-Regular",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "© XXXX American Chemical Society"
+      ]
+    },
+    {
+      "font": "ArnoPro-Regular",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 265,
+      "long_prose_lines": 19,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "examples": [
+        "Received: August 5, 2024",
+        "Revised: November 19, 2024",
+        "Accepted: November 20, 2024"
+      ]
+    },
+    {
+      "font": "MyriadPro-Regular",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "https://doi.org/10.1021/acs.chemmater.4c02198",
+        "A Chem.Mater.XXXX,XXX,XXX−XXX",
+        "B https://doi.org/10.1021/acs.chemmater.4c02198"
+      ]
+    },
+    {
+      "font": "MyriadPro-Semibold",
+      "size": 8.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "Chemistry of Materials pubs.acs.org/cm Article",
+        "Chemistry of Materials pubs.acs.org/cm Article",
+        "Chemistry of Materials pubs.acs.org/cm Article"
+      ]
+    },
+    {
+      "font": "MyriadPro-Semibold",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Synthesis of LnSbxTe2−x−δ Phases. Powders and single crystals",
+        "Single-Crystal X-ray Diffraction. Single-crystal X-ray diffraction"
+      ]
+    },
+    {
+      "font": "MyriadPro-Semibold",
+      "size": 10.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        5
+      ],
+      "examples": [
+        "New LnSbxTe2−x−δ and Synthetic Limitations. While",
+        "Stability Phase Diagram of LnSbxTe2−x−δ. Figure 3",
+        "Stabilization of Late Ln into LnSbxTe2−x−δ via La"
+      ]
+    },
+    {
+      "font": "MyriadPro-Semibold",
+      "size": 9.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "■*sı Supporting Information",
+        "■Corresponding Author",
+        "Authors"
+      ]
+    },
+    {
+      "font": "ArnoPro-Italic",
+      "size": 10.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Leslie M. Schoop − Department of Chemistry, Princeton",
+        "University, Princeton, New Jersey 08544, United States;",
+        "Tyger H. Salters − Department of Chemistry, Princeton"
+      ]
+    },
+    {
+      "font": "ArnoPro-Italic",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        7,
+        8
+      ],
+      "examples": [
+        "Mater. 2022, 7, 1−7.",
+        "Nature 2019, 566, 447−449.",
+        "LaTe2. J. Solid State Chem. 2000, 149, 155−166."
+      ]
+    },
+    {
+      "font": "ArnoPro-Italic",
+      "size": 9.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "Sect.A:Found.Crystallogr. 2008, 64,112−122."
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

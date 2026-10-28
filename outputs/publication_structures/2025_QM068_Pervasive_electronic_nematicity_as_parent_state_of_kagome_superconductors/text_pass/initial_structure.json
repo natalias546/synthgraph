@@ -1,0 +1,2801 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2025_QM068_Pervasive_electronic_nematicity_as_parent_state_of_kagome_superconductors.pdf",
+    "pages": 17,
+    "sha256": "c878fe0b75cecd9b96c311f13b45cabeb5f0d53780683b19c2b14e39ca003b01",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 10.9,
+    "body_font_family": "CMR10"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 17,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 17,
+        "children": [
+          {
+            "id": "heading_p1_l1",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "unidentified_p1_1",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "superconductors",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "heading_p1_l3",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "title": "Muxian Xu,1,∗ Siyu Cheng,1,∗ Andrea Capa Salinas,2 Ganesh Pokharel,3,2",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l3"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l4",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "title": "Alexander LaFleur,1 Hong Li,1 Hengxin Tan,4 Brenden R. Ortiz,5 Qinwen Deng,6",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l4"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l5",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_2",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "1Department of Physics, Boston College,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l6"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Binghai Yan,7 Ziqiang Wang,1 Stephen D. Wilson,2 and Ilija Zeljkovic1,†",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l5"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l7",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_3",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "2Materials Department, University of California",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l8"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Chestnut Hill, Massachusetts 02467, USA",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l7"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l9",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_4",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "3Perry College of Mathematics, Computing, and Sciences,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l10"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Santa Barbara, Santa Barbara, California, USA",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l9"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l11",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_5",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "4School of Physics and Astronomy,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l12"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "University of West Georgia, Carrollton, GA 30118",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l11"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l13",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_6",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "5Materials Science and Technology Division,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l14"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Shanghai Jiao Tong University, Shanghai 200240, China",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l13"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l15",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p1_7",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "6Department of Physics, University of Pennsylvania, PA, USA\n7Department of Physics, Pennsylvania State University: State College, Pennsylvania, USA\n1\n5202\nvoN\n72\n]le-rts.tam-dnoc[\n1v20022.1152:viXra",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l16",
+                        "p1_l17",
+                        "p1_l18",
+                        "p1_l19",
+                        "p1_l20",
+                        "p1_l21",
+                        "p1_l22",
+                        "p1_l23"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p2_1",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "I. ABSTRACT",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l1"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Oak Ridge National Laboratory, Oak Ridge, TN 37831, USA",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l15"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l2",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_2",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "exciting playground for realizing and exploring exotic solid state phenomena.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l3"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Kagome superconductors AV3Sb5 (A = Cs, K, Rb) have developed into an",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p2_l2"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l4",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_3",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "tional symmetry of the lattice, but whether this may be a simple consequence\nof the symmetry of the underlying 2 × 2 charge density wave phase or an en-\ntirely different mechanism remains intensely debated. We use spectroscopic\nimaging scanning tunneling microscopy to explore the phase diagram of the\nprototypical kagome superconductor CsV3Sb5 as a function of doping. We in-\ntentionally suppress the charge density wave phase with chemical substitutions\nselectively introduced at two distinct lattice sites, and investigate the resulting\nsystem. We discover that rotational symmetry breaking of the electronic struc-\nture – now present in short-range nanoscale regions – persists in all samples, in\na wide doping range long after all charge density waves have been suppressed.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l5",
+                        "p2_l6",
+                        "p2_l7",
+                        "p2_l8",
+                        "p2_l9",
+                        "p2_l10",
+                        "p2_l11",
+                        "p2_l12",
+                        "p2_l13",
+                        "p2_l14"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Abundant experimental evidence suggests that electronic structure breaks rota-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p2_l4"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l15",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "title": "As such, our experiments uncover ubiquitous electronic nematicity across the",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p2_l15"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l16",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_4",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "points towards electronic nematicity as the intrinsic nature of the parent state of\nkagome superconductors, under which other exotic low-temperature phenomena\nsubsequently emerge.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l17",
+                        "p2_l18",
+                        "p2_l19"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "heading_p2_l20",
+                    "type": "subsubsection",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "title": "II. INTRODUCTION",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 10.9,
+                      "observation_ids": [
+                        "p2_l20"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "AV3Sb5 phase diagram, unrelated to the 2 × 2 charge density wave. This further",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p2_l16"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l21",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p2_5",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "ordering phases, electronic topology, and superconductivity in a variety of different com-\npounds [1]. Kagome superconductors AV3Sb5 have attracted particular attention on both\ntheoretical [2–9] and experimental [10–34] fronts, driven in large part by the observation of\nsuperconductivitythatappearstobreaktime-reversalsymmetryintheabsenceofmagnetism\nand various states breaking different spatial symmetries [10, 11, 13, 14, 21, 27, 28, 34–38].\nThese phenomena are generally found to occur within the umbrella of the 2 × 2 charge den-\nsity wave (CDW) phase, which forms in all stoichiometric members of the AV3Sb5 family\n∗ These authors contributed equally to this work\n† ilija.zeljkovic@bc.edu\n2",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l22",
+                        "p2_l23",
+                        "p2_l24",
+                        "p2_l25",
+                        "p2_l26",
+                        "p2_l27",
+                        "p2_l28",
+                        "p2_l29",
+                        "p2_l30",
+                        "p2_l31"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p3_1",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "below about 80-100 K [19, 35]. Rotational symmetry breaking of the electronic structure\nis also detected around a similar temperature, in close proximity to the onset of the 2 ×\n2 CDW phase [21, 27, 34] or slightly above [38]. As the 2 × 2 CDW phase breaks rota-\ntional symmetry by itself, largely driven by the shifts in the inter-layer phasing [1], a crucial\nquestion that remains is whether rotational symmetry breaking in the electronic structure is\ntriggered by the symmetry of the 2 × 2 CDW, or whether its mechanism is entirely different.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l1",
+                        "p3_l2",
+                        "p3_l3",
+                        "p3_l4",
+                        "p3_l5",
+                        "p3_l6"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Kagomemetalsharborrichphenomenologyspanningdifferenttypesofmagnetism, charge",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p2_l21"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l7",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_2",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "phases in CsV3Sb5 and investigate the system using spectroscopic-imaging scanning tunnel-\ning microscopy (SI-STM). We visualize the evolution of electronic properties as a function\nof two different types of chemical substitutions – Sn substituting at the Sb site and Ti\nsubstituting for V within the kagome plane. We discover that even after charge ordering\nstates are fully suppressed, electronic state locally breaks six-fold rotational symmetry of the\nlattice, forming short-range ordered electronic nematic domains. These nanoscale domains\nshow local anisotropy, which can be attributed to the anisotropic electron scattering and\ninterference. Each domain appears to break all but one in-plane mirror symmetries. Our\nexperiments demonstrate that electronic nematicity is present in a wide range of composi-\ntions across the phase diagram of CsV3Sb5, distinct from the symmetry of the 2 × 2 CDW,\nand as such reveal electronic nematicity as the unifying feature of kagome superconductor\nphase diagram.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l8",
+                        "p3_l9",
+                        "p3_l10",
+                        "p3_l11",
+                        "p3_l12",
+                        "p3_l13",
+                        "p3_l14",
+                        "p3_l15",
+                        "p3_l16",
+                        "p3_l17",
+                        "p3_l18",
+                        "p3_l19"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "heading_p3_l20",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "title": "III. RESULTS",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 10.9,
+                      "observation_ids": [
+                        "p3_l20"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "In this work, we use chemical substitutions to intentionally suppress charge ordering",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p3_l7"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l21",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "title": "We study bulk single crystals of CsV3Sb5, which exhibit a layered structure consisting of",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p3_l21"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l22",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_3",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "layer and the Sb layer; we cleave the crystals at low temperature and in ultra-high vacuum,\nand promptly insert them into the STM head (Methods). Similarly to the majority of pre-\nvious work on AV3Sb5 [10, 11, 13, 17, 18], we focus on the Sb surface termination positioned\ndirectly above the kagome plane due to its structural stability and the direct access to bulk\nvanadium-derived kagome bands [11, 17]. We explore the evolution of electronic properties\nfor different Sn compositions (x =0.15, x =0.33 and x =0.68) and Ti compositions (y =0.2)\nusing spectroscopic imaging STM.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l23",
+                        "p3_l24",
+                        "p3_l25",
+                        "p3_l26",
+                        "p3_l27",
+                        "p3_l28",
+                        "p3_l29"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "V3Sb5 blocks stacked between Cs layers (Fig. 1a). The crystals tend to cleave between the Cs",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p3_l22"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l30",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p3_4",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "3",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l31"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p4_1",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "2 × 2 CDW phase is rapidly suppressed at critical composition of xc ≈ 0.06 (Fig. 1b)\n[39, 40]. We confirm the suppression of the long-range 2 × 2 CDW in our STM topographs\n(Fig. 1c-f). Fourier transform (FT) of the STM topograph of the pristine compound shows\nthe expected charge ordering states: the charge-stripe order around 1Q along a single\n4 Bragg\natomic Bragg peak direction and the 2 × 2 charge density wave phase around each 1Q\n2 Bragg\nposition (Fig. 1g). FT of the STM topograph of x ∼ 0.1 sample shows some signatures\nof unidirectional charge-stripe correlations as we reported in our previous work [33], but\nno 2 × 2 CDW peaks (Fig. 1d,h). The last two higher Sn compositions show distinctly\ndifferent behavior – sharp 2 × 2 CDW peaks are markedly absent, there is no charge-stripe\nordering and the FTs look roughly symmetric (Fig. 1i,j). The absence of the 2 × 2 CDW\ncan also be seen in the FT linecuts, starting from the FT center to the atomic Bragg peak\nfor the four compositions, which show the absence of these peaks for representative STM\ntopographs of all Sn samples studied here (Fig. 1k), thus confirming the expected behavior\nfrom bulk measurements [39, 40]. Interestingly, we do observe very broad FT peaks around\neach 1Q position for x ≥ 0.33 (Fig. 1i,j), which are not there in the x ≈ 0.1 sample\n2 Bragg\n(Fig. 1h), and we explore this in more detail by spectroscopic imaging STM.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l1",
+                        "p4_l2",
+                        "p4_l3",
+                        "p4_l4",
+                        "p4_l5",
+                        "p4_l6",
+                        "p4_l7",
+                        "p4_l8",
+                        "p4_l9",
+                        "p4_l10",
+                        "p4_l11",
+                        "p4_l12",
+                        "p4_l13",
+                        "p4_l14",
+                        "p4_l15",
+                        "p4_l16",
+                        "p4_l17",
+                        "p4_l18",
+                        "p4_l19"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "We first explore the Sn-doped CsV3Sb5 samples. From complementary bulk studies, the",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p3_l30"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l20",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_2",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "a set of six crisp peaks at 1Q (approximately 1-2 pixel width) across a wide energy\n2 Bragg\nrange, corresponding to the 2 × 2 CDW phase (Fig. 2a,b). Although the equivalent sharp\nFT features are not present in the x = 0.33 sample (Fig. 2d), we do however observe the\nemergence of broad FT peaks (spanning ∼20% of Q ) near the 1Q position at\nBragg 2 Bragg\nsome energies (Fig. 2d,e,f). We rule out residual doping-induced short-range 2 × 2 CDW as\nthe origin of these modulations for the following reasons. First, no 1Q FT peaks are\n2 Bragg\ndetected in the FTs of topographs or dI/dV maps at the intermediate doping of x ∼ 0.1,\njust as the long-range 2 × 2 CDW is suppressed (Extended Data Fig. 1). Second, 1Q\n2 Bragg\npeaks are only observed at some energies, unlike those in the pristine sample observed\nubiquitously across a wide energy range (Fig. 2b). Third, the modulation wave vector shows\nslight dispersion and notably changes in shape as a function of energy (Fig. 2d-h, Extended",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l21",
+                        "p4_l22",
+                        "p4_l23",
+                        "p4_l24",
+                        "p4_l25",
+                        "p4_l26",
+                        "p4_l27",
+                        "p4_l28",
+                        "p4_l29",
+                        "p4_l30",
+                        "p4_l31",
+                        "p4_l32",
+                        "p4_l33",
+                        "p4_l34",
+                        "p4_l35"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "To establish a baseline, we note that FTs of dI/dV maps of the pristine sample show",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p4_l20"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l36",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_3",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "interference, similarly to what has been studied in more detail in the pristine compound\n[11, 32, 34].",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l37",
+                        "p4_l38"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Data Fig. 2). Based on this, we attribute these features to the electron scattering and",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p4_l36"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l39",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p4_4",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "4",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l40"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p5_1",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "(Methods). Constant energy contours of the x ∼ 0.25 system show a number of evolving\nfeatures, which at some energies result in small pockets around M points (Fig. 2i). These\npockets are nicely connected by exactly 1Q wave vector, which would give rise to the\n2 Bragg\nscattering wave vectors seen in FTs of dI/dV maps (wave vector q in Fig. 2f,i,j). We\nperform mathematical auto-correlation of the constant energy contours to approximate the",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l1",
+                        "p5_l2",
+                        "p5_l3",
+                        "p5_l4",
+                        "p5_l5",
+                        "p5_l6"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "To substantiate this further, we turn to density functional theory (DFT) calculations",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p4_l39"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p5_l7",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p5_2",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "1Q peaks (Fig. 2j). As the band structure evolves with energy, the pockets around M\n2 Bragg\nevolve as well, so at other energies we no longer observe the same features around 1Q\n2 Bragg\n(Fig. 2h,k,l).",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l8",
+                        "p5_l9",
+                        "p5_l10",
+                        "p5_l11",
+                        "p5_l12"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "FT of STM dI/dV maps, assuming all scattering processes are possible, which shows the",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p5_l7"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p5_l13",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p5_3",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "tail. Interestingly, we find that the dI/dV map where 1Q wave vectors are strong is\n2 Bragg\ncomposed of puddles, each showing locally anisotropic charge modulations most pronounced\nalong one lattice direction (Fig. 3a). For instance, within each of the three highlighted\nregions, we can see that the modulations are seemingly oriented along a single crystalline\ndirections (Fig. 3b). The wave vector associated with the modulations is about 1Q as it\n2 Bragg\ncan be seen in the corresponding FTs of the zoomed-in topographs. So while the FT of the\nentire field-of-view may appear roughly six-fold symmetric (i.e. Fig. 2e), it is composed of\nshort-range regions that each locally break rotational six-fold symmetry of the lattice. Each\nindividual region breaks two in-plane mirror symmetries but appears to generally preserve\nthe in-plane mirror symmetry along the direction of the arrows. This is consistent with the\nhighest Sn composition studied at x =0.68, where we can again observe domains with local\nelectronic anisotropy (Fig. 3c,d).",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l14",
+                        "p5_l15",
+                        "p5_l16",
+                        "p5_l17",
+                        "p5_l18",
+                        "p5_l19",
+                        "p5_l20",
+                        "p5_l21",
+                        "p5_l22",
+                        "p5_l23",
+                        "p5_l24",
+                        "p5_l25",
+                        "p5_l26",
+                        "p5_l27"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "We proceed to examine the morphology of the real-space electronic signal in more de-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p5_l13"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p5_l28",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p5_4",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "particular chemical substitution used, or whether this is a general feature of the kagome su-\nperconductor phase diagram, we study the effects of another type of dopant, Ti substituting\nfor V in CsV3−xTixSb5 bulk single crystals (Fig. 4). Based on bulk scattering experiments,\n2 × 2 CDW is expected to be suppressed at Ti composition higher than yc ∼ 0.05 [40].\nConsistent with this, in the y = 0.2 Ti-doped sample studied here, 2 × 2 CDW peaks are\nabsent in the FTs of STM topographs (Fig. 4a,b). Although we have not been able to per-\nform momentum-resolved imaging using electron scattering and interference as that in the",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l29",
+                        "p5_l30",
+                        "p5_l31",
+                        "p5_l32",
+                        "p5_l33",
+                        "p5_l34",
+                        "p5_l35"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "To investigate whether the rotational symmetry breaking measured is dependent on the",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p5_l28"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p5_l36",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 6,
+                "children": [
+                  {
+                    "id": "unidentified_p5_5",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "feature. Namely, we observe local anisotropy of the atomic lattice modulations, character-\n5",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l37",
+                        "p5_l38"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p6_1",
+                    "type": "custom",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "text": "ized by modulations being substantially stronger along one lattice direction. Fig. 4a shows\none region of the sample where anisotropy of the electronic modulations rotates from QBBragg\nto QCBragg direction across the domain boundary (dashed orange line in Fig. 4a). Zoom-ins\non each domain and associated Fourier transforms depict this more clearly (Fig. 4c,d). We\nalso show the amplitude maps associated with corresponding atomic Bragg peak over the\nsame area (Figs. 4e,f). For instance in Fig. 4e-f, it can be seen that the lower right area\nlights up in for the QBBragg amplitude map, while the upper left area has high intensity for\nthe QCBragg direction. Extended Data Fig. 3 shows another nematic boundary on the same\nsample, this time between QABragg and QCBragg directions. From the symmetry perspective,\nour observations on the Ti-doped sample are consistent with those on the Sn-doped sam-\nples – we observe nanoscale electronic nematic domains, which locally break the rotational\nsymmetry of the lattice.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p6_l1",
+                        "p6_l2",
+                        "p6_l3",
+                        "p6_l4",
+                        "p6_l5",
+                        "p6_l6",
+                        "p6_l7",
+                        "p6_l8",
+                        "p6_l9",
+                        "p6_l10",
+                        "p6_l11",
+                        "p6_l12"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "heading_p6_l13",
+                    "type": "subsubsection",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "title": "IV. DISCUSSION",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 10.9,
+                      "observation_ids": [
+                        "p6_l13"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "Sn substituted samples, STM topographs of the Ti-doped samples show another intriguing",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p5_l36"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p6_l14",
+                "type": "subsection",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [
+                  {
+                    "id": "unidentified_p6_2",
+                    "type": "custom",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "text": "ing of the electronic structure around the CDW onset temperature [21, 27, 34] or slightly\nabove the CDW transition [38], and as such it has remained unclear to what extent ro-\ntational symmetry breaking may be a simple consequence of the underlying symmetry of\nthe 2 × 2 CDW phase. To shed light on this issue, we studied CsV3Sb5 in a wide range\nof compositions to systematically suppress charge ordering states. Our experiments reveal\nshort-range q = 0 electronic nematicity across the phase diagram of CsV3Sb5, long after the\n2 × 2 CDW and other charge ordering states are suppressed at substantially lower doping.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p6_l15",
+                        "p6_l16",
+                        "p6_l17",
+                        "p6_l18",
+                        "p6_l19",
+                        "p6_l20",
+                        "p6_l21"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Extensive experimental body of work on AV3Sb5 has detected rotational symmetry break-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p6_l14"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p6_l22",
+                "type": "subsection",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [
+                  {
+                    "id": "unidentified_p6_3",
+                    "type": "custom",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "text": "either Sn or Ti, thus suggesting this could be a generic feature of the kagome supercon-\nductor phase diagram. The electronic nematic state is short-range, with local anisotropic\nmodulations oriented along different crystalline directions forming three different types of\ndomains. Within each nematic domain, modulations are C2-symmetric, with two in-plane\nmirror lines that are clearly broken, and one that appears to be intact. The short-range na-\nture of electronic nematicity in doped samples likely arises due to increased disorder caused\nby the dopants, but the relationship between the two should be examined more closely in\nfuture work.\n6",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p6_l23",
+                        "p6_l24",
+                        "p6_l25",
+                        "p6_l26",
+                        "p6_l27",
+                        "p6_l28",
+                        "p6_l29",
+                        "p6_l30",
+                        "p6_l31"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "The phenomenology is confirmed in two different types of samples, chemically doped with",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p6_l22"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p7_l1",
+                "type": "subsection",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [
+                  {
+                    "id": "unidentified_p7_1",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "that electronic anisotropy observed is not STM tip induced, since images (such as those\nin Figs. 3 or Fig. 4) are scanned using the same tip. We also note that the FT of a\nlarger field of view inevitably depends on how many domains of each type it encompasses.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l2",
+                        "p7_l3",
+                        "p7_l4"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "The observation of domains oriented in different directions also provides crucial evidence",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p7_l1"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p7_l5",
+                "type": "subsection",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [
+                  {
+                    "id": "unidentified_p7_2",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "equally prevalent, or at the other extreme the FT may appear to break all mirror symmetries\nif areas encompassing the three types are all inequivalent. This highlights the necessity for\natomic-scale examination of the samples to pin down the underlying symmetries.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l6",
+                        "p7_l7",
+                        "p7_l8"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "For instance, the FT may look roughly six-fold symmetric if all three types of domains are",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p7_l5"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p7_l9",
+                "type": "subsection",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [
+                  {
+                    "id": "unidentified_p7_3",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "orders, unusual superconductivity and time-reversal symmetry breaking – all of which may\narise from the electronic nematic state imaged here that clearly persists in their absence\nin the vast portion of the phase diagram. It would be interesting to explore if and how\nthis phase evolves into a chiral state at low temperature by breaking the remaining in-plane\nmirror symmetry, provided that tip anisotropy [41] and strain [30] as extrinsic factors can be\nexcluded. Lastly, we note that long-range electronic nematicity has been observed in cousin\nkagome superconductor CsTi3Bi5 [42, 43], with the same local symmetry as that reported\nhere, thus painting a unified picture of electronic nematicity as the parent state of kagome\nsuperconductors.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l10",
+                        "p7_l11",
+                        "p7_l12",
+                        "p7_l13",
+                        "p7_l14",
+                        "p7_l15",
+                        "p7_l16",
+                        "p7_l17",
+                        "p7_l18"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Pristine CsV3Sb5 exhibits abundant intriguing phenomena at low-temperature – charge",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p7_l9"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p7_l19",
+                "type": "subsection",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [
+                  {
+                    "id": "unidentified_p7_4",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "Ref. [44] on Ti-doped CsV3Sb5.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l20"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Note: During the preparation of the manuscript, we became aware of related work in",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p7_l19"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p7_l21",
+                "type": "subsection",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "title": "Methods",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p7_l21"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p7_l22",
+                "type": "subsection",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [
+                  {
+                    "id": "unidentified_p7_5",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "by the self-flux growth method. Elemental Cs (Alfa 99.98 %), V powder (Sigma 99.9 %),\nSb shot (Alfa 99.999%), and Sn shot (99.999 %) were weighed out in 25 : 18.75 : 80 : 40\nand 25 : 18.75 : 60 : 60 ratios respectively under an argon environment – H2O and O2 < 0.5\nppm – and milled in a SPEX8000D mixer inside a tungsten carbide vial for 60 min. The\nmilled powder was packed in alumina crucibles and sealed inside a steel tube for growth.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l23",
+                        "p7_l24",
+                        "p7_l25",
+                        "p7_l26",
+                        "p7_l27"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Sample growth: Single crystals of CsV3Sb5−xSnx, x∼0.33 and x∼0.68 were synthesized",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p7_l22"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p7_l28",
+                "type": "subsection",
+                "page_start": 7,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p7_6",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "for 12 hours, cooling down to 950 ◦C at 5 ◦C/hour and further slow cooling at 1 ◦C/hour\ndown to 500 ◦C. The resulting shiny hexagonal crystals were manually extracted at room\n7",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l29",
+                        "p7_l30",
+                        "p7_l31"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p8_1",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "temperature in air.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l1"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "The growth sequence consisted of a heating step up to 1000 ◦C, dwelling at this temperature",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p7_l28"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l2",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p8_2",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "technique. Vanadium powder (Sigma-Aldrich, purity level 99.9%) was further cleaned using\na mixture of Hydrochloric acid and isopropyl alcohol to remove residual oxides. Cs (liquid,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l3",
+                        "p8_l4"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Single crystals of CsV3−xTixSb5 (x=0.2) were grown via a conventional flux-based growth",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p8_l2"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l5",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p8_3",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "inside a tungsten carbide milling vial with a molar ratio of Cs20V12Ti3.5Sb120 and then milled\nfor about an hour. The milled powder was sealed inside a stainless-steel tube in an argon\natmosphere. The samples were heated at a rate of 200 ◦C/h to 1000 ◦C and held there for\n10 h. Then the tubes were cooled to 900 ◦C at 25 ◦C/hr and then to 500 ◦C at 1 ◦C/hr.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l6",
+                        "p8_l7",
+                        "p8_l8",
+                        "p8_l9"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Alfa 99.98%), cleaned V, Ti (powder, Alfa 99.9%), and Sb (shot, Alfa 99.999%) were loaded",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p8_l5"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l10",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p8_4",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "naturally cooled to room temperature from 500 ◦C.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l11"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Plate-like, shiny single crystals were manually separated from the flux after the tube had",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p8_l10"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l12",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p8_5",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "at cryogenic temperature and in ultra-high vacuum, and immediately inserted into the STM\nhead. STMdatawereacquiredusingacustomizedUnisokuUSM1300microscopeatthebase\ntemperature of about 4.5 K. Spectroscopic measurements were made by using a standard\nlock-in technique with a 910 Hz frequency and bias excitation as detailed in the figure\ncaptions. STM tips used were home-made chemically-etched tungsten tips.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l13",
+                        "p8_l14",
+                        "p8_l15",
+                        "p8_l16",
+                        "p8_l17"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "STM experiments: Bulk single crystals CsV3Sb5−xSnx and CsV3−xTixSb5 were cleaved",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p8_l12"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l18",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p8_6",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "ulation Package (VASP) [45]. The exchange–correlation interaction was treated within the\ngeneralized gradient approximation using the PBE parameterization [46]. A plane-wave\nenergy cutoff of 300 eV was employed, and all self-consistent calculations were carried out\nusing a 12 × 12 ×6 k-point mesh. Since previous studies have reported that even a small\namount of Sn doping suppresses the CDW, all first-principles calculations were performed\non the pristine phase. Spin–orbit effect was included in all calculations.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l19",
+                        "p8_l20",
+                        "p8_l21",
+                        "p8_l22",
+                        "p8_l23",
+                        "p8_l24"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "DFT calculations: DFT calculations were performed using the Vienna ab-initio Sim-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p8_l18"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l25",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "title": "To obtain the electronic structure of Sn-doped CsV3Sb5, we first constructed tight-binding",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p8_l25"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l26",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p8_7",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "dicate that Sn preferentially occupies the Sb site within the kagome plane. The maximally\nlocalized Wannier function method [47] with the V d and Sn/Sb p orbital as the projection\nbasis was employed. The Hamiltonian of CsV3Sb5−xSnx was then generated in real space by\nlinearly interpolating hopping parameters of the same orbitals and atomic sites in the two",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l27",
+                        "p8_l28",
+                        "p8_l29",
+                        "p8_l30"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Hamiltonians for pristine CsV3Sb5 and CsV3Sb4Sn, where our total-energy calculations in-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p8_l26"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l31",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 9,
+                "children": [
+                  {
+                    "id": "unidentified_p8_8",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "tx = (1 − x) t0 + x t1,\n8",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l32",
+                        "p8_l33"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p9_1",
+                    "type": "custom",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "text": "where tx, t0, and t1 denote the hopping amplitudes for CsV3Sb5−xSnx, CsV3Sb5, and",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p9_l1"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Hamiltonians,",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p8_l31"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p9_l2",
+                "type": "subsection",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [
+                  {
+                    "id": "unidentified_p9_2",
+                    "type": "custom",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "text": "from the resulting band structure on a dense 150 × 150 × 80 k-point grid in the three-\ndimensional Brillouin zone.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p9_l3",
+                        "p9_l4"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "CsV3Sb4Sn, respectively. The Fermi surface of CsV3Sb5−xSnx was subsequently extracted",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p9_l2"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Pervasive electronic nematicity as the parent state of kagome",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 14.3,
+              "observation_ids": [
+                "p1_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p15_l7",
+            "type": "section",
+            "page_start": 15,
+            "page_end": 17,
+            "children": [
+              {
+                "id": "unidentified_p15_2",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "-600\nLow High Low High 0.20.40.60.81.0\n)Vem(\nygrenE\n200\n0\n-200\n-400\n-600\n0.2 0.4q/0Q.6Bra0g.g8 1.0 q/QBragg\n)Vem(\nygrenE\na b\nQCDW QBragg\nc d\nQBragg\nx = 0 x = 0 x = 0.33 x = 0.33",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l8",
+                    "p15_l9",
+                    "p15_l10",
+                    "p15_l11",
+                    "p15_l12",
+                    "p15_l13",
+                    "p15_l14",
+                    "p15_l15",
+                    "p15_l16",
+                    "p15_l17",
+                    "p15_l18",
+                    "p15_l19",
+                    "p15_l20",
+                    "p15_l21",
+                    "p15_l22",
+                    "p15_l23",
+                    "p15_l24"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p15_3",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "High High",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p15_4",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "Low Low\ne f\ni j\nx = 0.33 100meV x = 0.33 -100meV -100meV AC of CEC at\n-100 meV\nq q\nq",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l26",
+                    "p15_l27",
+                    "p15_l28",
+                    "p15_l29",
+                    "p15_l30",
+                    "p15_l31",
+                    "p15_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p15_5",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "Low High Low High Low High\ng h k l\nx = 0.33 600meV x = 0.33 -500meV -500meV AC of CEC at\n-500 meV",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l33",
+                    "p15_l34",
+                    "p15_l35",
+                    "p15_l36"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p15_6",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "Low High Low High Low High\nFIG. 2. Spectroscopic-imaging STM comparison of the x = 0 and x = 0.33 Sn-doped\nCsV3Sb5 samples. - a,c, Representative differential conductance maps (g(r, V ) = dI(r, V )/dV )\nfor samples with x = 0 and x = 0.33. The inset in the bottom right of a shows the Fourier\ntransform (FT) of a typical differential conductance map for x = 0. b,d, Waterfall plot of FT\nlinecuts of the g(r,V) maps for x = 0 and x = 0.33 samples, starting from the FT center towards\none atomic Bragg peak. e–h, FTs of g(r,V) maps at selected energies for the x = 0.33 sample.\nThe corresponding energies are indicated by the colored triangles in d. The line cuts in b and d\nare taken along the red dashed lines shown in the insets of a and g. i,k, Constant energy contours\n(CECs) obtained from DFT calculations for kz = 0. j,l, Autocorrelation of the CECs in i and\nk, respectively. Orange arrow in i denotes the part in the CEC that leads to the scattering and\ninterference pattern marked by the orange arrow in f and j. STM setup conditions: Vsample=20\nmV, Iset=40 pA, Vexc=3 mV (a); Rtip−sample=1.5 GΩ, Iset=200 pA, Vexc=4 mV (b); Vsample=20\nmV, Iset=300 pA, Vexc=1 mV (c); Rtip−sample=0.6 GΩ, Iset=1 nA, Vexc=20 mV (d, e-h).\n15",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l37",
+                    "p15_l38",
+                    "p15_l39",
+                    "p15_l40",
+                    "p15_l41",
+                    "p15_l42",
+                    "p15_l43",
+                    "p15_l44",
+                    "p15_l45",
+                    "p15_l46",
+                    "p15_l47",
+                    "p15_l48",
+                    "p15_l49",
+                    "p15_l50",
+                    "p15_l51"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p16_1",
+                "type": "custom",
+                "page_start": 16,
+                "page_end": 16,
+                "children": [],
+                "text": "a c\nx = 0.33 x = 0.68\nHigh High\nLow Low\nQC QB\n10 nm QA 7 nm\nb QA CDW QB CDW QC CDW d QA CDW QB CDW QC CDW\nFIG. 3. Nanoscale domains with anisotropic modulations. a,c, Representative high-\nresolution dI/dV(r, V) maps with x = 0.33 and x = 0.68. b,d, Selected regions of the dI/dV(r,\nV) maps (top row) and their Fourier transforms (FTs) (bottom row). Each selected region is dom-\ninated by the charge modulation along one crystalline direction (marked by the colored arrows)\nbeing substantially stronger compared to other directions. Scattering peaks marked by the col-\nored arrows in the FTs further demonstrate the nematic nature of charge modulation with about\n1Q wave vector. STM setup conditions: V =-200 mV, I =500 pA, V =5 mV (a);\n2 Bragg sample set exc\nVsample=50 mV, Iset=200 pA, Vexc=10 mV (c).\n16",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p16_l1",
+                    "p16_l2",
+                    "p16_l3",
+                    "p16_l4",
+                    "p16_l5",
+                    "p16_l6",
+                    "p16_l7",
+                    "p16_l8",
+                    "p16_l9",
+                    "p16_l10",
+                    "p16_l11",
+                    "p16_l12",
+                    "p16_l13",
+                    "p16_l14",
+                    "p16_l15",
+                    "p16_l16",
+                    "p16_l17"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p17_1",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "a c d\ny=0.2 QB Bragg QC Bragg\nQCBragg\n1 nm 1nm\nQBBragg\n1nm\n0 50 pm 0 30 pm 0 37 pm\nb e f\nQBBragg\nQCBragg\nQCBragg\nQBBragg\nQA Bragg\n1nm 1nm",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l1",
+                    "p17_l2",
+                    "p17_l3",
+                    "p17_l4",
+                    "p17_l5",
+                    "p17_l6",
+                    "p17_l7",
+                    "p17_l8",
+                    "p17_l9",
+                    "p17_l10",
+                    "p17_l11",
+                    "p17_l12",
+                    "p17_l13",
+                    "p17_l14"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p17_2",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "Low High Low High Low High\n).u.a(\nytisnetnI\nQCDW QBragg\nQC Bragg\nQBBragg\nQABragg\n0.2 q/QBragg 1\nFIG. 4. Electronic nematic domains in the Ti-doped CsV3−ySb5Tiy samples. - a, Rep-\nresentative STM topograph of CsV3−ySb5Tiy with y = 0.2, and b, Fourier transform (FT) of the\nareain(a). ColoredcirclesmarktheatomicBraggpeaks, whilethebluesquaresmarktheexpected\n2 × 2 CDW peak locations. The inset in the bottom left of b shows the FT line cuts of b, starting\nfrom the FT center towards each atomic Bragg peaks, showing the absence of 2 × 2 CDW. c,d,\nSTM topographs of individual nematic domains. The insets in the bottom left of c and d are their\nFTs, with the atomic Bragg peaks with the strongest intensity marked by the colored circles. e,f,\nAmplitude map of the lattice modulations obtained by applying a Fourier-space filter that isolates\na single pair of atomic Bragg peaks. Enhanced intensity in this map corresponds to regions where\nthe lattice modulation is locally stronger along this direction. STM setup conditions: Vsample=100\nmV, Iset=100 pA (a,c,d).\n17",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l15",
+                    "p17_l16",
+                    "p17_l17",
+                    "p17_l18",
+                    "p17_l19",
+                    "p17_l20",
+                    "p17_l21",
+                    "p17_l22",
+                    "p17_l23",
+                    "p17_l24",
+                    "p17_l25",
+                    "p17_l26",
+                    "p17_l27",
+                    "p17_l28",
+                    "p17_l29",
+                    "p17_l30",
+                    "p17_l31",
+                    "p17_l32",
+                    "p17_l33",
+                    "p17_l34"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "7 nm 20 nm",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 7.3,
+              "observation_ids": [
+                "p15_l7"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 9,
+        "page_end": 17,
+        "children": [
+          {
+            "id": "heading_p9_l5",
+            "type": "data_availability",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "unidentified_p9_3",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "The data that support the findings of this study are available from the corresponding au-\nthors upon reasonable request.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l6",
+                    "p9_l7"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Data availability",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p9_l5"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p9_l8",
+            "type": "code_availability",
+            "page_start": 9,
+            "page_end": 15,
+            "children": [
+              {
+                "id": "unidentified_p9_4",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "The code that supports the findings of the study is available from the corresponding authors\nupon reasonable request.\nCorrespondenceandrequestsformaterialsshouldbeaddressedtoilija.zeljkovic@bc.edu.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l9",
+                    "p9_l10",
+                    "p9_l11"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_5",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Competing financial interests\nThe authors declare no competing financial interests.\n[1] D.D.Sante,T.Neupert,G.Sangiovanni,R.Thomale,R.Comin,I.Zeljkovic,J.G.Checkelsky,\nand S. D. Wilson. Kagome metals. arxiv : 2511.12731 (2025).\n[2] X. Feng, K. Jiang, Z. Wang, and J. Hu. Chiral flux phase in the kagome superconductor\nAV3Sb5. Science Bulletin 66, 1384–1388 (2021).\n[3] H. Tan, Y. Liu, Z. Wang, and B. Yan. Charge density waves and electronic properties of\nsuperconducting kagome metals. Phys. Rev. Lett. 127, 046401 (2021).\n[4] M. M. Denner, R. Thomale, and T. Neupert. Analysis of Charge Order in the Kagome Metal\nAV3Sb5 (A = K, Rb, Cs). Phys. Rev. Lett. 127, 217601 (2021).\n[5] Y.-P. Lin and R. M. Nandkishore. Complex charge density waves at Van Hove singularity\non hexagonal lattices: Haldane-model phase diagram and potential realization in the kagome\nmetals AV3Sb5 (A=K, Rb, Cs). Phys. Rev. B 104, 045122 (2021).\n[6] T. Park, M. Ye, and L. Balents. Electronic instabilities of kagome metals: Saddle points and\n9",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l12",
+                    "p9_l13",
+                    "p9_l14",
+                    "p9_l15",
+                    "p9_l16",
+                    "p9_l17",
+                    "p9_l18",
+                    "p9_l19",
+                    "p9_l20",
+                    "p9_l21",
+                    "p9_l22",
+                    "p9_l23",
+                    "p9_l24",
+                    "p9_l25",
+                    "p9_l26"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p10_1",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "landau theory. Phys. Rev. B 104, 035142 (2021).\n[7] M. H. Christensen, T. Birol, B. M. Andersen, and R. M. Fernandes. Theory of the charge\ndensity wave in AV3Sb5 kagome metals. Phys. Rev. B 104, 214513 (2021).\n[8] M. H. Christensen, T. Birol, B. M. Andersen, and R. M. Fernandes. Loop currents in AV3Sb5\nkagome metals: Multipolar and toroidal magnetic orders. Phys. Rev. B 106, 144504 (2022).\n[9] T. Schwemmer, H. Hohmann, M. Du¨rrnagel, J. Potten, J. Beyer, S. Rachel, Y.-M. Wu,\nS. Raghu, T. Mu¨ller, W. Hanke, and R. Thomale. Sublattice modulated superconductivity in\nthe kagome hubbard model. Phys. Rev. B 110, 024501 (2024).\n[10] Y.-X. Jiang, J.-X. Yin, M. M. Denner, N. Shumiya, B. R. Ortiz, G. Xu, Z. Guguchia, J. He,\nM. S. Hossain, X. Liu, J. Ruff, L. Kautzsch, S. S. Zhang, G. Chang, I. Belopolski, Q. Zhang,\nT. A. Cochran, D. Multer, M. Litskevich, Z.-J. Cheng, X. P. Yang, Z. Wang, R. Thomale,\nT. Neupert, S. D. Wilson, and M. Z. Hasan. Unconventional chiral charge order in kagome\nsuperconductor KV3Sb5. Nature Materials 20, 1353–1357 (2021).\n[11] H. Zhao, H. Li, B. R. Ortiz, S. M. Teicher, T. Park, M. Ye, Z. Wang, L. Balents, S. D. Wilson,\nand I. Zeljkovic. Cascade of correlated electron states in the kagome superconductor CsV3Sb5.\nNature 599, 216 (2021).\n[12] T. Qian, M. H. Christensen, C. Hu, A. Saha, B. M. Andersen, R. M. Fernandes, T. Birol,\nand N. Ni. Revealing the competition between charge density wave and superconductivity in\nCsV3Sb5 through uniaxial strain. Phys. Rev. B 104, 144506 (2021).\n[13] H.Li,H.Zhao,B.R.Ortiz,T.Park,M.Ye,L.Balents,Z.Wang,S.D.Wilson,andI.Zeljkovic.\nNature Physics 18, 265 (2022).\n[14] C. Guo, C. Putzke, S. Konyzheva, X. Huang, M. Gutierrez-Amigo, I. Errea, D. Chen, M. G.\nVergniory, C. Felser, M. H. Fischer, T. Neupert, and P. J. W. Moll. Nature 611, 461 (2022).\n[15] Q. Wu, Z. X. Wang, Q. M. Liu, R. S. Li, S. X. Xu, Q. W. Yin, C. S. Gong, Z. J. Tu, H. C. Lei,\nT. Dong, and N. L. Wang. Simultaneous formation of two-fold rotation symmetry with charge\norder in the kagome superconductor CsV3Sb5 by optical polarization rotation measurement.\nPhys. Rev. B 106, 205109 (2022).\n[16] A. Ptok, A. Kobialka, M. Sternik, J. Lazewski, P. T. Jochym, A. M. Oles, and P. Piekarz. Dy-\nnamical study of the origin of the charge density wave in AV3Sb5 (A = K, Rb, Cs) compounds.\nPhys. Rev. B 105, 235134 (2022).\n[17] H. Chen, H. Yang, B. Hu, Z. Zhao, J. Yuan, Y. Xing, G. Qian, Z. Huang, G. Li, Y. Ye, et al.\n10",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l1",
+                    "p10_l2",
+                    "p10_l3",
+                    "p10_l4",
+                    "p10_l5",
+                    "p10_l6",
+                    "p10_l7",
+                    "p10_l8",
+                    "p10_l9",
+                    "p10_l10",
+                    "p10_l11",
+                    "p10_l12",
+                    "p10_l13",
+                    "p10_l14",
+                    "p10_l15",
+                    "p10_l16",
+                    "p10_l17",
+                    "p10_l18",
+                    "p10_l19",
+                    "p10_l20",
+                    "p10_l21",
+                    "p10_l22",
+                    "p10_l23",
+                    "p10_l24",
+                    "p10_l25",
+                    "p10_l26",
+                    "p10_l27",
+                    "p10_l28",
+                    "p10_l29",
+                    "p10_l30",
+                    "p10_l31",
+                    "p10_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p11_1",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "Nature 599, 222 (2021).\n[18] Z. Liang, X. Hou, F. Zhang, W. Ma, P. Wu, Z. Zhang, F. Yu, J.-J. Ying, K. Jiang, L. Shan,\nZ. Wang, and X.-H. Chen. Three-Dimensional Charge Density Wave and Surface-Dependent\nVortex-Core States in a Kagome Superconductor CsV3Sb5. Phys. Rev. X 11, 031026 (2021).\n[19] H. Li, T. T. Zhang, T. Yilmaz, Y. Y. Pai, C. E. Marvinney, A. Said, Q. W. Yin, C. S. Gong,\nZ. J. Tu, E. Vescovo, C. S. Nelson, R. G. Moore, S. Murakami, H. C. Lei, H. N. Lee, B. J.\nLawrie, and H. Miao. Observation of Unconventional Charge Density Wave without Acoustic\nPhonon Anomaly in Kagome Superconductors AV3Sb5 (A = Rb, Cs). Phys. Rev. X 11,\n031050 (2021).\n[20] M. Kang, S. Fang, J.-K. Kim, B. R. Ortiz, S. H. Ryu, J. Kim, J. Yoo, G. Sangiovanni,\nD. Di Sante, B.-G. Park, C. Jozwiak, A. Bostwick, E. Rotenberg, E. Kaxiras, S. D. Wilson, J.-\nH.Park, andR.Comin. TwofoldvanHovesingularityandoriginofchargeorderintopological\nkagome superconductor CsV3Sb5. Nature Physics 18, 301 (2022).\n[21] Y. Xiang, Q. Li, Y. Li, W. Xie, H. Yang, Z. Wang, Y. Yao, and H.-H. Wen. Nature Commu-\nnications 12, 6727 (2021).\n[22] S.-Y. Yang, Y. Wang, B. R. Ortiz, D. Liu, J. Gayles, E. Derunova, R. Gonzalez-Hernandez,\nL. Sˇmejkal, Y. Chen, S. S. P. Parkin, S. D. Wilson, E. S. Toberer, T. McQueen, and M. N.\nAli. Science Advances 6, eabb6003 (2020).\n[23] H.-S. Xu, Y.-J. Yan, R. Yin, W. Xia, S. Fang, Z. Chen, Y. Li, W. Yang, Y. Guo, and D.-L.\nFeng. Phys. Rev. Lett. 127, 187004 (2021).\n[24] E. Uykur, B. R. Ortiz, S. D. Wilson, M. Dressel, and A. A. Tsirlin. Optical detection of the\ndensity-wave instability in the kagome metal KV3Sb5. npj Quantum Materials 7, 16 (2022).\n[25] X. Zhou, Y. Li, X. Fan, J. Hao, Y. Dai, Z. Wang, Y. Yao, and H.-H. Wen. Origin of charge\ndensity wave in the kagome metal CsV3Sb5 as revealed by optical spectroscopy. Phys. Rev.\nB 104, L041101 (2021).\n[26] C. Broyles, D. Graf, H. Yang, X. Dong, H. Gao, and S. Ran. Effect of the Interlayer Ordering\non the Fermi Surface of Kagome Superconductor CsV3Sb5 Revealed by Quantum Oscillations.\nPhys. Rev. Lett. 129, 157001 (2022).\n[27] Y. Xu, Z. Ni, Y. Liu, B. R. Ortiz, Q. Deng, S. D. Wilson, B. Yan, L. Balents, and L. Wu.\nNature Physics 18, 1470 (2022).\n[28] C. Mielke III, D. Das, J.-X. Yin, H. Liu, R. Gupta, Y.-X. Jiang, M. Medarde, X. Wu, H. C.\n11",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l1",
+                    "p11_l2",
+                    "p11_l3",
+                    "p11_l4",
+                    "p11_l5",
+                    "p11_l6",
+                    "p11_l7",
+                    "p11_l8",
+                    "p11_l9",
+                    "p11_l10",
+                    "p11_l11",
+                    "p11_l12",
+                    "p11_l13",
+                    "p11_l14",
+                    "p11_l15",
+                    "p11_l16",
+                    "p11_l17",
+                    "p11_l18",
+                    "p11_l19",
+                    "p11_l20",
+                    "p11_l21",
+                    "p11_l22",
+                    "p11_l23",
+                    "p11_l24",
+                    "p11_l25",
+                    "p11_l26",
+                    "p11_l27",
+                    "p11_l28",
+                    "p11_l29",
+                    "p11_l30",
+                    "p11_l31",
+                    "p11_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p12_1",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "Lei, J. Chang, et al. Nature 602, 245 (2022).\n[29] T.Kato,Y.Li,T.Kawakami,M.Liu,K.Nakayama,Z.Wang,A.Moriya,K.Tanaka,T.Taka-\nhashi, Y. Yao, and T. Sato. Three-dimensional energy gap and origin of charge-density wave\nin kagome superconductor KV3Sb5. Communications Materials 3, 30 (2022).\n[30] Y. Wang, H. Li, S. Cheng, H. Zhao, B. R. Ortiz, A. C. Salinas, S. D. Wilson, Z. Wang, and\nI. Zeljkovic. Phys. Rev. X 15, 021074 (2025).\n[31] C. Candelora, H. Li, M. Xu, B. R. Ortiz, A. C. Salinas, S. Cheng, A. LaFleur, Z. Wang,\nS. D. Wilson, and I. Zeljkovic. Quantifying magnetic field driven lattice distortions in kagome\nmetalsatthefemtometerscaleusingscanningtunnelingmicroscopy. Phys. Rev. B109,155121\n(2024).\n[32] H.Li,D.Oh,M.Kang,H.Zhao,B.R.Ortiz,Y.Oey,S.Fang,Z.Ren,C.Jozwiak,A.Bostwick,\nE. Rotenberg, J. G. Checkelsky, Z. Wang, S. D. Wilson, R. Comin, and I. Zeljkovic. Phys.\nRev. X 13, 031030 (2023).\n[33] L. Kautzsch, Y. M. Oey, H. Li, Z. Ren, B. R. Ortiz, G. Pokharel, R. Seshadri, J. Ruff,\nT. Kongruengkit, J. W. Harter, Z. Wang, I. Zeljkovic, and S. D. Wilson. Incommensurate\ncharge-stripe correlations in the kagome superconductor CsV3Sb5−xSnx. npj Quantum Mate-\nrials 8, 37 (2023).\n[34] H. Li, H. Zhao, B. R. Ortiz, Y. Oey, Z. Wang, S. D. Wilson, and I. Zeljkovic. Nature Physics\n19, 637 (2023).\n[35] B. R. Ortiz, S. M. L. Teicher, Y. Hu, J. L. Zuo, P. M. Sarte, E. C. Schueller, A. M. M.\nAbeykoon, M. J. Krogstad, S. Rosenkranz, R. Osborn, R. Seshadri, L. Balents, J. He, and\nS. D. Wilson. Phys. Rev. Lett. 125, 247002 (2020).\n[36] H. Li, T. T. Zhang, T. Yilmaz, Y. Y. Pai, C. E. Marvinney, A. Said, Q. W. Yin, C. S. Gong,\nZ. J. Tu, E. Vescovo, C. S. Nelson, R. G. Moore, S. Murakami, H. C. Lei, H. N. Lee, B. J.\nLawrie, and H. Miao. Phys. Rev. X 11, 031050 (2021).\n[37] L. Nie, K. Sun, W. Ma, D. Song, L. Zheng, Z. Liang, P. Wu, F. Yu, J. Li, M. Shan, D. Zhao,\nS. Li, B. Kang, Z. Wu, Y. Zhou, K. Liu, Z. Xiang, J. Ying, Z. Wang, T. Wu, and X. Chen.\nNature 604, 59 (2022).\n[38] T. Asaba, A. Onishi, Y. Kageyama, T. Kiyosue, K. Ohtsuka, S. Suetsugu, Y. Kohsaka,\nT. Gaggl, Y. Kasahara, H. Murayama, et al. Nature Physics 20, 40 (2024).\n[39] Y. M. Oey, B. R. Ortiz, F. Kaboudvand, J. Frassineti, E. Garcia, R. Cong, S. Sanna, V. F.\n12",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l1",
+                    "p12_l2",
+                    "p12_l3",
+                    "p12_l4",
+                    "p12_l5",
+                    "p12_l6",
+                    "p12_l7",
+                    "p12_l8",
+                    "p12_l9",
+                    "p12_l10",
+                    "p12_l11",
+                    "p12_l12",
+                    "p12_l13",
+                    "p12_l14",
+                    "p12_l15",
+                    "p12_l16",
+                    "p12_l17",
+                    "p12_l18",
+                    "p12_l19",
+                    "p12_l20",
+                    "p12_l21",
+                    "p12_l22",
+                    "p12_l23",
+                    "p12_l24",
+                    "p12_l25",
+                    "p12_l26",
+                    "p12_l27",
+                    "p12_l28",
+                    "p12_l29",
+                    "p12_l30",
+                    "p12_l31",
+                    "p12_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p13_1",
+                "type": "custom",
+                "page_start": 13,
+                "page_end": 13,
+                "children": [],
+                "text": "Mitrovic, R. Seshadri, and S. D. Wilson. Phys. Rev. Mater. 6, L041801 (2022).\n[40] Y. Liu, Y. Wang, Y. Cai, Z. Hao, X.-M. Ma, L. Wang, C. Liu, J. Chen, L. Zhou, J. Wang,\net al. Phys. Rev. Materials 7, 064801 (2023).\n[41] C. Candelora and I. Zeljkovic. arXiv:2509.22634 (2025).\n[42] H. Li, S. Cheng, B. R. Ortiz, H. Tan, D. Werhahn, K. Zeng, D. Johrendt, B. Yan, Z. Wang,\nS. D. Wilson, and I. Zeljkovic. Nature Physics 19, 1591 (2023).\n[43] H. Yang, Y. Ye, Z. Zhao, J. Liu, X.-W. Yi, Y. Zhang, H. Xiao, J. Shi, J.-Y. You, Z. Huang,\nB. Wang, J. Wang, H. Guo, X. Lin, C. Shen, W. Zhou, H. Chen, X. Dong, G. Su, Z. Wang,\nand H.-J. Gao. Nature Communications 15, 9626 (2024).\n[44] Z. Huang, Z. Wang, H. Tan, Z. Zhao, C. Shen, H. Yang, B. Weber, B. Yan, H. Chen, Z. Wang,\nandH.-J.Gao. Theparentstateinkagomemetalsandsuperconductors: Chiral-nematicfermi\nliquid state. arxiv : 2511.09402 (2025).\n[45] G. Kresse and J. Furthmu¨ller. Efficiency of ab-initio total energy calculations for metals\nand semiconductors using a plane-wave basis set. Computational Materials Science 6, 15–50\n(1996).\n[46] J. P. Perdew, K. Burke, and M. Ernzerhof. Generalized gradient approximation made simple.\nPhys. Rev. Lett. 77, 3865 (1996).\n[47] G. Pizzi, V. Vitale, R. Arita, S. Blu¨gel, F. Freimuth, G. G´eranton, M. Gibertini, D. Gresch,\nC.Johnson, T.Koretsune, J.Iban˜ez-Azpiroz, H.Lee, J.-M.Lihm, D.Marchand, A.Marrazzo,\nY. Mokrousov, J. I. Mustafa, Y. Nohara, Y. Nomura, L. Paulatto, S. Ponc´e, T. Ponweiser,\nJ. Qiao, F. Th¨ole, S. S. Tsirkin, M. Wierzbowska, N. Marzari, D. Vanderbilt, I. Souza, A. A.\nMostofi, and J. R. Yates. Wannier90 as a community code: new features and applications.\nJournal of Physics: Condensed Matter 32, 165902 (2020).\n13",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p13_l1",
+                    "p13_l2",
+                    "p13_l3",
+                    "p13_l4",
+                    "p13_l5",
+                    "p13_l6",
+                    "p13_l7",
+                    "p13_l8",
+                    "p13_l9",
+                    "p13_l10",
+                    "p13_l11",
+                    "p13_l12",
+                    "p13_l13",
+                    "p13_l14",
+                    "p13_l15",
+                    "p13_l16",
+                    "p13_l17",
+                    "p13_l18",
+                    "p13_l19",
+                    "p13_l20",
+                    "p13_l21",
+                    "p13_l22",
+                    "p13_l23",
+                    "p13_l24"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p14_1",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "90\n80\n5\n4\n3\n2\nCs V Sb\n0 1.0 0.2\nx=0.68\nx=0.33\nx=0.1\nx=0\n0.4 0.6 0.8 1\n10 nm 20 nm 20 nm 15 nm\n0 30 pm 0 85 pm 0 144 pm",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l1",
+                    "p14_l2",
+                    "p14_l3",
+                    "p14_l4",
+                    "p14_l5",
+                    "p14_l6",
+                    "p14_l7",
+                    "p14_l8",
+                    "p14_l9",
+                    "p14_l10",
+                    "p14_l11",
+                    "p14_l12",
+                    "p14_l13",
+                    "p14_l14",
+                    "p14_l15"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p14_2",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "Low High\n)K(T\nb 100 2x2 QStripe QCDW QBragg\na CDW",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l16",
+                    "p14_l17",
+                    "p14_l18",
+                    "p14_l19"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p14_3",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "Sn content x\nc d e f\n0 134 pm\nq/QBragg\nx = 0 x = 0.1 x = 0.33 x = 0.68\ng h i j\nQBragg\nQCCDW\nQStripe",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l20",
+                    "p14_l21",
+                    "p14_l22",
+                    "p14_l23",
+                    "p14_l24",
+                    "p14_l25",
+                    "p14_l26",
+                    "p14_l27",
+                    "p14_l28"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p14_4",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "Low High Low High\n).u.a(\nytisnetnI\nk\nElectronic\nnematicity\nSC\n0.2 0.4 0.6 0.8\nQBCDW\nQACDW",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l29",
+                    "p14_l30",
+                    "p14_l31",
+                    "p14_l32",
+                    "p14_l33",
+                    "p14_l34",
+                    "p14_l35",
+                    "p14_l36",
+                    "p14_l37",
+                    "p14_l38"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p14_5",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "Low High\nFIG. 1. Crystal structure and the evolution of the 2 × 2 CDW in CsV3Sb5−xSnx - a, 3D\nball model of the crystal structure of CsV3Sb5. b, A schematic phase diagram denoting the 2 × 2\nCDWstateandthesuperconductingstateasafunctionofSndoping. Thefourbluecirclesindicate\nthe doping levels and temperatures at which the measurements in this study were performed. c-f,\nRepresentative STM topographs of the Sb-terminated surfaces for x = 0 (c), x = 0.1 (d), x = 0.33\n(e), x = 0.68 (f). g-j, Fourier transforms (FTs) of the corresponding topographs in (c-f). FT\npeaks corresponding to the atomic lattice (QBragg), the 2×2 CDW (QCDW\n) and the 4×1 charge\nstripes (Qstripe) are labeled in g. In h–j, the atomic Bragg peaks and the expected CDW peak\npositions are marked using the same symbols as those in (g). 2 × 2 CDW peaks vanish for samples\nwith x ≥ 0.1. k, FT linecuts along the Qstripe direction (if present), showing the suppression of the\n2 × 2 CDW peaks at higher Sn compositions. STM setup conditions: Vsample set\n=100 mV, I =50 pA\n(c); Vsample=20 mV, Iset=200 pA (d); Vsample=20 mV, Iset=300 pA (e); Vsample set\n=20 mV, I =200\npA (f).\n14",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l39",
+                    "p14_l40",
+                    "p14_l41",
+                    "p14_l42",
+                    "p14_l43",
+                    "p14_l44",
+                    "p14_l45",
+                    "p14_l46",
+                    "p14_l47",
+                    "p14_l48",
+                    "p14_l49",
+                    "p14_l50",
+                    "p14_l51",
+                    "p14_l52",
+                    "p14_l53",
+                    "p14_l54",
+                    "p14_l55",
+                    "p14_l56"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p15_1",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "600\n400\n200\n0\n-200\n-400",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l1",
+                    "p15_l2",
+                    "p15_l3",
+                    "p15_l4",
+                    "p15_l5",
+                    "p15_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Code availability",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p9_l8"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

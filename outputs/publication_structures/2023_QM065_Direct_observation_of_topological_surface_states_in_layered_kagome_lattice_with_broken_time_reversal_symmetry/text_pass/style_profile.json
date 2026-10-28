@@ -1,0 +1,244 @@
+{
+  "body_size": 9.0,
+  "styles": [
+    {
+      "font": "NimbusRomNo9L-Medi",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Directobservationoftopologicalsurfacestatesinthelayeredkagomelatticewithbroken",
+        "time-reversalsymmetry"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 415,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "ZhichengJiang,1,∗TongruiLi,2,∗JianYuan,3,∗ZhengtaiLiu,4,†ZhipengCao,5SoohyunCho,2MingfangShu,6,5YichenYang,1",
+        "JianyangDing,1ZhikaiLi,3JiayuLiu,1ZhonghaoLiu,1JishanLiu,4JieMa,6,5ZheSun,2YanfengGuo,3,7,‡andDaweiShen2,§",
+        "In solids, the reservation of symmetries defines kinds"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-ReguItal",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 22,
+      "long_prose_lines": 8,
+      "pages": [
+        1,
+        5,
+        6
+      ],
+      "examples": [
+        "1State Key Laboratory of Functional Materials for Informatics,",
+        "Shanghai Institute of Microsystem and Information Technology,",
+        "Chinese Academy of Sciences, Shanghai 200050, China"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 207,
+      "long_prose_lines": 37,
+      "pages": [
+        1,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Magnetictopologicalquantummaterialsdisplayadiverserangeoffascinatingphysicalpropertieswhicharise",
+        "fromtheirintrinsicmagnetismandthebreakingoftime-reversalsymmetry. However,sofar,fewexamplesof",
+        "intrinsic magnetic topological materials have been confirmed experimentally, which significantly hinder our"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "∗ Equal contributions",
+        "† Equal contributions; ztliu@mail.sim.ac.cn",
+        "‡ guoyf@shanghaitech.edu.cn"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "3202",
+        "peS",
+        "4"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]le-rts.tam-dnoc["
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Medi",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "examples": [
+        "Results",
+        "Crystal and magnetic nature of EuTi3Bi4 single crystals.",
+        "Anisotropic multiple Van Hove singularities in EuTi3Bi4."
+      ]
+    },
+    {
+      "font": "txsy",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3
+      ],
+      "examples": [
+        "′",
+        "′",
+        "′"
+      ]
+    },
+    {
+      "font": "txex",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "� n− − n+",
+        "�",
+        "� �"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "k,k∈TRIM",
+        "k∈TRIM,kj =π",
+        "1/2 2 2 2"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-ReguItal",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "k k",
+        "k k"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Medi",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "FIG.1. Structuralandtransportpropertiesofthemulti-layertitanium-basedkagomecompounds. aCrystalstructurewithuintcellof"
+      ]
+    },
+    {
+      "font": "txsy",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "′"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

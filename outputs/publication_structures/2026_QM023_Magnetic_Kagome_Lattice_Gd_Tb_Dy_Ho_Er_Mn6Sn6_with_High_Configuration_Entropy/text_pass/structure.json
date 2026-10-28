@@ -1,0 +1,3144 @@
+{
+  "schema_version": "1.1",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2026_QM023_Magnetic_Kagome_Lattice_Gd_Tb_Dy_Ho_Er_Mn6Sn6_with_High_Configuration_Entropy.pdf",
+    "pages": 13,
+    "sha256": "506f28fc6536f32aba58e83535e1d2135def99ccfabf48464aab04093bef87ec",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Local layout and structural classifications are proposals requiring source review.",
+      "Text fidelity, merged cells, figure semantics, equation/list structure and scanned-page OCR may remain unresolved.",
+      "Figure/table parent associations are provisional, not scientific claim support."
+    ],
+    "body_font_size": 10.8,
+    "body_font_family": "TimesNewRomanPSMT",
+    "status": "partial_requires_review",
+    "relations": [
+      {
+        "type": "refers_to",
+        "from": "x000015",
+        "to": null,
+        "label": "figure 1a",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 2,
+          "block_id": "p2_l35",
+          "quote": "the single crystals. Fig. 1a presents the procession image of (0kl) zone, constructed using a set of 2404"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000015",
+        "to": null,
+        "label": "figure 1a",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 2,
+          "block_id": "p2_l42",
+          "quote": "equipment, as shown in Fig. 1a and Table 1, excluding a structure change at the magnetic phase transitions"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000015",
+        "to": null,
+        "label": "table 1",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 2,
+          "block_id": "p2_l42",
+          "quote": "equipment, as shown in Fig. 1a and Table 1, excluding a structure change at the magnetic phase transitions"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000015",
+        "to": null,
+        "label": "figure 1c",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 2,
+          "block_id": "p2_l44",
+          "quote": "energy-dispersive X-ray spectroscopy (Fig. 1c), which suggests the successful formation of high entropy."
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000017",
+        "to": null,
+        "label": "figure 1",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 3,
+          "block_id": "p3_l4",
+          "quote": "Fig. 1, Structure and composition of HE166. a) Precession image of HE166 obtained from X-ray"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000019",
+        "to": null,
+        "label": "table 1",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 3,
+          "block_id": "p3_l9",
+          "quote": "Table 1: Crystallographic data of HEMn6Sn6 at 123 K and 300 K."
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000020",
+        "to": null,
+        "label": "figure 2",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 4,
+          "block_id": "p4_l1",
+          "quote": "Fig. 2 a). Magnetic order of the parent phase with different rare earth elements. b) c) Temperature"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000022",
+        "to": null,
+        "label": "figure 2a",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 4,
+          "block_id": "p4_l5",
+          "quote": "19 which is illustrated in Fig. 2a. The light blue and grey arrows indicate the magnetic orders of Mn and"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000022",
+        "to": null,
+        "label": "figure 2b",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 4,
+          "block_id": "p4_l12",
+          "quote": "phases. Fig. 2b and 2c show the temperature dependent magnetizations of HE166 with magnetic field"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000022",
+        "to": null,
+        "label": "figure 2b",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 4,
+          "block_id": "p4_l14",
+          "quote": "been observed, which are marked as T1, T2 and T3. Fig. 2b shows the temperature dependence of the"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000022",
+        "to": null,
+        "label": "figure 2b",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 4,
+          "block_id": "p4_l17",
+          "quote": "ferrimagnetic phase transition, as shown in the inset of Fig. 2b. As temperature continues to decrease to 200"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000023",
+        "to": null,
+        "label": "figure 2c",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 5,
+          "block_id": "p5_l1",
+          "quote": "seen in other R166 systems.20,21 Fig. 2c shows the magnetization data, when the external magnetic field is"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000024",
+        "to": null,
+        "label": "figure 3",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 5,
+          "block_id": "p5_l6",
+          "quote": "Fig. 3. Field-dependent magnetization hysteresis loops of HE166 at various temperatures. a),c),e)"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000025",
+        "to": null,
+        "label": "figure 3",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l2",
+          "quote": "measured, as shown in Fig. 3. These measurements reveal large anisotropies and rich magnetic behaviors"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000025",
+        "to": null,
+        "label": "figure 3a",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l4",
+          "quote": "K shows a linear response, confirming paramagnetic behavior of HE166, as shown in Fig. 3a. Upon cooling"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000025",
+        "to": null,
+        "label": "figure 3e",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l8",
+          "quote": "(H //c), as shown in Fig. 3e. They jointly indicate a reorientation of the ferrimagnetic easy axis from the in-"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000025",
+        "to": null,
+        "label": "figure 2",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l9",
+          "quote": "plane to out-of-plane direction at 210 K, as revealed in the M (T) measurement in Fig. 2."
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000026",
+        "to": null,
+        "label": "figure 3b",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l11",
+          "quote": "perpendicular to the easy axis of ferrimagnetic order at different temperatures, as seen in Fig. 3b and 3c. In"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000026",
+        "to": null,
+        "label": "figure 3b",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l12",
+          "quote": "Fig. 3b (H // c), themagnetization between 350 – 250 K increases gradually before reaching saturation,"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000026",
+        "to": null,
+        "label": "figure 3c",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l14",
+          "quote": "In contrast, Fig. 3c (H ⊥ c) shows that metastable magnetic states are easily induced between 200 and 100"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000028",
+        "to": null,
+        "label": "figure 3e",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l20",
+          "quote": "loops, which become more prominent upon cooling, as seen in Fig. 3e and 3f. The formation of hysteresis"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000029",
+        "to": null,
+        "label": "figure 3g",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 6,
+          "block_id": "p6_l26",
+          "quote": "magnetic field applied perpendicular to the crystalline c direction (H ⊥ c), as shown in Fig. 3g. The"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000030",
+        "to": null,
+        "label": "figure 4",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 7,
+          "block_id": "p7_l1",
+          "quote": "Fig.4. Electrical transport results for HE166. a) Temperature dependent resistivity of HE166 system. b)"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000031",
+        "to": null,
+        "label": "figure 4",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 7,
+          "block_id": "p7_l8",
+          "quote": "temperature and magnetic field is shown in Fig. 4. The ρ(T) indicates the metallic nature of the sample over"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000031",
+        "to": null,
+        "label": "figure 4a",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 7,
+          "block_id": "p7_l12",
+          "quote": "shows a small yet clear peak at 205 K, as shown in the Fig. 4a inset, which is correlated with the magnetic"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000031",
+        "to": null,
+        "label": "figure 4b",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 7,
+          "block_id": "p7_l14",
+          "quote": "shown on Fig. 4b. A clear non-saturating linear MR with a ratio of 225% at 2 K is observed. Compared to"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000033",
+        "to": null,
+        "label": "figure 4c",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 7,
+          "block_id": "p7_l19",
+          "quote": "magnetic fields in a pulsed magnet with peak fields of 10 and 35 T, as shown in Fig. 4c. The linearity"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      },
+      {
+        "type": "refers_to",
+        "from": "x000038",
+        "to": null,
+        "label": "figure 4e",
+        "section_id": "heading_p1_l12",
+        "evidence": {
+          "page": 8,
+          "block_id": "p8_l18",
+          "quote": "Fig. 4e. HE166 shows similar trends to the parent phases. All the 𝜎𝑥𝑦 are weakly linked to 𝜎𝑥𝑥 and clearly"
+        },
+        "verified": false,
+        "review_required": true,
+        "supports_claim": false
+      }
+    ],
+    "review_required": true
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 13,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 13,
+        "children": [
+          {
+            "id": "heading_p1_l1",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "x000006",
+                "type": "paragraph",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "review_required": true,
+                "text": "Wenhao Liu1,2, Nikhil Uday Dhale1, Youzhe Chen2,3, Pramanand Joshi4, Zixin Zhai1, Xiqu Wang5, Ping Liu4,\nRobert J. Birgeneau2,3, Boris Maiorov6, Christopher A. Mizzi6, Bing Lv1,*",
+                "attributes": {
+                  "observation_ids": [
+                    "p1_l2",
+                    "p1_l3"
+                  ],
+                  "decision": {
+                    "rule": "Source block role proposal",
+                    "verified": false,
+                    "review_required": true,
+                    "source": [
+                      {
+                        "block_id": "p1_l2",
+                        "page": 1,
+                        "quote": "Wenhao Liu1,2, Nikhil Uday Dhale1, Youzhe Chen2,3, Pramanand Joshi4, Zixin Zhai1, Xiqu Wang5, Ping Liu4,"
+                      },
+                      {
+                        "block_id": "p1_l3",
+                        "page": 1,
+                        "quote": "Robert J. Birgeneau2,3, Boris Maiorov6, Christopher A. Mizzi6, Bing Lv1,*"
+                      }
+                    ]
+                  },
+                  "text_fidelity_status": "requires_source_review"
+                }
+              },
+              {
+                "id": "x000007",
+                "type": "paragraph",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "review_required": true,
+                "text": "1. Department of Physics, the University of Texas at Dallas, Richardson, TX 75080, USA\n2. Department of Physics, University of California, Berkeley, CA, 94720, USA\n3. Material Sciences Division, Lawrence Berkeley National Lab, Berkeley, California 94720, USA\n4. Department of Physics, the University of Texas at Arlington, Arlington, TX 76019, USA\n5. Department of Chemistry, University of Houston, Houston, TX 77204, USA\n6. National High Magnetic Field Laboratory, Los Alamos National Laboratory, Los Alamos, NM",
+                "attributes": {
+                  "observation_ids": [
+                    "p1_l4",
+                    "p1_l5",
+                    "p1_l6",
+                    "p1_l7",
+                    "p1_l8",
+                    "p1_l9"
+                  ],
+                  "decision": {
+                    "rule": "Source block role proposal",
+                    "verified": false,
+                    "review_required": true,
+                    "source": [
+                      {
+                        "block_id": "p1_l4",
+                        "page": 1,
+                        "quote": "1. Department of Physics, the University of Texas at Dallas, Richardson, TX 75080, USA"
+                      },
+                      {
+                        "block_id": "p1_l5",
+                        "page": 1,
+                        "quote": "2. Department of Physics, University of California, Berkeley, CA, 94720, USA"
+                      },
+                      {
+                        "block_id": "p1_l6",
+                        "page": 1,
+                        "quote": "3. Material Sciences Division, Lawrence Berkeley National Lab, Berkeley, California 94720, USA"
+                      },
+                      {
+                        "block_id": "p1_l7",
+                        "page": 1,
+                        "quote": "4. Department of Physics, the University of Texas at Arlington, Arlington, TX 76019, USA"
+                      },
+                      {
+                        "block_id": "p1_l8",
+                        "page": 1,
+                        "quote": "5. Department of Chemistry, University of Houston, Houston, TX 77204, USA"
+                      },
+                      {
+                        "block_id": "p1_l9",
+                        "page": 1,
+                        "quote": "6. National High Magnetic Field Laboratory, Los Alamos National Laboratory, Los Alamos, NM"
+                      }
+                    ]
+                  },
+                  "text_fidelity_status": "requires_source_review"
+                }
+              },
+              {
+                "id": "x000008",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "review_required": true,
+                "text": "87545, USA",
+                "attributes": {
+                  "observation_ids": [
+                    "p1_l10"
+                  ],
+                  "decision": {
+                    "rule": "Source block role proposal",
+                    "verified": false,
+                    "review_required": true,
+                    "source": [
+                      {
+                        "block_id": "p1_l10",
+                        "page": 1,
+                        "quote": "87545, USA"
+                      }
+                    ]
+                  },
+                  "text_fidelity_status": "requires_source_review",
+                  "custom_type": "unidentified"
+                }
+              },
+              {
+                "id": "x000009",
+                "type": "paragraph",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "review_required": true,
+                "text": "* to whom the correspondence to be addressed: blv@utdallas.edu",
+                "attributes": {
+                  "observation_ids": [
+                    "p1_l11"
+                  ],
+                  "decision": {
+                    "rule": "Source block role proposal",
+                    "verified": false,
+                    "review_required": true,
+                    "source": [
+                      {
+                        "block_id": "p1_l11",
+                        "page": 1,
+                        "quote": "* to whom the correspondence to be addressed: blv@utdallas.edu"
+                      }
+                    ]
+                  },
+                  "text_fidelity_status": "requires_source_review"
+                }
+              },
+              {
+                "id": "heading_p1_l12",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 9,
+                "children": [
+                  {
+                    "id": "x000010",
+                    "type": "paragraph",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "review_required": true,
+                    "text": "the interplay between magnetism and topological electronic states where a variety of exciting findings\nsuch as flat bands, Dirac points as well as the dramatic dependence of magnetic order on the rare-\nearth element have been reported. High entropy through rare earth alloying, on the other hand,\nprovides another knob to control over the physical properties in this system. Here, by the marriage\nof high entropy and the magnetic kagome lattice, we obtain (Gd,Tb,Dy,Ho,Er)Mn6Sn6 single crystals\nand systematically investigate their magnetic and transport properties. Different from the parent\nphases, the high entropy 166 material displays multiple novel magnetic transitions induced by\ntemperature and external magnetic fields. Furthermore, linear magnetoresistance persisting up to 20\nT has been revealed at 4 K. The intrinsic nontrivial band topology also survives in the high entropy\nform, as evidenced by the intrinsic anomalous Hall effect. Our results highlight high entropy as a\npowerful approach for tuning the interplay of charge, spin and lattice degree of freedom in magnetic",
+                    "attributes": {
+                      "observation_ids": [
+                        "p1_l13",
+                        "p1_l14",
+                        "p1_l15",
+                        "p1_l16",
+                        "p1_l17",
+                        "p1_l18",
+                        "p1_l19",
+                        "p1_l20",
+                        "p1_l21",
+                        "p1_l22",
+                        "p1_l23"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p1_l13",
+                            "page": 1,
+                            "quote": "the interplay between magnetism and topological electronic states where a variety of exciting findings"
+                          },
+                          {
+                            "block_id": "p1_l14",
+                            "page": 1,
+                            "quote": "such as flat bands, Dirac points as well as the dramatic dependence of magnetic order on the rare-"
+                          },
+                          {
+                            "block_id": "p1_l15",
+                            "page": 1,
+                            "quote": "earth element have been reported. High entropy through rare earth alloying, on the other hand,"
+                          },
+                          {
+                            "block_id": "p1_l16",
+                            "page": 1,
+                            "quote": "provides another knob to control over the physical properties in this system. Here, by the marriage"
+                          },
+                          {
+                            "block_id": "p1_l17",
+                            "page": 1,
+                            "quote": "of high entropy and the magnetic kagome lattice, we obtain (Gd,Tb,Dy,Ho,Er)Mn6Sn6 single crystals"
+                          },
+                          {
+                            "block_id": "p1_l18",
+                            "page": 1,
+                            "quote": "and systematically investigate their magnetic and transport properties. Different from the parent"
+                          },
+                          {
+                            "block_id": "p1_l19",
+                            "page": 1,
+                            "quote": "phases, the high entropy 166 material displays multiple novel magnetic transitions induced by"
+                          },
+                          {
+                            "block_id": "p1_l20",
+                            "page": 1,
+                            "quote": "temperature and external magnetic fields. Furthermore, linear magnetoresistance persisting up to 20"
+                          },
+                          {
+                            "block_id": "p1_l21",
+                            "page": 1,
+                            "quote": "T has been revealed at 4 K. The intrinsic nontrivial band topology also survives in the high entropy"
+                          },
+                          {
+                            "block_id": "p1_l22",
+                            "page": 1,
+                            "quote": "form, as evidenced by the intrinsic anomalous Hall effect. Our results highlight high entropy as a"
+                          },
+                          {
+                            "block_id": "p1_l23",
+                            "page": 1,
+                            "quote": "powerful approach for tuning the interplay of charge, spin and lattice degree of freedom in magnetic"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000011",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "review_required": true,
+                    "text": "topological materials.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p1_l24"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p1_l24",
+                            "page": 1,
+                            "quote": "topological materials."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000012",
+                    "type": "paragraph",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "review_required": true,
+                    "text": "The kagome lattice has received great attention recently due to the novel physics and the associated\ninteresting properties arising from the interplay between electron correlations and lattice geometry. A\ntypical kagome lattice consists of corner shared triangles, forming a distinctive honeycomb-like structure.1\nThis unique geometry has great potential to realize novel band structures including flat bands, linear band\ncrossings forming Dirac/Weyl points and van Hove singularities, which harbor important correlated\nelectronic states and lead to rich interesting phenomena such as unconventional superconductivity2,\ndissipationless spin moment locked charge transport and large quantum anomalous Hall effects3,4 .\nIntroducing magnetic ions into a geometrically frustrated kagome lattice provides another tool to tune these\ncorrelated electronic states. A prime example is hexagonal RMn6X6 (R166), where R represents transition\nmetal elements like Sc, Y, and rare earth elements La-Lu. These compounds usually consist of two\nsublattices: a Mn-Sn layer with a kagome lattice of Mn and a triangular R-Sn layer. The Mn kagome layer\nshows strong ferromagnetic in-plane coupling5 , which results in magnetic order above room-temperature.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p1_l25",
+                        "p1_l26",
+                        "p1_l27",
+                        "p1_l28",
+                        "p1_l29",
+                        "p1_l30",
+                        "p1_l31",
+                        "p1_l32",
+                        "p1_l33",
+                        "p1_l34",
+                        "p1_l35",
+                        "p1_l36"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p1_l25",
+                            "page": 1,
+                            "quote": "The kagome lattice has received great attention recently due to the novel physics and the associated"
+                          },
+                          {
+                            "block_id": "p1_l26",
+                            "page": 1,
+                            "quote": "interesting properties arising from the interplay between electron correlations and lattice geometry. A"
+                          },
+                          {
+                            "block_id": "p1_l27",
+                            "page": 1,
+                            "quote": "typical kagome lattice consists of corner shared triangles, forming a distinctive honeycomb-like structure.1"
+                          },
+                          {
+                            "block_id": "p1_l28",
+                            "page": 1,
+                            "quote": "This unique geometry has great potential to realize novel band structures including flat bands, linear band"
+                          },
+                          {
+                            "block_id": "p1_l29",
+                            "page": 1,
+                            "quote": "crossings forming Dirac/Weyl points and van Hove singularities, which harbor important correlated"
+                          },
+                          {
+                            "block_id": "p1_l30",
+                            "page": 1,
+                            "quote": "electronic states and lead to rich interesting phenomena such as unconventional superconductivity2,"
+                          },
+                          {
+                            "block_id": "p1_l31",
+                            "page": 1,
+                            "quote": "dissipationless spin moment locked charge transport and large quantum anomalous Hall effects3,4 ."
+                          },
+                          {
+                            "block_id": "p1_l32",
+                            "page": 1,
+                            "quote": "Introducing magnetic ions into a geometrically frustrated kagome lattice provides another tool to tune these"
+                          },
+                          {
+                            "block_id": "p1_l33",
+                            "page": 1,
+                            "quote": "correlated electronic states. A prime example is hexagonal RMn6X6 (R166), where R represents transition"
+                          },
+                          {
+                            "block_id": "p1_l34",
+                            "page": 1,
+                            "quote": "metal elements like Sc, Y, and rare earth elements La-Lu. These compounds usually consist of two"
+                          },
+                          {
+                            "block_id": "p1_l35",
+                            "page": 1,
+                            "quote": "sublattices: a Mn-Sn layer with a kagome lattice of Mn and a triangular R-Sn layer. The Mn kagome layer"
+                          },
+                          {
+                            "block_id": "p1_l36",
+                            "page": 1,
+                            "quote": "shows strong ferromagnetic in-plane coupling5 , which results in magnetic order above room-temperature."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000013",
+                    "type": "paragraph",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "review_required": true,
+                    "text": "On the other hand, Mn and the rare earth elements are generally antiferromagnetically coupled6,7 .\nCompetition between these ferromagnetic and antiferromagnetic couplings results in rich magnetic phases.\nFor example, collinear ferrimagnetic order (FIM) in (Gd-Ho)Mn6Sn6 emerges when strong\nantiferromagnetic coupling between the Gd-Ho and Mn sublattices dominate. For non-magnetic rare earth\nelements Sc and Y, the ferromagnetic coupling between Mn is strongest and their R166 phases show a\nspiral-magnetic structure in which the ferromagnetic magnetic order rotates among adjacent Mn layers7–9 .\nThe coupling between Mn and Er is at the boundary between the formation of FIM in (Gd-Ho)Mn6Sn6 and\nspiral magnetism in (Y, Sc)Mn6Sn6. As a result, ErMn6Sn6 shows an interesting triple-spiral magnetic\nordering10,11 and topological Hall effect7,12,13. As a whole, R166 shows unique temperature and field-driven\nmagnetic instabilities, opening new avenues in topological and magnetic state control and switching.14",
+                    "attributes": {
+                      "observation_ids": [
+                        "p2_l1",
+                        "p2_l2",
+                        "p2_l3",
+                        "p2_l4",
+                        "p2_l5",
+                        "p2_l6",
+                        "p2_l7",
+                        "p2_l8",
+                        "p2_l9",
+                        "p2_l10"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p2_l1",
+                            "page": 2,
+                            "quote": "On the other hand, Mn and the rare earth elements are generally antiferromagnetically coupled6,7 ."
+                          },
+                          {
+                            "block_id": "p2_l2",
+                            "page": 2,
+                            "quote": "Competition between these ferromagnetic and antiferromagnetic couplings results in rich magnetic phases."
+                          },
+                          {
+                            "block_id": "p2_l3",
+                            "page": 2,
+                            "quote": "For example, collinear ferrimagnetic order (FIM) in (Gd-Ho)Mn6Sn6 emerges when strong"
+                          },
+                          {
+                            "block_id": "p2_l4",
+                            "page": 2,
+                            "quote": "antiferromagnetic coupling between the Gd-Ho and Mn sublattices dominate. For non-magnetic rare earth"
+                          },
+                          {
+                            "block_id": "p2_l5",
+                            "page": 2,
+                            "quote": "elements Sc and Y, the ferromagnetic coupling between Mn is strongest and their R166 phases show a"
+                          },
+                          {
+                            "block_id": "p2_l6",
+                            "page": 2,
+                            "quote": "spiral-magnetic structure in which the ferromagnetic magnetic order rotates among adjacent Mn layers7–9 ."
+                          },
+                          {
+                            "block_id": "p2_l7",
+                            "page": 2,
+                            "quote": "The coupling between Mn and Er is at the boundary between the formation of FIM in (Gd-Ho)Mn6Sn6 and"
+                          },
+                          {
+                            "block_id": "p2_l8",
+                            "page": 2,
+                            "quote": "spiral magnetism in (Y, Sc)Mn6Sn6. As a result, ErMn6Sn6 shows an interesting triple-spiral magnetic"
+                          },
+                          {
+                            "block_id": "p2_l9",
+                            "page": 2,
+                            "quote": "ordering10,11 and topological Hall effect7,12,13. As a whole, R166 shows unique temperature and field-driven"
+                          },
+                          {
+                            "block_id": "p2_l10",
+                            "page": 2,
+                            "quote": "magnetic instabilities, opening new avenues in topological and magnetic state control and switching.14"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000014",
+                    "type": "paragraph",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "review_required": true,
+                    "text": "High entropy is another concept that received great attention in the past decade. It is an alloying strategy\nthat yields a single phase random distribution of solid solution with five or more elements.1,15,16 The\nformation of high entropy materials relies on the configuration entropy contributing to the free energy\nsufficiently to overcome the formation enthalpy, resulting in a highly disordered yet chemically\nhomogeneous system. This high degree of homogeneous in high entropy materials plays a crucial role in\nincluding various material properties like mechanical, electronical and magnetic characters. Moreover, it\nprovides a vast compositional space with diverse combinations of composition, charge and spin, enabling\nthe exploration of much wider range of novel correlated phenomena.1,15 Motivated by the potential\nadvantages of this strategy and the rich magnetic structures specified by individual rare-earth elements in\nthe R166 system, we synthesized and characterized a new high entropy kagome lattice by incorporating\nfive rare earth elements – Gd, Tb, Dy, Ho, Er – on the same crystallographic site, forming a high entropy\nkagome phase in (Gd0.21Tb0.22Dy0.22Ho0.19Er0.16) Mn6Sn6, denoted as HE166 in the main text. Large-size\nsingle crystals have been successfully grown via Sn flux method. A cascade of new phenomena emerges in\nthis high-entropy kagome system that is not found in the parent compounds. Magnetic measurements reveal\nmultiple magnetic transitions including ferrimagnetic transitions and spin reorientations. The application of\nan external magnetic field additionally induces multiple field-dependent transitions including metamagnetic\nstates and possibly chiral magnetic order. Correlated with magnetization, our electrical transport results\nshow a first-order phase transition around 205 K. Magneto-transport measurements exhibit a linear, non-\nsaturating magnetoresistance persisting up to 20 T, potentially linked to the band topology and the high\nentropy effects. Hall measurements further reveal the intrinsic Hall effect and non-zero internal Hall\nconductivity, indicating the survival of Chern gapped Dirac Fermions that exist in the parent phases. These\nfindings demonstrate the power of high-entropy engineering in tailoring the interplay between charge, spin,\nand lattice degrees of freedom in magnetic topological materials.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p2_l11",
+                        "p2_l12",
+                        "p2_l13",
+                        "p2_l14",
+                        "p2_l15",
+                        "p2_l16",
+                        "p2_l17",
+                        "p2_l18",
+                        "p2_l19",
+                        "p2_l20",
+                        "p2_l21",
+                        "p2_l22",
+                        "p2_l23",
+                        "p2_l24",
+                        "p2_l25",
+                        "p2_l26",
+                        "p2_l27",
+                        "p2_l28",
+                        "p2_l29",
+                        "p2_l30",
+                        "p2_l31",
+                        "p2_l32",
+                        "p2_l33"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p2_l11",
+                            "page": 2,
+                            "quote": "High entropy is another concept that received great attention in the past decade. It is an alloying strategy"
+                          },
+                          {
+                            "block_id": "p2_l12",
+                            "page": 2,
+                            "quote": "that yields a single phase random distribution of solid solution with five or more elements.1,15,16 The"
+                          },
+                          {
+                            "block_id": "p2_l13",
+                            "page": 2,
+                            "quote": "formation of high entropy materials relies on the configuration entropy contributing to the free energy"
+                          },
+                          {
+                            "block_id": "p2_l14",
+                            "page": 2,
+                            "quote": "sufficiently to overcome the formation enthalpy, resulting in a highly disordered yet chemically"
+                          },
+                          {
+                            "block_id": "p2_l15",
+                            "page": 2,
+                            "quote": "homogeneous system. This high degree of homogeneous in high entropy materials plays a crucial role in"
+                          },
+                          {
+                            "block_id": "p2_l16",
+                            "page": 2,
+                            "quote": "including various material properties like mechanical, electronical and magnetic characters. Moreover, it"
+                          },
+                          {
+                            "block_id": "p2_l17",
+                            "page": 2,
+                            "quote": "provides a vast compositional space with diverse combinations of composition, charge and spin, enabling"
+                          },
+                          {
+                            "block_id": "p2_l18",
+                            "page": 2,
+                            "quote": "the exploration of much wider range of novel correlated phenomena.1,15 Motivated by the potential"
+                          },
+                          {
+                            "block_id": "p2_l19",
+                            "page": 2,
+                            "quote": "advantages of this strategy and the rich magnetic structures specified by individual rare-earth elements in"
+                          },
+                          {
+                            "block_id": "p2_l20",
+                            "page": 2,
+                            "quote": "the R166 system, we synthesized and characterized a new high entropy kagome lattice by incorporating"
+                          },
+                          {
+                            "block_id": "p2_l21",
+                            "page": 2,
+                            "quote": "five rare earth elements – Gd, Tb, Dy, Ho, Er – on the same crystallographic site, forming a high entropy"
+                          },
+                          {
+                            "block_id": "p2_l22",
+                            "page": 2,
+                            "quote": "kagome phase in (Gd0.21Tb0.22Dy0.22Ho0.19Er0.16) Mn6Sn6, denoted as HE166 in the main text. Large-size"
+                          },
+                          {
+                            "block_id": "p2_l23",
+                            "page": 2,
+                            "quote": "single crystals have been successfully grown via Sn flux method. A cascade of new phenomena emerges in"
+                          },
+                          {
+                            "block_id": "p2_l24",
+                            "page": 2,
+                            "quote": "this high-entropy kagome system that is not found in the parent compounds. Magnetic measurements reveal"
+                          },
+                          {
+                            "block_id": "p2_l25",
+                            "page": 2,
+                            "quote": "multiple magnetic transitions including ferrimagnetic transitions and spin reorientations. The application of"
+                          },
+                          {
+                            "block_id": "p2_l26",
+                            "page": 2,
+                            "quote": "an external magnetic field additionally induces multiple field-dependent transitions including metamagnetic"
+                          },
+                          {
+                            "block_id": "p2_l27",
+                            "page": 2,
+                            "quote": "states and possibly chiral magnetic order. Correlated with magnetization, our electrical transport results"
+                          },
+                          {
+                            "block_id": "p2_l28",
+                            "page": 2,
+                            "quote": "show a first-order phase transition around 205 K. Magneto-transport measurements exhibit a linear, non-"
+                          },
+                          {
+                            "block_id": "p2_l29",
+                            "page": 2,
+                            "quote": "saturating magnetoresistance persisting up to 20 T, potentially linked to the band topology and the high"
+                          },
+                          {
+                            "block_id": "p2_l30",
+                            "page": 2,
+                            "quote": "entropy effects. Hall measurements further reveal the intrinsic Hall effect and non-zero internal Hall"
+                          },
+                          {
+                            "block_id": "p2_l31",
+                            "page": 2,
+                            "quote": "conductivity, indicating the survival of Chern gapped Dirac Fermions that exist in the parent phases. These"
+                          },
+                          {
+                            "block_id": "p2_l32",
+                            "page": 2,
+                            "quote": "findings demonstrate the power of high-entropy engineering in tailoring the interplay between charge, spin,"
+                          },
+                          {
+                            "block_id": "p2_l33",
+                            "page": 2,
+                            "quote": "and lattice degrees of freedom in magnetic topological materials."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000015",
+                    "type": "paragraph",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "review_required": true,
+                    "text": "The crystal structure of HE166 with five rare-earth elements was determined using X-ray diffractometer on\nthe single crystals. Fig. 1a presents the procession image of (0kl) zone, constructed using a set of 2404\nmeasured ῳ scan frames for 123 K and 2097 for 300 K. The sharp Bragg peaks, free from heavy distortions\nlike ring shapes or blurry spots, shows the high crystallinity in our single crystals, which is further\nconfirmed by the good refinement results showing in the Tabel 1. X-ray diffraction and related refinements\nindicate the HE166 crystal with five rare earth elements has the same crystal structure as their parent phases\nwhere the rare earth elements are randomly distributed on the Wyckoff position 1a site. Moreover, we do\nnot observe a structure change between 123 K and 300 K within the resolution of X-ray diffraction\nequipment, as shown in Fig. 1a and Table 1, excluding a structure change at the magnetic phase transitions\nwhich we will discuss later. The homogeneous distribution of rare earth elements is further confirmed with\nenergy-dispersive X-ray spectroscopy (Fig. 1c), which suggests the successful formation of high entropy.\nThe measured composition of HE 166 from SEM-EDX is (Gd0.21Tb0.22Dy0.22Ho0.19Er0.16) Mn6Sn6, which is\nrather close but slightly different from the nominal evenly distributed (20% for each rare earth) nomination",
+                    "attributes": {
+                      "observation_ids": [
+                        "p2_l34",
+                        "p2_l35",
+                        "p2_l36",
+                        "p2_l37",
+                        "p2_l38",
+                        "p2_l39",
+                        "p2_l40",
+                        "p2_l41",
+                        "p2_l42",
+                        "p2_l43",
+                        "p2_l44",
+                        "p2_l45",
+                        "p2_l46"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p2_l34",
+                            "page": 2,
+                            "quote": "The crystal structure of HE166 with five rare-earth elements was determined using X-ray diffractometer on"
+                          },
+                          {
+                            "block_id": "p2_l35",
+                            "page": 2,
+                            "quote": "the single crystals. Fig. 1a presents the procession image of (0kl) zone, constructed using a set of 2404"
+                          },
+                          {
+                            "block_id": "p2_l36",
+                            "page": 2,
+                            "quote": "measured ῳ scan frames for 123 K and 2097 for 300 K. The sharp Bragg peaks, free from heavy distortions"
+                          },
+                          {
+                            "block_id": "p2_l37",
+                            "page": 2,
+                            "quote": "like ring shapes or blurry spots, shows the high crystallinity in our single crystals, which is further"
+                          },
+                          {
+                            "block_id": "p2_l38",
+                            "page": 2,
+                            "quote": "confirmed by the good refinement results showing in the Tabel 1. X-ray diffraction and related refinements"
+                          },
+                          {
+                            "block_id": "p2_l39",
+                            "page": 2,
+                            "quote": "indicate the HE166 crystal with five rare earth elements has the same crystal structure as their parent phases"
+                          },
+                          {
+                            "block_id": "p2_l40",
+                            "page": 2,
+                            "quote": "where the rare earth elements are randomly distributed on the Wyckoff position 1a site. Moreover, we do"
+                          },
+                          {
+                            "block_id": "p2_l41",
+                            "page": 2,
+                            "quote": "not observe a structure change between 123 K and 300 K within the resolution of X-ray diffraction"
+                          },
+                          {
+                            "block_id": "p2_l42",
+                            "page": 2,
+                            "quote": "equipment, as shown in Fig. 1a and Table 1, excluding a structure change at the magnetic phase transitions"
+                          },
+                          {
+                            "block_id": "p2_l43",
+                            "page": 2,
+                            "quote": "which we will discuss later. The homogeneous distribution of rare earth elements is further confirmed with"
+                          },
+                          {
+                            "block_id": "p2_l44",
+                            "page": 2,
+                            "quote": "energy-dispersive X-ray spectroscopy (Fig. 1c), which suggests the successful formation of high entropy."
+                          },
+                          {
+                            "block_id": "p2_l45",
+                            "page": 2,
+                            "quote": "The measured composition of HE 166 from SEM-EDX is (Gd0.21Tb0.22Dy0.22Ho0.19Er0.16) Mn6Sn6, which is"
+                          },
+                          {
+                            "block_id": "p2_l46",
+                            "page": 2,
+                            "quote": "rather close but slightly different from the nominal evenly distributed (20% for each rare earth) nomination"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000016",
+                    "type": "paragraph",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "review_required": true,
+                    "text": "composition starting the synthesis. It is interesting to note that, the HE 166 crystals are directly grown from\nelements without obvious other phases formation during the synthesis, while during single rare earth 166\nphase synthesis, minor impurities such as RSn2 with different crystal morphology is observed",
+                    "attributes": {
+                      "observation_ids": [
+                        "p3_l1",
+                        "p3_l2",
+                        "p3_l3"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p3_l1",
+                            "page": 3,
+                            "quote": "composition starting the synthesis. It is interesting to note that, the HE 166 crystals are directly grown from"
+                          },
+                          {
+                            "block_id": "p3_l2",
+                            "page": 3,
+                            "quote": "elements without obvious other phases formation during the synthesis, while during single rare earth 166"
+                          },
+                          {
+                            "block_id": "p3_l3",
+                            "page": 3,
+                            "quote": "phase synthesis, minor impurities such as RSn2 with different crystal morphology is observed"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000017",
+                    "type": "paragraph",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Fig. 1, Structure and composition of HE166. a) Precession image of HE166 obtained from X-ray\ndiffractometer at room temperature at 300K and low temperature at 123 K. b) Crystal structure of HE166\nviewed along the crystallographic a and c axis. c) SEM-EDX mapping revealed the chemical distribution\nof the rare earth elements in HE166, highlighting the homogeneous distribution of the five rare-earth",
+                    "attributes": {
+                      "observation_ids": [
+                        "p3_l4",
+                        "p3_l5",
+                        "p3_l6",
+                        "p3_l7"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p3_l4",
+                            "page": 3,
+                            "quote": "Fig. 1, Structure and composition of HE166. a) Precession image of HE166 obtained from X-ray"
+                          },
+                          {
+                            "block_id": "p3_l5",
+                            "page": 3,
+                            "quote": "diffractometer at room temperature at 300K and low temperature at 123 K. b) Crystal structure of HE166"
+                          },
+                          {
+                            "block_id": "p3_l6",
+                            "page": 3,
+                            "quote": "viewed along the crystallographic a and c axis. c) SEM-EDX mapping revealed the chemical distribution"
+                          },
+                          {
+                            "block_id": "p3_l7",
+                            "page": 3,
+                            "quote": "of the rare earth elements in HE166, highlighting the homogeneous distribution of the five rare-earth"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000018",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "review_required": true,
+                    "text": "elements.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p3_l8"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p3_l8",
+                            "page": 3,
+                            "quote": "elements."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000019",
+                    "type": "paragraph",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Table 1: Crystallographic data of HEMn6Sn6 at 123 K and 300 K.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p3_l9"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p3_l9",
+                            "page": 3,
+                            "quote": "Table 1: Crystallographic data of HEMn6Sn6 at 123 K and 300 K."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000020",
+                    "type": "paragraph",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Fig. 2 a). Magnetic order of the parent phase with different rare earth elements. b) c) Temperature\ndependence of magnetization on HE166 with external magnetic field applied along and perpendicular to",
+                    "attributes": {
+                      "observation_ids": [
+                        "p4_l1",
+                        "p4_l2"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p4_l1",
+                            "page": 4,
+                            "quote": "Fig. 2 a). Magnetic order of the parent phase with different rare earth elements. b) c) Temperature"
+                          },
+                          {
+                            "block_id": "p4_l2",
+                            "page": 4,
+                            "quote": "dependence of magnetization on HE166 with external magnetic field applied along and perpendicular to"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000021",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "review_required": true,
+                    "text": "the c axis.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p4_l3"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p4_l3",
+                            "page": 4,
+                            "quote": "the c axis."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000022",
+                    "type": "paragraph",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "review_required": true,
+                    "text": "The 166 parent phases exhibit different magnetic structures depending on the rare earth element, 5,10,13,17–\n19 which is illustrated in Fig. 2a. The light blue and grey arrows indicate the magnetic orders of Mn and\nrare earth elements respectively. In the high-entropy 166 system, where all the rare earth elements occupy\nthe same crystallographic site, no evidence of phase separation was observed in our single crystal diffraction,\nchemical analysis as well as the magnetization measurements. Furthermore, the magnetic phases in the\nhigh-entropy 166 do not appear to be a superposition of parent phases containing only one rare earth element.\nInstead, the competition among the different magnetic ions from Gd to Er leads to a richer magnetic phase\ndiagram including new transitions as well as new transition temperatures that do not appear in the parent\nphases. Fig. 2b and 2c show the temperature dependent magnetizations of HE166 with magnetic field\napplied along the in-plane and out-of-plane directions, respectively. Multiple magnetic transitions have\nbeen observed, which are marked as T1, T2 and T3. Fig. 2b shows the temperature dependence of the\nmagnetization when an external magnetic field is applied within the basal plane. Upon cooling from 600 K,\na sudden increase of the magnetization occurs at 420 K, marked as T3, indicating the paramagnetic to\nferrimagnetic phase transition, as shown in the inset of Fig. 2b. As temperature continues to decrease to 200\nK, the magnetization remains nearly constant, indicating the presence of a saturated in-plane ferrimagnetic\norder. Below 200 K, the magnetization drops dramatically, indicating that a spin reorientation occurs where\nthe in-plane ferrimagnetism changes to out-of-plane uniaxial ferrimagnetism, which we will discuss further\nlater. Below 80 K, a slight splitting occurs between the zero-field cooling (ZFC) and field cooling (FC)\nmagnetization, and this is related to another magnetic transition associated with the spin reorientation, as",
+                    "attributes": {
+                      "observation_ids": [
+                        "p4_l4",
+                        "p4_l5",
+                        "p4_l6",
+                        "p4_l7",
+                        "p4_l8",
+                        "p4_l9",
+                        "p4_l10",
+                        "p4_l11",
+                        "p4_l12",
+                        "p4_l13",
+                        "p4_l14",
+                        "p4_l15",
+                        "p4_l16",
+                        "p4_l17",
+                        "p4_l18",
+                        "p4_l19",
+                        "p4_l20",
+                        "p4_l21",
+                        "p4_l22"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p4_l4",
+                            "page": 4,
+                            "quote": "The 166 parent phases exhibit different magnetic structures depending on the rare earth element, 5,10,13,17–"
+                          },
+                          {
+                            "block_id": "p4_l5",
+                            "page": 4,
+                            "quote": "19 which is illustrated in Fig. 2a. The light blue and grey arrows indicate the magnetic orders of Mn and"
+                          },
+                          {
+                            "block_id": "p4_l6",
+                            "page": 4,
+                            "quote": "rare earth elements respectively. In the high-entropy 166 system, where all the rare earth elements occupy"
+                          },
+                          {
+                            "block_id": "p4_l7",
+                            "page": 4,
+                            "quote": "the same crystallographic site, no evidence of phase separation was observed in our single crystal diffraction,"
+                          },
+                          {
+                            "block_id": "p4_l8",
+                            "page": 4,
+                            "quote": "chemical analysis as well as the magnetization measurements. Furthermore, the magnetic phases in the"
+                          },
+                          {
+                            "block_id": "p4_l9",
+                            "page": 4,
+                            "quote": "high-entropy 166 do not appear to be a superposition of parent phases containing only one rare earth element."
+                          },
+                          {
+                            "block_id": "p4_l10",
+                            "page": 4,
+                            "quote": "Instead, the competition among the different magnetic ions from Gd to Er leads to a richer magnetic phase"
+                          },
+                          {
+                            "block_id": "p4_l11",
+                            "page": 4,
+                            "quote": "diagram including new transitions as well as new transition temperatures that do not appear in the parent"
+                          },
+                          {
+                            "block_id": "p4_l12",
+                            "page": 4,
+                            "quote": "phases. Fig. 2b and 2c show the temperature dependent magnetizations of HE166 with magnetic field"
+                          },
+                          {
+                            "block_id": "p4_l13",
+                            "page": 4,
+                            "quote": "applied along the in-plane and out-of-plane directions, respectively. Multiple magnetic transitions have"
+                          },
+                          {
+                            "block_id": "p4_l14",
+                            "page": 4,
+                            "quote": "been observed, which are marked as T1, T2 and T3. Fig. 2b shows the temperature dependence of the"
+                          },
+                          {
+                            "block_id": "p4_l15",
+                            "page": 4,
+                            "quote": "magnetization when an external magnetic field is applied within the basal plane. Upon cooling from 600 K,"
+                          },
+                          {
+                            "block_id": "p4_l16",
+                            "page": 4,
+                            "quote": "a sudden increase of the magnetization occurs at 420 K, marked as T3, indicating the paramagnetic to"
+                          },
+                          {
+                            "block_id": "p4_l17",
+                            "page": 4,
+                            "quote": "ferrimagnetic phase transition, as shown in the inset of Fig. 2b. As temperature continues to decrease to 200"
+                          },
+                          {
+                            "block_id": "p4_l18",
+                            "page": 4,
+                            "quote": "K, the magnetization remains nearly constant, indicating the presence of a saturated in-plane ferrimagnetic"
+                          },
+                          {
+                            "block_id": "p4_l19",
+                            "page": 4,
+                            "quote": "order. Below 200 K, the magnetization drops dramatically, indicating that a spin reorientation occurs where"
+                          },
+                          {
+                            "block_id": "p4_l20",
+                            "page": 4,
+                            "quote": "the in-plane ferrimagnetism changes to out-of-plane uniaxial ferrimagnetism, which we will discuss further"
+                          },
+                          {
+                            "block_id": "p4_l21",
+                            "page": 4,
+                            "quote": "later. Below 80 K, a slight splitting occurs between the zero-field cooling (ZFC) and field cooling (FC)"
+                          },
+                          {
+                            "block_id": "p4_l22",
+                            "page": 4,
+                            "quote": "magnetization, and this is related to another magnetic transition associated with the spin reorientation, as"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000023",
+                    "type": "paragraph",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "review_required": true,
+                    "text": "seen in other R166 systems.20,21 Fig. 2c shows the magnetization data, when the external magnetic field is\napplied out-of-plane. A peak occurs at 200 K, corresponding to the spin reorientation. Slightly below 200\nK, the splitting between ZFC and FC magnetization occurs. When the temperature continuously decreases,\na small hump feature as well as kink-like behavior happen below 80 K, consistent with the in-plane\nmeasurements, jointly revealing the spin-reorientations transition.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p5_l1",
+                        "p5_l2",
+                        "p5_l3",
+                        "p5_l4",
+                        "p5_l5"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p5_l1",
+                            "page": 5,
+                            "quote": "seen in other R166 systems.20,21 Fig. 2c shows the magnetization data, when the external magnetic field is"
+                          },
+                          {
+                            "block_id": "p5_l2",
+                            "page": 5,
+                            "quote": "applied out-of-plane. A peak occurs at 200 K, corresponding to the spin reorientation. Slightly below 200"
+                          },
+                          {
+                            "block_id": "p5_l3",
+                            "page": 5,
+                            "quote": "K, the splitting between ZFC and FC magnetization occurs. When the temperature continuously decreases,"
+                          },
+                          {
+                            "block_id": "p5_l4",
+                            "page": 5,
+                            "quote": "a small hump feature as well as kink-like behavior happen below 80 K, consistent with the in-plane"
+                          },
+                          {
+                            "block_id": "p5_l5",
+                            "page": 5,
+                            "quote": "measurements, jointly revealing the spin-reorientations transition."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000024",
+                    "type": "paragraph",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Fig. 3. Field-dependent magnetization hysteresis loops of HE166 at various temperatures. a),c),e)\nMeasurements from 5-350 K with external magnetic applied along in-plane direction (H ⊥ c). b),d),f)\nMeasurements from 5-500 K with field applied along out-of-plane direction (H // c). g) Magnetic phase\ndiagram of HE166 with external magnetic field applied perpendicular to crystalline c direction. FIM-ab: in\nplane ferrimagnetism. FIM-c: uniaxial ferrimagnetism. Light blue and grey arrows: magnetic orders of\nhigh-entropy rare-earth elements and Mn atoms, respectively.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p5_l6",
+                        "p5_l7",
+                        "p5_l8",
+                        "p5_l9",
+                        "p5_l10",
+                        "p5_l11"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p5_l6",
+                            "page": 5,
+                            "quote": "Fig. 3. Field-dependent magnetization hysteresis loops of HE166 at various temperatures. a),c),e)"
+                          },
+                          {
+                            "block_id": "p5_l7",
+                            "page": 5,
+                            "quote": "Measurements from 5-350 K with external magnetic applied along in-plane direction (H ⊥ c). b),d),f)"
+                          },
+                          {
+                            "block_id": "p5_l8",
+                            "page": 5,
+                            "quote": "Measurements from 5-500 K with field applied along out-of-plane direction (H // c). g) Magnetic phase"
+                          },
+                          {
+                            "block_id": "p5_l9",
+                            "page": 5,
+                            "quote": "diagram of HE166 with external magnetic field applied perpendicular to crystalline c direction. FIM-ab: in"
+                          },
+                          {
+                            "block_id": "p5_l10",
+                            "page": 5,
+                            "quote": "plane ferrimagnetism. FIM-c: uniaxial ferrimagnetism. Light blue and grey arrows: magnetic orders of"
+                          },
+                          {
+                            "block_id": "p5_l11",
+                            "page": 5,
+                            "quote": "high-entropy rare-earth elements and Mn atoms, respectively."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000025",
+                    "type": "paragraph",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "review_required": true,
+                    "text": "To further understand the magnetic interactions, magnetic hysteresis loops at fixed temperatures were\nmeasured, as shown in Fig. 3. These measurements reveal large anisotropies and rich magnetic behaviors\nin this HE166 system. When the external magnetic field is applied in-plane ( H ⊥ c ) , the M-H curve at 500\nK shows a linear response, confirming paramagnetic behavior of HE166, as shown in Fig. 3a. Upon cooling\nto 400 K, the magnetization undergoes a sharp increase and can reach saturation easily under small external\nfield. This saturation becomes more pronounced with further cooling. Similar magnetization behavior of\nHE166 is observed in the temperature range of 200- 100 K when the magnetic field is applied out-of-plane\n(H //c), as shown in Fig. 3e. They jointly indicate a reorientation of the ferrimagnetic easy axis from the in-\nplane to out-of-plane direction at 210 K, as revealed in the M (T) measurement in Fig. 2.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p6_l1",
+                        "p6_l2",
+                        "p6_l3",
+                        "p6_l4",
+                        "p6_l5",
+                        "p6_l6",
+                        "p6_l7",
+                        "p6_l8",
+                        "p6_l9"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p6_l1",
+                            "page": 6,
+                            "quote": "To further understand the magnetic interactions, magnetic hysteresis loops at fixed temperatures were"
+                          },
+                          {
+                            "block_id": "p6_l2",
+                            "page": 6,
+                            "quote": "measured, as shown in Fig. 3. These measurements reveal large anisotropies and rich magnetic behaviors"
+                          },
+                          {
+                            "block_id": "p6_l3",
+                            "page": 6,
+                            "quote": "in this HE166 system. When the external magnetic field is applied in-plane ( H ⊥ c ) , the M-H curve at 500"
+                          },
+                          {
+                            "block_id": "p6_l4",
+                            "page": 6,
+                            "quote": "K shows a linear response, confirming paramagnetic behavior of HE166, as shown in Fig. 3a. Upon cooling"
+                          },
+                          {
+                            "block_id": "p6_l5",
+                            "page": 6,
+                            "quote": "to 400 K, the magnetization undergoes a sharp increase and can reach saturation easily under small external"
+                          },
+                          {
+                            "block_id": "p6_l6",
+                            "page": 6,
+                            "quote": "field. This saturation becomes more pronounced with further cooling. Similar magnetization behavior of"
+                          },
+                          {
+                            "block_id": "p6_l7",
+                            "page": 6,
+                            "quote": "HE166 is observed in the temperature range of 200- 100 K when the magnetic field is applied out-of-plane"
+                          },
+                          {
+                            "block_id": "p6_l8",
+                            "page": 6,
+                            "quote": "(H //c), as shown in Fig. 3e. They jointly indicate a reorientation of the ferrimagnetic easy axis from the in-"
+                          },
+                          {
+                            "block_id": "p6_l9",
+                            "page": 6,
+                            "quote": "plane to out-of-plane direction at 210 K, as revealed in the M (T) measurement in Fig. 2."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000026",
+                    "type": "paragraph",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "review_required": true,
+                    "text": "The field induced magnetization exhibits dramatically different behavior when the external field is applied\nperpendicular to the easy axis of ferrimagnetic order at different temperatures, as seen in Fig. 3b and 3c. In\nFig. 3b (H // c), themagnetization between 350 – 250 K increases gradually before reaching saturation,\nindicating a continuous spin reorientation as the ferrimagnetic order is forced to align with the external field.\nIn contrast, Fig. 3c (H ⊥ c) shows that metastable magnetic states are easily induced between 200 and 100\nK when the external magnetic field is perpendicular to the ferrimagnetic order. For example, at 150 K, the\nmagnetization increases gradually until a sharp jump at 2 T, followed by a slow increase towards saturation\nabove 3 T. Such an unusual magnetization resembles the topological Hall effect, which has been revealed",
+                    "attributes": {
+                      "observation_ids": [
+                        "p6_l10",
+                        "p6_l11",
+                        "p6_l12",
+                        "p6_l13",
+                        "p6_l14",
+                        "p6_l15",
+                        "p6_l16",
+                        "p6_l17"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p6_l10",
+                            "page": 6,
+                            "quote": "The field induced magnetization exhibits dramatically different behavior when the external field is applied"
+                          },
+                          {
+                            "block_id": "p6_l11",
+                            "page": 6,
+                            "quote": "perpendicular to the easy axis of ferrimagnetic order at different temperatures, as seen in Fig. 3b and 3c. In"
+                          },
+                          {
+                            "block_id": "p6_l12",
+                            "page": 6,
+                            "quote": "Fig. 3b (H // c), themagnetization between 350 – 250 K increases gradually before reaching saturation,"
+                          },
+                          {
+                            "block_id": "p6_l13",
+                            "page": 6,
+                            "quote": "indicating a continuous spin reorientation as the ferrimagnetic order is forced to align with the external field."
+                          },
+                          {
+                            "block_id": "p6_l14",
+                            "page": 6,
+                            "quote": "In contrast, Fig. 3c (H ⊥ c) shows that metastable magnetic states are easily induced between 200 and 100"
+                          },
+                          {
+                            "block_id": "p6_l15",
+                            "page": 6,
+                            "quote": "K when the external magnetic field is perpendicular to the ferrimagnetic order. For example, at 150 K, the"
+                          },
+                          {
+                            "block_id": "p6_l16",
+                            "page": 6,
+                            "quote": "magnetization increases gradually until a sharp jump at 2 T, followed by a slow increase towards saturation"
+                          },
+                          {
+                            "block_id": "p6_l17",
+                            "page": 6,
+                            "quote": "above 3 T. Such an unusual magnetization resembles the topological Hall effect, which has been revealed"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000027",
+                    "type": "custom",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "review_required": true,
+                    "text": "in ErMn6Sn610.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p6_l18"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p6_l18",
+                            "page": 6,
+                            "quote": "in ErMn6Sn610."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000028",
+                    "type": "paragraph",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Below 50 K, both the magnetization curves with H // c and H ⊥ c share common features of hysteresis\nloops, which become more prominent upon cooling, as seen in Fig. 3e and 3f. The formation of hysteresis\nloops indicates the deviation of the easy axis of FIM order from the c axis, as shown in the Dy, Ho and Er\n166 parent systems14,17. It should be noted that magnetization does not saturate with H ⊥ c, as seen in Fig.\n3e, suggesting the formation of spin canting where the magnetic moments of the Mn and rare earth elements\ntilt away from a collinear alignment.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p6_l19",
+                        "p6_l20",
+                        "p6_l21",
+                        "p6_l22",
+                        "p6_l23",
+                        "p6_l24"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p6_l19",
+                            "page": 6,
+                            "quote": "Below 50 K, both the magnetization curves with H // c and H ⊥ c share common features of hysteresis"
+                          },
+                          {
+                            "block_id": "p6_l20",
+                            "page": 6,
+                            "quote": "loops, which become more prominent upon cooling, as seen in Fig. 3e and 3f. The formation of hysteresis"
+                          },
+                          {
+                            "block_id": "p6_l21",
+                            "page": 6,
+                            "quote": "loops indicates the deviation of the easy axis of FIM order from the c axis, as shown in the Dy, Ho and Er"
+                          },
+                          {
+                            "block_id": "p6_l22",
+                            "page": 6,
+                            "quote": "166 parent systems14,17. It should be noted that magnetization does not saturate with H ⊥ c, as seen in Fig."
+                          },
+                          {
+                            "block_id": "p6_l23",
+                            "page": 6,
+                            "quote": "3e, suggesting the formation of spin canting where the magnetic moments of the Mn and rare earth elements"
+                          },
+                          {
+                            "block_id": "p6_l24",
+                            "page": 6,
+                            "quote": "tilt away from a collinear alignment."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000029",
+                    "type": "paragraph",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Considering all the magnetization results, a magnetic phase diagram is constructed with the external\nmagnetic field applied perpendicular to the crystalline c direction (H ⊥ c), as shown in Fig. 3g. The\ncompetition between the multiple factors like exchange, anisotropy and Zeeman energies10 yields a rich\nmagnetic phase diagram. Above T3, thermal spin fluctuations dominate and the whole system shows\nparamagnetic behavior. Below T3 and above T2, exchange energy prevails, stabilizing a long-range planar\nferrimagnetic order. When the temperature further decreases below T2 but above T1, this ferrimagnetic order\nreorients from in-plane direction to the out-of-plane direction, due to the dominance of the out-of- plane\nanisotropy energy. Notably, within this intermediate temperature range from 80 to 200 K, the out-of-plane\nmagnetic state exhibits complex metamagnetic behavior under in-plane magnetic fields, with M–H loops\nsuggestive of non-zero scalar spin chirality and potentially chiral spin textures7,8,12,22. Verification of such\nstates requires advanced neutron diffraction studies. Below T₁, thermal fluctuations are further suppressed,\nand the anisotropy energy increasingly governs the spin configuration, inducing an additional spin\nreorientation in which the FIM easy axis tilts away the c axis towards an intermediate direction between\nthe c axis and the ab plane. Under external magnetic fields, the Mn and rare-earth moments develop slightly\ncanting, forming canted spin textures.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p6_l25",
+                        "p6_l26",
+                        "p6_l27",
+                        "p6_l28",
+                        "p6_l29",
+                        "p6_l30",
+                        "p6_l31",
+                        "p6_l32",
+                        "p6_l33",
+                        "p6_l34",
+                        "p6_l35",
+                        "p6_l36",
+                        "p6_l37",
+                        "p6_l38",
+                        "p6_l39"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p6_l25",
+                            "page": 6,
+                            "quote": "Considering all the magnetization results, a magnetic phase diagram is constructed with the external"
+                          },
+                          {
+                            "block_id": "p6_l26",
+                            "page": 6,
+                            "quote": "magnetic field applied perpendicular to the crystalline c direction (H ⊥ c), as shown in Fig. 3g. The"
+                          },
+                          {
+                            "block_id": "p6_l27",
+                            "page": 6,
+                            "quote": "competition between the multiple factors like exchange, anisotropy and Zeeman energies10 yields a rich"
+                          },
+                          {
+                            "block_id": "p6_l28",
+                            "page": 6,
+                            "quote": "magnetic phase diagram. Above T3, thermal spin fluctuations dominate and the whole system shows"
+                          },
+                          {
+                            "block_id": "p6_l29",
+                            "page": 6,
+                            "quote": "paramagnetic behavior. Below T3 and above T2, exchange energy prevails, stabilizing a long-range planar"
+                          },
+                          {
+                            "block_id": "p6_l30",
+                            "page": 6,
+                            "quote": "ferrimagnetic order. When the temperature further decreases below T2 but above T1, this ferrimagnetic order"
+                          },
+                          {
+                            "block_id": "p6_l31",
+                            "page": 6,
+                            "quote": "reorients from in-plane direction to the out-of-plane direction, due to the dominance of the out-of- plane"
+                          },
+                          {
+                            "block_id": "p6_l32",
+                            "page": 6,
+                            "quote": "anisotropy energy. Notably, within this intermediate temperature range from 80 to 200 K, the out-of-plane"
+                          },
+                          {
+                            "block_id": "p6_l33",
+                            "page": 6,
+                            "quote": "magnetic state exhibits complex metamagnetic behavior under in-plane magnetic fields, with M–H loops"
+                          },
+                          {
+                            "block_id": "p6_l34",
+                            "page": 6,
+                            "quote": "suggestive of non-zero scalar spin chirality and potentially chiral spin textures7,8,12,22. Verification of such"
+                          },
+                          {
+                            "block_id": "p6_l35",
+                            "page": 6,
+                            "quote": "states requires advanced neutron diffraction studies. Below T₁, thermal fluctuations are further suppressed,"
+                          },
+                          {
+                            "block_id": "p6_l36",
+                            "page": 6,
+                            "quote": "and the anisotropy energy increasingly governs the spin configuration, inducing an additional spin"
+                          },
+                          {
+                            "block_id": "p6_l37",
+                            "page": 6,
+                            "quote": "reorientation in which the FIM easy axis tilts away the c axis towards an intermediate direction between"
+                          },
+                          {
+                            "block_id": "p6_l38",
+                            "page": 6,
+                            "quote": "the c axis and the ab plane. Under external magnetic fields, the Mn and rare-earth moments develop slightly"
+                          },
+                          {
+                            "block_id": "p6_l39",
+                            "page": 6,
+                            "quote": "canting, forming canted spin textures."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000030",
+                    "type": "paragraph",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Fig.4. Electrical transport results for HE166. a) Temperature dependent resistivity of HE166 system. b)\nMagnetoresistance of HE166 from 0 – 9 T at various temperatures from 4 - 350 K. c) Magnetoresistance of\nHE166 at 4 K in pulsed magnetic fields up to 35 T. d) Hall resistivity of HE166 as a function of magnetic\nfield at various temperatures. e) Anomalous Hall conductivity vs. longitudinal conductivity of HE166 (solid\nballs) and the parent phases (open circles). f) Tian-Ye-Jin scaling of HE166.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p7_l1",
+                        "p7_l2",
+                        "p7_l3",
+                        "p7_l4",
+                        "p7_l5"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p7_l1",
+                            "page": 7,
+                            "quote": "Fig.4. Electrical transport results for HE166. a) Temperature dependent resistivity of HE166 system. b)"
+                          },
+                          {
+                            "block_id": "p7_l2",
+                            "page": 7,
+                            "quote": "Magnetoresistance of HE166 from 0 – 9 T at various temperatures from 4 - 350 K. c) Magnetoresistance of"
+                          },
+                          {
+                            "block_id": "p7_l3",
+                            "page": 7,
+                            "quote": "HE166 at 4 K in pulsed magnetic fields up to 35 T. d) Hall resistivity of HE166 as a function of magnetic"
+                          },
+                          {
+                            "block_id": "p7_l4",
+                            "page": 7,
+                            "quote": "field at various temperatures. e) Anomalous Hall conductivity vs. longitudinal conductivity of HE166 (solid"
+                          },
+                          {
+                            "block_id": "p7_l5",
+                            "page": 7,
+                            "quote": "balls) and the parent phases (open circles). f) Tian-Ye-Jin scaling of HE166."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000031",
+                    "type": "paragraph",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Besides magnetization measurements, electrical transport measurements were also carried out to understand\nthe band topology in the high entropy kagome lattice HE166. In-plane resistivity as a function of the\ntemperature and magnetic field is shown in Fig. 4. The ρ(T) indicates the metallic nature of the sample over\nthe whole temperature range of 2 - 350 K, which is similar to the parent phases. The residual resistance\nratio (RRR) defined as RRR = Rxx(300K) / Rxx (2K)] is about 70, indicating the high quality of our crystals\ndespite the additional electron scattering caused by high entropy alloying. The derivative of resistivity\nshows a small yet clear peak at 205 K, as shown in the Fig. 4a inset, which is correlated with the magnetic\ntransition T2 discussed previously. Magnetoresistance 𝑀𝑅 = [𝜌𝑥𝑥 (𝐻) − 𝜌𝑥𝑥(0)]/𝜌𝑥𝑥(0) × 100% is\nshown on Fig. 4b. A clear non-saturating linear MR with a ratio of 225% at 2 K is observed. Compared to\nthe parent phases, HE166 with five rare earth elements shows enhanced linear behavior, which may arise\nfrom the high entropy18. As the temperature is increasing, the MR keeps its linearity with a reduced MRR",
+                    "attributes": {
+                      "observation_ids": [
+                        "p7_l6",
+                        "p7_l7",
+                        "p7_l8",
+                        "p7_l9",
+                        "p7_l10",
+                        "p7_l11",
+                        "p7_l12",
+                        "p7_l13",
+                        "p7_l14",
+                        "p7_l15",
+                        "p7_l16"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p7_l6",
+                            "page": 7,
+                            "quote": "Besides magnetization measurements, electrical transport measurements were also carried out to understand"
+                          },
+                          {
+                            "block_id": "p7_l7",
+                            "page": 7,
+                            "quote": "the band topology in the high entropy kagome lattice HE166. In-plane resistivity as a function of the"
+                          },
+                          {
+                            "block_id": "p7_l8",
+                            "page": 7,
+                            "quote": "temperature and magnetic field is shown in Fig. 4. The ρ(T) indicates the metallic nature of the sample over"
+                          },
+                          {
+                            "block_id": "p7_l9",
+                            "page": 7,
+                            "quote": "the whole temperature range of 2 - 350 K, which is similar to the parent phases. The residual resistance"
+                          },
+                          {
+                            "block_id": "p7_l10",
+                            "page": 7,
+                            "quote": "ratio (RRR) defined as RRR = Rxx(300K) / Rxx (2K)] is about 70, indicating the high quality of our crystals"
+                          },
+                          {
+                            "block_id": "p7_l11",
+                            "page": 7,
+                            "quote": "despite the additional electron scattering caused by high entropy alloying. The derivative of resistivity"
+                          },
+                          {
+                            "block_id": "p7_l12",
+                            "page": 7,
+                            "quote": "shows a small yet clear peak at 205 K, as shown in the Fig. 4a inset, which is correlated with the magnetic"
+                          },
+                          {
+                            "block_id": "p7_l13",
+                            "page": 7,
+                            "quote": "transition T2 discussed previously. Magnetoresistance 𝑀𝑅 = [𝜌𝑥𝑥 (𝐻) − 𝜌𝑥𝑥(0)]/𝜌𝑥𝑥(0) × 100% is"
+                          },
+                          {
+                            "block_id": "p7_l14",
+                            "page": 7,
+                            "quote": "shown on Fig. 4b. A clear non-saturating linear MR with a ratio of 225% at 2 K is observed. Compared to"
+                          },
+                          {
+                            "block_id": "p7_l15",
+                            "page": 7,
+                            "quote": "the parent phases, HE166 with five rare earth elements shows enhanced linear behavior, which may arise"
+                          },
+                          {
+                            "block_id": "p7_l16",
+                            "page": 7,
+                            "quote": "from the high entropy18. As the temperature is increasing, the MR keeps its linearity with a reduced MRR"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000032",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "review_required": true,
+                    "text": "ratio.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p7_l17"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p7_l17",
+                            "page": 7,
+                            "quote": "ratio."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000033",
+                    "type": "paragraph",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "review_required": true,
+                    "text": "To explore further the extent of the linear MR in HE166, the MR was measured at T = 4 K under higher\nmagnetic fields in a pulsed magnet with peak fields of 10 and 35 T, as shown in Fig. 4c. The linearity\nremains until the magnetic field reaches 20 T, where a kink occurs and is then followed by another relatively\nlinear MR regime. There is no signs for saturation for the second linear MR behavior up to 35 T. The kink\naround 20 T has never been reported in the parent phases of Gd, Tb, Dy, Ho166 systems. In the case of",
+                    "attributes": {
+                      "observation_ids": [
+                        "p7_l18",
+                        "p7_l19",
+                        "p7_l20",
+                        "p7_l21",
+                        "p7_l22"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p7_l18",
+                            "page": 7,
+                            "quote": "To explore further the extent of the linear MR in HE166, the MR was measured at T = 4 K under higher"
+                          },
+                          {
+                            "block_id": "p7_l19",
+                            "page": 7,
+                            "quote": "magnetic fields in a pulsed magnet with peak fields of 10 and 35 T, as shown in Fig. 4c. The linearity"
+                          },
+                          {
+                            "block_id": "p7_l20",
+                            "page": 7,
+                            "quote": "remains until the magnetic field reaches 20 T, where a kink occurs and is then followed by another relatively"
+                          },
+                          {
+                            "block_id": "p7_l21",
+                            "page": 7,
+                            "quote": "linear MR regime. There is no signs for saturation for the second linear MR behavior up to 35 T. The kink"
+                          },
+                          {
+                            "block_id": "p7_l22",
+                            "page": 7,
+                            "quote": "around 20 T has never been reported in the parent phases of Gd, Tb, Dy, Ho166 systems. In the case of"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000034",
+                    "type": "paragraph",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "ErMn6Sn6, which is close to the boundary of spiral magnetism and ferrimagnetism, several theoretical\nworks report a FIM to canned magnetic structures occur for all the parent phases around 20T 10,23. The\nchange of the coupling between Er and Mn around 20 T seems a plausive reason for the kink in the HE166",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l1",
+                        "p8_l2",
+                        "p8_l3"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l1",
+                            "page": 8,
+                            "quote": "ErMn6Sn6, which is close to the boundary of spiral magnetism and ferrimagnetism, several theoretical"
+                          },
+                          {
+                            "block_id": "p8_l2",
+                            "page": 8,
+                            "quote": "works report a FIM to canned magnetic structures occur for all the parent phases around 20T 10,23. The"
+                          },
+                          {
+                            "block_id": "p8_l3",
+                            "page": 8,
+                            "quote": "change of the coupling between Er and Mn around 20 T seems a plausive reason for the kink in the HE166"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000035",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "system here.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l4"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l4",
+                            "page": 8,
+                            "quote": "system here."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000036",
+                    "type": "paragraph",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Furthermore, the anomalous Hall effect can reveal subtle interactions between localized moments and\nitinerant electrons that are not captured by conventional transport measurements. The evolution of\nanomalous Hall resistivity with temperature can help distinguish contributions from intrinsic mechanisms\nand extrinsic scattering process. The former is generally related with band topology and that later are\ninvolved with the impurity induced side jump and skew scattering24–27. The anomalous Hall resistivity is\nseparated via the empirical relation,",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l5",
+                        "p8_l6",
+                        "p8_l7",
+                        "p8_l8",
+                        "p8_l9",
+                        "p8_l10"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l5",
+                            "page": 8,
+                            "quote": "Furthermore, the anomalous Hall effect can reveal subtle interactions between localized moments and"
+                          },
+                          {
+                            "block_id": "p8_l6",
+                            "page": 8,
+                            "quote": "itinerant electrons that are not captured by conventional transport measurements. The evolution of"
+                          },
+                          {
+                            "block_id": "p8_l7",
+                            "page": 8,
+                            "quote": "anomalous Hall resistivity with temperature can help distinguish contributions from intrinsic mechanisms"
+                          },
+                          {
+                            "block_id": "p8_l8",
+                            "page": 8,
+                            "quote": "and extrinsic scattering process. The former is generally related with band topology and that later are"
+                          },
+                          {
+                            "block_id": "p8_l9",
+                            "page": 8,
+                            "quote": "involved with the impurity induced side jump and skew scattering24–27. The anomalous Hall resistivity is"
+                          },
+                          {
+                            "block_id": "p8_l10",
+                            "page": 8,
+                            "quote": "separated via the empirical relation,"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000037",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "𝜌𝑥𝑦 = 𝜌𝑥0𝑦 + 𝜌𝑥𝐴𝑦 = 𝑅0𝐵 + 4𝜋𝑅𝑠𝑀",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l11"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l11",
+                            "page": 8,
+                            "quote": "𝜌𝑥𝑦 = 𝜌𝑥0𝑦 + 𝜌𝑥𝐴𝑦 = 𝑅0𝐵 + 4𝜋𝑅𝑠𝑀"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000038",
+                    "type": "paragraph",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Here the first term 𝜌𝑥0𝑦 indicates the normal Hall resistivity and the second term represents the anomalous\nHall effect, which is correlated with the magnetic order in the system. We focus just on the second term.\nWhen the temperature increases, the saturation value of 𝜌𝑥𝑦 becomes bigger. However, in the low\ntemperature region below 50 K, the noise is too large due to the small signal, which we will not take into\nconsideration. The conductivity tensors of 𝜎𝑥𝑥 and 𝜎𝑥𝑦 are derived by 𝜎𝑥𝑥 = 𝜌𝑥𝑥 /(𝜌𝑥2𝑦 + 𝜌𝑥2𝑥 ) and 𝜎𝑥𝑦 =\n𝜌𝑥𝑦/(𝜌𝑥2𝑦 + 𝜌𝑥2𝑥). The scaling behavior between 𝜎𝑥𝑦 and 𝜎𝑥𝑥 of HE166 and the parent phases is shown in\nFig. 4e. HE166 shows similar trends to the parent phases. All the 𝜎𝑥𝑦 are weakly linked to 𝜎𝑥𝑥 and clearly\ndeviate from a linear relation, a characteristic of an extrinsic mechanism like screw scattering and side jump\ninstead of an origin from disorder or impurities.24 The deviations of linear relation indicate the contributions\nfrom the intrinsic term, which depends only on the band structure and indicates the existence of nontrivial\nband structures like Berry curvatures. To extract the intrinsic Hall conductivity, the Tian-Ye-Jin scaling law",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l12",
+                        "p8_l13",
+                        "p8_l14",
+                        "p8_l15",
+                        "p8_l16",
+                        "p8_l17",
+                        "p8_l18",
+                        "p8_l19",
+                        "p8_l20",
+                        "p8_l21",
+                        "p8_l22"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l12",
+                            "page": 8,
+                            "quote": "Here the first term 𝜌𝑥0𝑦 indicates the normal Hall resistivity and the second term represents the anomalous"
+                          },
+                          {
+                            "block_id": "p8_l13",
+                            "page": 8,
+                            "quote": "Hall effect, which is correlated with the magnetic order in the system. We focus just on the second term."
+                          },
+                          {
+                            "block_id": "p8_l14",
+                            "page": 8,
+                            "quote": "When the temperature increases, the saturation value of 𝜌𝑥𝑦 becomes bigger. However, in the low"
+                          },
+                          {
+                            "block_id": "p8_l15",
+                            "page": 8,
+                            "quote": "temperature region below 50 K, the noise is too large due to the small signal, which we will not take into"
+                          },
+                          {
+                            "block_id": "p8_l16",
+                            "page": 8,
+                            "quote": "consideration. The conductivity tensors of 𝜎𝑥𝑥 and 𝜎𝑥𝑦 are derived by 𝜎𝑥𝑥 = 𝜌𝑥𝑥 /(𝜌𝑥2𝑦 + 𝜌𝑥2𝑥 ) and 𝜎𝑥𝑦 ="
+                          },
+                          {
+                            "block_id": "p8_l17",
+                            "page": 8,
+                            "quote": "𝜌𝑥𝑦/(𝜌𝑥2𝑦 + 𝜌𝑥2𝑥). The scaling behavior between 𝜎𝑥𝑦 and 𝜎𝑥𝑥 of HE166 and the parent phases is shown in"
+                          },
+                          {
+                            "block_id": "p8_l18",
+                            "page": 8,
+                            "quote": "Fig. 4e. HE166 shows similar trends to the parent phases. All the 𝜎𝑥𝑦 are weakly linked to 𝜎𝑥𝑥 and clearly"
+                          },
+                          {
+                            "block_id": "p8_l19",
+                            "page": 8,
+                            "quote": "deviate from a linear relation, a characteristic of an extrinsic mechanism like screw scattering and side jump"
+                          },
+                          {
+                            "block_id": "p8_l20",
+                            "page": 8,
+                            "quote": "instead of an origin from disorder or impurities.24 The deviations of linear relation indicate the contributions"
+                          },
+                          {
+                            "block_id": "p8_l21",
+                            "page": 8,
+                            "quote": "from the intrinsic term, which depends only on the band structure and indicates the existence of nontrivial"
+                          },
+                          {
+                            "block_id": "p8_l22",
+                            "page": 8,
+                            "quote": "band structures like Berry curvatures. To extract the intrinsic Hall conductivity, the Tian-Ye-Jin scaling law"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000039",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "is utilized28 .",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l23"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l23",
+                            "page": 8,
+                            "quote": "is utilized28 ."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000040",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "𝜌𝑥𝐴𝑦 = 𝜎𝑖𝑛𝑡𝜌𝑥2𝑥 + 𝜎𝑠𝑘𝑒𝑤𝜌𝑥𝑥",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l24"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l24",
+                            "page": 8,
+                            "quote": "𝜌𝑥𝐴𝑦 = 𝜎𝑖𝑛𝑡𝜌𝑥2𝑥 + 𝜎𝑠𝑘𝑒𝑤𝜌𝑥𝑥"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000041",
+                    "type": "paragraph",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "𝜎𝑖𝑛𝑡 is estimated to be 66 Ω-1cm-1. For each Mn layer, 𝜎𝑖𝑛𝑡 is estimated to be 0.17 e2/h. The parent phases\nshow 𝜎𝑖𝑛𝑡 ranges from 0.04 – 0.27 e2/h per Mn Layer.6,14,18,29 As a result, the estimated 𝜎𝑖𝑛𝑡 in the high\nentropy phase is close to the average value of the parent phases,14 providing another piece of evidence for\nthe modulation of the topological phases in R166 system through high entropy engineering.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l25",
+                        "p8_l26",
+                        "p8_l27",
+                        "p8_l28"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l25",
+                            "page": 8,
+                            "quote": "𝜎𝑖𝑛𝑡 is estimated to be 66 Ω-1cm-1. For each Mn layer, 𝜎𝑖𝑛𝑡 is estimated to be 0.17 e2/h. The parent phases"
+                          },
+                          {
+                            "block_id": "p8_l26",
+                            "page": 8,
+                            "quote": "show 𝜎𝑖𝑛𝑡 ranges from 0.04 – 0.27 e2/h per Mn Layer.6,14,18,29 As a result, the estimated 𝜎𝑖𝑛𝑡 in the high"
+                          },
+                          {
+                            "block_id": "p8_l27",
+                            "page": 8,
+                            "quote": "entropy phase is close to the average value of the parent phases,14 providing another piece of evidence for"
+                          },
+                          {
+                            "block_id": "p8_l28",
+                            "page": 8,
+                            "quote": "the modulation of the topological phases in R166 system through high entropy engineering."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000042",
+                    "type": "paragraph",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "In summary, we have synthesized a high entropy kagome lattice with the five rare earth elements of Gd, Tb,\nDy, Ho and Er. The introduction of high compositional disorder into the kagome system results high entropy,\nwhich leads to a series of emergent phenomena not observed in the parent compounds. Furthermore, a non-\nsaturating magnetoresistance with enhanced linearity is observed in HE166. An intrinsic anomalous Hall\neffect is also demonstrated, indicating the survival of non-trivial band topology in HE166. Our work\nsupports high- entropy as a powerful approach for tuning the interplay of charge, spin and lattice in magnetic",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l29",
+                        "p8_l30",
+                        "p8_l31",
+                        "p8_l32",
+                        "p8_l33",
+                        "p8_l34"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l29",
+                            "page": 8,
+                            "quote": "In summary, we have synthesized a high entropy kagome lattice with the five rare earth elements of Gd, Tb,"
+                          },
+                          {
+                            "block_id": "p8_l30",
+                            "page": 8,
+                            "quote": "Dy, Ho and Er. The introduction of high compositional disorder into the kagome system results high entropy,"
+                          },
+                          {
+                            "block_id": "p8_l31",
+                            "page": 8,
+                            "quote": "which leads to a series of emergent phenomena not observed in the parent compounds. Furthermore, a non-"
+                          },
+                          {
+                            "block_id": "p8_l32",
+                            "page": 8,
+                            "quote": "saturating magnetoresistance with enhanced linearity is observed in HE166. An intrinsic anomalous Hall"
+                          },
+                          {
+                            "block_id": "p8_l33",
+                            "page": 8,
+                            "quote": "effect is also demonstrated, indicating the survival of non-trivial band topology in HE166. Our work"
+                          },
+                          {
+                            "block_id": "p8_l34",
+                            "page": 8,
+                            "quote": "supports high- entropy as a powerful approach for tuning the interplay of charge, spin and lattice in magnetic"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000043",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "review_required": true,
+                    "text": "topological materials.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p8_l35"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p8_l35",
+                            "page": 8,
+                            "quote": "topological materials."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000044",
+                    "type": "custom",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "review_required": true,
+                    "text": "Material synthesis:",
+                    "attributes": {
+                      "observation_ids": [
+                        "p9_l1"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p9_l1",
+                            "page": 9,
+                            "quote": "Material synthesis:"
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review",
+                      "custom_type": "unidentified"
+                    }
+                  },
+                  {
+                    "id": "x000045",
+                    "type": "paragraph",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "review_required": true,
+                    "text": "High entropy 166 single crystals were synthesized using a flux method where Sn is used as the flux. High-\npurity Gd (Alfa Aesar, 99%), Tb (Alfa Aesar, 99.9%), Dy (Alfa Aesar, 99.8%), Ho (Alfa Aesar, 99.9%), Er\n(Alfa Aesar, 99.9%) were filed from ingots, then mixed with Mn (Alfa Alser, 99.99%) pieces and Sn (Alfa\nAesar 99.9999%) ingots with the ratio of 0.2:0.2:0.2:0.2:0.2:6:20. The mixtures were placed in an alumina\ncrucible and subsequently sealed in an evacuated quartz tube. The assembly was heated up to 1100 °C in a\nfurnace and held at this temperature for two days, which is followed by cooling down to 600°C at a rate of\n1 °C/h. After the tube was centrifuged at 600°C, large size single crystals with an average lateral size of 5\nx 5 mm2 crystals was obtained.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p9_l2",
+                        "p9_l3",
+                        "p9_l4",
+                        "p9_l5",
+                        "p9_l6",
+                        "p9_l7",
+                        "p9_l8",
+                        "p9_l9"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p9_l2",
+                            "page": 9,
+                            "quote": "High entropy 166 single crystals were synthesized using a flux method where Sn is used as the flux. High-"
+                          },
+                          {
+                            "block_id": "p9_l3",
+                            "page": 9,
+                            "quote": "purity Gd (Alfa Aesar, 99%), Tb (Alfa Aesar, 99.9%), Dy (Alfa Aesar, 99.8%), Ho (Alfa Aesar, 99.9%), Er"
+                          },
+                          {
+                            "block_id": "p9_l4",
+                            "page": 9,
+                            "quote": "(Alfa Aesar, 99.9%) were filed from ingots, then mixed with Mn (Alfa Alser, 99.99%) pieces and Sn (Alfa"
+                          },
+                          {
+                            "block_id": "p9_l5",
+                            "page": 9,
+                            "quote": "Aesar 99.9999%) ingots with the ratio of 0.2:0.2:0.2:0.2:0.2:6:20. The mixtures were placed in an alumina"
+                          },
+                          {
+                            "block_id": "p9_l6",
+                            "page": 9,
+                            "quote": "crucible and subsequently sealed in an evacuated quartz tube. The assembly was heated up to 1100 °C in a"
+                          },
+                          {
+                            "block_id": "p9_l7",
+                            "page": 9,
+                            "quote": "furnace and held at this temperature for two days, which is followed by cooling down to 600°C at a rate of"
+                          },
+                          {
+                            "block_id": "p9_l8",
+                            "page": 9,
+                            "quote": "1 °C/h. After the tube was centrifuged at 600°C, large size single crystals with an average lateral size of 5"
+                          },
+                          {
+                            "block_id": "p9_l9",
+                            "page": 9,
+                            "quote": "x 5 mm2 crystals was obtained."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  },
+                  {
+                    "id": "x000046",
+                    "type": "paragraph",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "review_required": true,
+                    "text": "The chemical composition of the yield crystals was verified by energy-dispersive x-ray spectroscopy (EDX)\non a DM07 Zeiss Supra 40 scanning electron microscope. The crystal structure of the HE166 phase was\ndetermined by single-crystal X-ray data measured on a Bruker DUO diffractometer equipped with an Apex\nII area detector and an Oxford Cryosystems 700 Series temperature controller with a Mo 𝐾𝛼 source (𝜆 =\n0.7103Å). The collected data set was integrated using the Bruker Apex-II program, with the intensities\ncorrected for the Lorentz factor, polarization, air absorption, and absorption due to variation in the path\nlength through the detector faceplate. The data were scaled, and absorption correction was applied using\nSADABS. The structure was solved by using the intrinsic phasing method in SHELXT and refined using\nSHELXL with all atoms refined anisotropically.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p9_l10",
+                        "p9_l11",
+                        "p9_l12",
+                        "p9_l13",
+                        "p9_l14",
+                        "p9_l15",
+                        "p9_l16",
+                        "p9_l17",
+                        "p9_l18"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p9_l10",
+                            "page": 9,
+                            "quote": "The chemical composition of the yield crystals was verified by energy-dispersive x-ray spectroscopy (EDX)"
+                          },
+                          {
+                            "block_id": "p9_l11",
+                            "page": 9,
+                            "quote": "on a DM07 Zeiss Supra 40 scanning electron microscope. The crystal structure of the HE166 phase was"
+                          },
+                          {
+                            "block_id": "p9_l12",
+                            "page": 9,
+                            "quote": "determined by single-crystal X-ray data measured on a Bruker DUO diffractometer equipped with an Apex"
+                          },
+                          {
+                            "block_id": "p9_l13",
+                            "page": 9,
+                            "quote": "II area detector and an Oxford Cryosystems 700 Series temperature controller with a Mo 𝐾𝛼 source (𝜆 ="
+                          },
+                          {
+                            "block_id": "p9_l14",
+                            "page": 9,
+                            "quote": "0.7103Å). The collected data set was integrated using the Bruker Apex-II program, with the intensities"
+                          },
+                          {
+                            "block_id": "p9_l15",
+                            "page": 9,
+                            "quote": "corrected for the Lorentz factor, polarization, air absorption, and absorption due to variation in the path"
+                          },
+                          {
+                            "block_id": "p9_l16",
+                            "page": 9,
+                            "quote": "length through the detector faceplate. The data were scaled, and absorption correction was applied using"
+                          },
+                          {
+                            "block_id": "p9_l17",
+                            "page": 9,
+                            "quote": "SADABS. The structure was solved by using the intrinsic phasing method in SHELXT and refined using"
+                          },
+                          {
+                            "block_id": "p9_l18",
+                            "page": 9,
+                            "quote": "SHELXL with all atoms refined anisotropically."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  }
+                ],
+                "title": "The magnetic kagome lattice compound RMn6Sn6 (R=rare earth) is an emerging platform to exploit",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.8,
+                  "observation_ids": [
+                    "p1_l12"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p9_l19",
+                "type": "subsection",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [
+                  {
+                    "id": "x000047",
+                    "type": "paragraph",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "review_required": true,
+                    "text": "DC magnetization was conducted with a Quantum Design Magnetic Property Measurement System\n(MPMS3) down to 5 K. Resistivity and Hall signals of HE166 single crystal were measured using a\nQuantum Design Physical Property Measurement System (PPMS) with the temperature range of 5 to 300\nK and the magnetic fields up to 9 Tesla. Measurements in pulsed magnets were conducted at the National\nHigh Magnetic Field Laboratory’s Pulsed Field Facility in Los Alamos National Laboratory. Four-wire\nelectrical resistance measurements were performed in a 65T short pulse magnet with a He-4 cryostat. Owing\nto the small resistance of the sample, resistance was measured with a pulsed direct current method based\nupon a modified form of the approach described in Ref. 30. Typical current durations were on ~10𝜇s. Each\ndata set is the average of multiple pulses to improve the signal-to-noise ratio, and the resistances were\nsymmetrized with respect to the direction of the applied magnetic field. The maximum applied magnetic\nfield was limited by the strong torque response of the sample.",
+                    "attributes": {
+                      "observation_ids": [
+                        "p9_l20",
+                        "p9_l21",
+                        "p9_l22",
+                        "p9_l23",
+                        "p9_l24",
+                        "p9_l25",
+                        "p9_l26",
+                        "p9_l27",
+                        "p9_l28",
+                        "p9_l29",
+                        "p9_l30"
+                      ],
+                      "decision": {
+                        "rule": "Source block role proposal",
+                        "verified": false,
+                        "review_required": true,
+                        "source": [
+                          {
+                            "block_id": "p9_l20",
+                            "page": 9,
+                            "quote": "DC magnetization was conducted with a Quantum Design Magnetic Property Measurement System"
+                          },
+                          {
+                            "block_id": "p9_l21",
+                            "page": 9,
+                            "quote": "(MPMS3) down to 5 K. Resistivity and Hall signals of HE166 single crystal were measured using a"
+                          },
+                          {
+                            "block_id": "p9_l22",
+                            "page": 9,
+                            "quote": "Quantum Design Physical Property Measurement System (PPMS) with the temperature range of 5 to 300"
+                          },
+                          {
+                            "block_id": "p9_l23",
+                            "page": 9,
+                            "quote": "K and the magnetic fields up to 9 Tesla. Measurements in pulsed magnets were conducted at the National"
+                          },
+                          {
+                            "block_id": "p9_l24",
+                            "page": 9,
+                            "quote": "High Magnetic Field Laboratory’s Pulsed Field Facility in Los Alamos National Laboratory. Four-wire"
+                          },
+                          {
+                            "block_id": "p9_l25",
+                            "page": 9,
+                            "quote": "electrical resistance measurements were performed in a 65T short pulse magnet with a He-4 cryostat. Owing"
+                          },
+                          {
+                            "block_id": "p9_l26",
+                            "page": 9,
+                            "quote": "to the small resistance of the sample, resistance was measured with a pulsed direct current method based"
+                          },
+                          {
+                            "block_id": "p9_l27",
+                            "page": 9,
+                            "quote": "upon a modified form of the approach described in Ref. 30. Typical current durations were on ~10𝜇s. Each"
+                          },
+                          {
+                            "block_id": "p9_l28",
+                            "page": 9,
+                            "quote": "data set is the average of multiple pulses to improve the signal-to-noise ratio, and the resistances were"
+                          },
+                          {
+                            "block_id": "p9_l29",
+                            "page": 9,
+                            "quote": "symmetrized with respect to the direction of the applied magnetic field. The maximum applied magnetic"
+                          },
+                          {
+                            "block_id": "p9_l30",
+                            "page": 9,
+                            "quote": "field was limited by the strong torque response of the sample."
+                          }
+                        ]
+                      },
+                      "text_fidelity_status": "requires_source_review"
+                    }
+                  }
+                ],
+                "title": "Magnetization and transport measurement:",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.8,
+                  "observation_ids": [
+                    "p9_l19"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "High Entropy Engineering of Magnetic Kagome Lattice (Gd,Tb,Dy,Ho,Er)Mn6Sn6",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 13.8,
+              "observation_ids": [
+                "p1_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "x000001",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "review_required": true,
+            "text": "",
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "graphic_or_grid",
+              "asset_id": "p3_image1",
+              "observation_ids": [],
+              "decision": {
+                "rule": "Unlabelled asset needs semantic review",
+                "verified": false,
+                "review_required": true,
+                "source": []
+              }
+            }
+          },
+          {
+            "id": "x000002",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "review_required": true,
+            "text": "",
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "graphic_or_grid",
+              "asset_id": "p3_image2",
+              "observation_ids": [],
+              "decision": {
+                "rule": "Unlabelled asset needs semantic review",
+                "verified": false,
+                "review_required": true,
+                "source": []
+              }
+            }
+          },
+          {
+            "id": "x000003",
+            "type": "custom",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [],
+            "review_required": true,
+            "text": "",
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "graphic_or_grid",
+              "asset_id": "p4_image1",
+              "observation_ids": [],
+              "decision": {
+                "rule": "Unlabelled asset needs semantic review",
+                "verified": false,
+                "review_required": true,
+                "source": []
+              }
+            }
+          },
+          {
+            "id": "x000004",
+            "type": "custom",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [],
+            "review_required": true,
+            "text": "",
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "graphic_or_grid",
+              "asset_id": "p5_image1",
+              "observation_ids": [],
+              "decision": {
+                "rule": "Unlabelled asset needs semantic review",
+                "verified": false,
+                "review_required": true,
+                "source": []
+              }
+            }
+          },
+          {
+            "id": "x000005",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "review_required": true,
+            "text": "",
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "graphic_or_grid",
+              "asset_id": "p7_image1",
+              "observation_ids": [],
+              "decision": {
+                "rule": "Unlabelled asset needs semantic review",
+                "verified": false,
+                "review_required": true,
+                "source": []
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 9,
+        "page_end": 13,
+        "children": [
+          {
+            "id": "heading_p9_l31",
+            "type": "acknowledgements",
+            "page_start": 9,
+            "page_end": 12,
+            "children": [
+              {
+                "id": "x000080",
+                "type": "paragraph",
+                "page_start": 9,
+                "page_end": 12,
+                "children": [],
+                "review_required": true,
+                "text": "The work conducted at University of Texas at Dallas was supported by US Air Force Office of Scientific\nResearch Grant No. FA9550-19-1-0037, National Science Foundation- DMREF-2324033, and Office of\nNaval Research grant no. N00014-23-1-2020. A portion of this work was performed at the National High\nMagnetic Field Laboratory, which is supported by the National Science Foundation Cooperative Agreement\nNo. DMR-2128556, the State of Florida, and the Department of Energy. Work at the University of California,\nBerkeley and Lawrence Berkeley National Laboratory was funded by the U.S. DOE, Office of Science,\nOffice of Basic Energy Sciences, Materials Sciences and Engineering Division under Contract No. DE-\nAC02-05CH11231 (Quantum Materials Program KC2202).\nReference:\n(1) Ying, T.; Yu, T.; Shiah, Y.-S.; Li, C.; Li, J.; Qi, Y.; Hosono, H. High-Entropy van Der Waals\nMaterials Formed from Mixed Metal Dichalcogenides, Halides, and Phosphorus Trisulfides. J. Am.\nChem. Soc. 2021, 143 (18), 7042–7049. https://doi.org/10.1021/jacs.1c01580.\n(2) Jiang, K.; Wu, T.; Yin, J.-X.; Wang, Z.; Hasan, M. Z.; Wilson, S. D.; Chen, X.; Hu, J. Kagome\nSuperconductors AV3Sb5 (A = K, Rb, Cs). Natl. Sci. Rev. 2022, 10 (2), nwac199.\nhttps://doi.org/10.1093/nsr/nwac199.\n(3) Bernevig, B. A.; Felser, C.; Beidenkopf, H. Progress and Prospects in Magnetic Topological\nMaterials. Nature 2022, 603 (7899), 41–51. https://doi.org/10.1038/s41586-021-04105-x.\n(4) Mazin, I. I.; Jeschke, H. O.; Lechermann, F.; Lee, H.; Fink, M.; Thomale, R.; Valentí, R. Theoretical\nPrediction of a Strongly Correlated Dirac Metal. Nat. Commun. 2014, 5 (1), 4261.\nhttps://doi.org/10.1038/ncomms5261.\n(5) Malaman, B.; Venturini, G.; Welter, R.; Sanchez, J. P.; Vulliet, P.; Ressouche, E. Magnetic Properties\nof RMn6Sn6 (R=Gd–Er) Compounds from Neutron Diffraction and Mössbauer Measurements. J. Magn.\nMagn. Mater. 1999, 202 (2–3), 519–534. https://doi.org/10.1016/s0304-8853(99)00300-5.\n(6) Yin, J.-X.; Ma, W.; Cochran, T. A.; Xu, X.; Zhang, S. S.; Tien, H.-J.; Shumiya, N.; Cheng, G.; Jiang,\nK.; Lian, B.; Song, Z.; Chang, G.; Belopolski, I.; Multer, D.; Litskevich, M.; Cheng, Z.-J.; Yang, X. P.;\nSwidler, B.; Zhou, H.; Lin, H.; Neupert, T.; Wang, Z.; Yao, N.; Chang, T.-R.; Jia, S.; Hasan, M. Z.\nQuantum-Limit Chern Topological Magnetism in TbMn6Sn6. Nature 2020, 583 (7817), 533–536.\nhttps://doi.org/10.1038/s41586-020-2482-7.\n(7) Ghimire, N. J.; Dally, R. L.; Poudel, L.; Jones, D. C.; Michel, D.; Magar, N. T.; Bleuel, M.; McGuire,\nM. A.; Jiang, J. S.; Mitchell, J. F.; Lynn, J. W.; Mazin, I. I. Competing Magnetic Phases and Fluctuation-\nDriven Scalar Spin Chirality in the Kagome Metal YMn6Sn6. Sci. Adv. 2020, 6 (51), eabe2680.\nhttps://doi.org/10.1126/sciadv.abe2680.\n(8) Zhang, H.; Liu, C.; Zhang, Y.; Hou, Z.; Fu, X.; Zhang, X.; Gao, X.; Liu, J. Magnetic Field-Induced\nNontrivial Spin Chirality and Large Topological Hall Effect in Kagome Magnet ScMn6Sn6. Appl. Phys.\nLett. 2022, 121 (20), 202401. https://doi.org/10.1063/5.0127091.\n(9) Madhogaria, R. P.; Mozaffari, S.; Zhang, H.; Meier, W. R.; Do, S.-H.; Xue, R.; Matsuoka, T.;\nMandrus, D. G. Topological Nernst and Topological Thermal Hall Effect in Rare-Earth Kagome\nScMn6Sn6. Phys. Rev. B 2023, 108 (12), 125114. https://doi.org/10.1103/physrevb.108.125114.\n(10) Riberolles, S. X. M.; Han, T.; Slade, T. J.; Wilde, J. M.; Sapkota, A.; Tian, W.; Zhang, Q.;\nAbernathy, D. L.; Sanjeewa, L. D.; Bud’ko, S. L.; Canfield, P. C.; McQueeney, R. J.; Ueland, B. G. New\nInsight into Tuning Magnetic Phases of RMn6Sn6 Kagome Metals. npj Quantum Mater. 2024, 9 (1), 42.\nhttps://doi.org/10.1038/s41535-024-00656-0.\n(11) Samatham, S. S.; Casey, J.; Szucs, A. M.; Yenugonda, V.; Burgio, C.; Siegrist, T.; Pathak, A. K.\nPerturbation-Tuned Triple Spiral Metamagnetism and Tricritical Point in Kagome Metal ErMn6Sn6.\nCommun. Mater. 2024, 5 (1), 113. https://doi.org/10.1038/s43246-024-00552-x.\n(12) Madhogaria, R. P.; Mozaffari, S.; Zhang, H.; Meier, W. R.; Do, S.-H.; Xue, R.; Matsuoka, T.;\nMandrus, D. G. Topological Nernst and Topological Thermal Hall Effect in Rare-Earth Kagome\nScMn6Sn6. Phys. Rev. B 2023, 108 (12), 125114. https://doi.org/10.1103/physrevb.108.125114.\n(13) Fruhling, K.; Streeter, A.; Mardanya, S.; Wang, X.; Baral, P.; Zaharko, O.; Mazin, I. I.; Chowdhury,\nS.; Ratcliff, W. D.; Tafti, F. Topological Hall Effect Induced by Chiral Fluctuations in ErMn6Sn6. Phys.\nRev. Mater. 2024, 8 (9), 094411. https://doi.org/10.1103/physrevmaterials.8.094411.\n(14) Ma, W.; Xu, X.; Yin, J.-X.; Yang, H.; Zhou, H.; Cheng, Z.-J.; Huang, Y.; Qu, Z.; Wang, F.; Hasan,\nM. Z.; Jia, S. Rare Earth Engineering in RMn6Sn6 (R=Gd-Tm, Lu) Topological Kagome Magnets. Phys.\nRev. Lett. 2021, 126 (24), 246602. https://doi.org/10.1103/physrevlett.126.246602.\n(15) Ying, T.; Yu, T.; Qi, Y.; Chen, X.; Hosono, H. High Entropy van Der Waals Materials. Adv. Sci.\n2022, 9 (30), 2203219. https://doi.org/10.1002/advs.202203219.\n(16) George, E. P.; Raabe, D.; Ritchie, R. O. High-Entropy Alloys. Nat. Rev. Mater. 2019, 4 (8), 515–\n534. https://doi.org/10.1038/s41578-019-0121-4.\n(17) Jones, D. C.; Das, S.; Bhandari, H.; Liu, X.; Siegfried, P.; Ghimire, M. P.; Tsirkin, S. S.; Mazin, I. I.;\nGhimire, N. J. Origin of Spin Reorientation and Intrinsic Anomalous Hall Effect in the Kagome\nFerrimagnet TbMn6Sn6. Phys. Rev. B 2024, 110 (11), 115134.\nhttps://doi.org/10.1103/physrevb.110.115134.\n(18) Gao, L.; Shen, S.; Wang, Q.; Shi, W.; Zhao, Y.; Li, C.; Cao, W.; Pei, C.; Ge, J.-Y.; Li, G.; Li, J.;\nChen, Y.; Yan, S.; Qi, Y. Anomalous Hall Effect in Ferrimagnetic Metal RMn6Sn6 (R = Tb, Dy, Ho) with\nClean Mn Kagome Lattice. Appl. Phys. Lett. 2021, 119 (9), 092405. https://doi.org/10.1063/5.0061260.\n(19) Zeng, H.; Yu, G.; Luo, X.; Chen, C.; Fang, C.; Ma, S.; Mo, Z.; Shen, J.; Yuan, M.; Zhong, Z. Large\nAnomalous Hall Effect in KagoméFerrimagnetic HoMn6Sn6 Single Crystal. J. Alloy. Compd. 2022, 899,\n163356. https://doi.org/10.1016/j.jallcom.2021.163356.\n(20) Wang, Z.; Xu, J.; Li, Z.; Xu, T.; Li, J.; Zhao, T.; Cai, J.; Zhang, Y.; Shen, B. Real-Space Observation\nof Magnetic Transitions in RMn6Sn6 (R = Ho, Dy) Kagome Magnets. Appl. Phys. Lett. 2023, 122 (11),\n112401. https://doi.org/10.1063/5.0140731.\n(21) Min, L.; Sretenovic, M.; Heitmann, T. W.; Valentine, T. W.; Zu, R.; Gopalan, V.; Rost, C. M.; Ke,\nX.; Mao, Z. A Topological Kagome Magnet in High Entropy Form. Commun. Phys. 2022, 5 (1), 63.\nhttps://doi.org/10.1038/s42005-022-00842-1.\n(22) Wang, Q.; Neubauer, K. J.; Duan, C.; Yin, Q.; Fujitsu, S.; Hosono, H.; Ye, F.; Zhang, R.; Chi, S.;\nKrycka, K.; Lei, H.; Dai, P. Field-Induced Topological Hall Effect and Double-Fan Spin Structure with a\nc-Axis Component in the Metallic Kagome Antiferromagnetic Compound YMn6Sn6. Phys. Rev. B 2021,\n103 (1), 014416. https://doi.org/10.1103/physrevb.103.014416.\n(23) L, N.; Trevisan, T. V.; McQueeney, R. J. High-Field Magnetic Phase Diagrams of the RMn6Sn6\n(R=Gd–Tm) Kagome Metals. Phys. Rev. B 2025, 111 (5), 054410.\nhttps://doi.org/10.1103/physrevb.111.054410.\n(24) Nagaosa, N.; Sinova, J.; Onoda, S.; MacDonald, A. H.; Ong, N. P. Anomalous Hall Effect. Rev.\nMod. Phys. 2010, 82 (2), 1539–1592. https://doi.org/10.1103/revmodphys.82.1539.\n(25) Yang, S. A.; Pan, H.; Yao, Y.; Niu, Q. Scattering Universality Classes of Side Jump in the\nAnomalous Hall Effect. Phys. Rev. B 2010, 83 (12), 125122. https://doi.org/10.1103/physrevb.83.125122.\n(26) Berger, L. Side-Jump Mechanism for the Hall Effect of Ferromagnets. Phys. Rev. B 1970, 2 (11),\n4559–4566. https://doi.org/10.1103/physrevb.2.4559.\n(27) Karplus, R.; Luttinger, J. M. Hall Effect in Ferromagnetics. Phys. Rev. 1954, 95 (5), 1154–1160.\nhttps://doi.org/10.1103/physrev.95.1154.\n(28) Tian, Y.; Ye, L.; Jin, X. Proper Scaling of the Anomalous Hall Effect. Phys. Rev. Lett. 2009, 103 (8),\n087206. https://doi.org/10.1103/physrevlett.103.087206.\n(29) Asaba, T.; Thomas, S. M.; Curtis, M.; Thompson, J. D.; Bauer, E. D.; Ronning, F. Anomalous Hall\nEffect in the Kagome Ferrimagnet GdMn6Sn6. Phys. Rev. B 2020, 101 (17), 174415.\nhttps://doi.org/10.1103/physrevb.101.174415.\n(30) Leroux, M.; Balakirev, F. F.; Miura, M.; Agatsuma, K.; Civale, L.; Maiorov, B. Dynamics and\nCritical Currents in Fast Superconducting Vortices at High Pulsed Magnetic Fields. Phys. Rev. Appl.\n2019, 11 (5), 054005. https://doi.org/10.1103/physrevapplied.11.054005.",
+                "attributes": {
+                  "observation_ids": [
+                    "p9_l32",
+                    "p9_l33",
+                    "p9_l34",
+                    "p9_l35",
+                    "p9_l36",
+                    "p9_l37",
+                    "p9_l38",
+                    "p9_l39",
+                    "p10_l1",
+                    "p10_l2",
+                    "p10_l3",
+                    "p10_l4",
+                    "p10_l5",
+                    "p10_l6",
+                    "p10_l7",
+                    "p10_l8",
+                    "p10_l9",
+                    "p10_l10",
+                    "p10_l11",
+                    "p10_l12",
+                    "p10_l13",
+                    "p10_l14",
+                    "p10_l15",
+                    "p10_l16",
+                    "p10_l17",
+                    "p10_l18",
+                    "p10_l19",
+                    "p10_l20",
+                    "p10_l21",
+                    "p10_l22",
+                    "p10_l23",
+                    "p10_l24",
+                    "p10_l25",
+                    "p10_l26",
+                    "p10_l27",
+                    "p10_l28",
+                    "p10_l29",
+                    "p10_l30",
+                    "p10_l31",
+                    "p10_l32",
+                    "p10_l33",
+                    "p10_l34",
+                    "p11_l1",
+                    "p11_l2",
+                    "p11_l3",
+                    "p11_l4",
+                    "p11_l5",
+                    "p11_l6",
+                    "p11_l7",
+                    "p11_l8",
+                    "p11_l9",
+                    "p11_l10",
+                    "p11_l11",
+                    "p11_l12",
+                    "p11_l13",
+                    "p11_l14",
+                    "p11_l15",
+                    "p11_l16",
+                    "p11_l17",
+                    "p11_l18",
+                    "p11_l19",
+                    "p11_l20",
+                    "p11_l21",
+                    "p11_l22",
+                    "p11_l23",
+                    "p11_l24",
+                    "p11_l25",
+                    "p11_l26",
+                    "p11_l27",
+                    "p11_l28",
+                    "p11_l29",
+                    "p11_l30",
+                    "p11_l31",
+                    "p11_l32",
+                    "p11_l33",
+                    "p11_l34",
+                    "p11_l35",
+                    "p11_l36",
+                    "p12_l1",
+                    "p12_l2",
+                    "p12_l3",
+                    "p12_l4",
+                    "p12_l5",
+                    "p12_l6",
+                    "p12_l7",
+                    "p12_l8",
+                    "p12_l9",
+                    "p12_l10",
+                    "p12_l11",
+                    "p12_l12",
+                    "p12_l13",
+                    "p12_l14",
+                    "p12_l15",
+                    "p12_l16",
+                    "p12_l17",
+                    "p12_l18",
+                    "p12_l19"
+                  ],
+                  "decision": {
+                    "rule": "Preserve acknowledgment content as one paragraph",
+                    "review_required": true,
+                    "verified": false
+                  }
+                }
+              }
+            ],
+            "title": "Acknowledgements:",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.8,
+              "observation_ids": [
+                "p9_l31"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

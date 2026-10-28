@@ -1,0 +1,1723 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2025_QM103_Exotic_surface_stripe_orders_in_correlated_Kagome_metal_CsCr3Sb5.pdf",
+    "pages": 21,
+    "sha256": "57ec934e0d626716a814fe947002b1423a9ddb2aab363e2935061cdfe600a9f0",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 12.0,
+    "body_font_family": "CMR12"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 21,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 21,
+        "children": [
+          {
+            "id": "heading_p2_l1",
+            "type": "abstract",
+            "page_start": 2,
+            "page_end": 21,
+            "children": [
+              {
+                "id": "unidentified_p2_1",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "The newly discovered kagome superconductor CsCr3Sb5 exhibits distinct features with flat bands\nand unique magnetism, providing a compelling platform for exploring novel quantum states of\ncorrelated electron systems. Emergent charge order in this material is a key for understanding\nunconventionalsuperconductivity,butitremainsunexploredattheatomicscaleandtheunderlying\nphysics is elusive. Here, we identify and unreported stripe orders on the surface which are distinct\nfrom the bulk and investigate the underlying bulk electronic properties using a combination of\nscanning tunneling microscopy (STM), angle-resolved photoemission spectroscopy (ARPES) and\ndensity functional theory (DFT) calculations. Specifically, a mixture of 2a0 × a0 and 3a0 × a0\n√\nstripe order is found on Cs-terminated surface while 4a0 × 3a0 stripe order is found on the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l2",
+                    "p2_l3",
+                    "p2_l4",
+                    "p2_l5",
+                    "p2_l6",
+                    "p2_l7",
+                    "p2_l8",
+                    "p2_l9",
+                    "p2_l10",
+                    "p2_l11"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p2_2",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Sb-terminated surface. The electronic spectra exhibit strongly correlated features resembling that\nof high temperature superconductors, with kagome flat bands lying about 330 meV above EF ,\nsuggesting that the electron correlations arise from Coulomb interactions and Hund’s coupling.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l12",
+                    "p2_l13",
+                    "p2_l14"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p2_3",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Moreover, a distinct electron–boson coupling mode is observed at approximately 100 meV. These\nfindings provide new insights into the interplay between surface and bulk charge orders in this\nstrongly correlated kagome system.\n2",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l15",
+                    "p2_l16",
+                    "p2_l17",
+                    "p2_l18"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p3_1",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "I. INTRODUCTION\nQuantum materials with a kagome lattice serve as a promising platform for exploring\ndiversenovelphenomena. Itsuniquegeometricallyfrustratedlatticestructureinducesphase-\ndependent annihilation phenomena in nearest-neighbor transitions for bosons or fermions,\ngiving rise to a series of intriguing electronic structures including linearly dispersive Dirac\nnode, van Hove singularities (vHS), and flat bands [1–6]. In 2019, the discovery of the\nvanadium-based kagome superconductor AV3Sb5 (A = K, Rb, Cs) sparked wide interest and\nintensive research in condensed matter physics [7]. This material exhibits a dazzling array of\nexotic phenomena, including superconductivity [8–12], charge density wave (CDW) [13–15],\nanomalous Hall effect (AHE) [13], pairing density waves (PDW) [16], electronic nematic\norder [17–19], broken time reversal symmetry [20–22]. Although, magnetic order is absent\nand electron correlation is relatively weak in AV3Sb5 [23, 24], it has spurred to search\ncorrelated kagome superconduting systems in simialr kagome materials.\nRecently discovered Cr-based kagome metal CsCr3Sb5 introduces magnetism and elec-\ntron correlations in the 135 kagome family by substituting Cr atoms for V atoms, enriching\ntheir physical properties [25]. The CsCr3Sb5 bulk single crystals undergo a magnetic phase\ntransition around 55 K revealed by magnetic susceptibility and nuclear magnetic resonance,\naccompanying with a structural modulation identified via single-crystal X ray-diffraction\n(XRD) results [25]. A superconducting transition was observed under high pressure, with\nthe suggested density-wave-like orders are suppressed. Theoretical band calculations pre-\ndict the flat bands to be closer to the Fermi level (EF ) compared with CsV3Sb5, which\ncan serve as origin of strong electron correlation and intertwined orders [26, 27]. The co-\nexistence of charge/spin density wave, superconductivity and magnetism in CsCr3Sb5 has\nplaced the system at the forefront of research in the kagome materials. In particular, the\nflat bands and their energy positions have been a primary focus in CsCr3Sb5, as they could\nbe closely related to electron correlation, magnetism, quantum criticality and supercon-\nductivity. Previous angle-resolved photoemission spectroscopy (ARPES) experiments with\nrelatively blurred data reported the flat bands lie in the vicinity of or below EF , implying\ntheir role in determining the physical properties of CsCr3Sb5 [28–30]. However, this is hard to\nreconcile with theoretical calculations, which predict the flat band to be above EF with and\nwithout considering electron correlation effects [26, 28]. Besides, the microscopic origin of\n3",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l1",
+                    "p3_l2",
+                    "p3_l3",
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6",
+                    "p3_l7",
+                    "p3_l8",
+                    "p3_l9",
+                    "p3_l10",
+                    "p3_l11",
+                    "p3_l12",
+                    "p3_l13",
+                    "p3_l14",
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17",
+                    "p3_l18",
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21",
+                    "p3_l22",
+                    "p3_l23",
+                    "p3_l24",
+                    "p3_l25",
+                    "p3_l26",
+                    "p3_l27",
+                    "p3_l28",
+                    "p3_l29",
+                    "p3_l30",
+                    "p3_l31",
+                    "p3_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p4_1",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "superconductivity and its relationship with the charge order remains elusive as atomic-scale\ninvestigations are lacking. Therefore, a comprehensive study of the electronic properties of\nCsCr3Sb5 in both the real and momentum space would highly valuable in addressing these\nopen questions.\nIn this work, we combine scanning tunneling microscopy (STM), ARPES, and density\nfunctional theory (DFT) calculations to elucidate the real space charge order and electronic\nproperties of the kagome metal CsCr3Sb5. Strikingly, we identify new stripe orders on both\nthe Cs- and Sb- terminated surfaces, which are distinct from the bulk stripe order. The\nkagome flat bands are found to be about 330 meV above EF . ARPES spectra reveal that the\nelectron correlations in CsCr3Sb5 originate from Coulomb interactions and Hund’s coupling,\nrather than the kagome flat band. We also discover a distinct electron-boson coupling at\n100 meV, different from that in CsV3Sb5. Temperature-dependent measurements of the\nSb p-orbital band show negligible evolution across the phase transition, indicating weak\ncoupling to the order. Our results reveal new surface stripe orders and clarify the nature of\nmany-body interactions in CsCr3Sb5, offering crucial insights into its flat band charge order\nand superconductivity.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l1",
+                    "p4_l2",
+                    "p4_l3",
+                    "p4_l4",
+                    "p4_l5",
+                    "p4_l6",
+                    "p4_l7",
+                    "p4_l8",
+                    "p4_l9",
+                    "p4_l10",
+                    "p4_l11",
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15",
+                    "p4_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p4_2",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "II. RESULTS\nSingle crystals of CsCr3Sb5 were grown utilizing the self-flux method [25, 29]. The single\ncrystal displays a lamellar morphology, a silvery metallic luster and a hexagonal shape.\nWe examined the as-synthesized crystals using a powder XRD and energy-dispersive X-\nray Spectroscopy (EDS) (Supplementary Fig. 1a-b). These characterization results are\nconsistent with the centrosymmetric structure of CsCr3Sb5, which is isostructural to AV3Sb5,\ncrystallizing in the space group P6/mmm (No. 191) [7]. It comprises stacked Cr3Sb5 layers\nand Cs layers along the c-axis (Fig. 1a). In the Cr-Sb layers, chromium atoms establish\na two-dimensional kagome lattice with Sb1 atoms situated at the heart of the hexagons.\nThe Sb2 atoms establish a two-dimensional honeycomb lattice above and below the kagome\nlayer. The calculated electronic structures and the associated density of states (DOS) are\npresented in Fig. 1b, showing vHS at the M point below the Fermi level and flat bands\nlocated above EF .\nWe first perform systematic physical property measurements for the bulk single crystals.\n4",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l17",
+                    "p4_l18",
+                    "p4_l19",
+                    "p4_l20",
+                    "p4_l21",
+                    "p4_l22",
+                    "p4_l23",
+                    "p4_l24",
+                    "p4_l25",
+                    "p4_l26",
+                    "p4_l27",
+                    "p4_l28",
+                    "p4_l29",
+                    "p4_l30",
+                    "p4_l31"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "Figure 1c illustrates the temperature dependence of the longitudinal resistivity ρab at zero\nmagnetic field. The resistivity exhibits bad metallic behavior at relatively high temperatures\nand shows a peak at Tρ = 54.6 K followed by an abrupt decline at low temperatures.\nCorresponding peak anomalies are also evident in the measured specific heat C(T) (Fig. 1d)\nand magnetic susceptibility χab (Supplementary Fig. 1c). Analysis of the specific heat\ndata via the formula C/T = γ + βT2 yields an electron-specific heat coefficient γexp =\n100(1) mJ · K−1 · mol−1. This enhanced value, compared to the results from the AV3Sb5\nsystem [7, 25], signaling strong electron correlations in CsCr3Sb5 (Supporting Fig. 1d-\ne). These unconventional properties are consistent with previous reports on high-quality\nCsCr3Sb5 crystals, which attribute the anomalies to the transition into antiferromagnetic\nand density-wave orders [25].\nTo directly identify the electronic ground state of CsCr3Sb5, we further investigate the\ncleaved surfaces using a low-temperature STM. Owing to the weaker bonds between Cs and\nSb2 layers, the cleavage planes are typically Cs-terminated or Sb-terminated, as shown in\nFig. 1e and 1f. The structural instability is inherent to the Cs-terminated surface, which\ndrives the formation of vacancy defects as observed (Fig. 1e). In contrast, the Sb-terminated\nsurface is prone to the adsorption and aggregation of excess Cs adatoms (Fig. 1f). The\nmeasured height between the adjacent Cs and Sb layers is about 1.46 nm (Supplementary\nFig. 2a-b), consistent with the height of the upper Cs and lower Sb layers in adjacent layers.\nWe conducted differential conductance spectroscopy on both the Cs- and Sb-terminated\nsurfaces. The dI/dV spectrum obtained from defect-free areas exhibits a prominent peak at\n330 meV and a bulge at -140 meV on the Cs plane (Fig. 1g). Aligning with the theoretical\nresults, the bulge at -140 meV is indicative of the M-point vHS, whereas the peak at 330\nmeV is associated with the flat electronic band, as will be discussed later. Meanwhile, the\ndI/dV spectrum obtained on the defect-free Sb surface also exhibits peak from the vHS at\nthe M point (Supplementary Fig. 3).\nWe obtained high quality atomically resolved STM topographies which correspond to the\nCs- and Sb-terminated surfaces, showing hexagonal and honeycomb lattices with measured\nlattice constant of 5.40 ˚A and 5.39 ˚A (Figs. 2a and 2c). On the Cs-terminated surface, a\nmixed superstructure composed of 2a0 × a0 and 3a0 × a0 stripe patterns is observed. Every\n3a0 stripe is separated by three 2a0 stripes and the corresponding fast Fourier transform\n(FFT) map (Fig. 2b) exhibits peaks at q9/4a0 between q2a0 and q3a0 along the QBragg lattice\n5",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l1",
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12",
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16",
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22",
+                    "p5_l23",
+                    "p5_l24",
+                    "p5_l25",
+                    "p5_l26",
+                    "p5_l27",
+                    "p5_l28",
+                    "p5_l29",
+                    "p5_l30",
+                    "p5_l31",
+                    "p5_l32",
+                    "p5_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "direction, further confirming these periodic modulations. We notice that the Cs atoms are\ncompactly arranged without any vacancies on the surface exhibiting mixed stripe orders. In\naddition, the stripes with distinct orientations show smooth transitions at their intersection\nregions (Supplementary Fig. 4). A suppression of the DOS near EF is also observed in the\nlocal dI/dV spectra (Supplementary Fig. 4). These observations suggest that the stripe\nphase on the Cs-terminated surface arises from a charge order rather than a simple surface\nreconstruction. Interestingly, the stripe order is distinct from the stripe phase observed in\n√\nthe bulk of CsCr3Sb5 (4a0 ×a0). On the Sb-terminated surface (Fig. 2c), a 4a0 × 3a0 stripe\n√\nstructure emerges, where the vectors along the 3a0 direction are rotated by 30° relative to\nthe crystal lattice. This also differs from the 4a0×a0 structure observed in bulk CsCr3Sb5 via\nsingle-crystal XRD and optical measurements [25, 31]. Under the specific tip condition, the\n√\nsample shows a densely packed atomic-resolved pattern and the 4a0 × 3a0 periodic stripe\nstructure becomes more pronounced (Supplementary Fig. 5a). This stripe order is further\nconfirmed by the FFT analysis (Fig. 2d and Supplementary Fig. 5b) of the topography,\nwhich exhibits vector peaks corresponding to q2a0 and q4a0 . Additionally, we observed 4a0\n√\n× 3a0 stripe patterns with different orientations in a large area (Supplementary Fig. 6),\nindicating their prevalent nature on the Sb-terminated surface.\n√\nWe found that the 4a0 × 3a0 stripe phase exhibits bias-dependent characteristics (Sup-\nplementary Fig. 7). To further elucidate the origin of the stripe phase, we measured dI/dV\nspectra from both the bright and dark regions of the pattern, as shown in Figs. 2e and 2f.\nBoth regions exhibit an energy gap of approximately 10 meV (Fig. 2f and Supplementary\nFig. 8). Notably, the dI/dV intensity is higher in the bright region under higher negative\nbias, whereas the dark region prevails under higher positive bias. Furthermore, a series of\ndI/dV spectra were measured along a direction perpendicular to the stripe order (green ar-\nrow in Fig. 2g). The spatial modulation period is approximately 2.1 nm, which aligns with\nthe unidirectional 4a0 charge order. Simultaneously, we also observe that the 4a0 charge\norder exhibits a peak-to-valley feature under opposite bias voltages (Fig. 2h). By switching\nthe bias from positive to negative value but keeping other parameters same, we observe\na clear contrast inversion in the dI/dV mapping of the same region, as demonstrated in\nFigs. 2i and 2j. The dI/dV intensity profile along the same position exhibits a well-defined\n4a0 periodic modulation with a peak-to-valley feature at ±30 mV (Fig. 2k). These results\nstrongly suggest it to be a stripe CDW order.\n6",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l1",
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10",
+                    "p6_l11",
+                    "p6_l12",
+                    "p6_l13",
+                    "p6_l14",
+                    "p6_l15",
+                    "p6_l16",
+                    "p6_l17",
+                    "p6_l18",
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24",
+                    "p6_l25",
+                    "p6_l26",
+                    "p6_l27",
+                    "p6_l28",
+                    "p6_l29",
+                    "p6_l30",
+                    "p6_l31",
+                    "p6_l32",
+                    "p6_l33",
+                    "p6_l34",
+                    "p6_l35",
+                    "p6_l36",
+                    "p6_l37",
+                    "p6_l38"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_1",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Having identified distinct surface stripe orders in CsCr3Sb5, we now turn to explore their\nunderlying electronic origins. Since cleaving the crystal produces two different surface ter-\nminations, and our STM/STS studies revealed distinct surface stripe patterns, we employed\nnano-ARPES with a submicron spot size (< 1 µm) to probe the corresponding electronic\nstructures. The two surface terminations can be distinguished by the Sb 4d core-level shifts,\nwhich reflect their different crystal environments (Fig. 3a) [32]. The constant energy contour\nat -0.4 eV on the Cs-terminated surface exhibits a characteristic Star-of-David Fermi surface\nat the van Hove filling of a kagome lattice [24, 33], along with a small electron pocket around\nthe Brillouin zone center which mainly consists of Sb 5p orbitals (Fig. 3b). The ARPES\nE −k spectral images along different high-symmetry directions show good agreement with\nthe first-principles calculations without including the surface reconstruction effects (Fig. 3c).\nWe notice a slight energy discrepancy between the calculated and measured positions of the\nhole-like band at around -1.5 eV near Γ. However, this difference can not be accounted\nfor by simple electron-correlation–induced band renormalization, as such an effect would\nshift the calculated bands toward EF , thus further enlarge the mismatch. Nevertheless,\nthe first-principles calculations capture the overall electronic structure of CsCr3Sb5 well.\nAn examination on the Sb-terminated surface by ARPES reveals essentially the same elec-\ntronic structure as that of the Cs-terminated surface (Figs. 3d and 3e). Considering that\nthe ARPES spectra of CsCr3Sb5 are not as sharp as those of CsV3Sb5 [24], any subtle dif-\nferences in the electronic structure may be smeared out by the broader spectral features in\nCsCr3Sb5, rendering them indistinguishable. Since the measured electronic structures on the\ntwo different surface terminations of CsCr3Sb5 are indistinguishable, we will not differentiate\nbetween them afterwards.\nPreviously, flat bands were reported at or below EF in CsCr3Sb5 with the extra spectral\npeak observed around EF away from the dispersive bands [28–30]. In contrast, our ARPES\nE − k spectral images show no such features. Instead, they exhibit a clean cutoff in the\nbackground at EF away from the dispersive bands (Figs. 3c and 3e). The measurements were\nconducted with circularly polarized light, which should not significantly suppress possible\nflat band signals. To further examine the spectral weight near EF , we carried out high-\nresolution laser-ARPES measurements on CsCr3Sb5 (Figs. 3f-h). The E −k spectral images\nalongbothΓ−MandΓ−KclearlyresolvetheelectronbandcenteredattheΓpoint,showing\nsharpcontrastagainstthebackground(Figs.3gand3h). However, thecorrespondingenergy\n7",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l1",
+                    "p7_l2",
+                    "p7_l3",
+                    "p7_l4",
+                    "p7_l5",
+                    "p7_l6",
+                    "p7_l7",
+                    "p7_l8",
+                    "p7_l9",
+                    "p7_l10",
+                    "p7_l11",
+                    "p7_l12",
+                    "p7_l13",
+                    "p7_l14",
+                    "p7_l15",
+                    "p7_l16",
+                    "p7_l17",
+                    "p7_l18",
+                    "p7_l19",
+                    "p7_l20",
+                    "p7_l21",
+                    "p7_l22",
+                    "p7_l23",
+                    "p7_l24",
+                    "p7_l25",
+                    "p7_l26",
+                    "p7_l27",
+                    "p7_l28",
+                    "p7_l29",
+                    "p7_l30",
+                    "p7_l31",
+                    "p7_l32",
+                    "p7_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_1",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "distribution curves display no additional peaks at EF outside the dispersive band region (red\ndashed boxes in Figs. 3g and 3h). These observations unambiguously rule out the presence\nof flat bands in the vicinity of EF .\nThe question is how high the flat bands lie above EF . Although the flat bands above\nEF cannot be directly observed in ARPES due to the Fermi cutoff, their positions can be\ninferred from the band calculations, which locate about 200 meV above the Fermi level\n(Fig. 1b). Given the overall good agreement between the calculations and our ARPES\ndata, it is reasonable to assign the flat-band position accordingly (Fig. 1b and Figs. 3c and\n3e). Consistently, our STS spectra show a pronounced peak at approximately 330 meV\nabove EF ( Fig. 3j), corresponding to the flat band energy. The combined evidence from\nARPES, STM, and DFT calculations thus reconciles the previous discrepancies between\ntheoretical predictions and experimental observations regarding the flat-band position in\nCsCr3Sb5 [26, 28–30].\nSince the flat bands lie approximately 330 meV above EF , they are unlikely to drive the\nstrong electron correlation effects in CsCr3Sb5. To further investigate the origin of electron\ncorrelations, we compared the electronic bands of CsCr3Sb5 and CsV3Sb5 measured using a\n7 eV laser (Figs. 4a and 4b). The E − k spectral image of CsV3Sb5 appears much shaper\nthan that of CsCr3Sb5. Interestingly, the spectral image of CsCr3Sb5 resembles that of\ncuprates and iron-based superconductors [34, 35]. To further visualize this, we plot their\ncorresponding EDC stacks in Figs. 4c,d. The EDC stacks of CsCr3Sb5 exhibit sharp peaks\nneartheFermilevelcorrespondingto quasiparticle peaks, as well asincoherentpeaksaround\n-0.7 eV. A waterfall-like feature connects the quasiparticle peaks and the incoherent peaks\n(red shaded line in Figs. 4c), a hallmark of correlated systems with strong Coulomb interac-\ntions and Hund’s coupling [36]. In contrast, the EDCs stacks of CsV3Sb5 show quasiparticle\npeaks extending continuously from the Fermi level to a high binding energy of -0.8 eV, char-\nacteristic of a weakly correlated system. These results suggest that CsCr3Sb5 is a strongly\ncorrelated system, with correlations arising from Coulomb interactions and Hund’s coupling.\nMoreover, fitting the corresponding band dispersion of CsCr3Sb5 in Fig. 4a reveals a kink\nat approximately -100 meV (Figs. 4e and 4f), distinct from the ∼30 meV kink observed in\nCsV3Sb5. The ∼30 meV kink in CsV3Sb5 was attributed to a phonon mode [37]. Given the\npotential magnetic nature of CsCr3Sb5, the 100 meV mode is unlikely to be phononic and\nis more likely associated with spin excitations.\n8",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l1",
+                    "p8_l2",
+                    "p8_l3",
+                    "p8_l4",
+                    "p8_l5",
+                    "p8_l6",
+                    "p8_l7",
+                    "p8_l8",
+                    "p8_l9",
+                    "p8_l10",
+                    "p8_l11",
+                    "p8_l12",
+                    "p8_l13",
+                    "p8_l14",
+                    "p8_l15",
+                    "p8_l16",
+                    "p8_l17",
+                    "p8_l18",
+                    "p8_l19",
+                    "p8_l20",
+                    "p8_l21",
+                    "p8_l22",
+                    "p8_l23",
+                    "p8_l24",
+                    "p8_l25",
+                    "p8_l26",
+                    "p8_l27",
+                    "p8_l28",
+                    "p8_l29",
+                    "p8_l30",
+                    "p8_l31",
+                    "p8_l32",
+                    "p8_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p9_1",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Our laser-ARPES data on CsCr3Sb5 reveal the clear electron pocket around Γ, prompting\nus to investigate its response to the sample’s phase transition (Fig. 5). This electron band\nprimarily consists of Sb p orbitals [29]. We performed detailed temperature-dependent\nmeasurements with both warming and cooling cycles (Fig. 5a and Supplementary Fig. 9).\nTheE−k spectralimagesshownosignificantchangeswithtemperature,asfurtherconfirmed\nby the corresponding momentum distribution curves (MDCs) at EF in Fig. 5b. The MDCs\nat different temperatures exhibit similar shapes without abrupt changes in peak height or\nwidth, in contrast to a previous report [28]. To quantify this, a single-peak fit of the MDCs\nwere performed. The corresponding fitting result shows no change in peak width across\nthe phase transition for both warming and cooling cycles (Fig. 5c). We note that the peak\nwidth at high temperature (79 K) is slightly smaller than that at low temperature (24 K)\nin the cooling cycle, likely due to minor surface degradation over time. The temperature-\nindependent behavior of the Sb p orbital band suggests that it couples weakly to the bulk\ndensitywaveorder. ThusthebulkdensitywaveorderlikelyoriginatesfromtheCrdorbitals.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l1",
+                    "p9_l2",
+                    "p9_l3",
+                    "p9_l4",
+                    "p9_l5",
+                    "p9_l6",
+                    "p9_l7",
+                    "p9_l8",
+                    "p9_l9",
+                    "p9_l10",
+                    "p9_l11",
+                    "p9_l12",
+                    "p9_l13",
+                    "p9_l14"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p9_2",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "III. DISCUSSION AND CONCLUSION\nIn CsV3Sb5, the surfaces develop additional charge orders, which have been attributed\nto electronic rotational symmetry breaking and pair-density-wave states [16, 38]. These\nsupermodulations are superimposed on the bulk 2×2 charge order. In contrast, both the\nCs- and Sb- terminated surfaces of CsCr3Sb5 do not inherit its bulk stripe order, but instead\ndevelop entirely new surface stripe orders. Remarkably, to the best of our knowledge, such\nsurface stripe orders have never been reported in any kagome material before. Theoretical\ncalculations on the relative energies of different surface configurations would be valuable\nfor understanding the formation mechanism of these stripe patterns. In particular, the\n√\n4a0 × 3a0 stripe order effectively enlarges the surface unit cell, which could potentially\nstabilize altermagnetic states on the surface of CsCr3Sb5 through appropriately arranged\nmagnetic blocks [39]. With these distinct surface stripe orders identified, a key question\narises as to whether superconductivity in CsCr3Sb5 originates from the bulk or the surface.\nIn this regard, investigating how the surface stripe orders evolve under hydrostatic pressure\nwould be crucial for uncovering their relationship with superconductivity.\nSince the electronic structures measured on the two different terminations show no dis-\n9",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l15",
+                    "p9_l16",
+                    "p9_l17",
+                    "p9_l18",
+                    "p9_l19",
+                    "p9_l20",
+                    "p9_l21",
+                    "p9_l22",
+                    "p9_l23",
+                    "p9_l24",
+                    "p9_l25",
+                    "p9_l26",
+                    "p9_l27",
+                    "p9_l28",
+                    "p9_l29",
+                    "p9_l30",
+                    "p9_l31",
+                    "p9_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p10_1",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "cernible differences, we consider them to primarily reflect the bulk electronic properties. Our\nresults reveal that the electron correlations in CsCr3Sb5 are of a more “traditional” origin,\nrather than being driven by the kagome flat bands, with electronic spectra resembling those\nof cuprates and iron-based superconductors [34, 35]. Moreover, no obvious Fermi surface\nnesting condition is observed. In this context, we suggest that the stripe orders in CsCr3Sb5,\nboth in the bulk and on the surface, are closely related to electron correlations. In addition,\nthe observed electron-boson coupling to a ∼100 meV mode may also play an important role.\nWe note that the correlated spectra are revealed here by the central electron pocket with a\ndominant Sb pz orbital character, indicating non-negligible p − d orbital mixing [40].\nDespite the flat band being located about 330 meV above EF , a theoretical study has\npredicted strong magnetic fluctuations arising from this flat band in CsCr3Sb5 [27]. How-\never, our temperature-dependent measurements of the Sb pz orbital band show no discernible\nchange in the scattering rate across the transition temperature, ruling out enhanced electron\nscattering from magnetic fluctuations. The abrupt increase in resistivity at the transition\ntemperature could instead result from the suppression of electronic states near the Fermi\nlevel, as revealed by our STS measurements. Nevertheless, the Sommerfeld coefficient re-\nmains nearly six times larger than that predicted by DFT calculations [25], highlighting the\nstrong correlation effects in CsCr3Sb5.\nTo summarize, we have discovered new surface stripe orders on different terminations of\nCsCr3Sb5. These stripe orders are distinct from the bulk stripe order and have not been\nreported previously in any kagome lattice material. We also find that the electron correla-\ntion effects in CsCr3Sb5 are not driven by the kagome flat bands but rather originate from\nCoulomb interactions and Hund’s coupling, laying the electronic foundation for understand-\ning its exotic phases. In addition, we identify a new coupling mode at approximately 100\nmeV, accompanied by no observable enhancement in the scattering of Sb p electrons due\nto magnetic fluctuations across the phase transition. Our findings open new avenues for\nunderstanding the relationship and interplay between surface and bulk electronic states in\ngenerating exotic orders in strongly correlated kagome systems.\nDuring the preparation of this manuscript, two independent studies appeared on arXiv,\n√\nreporting the 4a0 × 3a0 stripe order on the Sb-terminated surface of CsCr3Sb5 [41, 42].\n10",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l1",
+                    "p10_l2",
+                    "p10_l3",
+                    "p10_l4",
+                    "p10_l5",
+                    "p10_l6",
+                    "p10_l7",
+                    "p10_l8",
+                    "p10_l9",
+                    "p10_l10",
+                    "p10_l11",
+                    "p10_l12",
+                    "p10_l13",
+                    "p10_l14",
+                    "p10_l15",
+                    "p10_l16",
+                    "p10_l17",
+                    "p10_l18",
+                    "p10_l19",
+                    "p10_l20",
+                    "p10_l21",
+                    "p10_l22",
+                    "p10_l23",
+                    "p10_l24",
+                    "p10_l25",
+                    "p10_l26",
+                    "p10_l27",
+                    "p10_l28",
+                    "p10_l29",
+                    "p10_l30",
+                    "p10_l31",
+                    "p10_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p11_1",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "IV. METHODS",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l1"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p11_2",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "A. Sample growth and characterization\nSingle crystals of CsCr3Sb5 were synthesized using the flux method. Stoichiometric quan-\ntities of Cs liquid (99.98%, Alfa), Cr powder (99.95%, Alfa), and Sb ingot (99.99%, Trillion\nMetals Co) were amalgamated in a molar ratio of 4:1:9, placed into an alumina crucible, and\nhermetically sealed within a Nb/Ta tube under an argon environment at 0.2 atm utilizing\narc welding. To avert oxidation, the Nb/Ta tube was additionally encased within an evac-\nuated quartz ampoule. The assembly was incrementally heated to 1173 K and sustained at\nthis temperature for 24 hours to guarantee thorough homogeneity of the melt. The material\nwas subsequently chilled to 873 K at a regulated rate of 2 ◦C/h, and then further naturally\ncooled to room temperature within the furnace. The resultant product was submerged in\ndeionizedwater, producingvanderWaalshexagonalplateletswithtypicallateraldimensions\nof around 1×1 mm2.\nCrystal structure characterization was conducted at ambient temperature via XRD uti-\nlizing Cu Kα (λ = 1.5406 ˚A) radiation on a PANalytical Empyrean Series 2 diffractometer.\nScanning electron microscopy (SEM) and EDS studies were conducted utilizing a ZEISS\nEVO MA 10 and a BRUKER XFlash. Measurements of electrical resistivity and specific\nheat were conducted with a Physical Property Measurement System (PPMS-9, Quantum\nDesign). The magnetic characteristics were assessed using a Magnetic Property Measure-\nment System (MPMS, Quantum Design).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l2",
+                    "p11_l3",
+                    "p11_l4",
+                    "p11_l5",
+                    "p11_l6",
+                    "p11_l7",
+                    "p11_l8",
+                    "p11_l9",
+                    "p11_l10",
+                    "p11_l11",
+                    "p11_l12",
+                    "p11_l13",
+                    "p11_l14",
+                    "p11_l15",
+                    "p11_l16",
+                    "p11_l17",
+                    "p11_l18",
+                    "p11_l19",
+                    "p11_l20"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p11_3",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "B. ARPES measurements\nSynchrotron-based ARPES measurements were carried out at the BL07U endstation of\nthe Shanghai Synchrotron Radiation Facility (SSRF), using a Scienta DA30L electron ana-\nlyzer. The base pressure during measurements was lower than 1×10−10 mbar. All samples\nwerecleavedinsituat300Kinapreparationchamberwithabasepressureof1×10−10 mbar,\nand subsequently transferred to the measurement chamber. The measurement temperature\nwas maintained at 22 K unless otherwise specified in the main text. A focused beam spot\nbetter than 1 × 1 µm2 was achieved using a Fresnel zone plate. The measurements were\nperformed with a photon energy of 92.8 eV and circularly polarization light. The overall\n11",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l21",
+                    "p11_l22",
+                    "p11_l23",
+                    "p11_l24",
+                    "p11_l25",
+                    "p11_l26",
+                    "p11_l27",
+                    "p11_l28",
+                    "p11_l29",
+                    "p11_l30"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p12_1",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "energy resolution was ∼20 meV and the angular resolution was ∼0.3◦.\nLaser-ARPES measurements were performed at the Institute of Physics, Chinese\nAcademy of Sciences, using a 7 eV laser light source combined with a Scienta DA30L elec-\ntron Analyzer. All samples were cleaved in situ at 24 K. The base pressure was lower than\n5×10−11 mbar during measurements. The laser beam spot was less than 10×10 µm2 using\na focusing lens. The overall energy resolution was ∼3 meV unless otherwise specified in the\nmain text, and the angular resolution was ∼0.3◦.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l1",
+                    "p12_l2",
+                    "p12_l3",
+                    "p12_l4",
+                    "p12_l5",
+                    "p12_l6",
+                    "p12_l7"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p12_2",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "C. Scanning tunneling microscopy/spectroscopy\nSingle crystals of CsCr3Sb5 were cleaved in situ under ultrahigh vacuum (UHV) at a\ntemperature of 10 K and subsequently transferred directly into STM chamber for investi-\ngations. Experiments were performed in an UHV (1×10−10 mbar) low-temperature STM\nsystem (Unisoku USM-1300). Typical STM/STS results were measured at 5.2 K. All STM\nmeasurements were performed with constant current mode using a PtIr tip. The dI/dV\nspectra were measured by using the lock-in technique with a reference signal at 911 Hz. The\nmodulationamplitudesweresetas50mVforthelargebiasrangeand3∼5mVforthesmall\nbias range. The STM images in this work were processed using the WSxM software [43].",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l8",
+                    "p12_l9",
+                    "p12_l10",
+                    "p12_l11",
+                    "p12_l12",
+                    "p12_l13",
+                    "p12_l14",
+                    "p12_l15",
+                    "p12_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p12_3",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "D. DFT calculations\nThe structure of CsCr3Sb5 was optimized to preserve periodic boundary conditions while\nminimizing spurious interactions from periodic images. Density functional theory (DFT)\ncalculations within the generalized gradient approximation (GGA-PBE) [44] were performed\nusing the Vienna Ab Initio Simulation Package (VASP) [45], employing a 600 eV plane-\nwave cutoff and 11 × 11 × 11 Monkhorst-Pack k-mesh to ensure energy convergence (< 1\nmeV/atom) and residual forces (< 1 meV/˚A).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l17",
+                    "p12_l18",
+                    "p12_l19",
+                    "p12_l20",
+                    "p12_l21",
+                    "p12_l22",
+                    "p12_l23"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p12_4",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "V. ACKNOWLEDGMENTS\nThis work is financially supported by the Guangdong Provincial Quantum Science Strate-\ngic Initiative (Grant No. GDZX2401009), National Natural Science Foundation of China\n12",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l24",
+                    "p12_l25",
+                    "p12_l26",
+                    "p12_l27"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p13_1",
+                "type": "custom",
+                "page_start": 13,
+                "page_end": 13,
+                "children": [],
+                "text": "(Grant No. 21BAA01133, 12374052, 12474182, 92165204), Guangdong Basic and Applied\nBasic Research Foundation (Grant No. 2023A1515010487), Guangzhou Basic and Applied\nBasic Research Foundation (Grant No. 2025A04J5405), Research Center for Magnetoelec-\ntric Physics of Guangdong Province (2024B0303390001), Guangdong Provincial Key Lab-\noratory of Magnetoelectric Physics and Devices (Grant No. 2022B1212010008), the China\nPostdoctoral Science Foundation (Grant No. 2024M763734) and the Instrumental Analysis\n& Research Center, Sun Yat-sen University.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p13_l1",
+                    "p13_l2",
+                    "p13_l3",
+                    "p13_l4",
+                    "p13_l5",
+                    "p13_l6",
+                    "p13_l7"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p13_2",
+                "type": "custom",
+                "page_start": 13,
+                "page_end": 13,
+                "children": [],
+                "text": "VI. DATA AVAILABILITY\nAll data needed to evaluate the conclusions are present in the paper and supplementary\nmaterials. Additional data are available from the corresponding authors on reasonable\nrequest.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p13_l8",
+                    "p13_l9",
+                    "p13_l10",
+                    "p13_l11"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p13_3",
+                "type": "custom",
+                "page_start": 13,
+                "page_end": 13,
+                "children": [],
+                "text": "VII. COMPETING INTERESTS\nThe authors declare no competing interests.\n[1] Yin,J.X.,Lian,B.&Hasan,M.Z. Topologicalkagomemagnetsandsuperconductors. Nature\n612, 647–657 (2022).\n[2] Wang, Y., Wu, H., McCandless, G. T., Chan, J. Y. & Ali, M. N. Quantum states and\nintertwining phases in kagome materials. Nature Reviews Physics 5, 635–658 (2023).\n[3] Neupert, T., Denner, M. M., Yin, J.-X., Thomale, R. & Hasan, M. Z. Charge order and\nsuperconductivity in kagome materials. Nature Physics 18, 137–143 (2022).\n[4] Wilson, S. D. & Ortiz, B. R. AV3Sb5 kagome superconductors. Nature Reviews Materials 9,\n420–432 (2024).\n[5] Jiang, K. et al. Kagome superconductors AV3Sb5(A = K, Rb, Cs). National Science Review\n10, nwac199 (2023).\n[6] Zhang, Z. et al. 2D Kagome Materials: Theoretical Insights, Experimental Realizations, and\nElectronic Structures. Advanced Functional Materials 35, 2416508 (2025).\n13",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p13_l12",
+                    "p13_l13",
+                    "p13_l14",
+                    "p13_l15",
+                    "p13_l16",
+                    "p13_l17",
+                    "p13_l18",
+                    "p13_l19",
+                    "p13_l20",
+                    "p13_l21",
+                    "p13_l22",
+                    "p13_l23",
+                    "p13_l24",
+                    "p13_l25",
+                    "p13_l26"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p14_1",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "[7] Ortiz, B. R. et al. New kagome prototype materials: discovery of KV3Sb5, RbV3Sb5, and\nCsV3Sb5. Physical Review Materials 3, 094407 (2019).\n[8] Li, H. et al. Small Fermi Pockets Intertwined with Charge Stripes and Pair Density Wave\nOrder in a Kagome Superconductor. Physical Review X 13, 031030 (2023).\n[9] Zhong, Y. et al. Nodeless electron pairing in CsV3Sb5-derived kagome superconductors. Nature\n617, 488–492 (2023).\n[10] Deng,H.et al. ChiralkagomesuperconductivitymodulationswithresidualFermiarcs. Nature\n632, 775–781 (2024).\n[11] Ge,J.etal.Charge-4eandCharge-6eFluxQuantizationandHigherChargeSuperconductivity\nin Kagome Superconductor Ring Devices. Physical Review X 14, 021025 (2024).\n[12] Mu, C. et al. S-Wave Superconductivity in Kagome Metal CsV3Sb5 Revealed by 121/123Sb\nNQR and 51V NMR Measurements. Chinese Physics Letters 38, 077402 (2021).\n[13] Yu, F. H. et al. Concurrence of anomalous Hall effect and charge density wave in a supercon-\nducting topological kagome metal. Physical Review B 104, L041103 (2021).\n[14] Guo, C. et al. Switchable chiral transport in charge-ordered kagome metal CsV3Sb5. Nature\n611, 461–466 (2022).\n[15] Zheng, L. et al. Emergent charge order in pressurized kagome superconductor CsV3Sb5. Nature\n611, 682–687 (2022).\n[16] Chen, H. et al. Roton pair density wave in a strong-coupling kagome superconductor. Nature\n599, 222–228 (2021).\n[17] Tazai, R., Yamakawa, Y. & Kontani, H. Charge-loop current order and Z3 nematicity mediated\nby bond order fluctuations in kagome metals. Nature Communications 14, 7845 (2023).\n[18] Xu, Y. et al. Three-state nematicity and magneto-optical Kerr effect in the charge density\nwaves in kagome superconductors. Nature Physics 18, 1470–1475 (2022).\n[19] Nie, L. et al. Charge-density-wave-driven electronic nematicity in a kagome superconductor.\nNature 604, 59–64 (2022).\n[20] Li, H. et al. Rotation symmetry breaking in the normal state of a kagome superconductor\nKV3Sb5. Nature Physics 18, 265–270 (2022).\n[21] Jin, J.-T., Jiang, K., Yao, H. & Zhou, Y. Interplay between Pair Density Wave and a Nested\nFermi Surface. Physical Review Letters 129, 167001 (2022).\n[22] Ge,J.etal. Nonreciprocalsuperconductingcriticalcurrentswithnormalstatefieldtrainability\n14",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l1",
+                    "p14_l2",
+                    "p14_l3",
+                    "p14_l4",
+                    "p14_l5",
+                    "p14_l6",
+                    "p14_l7",
+                    "p14_l8",
+                    "p14_l9",
+                    "p14_l10",
+                    "p14_l11",
+                    "p14_l12",
+                    "p14_l13",
+                    "p14_l14",
+                    "p14_l15",
+                    "p14_l16",
+                    "p14_l17",
+                    "p14_l18",
+                    "p14_l19",
+                    "p14_l20",
+                    "p14_l21",
+                    "p14_l22",
+                    "p14_l23",
+                    "p14_l24",
+                    "p14_l25",
+                    "p14_l26",
+                    "p14_l27",
+                    "p14_l28",
+                    "p14_l29",
+                    "p14_l30",
+                    "p14_l31",
+                    "p14_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p15_1",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "in kagome superconductor CsV3Sb5. arXiv 2506, 04601 (2025). 2506.04601.\n[23] Hu, Y. et al. Topological surface states and flat bands in the kagome superconductor CsV3Sb5.\nScience Bulletin 67, 495–500 (2022).\n[24] Hu, Y. et al. Rich nature of Van Hove singularities in Kagome superconductor CsV3Sb5.\nNature Communications 13, 2220 (2022).\n[25] Liu, Y. et al. Superconductivity under pressure in a chromium-based kagome metal. Nature\n632, 1032–1037 (2024).\n[26] Xie, F. et al. Electron correlations in the kagome flat band metal CsCr3Sb5. Physical Review\nResearch 7, L022061 (2025).\n[27] Wu, S. et al. Flat-band enhanced antiferromagnetic fluctuations and superconductivity in\npressurized CsCr3Sb5. Nature Communications 16, 1375 (2025).\n[28] Li, Y. et al. Electron correlation and incipient flat bands in the Kagome superconductor\nCsCr3Sb5. Nature Communications 16, 3229 (2025).\n[29] Wang,Z.etal.SpinexcitationsandflatelectronicbandsinaCr-basedkagomesuperconductor.\nNature Communications 16, 7573 (2025).\n[30] Peng, S. et al. Flat bands and distinct density wave orders in correlated Kagome supercon-\nductor CsCr3Sb5. arXiv 2406, 17769 (2024). 2406.17769.\n[31] Liu, L. et al. Charge Density Wave Coexisting with Amplified Nematicity in the Correlated\nKagome Metal CsCr3Sb5. Arxiv 2411, 1–18 (2024). 2411.06778.\n[32] Kato, T. et al. Surface-termination-dependent electronic states in kagome superconductors\nAV3Sb5(A=K, Rb, Cs) studied by micro-ARPES. Physical Review B 107, 245143 (2023).\n[33] Kiesel, M. L., Platt, C. & Thomale, R. Unconventional Fermi Surface Instabilities in the\nKagome Hubbard Model. Physical Review Letters 110, 126405 (2013).\n[34] Zhang, W. et al. High Energy Dispersion Relations for the High Temperature Bi2Sr2CaCu2O8\nsuperconductor from Laser-Based Angle-Resolved Photoemission Spectroscopy. Physical Re-\nview Letters 101, 017002 (2008).\n[35] Chang, M.-H. et al. Dispersion kinks from electronic correlations in an unconventional iron-\nbased superconductor. Nature Communications 15, 9958 (2024).\n[36] Krsnik, J. & Held, K. Local correlations necessitate waterfalls as a connection between quasi-\nparticle band and developing Hubbard bands. Nature Communications 16, 255 (2025).\n[37] Zhong, Y. et al. Testing electron–phonon coupling for the superconductivity in kagome metal\n15",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l1",
+                    "p15_l2",
+                    "p15_l3",
+                    "p15_l4",
+                    "p15_l5",
+                    "p15_l6",
+                    "p15_l7",
+                    "p15_l8",
+                    "p15_l9",
+                    "p15_l10",
+                    "p15_l11",
+                    "p15_l12",
+                    "p15_l13",
+                    "p15_l14",
+                    "p15_l15",
+                    "p15_l16",
+                    "p15_l17",
+                    "p15_l18",
+                    "p15_l19",
+                    "p15_l20",
+                    "p15_l21",
+                    "p15_l22",
+                    "p15_l23",
+                    "p15_l24",
+                    "p15_l25",
+                    "p15_l26",
+                    "p15_l27",
+                    "p15_l28",
+                    "p15_l29",
+                    "p15_l30",
+                    "p15_l31",
+                    "p15_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p16_1",
+                "type": "custom",
+                "page_start": 16,
+                "page_end": 16,
+                "children": [],
+                "text": "CsV3Sb5. Nature Communications 14, 1945 (2023).\n[38] Zhao, H. et al. Cascade of correlated electron states in the kagome superconductor CsV3Sb5.\nNature 599, 216–221 (2021).\n[39] Xu, C. et al. Altermagnetic ground state in distorted Kagome metal CsCr3Sb5. Nature\nCommunications 16, 3114 (2025).\n[40] Han, S. et al. Orbital-Hybridization-Driven Charge Density Wave Transition in CsV3Sb5\nKagome Superconductor. Advanced Materials 35 (2023).\n[41] Huang, Z. et al. Controlling an altermagnetic spin density wave in the kagome magnet\nCsCr3Sb5. arXiv 2510.05018 (2025).\n[42] Cheng, S. et al. Frieze charge-stripes in a correlated kagome superconductor CsCr3Sb5. arXiv\n2510.06168 (2025).\n[43] Horcas, I. et al. WSXM : A software for scanning probe microscopy and a tool for nanotech-\nnology. Review of Scientific Instruments 78, 013705 (2007).\n[44] Perdew, J. P., Burke, K. & Ernzerhof, M. Generalized gradient approximation made simple.\nPhys. Rev. Lett. 77, 3865–3868 (1996).\n[45] Kresse, G. & Furthmu¨ller, J. Efficient iterative schemes for ab initio total-energy calculations\nusing a plane-wave basis set. Phys. Rev. B 54, 11169–11186 (1996).\n16",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p16_l1",
+                    "p16_l2",
+                    "p16_l3",
+                    "p16_l4",
+                    "p16_l5",
+                    "p16_l6",
+                    "p16_l7",
+                    "p16_l8",
+                    "p16_l9",
+                    "p16_l10",
+                    "p16_l11",
+                    "p16_l12",
+                    "p16_l13",
+                    "p16_l14",
+                    "p16_l15",
+                    "p16_l16",
+                    "p16_l17",
+                    "p16_l18"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p17_1",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "FIG. 1: Crystal structure, electronic band structure and temperature-driven phase\ntransition of CsCr3Sb5 single crystals. a, Hexagonal crystal structure of CsCr3Sb5 from both\nthe axonometric and top view. b, Electronic band structure and the corresponding electronic den-\nsity of states (DOS) of CsCr3Sb5 from the first-principles calculations. The van Hove singularities\n(vHS) are indicated by the black arrows and the flat bands are highlighted by the grey box. c,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l1",
+                    "p17_l2",
+                    "p17_l3",
+                    "p17_l4",
+                    "p17_l5"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p17_2",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "Temperature-dependent in-plane resistivity of CsCr3Sb5 single crystal. The bad metallic behavior\nat high temperatures is interrupted by a pronounced peak at Tρ = 54.6 K, which relates to an\nantiferromagnetic transition and structural modulation. d, Specific heat (C) of CsCr3Sb5, showing\na sharp peak at 54.2 K. Inset is a plot and corresponding linear fit of C/T versus T2. e and f,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l6",
+                    "p17_l7",
+                    "p17_l8",
+                    "p17_l9"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p17_3",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "STM topographies taken on the Cs- and Sb-terminated surfaces, respectively. Dark dots on the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l10"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p17_4",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "Cs termination indicate Cs vacancies while bright dots on the Sb termination correspond to Cs\nadatoms. g, Typical dI/dV spectrum measured on the Cs-terminated surfaces. The peaks at –140\nand 330 meV can be attributed to the vHS and flat band, respectively, in alignment with the\ntheoretical calculations. STM setup condition: Vs = 2.5 V, It = 100 pA (e); Vs = 1 V, It = 500\npA (f).\n17",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l11",
+                    "p17_l12",
+                    "p17_l13",
+                    "p17_l14",
+                    "p17_l15",
+                    "p17_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p18_1",
+                "type": "custom",
+                "page_start": 18,
+                "page_end": 18,
+                "children": [],
+                "text": "FIG. 2: Distinct surface stripe orders of CsCr3Sb5. a, High-resolution STM topography\ntaken on the Cs-terminated surface with a mixture of 2a0×a0 and 3a0×a0 stripe superstructures.\nEvery three 2a0 stripes are separated by a 3a0 stripe. b, Fast Fourier transform (FFT) of a.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p18_l1",
+                    "p18_l2",
+                    "p18_l3"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p18_2",
+                "type": "custom",
+                "page_start": 18,
+                "page_end": 18,
+                "children": [],
+                "text": "Superstructure modulation peak shows at 4/9 QBragg. c, High-resolution STM topography taken\n√\non the Sb-terminated surface with a 4a0× 3 a0 stripe superstructure. The illustration shows the\nhoneycomb structure with a lattice constant of 5.39 ˚A. d, FFT pattern of c. The q2a0 and q4a0 are\nrotated by 30° relative to QBragg. e, The STM topography of the Sb-terminated surface with a\n4a0 stripe superstructure. f, The dI/dV spectra were acquired from the bright and dark regions at\nthe marked cross in (e). g, A series of dI/dV spectra along the green arrow in (e) encompasses two\n4a0 periods. h, The spatial evolution of the dI/dV intensity, extracted from the panel (g) at ±80\nmV, shows a clear 4a0 periodicity, with the peaks at -80 mV and the troughs at 80 mV aligning\nin phase. i and j, dI/dV mapping at 30 mV (i) and -30 mV (j), a defect is marked with a red\ndotted circle. k, Line profiles along the same region, marked by arrows in (i) and (j), showing the\n√\npeak-to-dip intensity contrast with a 4a0 period. 4a0 × 3a0 stripe superstructure is marked as a\nblack rectangle in (e), (i) and (j). STM setup condition: (a) Vs = 130 mV, It = 1.0 nA; (c) Vs =\n-300 mV, It = 100 pA; (e) Vs = -30 mV, It = 1.0 nA; (i) Vs = 30 mV, It = 1.0 nA; (j) Vs = -30\n18\nmV, It = 1.0 nA.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p18_l4",
+                    "p18_l5",
+                    "p18_l6",
+                    "p18_l7",
+                    "p18_l8",
+                    "p18_l9",
+                    "p18_l10",
+                    "p18_l11",
+                    "p18_l12",
+                    "p18_l13",
+                    "p18_l14",
+                    "p18_l15",
+                    "p18_l16",
+                    "p18_l17",
+                    "p18_l18",
+                    "p18_l19",
+                    "p18_l20"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p19_1",
+                "type": "custom",
+                "page_start": 19,
+                "page_end": 19,
+                "children": [],
+                "text": "FIG. 3: Momentum-resolved electronic structure and the energy position of kagome\nflat bands of CsCr3Sb5. a, Photoemission spectra of CsCr3Sb5 measured with 92.8 eV photons,\nshowing the Sb 4d core level, which indicates different surface terminations. b, Constant energy\ncontour mapping at -0.4 eV on the Cs-terminated surface obtained using circularly polarized light.\nc, Spectralimagesalongdifferentmomentumpathsindicatedbytheyellowlinesinb. Theoverlaid\ndashed lines represent the corresponding calculated bands and the blue dashed lines highlight the\nkagome flat bands. d and e, Same as b,c but for the Sb-terminated surface. f, Fermi surface\nmapping measured with a 7 eV laser light source. A sample bias of –50 eV was applied to achieve\na large momentum detection range. The light polarization was linear horizontal. g, E−k spectral\nimage and the corresponding energy distribution curve (EDC) stacks along the horizontal cut\n(cut4) across Γ, as indicated in f. The red dashed boxes highlight the clean Fermi cutoff without\nany flat-band spectral feature. h, Same as g but along the vertical cut (cut5) indicated in f. i,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p19_l1",
+                    "p19_l2",
+                    "p19_l3",
+                    "p19_l4",
+                    "p19_l5",
+                    "p19_l6",
+                    "p19_l7",
+                    "p19_l8",
+                    "p19_l9",
+                    "p19_l10",
+                    "p19_l11",
+                    "p19_l12"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p19_2",
+                "type": "custom",
+                "page_start": 19,
+                "page_end": 19,
+                "children": [],
+                "text": "ARPES spectral image overlaid with DFT vHS. j, dI/dV spectra obtained by combining data from\nthe Cs- and Sb-terminated surfaces. Flat bands and vHS are labeled with the blue and yellow\narrows, respectively.\n19",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p19_l13",
+                    "p19_l14",
+                    "p19_l15",
+                    "p19_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p20_1",
+                "type": "custom",
+                "page_start": 20,
+                "page_end": 20,
+                "children": [],
+                "text": "FIG. 4: Electron correlation and distinct electron-boson coupling in CsCr3Sb5. a, E −k\nspectral image of CsCr3Sb5 along the cut indicated in Fig. 2f (cut4). b, Same as a but for",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p20_l1",
+                    "p20_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p20_2",
+                "type": "custom",
+                "page_start": 20,
+                "page_end": 20,
+                "children": [],
+                "text": "CsV3Sb5. c and d, Energy distribution curve stacks corresponding to the spectral images in a\nand b, respectively. The blue dashed lines indicate the quasiparticle peaks. The solid blue line\ndenotes incoherent spectra at high binding energies. The red shaded line indicates the waterfall-\nlike spectral feature. e, Fitted band dispersions of CsCr3Sb5 (black circles) and CsV3Sb5 (red\ncircles) from a and b. Kink positions are denoted by the arrows. f, Real part of the self-energy of\nCsCr3Sb5 extracted from e, assuming a linear bare-band dispersion.\n20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p20_l3",
+                    "p20_l4",
+                    "p20_l5",
+                    "p20_l6",
+                    "p20_l7",
+                    "p20_l8",
+                    "p20_l9"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p21_1",
+                "type": "custom",
+                "page_start": 21,
+                "page_end": 21,
+                "children": [],
+                "text": "FIG.5: Temperature evolution of the electronic band originating from the Sb p orbital.\na, ARPES spectral images of the band along the cut indicated in Fig. 2f (cut4) measured at\ndifferent temperatures. Warm-up and cool-down cycles were performed to rule out extrinsic effects\nintroduced by sample degradation. b, Corresponding momentum distribution curves at the Fermi\nlevel of the E − k spectra shown in a for the cool-down process. c, Fitted peak width of b,\nshowing no significant change across the transition temperature for either the warm-up or cool-\ndown processes.\n21",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p21_l1",
+                    "p21_l2",
+                    "p21_l3",
+                    "p21_l4",
+                    "p21_l5",
+                    "p21_l6",
+                    "p21_l7",
+                    "p21_l8"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Abstract",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 14.3,
+              "observation_ids": [
+                "p2_l1"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 21,
+        "children": [
+          {
+            "id": "heading_p1_l1",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "title": "Exotic Surface Stripe Orders in Correlated Kagome Metal",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 14.3,
+              "observation_ids": [
+                "p1_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p1_l2",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [
+              {
+                "id": "unidentified_p1_1",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "YunxingLi1,∗, PeigenLi1,2,∗, TaiminMiao3,∗, RuiXu1, YongqingCai4, NengCai3, BoLiang3,\nHan Gao5, Hanbo Xiao5, Yongzhen Jiang5, Jiefeng Cao6, Fangyuan Zhu6, Hongkun Wang1,2,\nJincheng Xie1,2, Jingcheng Li1, Zhongkai Liu5, Chaoyu Chen7, Yunwei Zhang1, X. J. Zhou3,†,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l3",
+                    "p1_l4",
+                    "p1_l5"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "heading_p1_l6",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_2",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "1Guangdong Provincial Key Laboratory of Magnetoelectric Physics and Devices,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l7"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Dingyong Zhong1,2,†, Huichao Wang1,†, Jianwei Huang1,†, Donghui Guo1,†",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l6"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l8",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "title": "Center for Neutron Science and Technology, School of Physics,",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l8"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l9",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_3",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "2State Key Laboratory of Optoelectronic Materials and Technologies,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l10"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Sun Yat-sen University, Guangzhou 510275, China",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l9"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l11",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_4",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "3Institute of Physics, Chinese Academy of Sciences, Beijing, 100190 China\n4School of Physics, Dalian University of Technology, Dalian, 116024 China\n5School of Physical Science and Technology,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l12",
+                        "p1_l13",
+                        "p1_l14"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Sun Yat-sen University, Guangzhou, 510275 China",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l11"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l15",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "title": "ShanghaiTech Laboratory for Topological Physics,",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l15"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l16",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_5",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "6Shanghai Synchrotron Radiation Facility,",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l17"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "ShanghaiTech University, Shanghai, 201210 China",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l16"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l18",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "title": "Shanghai Advanced Research Institute,",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l18"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l19",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_6",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "7Songshan Lake Materials Laboratory, Dongguan, 523808 China\n∗ These authors contributed equally\n† X. J. Zhou: xjzhou@iphy.ac.cn;\nDingyong Zhong: dyzhong@mail.sysu.edu.cn;\nHuichao Wang: wanghch26@mail.sysu.edu.cn;\nDonghui Guo: guodonghui@mail.sysu.edu.cn;",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l20",
+                        "p1_l21",
+                        "p1_l22",
+                        "p1_l23",
+                        "p1_l24",
+                        "p1_l25"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Chinese Academy of Sciences, Shanghai, 201204 China",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l19"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l26",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_7",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "(Dated: October 16, 2025)\n1\n5202\ntcO\n41\n]le-rts.tam-dnoc[\n1v88821.0152:viXra",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l27",
+                        "p1_l28",
+                        "p1_l29",
+                        "p1_l30",
+                        "p1_l31",
+                        "p1_l32",
+                        "p1_l33"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Jianwei Huang: huangjw269@mail.sysu.edu.cn",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 12.0,
+                  "observation_ids": [
+                    "p1_l26"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "CsCr3Sb5",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 14.3,
+              "observation_ids": [
+                "p1_l2"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 21,
+        "page_end": 21,
+        "children": []
+      }
+    ]
+  }
+}

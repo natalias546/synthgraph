@@ -1,0 +1,180 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "Times-Roman",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "PHYSICAL REVIEW B 111,024424(2025)"
+      ]
+    },
+    {
+      "font": "Times-Bold",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "ChemicalandstructuraldisorderinthekagomespinS = 1 systemsZnCu (OH) Cl",
+        "and YCu3(OH)6Br2[Brx(OH)1−x]"
+      ]
+    },
+    {
+      "font": "Times-Bold",
+      "size": 8.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "2 3 6 2"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 466,
+      "long_prose_lines": 11,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "ReinhardK.Kremer ,1SebastianBette ,1JürgenNuss ,1andPascalPuphal 1,2,*",
+        "I. INTRODUCTION Very early on chemical and structural disorder, for exam-",
+        "ple,inducedbysitemixingofmagneticandnonmagneticions,"
+      ]
+    },
+    {
+      "font": "Times-Italic",
+      "size": 9.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 1,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Max-Planck-InstituteforSolidStateResearch,Heisenbergstraße1,70569Stuttgart,Germany",
+        "22ndPhysicsInstitute,UniversityofStuttgart,70569Stuttgart,Germany",
+        "accesspublicationfundedbyMaxPlanckSociety. [21–24]."
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 357,
+      "long_prose_lines": 16,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "(Received14November2024;revised9January2025;accepted16January2025;published27January2025)",
+        "BysinglecrystaldiffractionwecharacterizethechemostructuraldisorderintroducedbyZn-Cusitemixing",
+        "in the kagome spin S= 2 1 systems herbertsmithite ZnCu 3 (OH) 6 Cl 2 and YCu 3 (OH) 6 Br 2 [Br x (OH) 1−x ]. For an"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        6
+      ],
+      "examples": [
+        "Cu2+",
+        "Cu2+"
+      ]
+    },
+    {
+      "font": "Times-Italic",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 4,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "PublishedbytheAmericanPhysicalSocietyunderthetermsofthe structure(AAstacking),thestructuralpolymorphofherbert-",
+        "Creative Commons Attribution 4.0 International license. Further smithite. For YCu 3 (OH) 6+x Cl 3 long range magnetic or",
+        "distribution of this work must maintain attribution to the author(s) (LRO) below a transition temperature of 15 K was re"
+      ]
+    },
+    {
+      "font": "Times-Bold",
+      "size": 9.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        7
+      ],
+      "examples": [
+        "II. EXPERIMENT",
+        "A. Sample preparation and composition",
+        "B. Single crystal XRD"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        7
+      ],
+      "examples": [
+        "be Zn 0.95(1) Cu 2.99(3) O 5.9(1) H 5.8(1) Cl 2 .",
+        "Zn 0.95(1) Cu 2.99(3) O 5.9(1) H 5.8(1) Cl 2 .",
+        "2 3 6 2"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

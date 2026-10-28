@@ -1,0 +1,1814 @@
+{
+  "body_size": 8.2,
+  "styles": [
+    {
+      "font": "AdvOT89719618",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 29,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "examples": [
+        "Article https://doi.org/10.1038/s41467-025-67774-6",
+        "Check for updates",
+        "NatureCommunications|( 2026)1 7:1029 1"
+      ]
+    },
+    {
+      "font": "AdvOTa2fa4214.B",
+      "size": 25.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Defect Engineering for Stabilizing",
+        "Magnetic and Topological Properties",
+        "in Mn(Bi1-xSbx)2Te4"
+      ]
+    },
+    {
+      "font": "AdvOT89719618",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Received: 15 April 2025 Haonan Chen",
+        "Accepted: 9 December 2025"
+      ]
+    },
+    {
+      "font": "AdvOT13119950",
+      "size": 9.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1,15, Jiayu Wang1,15, Huayao Li 2,15, Xunkai Duan3,4,15,",
+        "YuxiangWang1,ZixuanXu1,YingchaoXia1,WenhaoHe5,ZehaoJia 5,6,",
+        "XiangyuCao5,6,YichengMou 1,XiangyuJiang7,8,9,JiamingGu1,PengliangLeng1,"
+      ]
+    },
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 2.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        ";,:)(0987654321 ;,:)(0987654321"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 24,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "MnBi2Te4 is a versatile platform for exploring diverse topological quantum",
+        "states,yetitspotentialishamperedbyintrinsicantisitedefects.WhileSb",
+        "substitutionhasbeenemployedtotunetheFermileveltowardsthecharge"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 779,
+      "long_prose_lines": 112,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "examples": [
+        "MnBi2Te4 represents a unique material platform that facilitates com-",
+        "prehensive investigation of diverse topological quantum states and",
+        "emergent quantum phenomena1–3, spanning from antiferromagnetic"
+      ]
+    },
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 12,
+      "pages": [
+        1,
+        14
+      ],
+      "examples": [
+        "Afulllistofaffiliationsappearsattheendofthepaper. e-mail:tzhou@eitech.edu.cn;lmiao@seu.edu.cn;zhangcheng@fudan.edu.cn",
+        "1StateKeyLaboratoryofSurfacePhysicsandInstituteforNanoelectronicDevicesandQuantumComputing,FudanUniversity,Shanghai,Chin",
+        "LaboratoryofQuantumMaterialsandDevicesofMinistryofEducation,SchoolofPhysics,SoutheastUniversity,Nanjing,China.3NingboIns"
+      ]
+    },
+    {
+      "font": "AdvOT3d287b35.B",
+      "size": 10.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "examples": [
+        "Results",
+        "Discussion",
+        "Methods"
+      ]
+    },
+    {
+      "font": "AdvOT70e1938e",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4,
+        5,
+        7,
+        9,
+        11,
+        12
+      ],
+      "examples": [
+        "Antisite defects driven degradation of magnetism and band",
+        "topology",
+        "OCVT synthesis"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 12.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "a",
+        "e f",
+        "h"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Bi/Sb substitute Te",
+        "Mn–Bi/Sb antisite",
+        "0"
+      ]
+    },
+    {
+      "font": "Arial-BoldItalicMT",
+      "size": 9.2,
+      "bold": true,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "c",
+        "b a"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        6
+      ],
+      "examples": [
+        "lellarap-itna",
+        "lellarap-itna",
+        "lellarap-itna"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "lellarap",
+        "lellarap",
+        "lellarap"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "b μ0H = 0 T c"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 10.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "H",
+        "H"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "0.3",
+        "0.2",
+        "0.1"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 10.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "E",
+        "-k",
+        "k"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "z"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        11
+      ],
+      "examples": [
+        "z Γ",
+        "MnBi",
+        "BiMn"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        6,
+        10
+      ],
+      "examples": [
+        ")Ve(",
+        "0 c1",
+        "0 c2"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 5.7,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "E"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        10
+      ],
+      "examples": [
+        "- E",
+        "mc·Ωm2.0",
+        ").u.a(edutilpmATFF"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        6,
+        8
+      ],
+      "examples": [
+        "F",
+        "N",
+        ")mc·Ωm("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        10,
+        11
+      ],
+      "examples": [
+        "Γ Z",
+        "2 K",
+        "6 K"
+      ]
+    },
+    {
+      "font": "AdvOT3d287b35.B",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 6,
+      "pages": [
+        4,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "examples": [
+        "Fig. 1 | Schematics of defect-included Mn(Bi1-xSbx)2Te4 crystal structure, mag-",
+        "netic order and band topology in its ferromagnetic state. a Schematic of Mn(Bi1-",
+        "Fig. 2 | Schematic images of the OCVT method. a An illustration of the OCVT"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 5.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "xSbx)2"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 98,
+      "long_prose_lines": 83,
+      "pages": [
+        4,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "examples": [
+        "Te4",
+        "crystal structure with several typical types of defects, including Mn-Bi/Sb",
+        "antisites, Bi/Sb atoms occupying Te sites, and vacancies at Mn sites. Two septuple"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 8.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "T T"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        6
+      ],
+      "examples": [
+        "high low",
+        "Mn",
+        "Bi"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "tnetnoc"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "bS"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 7.4,
+      "bold": false,
+      "italic": true,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "p",
+        "T",
+        "n"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "580 590 K",
+        "560 560 K",
+        "560 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "540 low"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        6,
+        8,
+        11
+      ],
+      "examples": [
+        ")K(",
+        "(",
+        ") 1-"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 4.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        10
+      ],
+      "examples": [
+        "T",
+        "σ"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "high"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        7,
+        9,
+        11
+      ],
+      "examples": [
+        "Sb",
+        "sat",
+        "AHE"
+      ]
+    },
+    {
+      "font": "AdvOT13119950",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 1,
+      "pages": [
+        5,
+        8
+      ],
+      "examples": [
+        "Table1|Acomprehensivecomparisonofsaturationmagnetization,elementratioanddefectsconcentrationfor",
+        "Mn(Bi1-xSbx)2",
+        "Te4"
+      ]
+    },
+    {
+      "font": "AdvOT13119950",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        8
+      ],
+      "examples": [
+        "x Msat MnEDX (Bi, Sb)EDX MnMn (%) MnBi/Sb (%) Bi/SbMn (%)",
+        "x Bulk Growth Ref Methods MnBi/Sb (%) Bi/SbMn (%)",
+        "Ref"
+      ]
+    },
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 26,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        8
+      ],
+      "examples": [
+        "0 3.99 0.99 2.05 92.44 3.28 7.56",
+        "0.04 3.95 0.99 2.03 92.01 3.50 7.99",
+        "0.12 3.86 0.98 2.03 90.12 3.94 9.88"
+      ]
+    },
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 4,
+      "pages": [
+        5,
+        8
+      ],
+      "examples": [
+        "ThesaturationmagnetizationsMsatareextractedfromthemagnetizationvaluesat9Tand2KinFig.3b.TheelementatomicratiosofMnand(Bi+",
+        "denotedasMnEDXand(Bi,Sb)EDXwithTeEDXsettoareferencevalueof4.MnMn%correspondstotheamountpercentageofMnatomsinthemainMnlay",
+        "amountpercentageofantisitedefectsinthesingleatomiclayer.ThedeviationsbetweenMnBi/Sb%andhalfofBi/SbMn%primarilystemfromco"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        7
+      ],
+      "examples": [
+        "19 K19,22,23,34,44–46.",
+        "34."
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 22,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "4",
+        "2",
+        "0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        ") +2",
+        ") +2",
+        ") +2"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "nM/",
+        "eO·ume(",
+        "nM/"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 4.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        "μ",
+        "μ",
+        "ρ"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 6.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "M",
+        "M"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8,
+        11
+      ],
+      "examples": [
+        "T = 2 K x = +2 ) 2",
+        "e",
+        "0.2"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        10
+      ],
+      "examples": [
+        "0",
+        "0.04",
+        "0.12 B 0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 17,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "2.0",
+        "1.6",
+        "0.21"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        "lom·",
+        "B",
+        "B"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "1-"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 2.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "c",
+        "c"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 5.2,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "H",
+        "H"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "μ 0",
+        "μ 0"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "a b",
+        "d",
+        "f"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 5.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "μ H",
+        "μ H",
+        "μ H"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 10.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        "a",
+        "b",
+        "a"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "From ρ xx(T)",
+        "26 From M(T)",
+        "Other works:"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        "25",
+        "24",
+        "23"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 4.3,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        10
+      ],
+      "examples": [
+        "T",
+        "ρ"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "3.5",
+        "3.0",
+        "2.5"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        "nM/",
+        "nM/"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 3.9,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        "μ",
+        "n"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 5.9,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "M"
+      ]
+    },
+    {
+      "font": "AdvMacMthSyN",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        9
+      ],
+      "examples": [
+        "(1)",
+        "a � 2b",
+        "(6)"
+      ]
+    },
+    {
+      "font": "AdvOTcc1f6510.I",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7,
+        9
+      ],
+      "examples": [
+        "M",
+        "a + 2b M0",
+        "M"
+      ]
+    },
+    {
+      "font": "AdvOTcc1f6510.I",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "sat (2)"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "a x=0.14 0.17 0.20S1 0.20S2 0.22 0.25 0.26",
+        "n-type p-type"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 49,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "10",
+        "1",
+        "100200 100200 100200 100200 100200 100200"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 2.4,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "xx",
+        "xy"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        8,
+        10
+      ],
+      "examples": [
+        ")%(",
+        ") 3-",
+        ")s·V/"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "RM"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "c 0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "1020",
+        "1019 nh",
+        "1018"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 7.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "n",
+        "μ",
+        "μ"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 4.8,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "e"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "2 mc("
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 3.8,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "μ",
+        "μ"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 5.8,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "M"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        9,
+        11,
+        12
+      ],
+      "examples": [
+        "xSbx)2",
+        "xSbx)2",
+        "xSbx)2"
+      ]
+    },
+    {
+      "font": "21",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "ℏ ℏ"
+      ]
+    },
+    {
+      "font": "AdvP4C4E46",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "ℏ � �"
+      ]
+    },
+    {
+      "font": "03",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "Θ"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 47,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "-9.1",
+        "-8.4",
+        "-6.3"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        ")mc·Ωm("
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "ρ�",
+        "ρ�"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 10.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "a b",
+        "e 0 f",
+        "c"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        ") 1-",
+        ").u.a(edutilpmATFF",
+        ")T("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "EHA",
+        "EHA",
+        "S"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "0 5 10 15 20",
+        "0.0 T (K)"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "Fitting curves"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 4.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "F"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "AdvOTdd63dae3",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "= ρAHE",
+        "= σAHE"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        ")Ve("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "F"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 3.2,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "E"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "a b c d",
+        "e"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "x = 0 x = 0.25 x = 0.5 x = 0.75"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "H"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 6.8,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "E",
+        "-k",
+        "k"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "z"
+      ]
+    },
+    {
+      "font": "AdvOT0c200bf0",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 234,
+      "long_prose_lines": 44,
+      "pages": [
+        12,
+        13,
+        14
+      ],
+      "examples": [
+        "1. Bernevig, B. A., Felser, C. & Beidenkopf, H. Progress and prospects",
+        "in magnetic topological materials. Nature 603, 41–51 (2022).",
+        "2. Chang, C.-Z., Liu, C.-X. & MacDonald, A. H. Colloquium: Quantum"
+      ]
+    },
+    {
+      "font": "AdvOT23e3f5cb.I",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        12,
+        13
+      ],
+      "examples": [
+        "x x 2 4",
+        "x x 2 4",
+        "x x 2 4"
+      ]
+    },
+    {
+      "font": "AdvOT23e3f5cb.I",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        12
+      ],
+      "examples": [
+        "Phys. Rev. Mater. 3, 064202 (2019)."
+      ]
+    },
+    {
+      "font": "AdvOT13119950",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        14
+      ],
+      "examples": [
+        "Supplementary information The online version contains",
+        "Peer review information Nature Communications thanks Jung-Chun",
+        "Reprints and permissions information is available at"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

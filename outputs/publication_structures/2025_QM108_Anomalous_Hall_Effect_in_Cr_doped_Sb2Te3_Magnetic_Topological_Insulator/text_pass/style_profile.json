@@ -1,0 +1,163 @@
+{
+  "body_size": 12.0,
+  "styles": [
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 25,
+      "long_prose_lines": 1,
+      "pages": [
+        1,
+        10,
+        15,
+        16,
+        17,
+        18
+      ],
+      "examples": [
+        "Observation of Anomalous Hall Effect in Bulk Single Crystals of n-type Cr-doped Sb2Te3",
+        "Magnetic Topological Insulator",
+        "The exploration of topological Dirac surface states is significant in the realms of"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 352,
+      "long_prose_lines": 300,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "examples": [
+        "Ali Sarikhania,†,*, Mathew Pollardb,†, Jacob Cookc, Sheng Qiub, Seng Huat Leeb, Laleh",
+        "Avazpourb, Jack Crewseb, William Fahrenholtzd, Guang Bianc, and Yew San Hora,b,*",
+        "Three-dimensional topological insulators (TIs) have garnered significant attention over the"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 11.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 3,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "a Material Research Center, Missouri University of Science and Technology, Rolla, MO 65409",
+        "b Department of Physics, Missouri University of Science and Technology, Rolla, MO 65409",
+        "c Department of Physics and Astronomy, University of Missouri, Columbia, MO 65211"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "† Equal Contribution.",
+        "* Corresponding Authors: yhor@mst.edu (Y. S. Hor), as5kw@mst.edu (A. Sarikhani)"
+      ]
+    },
+    {
+      "font": "Calibri-Bold",
+      "size": 11.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 22,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "examples": [
+        "1/22",
+        "2/22",
+        "3/22"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 1,
+      "pages": [
+        11,
+        12
+      ],
+      "examples": [
+        "Cu. Journal of Alloys and Compounds 639, 9-14 (2015).",
+        "communication devices. Jour. of Superconductivity and Novel Magnetism 33, 2557 (2020)."
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 18.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "examples": [
+        "Figure 1",
+        "Figure 2",
+        "Figure 3"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

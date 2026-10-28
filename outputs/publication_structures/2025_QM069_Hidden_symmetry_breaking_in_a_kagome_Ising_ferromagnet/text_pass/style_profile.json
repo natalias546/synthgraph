@@ -1,0 +1,479 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "NimbusRomNo9L-Medi",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        10
+      ],
+      "examples": [
+        "Hiddensymmetry-breakinginakagomeIsingferromagnet",
+        "SupplementalInformation-Hiddensymmetry-breakinginakagomeIsingferromagnet"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 704,
+      "long_prose_lines": 23,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "examples": [
+        "TianxiongHan,1,2 TylerJ.Slade,1 LiqinKe,1,3 Qing-PingDing,1 MinseongLee,4 R.D.McKenzie,1,2",
+        "BingLi,1,5 DhurbaR.Jaishi,1,2 YongbinLee,1 D.M.Pajerowski,5 QiangZhang,5 TaoHong,5 P.C.Canfield,1,2",
+        "Y.Furukawa,1,2 K.Thirunavukkuarasu,6 AashishSapkota,1 RebeccaFlint,1,2 andR.J.McQueeney1,2"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-ReguItal",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 9,
+      "pages": [
+        1,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "1Ames National Laboratory, U.S. DOE, Iowa State University, Ames, Iowa 50011, USA",
+        "2Department of Physics and Astronomy, Iowa State University, Ames, Iowa 50011, USA",
+        "3DepartmentofMaterialsScienceandEngineering, UniversityofVirginia,Charlottesville,VA22904"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 356,
+      "long_prose_lines": 52,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "examples": [
+        "(Dated:November12,2025)",
+        "Kagomemetalscanhostunconventionalelectronicphenomenathatemergefromtheirfrustratedlatticege-",
+        "ometryandassociatedbandtopology.Correlatedelectronicorders,suchascharge-densitywavesandsupercon-"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "5202",
+        "voN",
+        "01"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]le-rts.tam-dnoc["
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-ReguItal",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "examples": [
+        "Magnetic Hamiltonian for TbV6Sn6. The Tb ions in",
+        "Expected excitation spectrum of an Ising FM. The strong",
+        "Inelastic neutron scattering data. INS data reveal a differ-"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "is HCEF = B20O20 + B40O40 + B60O60 + B66O66, where Blm"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        6,
+        7,
+        13,
+        14
+      ],
+      "examples": [
+        "J ≈ JRKKY + Jdipolar where Jdipolar/JRKKY ≈ −0.20.",
+        "a",
+        "a"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5,
+        13,
+        14
+      ],
+      "examples": [
+        "= β/(gJ",
+        "TC, ∆NV",
+        "I"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Medi",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5,
+        7,
+        10,
+        11,
+        12,
+        13
+      ],
+      "examples": [
+        "FIG. 1. Spin-flip excitations in an Ising ferromagnet. (a) Ex-",
+        "FIG. 4. Time-reversal symmetry breaking. Different magnetic",
+        "METHODS"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        10,
+        13
+      ],
+      "examples": [
+        "(T) ∝ MT b",
+        "T =1.6K.",
+        ")"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        13
+      ],
+      "examples": [
+        "2 2π",
+        "(Ri− Rj )(1"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 31,
+      "long_prose_lines": 0,
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "examples": [
+        "≤",
+        "≈ ∥ ≈ ∥",
+        "⊥"
+      ]
+    },
+    {
+      "font": "NimbusSanL-Regu",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        ")stinu.bra201(ytisnetnI",
+        ")stinu.bra201(ytisnetnI"
+      ]
+    },
+    {
+      "font": "CMR12",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "Q(A˚−1)",
+        "Q(A˚−1)"
+      ]
+    },
+    {
+      "font": "NimbusSanL-Regu",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "(b)"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "χ2=7.1;Rmag=4.7"
+      ]
+    },
+    {
+      "font": "NimbusRomNo9L-Regu",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "Btrans B3d Bdem BL"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "Q2z",
+        "eiQ"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "Si"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "j ⟩",
+        "µν = δ ij ij (S3)"
+      ]
+    },
+    {
+      "font": "CMSY7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "·",
+        "̸"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "− 1 1 − 2 − 4 −"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "= P µνJµJν, (S2)"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "0 2P z"
+      ]
+    },
+    {
+      "font": "CMMI6",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        14
+      ],
+      "examples": [
+        "ocal"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        14
+      ],
+      "examples": [
+        "Jz′"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

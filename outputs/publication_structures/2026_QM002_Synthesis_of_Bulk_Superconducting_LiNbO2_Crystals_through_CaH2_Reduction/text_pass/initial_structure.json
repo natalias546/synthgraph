@@ -1,0 +1,1551 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2026_QM002_Synthesis_of_Bulk_Superconducting_LiNbO2_Crystals_through_CaH2_Reduction.pdf",
+    "pages": 19,
+    "sha256": "cd6c11c40bb601ce766d233853a6d46eb0774e2fb3108fdf9da2241b5474ddfc",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 11.3,
+    "body_font_family": "F1"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 19,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 19,
+        "children": [
+          {
+            "id": "unidentified_p1_1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Synthesis of Bulk Superconducting LiNbO2 Crystals through CaH2 Reduction",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l1"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_2",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Ryan Paxson1,2,*, Stephanie J. Hong3, Bicky S. Moirangthem6, Parham Kabirifar5, Saya Takeuchi1,\nTianyu Li3, Chih-Yu Lee1, Haotong Liang1, Keenan Avers2, Kamal R. Joshi6, Amlan Datta6, Makariy\nA. Tanatar6, Shanta Saha2, Joseph A. Dura4, Peter Zavalij3, Johnpierre Paglione2, Ruslan Prozorov6,\nAlexander J. Grutter4, Efrain E. Rodriguez1,2,3,*, and Ichiro Takeuchi1,2,*\n1Department of Materials Science and Engineering, University of Maryland, College Park, MD, USA\n2Maryland Quantum Materials Center, University of Maryland, College Park, MD, USA\n3Department of Chemistry & Biochemistry, University of Maryland, College Park, MD, USA\n4NIST Center for Neutron Research, National Institute of Standards and Technology, Gaithersburg,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l2",
+                "p1_l3",
+                "p1_l4",
+                "p1_l5",
+                "p1_l6",
+                "p1_l7",
+                "p1_l8",
+                "p1_l9"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_3",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "MD, USA\n5Advanced Imaging and Microscopy (AIM) Lab, Maryland Nanocenter, University of Maryland,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l10",
+                "p1_l11"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_4",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "College Park, MD, USA\n6Ames Laboratory and Department of Physics and Astronomy, Iowa State University, Ames, IA, USA",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l12",
+                "p1_l13"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_5",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "We have synthesized layered superconducting LiNbO2 crystals through a bulk phase transformation\nfrom LiNbO3 single crystals via CaH2 reduction. As the Nb valence is reduced from 5+ to 3+, the\nmaterial undergoes a structural transformation to the resulting product, LiNbO2, which is\naccompanied by metallic behavior and a superconducting transition, Tc onset, as high as 14.4 K.\nSecondary ion mass spectroscopy (SIMS) and X-ray photoelectron spectroscopy (XPS) show that the\nresulting phase is hole-doped through de-lithiation during the reduction. Magnetization and AC\nsusceptibility measurements from a tunnel diode resonator confirm the bulk nature of\nsuperconductivity with a superconducting volume fraction of ≈ 77% and an upper critical field\napproaching 26 T. Our study demonstrates extreme hydride reduction as an effective method to\ninduce phase transformations with non-topotactic pathways and can be used to synthesize bulk\nmaterials with exotic properties.\n1",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l14",
+                "p1_l15",
+                "p1_l16",
+                "p1_l17",
+                "p1_l18",
+                "p1_l19",
+                "p1_l20",
+                "p1_l21",
+                "p1_l22",
+                "p1_l23",
+                "p1_l24",
+                "p1_l25"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p2_1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "1. Introduction\nHydride assisted reduction has proven to be an effective method to tune the properties of metal\noxides.[1,2] Through anion stoichiometry manipulation, e.g. inserting H- ions and removing oxygen\nions from the lattice, hydride assisted reduction gives rise to myriads of interesting phenomena. This\nincludes structural transformations, new magnetic structures, and the stabilization of rare oxidation\nstates (e.g. Co+ and Ni+).[3,9,10,12-15,17-19] This process differs from conventional gas reduction methods\n(e.g. via the use of H2 gas) because the reaction requires a much lower temperature, which assists the\nformation of metastable oxyhydrides and oxygen deficient compounds.[3-12,22,28,29] Calcium hydride\n(CaH2) reduction has been used to synthesize the infinite-layer square planar lattice in nickelates,\nwhich hosts robust superconductivity.[7,10,11,16-19] While the discovery of superconductivity in\ninfinite-layer nickelates has fueled an explosion of interest in the CaH2 reduction process and its\nability to access superconducting phases in perovskite metal oxides, the overwhelming majority of\napplications are focused on topotactic processes in thin film samples with sub-nL volumes. The\nextent to which CaH2 reduction can be used to synthesize bulk superconductors through non-\ntopotactic transformations or via the reduction of large-scale single crystals remains relatively\nunexplored. In this work, we demonstrate CaH2 reduction of LiNbO3 single crystals to produce a\nbulk volume of superconducting LiNbO2.\nThe oxygen-rich parent compound, LiNbO3, orders in a distorted trigonal structure with Nb cations\ncoordinated by 6 oxygen atoms in an octahedral environment as shown in Figure 1(a).[34] Unlike the\nperovskite to square-planar transformation of the nickelate superconductor, the transformation of\nLiNbO3 into superconducting LiNbO2 cannot proceed via a topotactic process due to the different\ncation sublattice of the layered P63/mmc space group of LiNbO2, shown in Figure 1(b).[24-27] Instead,\nthe cation sublattice structure changes completely during the phase transformation. Thus, unlike the\nperovskite to infinite-layer square lattice case, the CaH2 reduction facilitates a reconstructive phase\ntransformation from lithium niobate to lithium niobite requiring a complete reorganization of the\natoms in the lattice.\nLiNbO2 has been shown to be superconducting with either hole or electron doping, and is commonly\nhole-doped through delithiation or electron doped by hydrogen incorporation .[24-27] Hydrogen\nincorporated either as a cation on Li sites or an anion on oxygen sites both contribute to electron\ndoping the sample, and counteract the hole doping from delithiation.[20,26] Both hole and electron\ndoping in LiNbO2 are compensated by changing the oxidation state of the Nb atoms.\n2",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l1",
+                "p2_l2",
+                "p2_l3",
+                "p2_l4",
+                "p2_l5",
+                "p2_l6",
+                "p2_l7",
+                "p2_l8",
+                "p2_l9",
+                "p2_l10",
+                "p2_l11",
+                "p2_l12",
+                "p2_l13",
+                "p2_l14",
+                "p2_l15",
+                "p2_l16",
+                "p2_l17",
+                "p2_l18",
+                "p2_l19",
+                "p2_l20",
+                "p2_l21",
+                "p2_l22",
+                "p2_l23",
+                "p2_l24",
+                "p2_l25",
+                "p2_l26",
+                "p2_l27",
+                "p2_l28",
+                "p2_l29",
+                "p2_l30",
+                "p2_l31",
+                "p2_l32"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p3_1",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "text": "Figure 1. Crystal structures of (a) LiNbO3 and (b) LiNbO2 with the CsPrS2 structure type.\nWhile past theoretical and experimental work suggest a wealth of exciting physics in LiNbO2,\nincluding possible unconventional two-dimensional superconductivity in NbO2 layers mediated\nthrough strong electron correlations, detailed investigations have been inhibited by the lack of bulk\ncrystal samples.[35,36] Thus far, superconductivity in LiNbO2 has only been reported in powders and\nthin films.[24-27] In this work, we demonstrate the utility of CaH2 reduction to induce bulk\nsuperconductivity at scale, reducing crystals with masses approaching 200 mg. We observe the onset\ntemperature, Tconset, of the superconducting transition and Tc0, at which the resistance reaches zero, as\nhigh as 14.4 K and 13.3 K, respectively. These are comparable to the highest reported\nsuperconducting transition values for LiNbO2 reported in the literature. The successful application of\nCaH2 reduction to macroscopic volumes of a more complex system with a distorted lattice, volatile\nlithium and a non-topotactic transformation pathway highlights the adaptability and promise of this\napproach.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p3_l1",
+                "p3_l2",
+                "p3_l3",
+                "p3_l4",
+                "p3_l5",
+                "p3_l6",
+                "p3_l7",
+                "p3_l8",
+                "p3_l9",
+                "p3_l10",
+                "p3_l11",
+                "p3_l12",
+                "p3_l13"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "heading_p3_l14",
+            "type": "section",
+            "page_start": 3,
+            "page_end": 11,
+            "children": [
+              {
+                "id": "heading_p3_l15",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 8,
+                "children": [
+                  {
+                    "id": "unidentified_p3_2",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "To perform the hydride reduction of LiNbO3, single crystal LiNbO3 of varying orientations (Y-cut,\nZ-cut and Y-128 o) were covered with 0.5 g of CaH2 powder and sealed in evacuated (approximately\n0.133 Pa) quartz ampoules. The Y-128o is an oblique crystallographic axis rotated 128° from the c-\naxis with respect to the a-axis, which exposes a loosely packed and highly corrugated surface\ncompared to the Y and Z-cut crystals. The hydride reduction was conducted at various temperatures\n(350 °C to 700 oC) and for between 72 hours and 720 hours. During the reduction, the sample\nundergoes a dramatic color change: the pale-yellow transparent LiNbO3 crystal turns dark black with\na metallic luster. The highest Tc onset of 14.4 K was observed for the Y-128o crystal reduced for 240\nh at 650 oC temperature (see below).\nFigure 2 shows the scanning electron microscopy cross-sectional images and analysis of the reduced\nLiNbO3 crystal (Y-128o). Two distinct regions can be observed in the crystal as seen in Figure 2(a).\n3",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l16",
+                        "p3_l17",
+                        "p3_l18",
+                        "p3_l19",
+                        "p3_l20",
+                        "p3_l21",
+                        "p3_l22",
+                        "p3_l23",
+                        "p3_l24",
+                        "p3_l25",
+                        "p3_l26",
+                        "p3_l27"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p4_1",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "The pristine LiNbO3 sample, with dimensions 10 mm x 10 mm x 0.5 mm was reduced by the CaH2\nreaction from the surfaces, creating bulk layers of LiNbO2 at its top and bottom surface regions,\nleaving a layer of the unreacted parent compound LiNbO3 in the center. Energy dispersive X-ray\nspectroscopy (EDS) mapping of oxygen, shown in Figure 2(b), confirms the regions converted from\nthe CaH2 reaction are oxygen reduced, and the EDS line scans shown in Figure 2(c), indicate that the\nLiNbO2 regions show relatively uniform oxygen stoichiometry, with an approximate ratio of 3\n(center bulk region) to 2 (surface bulk regions), further indicative of the fact that the CaH2 reaction\nled to the phase transformation from LiNbO3 to LiNbO2, rather than merely inducing defects such as\noxygen vacancies. The contrast between the reduced and unreduced layers is more easily discernible\nthrough an optical cross-sectional microscope image, shown in Figure 2(d). The thickness of the\nLiNbO2 regions was found to increase with the CaH2 reduction time. To our knowledge, this study\nis the first to report the conversion of bulk LiNbO3 single crystals to LiNbO2.\nFigure 2. (a) Cross-sectional SEM image of LiNbO3 sample which was CaH2 reduced for 480 hours\nat 650 °C. (b) Oxygen Energy Dispersive X-ray Spectroscopy (EDS) mapping shows the regions\nformed from the CaH2 reaction are oxygen reduced. (c) EDS line scans, indicate the LiNbO2 regions\nare uniform in oxygen stoichiometry and gradients in oxygen content are not observed. (d) Optical\nimage of reduced sample cross section using digital microscope.\nFigure 3 shows the powder X-ray diffraction pattern of the LiNbO2 crystal region, which was\nremoved from the surfaces of a naturally formed LiNbO2/LiNbO3/LiNbO2 bulk heterostructure and\ncrushed into a polycrystalline form. This sample was reduced from Y-128° oriented LiNbO3 at 650\noC for 480 h. The reduced material contains 80.2(3)% of the layered P63/mmc LiNbO2 by weight,\n4",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l1",
+                        "p4_l2",
+                        "p4_l3",
+                        "p4_l4",
+                        "p4_l5",
+                        "p4_l6",
+                        "p4_l7",
+                        "p4_l8",
+                        "p4_l9",
+                        "p4_l10",
+                        "p4_l11",
+                        "p4_l12",
+                        "p4_l13",
+                        "p4_l14",
+                        "p4_l15",
+                        "p4_l16",
+                        "p4_l17",
+                        "p4_l18",
+                        "p4_l19",
+                        "p4_l20",
+                        "p4_l21",
+                        "p4_l22"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p5_1",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "while the remaining 19.8(3)% is a remanent LiNbO3 phase. We note that no diffraction peaks\nassociated with metallic Nb or NbOx phases are observed in this analysis. The non-topotactic nature\nof the phase transformation from LiNbO3 to LiNbO2 suggests that the resulting crystals need not\nmaintain the same crystallographic orientation as the parent substrate, or even a uniform orientation\nthroughout the reduced sample.\nTo evaluate the crystallographic orientation, we performed Laue diffractometer measurements and\nhigh-resolution X-ray diffraction (HRXRD) scans on reduced Y-128o samples, as is shown in Figure\n4. The presence of localized, broad (00L) LiNbO2 Bragg reflections in the 2D HRXRD scan in\nFigure 4(a) suggests a preferred orientation in the reduced samples. The broadened peaks at 17o and\n34.2o are attributed to the (002) and (004) reflections of LiNbO2, respectively. The broadening of the\n(00L) reflections in χ, the horizontal tilt axis, is consistent with fiber texture or mosaic spread in\nLiNbO2. This broadening is supported by the optical microscope images in Figure 2(d), where\nvertical columnar crystalline grains in the top LiNbO2 layer can be seen with the typical size of 9\nµm. Interestingly, the LiNbO2 phase is oriented with the c-axis normal to the surface of the sample,\nunlike the parent compound which has its crystalline axis offset from the surface by 38o. The\nremaining peaks show rings in χ, consistent with the presence of randomly oriented grains. The\npeaks at 32.3o, 34.9o, and 38.6o are attributed to the (104), (110) and (006) reflections of the parent\ncompound LiNbO3 respectively. Weakly diffracting rings which are not indexed are assumed to be\nimpurities in the overly reduced sample surface, as no significant impurity phases are seen in the\npowder XRD scan shown in Figure 3.[23] The Laue diffraction pattern in Figure 4(c) shows the\ncoexistence of polycrystalline rings as well as broad localized reflections. This suggests a mix of\n“powder-like” polycrystallinity which also includes significant clusters with some preferred (00L)\norientation normal to the surface.\nFigure 3. Rietveld refinement with powder XRD (CuK⍺ λ = 1.54 Å) data of LiNbO3 sample which\nwas CaH2 reduced for 480 h at 650 °C.\n5",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l1",
+                        "p5_l2",
+                        "p5_l3",
+                        "p5_l4",
+                        "p5_l5",
+                        "p5_l6",
+                        "p5_l7",
+                        "p5_l8",
+                        "p5_l9",
+                        "p5_l10",
+                        "p5_l11",
+                        "p5_l12",
+                        "p5_l13",
+                        "p5_l14",
+                        "p5_l15",
+                        "p5_l16",
+                        "p5_l17",
+                        "p5_l18",
+                        "p5_l19",
+                        "p5_l20",
+                        "p5_l21",
+                        "p5_l22",
+                        "p5_l23",
+                        "p5_l24",
+                        "p5_l25",
+                        "p5_l26"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p6_1",
+                    "type": "custom",
+                    "page_start": 6,
+                    "page_end": 6,
+                    "children": [],
+                    "text": "Figure 4. Two-dimensional HRXRD scan (a), showing structural anisotropy of reduced sample. The\n2D HRXRD scan is integrated and plotted in one dimension shown in (b). Laue diffraction image of\nreduced sample (c) showing some Bragg reflection along with diffuse scattering.\nQuantitatively determining the lithium and hydrogen stoichiometry of LiNbO2 is challenging, so to\ninvestigate qualitative changes in lithium and hydrogen stoichiometry after CaH2 reduction,\nsecondary ion mass spectroscopy (SIMS) was performed on the as-reduced LiNbO2 “surface” region\nas well as an unreduced LiNbO3 crystal (as a control) (Figure 5). For the analysis, the lithium and\nhydrogen species were normalized to niobium oxide ions. This assumption is supported by the cross-\nsectional EDS line scan shown in Figure 1(c). After reduction, SIMS shows that both delithiation and\nhydrogenation have occurred during the process. The Li2+/NbO+ ratio for the LiNbO2 sample after\nreduction is almost an order of magnitude lower than the control, which is shown in Figure 5(a). The\nSIMS measurements also reveal gradients in lithium stoichiometry as a function of depth into the\nsample, with a very thin layer near the surface exhibiting a significantly higher Li2+ intensity\ncompared to deeper in the crystal. We speculate that lithium migrates to the surface during the CaH2\nreduction and escapes the sample. However, SIMS is only suitable for characterizing the upper\nregions of the crystal and primarily provides information near the surface. Understanding the Li\nstoichiometry deeper in the sample requires additional study. Hydrogenation has also likely occurred\nin the sample as the reduced LiNbO2 samples show almost an order of magnitude increase in the H-\n/NbO2- ratio (Figure 5(b)). Since there is presumed to be no excess hydrogen in the pristine LiNbO3\ncontrol sample, the H-/NbO2- ratio of the control sample serves as background hydrogen\nconcentration.\nTo further understand the role of doping in our LiNbO2 samples, X-ray photoelectron spectroscopy\n(XPS) is carried out before and after the CaH2 reduction process at 650 oC for 240 h. Figure 6 (a)\n6",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p6_l1",
+                        "p6_l2",
+                        "p6_l3",
+                        "p6_l4",
+                        "p6_l5",
+                        "p6_l6",
+                        "p6_l7",
+                        "p6_l8",
+                        "p6_l9",
+                        "p6_l10",
+                        "p6_l11",
+                        "p6_l12",
+                        "p6_l13",
+                        "p6_l14",
+                        "p6_l15",
+                        "p6_l16",
+                        "p6_l17",
+                        "p6_l18",
+                        "p6_l19",
+                        "p6_l20",
+                        "p6_l21",
+                        "p6_l22",
+                        "p6_l23",
+                        "p6_l24"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p7_1",
+                    "type": "custom",
+                    "page_start": 7,
+                    "page_end": 7,
+                    "children": [],
+                    "text": "and (b) show the XPS spectra of Nb 3d and Nb 4s/Li 1s, respectively, for the LiNbO3 sample before\nthe CaH2 reduction process. The positions of both Nb5+ 3d 5/2 and Nb5+ 3d 3/2 agree with those of\nthe reported spectra on LiNbO3.[30] XPS measurements were taken after polishing the reduced\nLiNbO2 surface to determine the lithium stoichiometry in the bulk of the sample. Figure 6(c) and (d)\nshow the XPS spectra of the Nb 3d and Nb 4s/Li 1s. The Nb 4s and Nb 3d spectra in the reduced\nsample show significant deviations from those of the pristine LiNbO3 single crystal: most notable is\nthe presence of large Nb3+ peaks associated with the oxygen removal. In the reduced sample, the Nb\nspectra are asymmetric as compared to the raw LiNbO3 substrate, reflecting the metallic behavior of\nthe reduced sample. Both Nb 4s and Nb 3d regions show some overlaps with the Nb spectra of\nLiNbO3 raw substrate, indicating the existence of residual Nb5+ even after the hydride treatment. We\nfit the Nb spectra as a mixture of the Nb5+ and Nb3+ oxidation states. The Nb3+ oxidation state has its\n3d 5/2 and 3d 3/2 peaks positioned at 203 eV and 206 eV, respectively. The ratio of Nb5+ and Nb3+\ngives an average oxidation state of +3.86.[32,33] Thus, the overall XPS spectra suggests the LiNbO2\nregions in the crystal is hole doped. Interestingly, the elemental ratio calculated from XPS in the bulk\nof the LiNbO2 sample suggests a stoichiometry of Li0.96±0.225NbO1.83±0.187, with a range of measured\nlithium values from Li0.61-Li1.13. It is worth noting that the Li 1s spectra overlaps with Nb 4s spectra\nfor the treated LiNbO3 crystal, which can lead to large uncertainties in the Li/Nb ratio. The SIMS\ndepth profiles of the reduced sample indicated large lithium pileup and gradients as a function of\ndepth into the sample and a region of very high lithium concentration near the surface. XPS\nmeasurements of the as-reduced surface of the LiNbO2 sample are in excellent agreement with the\nSIMS, and indicate a region at the surface with very high lithium content as shown and discussed in\nFigure S1. O 1s spectra for all measured samples are shown in Figure S2. Based on the XPS spectra\nand SIMS depth profile, we can conclude that likely both delithiation and H- insertion is occurring in\nour samples acting as hole and electron dopants respectively. The absence of niobium metal peaks in\nthe XPS spectra as well as the powder XRD data further supports our conclusion that no metallic\nniobium clusters are formed at the surface during the hydride treatment process.\nFigure 5. Semi log plots of SIMS depth profiles of an unreduced, control LiNbO3 sample and a\nreduced LiNbO2 sample. (a) Lithium stoichiometry is compared through changes in the Li2+/NbO+\nratio. (b) Differences in hydrogen concentration after reduction is evident by looking at the H-/NbO2-\nratio between both samples.\n7",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p7_l1",
+                        "p7_l2",
+                        "p7_l3",
+                        "p7_l4",
+                        "p7_l5",
+                        "p7_l6",
+                        "p7_l7",
+                        "p7_l8",
+                        "p7_l9",
+                        "p7_l10",
+                        "p7_l11",
+                        "p7_l12",
+                        "p7_l13",
+                        "p7_l14",
+                        "p7_l15",
+                        "p7_l16",
+                        "p7_l17",
+                        "p7_l18",
+                        "p7_l19",
+                        "p7_l20",
+                        "p7_l21",
+                        "p7_l22",
+                        "p7_l23",
+                        "p7_l24",
+                        "p7_l25",
+                        "p7_l26",
+                        "p7_l27",
+                        "p7_l28",
+                        "p7_l29",
+                        "p7_l30",
+                        "p7_l31"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p8_1",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "Figure 6. XPS Spectra of control LiNbO3 (a-b) and polished LiNbO2 (c-d) samples. Nb 3d spectra\nand fittings are shown in (a) and (c). Li 1s and Nb 4s spectra and fittings are shown in (b) and (d).",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l1",
+                        "p8_l2"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "2.1. Synthesis of LiNbO2 and structural and composition analysis",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 11.3,
+                  "observation_ids": [
+                    "p3_l15"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p8_l3",
+                "type": "subsection",
+                "page_start": 8,
+                "page_end": 11,
+                "children": [
+                  {
+                    "id": "unidentified_p8_2",
+                    "type": "custom",
+                    "page_start": 8,
+                    "page_end": 8,
+                    "children": [],
+                    "text": "We now turn to the superconducting properties of reduced LiNbO2 crystals. In Figure 7(a), a Y-128°\noriented LiNbO3 sample subjected to the CaH2 reduction process at 650 oC for 120 h, has\ntransformed into metallic LiNbO2 with a resistivity of approximately 0.45 mΩ cm at room\ntemperature. A superconducting transition is observed in this LiNbO2, with the onset temperature,\nTconset, of approximately 14.4 K, and a zero-resistance temperature of 13.3 K. The superconductivity\nof CaH2 reduced nickelates are reported to emerge when the reduction is performed at around 300\noC.[11] For bulk LiNbO3, however, 650 oC seems to be the ideal reduction temperature for optimizing\nreaction time and critical temperature.\nWe examine the dependence of the superconducting transition on the crystal orientation of the\nstarting LiNbO3 single crystals (10 mm x 10 mm x 0.5 mm), namely Y-cut, Z-cut and Y-128°. As\nshown in Figure 7(c), superconducting critical temperatures are maximized at different reaction\ntimes depending on the crystal orientation, suggesting diffusion plays a role in the CaH2 reaction and\ngrowth of the reduced phase. The miscut Y-128° oriented crystal exhibits the highest Tconset despite\nrequiring the least amount of reaction time to achieve this. We postulate that during the high\ntemperature reduction, the more loosely packed, stepped terrace surface allows Li and O to diffuse\nout of the material more easily as compared to the densely packed and atomically flat surfaces of the\nY-cut and Z-cut crystals. The highest Tconset observed here for a LiNbO2 phase of hydride treated\nLiNbO3 is 14.4 K, which is among the highest compared to previously reported LiNbO2-related\n8",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p8_l4",
+                        "p8_l5",
+                        "p8_l6",
+                        "p8_l7",
+                        "p8_l8",
+                        "p8_l9",
+                        "p8_l10",
+                        "p8_l11",
+                        "p8_l12",
+                        "p8_l13",
+                        "p8_l14",
+                        "p8_l15",
+                        "p8_l16",
+                        "p8_l17",
+                        "p8_l18",
+                        "p8_l19",
+                        "p8_l20",
+                        "p8_l21",
+                        "p8_l22"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p9_1",
+                    "type": "custom",
+                    "page_start": 9,
+                    "page_end": 9,
+                    "children": [],
+                    "text": "superconductors, e.g., delithiated LiNbO2 powder (5.5 K) , directly synthesized Li1-xNbO2 powder\n(14 K), hydrogen inserted LiNbO2 (5.5 K) and delithiated LiNbO2 epitaxial films (4.2 K).[24-27]\nThe upper critical field, Hc2⊥, was determined from the suppression of superconductivity under\nmagnetic fields applied perpendicular to the plane of the crystal. Resistivity vs. temperature curves in\ndifferent fixed external magnetic fields are shown in Figure 7(b). The extrapolation of the resistivity\nto its normal state values determines Tc(H). It is plotted in a conventional form as Hc2(T) shown in\n(Figure 9(b)). The solid orange line in is the fitted field response according to an approximate\nHelfand-Werthamer equation, yielding a Hc2(0) of 25.92 T.[37,39]\nFigure 7. a) Resistivity vs. Temperature curve for sample which was reduced for 480 h at 650 °C. b)\nResistivity vs. Temperature curves with different external fields applied perpendicular to the\ndirection of the current. c) Critical temperature vs. CaH2 reaction times for substrates with various\norientations.\nThe SQUID measurements show the presence of a robust bulk Meissner effect in the\nsuperconducting samples. The zero-field-cooled (1 mT) magnetization vs. temperature (M-T) curve\nfor a LiNbO2 sample (reduced at 650 oC for 480 hours) is shown in Figure 8. From the M-T curve\nthe superconducting volume fraction (Vsc) was calculated using the formula 𝑉�� = 4𝜋𝜒, where 𝐻 is\nthe applied magnetic field strength and 𝜒 is the volume magnetic susceptibility at T=1.8 K. The\ndimensions of the LiNbO2 sample measured are 4 mm x 3 mm x 370 μm (excluding the unreacted\nLiNbO3 region), where the thickness of the reduced layers was determined from the cross-sectional\nSEM images shown in Figure 1(a). Taking the demagnetization factor N = 0.86 (calculated using\nshape of a rectangular cuboid in out-of-plane magnetic field) into consideration, we arrive at the\nsuperconducting volume fraction of approximately 77%.[38]\n9",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p9_l1",
+                        "p9_l2",
+                        "p9_l3",
+                        "p9_l4",
+                        "p9_l5",
+                        "p9_l6",
+                        "p9_l7",
+                        "p9_l8",
+                        "p9_l9",
+                        "p9_l10",
+                        "p9_l11",
+                        "p9_l12",
+                        "p9_l13",
+                        "p9_l14",
+                        "p9_l15",
+                        "p9_l16",
+                        "p9_l17",
+                        "p9_l18",
+                        "p9_l19",
+                        "p9_l20",
+                        "p9_l21",
+                        "p9_l22",
+                        "p9_l23"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p10_1",
+                    "type": "custom",
+                    "page_start": 10,
+                    "page_end": 10,
+                    "children": [],
+                    "text": "Figure 8. Meissner effect shown in ZFC Magnetization vs. Temperature for LiNbO2 sample.\nMagnetic field of 1 mT is applied out of plane with respect to the sample surface. This sample was\nsynthesized through CaH2 at 650 oC for 480 h.\nFurthermore, the precise Meissner state magnetic response in a crystalline sample with dimensions of\napproximately 0.3 mm x 0.3 mm x 0.2 mm was measured using a tunnel diode resonator down to\n400 mK. The temperature dependent magnetic susceptibility χ(T) during field cooling (FC) in\nvarious applied DC magnetic fields is shown in Figure 9(a). The low temperature part of the zero-\nfield curve shows a distinct convex downturn which disappears slowly with the increase in field\nstrength. Such behavior in χ suggests the presence of a proximity effect in the neighboring non-\nreduced layers.[40] The Hc2(T) is shown in Figure 9(b). Fitting with an approximate form of the\nHelfand-Werthamer equation yields Hc2(0) of 24.28 T which is in good agreement with the result\nobtained from our transport measurements.[37,39] Together these measurements confirm the robust,\nbulk nature of superconductivity in our reduced LiNbO2 samples.\n10",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p10_l1",
+                        "p10_l2",
+                        "p10_l3",
+                        "p10_l4",
+                        "p10_l5",
+                        "p10_l6",
+                        "p10_l7",
+                        "p10_l8",
+                        "p10_l9",
+                        "p10_l10",
+                        "p10_l11",
+                        "p10_l12",
+                        "p10_l13",
+                        "p10_l14"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p11_1",
+                    "type": "custom",
+                    "page_start": 11,
+                    "page_end": 11,
+                    "children": [],
+                    "text": "Figure 9. Change in normalized magnetic susceptibility with temperature (a) from tunnel diode\nresonator measurements in zero field and different field cooling. The change in critical temperature\nwith applied field as measured in (a) is plotted in (b) in purple and the upper critical field is fit with\nthe purple dashed line from the inset equation.[39] The orange data points and dashed lines correspond\nto the change in critical temperature with applied field from Figure 7(b), which is also fit to the inset\nequation. The variable t is defined as t=T/Tc in (b).",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p11_l1",
+                        "p11_l2",
+                        "p11_l3",
+                        "p11_l4",
+                        "p11_l5",
+                        "p11_l6"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "2.2 Superconducting Properties",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 11.3,
+                  "observation_ids": [
+                    "p8_l3"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "2. Results",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.3,
+              "observation_ids": [
+                "p3_l14"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p11_l7",
+            "type": "section",
+            "page_start": 11,
+            "page_end": 12,
+            "children": [
+              {
+                "id": "unidentified_p11_2",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "Given reported reduction times in the square-planar nickelates, which can easily reach 6 h for a film\nless than 20 nm thick, it is surprising that LiNbO3 thicknesses exceeding 200 µm can be reduced to\nbulk LiNbO2. The topotactic nickelate reduction is well-established as being dominated by diffusion\nkinetics, where a simple Fickian diffusion model suggests that the diffusion time, 𝜏, is related to the\ndiffusion distance of oxygen, L, and the diffusion coefficient, D, via:\n𝜏 ≈ 𝐿�/4𝐷\nIn our LiNbO2 system, a diffusion limited process across 200 μm should then require a treatment\ntime approximately about 108 times longer, assuming similar kinetics. Since a 200 µm layer of\nLiNbO3 is reduced in 480 h, the increased temperature must increase the reaction rate significantly.\nThe diffusion coefficient, D, is a function of the activation energy, Ea, and the temperature, T.\n𝐸�\n𝐷 = 𝐷 exp(− )\n� 𝑘 𝑇\n�\nA typical infinite layer nickelate reduction is conducted at 300 oC and we conduct the LiNbO2\nreduction at 650 oC. For the sake of comparison, we can look at a ratio of diffusion coefficients for\nLiNbO2 and the infinite layer nickelate films under the assumption that they have the same activation\nenergy, while simultaneously considering the different reduction temperatures.\n𝐸� 1 1\n𝐷 /𝐷 = exp[− � − �]\n������� ��������� 𝑘 𝑇 𝑇\n� ��������� �������\nHowever, most reasonable values for Ea (in the 1.0 to 1.5 eV range) imply that either the nickelate or\nLiNbO2 reduction would not finish in the observed time. Instead, it is likely that either the LiNbO3\n LiNbO2 reduction process has a lower activation energy, or the reduction is mediated through a\ndifferent process which is not limited by oxygen diffusion. We speculate that the non-topotactic\nstructural transformation creates a highly permeable product layer and a sharp advancing phase-\nformation front, shown in Figure 1, requiring oxygen to only diffuse to the grain boundaries which\nhave much higher oxygen mobility.\nStructural analysis from XRD and compositional analysis from SIMS and XPS together provides\ninsight into the LiNbO2 phase formation in the sample during CaH2 reduction. We postulate that\nLiNbO2 nucleates with the c-axis normal to the surface of the crystals, as the 001 basal plane is the\nlowest energy surface for materials in the P63/mmc space group. The loosely packed and high surface\nenergy Y-128ocrystals help to improve the speed of nucleation and reconstruction at the surface.\nOxygen is then easily reduced through grain boundaries between the nucleated LiNbO2 as the phase\nfront continues to advance and the LiNbO2 crystals grow in a columnar fashion.\nDuring the extreme high temperature reduction, some fraction of the lithium precipitates out of the\nNbO2 matrix. This is explicitly demonstrated by both SIMS and XPS, which show a significant\nincrease in Li content near the surface. However, XPS on the polished LiNbO2 region also reveals\nthat the vast majority of Li remains within the sample. This seeming contradiction may be resolved\nby examining lateral 6Li+ SIMS intensity maps (see supplemental Figure S3), which show a\nsignificant degree of lateral heterogeneity and clustering. We conclude that a significant fraction of\nthe Li content precipitates out of the LiNbO2 lattice, forming Li-rich regions, most likely near grain\nboundaries. Thus, while the average Li composition remains largely unchanged, significant lithium\n11",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l8",
+                    "p11_l9",
+                    "p11_l10",
+                    "p11_l11",
+                    "p11_l12",
+                    "p11_l13",
+                    "p11_l14",
+                    "p11_l15",
+                    "p11_l16",
+                    "p11_l17",
+                    "p11_l18",
+                    "p11_l19",
+                    "p11_l20",
+                    "p11_l21",
+                    "p11_l22",
+                    "p11_l23",
+                    "p11_l24",
+                    "p11_l25",
+                    "p11_l26",
+                    "p11_l27",
+                    "p11_l28",
+                    "p11_l29",
+                    "p11_l30",
+                    "p11_l31",
+                    "p11_l32",
+                    "p11_l33",
+                    "p11_l34",
+                    "p11_l35",
+                    "p11_l36",
+                    "p11_l37",
+                    "p11_l38",
+                    "p11_l39",
+                    "p11_l40",
+                    "p11_l41",
+                    "p11_l42",
+                    "p11_l43",
+                    "p11_l44",
+                    "p11_l45",
+                    "p11_l46",
+                    "p11_l47",
+                    "p11_l48",
+                    "p11_l49",
+                    "p11_l50",
+                    "p11_l51",
+                    "p11_l52"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p12_1",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "deficiency is present locally in the sample, inducing superconductivity in approximately 77% of the\nLiNbO2 volume.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l1",
+                    "p12_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "3. Discussion",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.3,
+              "observation_ids": [
+                "p11_l7"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p12_l3",
+            "type": "section",
+            "page_start": 12,
+            "page_end": 12,
+            "children": [
+              {
+                "id": "unidentified_p12_2",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "We successfully utilized CaH2 reduction to induce a bulk, phase transformation from insulating\nLiNbO3 single crystals to superconducting LiNbO2. Cross-sectional SEM/EDS as well as powder\nXRD measurements confirm the bulk conversion from R3c (LiNbO3) to the P63/mmc (LiNbO2)\nphase. SIMS and XPS indicate that the requisite hole-doping to induce superconductivity is achieved\nduring the CaH2 reduction due to a combination of delithation and hydrogenation. By optimizing\nreduction temperature and time we achieve onset critical temperatures as high as 14.3 K. Low-\ntemperature magnetization and radio-frequency magnetic susceptibility measurements confirm a\nbulk superconducting volume fraction of approximately ~77% and an upper critical field of\napproximately 26 T. These results show that CaH2 reduction possesses the ability to facilitate bulk\nreconstructive phase transformations of complex metal oxides. Future studies should explore the\napplication of extreme hydride reduction to discover superconducting phases in other highly\ndistorted, non-perovskite metal oxides.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l4",
+                    "p12_l5",
+                    "p12_l6",
+                    "p12_l7",
+                    "p12_l8",
+                    "p12_l9",
+                    "p12_l10",
+                    "p12_l11",
+                    "p12_l12",
+                    "p12_l13",
+                    "p12_l14",
+                    "p12_l15"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "4. Conclusion",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.3,
+              "observation_ids": [
+                "p12_l3"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p12_l16",
+            "type": "section",
+            "page_start": 12,
+            "page_end": 13,
+            "children": [
+              {
+                "id": "heading_p12_l17",
+                "type": "subsection",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [
+                  {
+                    "id": "unidentified_p12_3",
+                    "type": "custom",
+                    "page_start": 12,
+                    "page_end": 12,
+                    "children": [],
+                    "text": "The LiNbO3 single crystals with a size of 10 mm x 10 mm x 0.5 mm were embedded with 0.5g finely\nground CaH2 powder and sealed in a quartz ampule under approximately 1E-3 Pa vacuum. The\nsample was heated at a rate of 10 °C/min and kept at 650 °C for different times, between 72 and 720\nh. After the hydride treatment, the substrate was cleaned with a diluted NH4Cl/methanol solution and\nblow dried by using the N2 gas to remove excess CaH2 and CaO left behind by the reaction. This\ntreatment process is similar to what is reported by Yajima et al and Liu et al.[13, 15, 21]",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p12_l18",
+                        "p12_l19",
+                        "p12_l20",
+                        "p12_l21",
+                        "p12_l22",
+                        "p12_l23"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "5.1 CaH2 Reduction",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 11.3,
+                  "observation_ids": [
+                    "p12_l17"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p12_l24",
+                "type": "subsection",
+                "page_start": 12,
+                "page_end": 13,
+                "children": [
+                  {
+                    "id": "unidentified_p12_4",
+                    "type": "custom",
+                    "page_start": 12,
+                    "page_end": 12,
+                    "children": [],
+                    "text": "Samples were prepared for SEM by cutting with a diamond scribe and polishing the cross-section\nwith incrementally increasing grit. The samples were then analyzed using a Hitachi SU-70 ultra\nhigh-resolution SEM equipped with a Bruker XFlash 6|60 EDS detector. EDS maps and line scans\nwere acquired using Bruker Esprit 2.2 software. Time-of-flight secondary ion mass spectroscopy\n(ToF-SIMS) was performed using a 20 keV Ar����±�� cluster beam to sputter into the sample,\nwhile analysis was performed using a 30 keV Bi�� liquid metal ion source. The charge/mass ratios of\nsputtered ions were determined via a time-of-flight mass analyzer. We performed depth profiling by\nalternating the sputtering and analysis beams with 0.5 s of charge compensation per cycle. The\nanalysis beam was rastered across an area of approximately a 500 µm × 500 µm area with a lateral\nresolution of (128 × 128) pixels, while the sputtering beam was confined inside that window to a\nregion ranging from 300 µm × 300 µm to 400 µm × 400 µm, depending on the sample. The\ncorresponding ion doses were 1.9 × 109 ions/cm2 (0.12 pA) for Bi3+, and between\n2.1 × 1014 ions/cm2 to 2.6 × 1014 ions/cm2 (5.1–6.4 nA) per cycle for the cluster source due to day-to-\nday fluctuations in the beam current. Residual chamber pressures were maintained below 5×10-7 Pa\nto minimize the hydrogen background. Both positive and negative ions were measured, using\nseparate sputtering craters in different parts of the sample. Spectra were analyzed using SurfaceLab\nto define the relevant region of interest, perform mass calibrations, identify peaks associated with the\nappropriate compounds, and to extract the total integrated peak intensity as a function of sputter\ntime. A Kratos Axis UltraDLD spectrometer under a base pressure of 10-9 Torr (10-7 Pa) was used\nto acquire XPS spectra. A monochromatic Al Kα (10 mA, 15 kV) source was used, and the scans\n12",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p12_l25",
+                        "p12_l26",
+                        "p12_l27",
+                        "p12_l28",
+                        "p12_l29",
+                        "p12_l30",
+                        "p12_l31",
+                        "p12_l32",
+                        "p12_l33",
+                        "p12_l34",
+                        "p12_l35",
+                        "p12_l36",
+                        "p12_l37",
+                        "p12_l38",
+                        "p12_l39",
+                        "p12_l40",
+                        "p12_l41",
+                        "p12_l42",
+                        "p12_l43",
+                        "p12_l44",
+                        "p12_l45"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p13_1",
+                    "type": "custom",
+                    "page_start": 13,
+                    "page_end": 13,
+                    "children": [],
+                    "text": "were carried out at 20 eV pass energy. A charge neutralizer was used for insulating LiNbO3 with a\nfilament current of 1.8 A and charge balance of 3.5 V but it was not used for LiNbO2. XPS spectra\nwere analyzed with Casa XPS.[31] The binding energy of all the spectra were referenced to\nhydrocarbon peak in C 1s spectra at 284.8 eV. The spectra for raw LiNbO3 substrate were fitted with\n70% Gaussian and 30% Lorentzian mixed peaks with a Shirley background. The Nb 3d peaks for the\nhydride reduced, LiNbO2, samples were fit with Lorentzian Asymmetric line shapes, designated as\nLA(1.2, 5) in CasaXPS with a Shirley background. Li 1s and O 1s spectra were fit with 70%\nGaussian and 30% Lorentzian mixed peaks for both the LiNbO3 and LiNbO2 samples. The Nb 3+/5+\nratio was determined from the Nb 3d spectra. This ratio was fixed for the Nb 4s peaks to more\naccurately fit the overlapping Li 1s peak. Uncertainties reported in the chemical formula represent\none standard deviation (k=1) derived from the XPS atomic concentration quantification. The\ngoodness of fit was evaluated by minimizing the statistical residuals, while fitting uncertainties were\nconstrained and validated using prior chemical and structural knowledge of the sample. The reduced\nLiNbO2 region of samples were crushed, and the powder XRD patterns were measured using a\nBruker D8 Powder Diffractometer (CuK⍺ λ = 1.54 Å). Reitveld Refinement of the powder patterns\nwas performed using the GSAS-II software.[42] As reduced crystals were measured in Photonic Laue\nBack scattering system to determine orientation of the crystals (CuK⍺ λ = 1.54 Å). A Rigaku\nSmartLab II benchtop HRXRD (CuK⍺ λ = 1.54 Å) with a Hypix-4000 detector and a Ge (220) 2-\nbounce monochromator was used to collect the 2D HRXRD scans. 2D HRXRD scans were\nintegrated into one dimension using the Rigaku SmartLab Studio II software.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p13_l1",
+                        "p13_l2",
+                        "p13_l3",
+                        "p13_l4",
+                        "p13_l5",
+                        "p13_l6",
+                        "p13_l7",
+                        "p13_l8",
+                        "p13_l9",
+                        "p13_l10",
+                        "p13_l11",
+                        "p13_l12",
+                        "p13_l13",
+                        "p13_l14",
+                        "p13_l15",
+                        "p13_l16",
+                        "p13_l17",
+                        "p13_l18",
+                        "p13_l19",
+                        "p13_l20"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "5.2 Compositional and Structural Characterization",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 11.3,
+                  "observation_ids": [
+                    "p12_l24"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p13_l21",
+                "type": "subsection",
+                "page_start": 13,
+                "page_end": 13,
+                "children": [
+                  {
+                    "id": "unidentified_p13_2",
+                    "type": "custom",
+                    "page_start": 13,
+                    "page_end": 13,
+                    "children": [],
+                    "text": "The low temperature transport was carried out in a Quantum Design 9 Tesla PPMS by using the\nlinear four-probe method from 300 K down to 1.8 K. Low temperature magnetization measurements\nwere carried out in a 7 Tesla Quantum Design MPMS-XL system. ZFC and FC measurements were\ntaken from 300 K down to 1.8 K. ZFC measurements were carried out with 1 mT applied field. A\nself-oscillating tunnel diode resonator with operating resonance frequency of around 14 MHz was\nused to study magnetic susceptibility. The magnitude of the ac excitation magnetic field on the\nsample inside the inductor is roughly 2 µT well below the lower critical field. The temperature\ndependent normalized magnetic susceptibility 𝜒 was extracted from the resonance frequency shift df\n��\nusing the relation 𝜒 = − 1 where 𝑓� is the resonance frequency without the sample. The FC\n��\ncurves were obtained by applying DC magnetic fields using the 9 Tesla superconducting magnet.\nDetailed description about the technique can be found elsewhere.[41]",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p13_l22",
+                        "p13_l23",
+                        "p13_l24",
+                        "p13_l25",
+                        "p13_l26",
+                        "p13_l27",
+                        "p13_l28",
+                        "p13_l29",
+                        "p13_l30",
+                        "p13_l31",
+                        "p13_l32",
+                        "p13_l33",
+                        "p13_l34"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "5.3 Superconducting Property Characterization",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 11.3,
+                  "observation_ids": [
+                    "p13_l21"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "5. Methods",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.3,
+              "observation_ids": [
+                "p12_l16"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p17_l16",
+            "type": "section",
+            "page_start": 17,
+            "page_end": 19,
+            "children": [
+              {
+                "id": "heading_p17_l17",
+                "type": "subsection",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "title": "Synthesis of Bulk Superconducting LiNbO2 Crystals through CaH2 Reduction",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 11.3,
+                  "observation_ids": [
+                    "p17_l17"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p17_l18",
+                "type": "subsection",
+                "page_start": 17,
+                "page_end": 19,
+                "children": [
+                  {
+                    "id": "unidentified_p17_2",
+                    "type": "custom",
+                    "page_start": 17,
+                    "page_end": 17,
+                    "children": [],
+                    "text": "Tianyu Li3, Chih-Yu Lee1, Haotong Liang1, Kamal Joshi6, Amlan Datta6, Makariy Tanatar6, Shanta\nSaha2, Peter Zavalij,3 Ruslan Prozorov6, Alexander J. Grutter4, Efrain E. Rodriguez1,2,3,*, and Ichiro\nTakeuchi1,2,*\n1Department of Materials Science and Engineering, University of Maryland, College Park, MD\n20742\n2Maryland Quantum Materials Center, University of Maryland, College Park, MD 20742\n3Department of Chemistry & Biochemistry, University of Maryland, College Park, MD 20742\n4NIST Center for Neutron Research, National Institute of Standards and Technology, Gaithersburg,\nMD 20899\n5Advanced Imaging and Microscopy (AIM) Lab, Maryland Nanocenter, University of Maryland,\nCollege Park, MD 20742\n6Ames Laboratory and Department of Physics and Astronomy, Iowa State University, Ames, IA\n50011, USA\n17",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p17_l19",
+                        "p17_l20",
+                        "p17_l21",
+                        "p17_l22",
+                        "p17_l23",
+                        "p17_l24",
+                        "p17_l25",
+                        "p17_l26",
+                        "p17_l27",
+                        "p17_l28",
+                        "p17_l29",
+                        "p17_l30",
+                        "p17_l31",
+                        "p17_l32"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p18_1",
+                    "type": "custom",
+                    "page_start": 18,
+                    "page_end": 18,
+                    "children": [],
+                    "text": "Figure S1. XPS spectra of as reduced LiNbO2 sample. The Li 1s peak of the as reduced sample, (a) is\nvery prominent and the calculated Li:Nb ratio is approximately 7:3. This increased presence of Li at\nthe surface of the as reduced sample agrees with SIMS measurements shown in Figure 3(a). The Nb\n3d spectra (b) seems relatively unperturbed from the excess Li at the surface. This lends to the idea\nthat some of the Li form lithium oxides and oxyhydrides on the surface as it migrates there during\nthe CaH2 reduction.\nFigure S2. O 1s XPS spectra of control LiNbO3 (a), as reduced LiNbO2 (b), and polished LiNbO2 (c).\n18",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p18_l1",
+                        "p18_l2",
+                        "p18_l3",
+                        "p18_l4",
+                        "p18_l5",
+                        "p18_l6",
+                        "p18_l7",
+                        "p18_l8"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p19_1",
+                    "type": "custom",
+                    "page_start": 19,
+                    "page_end": 19,
+                    "children": [],
+                    "text": "Figure S3. SIMS area mapping of 6Li+ ion distribution showing lithium clustering on the surface and\nat depth into the sample. Brightness corresponds to relative secondary ion intensity.\n19",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p19_l1",
+                        "p19_l2",
+                        "p19_l3"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Ryan Paxson1,2,*, Stephanie J. Hong3, Bicky Moirangthem6, Parham Kabirifar5, Saya Takeuchi1,",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 11.3,
+                  "observation_ids": [
+                    "p17_l18"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Supporting Information",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 15.0,
+              "observation_ids": [
+                "p17_l16"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 13,
+        "page_end": 19,
+        "children": [
+          {
+            "id": "heading_p13_l35",
+            "type": "acknowledgements",
+            "page_start": 13,
+            "page_end": 14,
+            "children": [
+              {
+                "id": "unidentified_p13_3",
+                "type": "custom",
+                "page_start": 13,
+                "page_end": 13,
+                "children": [],
+                "text": "This work was funded by the Breakthrough Energy Fellow program. Ryan Paxson was supported by\nthe Laboratory for Physical Science Qubit Collaboratory. The authors acknowledge the Maryland\nQuantum Materials Center. The project was partly supported by the Air Force Office of Scientific\nResearch Grant No. FA9950-22-1-0023, the National Science Foundation DMREF program\n(DMR2523217), and the NIST Center for Neutron Research. A part of the research was sponsored\nby the Army Research Laboratory and was accomplished under Cooperative Agreement\nNumber W911NF-25-2-0084. The views and conclusions contained\nin this document are those of the authors and should not be interpreted\nas representing the official policies, either expressed or implied, of the Army Research Laboratory or\nthe U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for\nGovernment purposes notwithstanding any copyright notation herein. Unless otherwise noted, the\nNIST work was funded solely by the US government. Certain commercial equipment, instruments,\nor materials, commercial or non-commercial, are identified in this paper in order to specify the\nexperimental procedure adequately. Such identification does not imply recommendation or\n13",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p13_l36",
+                    "p13_l37",
+                    "p13_l38",
+                    "p13_l39",
+                    "p13_l40",
+                    "p13_l41",
+                    "p13_l42",
+                    "p13_l43",
+                    "p13_l44",
+                    "p13_l45",
+                    "p13_l46",
+                    "p13_l47",
+                    "p13_l48",
+                    "p13_l49",
+                    "p13_l50"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p14_1",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "endorsement of any product or service by NIST, nor does it imply that the materials or equipment\nidentified are necessarily the best available for the purpose. Partial support of AJG was provided by\nthe Center for High Resolution Neutron Scattering, a partnership between the National Institute of\nStandards and Technology and the National Science Foundation under Agreement No. DMR-\n2010792. We acknowledge Heshan Yu for his work in the preliminary stage of the project. Work at\nAmes National Laboratory was supported by the U.S. Department of Energy (DOE), Office of\nScience, Basic Energy Sciences, Materials Science and Engineering Division. Ames Laboratory is\noperated for the U.S. DOE by Iowa State University under contract DE-AC02-07CH11358.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l1",
+                    "p14_l2",
+                    "p14_l3",
+                    "p14_l4",
+                    "p14_l5",
+                    "p14_l6",
+                    "p14_l7",
+                    "p14_l8"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p14_2",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "Data Availability Statement\nThe data that support the findings of this study are available from the corresponding author upon\nreasonable request.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l9",
+                    "p14_l10",
+                    "p14_l11"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Acknowledgements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.3,
+              "observation_ids": [
+                "p13_l35"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p14_l12",
+            "type": "references",
+            "page_start": 14,
+            "page_end": 17,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 11.3,
+              "observation_ids": [
+                "p14_l12"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p14_3",
+            "type": "custom",
+            "page_start": 14,
+            "page_end": 14,
+            "children": [],
+            "text": "1. M. A. Hayward, \"Topochemical Reactions of Layered Transition-Metal Oxides,\" Semiconductor\nScience and Technology 29, no. 6 (2014): 064010. https://doi.org/10.1088/0268-1242/29/6/064010.\n2. T. Yamamoto, H. Kageyama, “Hydride Reductions of Transition Metal Oxides,” Chem. Lett.\n2013, 42 (9), 946–953. https://doi.org/10.1246/cl.130581.\n3. M. A. Hayward, E. J. Cussen, J. B. Claridge, et al., “The Hydride Anion in an Extended Transition\nMetal Oxide Array: LaSrCoO3H0.7,” Science (80-. ). 2002, 295 (5561), 1882–1884.\nhttps://doi.org/10.1126/science.1068321.\n4. R. M. Helps, N. H. Rees, M. A. Hayward, “Sr3Co2O4.33H0.84: An Extended Transition Metal\nOxide-Hydride,” Inorg. Chem. 2010, 49 (23), 11062–11068. https://doi/10.1021/ic101613b.\n5. T. Sakaguchi, Y. Kobayashi, T. Yajima, et al., “Oxyhydrides of (Ca,Sr,Ba)TiO3 Perovskite Solid\nSolutions,” Inorg. Chem. 2012, 51 (21), 11371–11376. https://doi.org/10.1021/IC300859N.\n6. F. Romero, A. Leach, J. S. Möller, F. Foronda, S. J. Blundell, M. A. Hayward, “Strontium\nVanadium Oxide–Hydrides: “Square-Planar” Two-Electron Phases,” Angew. Chemie 2014, 126 (29),\n7686–7689. https://doi.org/10.1002/ANGE.201403536.\n7. M. A. Hayward, M. J. Rosseinsky, “Synthesis of the Infinite Layer Ni(I) Phase NdNiO2+x by\nLow Temperature Reduction of NdNiO3 with Sodium Hydride,” Solid State Sci. 2003, 5 (6), 839–\n850. https://doi.org/10.1016/S1293-2558(03)00111-0.\n8. M. A. Hayward, M. J. Rosseinsky, “Anion Vacancy Distribution and Magnetism in the New\nReduced Layered Co(II)/Co(I) Phase LaSrCoO3.5-,” Chem. Mater. 2000, 12 (8), 2182–2195.\nhttps://doi.org/10.1021/cm9906811.\n14",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p14_l13",
+                "p14_l14",
+                "p14_l15",
+                "p14_l16",
+                "p14_l17",
+                "p14_l18",
+                "p14_l19",
+                "p14_l20",
+                "p14_l21",
+                "p14_l22",
+                "p14_l23",
+                "p14_l24",
+                "p14_l25",
+                "p14_l26",
+                "p14_l27",
+                "p14_l28",
+                "p14_l29",
+                "p14_l30",
+                "p14_l31",
+                "p14_l32",
+                "p14_l33"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p14_l12"
+            }
+          },
+          {
+            "id": "unidentified_p15_1",
+            "type": "custom",
+            "page_start": 15,
+            "page_end": 15,
+            "children": [],
+            "text": "9. J. Seddon, E. Suard, M. A. Hayward, “Topotactic Reduction of YBaCo2O5 and LaBaCo 2O5:\nSquare-Planar Co(I) in an Extended Oxide,” J. Am. Chem. Soc. 2010, 132 (8), 2802–2810.\nhttps://doi.org/10.1021/JA910103D.\n10. Y. Tsujimoto, C. Tassel, N. Hayashi, et al., “Infinite-Layer Iron Oxide with a Square-Planar\nCoordination,” Nature 2007, 450 (7172), 1062–1065. https://doi.org/10.1038/nature06382.\n11. D. Li, K. Lee, B. Y. Wang, et al., “Superconductivity in an Infinite-Layer Nickelate,” Nature\n2019, 572 (7771), 624–627. https://doi.org/10.1038/s41586-019-1496-5.\n12. Z. Xu, P. K. Thakur, T.-L. Lee, et al., “Complex Magnetic Order in Topochemically Reduced\nRh(I)/Rh(III) LaM0.5Rh0.5O2.25 (M = Co, Ni) Phases,” Inorg. Chem. 2022.\nhttps://doi.org/10.1021/ACS.INORGCHEM.2C02747.\n13. T. Yajima, A. Kitada, Y. Kobayashi, et al., “Epitaxial Thin Films of ATiO 3-XH x (A = Ba, Sr,\nCa) with Metallic Conductivity,” J. Am. Chem. Soc. 2012, 134 (21), 8782–8785.\nhttps://doi.org/10.1021/JA302465C\n14. M. A. Hayward, “Synthesis and Magnetism of Extended Solids Containing Transition-Metal\nCations in Square-Planar, MO4 Coordination Sites,” Inorg. Chem. 2019, 58 (18), 11961–11970.\nhttps://doi.org/10.1021/ACS.INORGCHEM.9B00960\n15. X. Cao, Z. Liu, J. Lu, et al., “Observation of Superconductivity Up to 8.7 K in Reduced\nPotassium Tantalate,” Adv Quantum Technol. 2024, 7, 2400255.\nhttps://doi.org/10.1002/qute.202400255\n16. L. Jin, M. A. Hayward, “Hole and Electron Doping of the 4d Transition-Metal Oxyhydride\nLaSr3NiRuO4H4,” Angew. Chemie Int. Ed. 2020, 59 (5), 2076–2079.\nhttps://doi.org/10.1002/ANIE.201913951.\n17. K. Lee, B. H. Goodge, D. Li, et al, “Aspects of the Synthesis of Thin Film Superconducting\nInfinite-Layer Nickelates,” APL Mater. 2020, 8 (4), 041107. https://doi.org/10.1063/5.0005103.\n18. Y. Ji, J. Liu, L. Li, Z .Liao, “Superconductivity in Infinite Layer Nickelates,” J. Appl. Phys.\n2021, 130 (6), 060901. https://doi.org/10.1063/5.0056328.\n19. C. C. Tam, J. Choi, X. Ding, et al., “Charge Density Waves in Infinite-Layer NdNiO2\nNickelates,” Nat. Mater. 2022 2022, 1–5. https://doi.org/10.1038/s41563-022-01330-1.\n20. Y. Kobayashi, O. J. Hernandez, T. Sakaguchi, et al., “An Oxyhydride of BaTiO3 Exhibiting\nHydride Exchange and Electronic Conductivity,” Nat. Mater. 2012 116 2012, 11 (6), 507–511.\nhttps://doi.org/10.1038/nmat3302.\n21. X. Liu, T. S. Bjørheim, L. Vines, et al., “Highly Correlated Hydride Ion Tracer Diffusion in\nSrTiO 3-x H x Oxyhydrides,” J. Am. Chem. Soc. 2019. https://doi.org/10.1021/JACS.8B12985\n22. T. Katayama, A. Chikamatsu, K. Yamada, et al., “Epitaxial Growth and Electronic Structure of\nOxyhydride SrVO2H Thin Films,” J. Appl. Phys. 2016, 120 (8), 085305.\nhttps://doi.org/10.1063/1.4961446.\n23. H. M. Chan, Z. Zhuang, D. M. Smyth, “Phase Separation in Reduced LiNbO3,” MRS Online\nProc. Libr. 1985, 60, 95. https://doi.org/10.1557/PROC-60-95.\n15",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p15_l1",
+                "p15_l2",
+                "p15_l3",
+                "p15_l4",
+                "p15_l5",
+                "p15_l6",
+                "p15_l7",
+                "p15_l8",
+                "p15_l9",
+                "p15_l10",
+                "p15_l11",
+                "p15_l12",
+                "p15_l13",
+                "p15_l14",
+                "p15_l15",
+                "p15_l16",
+                "p15_l17",
+                "p15_l18",
+                "p15_l19",
+                "p15_l20",
+                "p15_l21",
+                "p15_l22",
+                "p15_l23",
+                "p15_l24",
+                "p15_l25",
+                "p15_l26",
+                "p15_l27",
+                "p15_l28",
+                "p15_l29",
+                "p15_l30",
+                "p15_l31",
+                "p15_l32",
+                "p15_l33",
+                "p15_l34",
+                "p15_l35",
+                "p15_l36",
+                "p15_l37",
+                "p15_l38",
+                "p15_l39"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p14_l12"
+            }
+          },
+          {
+            "id": "unidentified_p16_1",
+            "type": "custom",
+            "page_start": 16,
+            "page_end": 16,
+            "children": [],
+            "text": "24. M. J. Geselbracht, T. J. Richardson, A. M. Stacy, “Superconductivity in the Layered Compound\nLixNbO2,” Nature 1990, 345 (6273), 324–326. https://doi.org/10.1038/345324a0.\n25. Z. Xue, A. Dong, Y. Guo, G. Che, “Structure and Electrical Characterization of Li1−xNbO2\nSuperconductor with Tc = 14–17 K,” J. Alloys Compd. 2009, 476 (1–2), 519–523.\nhttps://doi.org/10.1016/J.JALLCOM.2008.09.086.\n26. N. Kumada, S. Watauchi, I. Tanaka, N. Kinomura, “Superconductivity of Hydrogen Inserted\nLiNbO2,” Mater. Res. Bull. 2000, 35 (11), 1743–1746. https://doi.org/10.1016/S0025-\n5408(00)00380-9.\n27. T. Soma, K. Yoshimatsu, A. Ohtomo, “P-Type Transparent Superconductivity in a Layered\nOxide,” Sci. Adv. 2020, 6 (29). https://doi.org/10.1126/SCIADV.ABB8570.\n28. J. F. Schooley, W. R. Hosler, M. L. Cohen, “Superconductivity in Semiconducting SrTiO3,”\nPhys. Rev. Lett. 1964, 12 (17), 474–475. https://doi.org/10.1103/PhysRevLett.12.474.\n29. G. Bouilly, T. Yajima, T. Terashima, et al., “Electrical Properties of Epitaxial Thin Films of\nOxyhydrides ATiO3-XHx (A = Ba and Sr),” Chem. Mater. 2015, 27 (18), 6354–6359.\nhttps://doi.org/10.1021/ACS.CHEMMATER.5B02374\n30. E. A. Skryleva, I. V. Kubasov, P. V. Kiryukhantsev-Korneev, et al., “XPS Study of Li/Nb Ratio\nin LiNbO3 Crystals. Effect of Polarity and Mechanical Processing on LiNbO3 Surface Chemical\nComposition,” Appl. Surf. Sci. 2016, 389, 387–394. https://doi.org/10.1016/J.APSUSC.2016.07.108.\n31. N. Fairley, V. Fernandez, M. Richard‐Plouet, et al., “Systematic and collaborative approach to\nproblem solving using X-ray photoelectron spectroscopy,” Applied Surface Science Advances, 2021,\n100112, https://doi.org/10.1016/j.apsadv.2021.100112.\n32. J. C. Shank, B. M. Tellekamp, A. W. Doolittle, “The Crystallization and Properties of Sputter\nDeposited Lithium Niobite,” Thin Solid Films 2016, 609, 6–11.\nhttps://doi.org/10.1016/J.TSF.2016.01.030.\n33. S. A. Howard, C. N. Singh, G. J. Paez, et al., “Direct Observation of Delithiation as the Origin of\nAnalog Memristance in LixNbO2,” APL Mater. 2019, 7 (7), 071103.\nhttps://doi.org/10.1063/1.5108525.\n34. H. D. Megaw, A Note on the structure of lithium niobate, LiNbO3. Acta Cryst. 1968 A24, 583-\n588. https://doi.org/10.1107/S0567739468001282.\n35. T. Soma, K. Yoshimatsu, K. Horiba, H. Kumigashira, A. Ohtomo, “Two-dimensional\nsuperconductivity in single-band correlated 2H-type NbO2 layers,” Phys. Rev. B 2022 105, 104504.\nhttps://doi.org/10.1103/PhysRevB.105.104504\n36. L. Craco, “Electronic correlation and s-wave pairing effects in hole-doped LiNbO2: A\nDFT+DMFT study,” EPL (Europhysics Letters) 2024 145(2), 26004. https://doi.org/10.1209/0295-\n5075/ad219c\n37. N.R. Werthamer, E. Helfand, P.C. Hohenberg, “Temperature and Purity Dependence of the\nSuperconducting Critical Field, Hc2 III. Electron Spin and Spin-Orbit Effects” Phys. Rev. B 1966\n147, 295. https://doi.org/10.1103/PhysRev.147.295\n16",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p16_l1",
+                "p16_l2",
+                "p16_l3",
+                "p16_l4",
+                "p16_l5",
+                "p16_l6",
+                "p16_l7",
+                "p16_l8",
+                "p16_l9",
+                "p16_l10",
+                "p16_l11",
+                "p16_l12",
+                "p16_l13",
+                "p16_l14",
+                "p16_l15",
+                "p16_l16",
+                "p16_l17",
+                "p16_l18",
+                "p16_l19",
+                "p16_l20",
+                "p16_l21",
+                "p16_l22",
+                "p16_l23",
+                "p16_l24",
+                "p16_l25",
+                "p16_l26",
+                "p16_l27",
+                "p16_l28",
+                "p16_l29",
+                "p16_l30",
+                "p16_l31",
+                "p16_l32",
+                "p16_l33",
+                "p16_l34",
+                "p16_l35",
+                "p16_l36",
+                "p16_l37",
+                "p16_l38",
+                "p16_l39"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p14_l12"
+            }
+          },
+          {
+            "id": "unidentified_p17_1",
+            "type": "custom",
+            "page_start": 17,
+            "page_end": 17,
+            "children": [],
+            "text": "38. R. Prozorov and V. G. Kogan, “Effective Demagnetizing Factors of Diamagnetic Samples of\nVarious Shapes,” Phys. Rev. Appl. 2018 10, 014030.\nhttps://doi.org/10.1103/PhysRevApplied.10.014030\n39. R. Prozorov and V. G. Kogan, “Effective demagnetizing factors of superconductors with various\nshapes,” Phys. Rev. Appl. 2024, 22 (6), 064006. https://doi.org/10.1103/PhysRevApplied.22.064006\n40. R. Prozorov, R. W. Giannetta, S. L. Bud'ko, and P. C. Canfield, “Energy gap and proximity\neffect in MgB2 superconducting wires” Phys. Rev. B 2001, 64 (18), 180501.\nhttps://doi.org/10.1103/PhysRevB.64.180501\n41. R. Prozorov, R. W. Giannetta, A. Carrington, P. Fournier, R. L. Greene, P. Guptasarma, D. G.\nHinks, A. R. Banks, “Measurements of the absolute value of the penetration depth in\nhigh- superconductors using a low- superconductive coating,” Appl. Phys. Lett. 18 2000; 77 (25):\n4202–4204. https://doi.org/10.1063/1.1328362\n42. B. H. Toby, R. B. Von Dreele, “GSAS-II: the genesis of a modern open-source all purpose\ncrystallography software package,” Journal of Applied Crystallography 2013, 46(2), 544-549.\nhttps://doi.org/10.1107/S0021889813003531",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p17_l1",
+                "p17_l2",
+                "p17_l3",
+                "p17_l4",
+                "p17_l5",
+                "p17_l6",
+                "p17_l7",
+                "p17_l8",
+                "p17_l9",
+                "p17_l10",
+                "p17_l11",
+                "p17_l12",
+                "p17_l13",
+                "p17_l14",
+                "p17_l15"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p14_l12"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

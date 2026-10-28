@@ -1,0 +1,236 @@
+{
+  "body_size": 12.0,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 14.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Exotic Surface Stripe Orders in Correlated Kagome Metal",
+        "CsCr3Sb5"
+      ]
+    },
+    {
+      "font": "CMR12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 331,
+      "long_prose_lines": 287,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "examples": [
+        "YunxingLi1,∗, PeigenLi1,2,∗, TaiminMiao3,∗, RuiXu1, YongqingCai4, NengCai3, BoLiang3,",
+        "Han Gao5, Hanbo Xiao5, Yongzhen Jiang5, Jiefeng Cao6, Fangyuan Zhu6, Hongkun Wang1,2,",
+        "Jincheng Xie1,2, Jingcheng Li1, Zhongkai Liu5, Chaoyu Chen7, Yunwei Zhang1, X. J. Zhou3,†,"
+      ]
+    },
+    {
+      "font": "CMTI12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 20,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Guangdong Provincial Key Laboratory of Magnetoelectric Physics and Devices,",
+        "Center for Neutron Science and Technology, School of Physics,",
+        "Sun Yat-sen University, Guangzhou 510275, China"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 156,
+      "long_prose_lines": 50,
+      "pages": [
+        1,
+        2,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "examples": [
+        "(Dated: October 16, 2025)",
+        "The newly discovered kagome superconductor CsCr3Sb5 exhibits distinct features with flat bands",
+        "and unique magnetism, providing a compelling platform for exploring novel quantum states of"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "5202",
+        "41",
+        "1v88821.0152:viXra"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "tcO"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]le-rts.tam-dnoc["
+      ]
+    },
+    {
+      "font": "CMR12",
+      "size": 14.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Abstract"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        18
+      ],
+      "examples": [
+        "√",
+        "√",
+        "√"
+      ]
+    },
+    {
+      "font": "CMBX10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 5,
+      "pages": [
+        3,
+        4,
+        9,
+        11,
+        12,
+        13,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "examples": [
+        "I. INTRODUCTION",
+        "II. RESULTS",
+        "III. DISCUSSION AND CONCLUSION"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        9,
+        10
+      ],
+      "examples": [
+        "√",
+        "√",
+        "√"
+      ]
+    },
+    {
+      "font": "CMTI10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        14,
+        15,
+        16
+      ],
+      "examples": [
+        "CsV3Sb5. Physical Review Materials 3, 094407 (2019).",
+        "Science Bulletin 67, 495–500 (2022).",
+        "Nature Communications 13, 2220 (2022)."
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

@@ -1,0 +1,1795 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2023_QM034_Synthesis_of_ultra_pure_Co3Sn2S2_crystals.pdf",
+    "pages": 20,
+    "sha256": "dfcb9edf059ae1f59bf9e81c65e4a43e2b53f24bb5c5e88604e5fbe992b14d47",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 12.0,
+    "body_font_family": "Roboto-Regular"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 20,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 3,
+        "children": [
+          {
+            "id": "publication_title",
+            "type": "title",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Synthesis of ultra pure Co3Sn2S2 crystals",
+            "attributes": {
+              "method": "largest bold front-page typography",
+              "observation_ids": [
+                "p1_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p2_l27",
+            "type": "keywords",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "title": "Keywords:",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p2_l27"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p2_2",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Posted Date: April 11th, 2023\nDOI: https://doi.org/10.21203/rs.3.rs-2774220/v1\nLicense:   This work is licensed under a Creative Commons Attribution 4.0 International License.\nRead Full License\nAdditional Declarations: There is NO Competing Interest.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l28",
+                "p2_l29",
+                "p2_l30",
+                "p2_l31",
+                "p2_l32"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p2_l27"
+            }
+          },
+          {
+            "id": "heading_p3_l1",
+            "type": "abstract",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [
+              {
+                "id": "unidentified_p3_1",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "As a ferromagnetic topological semimetal with a strong anomalous Hall effect (AHE), Co3Sn2S2 has\nbeen extensively explored for manipulating the topological state via the changed magnetic order as well\nas device applications connecting dissipationless spin and charge transport1-3. However, the main\nchallenge is the improvement of the crystal quality, which is crucial for enhancing physical properties\nincluding AHE, carrier mobility, and magnetoresistance4,5. Here, we report the synthesis of ultra pure\nCo3Sn2S2 single crystals with an ultra low impurity density by an innovative crystal-sourced chemical\nvapor transport (CS-CVT) approach, achieving ultrahigh anomalous Hall angle (AHA) of 40%, carrier\nmobility and magnetoresistance (MR) of 10490 cm2V-1s-1 and 2500%, respectively. These values\nrepresent a huge improvement on previously reported highest values of either pristine or doped\nCo3Sn2S2 (of 33%, 2600 cm2V-1s-1, and 180% respectively)4,6. Equally importantly, the anomalous Hall\nconductivity (AHC) of our crystals reached 1600 Ω-1cm-1, which is larger than the theoretically predicted\nvalue of 1310 Ω-1cm-1 from the integral of Berry curvature7. Observation of an ultranarrow fiat band and\ntopological surface states near the Fermi level provides good microscopic understanding of this gigantic\nanomalous Hall effect. Our high-quality magnetic topological materials are expected to facilitate a full\nunderstanding of the strong electronic correlation and may perhaps lead to the discovery of a quantum\nAHE in the 2D limit.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l2",
+                    "p3_l3",
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6",
+                    "p3_l7",
+                    "p3_l8",
+                    "p3_l9",
+                    "p3_l10",
+                    "p3_l11",
+                    "p3_l12",
+                    "p3_l13",
+                    "p3_l14",
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Abstract",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 18.0,
+              "observation_ids": [
+                "p3_l1"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 20,
+        "children": [
+          {
+            "id": "unidentified_p1_1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Hong-Jun Gao\nInstitute of Physics https://orcid.org/0000-0001-9323-1307\nSenhao Lv\nInstitute of Physics\nHui Guo\nInstitute of Physics\nJiangang Yang\nNational Lab for Superconductivity, Institute of Physics, Chinese Academy of Sciences\nKe Zhu\nSchool of Physical Sciences, University of Chinese Academy of Sciences\nLin Zhao\nChinese Academy of Sciences\nYan Li\nInstitute of Physics\nRoger Guzman\nUniversity of Chinese Academy of Sciences https://orcid.org/0000-0002-5580-0043\nXianghua Kong\nShenzhen University\nGuoyu Xian\nInstitute of Physics\nQiuzhen Cheng\nInstitute of Physics\nQi Zheng\nInstitute of Physics, Chinese Academy of Sciences https://orcid.org/0000-0002-8946-536X\nLi Huang\nInstitute of Physics and University of Chinese Academy of Sciences\nYuqing Xing\nInstitute of Physics\nHui Chen\nInstitute of Physics, Chinese Academy of Sciences https://orcid.org/0000-0002-3369-8113\nZhen Zhao\nInstitute of Physics, CAS",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l2",
+                "p1_l3",
+                "p1_l4",
+                "p1_l5",
+                "p1_l6",
+                "p1_l7",
+                "p1_l8",
+                "p1_l9",
+                "p1_l10",
+                "p1_l11",
+                "p1_l12",
+                "p1_l13",
+                "p1_l14",
+                "p1_l15",
+                "p1_l16",
+                "p1_l17",
+                "p1_l18",
+                "p1_l19",
+                "p1_l20",
+                "p1_l21",
+                "p1_l22",
+                "p1_l23",
+                "p1_l24",
+                "p1_l25",
+                "p1_l26",
+                "p1_l27",
+                "p1_l28",
+                "p1_l29",
+                "p1_l30",
+                "p1_l31",
+                "p1_l32",
+                "p1_l33"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_2",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Page 1/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l34"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Qi Qi\nInstitute of Physics\nLulu Pan\nInstitute of Physics\nLinxuan Song\nInstitute of Physics\nChengmin Shen\nInstitute of Physics, Chinese Academy of Sciences\nDongliang Zhao\nCentral Iron & Steel Research Institute\nXiao Lin\nInstitute of Physics & University of Chinese Academy of Sciences, Chinese Academy of Sciences\nStephen Pennycook\nSchool of Physical Sciences, University of Chinese Academy of Sciences\nWu Zhou\nUniversity of Chinese Academy of Sciences https://orcid.org/0000-0002-6803-1095\nWei Ji\nRenmin University of China https://orcid.org/0000-0001-5249-6624\nJun He\nCentral Iron & Steel Research Institute\nXingjiang Zhou\nNational Lab for Superconductivity, Institute of Physics, Chinese Academy of Sciences\nhttps://orcid.org/0000-0002-5261-1386\nHaitao Yang\nInstitute of Physics, Chinese Academy of Sciences https://orcid.org/0000-0003-4304-9835\nArticle",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l1",
+                "p2_l2",
+                "p2_l3",
+                "p2_l4",
+                "p2_l5",
+                "p2_l6",
+                "p2_l7",
+                "p2_l8",
+                "p2_l9",
+                "p2_l10",
+                "p2_l11",
+                "p2_l12",
+                "p2_l13",
+                "p2_l14",
+                "p2_l15",
+                "p2_l16",
+                "p2_l17",
+                "p2_l18",
+                "p2_l19",
+                "p2_l20",
+                "p2_l21",
+                "p2_l22",
+                "p2_l23",
+                "p2_l24",
+                "p2_l25",
+                "p2_l26"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p2_3",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Page 2/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l33"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p2_l27"
+            }
+          },
+          {
+            "id": "heading_p3_l18",
+            "type": "section",
+            "page_start": 3,
+            "page_end": 10,
+            "children": [
+              {
+                "id": "unidentified_p3_2",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Ferromagnetic topological Weyl semimetals of Co3Sn2S2 with a kagome lattice, have attracted great\nattention because they host frustrated spin configurations, correlated electron interactions, and\ntopological quantum states of matter8,9. Such a material with its fully polarized spin and topological\nproperties can give rise to rich physical phenomena, such as a Berry curvature-induced anomalous Hall\neffect (AHE), negative orbital magnetism and Chern gapped topological fermions10,11. Experimental\nevidence for the bulk Weyl nodes near the Fermi energy and the magnetic topological state was provided\nby angle-resolved photoemission spectroscopy (ARPES) and magnetotransport measurements12,13.\nChiral-anomaly-induced MR, a much high anomalous Nernst signal, and a quantum AHE predicted in the\ntwo-dimensional (2D) limit have also been reported8,14−16. However, direct visualization for the fiat band\nrelated to the exotic correlated electron phenomena has not been detected in Co3Sn2S2 crystals and\nthere has still been a controversial issue of physical properties on the S-terminated and Sn-terminated\nsurfaces15,17. Moreover, the very high mobilities and magnetoresistance usually exhibited in topological\nWeyl semimetals, attributed to the high Fermi velocity of massless Dirac states and uncompensated\nelectron and hole carriers, still need to be achieved in the Co3Sn2S2 crystals. Therefore, a significant\nimprovement of the crystal quality is strongly desired.\nHigh-quality kagome lattice materials are indeed dificult to prepare due to the requirement of the well-\ncontrolled 2D ideal kagome lattice formed by transition metal atoms as well as the elimination of",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21",
+                    "p3_l22",
+                    "p3_l23",
+                    "p3_l24",
+                    "p3_l25",
+                    "p3_l26",
+                    "p3_l27",
+                    "p3_l28",
+                    "p3_l29",
+                    "p3_l30",
+                    "p3_l31",
+                    "p3_l32",
+                    "p3_l33",
+                    "p3_l34",
+                    "p3_l35"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_3",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Page 3/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l36"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_1",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "vacancies and impurities18,19. The typical Co3Sn2S2 single-crystals prepared by the self-fiux method\nreported by Liu et al. have an anomalous Hall conductivity (AHC), anomalous Hall angle (AHA), electron\nmobility, and MR of 1130 Ω−1cm−1 at 2 K, 20%, 730 cm2V− 1s− 1, and ~ 55%, respectively8,20. Thin films of\nCo3Sn2S2 have been prepared by molecular beam epitaxy, but showing a much lower AHC of 649\nΩ−1cm−1 at 2 K and an AHA of 11.4% due to the poor compositional uniformity21. Recently, the chemical\nvapor transfer (CVT) method6,22 has been applied to grow crystalline Co3Sn2S2 nanofiakes with\nenhanced AHC of ∼1400 Ω−1cm−1, AHA of ∼32%, MR of ~ 180, and an electron mobility of ∼2600 cm2\nV− 1s− 1. Numerical calculations have suggested that residual impurities are the limiting factor for\nmobility in ultra-high-quality materials23. These results suggest that the transport properties of Co3Sn2S2\ncrystals could be improved by a CVT method which results in a lower residual impurity and a\ncorresponding lower concentration of carrier scattering centers.\nIn this article, we report the synthesis of high-quality Co3Sn2S2 crystals with the highest carrier mobility\nand AHA reported so far by an innovative CVT approach using single-crystal granules as source\nmaterials (named crystal-sourced CVT method, CS-CVT). Low-temperature magnetotransport\nmeasurements show that the carrier mobility, AHA, and MRof our high-quality Co3Sn2S2 crystals are\nremarkably enhanced to over 104 cm2V− 1s− 1, 40% and 2500%, respectively. Moreover, an ultranarrow fiat\nband and topological surface states near the Fermi level are observed, which provide good microscopic\nunderstanding of the gigantic anomalous Hall effect. The significant enhancement in transport\nproperties and the observation of the topological bands are attributed to our ultra-high-quality sample, as\ndemonstrated by a combination of x-ray diffraction (XRD), scanning transmission electron microscopy\n(STEM) and STM measurements. Our study provides a feasible way to improve the quality of magnetic\ntopological semimetal materials, showing promise for pursuing new topological properties such as a\nhigh-temperature quantum AHE in the 2D limit, as well as possible quantum devices based on\ntopological physics.\nSynthesis and structural characterizations of the ultra pure Co3Sn2S2 single crystals\nThe high-quality ultra pure Co3Sn2S2 single crystals were synthesized by the CS-CVT method, where\nsingle-crystal granules of Co3Sn2S2 were used as the source material and NH4Cl as the transport agent\n(Fig. 1a). The Co3Sn2S2 crystal has a rhombohedral structure with the space group, R-3m (No. 166),\nwhere Co atoms are arranged into a kagome lattice in the ab plane with a Sn atom at the center of each\nhexagon (Fig. 1b). All as-grown single crystals show a hexagonal shape with a lateral size ranging from\n1–8 mm and a thickness of about 0.01mm (Supplementary Fig. 1). A typical optical photograph in\nFig. 1c presents a Co3Sn2S2 hexagonal single crystal of 5.5 mm in lateral size, indicating the prior growth\nof ab plane with the CoSn kagome lattice. Energy dispersive X-ray spectroscopy (EDS) measurement on\nthe as-grown crystals reveals an atomic ratio of Co:Sn:S very close to 3:2:2 (Supplementary Fig. 2). The\nx-ray diffraction (XRD) pattern of the Co3Sn2S2 single crystal only shows the (00l) diffraction peaks,\nconfirming the pure phase of the as-grown single crystal with a preferred [001] orientation (Fig. 1d). The",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l1",
+                    "p4_l2",
+                    "p4_l3",
+                    "p4_l4",
+                    "p4_l5",
+                    "p4_l6",
+                    "p4_l7",
+                    "p4_l8",
+                    "p4_l9",
+                    "p4_l10",
+                    "p4_l11",
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15",
+                    "p4_l16",
+                    "p4_l17",
+                    "p4_l18",
+                    "p4_l19",
+                    "p4_l20",
+                    "p4_l21",
+                    "p4_l22",
+                    "p4_l23",
+                    "p4_l24",
+                    "p4_l25",
+                    "p4_l26",
+                    "p4_l27",
+                    "p4_l28",
+                    "p4_l29",
+                    "p4_l30",
+                    "p4_l31",
+                    "p4_l32",
+                    "p4_l33",
+                    "p4_l34",
+                    "p4_l35",
+                    "p4_l36"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_2",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Page 4/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l37"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "lattice parameters a, b, and c are measured by single crystal diffraction to be 5.3657 Å, 5.3657 Å and\n13.1710 Å, respectively. The double-crystal x-ray rocking curve for the (003) Bragg refiection (Fig. 1e)\ndemonstrates a much smaller crystal mosaic of 0.058°, as compared to 0.105° in typical crystals\nobtained by the self-fiux method, indicating a high crystallinity with a low density of lattice defects. The\nh0l plane diffraction pattern of the Co3Sn2S2 (Supplementary Fig. 3) shows sharp diffraction spots\npractically without any split diffraction spots, which confirms the excellent single crystal nature of the\nmaterial.\nTo further confirm the high quality of our Co3Sn2S2 crystals, we carried out atomic-scale structural and\nchemical analysis on cross-sectional samples using aberration corrected scanning transmission\nelectron microscopy (STEM). Figures 1f,g show the simultaneously acquired STEM high-angle annular\ndark-field (HAADF) Z-contrast image and annular bright-field (ABF) image of the Co3Sn2S2 sample along\nthe [100] zone axis, with the structural models overlaid and main crystallographic planes indexed. The\ndistinct spatial distributions of Co, Sn and S atoms were further confirmed by the atomic-resolution\nchemical mapping shown in Supplementary Fig. 4e. All the images clearly reveal the perfect crystalline\nstructure of the Co3Sn2S2 without noticeable structural defects. STM images were further used to\nmeasure the point-defect density. We identified two kinds of cleaved surfaces, Sn surface and S surface.\nFrom the typical 60 nm × 60 nm STM images on the S surface of Co3Sn2S2 obtained by the self-fiux and\nCS-CVT method in Supplementary Fig. 5a,b, the average density of impurities in the Co3Sn2S2 crystal\nobtained by the self-fiux method is 1.2×10− 2 atoms/nm2, which is 6.7 times higher than that of the\nCo3Sn2S2 crystal obtained by the CS-CVT method (1.8×10− 3 atoms/nm2) (Supplementary Fig. 5e).\nSimilarly, for Sn surface, the average density of impurities in the Co3Sn2S2 crystal obtained by the self-\nfiux method (2.8×10− 2 atoms/nm2) is 25.5 times higher than that of the Co3Sn2S2 crystal obtained by\nthe CS-CVT method (1.1×10− 3 atoms/nm2) (Supplementary Fig. 5c-d,f). It implies only 1 residual impurity\nfor every 1500 S atoms or every 2400 Sn atoms in the Co3Sn2S2 crystal obtained by the CS-CVT method.\nThese results demonstrate that the use of high purity source materials with exact stoichiometry and\nclean vapor transportation process in the CS-CVT growth, can indeed significantly improve the crystal\nquality of Co3Sn2S2, without introducing residual atoms of fiux agents.\nThe following question is why the crystal quality using CS-CVT is better than other growth methods\npreviously reported. Compared to the self-fiux method, the CS-CVT method can avoid contamination\nfrom fiux agents, and provide stable thermal dynamics under a suitable constant growth temperature,\npreferring a growth in (00l) plane of Co3Sn2S2, resulting in the formation of perfect kagome plane.\nFurthermore, using Co3Sn2S2 single-crystal granules as the precursor ensures the purity of source\nmaterials and the initial stoichiometric ratio of Co, Sn, S elements. Compared to CVT method previously\nreported 6,22, what we used is the NH4Cl as transport agent, which is decomposed to NH3 and HCl gas at\nabout 300 ℃, providing a clean crystallization process. The Cl ions have a strong transport ability for Co\nand Sn ions, leading to a growth of Co3Sn2S2 with the stoichiometric ratio at a cleaner condition and\nsingle-atom process.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l1",
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12",
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16",
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22",
+                    "p5_l23",
+                    "p5_l24",
+                    "p5_l25",
+                    "p5_l26",
+                    "p5_l27",
+                    "p5_l28",
+                    "p5_l29",
+                    "p5_l30",
+                    "p5_l31",
+                    "p5_l32",
+                    "p5_l33",
+                    "p5_l34",
+                    "p5_l35",
+                    "p5_l36",
+                    "p5_l37"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_2",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "Page 5/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l38"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "Magnetization, resistivity, and large magnetoresistance\nIn the temperature dependence of magnetization of the Co3Sn2S2 crystal obtained by the CS-CVT\nmethod, a sharp magnetic transition was observed with a Curie Temperature (Tc) of 177 K (Fig. 2a and\nSupplementary Fig. 6). A non-collinear magnetic transition around 150 K is unnoticeable due to the high\nquality of the Co3Sn kagome lattice in our sample. The field dependence of out-of-plane magnetization\nreveals a large coercivity (Hc~5000 Oe), while the in-plane magnetization displays no sign of saturation\nin magnetic fields up to 2 T, suggesting that the Co3Sn2S2 crystal has strong magnetic crystalline\nanisotropy (Supplementary Fig. 6e,f). From the temperature-dependent resistivity curves (Fig. 2b), a kink\nat Tc = 181 K is clearly observed, which is slightly higher than the 177 K observed in magnetization\nρ /ρ\nmeasurements. The residual resistivity ratio (RRR) 300K 2K is over 128, which is about one order of\nmagnitude higher than the values of 5–20 reported in previous works7,8,22, indicating the high quality of\nthe present Co3Sn2S2 crystals. Importantly, we firstly observed a magnetic-field-induced metal-insulator-\nlike transition, suggesting a high carrier mobility in the present Co3Sn2S2 crystal, which is similar to other\ntopological semimetals such as LaSb, TaP and NbP24,25. The inset in Fig. 2b shows the conductivity\nreaches 2.3 × 105 Ω−1cm−1 at 2 K, which is one order magnitude higher than the reported values8,22,\nindicating that our Co3Sn2S2 single crystal is close to clean-limit regime26.\nFigure 2c manifests the magnetic field dependence of transverse magnetoresistance under out-of-plane\nand in-plane magnetic fields at different temperatures. Notably, the non-saturated positive MR reached\n2500% under a magnetic field of 15 T at 2 K at B⊥I, which is one order of magnitude larger than the\npreviously reported results ranging from 55 to 250% in Co3Sn2S2 crystals6,8,27−31. The large MRin the\npresent Co3Sn2S2 crystals is ascribed to a high carrier mobility and a low scattering rate of the carriers.\nBesides, a negative MR due to the chiral anomaly was observed at high temperature regime. The chiral-\nanomaly-induced MR is attributed to the Dirac band of the kagome lattice32. Longitudinal\nmagnetoresistances measured with B parallel to the current at various temperatures in Fig. 2d show a\nnet weakly positive MR below 40 K and a negative MR above 40 K due to the chiral anomaly, which\nrepresents a crucial peculiarity of Weyl fermions for Co3Sn2S2 crystals22,33. The different behavior of the\nlongitudinal and the transverse magnetoresistance is on account of the strong out-of-plane anisotropy.\nGigantic AHE and underlying mechanism\nρ\nThe field-dependent yx measured at different temperatures from 2 K to 180 K, in an out-of-plane\nconfiguration with B⊥I, shows the coexistence of AHE with hysteretic behavior and the normal Hall\nρ\neffect (NHE) with nonlinear profile (Supplementary Fig. 8). The yx versus temperature shows a\nremarkable nonlinear change from 2 K to 20 K, which is attributed to the dual-carrier conduction\nσ\nmechanism. The field-dependence of the Hall conductivity ( yx) from 2 K and 160 K calculated\n−ρ\nσ = yx\naccording to the formula yx (Fig. 3a and Supplementary Fig. 9), exhibits significant nonlinear\nρ2yx+ρ2xx\nbehavior as the temperature decreases, indicating the enhancement of the dual-carrier conduction",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l1",
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10",
+                    "p6_l11",
+                    "p6_l12",
+                    "p6_l13",
+                    "p6_l14",
+                    "p6_l15",
+                    "p6_l16",
+                    "p6_l17",
+                    "p6_l18",
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24",
+                    "p6_l25",
+                    "p6_l26",
+                    "p6_l27",
+                    "p6_l28",
+                    "p6_l29",
+                    "p6_l30",
+                    "p6_l31",
+                    "p6_l32",
+                    "p6_l33",
+                    "p6_l34",
+                    "p6_l35",
+                    "p6_l36",
+                    "p6_l37",
+                    "p6_l38",
+                    "p6_l39",
+                    "p6_l40",
+                    "p6_l41",
+                    "p6_l42"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_2",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "Page 6/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l43"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p7_1",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "mechanism. The shaded areas in Fig. 3a represent the contribution of AHE. After subtracting the AHE\nsignals, we thus extract the carrier densities and carrier mobilities by using the semiclassical Drude\nmodel (Supplementary Fig. 10a,b). The extracted carrier densities of electrons and holes (2 K) are about\n7.9 × 1019 cm− 3 and 2.2 × 1020 cm− 3, respectively, and the corresponding mobilities of electrons and\nholes at 2 K are 10490 cm2V− 1s− 1 and 2480 cm2V− 1s− 1, respectively (Supplementary Fig. 10c). The\nelectron mobility observed in our Co3Sn2S2 crystals is the largest among all reported magnetic\ntopological semimetals, (e.g., Co3Sn2S2 ~ 2600 cm2V− 1s− 1, MnBi2Te4 ~ 3110 cm2V− 1s− 1, GaPtBi ~ 1500\ncm2V− 1s− 1, Co2MnGa ~ 35 cm2V− 1s− 1)6,34−36. The carrier mobility and MRare useful metrics to quantify\nthe quality of a semimetal crystal. The electron mobility is straightforward to measure and is inversely\nproportional to the average electron scattering rate in semimetal crystals. High mobility values in\ncrystals imply that electrons are less likely to scatter over prolonged trajectories. The electrical transport\nin a semimetal usually consists of two types of carriers (electrons and holes) and an extremely high MR\nis usually attributed to a perfectly balanced hole-electron resonance condition that is much stronger than\nthat in normal metals and semiconductors. Thus, it is crucial to obtain high-purity Co3Sn2S2 samples to\nrealize a balance between electrons and holes and a high carrier mobility (µ), both of which will enhance\nthe MR effect.\nTo study the large AHE of the high-quality Co3Sn2S2 crystals, we subtract the NHE contributions\nσA\naccording to the dual-carrier Drude model (Supplementary Fig. 11, 12). The AHC yx shows a strong\ndependence on temperature and reaches a maximum of 1600 Ω−1cm−1 around 50 K (Fig. 3b), which is\nthe largest value among all the reported pure Co3Sn2S2 crystals so far. In addition to a large AHC, the\nσA /σ σA /σ\nCo3Sn2S2 crystals show a gigantic AHA of yx xx. The temperature dependence of yx xx (Fig. 3c)\nσA /σ\nshows that AHA firstly increases and then decreases with increasing temperature. The yx xx exceeds\n30% within a broad temperature range of 100 K to 160 K, and has a maximum of approximately 40%\naround 140 K. It is well established that a large intrinsic AHE is present in the magnetic Weyl semimetal\nCo3Sn2S2 due to the topologically enhanced Berry curvature, resulting in a giant intrinsic AHC. The\ntheoretical AHC obtained from the integral of Berry curvature is about 1310 Ω−1cm−1 at 0 K7. However,\nthe maximum AHC measured in our Co3Sn2S2 crystals reaches 1600 Ω−1cm−1 (Fig. 3d), suggesting that\nother mechanisms exist in the high-quality Co3Sn2S2 crystal. Smit and Berger proposed the skew\nscattering and side-jump effects that are affected by the spin-orbit interaction37,38. However, such\nmechanisms are usually observed in materials with a high conductivity, larger than 104 Ω−1cm−1, since\nthe skew scattering can be suppressed by the increasing impurity scattering26. Indeed, the conductivity\nof our Co3Sn2S2 crystals reaches 104 Ω−1cm−1 around 100 K and rapidly increases to 2.3 × 105 Ω−1cm−1\nat 2 K (Supplementary Fig. 13a). We also note that the measured AHC reaches the theoretical maximum\nfor the intrinsic mechanism (1310 Ω−1cm−1) at 100 K. With further decreasing temperature, the AHC first\nincreases to its maximum (1600 Ω−1cm−1) around 50 K then decreases to about 970 Ω−1cm−1 at 2 K with\nσ\na linear dependence on the longitudinal conductivity xx, as shown in Fig. 3d. Our results are very",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l1",
+                    "p7_l2",
+                    "p7_l3",
+                    "p7_l4",
+                    "p7_l5",
+                    "p7_l6",
+                    "p7_l7",
+                    "p7_l8",
+                    "p7_l9",
+                    "p7_l10",
+                    "p7_l11",
+                    "p7_l12",
+                    "p7_l13",
+                    "p7_l14",
+                    "p7_l15",
+                    "p7_l16",
+                    "p7_l17",
+                    "p7_l18",
+                    "p7_l19",
+                    "p7_l20",
+                    "p7_l21",
+                    "p7_l22",
+                    "p7_l23",
+                    "p7_l24",
+                    "p7_l25",
+                    "p7_l26",
+                    "p7_l27",
+                    "p7_l28",
+                    "p7_l29",
+                    "p7_l30",
+                    "p7_l31",
+                    "p7_l32",
+                    "p7_l33",
+                    "p7_l34",
+                    "p7_l35",
+                    "p7_l36",
+                    "p7_l37",
+                    "p7_l38",
+                    "p7_l39",
+                    "p7_l40"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p7_2",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Page 7/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l41"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p8_1",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "different from the previous results8, where AHC is almost independent to longitudinal conductivity σxx in\nthe relatively low temperature range.\nTo understand the origin of the large AHC, we study the relationship between the anomalous Hall\nρ ρ ρA = (aρ + bρ2 ) ∙ M\nresistivity yx and the longitudinal resistivity xx by using the formula xy xx xx . The\nfirst term represents the skew scattering contribution, while the second term corresponds to the intrinsic\nor side-jump contributions. Both parts are linearly proportional to magnetization M. As shown in Fig. 3e,\nρ ρ ∙ M ρ\nwe plot the yx/( xx ) against xx, which exhibits a good linear relationship below 80 K. Therefore,\nwe extract the contribution from the skew scattering, and the sum of side-jump and intrinsic\nσ\ncontributions. The results are shown in Fig. 3f. We find that the fitted AHC of total is in good agreement\nwith the experimentally observed values. Remarkably, the skew scattering gives a negative contribution\nto AHC, which is consistent with previous results6,7. Moreover, it becomes more significant with\ndecreasing temperature due to the enhancement of the longitudinal conductivity. Therefore, we conclude\nthat the reduction of AHC below 50 K is ascribed to the large negative contribution from skew scattering.\nTo distinguish the intrinsic and side-jump contributions to the AHC, we adopt a new scaling relation for\nσ σ ρ ρ\nthe Hall conductivity yx and longitudinal conductivity xx in the limit of yx ≪ xx range. As shown in\nSupplementary Fig. 13b, we find that the intrinsic AHC is about 1400 Ω−1cm−1, close to the theoretical\nvalue. On the other hand, we also note that the skew scattering is almost negligible when the\ntemperature is between 50 K and 80 K. In this range, therefore, the AHC increases with decreasing\ntemperatures and exceeds the maximum intrinsic value, which is mainly due to the significant\ncontribution from the side-jump effects. The observation of remarkable contributions of skew scattering\nand side-jump to AHE in our Co3Sn2S2 crystals further indicates that the sample is close to the clean-\nlimit, i.e., ultra-low densities of defects and impurities39. We compare the previously reported key\ntransport parameters of Co3Sn2S2 crystals and other magnetic topological materials in Supplementary\nFigs. 14 and 15, and the values of the carrier mobility, AHA, and MRobserved in our Co3Sn2S2 samples\nare all the largest40–46.\nVisualization of ultranarrow kagome fiat bands using ARPES.\nTo understand the possible mechanism for the great improvement in the electronic transport properties\nof Co3Sn2S2 crystals, its Fermi surface and band structures were measured by high-resolution vacuum\nultraviolet (VUV) laser ARPES at 20 K47. Figure 4a shows the Fermi surface mapping of Co3Sn2S2\ncrystals by integrating the spectra weight within ± 10 meV energy window with respect to the Fermi level.\nThe Fermi surface is obtained by symmetrizing the original mapping considering the three-fold and\nmirror symmetry. Six small pockets are clearly observed firstly surrounding the Brillouin zone center Γ.\nThe experimental Fermi surface in Fig. 4a is in conformity with the projections of the calculated Fermi\nsurface (Fig. 4b). For the sake of understanding the origin of the strong spectral weights around the\nBrillouin zone corner k(k´), two tangent lines (marked Cut1 and Cut2 in Fig. 4a) are taken along two\ndifferent momentum directions to display the band structure near point K. The detailed band structures",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l1",
+                    "p8_l2",
+                    "p8_l3",
+                    "p8_l4",
+                    "p8_l5",
+                    "p8_l6",
+                    "p8_l7",
+                    "p8_l8",
+                    "p8_l9",
+                    "p8_l10",
+                    "p8_l11",
+                    "p8_l12",
+                    "p8_l13",
+                    "p8_l14",
+                    "p8_l15",
+                    "p8_l16",
+                    "p8_l17",
+                    "p8_l18",
+                    "p8_l19",
+                    "p8_l20",
+                    "p8_l21",
+                    "p8_l22",
+                    "p8_l23",
+                    "p8_l24",
+                    "p8_l25",
+                    "p8_l26",
+                    "p8_l27",
+                    "p8_l28",
+                    "p8_l29",
+                    "p8_l30",
+                    "p8_l31",
+                    "p8_l32",
+                    "p8_l33",
+                    "p8_l34",
+                    "p8_l35",
+                    "p8_l36",
+                    "p8_l37",
+                    "p8_l38",
+                    "p8_l39",
+                    "p8_l40"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p8_2",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Page 8/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l41"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_1",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "near-EF(Cut1) along Γ-K directions are shown in Fig. 4c. The topological surface state marked by the red\ncircle (labeled TSS) is observed with kF about 0.4 Å−1 away from the K point, which can be more clearly\nidentified in the corresponding second derivative spectrum. The positions of the topological surface\nstates observed in the experiment are consistent with the results reported previously48. The topological\nsurface states across the Fermi level are usually considered to enhance the carrier mobility due to the\nlow effective mass49.\nMoreover, around the K point, a nearly dispersionless fiat band is captured (obviously presented in its\nrelevant second derivative spectra). The fiat band around the K point can expand a larger momentum\nspace along the momentum Cut2 (indicated by red arrow in Fig. 4d). The corresponding EDCs are shown\nin Fig. 4e. Around the Fermi level, all the EDCs show very sharp peaks and the linewidths are all below 10\nmeV. Subtracting the temperature broadening of 7 meV at 20 K, the intrinsic line widths are about 6–7\nmeV. Such an ultranarrow fiat band directly visualized by ARPES wass first reported in the kagome\nmaterials. In order to understand the origin of the fiat bands, the band structure of Co3Sn2S2 is\ncalculated based on relativistic density functional theory (DFT) projected on the Sn plane (Fig. 4f). The\nred line highlights the manifestation of the kagome fiat band, showing quite fiat and dispersionless\nbehavior around both the Γ and K points. The calculated results are quite consistent with our ARPES\nresults. In detail, the calculated band bottom around Γ is slightly above the Fermi level and the band\nbottom around K is just below the Fermi level. This also agrees with our ARPES results that a strong fiat\nspectral weight is measured around the K point and quite weak spectral weight is measured around the Γ\npoint. Combining the ARPES results and the band calculation, we conclude there is a kagome fiat band\naround the Fermi level in Co3Sn2S2 which means the electron kinetic energy is strongly quenched by\nquantum interference effects, preventing delocalization of the wave function across the lattice. The\nappearance of fiat bands is expected to increase the distance between a pair of Weyl nodes with\nopposite chirality which is nearly proportional to intrinsic AHE in magnetic Weyl semimetal\nmagnetic50,51.\nIn summary, using a “crystal-sourced chemical vapor transport” approach, we have successfully\nsynthesized large-size, high-quality, hexagonal Co3Sn2S2 single crystals with an ultra-low impurity\ndensity. The improvement of crystal quality enables the first observation of an ultranarrow topological\nfiat band and makes a huge enhancement for nearly all the physical properties of Co3Sn2S2. Our high-\nquality samples display an ultrahigh AHA of 40%, intrinsic carrier mobility of 10490 cm2V-1s-1, AHC of\n1600 Ω-1 cm-1, and MRof 2500%, which are the highest among all reported results for Co3Sn2S2. Besides\nthe contribution to AHE from Berry curvature, the observation of the skew scattering and side-jump\neffects on AHE suggests that our sample is close to the clean-limit regime. This CS-CVT method can be\nextended to fabricate other kagome materials with improved crystal quality and physical properties\ncompared with other methods reported in the past. For example, we have successfully synthesized\nCo3In2S2 and Ni3In2S2 crystals of the best quality and highest carrier mobility (Supplementary Figs. 16\nand 17). The present results provide a useful way towards the growth of high-quality magnetic",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l1",
+                    "p9_l2",
+                    "p9_l3",
+                    "p9_l4",
+                    "p9_l5",
+                    "p9_l6",
+                    "p9_l7",
+                    "p9_l8",
+                    "p9_l9",
+                    "p9_l10",
+                    "p9_l11",
+                    "p9_l12",
+                    "p9_l13",
+                    "p9_l14",
+                    "p9_l15",
+                    "p9_l16",
+                    "p9_l17",
+                    "p9_l18",
+                    "p9_l19",
+                    "p9_l20",
+                    "p9_l21",
+                    "p9_l22",
+                    "p9_l23",
+                    "p9_l24",
+                    "p9_l25",
+                    "p9_l26",
+                    "p9_l27",
+                    "p9_l28",
+                    "p9_l29",
+                    "p9_l30",
+                    "p9_l31",
+                    "p9_l32",
+                    "p9_l33",
+                    "p9_l34",
+                    "p9_l35",
+                    "p9_l36",
+                    "p9_l37"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_2",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Page 9/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l38"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p10_1",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "topological materials and suggest a bright future for the investigation of exotic physics in topological\nmaterials and kagome lattice materials.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l1",
+                    "p10_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Full Text",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 18.0,
+              "observation_ids": [
+                "p3_l18"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p10_l3",
+            "type": "section",
+            "page_start": 10,
+            "page_end": 11,
+            "children": [
+              {
+                "id": "unidentified_p10_2",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "Growth of the Co3Sn2S2 single crystals.\nThe hexagonal Co3Sn2S2 single crystals were successfully synthesized by a new chemical vapor\ntransport approach using single-crystal granules as source materials (the CS-CVT method). First, single\ncrystals of Co3Sn2S2 with no regular shape were prepared by the self-fiux method. Raw materials of Co,\nSn, and S were mixed in a molar ratio of Co:Sn:S = 3:2:2 and placed in a crucible, then sealed in a quartz\ntube using a high temperature fiame gun under high vacuum. The quartz tube was slowly heated for 55\nhours to 1000 ℃, then kept constant at that temperature for 72 hours and slowly cooled to 600 ℃ at a\nrate of 2 ℃/h. Subsequently, the single-crystal granules were sealed in an evacuated quartz tube with\nNH4Cl as a transport agent. The hexagonal Co3Sn2S2 single crystals were produced by CS-CVT in a\ntemperature gradient from 1000 ℃ to 900 ℃ for about a week.\nSample characterization.\nXRD patterns were collected using a Rigaku SmartLab SE X-ray diffractometer with Cu Kα radiation (λ =\n0.15418 nm) at room temperature. Single crystal diffraction patterns and rocking curves were taken by a\nBruker D8 Venture. Scanning electron microscopy (SEM) and X-ray energy-dispersive spectroscopy (EDS)\nwere performed using a HITACHI S5000 with an energy dispersive analysis system Bruker XFlash 6|60.\nMagnetization measurements were carried out on oriented crystals with the magnetic field applied along\nboth the a and c axes using a vibrating sample magnetometer (MPMS 3, Quantum Design). Both in-plane\nelectrical resistivity and Hall resistivity data were collected on a Quantum Design Physical Properties\nMeasurement System (PPMS).\nScanning transmission electron microscopy and electron energy-loss spectroscopy.\nElectron-transparent lamellas for STEM investigation were prepared by conventional lift-off focused-ion-\nbeam (FIB) methodology using a Thermo Scientific Helios G4 CX DualBeam system, operated at\naccelerating voltages of 30 kV down to 2 kV to ensure minimum sample damage. Aberration-corrected\nSTEM characterizations were performed using a Nion HERMES-100, operated at 100 kV and a probe\nforming semi-angle of 30 mrad. HAADF and ABF images were acquired simultaneously using two\nannular detectors with collection semi-angle of 92–210 and 15-30mrad, respectively. EELS\nmeasurements were performed using a collection semi-angle of 91 mrad, an energy dispersion of 0.5 eV\nper channel, and a probe current of ~ 20 pA. The Co-L (779 eV), Sn-M (485 eV), and S-L (165 eV)\nabsorption edges were integrated for elemental mapping after background subtraction. The parent\nspectrum image was processed with the principal component analysis (PCA) tool to reduce random\nnoise.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l4",
+                    "p10_l5",
+                    "p10_l6",
+                    "p10_l7",
+                    "p10_l8",
+                    "p10_l9",
+                    "p10_l10",
+                    "p10_l11",
+                    "p10_l12",
+                    "p10_l13",
+                    "p10_l14",
+                    "p10_l15",
+                    "p10_l16",
+                    "p10_l17",
+                    "p10_l18",
+                    "p10_l19",
+                    "p10_l20",
+                    "p10_l21",
+                    "p10_l22",
+                    "p10_l23",
+                    "p10_l24",
+                    "p10_l25",
+                    "p10_l26",
+                    "p10_l27",
+                    "p10_l28",
+                    "p10_l29",
+                    "p10_l30",
+                    "p10_l31",
+                    "p10_l32",
+                    "p10_l33",
+                    "p10_l34"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p10_3",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "Page 10/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l35"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p11_1",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "Scanning tunneling microscopy/spectroscopy.\nThe experiments were carried out in a Createc low-temperature STM system in ultra-high vacuum (UHV)\nwith a base pressure better than 3.0×10–10 mbar. STM characterization was performed with a Pt-Ir tip in\nconstant current mode and bias refers to the voltage on the sample with respect to the tip. The STM\nscanning was performed on surfaces of Co3Sn2S2 crystals that were freshly cleaved at 10 K in the UHV\nchamber. The measurements were conducted at 4.5 K. The images were processed using the WSxM\nsoftware package.\nHigh resolution ARPES measurements.\nHigh-resolution angle-resolved photoemission measurements were carried out at 20 K by using\nultraviolet laser as the light source that can provide a photon energy of hν = 6.994 eV with a bandwidth of\n0.26 meV. The energy resolution was set at ∼2.5 meV for the measurements. The angular resolution was\n∼0.3◦. The Fermi level was referenced by measuring on a clean polycrystalline gold that was electrically\nconnected to the sample. The sample was cleaved in situ and measured in vacuum with a base pressure\nbetter than 5 × 10− 11 Torr.\nDFT calculations\nDFT calculations were performed using the generalized gradient approximation for the exchange-\ncorrelation potential, the projector augmented wave method52 and a plane-wave basis set as\nimplemented in the Vienna ab-initio simulation package53,54. The energy cutoff for the plane-wave basis\nwas set to 400 eV for structural relaxations and 600 eV for the energy and electronic structure\ncalculations. Two k-meshes of 7×7×1 and 11×11×1 were adopted for the structural relaxations and total\nenergy (electronic structure) calculations, respectively. The mesh density of the k points was fixed when\nperforming the related calculations with primitive cells. In geometric structure relaxation, van der Waals\n(vdW) interactions were considered at the vdW-DF level with the optB86b functional as the exchange\nfunctional (optB86b-vdW)55,56. Symmetrical slab models were employed, and the surface atoms were\nfully relaxed until the residual force per atom was less than 0.005 eV/Å. To avoid image interactions\nbetween adjacent unit cells, a vacuum layer of more than 20 Å thick was added to the slab cell\nperpendicular to the surface. The optimized lattice constants of bulk Co3Sn2S2 are 5.37 and 13.15 Å\nalong the a and c directions, respectively.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l1",
+                    "p11_l2",
+                    "p11_l3",
+                    "p11_l4",
+                    "p11_l5",
+                    "p11_l6",
+                    "p11_l7",
+                    "p11_l8",
+                    "p11_l9",
+                    "p11_l10",
+                    "p11_l11",
+                    "p11_l12",
+                    "p11_l13",
+                    "p11_l14",
+                    "p11_l15",
+                    "p11_l16",
+                    "p11_l17",
+                    "p11_l18",
+                    "p11_l19",
+                    "p11_l20",
+                    "p11_l21",
+                    "p11_l22",
+                    "p11_l23",
+                    "p11_l24",
+                    "p11_l25",
+                    "p11_l26",
+                    "p11_l27",
+                    "p11_l28"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Methods",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 18.0,
+              "observation_ids": [
+                "p10_l3"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p12_4",
+            "type": "custom",
+            "page_start": 12,
+            "page_end": 12,
+            "children": [],
+            "text": "Page 12/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p12_l34"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p13_1",
+            "type": "custom",
+            "page_start": 13,
+            "page_end": 13,
+            "children": [],
+            "text": "11. Hasan, M. Z. et al. Weyl, Dirac and high-fold chiral fermions in topological quantum matter. Nat. Rev.\nMater. 6, 784-803 (2021).\n12. Morali, N. et al. Fermi-arc diversity on surface terminations of the magnetic Weyl semimetal\nCo3Sn2S2. Science365, 1286-1291 (2019).\n13. Liu, D. F. et al. Magnetic Weyl semimetal phase in a Kagome crystal. Science 365, 1282-1285 (2019).\n14. Yang, H. Y. etal.Giant anomalous Nernst effect in the magnetic Weyl semimetal Co3Sn2S2. Phys.\nRev. Mater. 4, 024202 (2020).\n15. Yin, J. X. et al. Negative fiat band magnetism in a spin-orbit-coupled correlated kagome magnet.\nNat. Phys. 15, 443-448 (2019).\n1fi. Muechler, L. et al. Emerging chiral edge states from the confinement of a magnetic Weyl semimetal\nin Co3Sn2S2. Phys.Rev.B101, 115106 (2020).\n17. Xing, Y. Q. etal.Localized spin-orbit polaron in magnetic Weyl semimetal Co3Sn2S2. Nat.Commun.\n11, 5613 (2020).\n1fi. Neupert, T., Denner, M. M., Yin, J. X., Thomale, R. & Hasan, M. Z. Charge order and superconductivity\nin kagome materials. Nat. Phys. 18, 137-143 (2022).\n19. Chen, H. et al. Roton pair density wave in a strong-coupling kagome superconductor. Nature 599,\n222-228 (2021).\n20. Shen, J. L. et al. On the anisotropies of magnetization and electronic transport of magnetic Weyl\nsemimetal Co3Sn2S2. Appl.Phys.Lett.116, 029901 (2020).\n21. Li, S. H. etal.Epitaxial growth and transport properties of magnetic Weyl semimetal Co3Sn2S2 thin\nfilms. ACS Appl. Electron. Mater. 2, 126-133 (2020).\n22. Yang, S. Y. etal.Field-modulated anomalous Hall conductivity and planar Hall effect in Co3Sn2S2\nnanofiakes. Nano Lett. 20, 7860-7867 (2020).\n23. Sammon, M., Zudov, M. A. & Shklovskii, B. I. Mobility and quantum mobility of modern GaAs/AlGaAs\nheterostructures. Phys. Rev. Mater. 2, 064604 (2018).\n24. Tafti, F. F., Gibson, Q. D., Kushwaha, S. K., Haldolaarachchige, N. & Cava, R. J. Resistivity plateau and\nextreme magnetoresistance in LaSb. Nat. Phys. 12, 272-277 (2016).\n25. Zhang, C. L. et al. Large magnetoresistance over an extended temperature regime in\nmonophosphides of tantalum and niobium. Phys. Rev. B 92, 041203(R) (2015).\n2fi. Nagaosa, N., Sinova, J., Onoda, S., MacDonald, A. H. & Ong, N. P. Anomalous Hall effect. Rev. of\nMod. Phys. 82, 1539-1592 (2010).\n27. Kassem, M. A., Tabata, Y., Waki, T. & Nakamura, H. Unconventional critical behaviors at the magnetic\nphase transition of Co3Sn2S2 kagome ferromagnet. J.Phys.:Condens.Matter33, 015801 (2021).\n2fi. Ding, L. C. etal.Quantum oscillations, magnetic breakdown and thermal Hall effect in Co3Sn2S2. J.\nPhys. D Appl. Phys. 54, 454003 (2021).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p13_l1",
+                "p13_l2",
+                "p13_l3",
+                "p13_l4",
+                "p13_l5",
+                "p13_l6",
+                "p13_l7",
+                "p13_l8",
+                "p13_l9",
+                "p13_l10",
+                "p13_l11",
+                "p13_l12",
+                "p13_l13",
+                "p13_l14",
+                "p13_l15",
+                "p13_l16",
+                "p13_l17",
+                "p13_l18",
+                "p13_l19",
+                "p13_l20",
+                "p13_l21",
+                "p13_l22",
+                "p13_l23",
+                "p13_l24",
+                "p13_l25",
+                "p13_l26",
+                "p13_l27",
+                "p13_l28",
+                "p13_l29",
+                "p13_l30",
+                "p13_l31",
+                "p13_l32",
+                "p13_l33",
+                "p13_l34",
+                "p13_l35"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p13_2",
+            "type": "custom",
+            "page_start": 13,
+            "page_end": 13,
+            "children": [],
+            "text": "Page 13/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p13_l36"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p14_1",
+            "type": "custom",
+            "page_start": 14,
+            "page_end": 14,
+            "children": [],
+            "text": "29. Zeng, Q. Q. et al. On the anomalous low-resistance state and exceptional Hall component in hard-\nmagnetic Weyl nanofiakes. Sci. China Phys. Mech. 64, 287512 (2021).\n30. Geishendorf, K. et al. Magnetoresistance and anomalous Hall effect in micro-ribbons of the\nmagnetic Weyl semimetal Co3Sn2S2. Appl.Phys.Lett.114, 092403 (2019).\n31. Shama, Gopal, R. K. & Singh, Y. et al. Observation of planar Hall effect in the ferromagnetic Weyl\nsemimetal Co3Sn2S2. J.Magn.Magn.Mater.502, 166547 (2020).\n32. Zhao, J. J. etal. Magnetoresistance signature of two-dimensional electronic states in Co3Sn2S2.\nPhys. Rev. B 107, 085203 (2023).\n33. Jiang, B. Y. et al. Chirality-Dependent Hall Effect and Antisymmetric Magnetoresistance in a\nMagnetic Weyl Semimetal. Phys. Rev. Lett. 126, 236601 (2021).\n34. Liu, C. etal.Magnetic-field-induced robust zero Hall plateau state in MnBi2Te4 Chern insulator. Nat.\nCommun. 12, 4647 (2021).\n35. Hirschberger, M. et al. The chiral anomaly and thermopower of Weyl fermions in the half-Heusler\nGdPtBi. Nat. Mater. 15, 1161-1165 (2016).\n3fi. Belopolski, I. et al. Discovery of topological Weyl fermion lines and drumhead surface states in a\nroom temperature magnet. Science 365, 1278-1281 (2019).\n37. Berger, L. Side-jump mechanism for the Hall effect of ferromagnets. Phys. Rev. B-Solid St. 2, 4559-\n4566 (1970).\n3fi. Smit, J. The Spontaneous Hall Effect in Ferromagnetics-II. Physica 24, 39-51 (1958).\n39. Onoda, S., Sugimoto, N. & Nagaosa, N. Intrinsic versus extrinsic anomalous hall effect in\nferromagnets. Phys. Rev. Lett. 97, 126602 (2006).\n40. Suzuki, T. et al. Large anomalous Hall effect in a half-Heusler antiferromagnet. Nat. Phys. 12, 1119-\n1123 (2016).\n41. Zhang, J. L. et al. Modulation of Weyl semimetal state in half-Heusler GdPtBi enabled by hydrostatic\npressure. New J. Phys. 23, 083041 (2021).\n42. Kim, K. et al. Large anomalous Hall current induced by topological nodal lines in a ferromagnetic van\nder Waals semimetal. Nat. Mater. 17, 794-799 (2018).\n43. Liu, S. S. etal.Wafer-scale two-dimensional ferromagnetic Fe3GeTe2 thin films grown by molecular\nbeam epitaxy. NPJ 2D Mater. Appl. 1, 37 (2017).\n44. Li, X. K. etal. Anomalous nernst and righi-leduc effects in Mn3Sn: Berry curvature and entropy fiow.\nPhys. Rev. Lett. 119, 056601 (2017).\n45. Nakatsuji, S., Kiyohara, N. & Higo, T. Large anomalous Hall effect in a non-collinear antiferromagnet\nat room temperature. Nature 527, 212-215 (2015).\n4fi. Li, H. etal. Large topological Hall effect in a geometrically frustrated kagome magnet Fe3Sn2. Appl.\nPhys. Lett. 114, 192408 (2019).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p14_l1",
+                "p14_l2",
+                "p14_l3",
+                "p14_l4",
+                "p14_l5",
+                "p14_l6",
+                "p14_l7",
+                "p14_l8",
+                "p14_l9",
+                "p14_l10",
+                "p14_l11",
+                "p14_l12",
+                "p14_l13",
+                "p14_l14",
+                "p14_l15",
+                "p14_l16",
+                "p14_l17",
+                "p14_l18",
+                "p14_l19",
+                "p14_l20",
+                "p14_l21",
+                "p14_l22",
+                "p14_l23",
+                "p14_l24",
+                "p14_l25",
+                "p14_l26",
+                "p14_l27",
+                "p14_l28",
+                "p14_l29",
+                "p14_l30",
+                "p14_l31",
+                "p14_l32",
+                "p14_l33",
+                "p14_l34",
+                "p14_l35"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p14_2",
+            "type": "custom",
+            "page_start": 14,
+            "page_end": 14,
+            "children": [],
+            "text": "Page 14/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p14_l36"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p15_1",
+            "type": "custom",
+            "page_start": 15,
+            "page_end": 15,
+            "children": [],
+            "text": "47. Zhou, X. J. et al. New developments in laser-based photoemission spectroscopy and its scientific\napplications: a key issues review. Rep. Prog. Phys. 81, 062101 (2018).\n4fi. Belopolski I. et al. Signatures of Weyl Fermion Annihilation in a Correlated Kagome Magnet. Phys.\nRev. Lett. 127, 256403 (2021).\n49. Li, G. etal.Two-dimensional Fermi surfaces in Kondo insulator SmB6. Science346, 1208-1212\n(2014).\n50. Burkov, A. A. Anomalous Hall effect in Weyl metals. Phys. Rev. Lett. 113, 187202 (2014).\n51. Jiang, W., Sousa, D. J. P. d., Wang, J. P. & Low, T. Giant Anomalous Hall Effect due to Double-\nDegenerate Quasifiat Bands. Phys. Rev. Lett. 126, 106601 (2021).\n52. Blöch, P. E. et al. Projector augmented-wave method. Phys. Rev. B 50, 17953 (1994).\n53. Kresse, G. & Furthmüller, J. Eficiency of ab-initio total energy calculations for metals and\nsemiconductors using a plane-wave basis set. Comp. Mater. Sci. 6, 15 (1996).\n54. Kresse, G. & Furthmüller, J. Eficient iterative schemes for ab initio total-energy calculations using a\nplane-wave basis set. Phys. Rev. B 54, 11169 (1996).\n55. Klimeš, J., Bowler, D. R. & Michaelides, A. Van der Waals density functionals applied to solids. Phys.\nRev. B 83, 195131 (2011).\n5fi. Klimeš, J., Bowler, D. R. & Michaelides, A. Chemical accuracy for the van der Waals density\nfunctional. J. Phys. Condens. Matter. 22, 022201 (2010).\nFigures",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p15_l1",
+                "p15_l2",
+                "p15_l3",
+                "p15_l4",
+                "p15_l5",
+                "p15_l6",
+                "p15_l7",
+                "p15_l8",
+                "p15_l9",
+                "p15_l10",
+                "p15_l11",
+                "p15_l12",
+                "p15_l13",
+                "p15_l14",
+                "p15_l15",
+                "p15_l16",
+                "p15_l17",
+                "p15_l18",
+                "p15_l19"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p15_2",
+            "type": "custom",
+            "page_start": 15,
+            "page_end": 15,
+            "children": [],
+            "text": "Page 15/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p15_l20"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p16_1",
+            "type": "custom",
+            "page_start": 16,
+            "page_end": 16,
+            "children": [],
+            "text": "Figure 1\nCS-CVT synthesis strategy for ultra pure Co3Sn2S2 single crystals and structural characterizations. a,\nSchematic of the CS-CVT synthesis process for ultra pure Co3Sn2S2 single crystals. The Co3Sn2S2\ncrystals prepared by self-fiux method were placed with a small amount of NH4Cl as the transport agent\nat the high-temperature part. After about a week, large-size, ultra pure, regular-hexagonal Co3Sn2S2",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p16_l1",
+                "p16_l2",
+                "p16_l3",
+                "p16_l4",
+                "p16_l5"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p16_2",
+            "type": "custom",
+            "page_start": 16,
+            "page_end": 16,
+            "children": [],
+            "text": "Page 16/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p16_l6"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p17_1",
+            "type": "custom",
+            "page_start": 17,
+            "page_end": 17,
+            "children": [],
+            "text": "single crystals were collected at the low-temperature part. b, Unit cell in a hexagonal setting, consisting\nof two hexagonal planes of S and Sn as well as a Co3Sn kagome layer sandwiched between the S atoms.\nBlue, green and pink balls represent Co, Sn and S atoms, respectively. c, An optical photograph of the\nhexagonal Co3Sn2S2 crystal prepared by the CS-CVT method. d, The x-ray 2θ scan conducted on the ab\nplane of the Co3Sn2S2 crystal prepared by the CS-CVT method with the corresponding Miller indices\n(00l). e, The X-ray rocking curves of (003) refiection for samples prepared by self-fiux (black) and CS-CVT\n(red) methods, showing a smaller FWHM of 0.058° for the Co3Sn2S2 crystal prepared by the CS-CVT\nmethod. f, g, Simultaneously acquired high-resolution HAADF and ABF images of the Co3Sn2S2 crystal\nstructure seen along the [100] zone axis, up and down respectively. The inset in the HAADF is a close-up\nimage with the atomic model of one unit cell overlayed, where blue balls correspond to Co, green to Sn\nand pink to S atoms. The inset in the ABF is an FFT pattern with the main planes indexed.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p17_l1",
+                "p17_l2",
+                "p17_l3",
+                "p17_l4",
+                "p17_l5",
+                "p17_l6",
+                "p17_l7",
+                "p17_l8",
+                "p17_l9",
+                "p17_l10",
+                "p17_l11"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p17_2",
+            "type": "custom",
+            "page_start": 17,
+            "page_end": 17,
+            "children": [],
+            "text": "Page 17/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p17_l12"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p18_1",
+            "type": "custom",
+            "page_start": 18,
+            "page_end": 18,
+            "children": [],
+            "text": "Figure 2\nSee image above for figure legend.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p18_l1",
+                "p18_l2"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p18_2",
+            "type": "custom",
+            "page_start": 18,
+            "page_end": 18,
+            "children": [],
+            "text": "Page 18/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p18_l3"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p19_1",
+            "type": "custom",
+            "page_start": 19,
+            "page_end": 19,
+            "children": [],
+            "text": "Figure 3\nSee image above for figure legend.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p19_l1",
+                "p19_l2"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p19_2",
+            "type": "custom",
+            "page_start": 19,
+            "page_end": 19,
+            "children": [],
+            "text": "Page 19/20",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p19_l3"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "unidentified_p20_1",
+            "type": "custom",
+            "page_start": 20,
+            "page_end": 20,
+            "children": [],
+            "text": "Figure 4\nElectronic structure and observation of a fiat band around the Fermi level. a, Fermi surface mapping\nacquired by integrating the the spectral weight within a ± 10 meV energy window. The red dotted line\nalong Ky is marked as Cut 1. The red dotted along Kx is labelled as Cut 2. Cuts 1 and 2 signify the\nmomentum locations of the experimental band structures in (c) and (d), respectively. b, Projections of\ncalculated Fermi surfaces. Blue lines denote the Brillouin zones. c, The band structure at Cut 1 in (a) and\nthe corresponding second derivative, indicating the existence of TSS marked by the red arrow. d, The\nband structure at Cut 2 in (a), showing a fiat band near the Fermi level. e, EDC of Cut 2 at different Kx,\nshowing a narrow coherent peak corresponding to the fiat band with a large DOS near Fermi level. f,\nCalculated band dispersions along different high-symmetry directions on the Sn-terminated surface,\nshowing a nearly fiat band near the Fermi level.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p20_l1",
+                "p20_l2",
+                "p20_l3",
+                "p20_l4",
+                "p20_l5",
+                "p20_l6",
+                "p20_l7",
+                "p20_l8",
+                "p20_l9",
+                "p20_l10",
+                "p20_l11"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          },
+          {
+            "id": "heading_p20_l12",
+            "type": "section",
+            "page_start": 20,
+            "page_end": 20,
+            "children": [
+              {
+                "id": "unidentified_p20_2",
+                "type": "custom",
+                "page_start": 20,
+                "page_end": 20,
+                "children": [],
+                "text": "This is a list of supplementary files associated with this preprint. Click to download.\nCSSSI0401hj.docx",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p20_l13",
+                    "p20_l14"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p20_3",
+                "type": "custom",
+                "page_start": 20,
+                "page_end": 20,
+                "children": [],
+                "text": "Page 20/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p20_l15"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Supplementary Files",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 18.0,
+              "observation_ids": [
+                "p20_l12"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 11,
+        "page_end": 20,
+        "children": [
+          {
+            "id": "heading_p11_l29",
+            "type": "section",
+            "page_start": 11,
+            "page_end": 11,
+            "children": [],
+            "title": "Declarations",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 18.0,
+              "observation_ids": [
+                "p11_l29"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p11_l30",
+            "type": "acknowledgements",
+            "page_start": 11,
+            "page_end": 12,
+            "children": [
+              {
+                "id": "unidentified_p11_2",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "We thank Enke Liu, Yan Zhang and Gang Su for helpful discussions. The work is supported by grants\nfrom the National Natural Science Foundation of China (61888102, 51771224, 52022105, 11974422,\n12104313), the National Key Research and Development Projects of China (2018YFA0305800,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l31",
+                    "p11_l32",
+                    "p11_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p11_3",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "Page 11/20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l34"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p12_1",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "2019YFA0308500, and 2018YFE0202700), the Chinese Academy of Sciences (ZDBS-SSW-WHC001,\nXDB33030000, XDB30000000, XDB30010000).\nAuthor Contributions: H.-J.G. designed the project. H.T.Y., S.H.L. and K.Z. prepared the samples. S.H.L.,\nJ.H., and H.T.Y. performed the magnetization measurements. S.H.L., H.G., G.X., Q.Z.C., Q.Q. and H.T.Y.\nperformed the transport experiments. Y.L., H.C., Q.Z. and L.H. performed the STM and nc-AFM\nexperiments with the guidance of H.-J.G. R.G. and W.Z. performed the STEM experiments. J.G.Y, L.Z. and\nX.J.Z. perform the ARPES experiments. All authors participated in the data analysis and manuscript\nwriting.\nCompeting Interests: The authors declare that they have no competing interests.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l1",
+                    "p12_l2",
+                    "p12_l3",
+                    "p12_l4",
+                    "p12_l5",
+                    "p12_l6",
+                    "p12_l7",
+                    "p12_l8",
+                    "p12_l9"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Acknowledgements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p11_l30"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p12_l10",
+            "type": "data_availability",
+            "page_start": 12,
+            "page_end": 12,
+            "children": [
+              {
+                "id": "unidentified_p12_2",
+                "type": "custom",
+                "page_start": 12,
+                "page_end": 12,
+                "children": [],
+                "text": "Data measured or analyzed during this study are available from the corresponding author on reasonable\nrequest.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p12_l11",
+                    "p12_l12"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Data availability",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p12_l10"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p12_l13",
+            "type": "references",
+            "page_start": 12,
+            "page_end": 20,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 18.0,
+              "observation_ids": [
+                "p12_l13"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p12_3",
+            "type": "custom",
+            "page_start": 12,
+            "page_end": 12,
+            "children": [],
+            "text": "1. Gao, A. et al. Layer Hall effect in a 2D topological axion antiferromagnet. Nature 595, 521-525\n(2021).\n2. Breunig, O. & Ando, Y. Opportunities in topological insulator devices. Nat. Rev. Phys. 4, 184-193\n(2021).\n3. He, Q. L. et al. Chiral Majorana fermion modes in a quantum anomalous Hall insulator-\nsuperconductor structure. Science 357, 294-299 (2017).\n4. Shen, J. L. et al. 33% Giant anomalous Hall current driven by both intrinsic and extrinsic\ncontributions in magnetic Weyl semimetal Co3Sn2S2. Adv.Funct.Mater.30, 200830 (2020).\n5. Kang, M. G. et al. Topological fiat bands in frustrated kagome lattice CoSn. Nat. Commun. 11, 4004\n(2020).\nfi. Tanaka, M. etal.Topological kagome magnet Co3Sn2S2 thin fiakes with high electron mobility and\nlarge anomalous Hall effect. Nano Lett. 20, 7476-7481 (2020).\n7. Wang, Q. etal.Large intrinsic anomalous Hall effect in half-metallic ferromagnet Co3Sn2S2 with\nmagnetic Weyl fermions. Nat. Commun. 9, 3681 (2018).\nfi. Liu, E. K. et al. Giant anomalous Hall effect in a ferromagnetic kagome-lattice semimetal. Nat. Phys.\n14, 1125-1131 (2018).\n9. Yin, J. X. etal.Quantum-limit Chern topological magnetism in TbMn6Sn6. Nature583, 533-536\n(2020).\n10. Bernevig, B. A., Felser, C. & Beidenkopf, H. Progress and prospects in magnetic topological\nmaterials. Nature 603, 41-51 (2022).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p12_l14",
+                "p12_l15",
+                "p12_l16",
+                "p12_l17",
+                "p12_l18",
+                "p12_l19",
+                "p12_l20",
+                "p12_l21",
+                "p12_l22",
+                "p12_l23",
+                "p12_l24",
+                "p12_l25",
+                "p12_l26",
+                "p12_l27",
+                "p12_l28",
+                "p12_l29",
+                "p12_l30",
+                "p12_l31",
+                "p12_l32",
+                "p12_l33"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p12_l13"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

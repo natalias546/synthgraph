@@ -1,0 +1,827 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        6
+      ],
+      "examples": [
+        "Absence of Acoustic Phonon Anomaly in a Kagome Metal with Short-ranged",
+        "Structural Modulation",
+        "Supplemental Material for “Absence of Acoustic Phonon Anomaly in a Kagome Metal"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 381,
+      "long_prose_lines": 45,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "Weiliang Yao,1 Supeng Liu,2 Zifan Xu,2 Daisuke Ishikawa,3,4 Zehao Wang,1 Bin Gao,1 Sijie Xu,1",
+        "Feng Ye,5 Kenichiro Hashimoto,2 Takasada Shibauchi,2 Alfred Q. R. Baron,3 and Pengcheng Dai1,6",
+        "Understanding the intertwined orders of charge-spin-"
+      ]
+    },
+    {
+      "font": "CMTI9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 5,
+      "pages": [
+        1,
+        5
+      ],
+      "examples": [
+        "1Department of Physics and Astronomy, Rice University, Houston, Texas 77005, USA",
+        "2Department of Advanced Materials Science, The University of Tokyo, Kashiwa, Chiba 277-8561, Japan",
+        "3Materials Dynamics Laboratory, RIKEN SPring-8 Center, RIKEN, Sayo, Hyogo 679-5148, Japan"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 249,
+      "long_prose_lines": 49,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "(Dated: October 23, 2024)",
+        "Kagome lattice AV3Sb5 (A = K, Rb, and Cs) superconductors without magnetism from vanadium",
+        "d-electronsareintriguingbecausetheyhaveanovelchargedensitywave(CDW)orderaround90K"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "4202",
+        "12",
+        "1v56461.0142:viXra"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "tcO"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]le-rts.tam-dnoc["
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 8.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "(a) (b)",
+        "(c) (d)"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 6.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 29,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "10",
+        "8",
+        "6"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 2.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        7
+      ],
+      "examples": [
+        ").u.a(",
+        ").u.a(",
+        ").u.a("
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "6"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 5.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "18 K",
+        "100 K",
+        "18 K"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        8
+      ],
+      "examples": [
+        "(a) (b)",
+        "(c) (d)",
+        "Energy (meV)"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "100",
+        "50",
+        "0"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "01"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 3.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "x"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 3.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "ytisnetnI",
+        "ytisnetnI",
+        "ytisnetnI"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 7.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Q1 = (3.25, 0, 0) 6",
+        "Q2 = (3, 0.25, 0)",
+        "5"
+      ]
+    },
+    {
+      "font": "DejaVuSans-Bold",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "a*"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "c* (3, 0, 0) 2 0 50 100"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 2.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "noitcarffiD"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 2.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        ").u.a("
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 3.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "ytisnetni"
+      ]
+    },
+    {
+      "font": "DejaVuSans-Bold",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Q2"
+      ]
+    },
+    {
+      "font": "DejaVuSans-Oblique",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "T*"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        8
+      ],
+      "examples": [
+        "3a c",
+        "i",
+        "i 1 − e−E/kBT"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 7.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 45,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "50",
+        "40",
+        "30"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        8
+      ],
+      "examples": [
+        ").u.a(",
+        ").u.a(",
+        ")E("
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 4.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        8
+      ],
+      "examples": [
+        "ytisnetni",
+        "ytisnetni"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        8
+      ],
+      "examples": [
+        "SXI",
+        "SXI"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "(a) (b)"
+      ]
+    },
+    {
+      "font": "DejaVuSans-Bold",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Q2 Q2"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Q3 60 Q3",
+        "Longitudinal",
+        "direction"
+      ]
+    },
+    {
+      "font": "Cmsy10",
+      "size": 1.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "00",
+        "00"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "18 K 2 18 K",
+        "300 K 300 K",
+        "TA Q3 TA (0.25, 0, -4)"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")Vem(",
+        ")Vem("
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        9
+      ],
+      "examples": [
+        "ygrenE",
+        "ygrenE",
+        ")Vem("
+      ]
+    },
+    {
+      "font": "CMBX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "ACKNOWLEDGMENTS",
+        "I. CSCR3SB5 SINGLE CRYSTAL SAMPLE",
+        "II. ADDITIONAL ELASTIC SCATTERING DATA"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Front view Side view",
+        "400",
+        "300"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 5.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Fobs"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "lacF",
+        "ytisnetnI",
+        "ytisnetnI"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 9.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "(a) (b)",
+        "(c)"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 31,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "500",
+        "400",
+        "300"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 5.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "(3, 0, 0)",
+        "(2, 0, 2) 80",
+        "Q1 18 K"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 7.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "(a) (b)",
+        "(c) (d)"
+      ]
+    },
+    {
+      "font": "CMEX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        8,
+        9
+      ],
+      "examples": [
+        "I(E) = Si(E) ∗ R(E) + aR(E),",
+        "χ′′(E)",
+        "S (E) = i ."
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "i (E2 − E2)2 + 4E2γ2"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "8",
+        "6",
+        "4"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "(a) (b)"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "15",
+        "10",
+        "5"
+      ]
+    },
+    {
+      "font": "DejaVuSans",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "ygrenE"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

@@ -1,0 +1,540 @@
+{
+  "source_sha256": "cc183a735f39766473d2a22006c6be91a2b32241bff0cd99fa7ffcc77af0b454",
+  "schema_sha256": "9b756d2cb803c07756ce13e73f0caae03d68a972bbe6506c6a8a34c380e94060",
+  "validation": {
+    "schema_valid": true,
+    "page_ranges_valid": true,
+    "unique_ids": true,
+    "nodes": 912
+  },
+  "coverage_complete": true,
+  "unowned_blocks": [],
+  "multiply_owned_blocks": {},
+  "observed_blocks": 1020,
+  "unidentified_nodes": [
+    "x000031",
+    "x000032",
+    "x000033",
+    "x000035",
+    "x000040",
+    "x000042",
+    "x000044",
+    "x000049",
+    "x000050",
+    "x000052",
+    "x000054",
+    "x000057",
+    "x000059",
+    "x000061",
+    "x000064",
+    "x000065",
+    "x000072",
+    "x000073",
+    "x000076",
+    "x000079",
+    "x000081",
+    "x000082",
+    "x000085",
+    "x000087",
+    "x000090",
+    "x000092",
+    "x000095",
+    "x000097",
+    "x000099",
+    "x000101",
+    "x000102",
+    "x000104",
+    "x000109",
+    "x000113",
+    "x000114",
+    "x000117",
+    "x000118",
+    "x000119",
+    "x000121",
+    "x000128",
+    "x000130",
+    "x000211",
+    "x000213",
+    "x000215",
+    "x000218",
+    "x000220",
+    "x000222",
+    "x000224",
+    "x000225",
+    "x000226",
+    "x000232",
+    "x000233",
+    "x000237",
+    "x000239",
+    "x000241",
+    "x000243",
+    "x000245",
+    "x000247",
+    "x000249",
+    "x000251",
+    "x000253",
+    "x000256",
+    "x000257",
+    "x000260",
+    "x000262",
+    "x000264",
+    "x000267",
+    "x000269",
+    "x000271",
+    "x000273",
+    "x000275",
+    "x000001",
+    "x000002",
+    "x000003",
+    "x000004",
+    "x000005",
+    "x000006",
+    "x000007",
+    "x000008",
+    "x000009",
+    "x000010",
+    "x000011",
+    "x000012",
+    "x000013",
+    "x000014",
+    "x000015",
+    "x000016",
+    "x000017",
+    "x000018",
+    "x000019",
+    "x000020",
+    "x000021",
+    "x000022",
+    "x000023",
+    "x000024",
+    "x000147",
+    "x000151",
+    "x000171",
+    "x000172",
+    "x000173",
+    "x000195",
+    "x000196",
+    "x000197",
+    "x000203"
+  ],
+  "type_counts": {
+    "article": 1,
+    "front_matter": 1,
+    "body": 1,
+    "section": 5,
+    "paragraph": 115,
+    "subsection": 65,
+    "subsubsection": 31,
+    "custom": 104,
+    "back_matter": 1,
+    "acknowledgements": 1,
+    "data_availability": 1,
+    "author_contributions": 1,
+    "competing_interests": 1,
+    "references": 1,
+    "reference": 45,
+    "citation": 45,
+    "citation_year": 43,
+    "authors": 43,
+    "author": 283,
+    "title": 34,
+    "citation_venue": 30,
+    "citation_volume": 30,
+    "citation_pages": 30
+  },
+  "layout": [
+    {
+      "page": 1,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 71
+    },
+    {
+      "page": 2,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 35
+    },
+    {
+      "page": 3,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 40
+    },
+    {
+      "page": 4,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 36
+    },
+    {
+      "page": 5,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 24
+    },
+    {
+      "page": 6,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 65
+    },
+    {
+      "page": 7,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 38
+    },
+    {
+      "page": 8,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 69
+    },
+    {
+      "page": 9,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 68
+    },
+    {
+      "page": 10,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 82
+    },
+    {
+      "page": 11,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 30
+    },
+    {
+      "page": 12,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 41
+    },
+    {
+      "page": 13,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 25
+    },
+    {
+      "page": 14,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 56
+    },
+    {
+      "page": 15,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 22
+    },
+    {
+      "page": 16,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 5
+    },
+    {
+      "page": 17,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 3
+    },
+    {
+      "page": 18,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 3
+    },
+    {
+      "page": 19,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 3
+    },
+    {
+      "page": 20,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 3
+    },
+    {
+      "page": 21,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 3
+    },
+    {
+      "page": 22,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 3
+    },
+    {
+      "page": 23,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 6
+    },
+    {
+      "page": 24,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 5
+    },
+    {
+      "page": 25,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 4
+    },
+    {
+      "page": 26,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 3
+    },
+    {
+      "page": 27,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 10
+    },
+    {
+      "page": 28,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 4
+    },
+    {
+      "page": 29,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 3
+    },
+    {
+      "page": 30,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "single_or_uncertain",
+      "band_count": 1,
+      "band_layouts": [
+        "spanning_or_single"
+      ],
+      "raw_line_count": 9
+    }
+  ],
+  "independently_verified_correct": false,
+  "reference_numbers": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "citations": {
+    "entries": 45,
+    "field_counts": {
+      "citation_year": 43,
+      "author": 283,
+      "title": 34,
+      "citation_venue": 30,
+      "citation_volume": 30,
+      "citation_pages": 30
+    },
+    "partial_entries": 15,
+    "all_require_review": true,
+    "policy": "Preserve raw text; parse literal spans; keep unsupported syntax unresolved; no bibliographic existence verification."
+  },
+  "association_policy": "Explicit references propose a parent; ambiguity stays unresolved; all relations require review."
+}

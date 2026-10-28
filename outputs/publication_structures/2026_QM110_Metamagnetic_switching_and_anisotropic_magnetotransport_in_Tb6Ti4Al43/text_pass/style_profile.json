@@ -1,0 +1,249 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Strong metamagnetic switching and anisotropic magnetotransport in the distorted",
+        "kagome magnet Tb6Ti4Al43"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 595,
+      "long_prose_lines": 2,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "examples": [
+        "Lipika1, Sneh1, Shobha Singh1, Ralf Koban2, Walter Schnelle2, Rie Umetsu3, and Kaustuv Manna1,∗",
+        "Kagome lattices have attracted significant attention",
+        "in magnetic systems due to their unique geometry of"
+      ]
+    },
+    {
+      "font": "CMTI9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 3,
+      "pages": [
+        1,
+        12
+      ],
+      "examples": [
+        "1Department of Physics, Indian Institute of Technology Delhi, Hauz Khas, New Delhi, India 110016",
+        "2 Max-Planck-Institute for Chemical Physics of Solids,No¨thnitzer Straße 40 01187 Dresden, Germany",
+        "3Department of Physics, Institute for Materials Research, Tohoku University, Sendai, Japan and"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 226,
+      "long_prose_lines": 33,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "examples": [
+        "(Dated: October 6, 2026)",
+        "Wereportacomprehensiveinvestigationofthemagnetic,electrical,andthermodynamicproper-",
+        "ties of single-crystalline Tb6Ti4Al43, in which Tb atoms form a distorted kagome lattice embedded"
+      ]
+    },
+    {
+      "font": "CMBX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        10
+      ],
+      "examples": [
+        "I. INTRODUCTION",
+        "II. EXPERIMENTAL DETAILS",
+        "IV. CONCLUSION"
+      ]
+    },
+    {
+      "font": "NimbusRoman-Regular",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "5",
+        "1v23760.0162:viXra"
+      ]
+    },
+    {
+      "font": "NimbusRoman-Regular",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "tcO"
+      ]
+    },
+    {
+      "font": "NimbusRoman-Regular",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]le-rts.tam-dnoc["
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        8
+      ],
+      "examples": [
+        "eff",
+        "D 0",
+        "yx 2"
+      ]
+    },
+    {
+      "font": "CMEX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "�",
+        "� T �3 � ΘD/T x4ex",
+        "�ΘE"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Debye Θ (ex − 1)2",
+        "mag T′",
+        "0"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        8,
+        9
+      ],
+      "examples": [
+        "C (T) = 3NR",
+        "ρ (µ H) − ρ (−µ H)",
+        "ρyx = R0µ0H + RsM (6)"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "ρ = yx 0 yx 0 (5)"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "ρAyx = Aρxx + Bρ2xx (7)"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

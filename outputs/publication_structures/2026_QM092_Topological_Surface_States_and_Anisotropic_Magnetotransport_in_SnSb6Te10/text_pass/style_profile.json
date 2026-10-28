@@ -1,0 +1,961 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Topological Surface States and Anisotropic Magnetotransport in SnSb6Te10"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 462,
+      "long_prose_lines": 10,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "Mohit Mudgal,1,2 Subhajit Mandal,3 Bishal Das,3 Priyanka Meena,1,4 Amarjyoti Choudhury,5",
+        "Vishnu Kumar Tiwari,1 Yogendra Kumar,2 Vivek Kumar Malik,5 Tulika Maitra,5 Kiyohisa",
+        "Tanaka,6 Shinichiro Ideta,2 Kenya Shimada,2,7,8 Aftab Alam,3,∗ and Jayita Nayak1,†"
+      ]
+    },
+    {
+      "font": "CMTI9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 6,
+      "pages": [
+        1,
+        10
+      ],
+      "examples": [
+        "1Department of Physics, Indian Institute of Technology Kanpur, Kanpur 208016, India",
+        "2Research Institute for Synchrotron Radiation Science (HiSOR),",
+        "Hiroshima University, Higashi-Hiroshima 739-0046, Japan"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 317,
+      "long_prose_lines": 38,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "We have investigated the electronic structure and magnetotransport properties of SnSb6Te10 sin-",
+        "glecrystalsusingdensityfunctionaltheory(DFT),synchrotron-basedangle-resolvedphotoemission",
+        "spectroscopy(ARPES),andquantumtransportmeasurements. OurDFTcalculationsrevealaclear"
+      ]
+    },
+    {
+      "font": "CMBX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "I. INTRODUCTION",
+        "II. ELEMENTAL ANALYSIS AND CRYSTAL",
+        "STRUCTURE"
+      ]
+    },
+    {
+      "font": "CMR8",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "∗ aftab@iitb.ac.in",
+        "† jnayak@iitk.ac.in"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "yaM",
+        "13"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]ics-lrtm.tam-dnoc["
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 4.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "1 . 0",
+        "0 . 8",
+        "0 . 6"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 0.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 79,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        ").u.a(",
+        "ytisnetnI",
+        ")."
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 4.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "0 0 1 8 0 0 3 0 S i n g l e",
+        "C r y s t a l X R D",
+        "0 0 5 1"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "2 � ( d e g r e e )"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "( a ) ( b )",
+        "( c )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "� 2 = 1 . 7 5"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 5.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 23,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4,
+        6
+      ],
+      "examples": [
+        "Y o b s",
+        "Y c a l c",
+        "Y o b s - Y c a l c"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "2 � ( d e g r e e )"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        6
+      ],
+      "examples": [
+        "8",
+        "i=1",
+        "SdH 2πe F"
+      ]
+    },
+    {
+      "font": "CMEX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        6
+      ],
+      "examples": [
+        "�",
+        "� ℏ �",
+        "� � � � ��"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 5.4,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "H //ab",
+        "H //c",
+        "H //c"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 6.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "T (K )",
+        "H (T )",
+        "H (T )"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 5.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "9",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        6
+      ],
+      "examples": [
+        "mc.�",
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "m( xx �",
+        ")�����("
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "T (K )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "mc.��("
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "yx �",
+        "yx �"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "1.5",
+        "1.0 0.5",
+        "0.0"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "(a ) (b )",
+        "( c ) 2 . 0 ( d )"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 5.3,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "H //ab"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        5,
+        6
+      ],
+      "examples": [
+        "Rxx = R0 + βe−θ/T + γT2, (2)",
+        "ρ (H) − ρ (−H)",
+        "f = πk2 , (6)"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 7.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 25,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "0 . 1 2",
+        "0 . 0 9",
+        "0 . 0 6"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 7.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "��� �� �� �� �� 0 2 4 6 8 1 0",
+        "� � � � � � � � 0 5 1 0 1 5",
+        "� � �"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "F r e q u e n c y ( T )"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 11.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "( a ) 1 . 0 ( b )",
+        "( d )",
+        "( c )"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 7.2,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "H / / c",
+        "H / / a b"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "H ( T )",
+        "H ( T )",
+        "1 / H ( T - 1 )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 3.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "Symbol",
+      "size": 0.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6
+      ],
+      "examples": [
+        "μ (",
+        "Δ",
+        "Δ"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 0.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "R",
+        "xx",
+        "x"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 7.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "7",
+        "6",
+        "5"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6
+      ],
+      "examples": [
+        "xy 2",
+        "xx 2",
+        "ϕ ϕ"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 5.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "� � ��",
+        "� � ��",
+        "� � ��"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "�",
+        "�"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "H ( T )",
+        "H ( T )"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "( a ) 0 . 0 2 K ( b )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "� � �",
+        "� � �",
+        "� � �"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 24,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "0 6 0 1 2 0",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "��"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "�",
+        "�"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 6.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "0 . 8",
+        "0 . 6",
+        "0 . 4"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "0 . 8",
+        "0 . 6",
+        "0 . 4"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 4.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "� ( d e g ) �� 2"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "H ( T )",
+        "0 . 0 9 2",
+        "0 . 0 0 0"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 6.2,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "n h"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 8.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "� ( d e g )",
+        "� ( d e g )",
+        "� � � � � 0 5 1 0"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "0 .0 0 � (d e g )"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 10.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "H ( T )"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 13.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "( a ) ( c )",
+        "( b )",
+        "( d )"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

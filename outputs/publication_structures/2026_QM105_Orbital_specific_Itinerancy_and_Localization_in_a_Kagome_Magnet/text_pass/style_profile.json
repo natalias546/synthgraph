@@ -1,0 +1,317 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Orbital-specific Itinerancy and Localization in a Kagome Magnet"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 405,
+      "long_prose_lines": 10,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "S. V. Streltsov,1,2,∗ H. Y. Huang,3 A. Ushakov,1 C. I. Wu,4 A. Singh,3 J. Su,3 J. Okamoto,3 C.",
+        "T. Chen,3 K. Wang,5 A. I. Poteryaev,1,2 S-W. Cheong,5 A. Fujimori,3,6,7 and D. J. Huang3,8,9,†",
+        "Strong electron correlations play an important role in"
+      ]
+    },
+    {
+      "font": "CMTI9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 6,
+      "pages": [
+        1,
+        7
+      ],
+      "examples": [
+        "1Institute of Metal Physics, S. Kovalevskaya Street 18, 620990 Ekaterinburg, Russia",
+        "2Department of theoretical physics and applied mathematics,",
+        "Ural Federal University, Mira St. 19, 620002 Ekaterinburg, Russia"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 248,
+      "long_prose_lines": 16,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "The kagome lattice naturally hosts flat bands, Dirac fermions, and van Hove singularities, yet",
+        "whetheritsgeometrycanstabilizeorbital-selectivephases—ahallmarkofHund’sphysicsinmulti-",
+        "orbital correlated systems — has remained an open question. Here, we combine resonant inelastic"
+      ]
+    },
+    {
+      "font": "CMTI8",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "∗ streltsov@imp.uran.ru",
+        "† djhuang@nsrrc.org.tw"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "22",
+        "1v30212.3062:viXra"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "raM"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]le-rts.tam-dnoc["
+      ]
+    },
+    {
+      "font": "CMBX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        5,
+        6
+      ],
+      "examples": [
+        "RESULTS",
+        "RIXS excitations",
+        "Multiplet calculations"
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 9.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "6",
+        "5",
+        "4"
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ")Ve("
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "ssol"
+      ]
+    },
+    {
+      "font": "Helvetica",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "ygrenE"
+      ]
+    },
+    {
+      "font": "CMBX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "FIG. 2. Calculated RIXS spectra obtained using",
+        "ligand-field multiplet calculations. The calculations were"
+      ]
+    },
+    {
+      "font": "CMEX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "TABLE I. Local (instant) magnetic moment measured as effects are included in DMFT but it is even enhanced by"
+      ]
+    },
+    {
+      "font": "CMEX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "m z = ⟨M z 2⟩ and probability of different electronic configu- Hund’scoupling. Indeed,alreadyDMFTcalculationsfor"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Hˆdc"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "= U�(ndmft"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

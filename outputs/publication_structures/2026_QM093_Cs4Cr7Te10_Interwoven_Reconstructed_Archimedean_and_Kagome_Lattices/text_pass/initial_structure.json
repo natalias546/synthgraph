@@ -1,0 +1,1773 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2026_QM093_Cs4Cr7Te10_Interwoven_Reconstructed_Archimedean_and_Kagome_Lattices.pdf",
+    "pages": 16,
+    "sha256": "e7084be1d87ac872f6e39bf2219a6a0faadba7bc18b355a12450a212c37d208f",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 12.0,
+    "body_font_family": "TimesNewRomanPSMT"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 16,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 16,
+        "children": [
+          {
+            "id": "heading_p1_l1",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "title": "Cs4Cr7Te10: Interwoven Reconstructed Archimedean and Kagome",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 16.0,
+              "observation_ids": [
+                "p1_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p1_l2",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [
+              {
+                "id": "unidentified_p1_1",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "Zhen Zhao1, Ruwen Wang1,2, Hua Zhang1,2, Tong Liu2, Haisen Liu1, Guojing Hu1, Ke Zhu1, Senhao Lv1,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l3"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p1_2",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "Gang Cao1, Chenyu Bai1,2, Hui Guo1,2, Xiaoli Dong1,2, Wu Zhou2*, Haitao Yang1,2*, and Hong-Jun Gao1,2*",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l4"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Lattices with a Possible Phase Transition near 130 K",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 16.0,
+              "observation_ids": [
+                "p1_l2"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p1_l5",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [
+              {
+                "id": "unidentified_p1_3",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "Sciences, Beijing 100190, PR China",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "1 Beijing National Center for Condensed Matter Physics and Institute of Physics, Chinese Academy of",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p1_l5"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p1_l7",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 7,
+            "children": [
+              {
+                "id": "unidentified_p1_4",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "*Correspondence to: hjgao@iphy.ac.cn, htyang@iphy.ac.cn, wuzhou@ucas.ac.cn",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l8"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p2_1",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Chromium-based materials with complex lattice geometries provide an important platform for\ninvestigating correlated electronic and magnetic states. However, Cr-based compounds with\nunusual crystal geometries are still rarely reported. Here, we report a new Cr-based compound,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l1",
+                    "p2_l2",
+                    "p2_l3"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p2_2",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Cs4Cr7Te10, featuring interwoven Cr and Te sublattices that can be viewed as reconstructed\nnetworks derived from Archimedean 3.4.6.4 tiling and the kagome lattice, respectively. Transport\nmeasurements reveal the semiconducting nature in Cs4Cr7Te10. Magnetization measurements show\na weak anisotropy between H//b and H//ac planes, and uncover an anomaly near 130 K that is\ninsensitive to the applied magnetic fields. Specific-heat measurements further confirm this\ntransition, indicating its bulk thermodynamic nature. The associated entropy change is as small as\n0.41 J mol⁻¹ K⁻¹, ruling out a structural phase transition and pointing to a possible electronic and/or\nmagnetic phase transition. These results provide a new route for designing complex crystal\ngeometries and exploring their associated emergent phenomena.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l4",
+                    "p2_l5",
+                    "p2_l6",
+                    "p2_l7",
+                    "p2_l8",
+                    "p2_l9",
+                    "p2_l10",
+                    "p2_l11",
+                    "p2_l12"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p3_1",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Chromium (Cr)-based materials have attracted extensive interest in condensed matter physics and\nmaterials science due to their unique 3d electronic configuration and moderate electron correlation effects.\nThe partially filled d orbitals of Cr enable a wide variety of magnetic behaviors, including ferromagnetism,\nantiferromagnetism, and more complex spin orders. Meanwhile, the interplay between electron correlation\nand spin–orbit coupling in these systems provides a fertile platform for realizing novel topological\nquantum states. Both theoretical and experimental studies have demonstrated that Cr-based materials can\nhost a range of intriguing physical properties, such as spin-polarized transport, topological semimetal\nstates, and the quantum spin Hall effect. In low-dimensional systems, they are also capable of stabilizing\ntwo-dimensional magnetic order and supporting topological spin textures such as skyrmions, making them\nhighly promising for spintronic and quantum device applications. Therefore, exploring new Cr-based\ncompounds is of great importance for understanding the coupling between magnetism and topology.\nA wide range of exotic phenomena has been reported or predicted in these systems. For instance,\nHgCr2Se4 has been identified as ferromagnetic half-metals and further proposed as Chern semimetals\nhosting topologically protected Weyl fermions1,2. Layered and van der Waals Cr-based materials,\nincluding CrI3 and Cr2Ge2Te6, exhibit intrinsic two-dimensional magnetism down to the monolayer limit,\nopening new avenues for low-dimensional spintronic devices3,4. Meanwhile, Cr–Te compounds have\ndemonstrated robust room-temperature magnetism and the ability to host nontrivial spin textures such as\nskyrmions, accompanied by pronounced topological Hall effects5,6. In addition, kagome-lattice systems\nsuch as CsCr3Sb5 provide a fertile ground for studying the coexistence of flat bands, Dirac dispersions,\nand strong electronic correlations7,8. Beyond magnetism, certain Cr compounds such as K2Cr3As3 also\ndisplay spin-triplet superconductivity, highlighting the competition and coexistence between different\nquantum orders9–11. Collectively, these findings demonstrate that Cr-based materials host a rich variety of\nemergent phenomena, making them promising candidates for both fundamental studies and future\nquantum technologies.\nFollowing the discovery of Cs3V9Te1312, we sought to further expand this material family through partial\natomic substitution. Beyond replacing the Cs atoms with other alkali metals, such as Rb, which led to the\nsuccessful synthesis of Rb3V9Te13 with semiconducting behavior, we also explored substitution at the\ntransition-metal site. Motivated by the rich magnetic properties of Cr and its close proximity to V in the\nperiodic table, we attempted to replace V with Cr. This effort led to the successful synthesis of a new Cr-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l1",
+                    "p3_l2",
+                    "p3_l3",
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6",
+                    "p3_l7",
+                    "p3_l8",
+                    "p3_l9",
+                    "p3_l10",
+                    "p3_l11",
+                    "p3_l12",
+                    "p3_l13",
+                    "p3_l14",
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17",
+                    "p3_l18",
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21",
+                    "p3_l22",
+                    "p3_l23",
+                    "p3_l24",
+                    "p3_l25",
+                    "p3_l26",
+                    "p3_l27",
+                    "p3_l28",
+                    "p3_l29"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p4_1",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "based compound, Cs4Cr7Te10. This material exhibits semiconducting transport behavior and a possible\nphase transition near 130 K without detectable long-range magnetic orders,. More importantly, its crystal\nstructure consists of two interwoven sublattices: a Cr network reconstructed from Archimedean 3.4.6.4\ntiling and a Te network reconstructed from the kagome lattice, providing a new structural platform for\nexploring the relationship between the lattice reconstruction and emergent physical properties.\nSingle crystals of Cs4Cr7Te10 were synthesized by a self-flux method similar to our recent synthesis\nmethod for Cs3V9Te1312. The crystal structure was determined by the single-crystal X-ray diffraction.\nCs4Cr7Te10 crystallizes in a monoclinic structure with the space group C2/m (No. 12). The refined lattice\nparameters are a = 10.2883(18) Å, b = 17.247(3) Å, and c = 7.7082(12) Å, with α = 90°, β = 97.589(5) °,\nand γ = 90°. Further crystallographic details, including structural parameters and atomic coordinates, are\nprovided in Tables S1–S4. As illustrated in Fig. 1a, the Cr atoms form a complex sublattice built from\ntriangle- and quadrilateral-based motifs. For clarity, this Cr framework can be understood as a\nreconstructed lattice derived from the Archimedean 3.4.6.4 tiling (Fig. S1), formed through the bond\nbreaking and subsequent lattice sliding. Te atoms, shown in Fig. 1b, form another distinct sublattice\ncomposed of triangles and octagons. Despite this modified connectivity, the Te network retains a clear\ngeometric relationship to the kagome lattice and can therefore be described as a reconstructed kagome\nlattice generated through a similar process of the bond breaking and lattice sliding from a parent kagome\nnetwork (Fig. S2). Notably, the crystal structure of Cs4Cr7Te10 consists of two interwoven reconstructed\nsublattices derived from distinct parent geometries but sharing a common reconstruction mechanism.\nAccordingly, the Cr and Te sublattices can be described as a split-intercalated Archimedean lattice and a\nsplit-intercalated kagome lattice, respectively. To the best of our knowledge, this type of atomic sublattice\nhas not been reported previously. The lattice geometry of a crystal plays a central role in governing\nelectronic correlations. In most cases, atomic networks tend to adopt highly symmetric motifs, such as\nhoneycomb, kagome, or Lieb lattices, which are generally associated with an enhanced structural stability.\nIn Cs4Cr7Te10, however, the system stabilizes an unusually complex and distorted lattice geometry with\nthe reduced symmetry. The emergence of such a structurally intricate framework expands the range of\naccessible crystal architectures, provides a new avenue for materials design and exploration, and may offer\na novel structural platform for investigating the geometrical frustration and related emergent phenomena.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l1",
+                    "p4_l2",
+                    "p4_l3",
+                    "p4_l4",
+                    "p4_l5",
+                    "p4_l6",
+                    "p4_l7",
+                    "p4_l8",
+                    "p4_l9",
+                    "p4_l10",
+                    "p4_l11",
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15",
+                    "p4_l16",
+                    "p4_l17",
+                    "p4_l18",
+                    "p4_l19",
+                    "p4_l20",
+                    "p4_l21",
+                    "p4_l22",
+                    "p4_l23",
+                    "p4_l24",
+                    "p4_l25",
+                    "p4_l26",
+                    "p4_l27",
+                    "p4_l28"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "An optical image of a typical crystal is shown in the inset of Fig. 2a. The crystal naturally forms a\nhexagonal prismatic shape and can be mechanically exfoliated along one pair of side facets. The XRD\npattern collected from the exfoliated surface is shown in Fig. 2a. The diffraction peaks can be indexed to\nthe (0l0) family of planes, indicating that the exposed surface corresponds to the ac plane. Energy-\ndispersive spectroscopy (EDS) result, as shown in Fig. 2b, yields a semi-quantitative composition of Cs:\nCr: Te = 3.8: 7: 9.6, which is consistent with the stoichiometric ratio of Cs4Cr7Te10. To further verify the\nnovel structure, atomic-resolution STEM characterization was carried out. As shown in Fig. 2c-d, the\nexperimental HAADF-STEM images clearly resolve the layered structure, and the projected atomic\nmodels match well with the experimental images. The consistency between the projected structural model\nand the experimental atomic image further supports the validity of the proposed crystal structure.\nMoreover, the FFT pattern agrees well with the simulated electron diffraction pattern along the [001] zone\naxis, confirming the viewing direction. No discernible defects, impurities, or other structural\ninhomogeneities are observed, indicating the high quality of the sample. Therefore, these combined results\nestablish Cs4Cr7Te10 as a newly synthesized compound with a previously unreported crystal structure. It\nis worth noting that the sample is highly unstable and rapidly degrades upon exposure to air, much similar\nto that observed in our previously-reported kagome metal CsTi3Bi513–15.\nAfter the synthesis of the Cs4Cr7Te10 single crystal, we carried out electrical transport measurements as\na first characterization. As shown in Fig. S3, the temperature-dependent resistivity, ρ(T), indicates that\nCs4Cr7Te10 exhibits semiconducting behavior, with the resistivity increasing upon cooling. The resistivity\nincreases markedly from 1.7 Ω·m at room temperature to 832 Ω·m at 10 K. To rule out the possibility that\nthe observed semiconducting behavior is extrinsic and caused by the sample degradation, we repeated the\nmeasurement on several different crystals and obtained consistent results, thereby confirming the intrinsic\nsemiconducting nature of Cs4Cr7Te10.\nAs the presence of Cr naturally raises the possibility of magnetic ordering, we performed magnetization\nmeasurements with the magnetic field applied both along the b axis (H//b) and parallel to the ac plane\n(H//ac plane). The magnetic properties of Cs4Cr7Te10 were first investigated by temperature-dependent\nmagnetic susceptibility measurements. As shown in Fig. 3a, the magnetic susceptibility measured under\nH // b at 0.1 T shows no pronounced bifurcation between the zero-field-cooled (ZFC) and field-cooled\n(FC) curves, indicating the absence of long-range ferromagnetic ordering. Overall, the susceptibility",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l1",
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12",
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16",
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22",
+                    "p5_l23",
+                    "p5_l24",
+                    "p5_l25",
+                    "p5_l26",
+                    "p5_l27",
+                    "p5_l28",
+                    "p5_l29"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "increases upon cooling and exhibits predominantly paramagnetic-like behavior over the measured\ntemperature range, with a kink appearing near 130 K. An enlarged view in Fig. 3b highlights this anomaly\nat T = 130 K. To further investigate its field dependence, additional measurements were carried out under\napplied fields of 1 T and 5 T. The transition temperature shows no apparent shift with increasing magnetic\nfields, indicating that the anomaly is robust against the applied magnetic fields. This behavior suggests\nthat the feature is intrinsic in origin and may be associated with a phase transition, such as a density-wave\ninstability16.\nFor comparison, the in-plane magnetic susceptibility measured with H // ac plane is shown in Fig. 3c-\nd. Similar to the out-of-plane data, no obvious ZFC–FC splitting is observed, further supporting the\nabsence of long-range ferromagnetic ordering. The susceptibility increases monotonically upon cooling,\ncharacteristic of a paramagnetic-like response. A weak anomaly remains discernible near 130 K in the in-\nplane data, confirming that this feature is intrinsic to the bulk material. However, compared with the H //\nb configuration, the anomaly is significantly weaker and appears only as a subtle change in slope across\n130 K, indicating a weak magnetic anisotropy in Cs4Cr7Te10. To gain the additional insight, we performed\nisothermal magnetization measurements, as shown in Fig. S4. A nearly linear field dependence is observed\nover the entire magnetic-field range, without detectable hysteresis loops, ruling out the existence of\nferromagnetism. This result is consistent with the temperature-dependent magnetization measurements.\nOverall, these results suggest that Cs4Cr7Te10 does not host the long-range magnetic ordering down to low\ntemperatures. Instead, the presence of a weak anomaly around 130 K may point to a possible phase\ntransition, potentially associated with subtle changes in the electronic structure or short-range magnetic\ncorrelations. Interestingly, this behavior bears resemblance to that observed in our recently reported\nheavy-fermion material Cs3V9Te1312.\nTo further clarify the anomaly observed in the magnetic measurements, specific-heat measurements\nwere carried out on Cs4Cr7Te10, as shown in Fig. 4. The specific heat varies smoothly with temperatures\nover the whole measured range and does not exhibit a pronounced lambda-type anomaly, indicating the\nabsence of a conventional bulk long-range phase transition. However, a weak feature is clearly resolved\nnear 130 K, in good agreement with the anomaly observed in the magnetic susceptibility. As further shown\nin the inset, the specific heat data collected under 0 T and 5 T nearly overlap, without noticeable field-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l1",
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10",
+                    "p6_l11",
+                    "p6_l12",
+                    "p6_l13",
+                    "p6_l14",
+                    "p6_l15",
+                    "p6_l16",
+                    "p6_l17",
+                    "p6_l18",
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24",
+                    "p6_l25",
+                    "p6_l26",
+                    "p6_l27",
+                    "p6_l28"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_1",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "induced changes. This result suggests that the transition is insensitive to the applied magnetic fields, which\nis consistent with the magnetic measurements.\nThe Debye temperature was estimated from the linear fitting of the low-temperature specific-heat data\nin the C/T versus T2 plot (Fig. 4b). The fitted β value is 0.0415 J mol-1 K-4, corresponding to a Debye\ntemperature of 99 K. By subtracting the background, the entropy change associated with the anomaly at\n130 K was determined to be 0.41 J mol-1 K-1, as shown in Fig. 4c and 4d. Such a small entropy change is\nunlikely to be associated with a structural phase transition, in agreement with the temperature-dependent\nXRD results in Fig. S5.\nIn summary, we have synthesized a new layered Cr-based compound, Cs4Cr7Te10, which hosts an\nunusual lattice architecture composed of interwoven reconstructed Cr and Te sublattices derived from\nArchimedean 3.4.6.4 tiling and the kagome lattice, respectively. Structural characterization reveals an\narchitecture with intertwined atomic motifs, suggesting a potential platform for geometrical frustration\nand correlated electronic behavior. Transport measurements reveal the semiconducting nature over a wide\ntemperature range. Magnetic susceptibility shows an overall paramagnetic-like response without the long-\nrange ferromagnetic ordering. A weak anomaly is observed near 130 K, which is insensitive to applied\nmagnetic fields. Specific heat results further confirm the existence of a bulk transition at 130 K, although\nthe absence of a pronounced lambda-type anomaly and the small associated entropy change indicate that\nthis transition is not of the conventional long-range magnetic or structural origin. Taken together, these\nresults present that Cs4Cr7Te10 exhibits a non-structural transition near 130 K, pointing to a possible\ndensity-wave transition. Therefore, Cs4Cr7Te10 provides a new platform for exploring the interplay\nbetween lattice complexity, electronic correlations, and emergent phenomena.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l1",
+                    "p7_l2",
+                    "p7_l3",
+                    "p7_l4",
+                    "p7_l5",
+                    "p7_l6",
+                    "p7_l7",
+                    "p7_l8",
+                    "p7_l9",
+                    "p7_l10",
+                    "p7_l11",
+                    "p7_l12",
+                    "p7_l13",
+                    "p7_l14",
+                    "p7_l15",
+                    "p7_l16",
+                    "p7_l17",
+                    "p7_l18",
+                    "p7_l19",
+                    "p7_l20",
+                    "p7_l21"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "2 School of Physical Sciences, University of Chinese Academy of Sciences, Beijing 100190, PR China",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p1_l7"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p14_l1",
+            "type": "section",
+            "page_start": 14,
+            "page_end": 16,
+            "children": [
+              {
+                "id": "unidentified_p14_1",
+                "type": "custom",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "text": "Table S1. Sample and crystal data for Cs4Cr7Te10.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p14_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "heading_p14_l3",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "Chemical formula Cs4Cr7Te10",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l3"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l4",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "Formula weight",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l4"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l5",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "Temperature",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l5"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l6",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "Wavelength",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l6"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l7",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "Crystal size",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l7"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l8",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "Crystal system",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l8"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l9",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [
+                  {
+                    "id": "unidentified_p14_2",
+                    "type": "custom",
+                    "page_start": 14,
+                    "page_end": 14,
+                    "children": [],
+                    "text": "a (Å)\nb (Å)\nc (Å)\nα (°)\nβ (°)\nγ (°)",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p14_l10",
+                        "p14_l11",
+                        "p14_l12",
+                        "p14_l13",
+                        "p14_l14",
+                        "p14_l15"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Space group",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l9"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l16",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [
+                  {
+                    "id": "unidentified_p14_3",
+                    "type": "custom",
+                    "page_start": 14,
+                    "page_end": 14,
+                    "children": [],
+                    "text": "Z",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p14_l17"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Volume (Å³)",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l16"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l18",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "Density (calculated)",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l18"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l19",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "Absorption coefficient",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l19"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l20",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "F(000)",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l20"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l21",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [
+                  {
+                    "id": "unidentified_p14_4",
+                    "type": "custom",
+                    "page_start": 14,
+                    "page_end": 14,
+                    "children": [],
+                    "text": "302(2) K\n0.71073 Å",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p14_l22",
+                        "p14_l23"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "2171.64 g/mol",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l21"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l24",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [
+                  {
+                    "id": "unidentified_p14_5",
+                    "type": "custom",
+                    "page_start": 14,
+                    "page_end": 14,
+                    "children": [],
+                    "text": "monoclinic",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p14_l25"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "0.024 x 0.169 x 0.594 mm",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l24"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l26",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [
+                  {
+                    "id": "unidentified_p14_6",
+                    "type": "custom",
+                    "page_start": 14,
+                    "page_end": 14,
+                    "children": [],
+                    "text": "10.2883(18)\n17.247(3)\n7.7082(12)\n90\n97.589(5)\n90\n1355.8(4)\n2",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p14_l27",
+                        "p14_l28",
+                        "p14_l29",
+                        "p14_l30",
+                        "p14_l31",
+                        "p14_l32",
+                        "p14_l33",
+                        "p14_l34"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "C 1 2/m 1",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l26"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l35",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 14,
+                "children": [],
+                "title": "5.319 g/cm³",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l35"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p14_l36",
+                "type": "subsection",
+                "page_start": 14,
+                "page_end": 15,
+                "children": [
+                  {
+                    "id": "unidentified_p14_7",
+                    "type": "custom",
+                    "page_start": 14,
+                    "page_end": 14,
+                    "children": [],
+                    "text": "1816",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p14_l37"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p15_1",
+                    "type": "custom",
+                    "page_start": 15,
+                    "page_end": 15,
+                    "children": [],
+                    "text": "Table S2. Data collection and structure refinement for Cs4Cr7Te10.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p15_l1"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "18.525 mm⁻¹",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p14_l36"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l2",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Parameter Value",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l2"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l3",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Theta range for data collection",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l3"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l4",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Index ranges",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l4"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l5",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Reflections collected",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l5"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l6",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Independent reflections",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l6"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l7",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Max. and min. transmission",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l7"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l8",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Refinement method",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l8"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l9",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Refinement program",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l9"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l10",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Function minimized",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l10"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l11",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Data / restraints / parameters",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l11"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l12",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Goodness-of-fit on F²",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l12"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l13",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Final R indices (I>2σ(I))",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l13"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l14",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Final R indices (all data)",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l14"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l15",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Weighting scheme",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l15"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l16",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Largest diff. peak and hole",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l16"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l17",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "R.M.S. deviation from mean",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l17"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l18",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [
+                  {
+                    "id": "unidentified_p15_2",
+                    "type": "custom",
+                    "page_start": 15,
+                    "page_end": 15,
+                    "children": [],
+                    "text": "-13<=h<=13, -22<=k<=22, -\n10<=l<=10\n8412\n1742 [R(int)=0.0520]",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p15_l19",
+                        "p15_l20",
+                        "p15_l21",
+                        "p15_l22"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "2.32 to 28.32°",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l18"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l23",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "0.6650 and 0.0320",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l23"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l24",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "Full-matrix least-squares on F²",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l24"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l25",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "SHELXL-2019/1",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l25"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l26",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [
+                  {
+                    "id": "unidentified_p15_3",
+                    "type": "custom",
+                    "page_start": 15,
+                    "page_end": 15,
+                    "children": [],
+                    "text": "1742 / 0 / 57\n1.068",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p15_l27",
+                        "p15_l28"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Σ w(Fo² - Fc²)²",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l26"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l29",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "R1=0.0550, wR2=0.1678",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l29"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l30",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [
+                  {
+                    "id": "unidentified_p15_4",
+                    "type": "custom",
+                    "page_start": 15,
+                    "page_end": 15,
+                    "children": [],
+                    "text": "w=1/[σ²(Fo²)+(0.1229P)²+38.4958P],",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p15_l31"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "R1=0.0589, wR2=0.1737",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l30"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l32",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "P=(Fo²+2Fc²)/3",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l32"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l33",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "title": "3.572 and -2.500 eÅ⁻³",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l33"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p15_l34",
+                "type": "subsection",
+                "page_start": 15,
+                "page_end": 16,
+                "children": [
+                  {
+                    "id": "unidentified_p16_1",
+                    "type": "custom",
+                    "page_start": 16,
+                    "page_end": 16,
+                    "children": [],
+                    "text": "Table S3. Atomic coordinates and equivalent isotropic atomic displacement\nparameters (Å2) for Cs4Cr7Te10.\nAtom x/a y/b\nTe1 0.500000 0.60692(5)\nTe2 0.500000 0.39308(5)\nCs1 0.15760(9) 0.29443(6)\nTe03 0.16151(6) 0.39460(4)\nTe04 0.18561(9) 0.500000\nCr1 0.3055(2) 0.500000\nCr07 0.3073(2) 0.500000\nCr08 0.4552(2) 0.500000\nCr09 0.000000 0.500000\nz/c U(eq)\n0.500000 0.0182(3)\n0.000000 0.0180(3)\n0.23771(15) 0.0494(3)\n0.68623(9) 0.0196(2)\n0.19161(13) 0.0257(3)\n0.8921(3) 0.0167(5)\n0.5317(3) 0.0173(5)\n0.2417(3) 0.0171(5)\n0.500000 0.0346(10)\nTable S4. Anisotropic atomic displacement parameters (Å2) for Cs4Cr7Te10.\nAtom U11 U22 U33 U23 U13 U12\nTe1 0.0183(5) 0.0218(5)\nTe2 0.0193(5) 0.0191(5)\nCs1 0.0458(6) 0.0386(5)\nTe03 0.0162(4) 0.0212(4)\nTe04 0.0172(5) 0.0440(7)\nCr1 0.0143(9) 0.0213(10)\nCr07 0.0142(9) 0.0245(11)\nCr08 0.0170(10) 0.0223(11)\nCr09 0.0290(18) 0.0204(17)\n0.0148(5) 0.000000 0.0028(4) 0.000000\n0.0150(5) 0.000000 -0.0002(3) 0.000000\n0.0610(7) -0.0161(4) -0.0032(5) 0.0098(4)\n0.0208(4) 0.0012(2) -0.0002(3) -0.0013(2)\n0.0163(5) 0.000000 0.0030(4) 0.000000\n0.0140(10) 0.000000 -0.0001(8) 0.000000\n0.0137(10) 0.000000 0.0034(8) 0.000000\n0.0120(10) 0.000000 0.0021(8) 0.000000\n0.046(2) 0.000000 -0.0245(17) 0.000000\nThe anisotropic atomic displacement factor exponent takes the form: -2π2[h2a*2U11 + ... + 2hka*b*U12]",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p16_l1",
+                        "p16_l2",
+                        "p16_l3",
+                        "p16_l4",
+                        "p16_l5",
+                        "p16_l6",
+                        "p16_l7",
+                        "p16_l8",
+                        "p16_l9",
+                        "p16_l10",
+                        "p16_l11",
+                        "p16_l12",
+                        "p16_l13",
+                        "p16_l14",
+                        "p16_l15",
+                        "p16_l16",
+                        "p16_l17",
+                        "p16_l18",
+                        "p16_l19",
+                        "p16_l20",
+                        "p16_l21",
+                        "p16_l22",
+                        "p16_l23",
+                        "p16_l24",
+                        "p16_l25",
+                        "p16_l26",
+                        "p16_l27",
+                        "p16_l28",
+                        "p16_l29",
+                        "p16_l30",
+                        "p16_l31",
+                        "p16_l32",
+                        "p16_l33",
+                        "p16_l34",
+                        "p16_l35",
+                        "p16_l36",
+                        "p16_l37",
+                        "p16_l38",
+                        "p16_l39",
+                        "p16_l40",
+                        "p16_l41",
+                        "p16_l42",
+                        "p16_l43"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "0.668 eÅ⁻³",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 14.0,
+                  "observation_ids": [
+                    "p15_l34"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Supporting Information",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 16.0,
+              "observation_ids": [
+                "p14_l1"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 8,
+        "page_end": 16,
+        "children": [
+          {
+            "id": "heading_p8_l1",
+            "type": "references",
+            "page_start": 8,
+            "page_end": 13,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 14.0,
+              "observation_ids": [
+                "p8_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p8_1",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "1. Xu, G., Weng, H., Wang, Z., Dai, X. & Fang, Z. Chern semimetal and the quantized anomalous hall\neffect in HgCr2Se4. Phys. Rev. Lett. 107, 186806 (2011).\n2. Goldstein, L., Gibart, P. & Selmi, A. Transport properties of the ferromagnetic semiconductor\nHgCr2Se4. J. Appl. Phys. 49, 1474–1476 (1978).\n3. McGuire, M. A., Dixit, H., Cooper, V. R. & Sales, B. C. Coupling of crystal structure and magnetism\nin the layered, ferromagnetic insulator CrI3. Chem. Mater. 27, 612–620 (2015).\n4. Jiang, S., Li, L., Wang, Z., Mak, K. F. & Shan, J. Controlling magnetism in 2D CrI3 by electrostatic\ndoping. Nat. Nanotechnol. 13, 549–553 (2018).\n5. Saha, R. et al. Observation of néel-type skyrmions in acentric self-intercalated Cr1+δTe2. Nat.\nCommun. 13, 3965 (2022).\n6. Zhao, D. et al. Observation of unconventional anomalous Hall effect in epitaxial CrTe thin films.\nNano Res. 11, 3116–3121 (2018).\n7. Liu, Y. et al. Superconductivity under pressure in a chromium-based kagome metal. Nature 632,\n1032–1037 (2024).\n8. Xu, C. et al. Altermagnetic ground state in distorted kagome metal CsCr3Sb5. Nat. Commun. 16, 3114\n(2025).\n9. Yang, J. et al. Spin-triplet superconductivity in K2Cr3As3. Sci. Adv. 7, eabl4432 (2021).\n10. Tang, Z.-T. et al. Superconductivity in quasi-one-dimensional Cs2Cr3As3 with large interchain\ndistance. Sci. China Mater. 58, 16–20 (2015).\n11. Liu, T. et al. Superconductivity at 7.3 K in the 133-type Cr-based RbCr3As3 single crystals. EPL\n120, 27006 (2018).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p8_l2",
+                "p8_l3",
+                "p8_l4",
+                "p8_l5",
+                "p8_l6",
+                "p8_l7",
+                "p8_l8",
+                "p8_l9",
+                "p8_l10",
+                "p8_l11",
+                "p8_l12",
+                "p8_l13",
+                "p8_l14",
+                "p8_l15",
+                "p8_l16",
+                "p8_l17",
+                "p8_l18",
+                "p8_l19",
+                "p8_l20",
+                "p8_l21",
+                "p8_l22"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p8_l1"
+            }
+          },
+          {
+            "id": "unidentified_p9_1",
+            "type": "custom",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [],
+            "text": "12. Zhao, Z. et al. Cs3V9Te13: a new vanadium-based material with a reuleaux-triangle-like lattice and a\npossible phase transition near 48 K. Preprint at https://doi.org/10.48550/arXiv.2603.16625 (2026).\n13. Yang, H. et al. Superconductivity and nematic order in a new titanium-based kagome metal\nCsTi3Bi5 without charge density wave order. Nat Commun 15, 9626 (2024).\n14. Yang, J. et al. Observation of flat band, dirac nodal lines and topological surface states in kagome\nsuperconductor CsTi3Bi5. Nat. Commun. 14, 4089 (2023).\n15. Hu, Y. et al. Non-trivial band topology and orbital-selective electronic nematicity in a titanium-\nbased kagome superconductor. Nature Physics 19, 1–7 (2023).\n16. Ortiz, B. R. et al. CsV3Sb5: a Z2 topological kagome metal with a superconducting ground state.\nPhys. Rev. Lett. 125, 247002 (2020).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p9_l1",
+                "p9_l2",
+                "p9_l3",
+                "p9_l4",
+                "p9_l5",
+                "p9_l6",
+                "p9_l7",
+                "p9_l8",
+                "p9_l9",
+                "p9_l10"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p8_l1"
+            }
+          },
+          {
+            "id": "unidentified_p10_1",
+            "type": "custom",
+            "page_start": 10,
+            "page_end": 10,
+            "children": [],
+            "text": "Figure 1. crystal structural motif of Cs4Cr7Te10.\n(a-b) Schematic crystal structure of Cs4Cr7Te10, with Cs atoms shown in blue, Cr atoms in red, and Te\natoms in yellow. The solid lines denote the unit cell.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p10_l1",
+                "p10_l2",
+                "p10_l3"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p8_l1"
+            }
+          },
+          {
+            "id": "unidentified_p11_1",
+            "type": "custom",
+            "page_start": 11,
+            "page_end": 11,
+            "children": [],
+            "text": "Figure 2. Structural characterization and compositional analysis of the Cs4Cr7Te10 crystal.\n(a) Single-crystal X-ray diffraction pattern of Cs4Cr7Te10, showing only (0l0) reflections consistent with\nits layered structure. The inset shows an optical image of a representative crystal. (b) EDS spectrum and\natomic percentage analysis of Cs4Cr7Te10, yielding a composition close to the nominal stoichiometry with\nCs: Cr: Te = 3.8: 7: 9.6.(c-d) Atomic-resolution HAADF-STEM image viewed, with the corresponding\nstructural model superimposed, where Cs, Cr, and Te atoms are represented by blue, red, and yellow\nspheres, respectively. (e) Fast Fourier transform (FFT) pattern derived from the STEM image, together\nwith the simulated electron diffraction pattern along the [001] direction.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p11_l1",
+                "p11_l2",
+                "p11_l3",
+                "p11_l4",
+                "p11_l5",
+                "p11_l6",
+                "p11_l7",
+                "p11_l8"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p8_l1"
+            }
+          },
+          {
+            "id": "unidentified_p12_1",
+            "type": "custom",
+            "page_start": 12,
+            "page_end": 12,
+            "children": [],
+            "text": "Figure 3. Temperature-dependent magnetic susceptibility of Cs4Cr7Te10.\n(a) Magnetic susceptibility (M/H) measured under μ0H = 0.1 T with the magnetic field applied along the\nb axis. (b) Enlarged view of M/H under different magnetic fields of 0.1 T, 1 T, and 5 T, revealing a weak\nanomaly near 130 K that is insensitive to the applied magnetic fields. (c) Magnetic susceptibility measured\nunder μ0H = 0.1 T with the magnetic field applied in the ac plane. (d) Enlarged view of M/H under different\nmagnetic fields of 0.1 T, 1 T, and 5 T, also revealing a weak anomaly near 130 K.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p12_l1",
+                "p12_l2",
+                "p12_l3",
+                "p12_l4",
+                "p12_l5",
+                "p12_l6"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p8_l1"
+            }
+          },
+          {
+            "id": "unidentified_p13_1",
+            "type": "custom",
+            "page_start": 13,
+            "page_end": 13,
+            "children": [],
+            "text": "Figure 4. Specific heat measurement of Cs4Cr7Te10.\n(a) Temperature dependence of specific heat C(T), with a weak feature near 130 K; inset compares\ndata measured under 0 T and 5 T. (b) Plot of C/T versus T2 at low temperatures. The dashed line\nrepresents a linear fit in the 2–6 K range using / = + T2, yielding β = 41.5 mJ mol-1 K-4. (c)\nTemperature dependence of ΔC/T after background subtraction, highlighting a weak anomaly around\n𝐶𝐶 𝑇𝑇 𝛾𝛾 𝛽𝛽\n130 K. (d) Temperature-dependent entropy changes S(T), indicating a small entropy release (~0.41 J\nmol⁻¹ K⁻¹) associated with the transition.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p13_l1",
+                "p13_l2",
+                "p13_l3",
+                "p13_l4",
+                "p13_l5",
+                "p13_l6",
+                "p13_l7",
+                "p13_l8"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p8_l1"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

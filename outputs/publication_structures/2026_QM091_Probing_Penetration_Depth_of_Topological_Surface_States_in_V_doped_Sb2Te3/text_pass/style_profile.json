@@ -1,0 +1,592 @@
+{
+  "body_size": 9.0,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Probing the Penetration Depth of Topological Surface States",
+        "by Magnetic Impurity Scattering in V-doped Sb2Te3"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 300,
+      "long_prose_lines": 17,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "examples": [
+        "Yidi Wang,1,∗ Zeyu Ma,2,∗ Pengcheng Chen,1 Shiang Fang,1 Yu Liu,1 Yau Chuen Yam,1",
+        "Christopher Eckberg,3 Joshua Samuel,3 Johnpierre Paglione,3,4 Mohammad Hamidian,1 Cyrus",
+        "Hirjibehedin,1,5 Daniel T. Larson,1 Efthimios Kaxiras,1,2 and Jennifer E. Hoffman1,2,†"
+      ]
+    },
+    {
+      "font": "CMTI9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 5,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Department of Physics, Harvard University, Cambridge, Massachusetts 02138, USA",
+        "2School of Engineering & Applied Sciences, Harvard University, Cambridge, Massachusetts 02138, USA",
+        "3Maryland Quantum Materials Center, Department of Physics, University of Maryland, College Park, Maryland 20742, USA"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 428,
+      "long_prose_lines": 31,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        11
+      ],
+      "examples": [
+        "(Dated: March 17, 2026)",
+        "TopologicalinsulatorshostDiracsurfacestates(SS)protectedbytime-reversalsymmetry. Inter-",
+        "surface hybridization can gap the SS and give rise to the quantum spin Hall effect in films that are"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "61",
+        "1v10651.3062:viXra"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "raM",
+        "]llah-sem.tam-dnoc["
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        9
+      ],
+      "examples": [
+        "a",
+        "a",
+        "d"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "vdW gap"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "reyal"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "elputniuq"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "4.2547 Å b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        9
+      ],
+      "examples": [
+        "Te",
+        "Sb",
+        "V"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "I",
+        "II"
+      ]
+    },
+    {
+      "font": "CMEX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        8
+      ],
+      "examples": [
+        "� sgn(n) � 2eℏv2 |n|B + ∆2, n = ±1, ±2, ...",
+        "WFD (L)= 1 � Nk N �bands� �ψ(iL) � � 2 , (S1)"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "En−ED = D ,"
+      ]
+    },
+    {
+      "font": "CMSY10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "√"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 68,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "6",
+        "4",
+        "2"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        ")V/An( Vd/Id",
+        "Vd/Id",
+        "Vd/Id"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ")Vem( E−E D",
+        "F"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "b0.3",
+        "0.2",
+        "0.1"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ")V/An("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Clean",
+        "V"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "II"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "2 Δ )V/An( 8"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        8
+      ],
+      "examples": [
+        "2 z B 2 s B",
+        "2 s B",
+        "avg Nk Nbands � k,b �"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        ").u.a(",
+        "(a.u.)"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "MHWF"
+      ]
+    },
+    {
+      "font": "CMSY9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "√"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")Vm(",
+        "ecnatsiD",
+        ")Vm("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "saib",
+        "saib"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")mn(",
+        "morf"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ecafrus"
+      ]
+    },
+    {
+      "font": "CMBX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        8,
+        10,
+        11
+      ],
+      "examples": [
+        "ACKNOWLEDGMENTS",
+        "EXPERIMENTAL METHODS",
+        "Single crystal growth"
+      ]
+    },
+    {
+      "font": "CMBX12",
+      "size": 14.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "Supplementary Information"
+      ]
+    },
+    {
+      "font": "CMR8",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 3,
+      "pages": [
+        10,
+        11
+      ],
+      "examples": [
+        "(a) Penetrationdepthλisk-dependent.",
+        "(a) vD decreasesfrom4.8×105 m/sfor3QLfilmsdownto4.1×105 m/sforbulk-like50QLfilms. Allvelocitymeasurementsarebelow",
+        "ED,becausetheemptystatesaboveED arenotaccessibleinARPES."
+      ]
+    },
+    {
+      "font": "CMMI9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "STM dI/dV"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "y 0.1 0.9 2−y 3 STM QPI –"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

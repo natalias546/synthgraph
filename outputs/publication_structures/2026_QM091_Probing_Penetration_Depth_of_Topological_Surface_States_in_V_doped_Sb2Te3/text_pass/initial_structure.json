@@ -1,0 +1,2774 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2026_QM091_Probing_Penetration_Depth_of_Topological_Surface_States_in_V_doped_Sb2Te3.pdf",
+    "pages": 11,
+    "sha256": "984b718d2e2f0ec9fe000c8cca4e358fda487b19a40c28c76cce94a1c557bc2f",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 9.0,
+    "body_font_family": "CMR9"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 11,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 11,
+        "children": [
+          {
+            "id": "unidentified_p1_1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Probing the Penetration Depth of Topological Surface States\nby Magnetic Impurity Scattering in V-doped Sb2Te3",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l1",
+                "p1_l2"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_2",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Yidi Wang,1,∗ Zeyu Ma,2,∗ Pengcheng Chen,1 Shiang Fang,1 Yu Liu,1 Yau Chuen Yam,1",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l3"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_3",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Christopher Eckberg,3 Joshua Samuel,3 Johnpierre Paglione,3,4 Mohammad Hamidian,1 Cyrus",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l4"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_4",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Hirjibehedin,1,5 Daniel T. Larson,1 Efthimios Kaxiras,1,2 and Jennifer E. Hoffman1,2,†\n1Department of Physics, Harvard University, Cambridge, Massachusetts 02138, USA\n2School of Engineering & Applied Sciences, Harvard University, Cambridge, Massachusetts 02138, USA\n3Maryland Quantum Materials Center, Department of Physics, University of Maryland, College Park, Maryland 20742, USA\n4Canadian Institute for Advanced Research, Toronto, Ontario M5G 1Z8, Canada\n5London Centre for Nanotechnology, University College London (UCL), London WC1H 0AH, United Kingdom\n(Dated: March 17, 2026)",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l5",
+                "p1_l6",
+                "p1_l7",
+                "p1_l8",
+                "p1_l9",
+                "p1_l10",
+                "p1_l11"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_5",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "TopologicalinsulatorshostDiracsurfacestates(SS)protectedbytime-reversalsymmetry. Inter-\nsurface hybridization can gap the SS and give rise to the quantum spin Hall effect in films that are\nsufficiently thin compared to the SS penetration depth. However, quantifying the SS penetration\ndepth typically requires painstaking synthesis of multiple films with varying thickness. Here we\nintroduceadirectmethodtoprobetheSSpenetrationdepthinbulkcrystals,bystudyingtheinter-\nplay between SS and magnetic impurities in (VxSb1−x)2Te3. Using scanning tunneling microscopy\nand spectroscopy, we find that even sparse magnetic impurities (≲ 0.25% vanadium) can gap the\nDiracSS.However,asingleVimpurityinducesonlylocalizedstates,anddoesnotformanimpurity\nband, so the gapped Dirac dispersion is preserved away from the impurity. In high magnetic fields,\nweobserveanenergyshiftofthe0th Landaulevelandasuppressionofquasiparticlelifetimeatthe\nDirac point, indicating magnetic scattering of the SS. Crucially, by employing V impurities at dif-\nferentdepthsasprecisescatteringprobes,werevealtheSSpenetrationdepthonthesub-nanometer\nscale in a bulk crystal.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l12",
+                "p1_l13",
+                "p1_l14",
+                "p1_l15",
+                "p1_l16",
+                "p1_l17",
+                "p1_l18",
+                "p1_l19",
+                "p1_l20",
+                "p1_l21",
+                "p1_l22",
+                "p1_l23",
+                "p1_l24"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_6",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Three-dimensional topological insulators (TIs) host ro-\nbust Dirac surface states (SS) whose spin-momentum\nlocking offers potential for applications ranging from\ndissipationless spintronics [1, 2] to fault-tolerant quan-\ntum computation [3, 4]. Characterizing the SS pen-\netration depth is essential for realizing and scaling\nthese applications. Beyond theoretical predictions [5–\n9], most experimental approximations of the SS pene-\ntration depth have relied on time-consuming molecular-\nbeam epitaxy (MBE) synthesis of multiple films with\nvarying thickness, followed by transport [10–13], angle-\nresolved photoemission spectroscopy (ARPES) [14–20],\nterahertz spectroscopy [21, 22], or scanning tunneling mi-\ncroscopy/spectroscopy (STM/S) [23, 24] measurements\nof thickness-dependent effects (Table I). Direct imaging\nof SS scattering from magnetic impurities in different",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l25",
+                "p1_l26",
+                "p1_l27",
+                "p1_l28",
+                "p1_l29",
+                "p1_l30",
+                "p1_l31",
+                "p1_l32",
+                "p1_l33",
+                "p1_l34",
+                "p1_l35",
+                "p1_l36",
+                "p1_l37",
+                "p1_l38",
+                "p1_l39",
+                "p1_l40"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_7",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "TI layers offers an alternative methodology to probe SS\ndepth. However, the interpretation of single impurity\neffects was complicated by their large concentration in\nprior imaging studies of Cr- and V-doped (Bi,Sb)2Te3\n[25–27].",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l41",
+                "p1_l42",
+                "p1_l43",
+                "p1_l44",
+                "p1_l45"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_8",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Here we introduce a direct probe of the SS penetration\ndepth through scattering from dilute magnetic impurities\nin (VxSb1−x)2Te3. We perform STM/S measurements at",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l46",
+                "p1_l47",
+                "p1_l48"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_9",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "T = 4.6 K to characterize the effects of isolated V impu-\nrities on topological SS. We find that V impurity states\nare spatially confined within ∼ 2 nm, far smaller than\nthe average V–V impurity separation, leaving clean re-\ngions where the SS are unobscured by an impurity band.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l49",
+                "p1_l50",
+                "p1_l51",
+                "p1_l52",
+                "p1_l53"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_10",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "At zero field, our dI/dV spectroscopy directly shows the\n6202\nraM\n61\n]llah-sem.tam-dnoc[\n1v10651.3062:viXra\nopening of a mass gap in the Dirac SS dispersion. In\nmagnetic fields up to 8 T, our Landau level (LL) spec-\ntroscopy reveals an energy shift of the 0th LL across the\nentire measured area, consistent with the zero-field gap.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l54",
+                "p1_l55",
+                "p1_l56",
+                "p1_l57",
+                "p1_l58",
+                "p1_l59",
+                "p1_l60",
+                "p1_l61",
+                "p1_l62",
+                "p1_l63"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_11",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "We also observe a suppression of quasiparticle lifetime\nnear the Dirac point (DP) energy ED, which we attribute\nto exchange scattering from V impurities. Furthermore,\nby analyzing this scattering from V impurities in differ-\nent atomic layers, we quantify the SS penetration depth\nin Sb2Te3 with sub-nanometer resolution, establishing\na generalizable approach for determining SS depth in a\nbroad range of topological materials.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l64",
+                "p1_l65",
+                "p1_l66",
+                "p1_l67",
+                "p1_l68",
+                "p1_l69",
+                "p1_l70",
+                "p1_l71"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_12",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Sb2Te3 has a quintuple-layer (QL) structure that\ncleaves at the van der Waals gap between two Te lay-\ners [Fig. 1(a)]. Single crystals were synthesized from ul-\ntrapure (≥ 99.999%) elemental Sb and Te via a self-flux\ntechnique, with nominal V doping 1% [29]. The STM\ntopography shows two primary defect types [Fig. 1(b)],\nwhich we identify as V dopants, distinguished from in-\ntrinsic SbTe defects by comparison with previous STM\nmeasurements on pristine samples [23, 27, 30]. At pos-\nitive sample bias, the two types appear as triangular\n(Type I) and flower-like (Type II), whereas at negative\nsample bias, both types are less visible [Fig. 1(c, d)]. By\ncounting the impurities on the surface, we find the V con-\ncentration of (0.23 ± 0.03)% in each Sb layer (Fig. S1).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l72",
+                "p1_l73",
+                "p1_l74",
+                "p1_l75",
+                "p1_l76",
+                "p1_l77",
+                "p1_l78",
+                "p1_l79",
+                "p1_l80",
+                "p1_l81",
+                "p1_l82",
+                "p1_l83",
+                "p1_l84",
+                "p1_l85"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_13",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Consistent with earlier studies [27, 31], we assign Type",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l86"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p1_14",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "I (II) impurities to the V atoms in the first (second) Sb\nlayer in the first QL. At our low concentration, the av-\nerage lateral distance between V atoms in a full QL (i.e.",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l87",
+                "p1_l88",
+                "p1_l89"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "unidentified_p2_1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "a\nvdW gap\nreyal\nelputniuq\n4.2547 Å b\nTe\nSb\nV\nI\nV\nII\n2\nc Type I d Type II\n+300 mV +300 mV\n1.0 Å",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p2_l1",
+                "p2_l2",
+                "p2_l3",
+                "p2_l4",
+                "p2_l5",
+                "p2_l6",
+                "p2_l7",
+                "p2_l8",
+                "p2_l9",
+                "p2_l10",
+                "p2_l11",
+                "p2_l12",
+                "p2_l13",
+                "p2_l14",
+                "p2_l15"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "heading_p2_l16",
+            "type": "section",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [
+              {
+                "id": "unidentified_p2_2",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "-300 mV -300 mV",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l17"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "1 nm 1 nm",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 8.1,
+              "observation_ids": [
+                "p2_l16"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p2_l18",
+            "type": "section",
+            "page_start": 2,
+            "page_end": 3,
+            "children": [
+              {
+                "id": "unidentified_p2_3",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "FIG. 1. Crystal structure and topography of (VxSb1−x)2Te3 with x ≈ 0.23±0.03%. (a) Crystal structure of Sb2Te3, with Type\nIandIIvanadiumimpuritiescoloredinredandorange, respectively. Thelatticeconstants, determinedbyx-raydiffractionat\n10K,area=b=4.2547(3)˚Aandc=30.268(3)˚A,correspondingto3QLs[28]. (b)A30×30nm2 STMtopographicimageof\na cleaved Te-terminated surface, with typical Type I and II impurities boxed in red and orange, respectively. (c) Topographic\nimagesofasingleTypeIimpurityatpositiveandnegativesamplebiases. (d)TopographicimagesofasingleTypeIIimpurity\nat positive and negative sample biases. STM setpoints: Vsample set\n= 300 mV, I = 100 pA in (b) and the top row of (c, d);\nVsample = −300 mV, Iset = 100 pA in the bottom row of (c, d).\nincluding both types) is 6 nm. Therefore, we can resolve\nintrinsic spectroscopy in clean areas without any V im-\npurity.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l19",
+                    "p2_l20",
+                    "p2_l21",
+                    "p2_l22",
+                    "p2_l23",
+                    "p2_l24",
+                    "p2_l25",
+                    "p2_l26",
+                    "p2_l27",
+                    "p2_l28",
+                    "p2_l29"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_4",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "To understand the impact of V impurities on the Dirac",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l30"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_5",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "SS, we first investigate the local density of states (LDOS)\nin a clean region of (VxSb1−x)2Te3. In general, differen-\ntial conductance (dI/dV ) is proportional to the LDOS as\na function of energy. In Fig. 2(a), we show a represen-\ntative dI/dV spectrum, at least 3 nm away from any V\nimpurity. The sharp increase below +110 mV and above\n+350 mV indicates the onset of bulk valence and con-\nduction bands, separated by a bulk energy gap Eg ∼ 240\nmeV. Fig. 2(b) shows high-resolution dI/dV within the\nbulk gap, revealing a non-zero energy gap 2∆ with ap-\nproximately linear energy dependence on either side of\nthe gap. The gap is centered at ED ∼ 176 mV above the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l31",
+                    "p2_l32",
+                    "p2_l33",
+                    "p2_l34",
+                    "p2_l35",
+                    "p2_l36",
+                    "p2_l37",
+                    "p2_l38",
+                    "p2_l39",
+                    "p2_l40",
+                    "p2_l41",
+                    "p2_l42"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_6",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Fermi level, consistent with previous STS measurements\nof the DP [30, 31]. For comparison, we apply density\nfunctional theory (DFT) to calculate the band structure\nof pristine Sb2Te3 for a 10 QL slab, using VASP with",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l43",
+                    "p2_l44",
+                    "p2_l45",
+                    "p2_l46"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_7",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Perdew-Burke Ernzerhof (PBE) pseudopotential [32–34]\n[Fig. 2(c)]. The agreement between DFT band structure\nand linearly dispersing dI/dV away from impurities in-\ndicates that the gapped Dirac SS dispersion is preserved\naway from the impurity.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l47",
+                    "p2_l48",
+                    "p2_l49",
+                    "p2_l50",
+                    "p2_l51"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_8",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "We then measure dI/dV locally on both types of V\nimpurity in Fig. 2(d). Type I impurity in the topmost",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l52",
+                    "p2_l53"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_9",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Sb layer shows one pronounced dI/dV peak at ∼ 240 mV,\nwhereas Type II impurity in the second Sb layer shows\npeaks at both ∼ 90 mV and ∼ 240 mV. Together with\na well-defined energy gap far from individual impurities,\nour measurements in the dilute-impurity regime supports\nthat a single V impurity induces only localized states, in\ncontrast to ∼0.75 % V-doped Sb2Te3, where the LDOS\nat the DP remains non-zero due to the formation of an\nin-gap impurity band [27].",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l54",
+                    "p2_l55",
+                    "p2_l56",
+                    "p2_l57",
+                    "p2_l58",
+                    "p2_l59",
+                    "p2_l60",
+                    "p2_l61",
+                    "p2_l62"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_10",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Having established a zero-field mass gap, we use Lan-\ndau level (LL) spectroscopy to further characterize the\ninteraction between V impurities and Dirac SS. Perpen-\ndicular magnetic field B condenses the Dirac SS into dis-\ncrete spectral peaks whose energies vary as the square\nroot of B [23], and under sufficiently large B, the quan-\ntized LL energies become:\n� sgn(n) � 2eℏv2 |n|B + ∆2, n = ±1, ±2, ...",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l63",
+                    "p2_l64",
+                    "p2_l65",
+                    "p2_l66",
+                    "p2_l67",
+                    "p2_l68",
+                    "p2_l69",
+                    "p2_l70"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_11",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "En−ED = D ,\n∆, n = 0\n(1)\nwhere n is the LL index , vD is the velocity of SS elec-\ntrons, and ∆ is the mass term from magnetic-impurity-\ninduced exchange scattering [26]. Fig. 3(a) displays\ndI/dV spectra in various B fields, measured far from\nany V impurity. We note that the 0th LL is shifted to a\nhigher energy compared to the position expected for the\nungapped SS, indicating a non-zero mass term.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l71",
+                    "p2_l72",
+                    "p2_l73",
+                    "p2_l74",
+                    "p2_l75",
+                    "p2_l76",
+                    "p2_l77",
+                    "p2_l78",
+                    "p2_l79",
+                    "p2_l80"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_12",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "We provide two independent arguments for the ex-\nchange scattering of Dirac SS from V impurities, based\non the non-zero mass term ∆ and the suppression of\nquasiparticle lifetime τ at the DP. First, we fit each",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l81",
+                    "p2_l82",
+                    "p2_l83",
+                    "p2_l84"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_13",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "LL spectrum, after background removal, as a sum of\nLorentzian functions and plot the nth LL energy vs.\n√\nnB in Fig. 3(b). We then determine ED from a lin-\near fit to the |n| ≥ 2 LLs, whose large spatial extension\n(> 20 nm) averages over local fluctuations of impurity\ndensity. Applying Eqn. 1, we extract ∆ from the 0th",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l85",
+                    "p2_l86",
+                    "p2_l87",
+                    "p2_l88",
+                    "p2_l89",
+                    "p2_l90",
+                    "p2_l91"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_14",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "LL, whose small spatial extension (∼ 9 nm) reflects lo-\ncal doping variations. From this procedure, we obtain a",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l92",
+                    "p2_l93"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_1",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "3\n6\n4\n2\n0\n-100 0 100 200 300 400",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l1",
+                    "p3_l2",
+                    "p3_l3",
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_2",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Sample bias (mV)\n)V/An( Vd/Id",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l7",
+                    "p3_l8"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_3",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "K Γ M\n)Vem( E−E D\na\n400\n200 0\n-200\n-400\nb0.3\n0.2\n0.1\n0\n120 160 200 240\n)V/An(",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l9",
+                    "p3_l10",
+                    "p3_l11",
+                    "p3_l12",
+                    "p3_l13",
+                    "p3_l14",
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17",
+                    "p3_l18",
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_4",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Vd/Id\nd",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l22",
+                    "p3_l23"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_5",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Clean\n-200-100 0 100 200 300 400 500\nSample bias (mV)\nVd/Id\nc\n0 2 4 6\nsqrt(nB) (T1/2)",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l24",
+                    "p3_l25",
+                    "p3_l26",
+                    "p3_l27",
+                    "p3_l28",
+                    "p3_l29",
+                    "p3_l30"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_6",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "V 12 I\nV\nII",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l31",
+                    "p3_l32",
+                    "p3_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "5 nm 0 1 nm 1 nm",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 8.1,
+              "observation_ids": [
+                "p2_l18"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p3_l34",
+            "type": "section",
+            "page_start": 3,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p3_7",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "4\n0",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l35",
+                    "p3_l36"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_8",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Sample bias (mV)\nFIG.2. Spectroscopicimagingofsurfaceandimpuritystates.\n(a) A typical differential conductance dI/dV spectrum ob-\ntained 3 nm away from the nearest V impurity. The bulk\nband edges are identified from the local maxima of the sec-\nond derivative, and are shaded in purple (valence band) and\norange (conduction band). (b) Zoomed view of the energy\nwindow within the bulk gap (dashed box in (a)), showing\na mass gap 2∆ at the DP and approximately linear disper-\nsions on both sides. Dashed lines and arrow indicate the gap\nsize and serve as guides to the eye. (c) DFT-calculated band\nstructure of a pristine Sb2Te3 slab with 10 QLs. The marker\nsize is proportional to the spectral weight projected onto the\ntopQLatoms. ThesurfaceDiracconeatΓconnectsthebulk\nvalenceandconductionbands. Here,purpleandorangeshad-\ningdenotesthesameenergyintervalsbelowandabovetheDP\nwhere measured bulk bands onset in (a). The bands next to\ntheDiracconesbetweentheshadedregionsdonotshowupin\nthemeasureddI/dV duetotheirlowsurfacespectralweight.\n(d) Average dI/dV spectra over a clean area (black), Type\nI impurity (red), and Type II impurity (orange). Setpoints:\nV =−100mV,I =500pA.Lock-inzero-to-peakam- sample set\nplitude Vexc = 2 mV in (a,b) and Vexc = 5 mV in (d).\nposition-dependent mass term ∆ ranging from approxi-\nmately 9 to 13 meV, with an estimated uncertainty of\n∼1.5meVarisingfromerrorsintheLLpeakfittingand\nthe linear fitting. The mass term consists of two parts:\n∆= 1JM /µ +1g µ B, where J is the strength of ex-\n2 z B 2 s B\nchange interaction between magnetic impurities and SS\nelectrons, Mz is the local magnetization in the z direc-\ntion, and gs is the Land´e factor of SS electrons. Under\nour applied magnetic fields, the Zeeman term 1g µ |B|\n2 s B\nis relatively small (<1 mV) [26], and therefore ∆ arises\nprimarily from the exchange interaction between polar-\nized V impurities and SS electrons. Since the size of the\nmasstermshouldincreasewithimpuritydensity[25,35],\nour result is consistent with the 16 meV mass term ob-\n)Vem(\n280 3.5\n260\n32..05 E−E F 222142080000\n160\n2.0\n1.5\n1.0\n0.5\n0 100 200 300\nSample bias (mV)\n).u.a(",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l37",
+                    "p3_l38",
+                    "p3_l39",
+                    "p3_l40",
+                    "p3_l41",
+                    "p3_l42",
+                    "p3_l43",
+                    "p3_l44",
+                    "p3_l45",
+                    "p3_l46",
+                    "p3_l47",
+                    "p3_l48",
+                    "p3_l49",
+                    "p3_l50",
+                    "p3_l51",
+                    "p3_l52",
+                    "p3_l53",
+                    "p3_l54",
+                    "p3_l55",
+                    "p3_l56",
+                    "p3_l57",
+                    "p3_l58",
+                    "p3_l59",
+                    "p3_l60",
+                    "p3_l61",
+                    "p3_l62",
+                    "p3_l63",
+                    "p3_l64",
+                    "p3_l65",
+                    "p3_l66",
+                    "p3_l67",
+                    "p3_l68",
+                    "p3_l69",
+                    "p3_l70",
+                    "p3_l71",
+                    "p3_l72",
+                    "p3_l73",
+                    "p3_l74",
+                    "p3_l75",
+                    "p3_l76",
+                    "p3_l77",
+                    "p3_l78",
+                    "p3_l79",
+                    "p3_l80",
+                    "p3_l81",
+                    "p3_l82",
+                    "p3_l83",
+                    "p3_l84",
+                    "p3_l85",
+                    "p3_l86",
+                    "p3_l87"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_9",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Vd/Id\na 8 T 3 T b\n7 T 2 T\n6 T 1 T 5\n4 5 T 0 T 3 2 1 n=0 -2-1\n150 200 250\nE−E (meV)\nF\n)Vem(\nMHWF\n8 T 7 T 6 T 5 T Linear fitting\nc\n20\n15\n10\n5\n0\nFIG. 3. Evidence of exchange scattering of Dirac SS. (a)\ndI/dV measurementofLandauquantizationinmagneticfield\nB upto8T,appliedperpendiculartothesurface. Spectraat\neachfieldaremeasuredatdifferentsamplelocationsbutallat\nleast3nmawayfromthenearestVimpurity. Thecurvesare\nshifted vertically for clarity. The gray dashed line indicates\nthe DP energy ED, which would be the field-independent 0th\nLL energy without mass acquisition. A clear shift of the 0th\nLL towards higher energy signals a mass gap opening in the\nDirac SS. (b) Extracted LL energies plotted as a function\n√\nof nB for spectra from 5–8 T. The dashed line shows a\nlinear fit to the |n| ≥ 2 LLs at high magnetic fields, which\nwe use to determine ED. The energy offset of the zeroth\nLL relative to this linear trend yields the mass term ∆. (c)\nFWHMoftheLLpeaksextractedfromthe5–8Tdatain(a).\nWe obtain the LL peak positions and widths by fitting the\nspectra, after background removal, with a sum of Lorentzian\nfunctions. The gray dashed line indicates ED, same as in (a).\nSetpoint: Vsample = −100 mV, Iset = 2 nA, lock-in zero-to-\npeak amplitude Vexc = 3 mV, which is smaller than the fitted\npeak width.\nserved in (V Sb ) Te with x∼0.75% [27]. x 1−x 2 3",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l88",
+                    "p3_l89",
+                    "p3_l90",
+                    "p3_l91",
+                    "p3_l92",
+                    "p3_l93",
+                    "p3_l94",
+                    "p3_l95",
+                    "p3_l96",
+                    "p3_l97",
+                    "p3_l98",
+                    "p3_l99",
+                    "p3_l100",
+                    "p3_l101",
+                    "p3_l102",
+                    "p3_l103",
+                    "p3_l104",
+                    "p3_l105",
+                    "p3_l106",
+                    "p3_l107",
+                    "p3_l108",
+                    "p3_l109",
+                    "p3_l110",
+                    "p3_l111",
+                    "p3_l112",
+                    "p3_l113",
+                    "p3_l114",
+                    "p3_l115",
+                    "p3_l116",
+                    "p3_l117",
+                    "p3_l118",
+                    "p3_l119",
+                    "p3_l120",
+                    "p3_l121",
+                    "p3_l122",
+                    "p3_l123",
+                    "p3_l124",
+                    "p3_l125",
+                    "p3_l126",
+                    "p3_l127"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_10",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Next, we examine quasiparticle lifetime τ of the Dirac",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l128"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_11",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "SS. In pristine Sb Te , topological protection of the 2 3",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l129"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_12",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "SS restricts the available relaxation channels imposed\nby conservation laws. As a result, intraband elec-\ntron–electroninteractiondominatesandproducesanen-\nhanced lifetime near ED [23, 36]. In contrast, by fit-\nting the full width at half maximum (FWHM) of LL\npeaks as a function of energy in Fig. 3(c), we find that\nthe peak width is maximal at the 0th LL and decreases\nfor |n| > 0, indicating a suppression of τ near ED in\n(VxSb1−x)2Te3. In principle, τ can be influenced by\nelectron–phononcoupling,electron–electroninteractions,\nintrinsic disorder, etc. We rule out these time-reversal-\npreserving mechanisms and attribute the reduced τ to\nthe exchange interaction that breaks time-reversal sym-\nmetry. First, electron–phonon coupling does not play\na role here, because it modifies τ only above a cutoff\nphonon energy that lies well outside our energy window\nof interest [23]. Second, upon finite-range mass acquisi-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l130",
+                    "p3_l131",
+                    "p3_l132",
+                    "p3_l133",
+                    "p3_l134",
+                    "p3_l135",
+                    "p3_l136",
+                    "p3_l137",
+                    "p3_l138",
+                    "p3_l139",
+                    "p3_l140",
+                    "p3_l141",
+                    "p3_l142",
+                    "p3_l143",
+                    "p3_l144",
+                    "p3_l145",
+                    "p3_l146"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_1",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "a b\n300\n250\n200\n150\n)Vm(\nsaib\nelpmaS\n-2 -1 0\n4",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l1",
+                    "p4_l2",
+                    "p4_l3",
+                    "p4_l4",
+                    "p4_l5",
+                    "p4_l6",
+                    "p4_l7",
+                    "p4_l8",
+                    "p4_l9",
+                    "p4_l10"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_2",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Averaged WFD\n)mn(\necafrus\nmorf\necnatsiD\nHigh\nLow\n1 2\nDistance (nm)\n300\n250\n200\n150\n)Vm(\nsaib\nelpmaS\n-1 0 1 2 3\nDistance (nm)\ndI/dV\n(a.u.)\n0.8 Å c\n0.0\n1\n0.5 2\n0\n1.0\n3\n1.5 4\n2.0\n5\n2.5 6\n3.0\n7\n0.00 0.02 0.04 0.06 0.08\nFIG.4. ProbingSSdepthfromLLsuppressionaroundVimpurities. (a,b)LLspectraat8Tacquiredalonglinecutspassing\nthroughTypeI(a)andTypeII(b)impurities,withthebackgroundsubtracted. Theredandorangearrowsmarktheimpurity\ncenters. Toppanelsshowthecorrespondingtopographicimages,wherethewhitedashedarrowsdenotethedirectionoftheline\ncutsandthecoloreddotsindicatetheimpuritycenters. (c)DFT-calculatedreal-spacedistributionoftheaveragedsurface-state\nwave-functiondensity(WFD)onthetop7Sblayers(top4QLs). HorizontaldashedlinesindicatetheSblayerindexmeasured\nfrom the surface. The color gradient in the background indicates the decay of SS. Setpoint in (a, b): Vsample = −100 mV,\nIset = 400 pA, lock-in zero-to-peak amplitude Vexc = 3 mV. STM setpoint for the topographic insets in (a, b): Vsample = 200\nmV, Iset = 50 pA, B = 8 T.\ntion in (VxSb1−x)2Te3, intraband electron-electron inter-\naction is considerably weakened, as the opening of a mass\ngap further reduces the available low-energy relaxation\nchannels by modifying the Dirac spectrum. Finally, in-\nterband electron–electron interaction and intrinsic disor-\nder from substitutional defects are incompatible with our\ndata, as both mechanisms produce a monotonic decrease\nin τ away from the Fermi energy EF [23, 36, 37]. On the\nother hand, a magnetic impurity can mix the opposite\nhelicities from two Dirac branches at ED [38–40], where",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l11",
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15",
+                    "p4_l16",
+                    "p4_l17",
+                    "p4_l18",
+                    "p4_l19",
+                    "p4_l20",
+                    "p4_l21",
+                    "p4_l22",
+                    "p4_l23",
+                    "p4_l24",
+                    "p4_l25",
+                    "p4_l26",
+                    "p4_l27",
+                    "p4_l28",
+                    "p4_l29",
+                    "p4_l30",
+                    "p4_l31",
+                    "p4_l32",
+                    "p4_l33",
+                    "p4_l34",
+                    "p4_l35",
+                    "p4_l36",
+                    "p4_l37",
+                    "p4_l38",
+                    "p4_l39",
+                    "p4_l40",
+                    "p4_l41",
+                    "p4_l42",
+                    "p4_l43",
+                    "p4_l44",
+                    "p4_l45",
+                    "p4_l46",
+                    "p4_l47",
+                    "p4_l48",
+                    "p4_l49",
+                    "p4_l50",
+                    "p4_l51",
+                    "p4_l52",
+                    "p4_l53",
+                    "p4_l54",
+                    "p4_l55",
+                    "p4_l56",
+                    "p4_l57",
+                    "p4_l58",
+                    "p4_l59",
+                    "p4_l60",
+                    "p4_l61",
+                    "p4_l62"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_3",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "SS are maximally susceptible to spin-dependent pertur-\nbations, and exchange-mediated spin fluctuations lead to\nlifetime suppression [41, 42]. Therefore, our observation\nof reduced τ reflects an enhanced magnetic scattering\nnear ED with a non-zero exchange coupling strength J.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l63",
+                    "p4_l64",
+                    "p4_l65",
+                    "p4_l66",
+                    "p4_l67"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_4",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "To explicitly characterize how V impurities perturb the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l68"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_5",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "SS, we measure the LL intensity using dI/dV linecuts\nacross both Type I and Type II impurities at 8 T. For",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l69",
+                    "p4_l70"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_6",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Type I impurities, we observe a clear and highly localized\nsuppression of LLs within a radius of 2 nm, as shown in\nFig. 4(a). This behavior is qualitatively different from\nthe previously reported LL suppression caused by non-\nmagnetic Ag adatoms, where individual Ag atom exerts\nlittle effect on the LLs, and a global suppression of the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l71",
+                    "p4_l72",
+                    "p4_l73",
+                    "p4_l74",
+                    "p4_l75",
+                    "p4_l76"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_7",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "SS emerges only when the average impurity distance is\ncomparable to the magnetic length [43].",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l77",
+                    "p4_l78"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_8",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "More importantly, the z-dependence of this LL sup-\npression provides a direct probe of the SS penetration\ndepth. As shown in Fig. 4(b), LLs remain essentially\nintact when the tip crosses a Type II impurity. The dif-\nference of LL suppression between Type I and Type II\nimpurities in the 1st and 2nd Sb layer within one QL\n(≈ 1.0 nm) reveals the sharpness of the exponential de-\ncay of the SS [44], and demonstrates that the SS wave-\nfunction is concentrated predominantly within the top\nsub-nanometer of the crystal.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l79",
+                    "p4_l80",
+                    "p4_l81",
+                    "p4_l82",
+                    "p4_l83",
+                    "p4_l84",
+                    "p4_l85",
+                    "p4_l86",
+                    "p4_l87",
+                    "p4_l88"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_9",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "To examine how SS wavefunction decays into the bulk,\nwe apply DFT calculations and compare with the probed",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l89",
+                    "p4_l90"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_10",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "SS depth. We obtain the layer-resolved wavefunction\ndensity by integrating the spectral weight of the Dirac\nbands near Γ point, within roughly ±120 meV around",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l91",
+                    "p4_l92",
+                    "p4_l93"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_11",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "ED. Fig. 4(c) shows that the SS weight drops rapidly\nwithin the 1st QL. Compared to that in the top Sb layer,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l94",
+                    "p4_l95"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_12",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "SS wavefunction density decreases approximately 22%\nand 67% in the 2nd and the 3rd Sb layers. The fast decay\nindicates that the SS are concentrated in the top layers of\nthe 1st QL, and hence produces a stronger exchange scat-\ntering with Type I impurities. In addition, we find that\nthe top four Sb layers contribute 75% of the SS wavefunc-\ntion density, consistent with previous estimation [23, 24]\nand derivation [45] of the SS depth (Table II for details)\n.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l96",
+                    "p4_l97",
+                    "p4_l98",
+                    "p4_l99",
+                    "p4_l100",
+                    "p4_l101",
+                    "p4_l102",
+                    "p4_l103",
+                    "p4_l104"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_13",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Quantifying SS penetration depth from V-induced ex-\nchange scattering provides new insights on the debate of\nthe impurity magnetism effect in three-dimensional TIs\n[27, 46, 47]. As we have demonstrated in the field-free\ncase, impurity states are spatially localized and energet-\nically isolated from ED [Fig. 2(d)]. Under high magnetic",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l105",
+                    "p4_l106",
+                    "p4_l107",
+                    "p4_l108",
+                    "p4_l109",
+                    "p4_l110"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "fields, the impurity states remain localized, while the ex-\nchange interaction between the magnetic moments of V\nimpurities and SS quasiparticles produces a finite mass\nterm and suppresses τ near ED through spatially aver-\naged exchange scattering. In addition, we do not observe\nthe suppression of τ at the impurity-state energy [Fig.\n3(c)], which further supports little hybridization between\nimpurity states and the SS. Therefore, our observation\nthat two types of V impurities at different depths pro-\nvide different SS suppression suggests that the suppres-\nsion mainly comes from the magnetic exchange scatter-\ning.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l1",
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_2",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "In summary, our spectroscopic imaging shows a con-\nfined spatial distribution of local electronic impurity\nstates, beyond which the SS recover a well-defined,\ngapped Dirac dispersion. Under high out-of-plane mag-\nnetic fields, LL spectroscopy verifies a non-zero mass\nterm and demonstrates the suppression of quasiparticle\nlifetime at the 0th LL energy, both of which results from\nthe exchange scattering from V impurities. Furthermore,\ndirect spectroscopic imaging across impurities at different\ndepths yields a sharp difference of the scattering-induced",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16",
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_3",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "LL suppression. The contrast in the local LL suppres-\nsion indicates that the SS are strongly localized within",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l23",
+                    "p5_l24"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "2 Δ )V/An( 8",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 4.4,
+              "observation_ids": [
+                "p3_l34"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p5_l25",
+            "type": "section",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p5_4",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "and magnetoelectronics applications.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l31"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "2 nm from the surface, corroborated by DFT calcula- tions of SS wavefunction density decay. Our method of studying exchange scattering effect from isolated mag- netic impurities serves as a universal tool for character- izing topological SS, and may aid in the exploration of new topological candidates for vast potential spintronics",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.0,
+              "observation_ids": [
+                "p5_l25",
+                "p5_l26",
+                "p5_l27",
+                "p5_l28",
+                "p5_l29",
+                "p5_l30"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p8_l2",
+            "type": "section",
+            "page_start": 8,
+            "page_end": 11,
+            "children": [
+              {
+                "id": "unidentified_p8_2",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "EXPERIMENTAL METHODS",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l3"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_3",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Single crystal growth\nSingle crystals of Sb2Te3 were synthesized from ultrapure (≥ 99.999%) elemental Sb and Te via a self-flux technique,\nwith nominal V doping 1% [29]. We perform measurements on three crystals from the same growth batch: sample 1\n[Fig. 1(b-d), Fig. S1(a)], and sample 2 [Figs. S1(b,c), 3, and 4(a,b)], sample 3 [Fig. 2(a,b,d)].",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l4",
+                    "p8_l5",
+                    "p8_l6",
+                    "p8_l7"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_4",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Scanning tunneling microscopy / spectroscopy (STM/S) measurements",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l8"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_5",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Single crystals are cleaved at cryogenic temperatures before inserting into STM. We perform all measurements\nusing commercially cut PtIr tips. The local density of states (LDOS) of the sample surface is measured via STS by\nlocally resolved dI/dV curves using standard lock-in technique. The bias modulation frequency is 1.115 kHz, and the\nzero-to-peak amplitudes are explicitly stated in the figure captions in the main text.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l9",
+                    "p8_l10",
+                    "p8_l11",
+                    "p8_l12"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_6",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Landau level fitting",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l13"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_7",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Different choices of fitting ranges and background polynomial orders lead to slight variations in the extracted\npeak values. Fig. 3(b,c) present a representative set of LL parameters obtained using one consistent peak-extraction\nprocedure.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l14",
+                    "p8_l15",
+                    "p8_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_8",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "DENSITY FUNCTIONAL THEORY CALCULATIONS",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l17"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_9",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "We perform first-principles calculations within Density Functional Theory (DFT) using the Vienna Ab initio Sim-\nulation Package (VASP) [32, 33]. We adopt the Perdew–Burke–Ernzerhof (PBE) generalized-gradient approxima-\ntion (GGA) [34] for the exchange-correlation functional and describe electron-ion interactions with the projector\naugmented-wave (PAW) method [48]. The slab model consists of 10 quintuple layers (QLs) of Sb2Te3, separated by a\n15 ˚A vacuum layer along the z direction. We use a plane-wave cutoff energy of 200 eV and sample the Brillouin zone\nwith a Γ-centered 11×11×1 Monkhorst–Pack grid.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l18",
+                    "p8_l19",
+                    "p8_l20",
+                    "p8_l21",
+                    "p8_l22",
+                    "p8_l23"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_10",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Band-Structure Calculation\nWe include spin–orbit coupling (SOC) to reproduce the band inversion at the Γ point that generates the Dirac\nsurface state in the bulk energy gap. The electronic band structure is computed along the high-symmetry path K–\nΓ–M, allowing us to identify the bands associated with the topological surface state. We have used VASPKIT in the\npostprocessing process [49].",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l24",
+                    "p8_l25",
+                    "p8_l26",
+                    "p8_l27",
+                    "p8_l28"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_11",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Wave-Function–Density Analysis Near the Γ Point",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l29"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_12",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Tocharacterizethedepthdependenceofthetopologicalsurfacestate,weevaluateitswave-functiondensity(WFD)\non a dense set of k points near the Γ point. For each point k and band index b, VASP provides the projected wave-\nfunction weight |ψk(i,)b|2 on each atom i. For the atom iL in atomic layer L, we define the layer-resolved, k-averaged\nwave-function density as",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l30",
+                    "p8_l31",
+                    "p8_l32",
+                    "p8_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_13",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "WFD (L)= 1 � Nk N �bands� �ψ(iL) � � 2 , (S1)\navg Nk Nbands � k,b �\nk=1 b=1\nwhere Nbands = 2 is the number of bands forming the Dirac cone. The quantity WFDavg(L) therefore measures the\naverage probability density of the topological surface-state wave function on layer L.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l34",
+                    "p8_l35",
+                    "p8_l36",
+                    "p8_l37",
+                    "p8_l38"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p9_1",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "9\na b c\n+300 mV +300 mV -300 mV\n5 nm 5 nm\n5 nm\n0 1.0 Å 0 2.0 Å 0 2.0 Å\nFIG.S1. Vimpurityconcentrationdetermination. (a)Thesame30×30nm2 STMtopographyasFig.1(b)inthemaintext.\nRedandorangecirclesmarkTypeIandTypeIIimpurities,respectively. Weidentify11TypeIdefects(0.198%)and9TypeII\ndefects (0.162%). (b, c) STM topographies acquired over a 40×40 nm2 region. We identify 30 Type I defects (0.3%) and 20\nType II defects (0.2%). STM setpoints: Vsample = +300 mV, Iset = 100 pA for (a); Vsample = +300 mV, Iset = 30 pA for (b);\nand Vsample = −300 mV, Iset = 30 pA for (c).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l1",
+                    "p9_l2",
+                    "p9_l3",
+                    "p9_l4",
+                    "p9_l5",
+                    "p9_l6",
+                    "p9_l7",
+                    "p9_l8",
+                    "p9_l9",
+                    "p9_l10",
+                    "p9_l11"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p10_1",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "10",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l1"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p10_2",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "SUMMARY OF DEPTH PROBING OF TOPOLOGICAL SURFACE STATES\nIn Table I, we summarize previous studies on determining the depth of topological surface states (SS) in various\nmaterials,including(doped)topologicalinsulators(TIs),magnetictopologicalinsulator(MTI),topologicalcrystalline\ninsulators (TCIs), and topological Kondo insulator (TKI). In Table II, we summarize previous studies on Sb2Te3 with\nvarious synthesis and characterization methods.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l2",
+                    "p10_l3",
+                    "p10_l4",
+                    "p10_l5",
+                    "p10_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p10_3",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "Material SS depth Method Reference\nSb ≈ 3 BL(a)\nBi2Se3, Bi2Te3 ≈ 1 nm\n(Bi, Sb)2Te3, Bi2Se3 a few QLs\nBi2Se3 ≈ 3 QL\nBi2Se3 ≈ 2 nm\nBi2Te3 ≈ 1 QL\nSb2Te3 ≈ 2 QL\nSb2Te3 < 10 nm\nSb2Te3 ≈ 2 QL\nBi1−xSbx ≈ 4 nm\nSb2(Te1−xSex)3 ≈ 2 nm\n(Bi1−xInx)2Se3 ≈ 3 QL\n(Bi1−xInx)2Se3 ≈ 3 QL\nCr-(Bi, Sb)2Te3/FeTe < 4 QL\n(Bi1−xSbx)2Te3 ≥ 3 nm\nMnBi2Te4 a few SLs\nMnBi2Te4 ≈ 2 SL\nMnBi2Te4 ≈ 1 SL\nPb1−xSnxSe < one slab\nSnTe a few nm\nSnTe < 10 nm\nBi4Br4 2.1 nm\nSmB6 10-15 nm\nSmB6 32 nm\nMBE + STM Yao, Sci. Rep. (2013) [50]\nab initio calculation Urazhdin, PRB (2004) [5]\nab initio calculation Zhang, Nat. Phys. (2009) [6]\nMBE + ARPES Zhang, Nat. Phys. (2010) [15]\nTime-resolved ARPES + SPV Ciocys, npj Quant. Mat. (2020) [18]\nMBE + ARPES Li, Adv. Mat. (2010) [14]\nMBE + STM Jiang, PRL (2012) [23]\nMBE + transport Takagaki, PRB (2012) [10]\ngate-tunable MBE + STM Zhang, PRL (2013) [24]\nMBE + THz spectroscopy Park, Adv. Sci. (2022) [22]\nab initio calculation Zhang, NJP (2010) [7]\nMBE + THz spectroscopy Wu, Nat. Phys. (2013) [21]\nMBE + ARPES Wang, Nano Lett. (2019) [19]\nMBE + transport etc. Yi, Science (2024) [51]\nMBE + transport van Veen, PRB (2025) [13]\nDFT + Monte Carlo Otrokov, PRL (2019) [8]\nab initio calculation Sun, PRB (2020) [9]\nMBE + ARPES Xu, Nano Lett. (2022) [20]\nARPES Dziawa, Nat. Mat. (2012) [16]\nMBE + transport Assaf, App. Phys. Lett. (2014) [11]\nMBE + ARPES Gong, Nano Res. (2018) [17]\nSTM Shumiya, Nat. Mat. (2022) [52]\npoint contact spectroscopy Lee, Nature (2019) [53]\nsputtering + SP + transport Liu, PRL (2018) [12]\n(a) Penetrationdepthλisk-dependent.\nTABLE I. Previous studies of the topological SS depth in various candidates. QL: quintuple layer; SL: septuple layer; MBE:\nmolecular-beamepitaxy;ARPES:angle-resolvedphotoemissionspectroscopy;SPV:surfacephotovoltageeffect;STM:scanning\ntunneling microscopy; MFM: magnetic force microscopy; DFT: density functional theory; SP: spin pumping.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l7",
+                    "p10_l8",
+                    "p10_l9",
+                    "p10_l10",
+                    "p10_l11",
+                    "p10_l12",
+                    "p10_l13",
+                    "p10_l14",
+                    "p10_l15",
+                    "p10_l16",
+                    "p10_l17",
+                    "p10_l18",
+                    "p10_l19",
+                    "p10_l20",
+                    "p10_l21",
+                    "p10_l22",
+                    "p10_l23",
+                    "p10_l24",
+                    "p10_l25",
+                    "p10_l26",
+                    "p10_l27",
+                    "p10_l28",
+                    "p10_l29",
+                    "p10_l30",
+                    "p10_l31",
+                    "p10_l32",
+                    "p10_l33",
+                    "p10_l34",
+                    "p10_l35",
+                    "p10_l36",
+                    "p10_l37",
+                    "p10_l38",
+                    "p10_l39",
+                    "p10_l40",
+                    "p10_l41",
+                    "p10_l42",
+                    "p10_l43",
+                    "p10_l44",
+                    "p10_l45",
+                    "p10_l46",
+                    "p10_l47",
+                    "p10_l48",
+                    "p10_l49",
+                    "p10_l50",
+                    "p10_l51",
+                    "p10_l52",
+                    "p10_l53",
+                    "p10_l54",
+                    "p10_l55",
+                    "p10_l56",
+                    "p10_l57",
+                    "p10_l58",
+                    "p10_l59"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p11_1",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "11",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l1"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p11_2",
+                "type": "custom",
+                "page_start": 11,
+                "page_end": 11,
+                "children": [],
+                "text": "Sb2Te3 Material Method Eg (meV) vD (m/s) ∆ (meV) Reference\nn/a\nMOCVD on Al O , 750 nm ARPES\n2.7 × 105 – Bendt, JMCA (2014) [54]\n2 3 (above EF)\nn/a\nMBE on Si(111), 50 QL ARPES\n4.1 × 105 (a) – Wang, Nano Res. (2010) [55]\n(above EF)\nMBE on 6H-SiC(0001), 50 QL STM dI/dV ∼ 300\nMBE on 6H-SiC(0001), 7 QL STM LLs ∼ 300\nARPES &\ncleaved single crystal 200\nSTM dI/dV\ncleaved single crystal STM LLs 200\n(Cr Sb ) Te , x = 2.5%,\nx 1−x 2 3 STM LLs –\ncleaved single crystal\nCr-surface-doped Sb Te ,\n2 3 STM LLs ∼ 300\nMBE on 6H-SiC(0001), 50 QL\nCr (Bi Sb ) Te , y = 0.08,\ny 0.1 0.9 2−y 3 STM QPI –\ncleaved single crystal\n(V Sb ) Te , x = 0.75%,\nx 1−x 2 3 STM LLs ∼ 150\ncleaved single crystal\n(V Sb ) Te , x = 0.23%,\nx 1−x 2 3 STM LLs 240 ± 5\ncleaved single crystal\n– – Jiang, PRL (2012) [30]\n4.3 × 105 – Jiang, PRL (2012) [23]\n3.8 ± 0.2 × 105 – Pauly, PRB (2012) [56]\n4.5 × 105 (b) – Pauly, PRB (2015) [36]\n– 0 Yang, PRL (2013) [57]\n4.8 × 105 0–12(c) Jiang, PRB (2015) [26]\n4.4 × 105 10–44(d) Lee, PNAS (2015) [25]\n– 16 Sessi, Nat. Com. (2016) [27]\n4.8 ± 0.1 × 105 – this work\n(a) vD decreasesfrom4.8×105 m/sfor3QLfilmsdownto4.1×105 m/sforbulk-like50QLfilms. Allvelocitymeasurementsarebelow\nED,becausetheemptystatesaboveED arenotaccessibleinARPES.\n(b) Valuegivenforfull-rangeLLfitfrom−3≤n≤6. Forn<0only,vD−=4.9×105 m/s;forn>0only,vD+=4.1×105 m/s.\n(c) ForCrsubstitutionattop-layerSbsitesonly,with∆increasingapproximatelylinearlyforx=0,3%,6%,9%,12%,15%,18%,21%.\n(d) Local∆increasesapproximatelylinearlyaslocaly increasesfrom0.02to0.21. Thiscorrespondstox=1%to10%Crsubstitutionat\nBi/Sbsites.\nTABLE II. Measurements of bulk gap Eg, surface state velocity vD, and surface state mass gap ∆ in Sb2Te3.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p11_l2",
+                    "p11_l3",
+                    "p11_l4",
+                    "p11_l5",
+                    "p11_l6",
+                    "p11_l7",
+                    "p11_l8",
+                    "p11_l9",
+                    "p11_l10",
+                    "p11_l11",
+                    "p11_l12",
+                    "p11_l13",
+                    "p11_l14",
+                    "p11_l15",
+                    "p11_l16",
+                    "p11_l17",
+                    "p11_l18",
+                    "p11_l19",
+                    "p11_l20",
+                    "p11_l21",
+                    "p11_l22",
+                    "p11_l23",
+                    "p11_l24",
+                    "p11_l25",
+                    "p11_l26",
+                    "p11_l27",
+                    "p11_l28",
+                    "p11_l29",
+                    "p11_l30",
+                    "p11_l31",
+                    "p11_l32",
+                    "p11_l33",
+                    "p11_l34",
+                    "p11_l35",
+                    "p11_l36",
+                    "p11_l37",
+                    "p11_l38",
+                    "p11_l39",
+                    "p11_l40",
+                    "p11_l41",
+                    "p11_l42",
+                    "p11_l43",
+                    "p11_l44",
+                    "p11_l45",
+                    "p11_l46",
+                    "p11_l47"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Supplementary Information",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 14.3,
+              "observation_ids": [
+                "p8_l2"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 5,
+        "page_end": 11,
+        "children": [
+          {
+            "id": "heading_p5_l32",
+            "type": "acknowledgements",
+            "page_start": 5,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p5_5",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "STM experiments at Harvard were supported by the\nU.S. National Science Foundation under Grant No.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l33",
+                    "p5_l34"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_6",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "DMR-110623. DTL and EK acknowledge support from\nthe US Army Research Office (ARO) MURI project un-\nder Grant No. W911NF-21-0147. Crystal synthesis at the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l35",
+                    "p5_l36",
+                    "p5_l37"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_7",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "University of Maryland was supported by the Gordon\nand Betty Moore Foundation’s EPiQS Initiative Grant",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l38",
+                    "p5_l39"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_8",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "No. GBMF9071, the Air Force Office of Scientific Re-\nsearch Grant No. FA9950-22-1-0023 and the Maryland\nQuantum Materials Center.\n∗ These authors contributed equally to this work.\n† Corresponding author: jhoffman@physics.harvard.edu\n[1] L. Sˇmejkal, Y. Mokrousov, B. Yan, and A. H. Mac-\nDonald, Topological antiferromagnetic spintronics, Na-\nture Physics 14, 242 (2018).\n[2] Q. He, T. L. Hughes, N. P. Armitage, Y. Tokura, and\nK. L. Wang, Topological spintronics and magnetoelec-\ntronics, Nature Materials 21, 15 (2022).\n5\n[3] J. Alicea, Y. Oreg, G. Refael, F. von Oppen, and\nM. P. A. Fisher, Non-Abelian statistics and topologi-\ncal quantum information processing in 1D wire networks,\nNature Physics 7, 412 (2011).\n[4] C. Nayak, S. H. Simon, A. Stern, M. Freedman, and\nS. Das Sarma, Non-abelian anyons and topological quan-\ntum computation, Reviews of Modern Physics 80, 1083\n(2008).\n[5] S. Urazhdin, D. Bilc, S. Mahanti, S. Tessmer, T. Kyratsi,\nand M. Kanatzidis, Surface effects in layered semiconduc-\ntors Bi2Se3 and Bi2Te3, Physical Review B 69, 085313\n(2004).\n[6] H. Zhang, C.-X. Liu, X.-L. Qi, X. Dai, Z. Fang, and S.-\nS. Zhang, Topological insulators in Bi2Te3, Bi2Se3 and\nSb2Te3 with a single Dirac cone on the surface, Nature\nPhysics 5, 438 (2009).\n[7] W. Zhang, R. Yu, H.-J. Zhang, X. Dai, and Z. Fang,\nFirst-principles studies of the three-dimensional strong\ntopological insulators Bi2Te3, Bi2Se3 and Sb2Te3, New\nJournal of Physics 12, 065013 (2010).\n[8] M. M. Otrokov, I. P. Rusinov, M. Blanco-Rey, M. Hoff-\nmann, A. Y. Vyazovskaya, S. V. Eremeev, A. Ernst,\nP. M. Echenique, A. Arnau, and E. V. Chulkov, Unique\nthickness-dependent properties of the van der Waals in-\nterlayer antiferromagnet MnBi2Te4 films, Physical Re-\nview Letters 122, 107202 (2019).\n[9] H.-P. Sun, C. M. Wang, S.-B. Zhang, R. Chen, Y. Zhao,\nC. Liu, Q. Liu, C. Chen, H.-Z. Lu, and X. C. Xie, Analyti-\ncal solution for the surface states of the antiferromagnetic\ntopological insulator MnBi2Te4, Physical Review B 102,\n241406 (2020).\n[10] Y. Takagaki, A. Giussani, K. Perumai, R. Calarco, and\nK.-J. Friedland, Robust topological surface states in\nSb2Te3 layers as seen from the weak antilocalization ef-\nfect, Physical Review B 86, 125137 (2012).\n[11] B. A. Assaf, F. Katmis, P. Wei, B. Satpati, Z. Zhang,\nS. P. Bennett, V. Harris, J. S. Mooera, and D. Heman,\nQuantum coherent transport in SnTe topological crys-\ntalline insulator thin films, Applied Physics Letters 105,\n102108 (2014).\n[12] T. Liu, Y. Li, L. Gu, J. Dng, H. Chang, P. A. P. Janantha,\nB. Kalinikos, V. Novosad, A. Hoffmann, R. Wu, C. L.\nChien, and M. Wu, Nontrivial nature and penetration\ndepth of topological surface states in SmB6 thin films,\nPhysical Review Letters 120, 207206 (2018).\n[13] F. van Veen, S. Ko¨lling, S. R. de Wit, R. Metsch,\nD. Rosenbach, C. Li, and A. Brinkman, Observation\nof the surface hybridization gap in the electrical trans-\nport properties of the ultrathin topological insulator\n(Bi1−xSbx)2Te3, Physical Review B 112, 045425 (2025).\n[14] Y.-Y. Li, G. Wang, X.-G. Zhu, M.-H. Liu, C. Ye,\nX. Chen, Y.-Y. Wang, K. He, L.-L. Wang, X.-C. Ma, H.-\nJ. Zhang, X. Dai, Z. Fang, X.-C. Xie, Y. Liu, X.-L. Qi,\nJ.-F. Jia, S.-S. Zhang, and Q.-K. Xue, Intrinsic topolog-\nical insulator Bi2Te3 thin films on Si and their thickness\nlimit, Advanced Materials 22, 4002 (2010).\n[15] Y. Zhang, K. He, C.-Z. Chang, C.-L. Song, L.-L. Wang,\nX. Chen, J.-F. Jia, Z. Fang, X. Dai, W.-Y. Shan, S.-\nQ. Shen, Q. Niu, X.-L. Qi, S.-C. Zhang, X.-C. Ma, and\nQ.-K. Xue, Crossover of the three-dimensional topologi-\ncal insulator Bi2Se3 to the two-dimensional limit, Nature\nPhysics 6, 584 (2010).\n[16] P. Dziawa, B. J. Kowalski, K. Dybko, R. Buczko,\nA. Szczerbakow, M. Szot, E. L� usakowska, T. Balasub-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l40",
+                    "p5_l41",
+                    "p5_l42",
+                    "p5_l43",
+                    "p5_l44",
+                    "p5_l45",
+                    "p5_l46",
+                    "p5_l47",
+                    "p5_l48",
+                    "p5_l49",
+                    "p5_l50",
+                    "p5_l51",
+                    "p5_l52",
+                    "p5_l53",
+                    "p5_l54",
+                    "p5_l55",
+                    "p5_l56",
+                    "p5_l57",
+                    "p5_l58",
+                    "p5_l59",
+                    "p5_l60",
+                    "p5_l61",
+                    "p5_l62",
+                    "p5_l63",
+                    "p5_l64",
+                    "p5_l65",
+                    "p5_l66",
+                    "p5_l67",
+                    "p5_l68",
+                    "p5_l69",
+                    "p5_l70",
+                    "p5_l71",
+                    "p5_l72",
+                    "p5_l73",
+                    "p5_l74",
+                    "p5_l75",
+                    "p5_l76",
+                    "p5_l77",
+                    "p5_l78",
+                    "p5_l79",
+                    "p5_l80",
+                    "p5_l81",
+                    "p5_l82",
+                    "p5_l83",
+                    "p5_l84",
+                    "p5_l85",
+                    "p5_l86",
+                    "p5_l87",
+                    "p5_l88",
+                    "p5_l89",
+                    "p5_l90",
+                    "p5_l91",
+                    "p5_l92",
+                    "p5_l93",
+                    "p5_l94",
+                    "p5_l95",
+                    "p5_l96",
+                    "p5_l97",
+                    "p5_l98",
+                    "p5_l99",
+                    "p5_l100",
+                    "p5_l101",
+                    "p5_l102",
+                    "p5_l103",
+                    "p5_l104",
+                    "p5_l105",
+                    "p5_l106",
+                    "p5_l107",
+                    "p5_l108",
+                    "p5_l109",
+                    "p5_l110",
+                    "p5_l111",
+                    "p5_l112",
+                    "p5_l113",
+                    "p5_l114",
+                    "p5_l115"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "ramanian, B. M. Wojek, M. H. Berntsen, O. Tjernberg,\nand T. Story, Topological crystalline insulator states in\nPb1−xSnxSe, Nature Materials 11, 1023 (2012).\n[17] Y. Gong, K. Zhu, Z. Li, Y. Zang, X. Feng, D. Zhang,\nC. Song, L. Wang, W. Li, X. Chen, X.-C. Ma, Q.-K.\nXue, Y. Xu, and K. He, Experimental evidence of the\nthickness- and electric-field-dependent topological phase\ntransitions in topological crystalline insulator SnTe(111)\nthin films, Nano Research 11, 6045 (2018).\n[18] S. Ciocys, T. Morimoto, R. Mori, K. Gotlieb, Z. Hussain,\nJ. G. Analytis, J. E. Moore, and A. Lanzara, Manipulat-\ning long-lived topological surface photovoltage in bulk-\ninsulating topological insulators Bi2Se3 and Bi2Te3, npj\nQuantum Materials 5, 16 (2020).\n[19] Z. Wang, T. Zhou, T. Jiang, H. Sun, Y. Zang, Y. Gong,\nJ. Zhang, M. Tong, X. Xie, Q. Liu, C. Chen, K. He,\nand Q.-K. Xue, Dimensional crossover and topological\nnature of the thin films of a three-dimensional topological\ninsulator by band gap engineering, Nano Letters 19, 4627\n(2019).\n[20] R. Xu, Y. Bai, J. Zhou, X. Gu, N. Qin, Z. Yin, X. Du,\nQ. Zhang, W. Zhao, Y. Li, Y. Wu, C. Ding, L. Wang,\nZ. Liang Aiji andLiu, Y. Xu, X. Feng, K. He, y. Chen,\nand Y. Lexian, Evolution of the electronic structure of\nultrathin MnBi2Te4 films, Nano Letters 22, 6320 (2022).\n[21] L. Wu, M. Brahlek, R. Vald´es Aguilar, A. V. Stier, C. M.\nMorris, L. Y., L. S. Bilbro, N. Bansal, S. Oh, and N. P.\nArmitage, A sudden collapse in the transport lifetime\nacross the topological phase transition in (Bi1−xInx)2Se3,\nNature Physics 9, 410 (2013).\n[22] H. Park, S. Rho, J. Kim, H. Kim, D. Kim, C. Kang,\nand M.-H. Cho, Topological surface-dominated spin-\ntronic THz emission in topologically nontrivial Bi1−xSbx\nfilms, Advanced Science 9, 2200948 (2022).\n[23] Y. Jiang, Y. Wang, M. Chen, Z. Li, C. Song, K. He,\nL. Wang, X. Chen, X. Ma, and Q.-K. Xue, Landau quan-\ntization and the thickness limit of topological insula-\ntor thin films of Sb2Te3, Physical Review Letters 108,\n016401 (2012).\n[24] T. Zhang, J. Ha, N. Levy, Y. Kuk, and J. Stroscio,\nElectric-field tuning of the surface band structure of topo-\nlogical insulator Sb2Te3 thin films, Physical Review Let-\nters 111, 056803 (2013).\n[25] I. Lee, C. K. Kim, J. Lee, S. J. L. Billinge, R. Zhong,\nJ. A. Schneeloch, T. Liu, T. Valla, J. M. Tranquada,\nG. Gu, and J. C. S. Davis, Imaging Dirac-mass disorder\nfrom magnetic dopant atoms in the ferromagnetic topo-\nlogical insulator Crx(Bi0.1Sb0.9)2−xTe3, PNAS 112, 1316\n(2015).\n[26] Y. Jiang, C. Song, Z. Li, M. Chen, R. L. Greene, K. He,\nL. Wang, X. Chen, X. Ma, and Q.-K. Xue, Mass acquisi-\ntion of Dirac fermions in magnetically doped topological\ninsulator Sb2Te3 films, Physical Review B 92, 195418\n(2015).\n[27] P. Sessi, R. R. Biswas, T. Bathon, O. Storz, S. Wilfert,\nA. Barla, K. A. Kokh, O. E. Tereshchenko, K. Fauth,\nM. Bode, and A. V. Balatsky, Dual nature of magnetic\ndopants and competing trends in topological insulators,\nNature Communications 7, 12027 (2016).\n[28] A. N. Mansour, W. Wong-Ng, Q. Huang, W. Tang,\nA. Thompson, and J. Sharp, Structural characterization\nof Bi2Te3 and Sb2Te3 as a function of temperature using\nneutron powder diffraction and extended X-ray absorp-\ntion fine structure techniques, Journal of Applied Physics\n6\n116, 083513 (2014).\n[29] N. P. Butch, K. Kirshenbaum, P. Syers, A. B. Sushkov,\nG. S. Jenkins, H. D. Drew, and J. Paglione, Strong sur-\nface scattering in ultrahigh-mobility Bi2Se3 topological\ninsulator crystals, Physical Review B 81, 241301 (2010).\n[30] Y. Jiang, Y. Y. Sun, M. Chen, Y. Wang, Z. Li, C. Song,\nK. He, L. Wang, X. Chen, Q.-K. Xue, X. Ma, and S. B.\nZhang, Fermi-level tuning of epitaxial Sb2Te3 thin films\non graphene by regulating intrinsic defects and substrate\ntransfer doping, Physical Review Letters 108, 066809\n(2012).\n[31] W. Zhang, D. West, S. H. Lee, Y. Qiu, C.-Z. Chang, J. S.\nMoodera, Y. S. Hor, S. Zhang, and W. Wu, Electronic\nfingerprints of Cr and V dopants in the topological insu-\nlator Sb2Te3, Physical Review B 98, 115165 (2018).\n[32] G. Kresse and J. Furthmu¨ller, Efficient iterative schemes\nfor ab initio total-energy calculations using a plane-wave\nbasis set, Physical Review B 54, 11169 (1996).\n[33] G. Kresse and D. Joubert, From ultrasoft pseudopoten-\ntials to the projector augmented-wave method, Physical\nReview B 59, 1758 (1999).\n[34] J. P. Perdew, K. Burke, and M. Ernzerhof, Generalized\ngradient approximation made simple, Physical Review\nLetters 77, 3865 (1996).\n[35] D. A. Abanin and D. A. Pesin, Ordering of magnetic im-\npurities and tunable electronic properties of topological\ninsulators, Physical Review Letters 106, 136802 (2011).\n[36] C. Pauly, C. Saunus, M. Liebmann, and M. Morgenstern,\nSpatially resolved Landau level spectroscopy of the topo-\nlogical Dirac cone of bulk-type Sb2Te3(0001): Potential\nfluctuations and quasiparticle lifetime, Physical Review\nB 92, 085140 (2015).\n[37] T. Hanaguri, K. Igarashi, M. Kawamura, H. Takagi, and\nT. Sasagawa, Momentum-resolved Landau-level spec-\ntroscopy of Dirac surface state in Bi2Se3, Physical Re-\nview B 82, 081305 (2010).\n[38] Q. Liu, C.-X. Liu, C. Xu, X.-L. Qi, and S.-C. Zhang,\nMagnetic impurities on the surface of a topological insu-\nlator, Physical Review Letters 102, 156603 (2009).\n[39] X. Zhou, C. Fang, W.-F. Tsai, and J. Hu, Theory of\nquasiparticle scattering in a two-dimensional system of\nhelical Dirac fermions: Surface band structure of a three-\ndimensional topological insulator, Physical Review B 80,\n245317 (2009).\n[40] P. Thalmeier and A. Akbari, Gapped Dirac cones and\nspin texture in thin film topological insulator, Physical\nReview Research 2, 033002 (2020).\n[41] Y.-H. Li and R. Cheng, Spin fluctuations in quantized\ntransport of magnetic topological insulators, Physical Re-\nview Letters 126, 026601 (2021).\n[42] S. Kudl�a, A. Dyrdal�, V. K. Dugaev, J. Berakdar, and\nJ. Barna´s, Conduction of surface electrons in a topologi-\ncal insulator with spatially random magnetization, Phys-\nical Review B 100, 205428 (2019).\n[43] P. Cheng, C. Song, T. Zhang, Y. Zhang, Y. Wang, J.-\nF. Jia, J. Wang, Y. Wang, B.-F. Zhu, X. Chen, X. Ma,\nK. He, L. Wang, X. Dai, Z. Fang, X. Xie, X.-L. Qi, C.-X.\nLiu, S.-C. Zhang, and Q.-K. Xue, Landau quantization\nof topological surface states in Bi2Se3, Physical Review\nLetters 105, 076801 (2010).\n[44] C.-X. Liu, X.-L. Qi, H. Zhang, X. Dai, Z. Fang, and S.-\nC. Zhang, Model Hamiltonian for topological insulators,\nPhysical Review B 82, 045122 (2010).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l1",
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10",
+                    "p6_l11",
+                    "p6_l12",
+                    "p6_l13",
+                    "p6_l14",
+                    "p6_l15",
+                    "p6_l16",
+                    "p6_l17",
+                    "p6_l18",
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24",
+                    "p6_l25",
+                    "p6_l26",
+                    "p6_l27",
+                    "p6_l28",
+                    "p6_l29",
+                    "p6_l30",
+                    "p6_l31",
+                    "p6_l32",
+                    "p6_l33",
+                    "p6_l34",
+                    "p6_l35",
+                    "p6_l36",
+                    "p6_l37",
+                    "p6_l38",
+                    "p6_l39",
+                    "p6_l40",
+                    "p6_l41",
+                    "p6_l42",
+                    "p6_l43",
+                    "p6_l44",
+                    "p6_l45",
+                    "p6_l46",
+                    "p6_l47",
+                    "p6_l48",
+                    "p6_l49",
+                    "p6_l50",
+                    "p6_l51",
+                    "p6_l52",
+                    "p6_l53",
+                    "p6_l54",
+                    "p6_l55",
+                    "p6_l56",
+                    "p6_l57",
+                    "p6_l58",
+                    "p6_l59",
+                    "p6_l60",
+                    "p6_l61",
+                    "p6_l62",
+                    "p6_l63",
+                    "p6_l64",
+                    "p6_l65",
+                    "p6_l66",
+                    "p6_l67",
+                    "p6_l68",
+                    "p6_l69",
+                    "p6_l70",
+                    "p6_l71",
+                    "p6_l72",
+                    "p6_l73",
+                    "p6_l74",
+                    "p6_l75",
+                    "p6_l76",
+                    "p6_l77",
+                    "p6_l78",
+                    "p6_l79",
+                    "p6_l80",
+                    "p6_l81",
+                    "p6_l82",
+                    "p6_l83",
+                    "p6_l84",
+                    "p6_l85",
+                    "p6_l86",
+                    "p6_l87",
+                    "p6_l88",
+                    "p6_l89",
+                    "p6_l90",
+                    "p6_l91",
+                    "p6_l92",
+                    "p6_l93",
+                    "p6_l94",
+                    "p6_l95",
+                    "p6_l96",
+                    "p6_l97",
+                    "p6_l98",
+                    "p6_l99",
+                    "p6_l100",
+                    "p6_l101",
+                    "p6_l102",
+                    "p6_l103",
+                    "p6_l104",
+                    "p6_l105",
+                    "p6_l106",
+                    "p6_l107",
+                    "p6_l108",
+                    "p6_l109",
+                    "p6_l110",
+                    "p6_l111",
+                    "p6_l112",
+                    "p6_l113",
+                    "p6_l114",
+                    "p6_l115",
+                    "p6_l116",
+                    "p6_l117",
+                    "p6_l118",
+                    "p6_l119",
+                    "p6_l120",
+                    "p6_l121",
+                    "p6_l122",
+                    "p6_l123",
+                    "p6_l124",
+                    "p6_l125",
+                    "p6_l126",
+                    "p6_l127",
+                    "p6_l128"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_1",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "7\n[45] J.Linder,T.Yokoyama,andA.Sudbø,Anomalousfinite\nsize effects on surface states in the topological insulator\nBi2Se3, Physical Review B 80, 205401 (2009).\n[46] T. Valla, Z.-H. Pan, D. Gardner, Y. S. Lee, and S. Chu,\nPhotoemission spectroscopy of magnetic and nonmag-\nnetic impurities on the surface of the Bi2Se3 topological\ninsulator, Physical Review Letters 108, 117601 (2012).\n[47] L. A. Wray, S.-Y. Xu, Y. Xia, D. Hsieh, A. V. Fedorov,\nY.S.Hor,R.J.Cava,A.Bansil,H.Lin,andM.Z.Hasan,\nA topological insulator surface under strong Coulomb,\nmagnetic and disorder perturbations, Nature Physics 7,\n32 (2011).\n[48] P. E. Blo¨chl, Projector augmented-wave method, Physi-\ncal Review B 50, 17953 (1994).\n[49] V. Wang, N. Xu, J.-C. Liu, G. Tang, and W.-T. Geng,\nVASPKIT: A user-friendly interface facilitating high-\nthroughput computing and analysis using VASP code,\nComputerPhysicsCommunications267,108033(2021).\n[50] G. Yao, Z. Luo, F. Pan, W. Xu, Y. P. Feng, and X.-s.\nWang,Evolutionoftopologicalsurfacestatesinantimony\nultra-thin films, Scientific Reports 3, 2010 (2013).\n[51] H. Yi, Y.-F. Zhao, Y.-T. Chan, J. Cai, R. Mei, X. Wu,\nZ.-J. Yan, L.-J. Zhou, R. Zhang, Z. Wang, S. Paolini,\nR.Xiao,K.Wang,A.R.Richardella,J.Singleton,L.E.\nWinter, T. Prokscha, Z. Salman, A. Suter, P. P. Bal-\nakrishnan, A. J. Grutter, M. H. W. Chan, N. Samarth,\nX. Xu, W. Wu, C.-X. Liu, and C.-Z. Chang, Interface-\ninduced superconductivity in magnetic topological insu-\nlators, Science 383, 634 (2024).\n[52] N. Shumiya, M. S. Hossain, J.-X. Yin, Z. Wang,\nM. Litskevich, C. Yoon, Y. Li, Y. Yang, Y.-X. Jiang,\nG. Cheng, Y.-C. Lin, Q. Zhang, Z.-J. Cheng, T. A.\nCochran,D.Multer,X.P.Yang,B.Casas,T.-R.Chang,\nT. Neupert, Z. Yuan, S. Jia, H. Lin, N. Yao, L. Bali-\ncas, F. Zhang, Y. Yao, and M. Z. Hasan, Evidence of\na room-temperature quantum spin Hall edge state in a\nhigher-order topological insulator, Nature Materials 21,\n1111 (2022).\n[53] S.Lee,V.Stanev,X.Zhang,D.Stasak,J.Flowers,J.S.\nHiggins, S. Dai, T. Blum, X. Pan, V. M. Yakovenko,\nJ. Paglione, R. L. Greene, V. Galitski, and I. Takeuchi,\nPerfect Andreev reflection due to the Klein paradox in\na topological superconducting state, Nature 570, 344\n(2019).\n[54] G. Bendt, S. Zastrow, K. Nielsch, P. S. Mandal,\nJ. Sa´nchez-Barriga, O. Rader, and S. Schulz, Deposition\nof topological insulator Sb2Te3 films by an MOCVD pro-\ncess, Journal of Materials Chemistry A 2, 8215 (2014).\n[55] G. Wang, X. Zhu, J. Wen, X. Chen, K. He, L. Wang,\nX. Ma, Y. Liu, X. Dai, Z. Fang, J. Jia, and Q. Xue,\nAtomically smooth ultrathin films of topological insula-\ntor Sb2Te3, Nano Research 3, 874 (2010).\n[56] C. Pauly, G. Bihlmayer, M. Liebmann, M. Grob,\nA. Georgi, D. Subramaniam, M. R. Scholz, J. Sa´nchez-\nBarriga, A. Varykhalov, S. Blu¨gel, O. Rader, and\nM. Morgenstern, Probing two topological surface bands\nof Sb2Te3 by spin-polarized photoemission spectroscopy,\nPhysical Review B 86, 235106 (2012).\n[57] F. Yang, Y. R. Song, H. Li, K. F. Zhang, X. Yao,\nC. Liu, D. Qian, C. L. Gao, and J.-f. Jia, Identifying\nmagnetic anisotropy of the topological surface state of\nCr0.05Sb1.95Te3 with spin-polarized STM, Physical Re-\nview Letters 111, 176802 (2013).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l1",
+                    "p7_l2",
+                    "p7_l3",
+                    "p7_l4",
+                    "p7_l5",
+                    "p7_l6",
+                    "p7_l7",
+                    "p7_l8",
+                    "p7_l9",
+                    "p7_l10",
+                    "p7_l11",
+                    "p7_l12",
+                    "p7_l13",
+                    "p7_l14",
+                    "p7_l15",
+                    "p7_l16",
+                    "p7_l17",
+                    "p7_l18",
+                    "p7_l19",
+                    "p7_l20",
+                    "p7_l21",
+                    "p7_l22",
+                    "p7_l23",
+                    "p7_l24",
+                    "p7_l25",
+                    "p7_l26",
+                    "p7_l27",
+                    "p7_l28",
+                    "p7_l29",
+                    "p7_l30",
+                    "p7_l31",
+                    "p7_l32",
+                    "p7_l33",
+                    "p7_l34",
+                    "p7_l35",
+                    "p7_l36",
+                    "p7_l37",
+                    "p7_l38",
+                    "p7_l39",
+                    "p7_l40",
+                    "p7_l41",
+                    "p7_l42",
+                    "p7_l43",
+                    "p7_l44",
+                    "p7_l45",
+                    "p7_l46",
+                    "p7_l47",
+                    "p7_l48",
+                    "p7_l49",
+                    "p7_l50",
+                    "p7_l51",
+                    "p7_l52",
+                    "p7_l53",
+                    "p7_l54",
+                    "p7_l55",
+                    "p7_l56",
+                    "p7_l57",
+                    "p7_l58",
+                    "p7_l59",
+                    "p7_l60",
+                    "p7_l61",
+                    "p7_l62",
+                    "p7_l63",
+                    "p7_l64"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_1",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "8",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l1"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "ACKNOWLEDGMENTS",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 9.0,
+              "observation_ids": [
+                "p5_l32"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

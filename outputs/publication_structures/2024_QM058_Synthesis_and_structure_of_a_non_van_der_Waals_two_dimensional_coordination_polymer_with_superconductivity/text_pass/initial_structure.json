@@ -1,0 +1,3060 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2024_QM058_Synthesis_and_structure_of_a_non_van_der_Waals_two_dimensional_coordination_polymer_with_superconductivity.pdf",
+    "pages": 9,
+    "sha256": "12b72769f78b7b30ddc766cfe09a40229774302d13a0ca662b720cb6f7155842",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 8.2,
+    "body_font_family": "AdvOTdd63dae3"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 9,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": [
+          {
+            "id": "publication_title",
+            "type": "title",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Synthesis and structure of a non-van-der- Waals two-dimensional coordination polymer with superconductivity",
+            "attributes": {
+              "method": "largest bold front-page typography",
+              "observation_ids": [
+                "p1_l2",
+                "p1_l3",
+                "p1_l4"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 9,
+        "children": [
+          {
+            "id": "unidentified_p1_1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l1"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_2",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Received:18June2024 ZhichaoPan1,2,14,XingHuang 3,14,YunlongFan1,2,ShaozeWang4,YiyuLiu5,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l5"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_3",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Xuzhong Cong\nAccepted: 17 October 2024",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l6",
+                "p1_l7"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_4",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Yu-Qing Zheng\n6, Tingsong Zhang7,8, Shichao Qi9, Ying Xing 5,\n7,8, Jian Li 10, Xiaoming Zhang11, Wei Xu 12, Lei Sun 4,",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l8",
+                "p1_l9",
+                "p1_l10"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_5",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "JianWang 9,13&Jin-HuDou 1,2",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l11"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_6",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Check for updates\n;,:)(0987654321 ;,:)(0987654321",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l12",
+                "p1_l13"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_7",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Two-dimensionalconjugatedcoordinationpolymersexhibitremarkable\nchargetransportproperties,withcopper-basedbenzenehexathiol(Cu-BHT)\nbeingararesuperconductor.However,theatomicstructureofCu-BHThas\nremainedunresolved,hinderingadeeperunderstandingofthesuper-\nconductivityinsuchmaterials.Here,weshowthesynthesisofsinglecrystalsof",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l14",
+                "p1_l15",
+                "p1_l16",
+                "p1_l17",
+                "p1_l18"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "unidentified_p1_8",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Cu3BHT with high crystallinity, revealing a quasi-two-dimensional kagome\nstructurewithnon-vanderWaalsinterlayerCu-Scovalentbonds.Thesecrys-\ntalsexhibitintrinsicmetallicbehavior,withconductivityreaching103S/cmat",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l19",
+                "p1_l20",
+                "p1_l21"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true
+            }
+          },
+          {
+            "id": "heading_p1_l22",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 2,
+            "children": [
+              {
+                "id": "unidentified_p1_9",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "devices.\nTwo-dimensional conjugated coordination polymers (2D c-CPs) and materialsarecharacterizedbyelectron-richconjugatedligands,such\nconjugatedmetal-organicframeworks(2Dc-MOFs)areemergingasa as benzenehexathiolate (BHT)8–12, hexaiminobenzene (HIB)13,14,\nnoveltypeofelectronicmaterials1–4.Theyarefunctionalmaterialswith 2,3,6,7,10,11-hexahydroxytriphenylene (HHTP)15–17, 2,3,6,7,10,11-hex-\na2Dperiodicnetworkstructureformedbytheself-assemblyofmetal aaminotriphenylene(HITP)18–20andothers,alongwithtransitionmetal-\ncenters and organic ligands through coordination bonds5–7. These centered coordination modes21,22. The unique 2D π-d conjugation\n1NationalKeyLaboratoryofAdvancedMicroandNanoManufactureTechnology,SchoolofMaterialsScienceandEngineering,PekingUniversity,Beijing\n100871,China.2KeyLaboratoryofPolymerChemistryandPhysicsofMinistryofEducation,SchoolofMaterialsScienceandEngineering,PekingUniversity,\nBeijing100871,China.3CenterforAdvancingElectronicsDresden&FacultyofChemistryandFoodChemistry,TechnischeUniversitätDresden,Dresden\n01062,Germany.4DepartmentofChemistryandDepartmentofPhysics,SchoolofScience,WestlakeUniversity,Hangzhou310030,China.5StateKey\nLaboratoryofHeavyOilProcessing,CollegeofNewEnergyandMaterials,ChinaUniversityofPetroleum,Beijing102249,China.6CollegeofChemistryand\nMolecularEngineering,PekingUniversity,Beijing100871,China.7NationalKeyLaboratoryofAdvancedMicroandNanoManufactureTechnology,Schoolof\nIntegratedCircuits,PekingUniversity,Beijing100871,China.8BeijingAdvancedInnovationCenterforIntegratedCircuits,SchoolofIntegratedCircuits,Peking\nUniversity,Beijing100871,China.9InternationalCenterforQuantumMaterials,SchoolofPhysics,PekingUniversity,Beijing100871,China.10Schoolof\nChemistryandChemicalEngineering,NanjingUniversity,Nanjing210093,China.11CollegeofPhysicsandOptoelectronicEngineering,OceanUniversityof\nChina,Qingdao,Shandong266100,China.12BeijingNationalLaboratoryforMolecularSciences,KeyLaboratoryofOrganicSolids,InstituteofChemistry\nChineseAcademyofSciences,Beijing100190,China.13CollaborativeInnovationCenterofQuantumMatter,Beijing100871,China.14Theseauthorscon-\ntributedequally:ZhichaoPan,XingHuang. e-mail:doujinhu@pku.edu.cn",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l28",
+                    "p1_l29",
+                    "p1_l30",
+                    "p1_l31",
+                    "p1_l32",
+                    "p1_l33",
+                    "p1_l34",
+                    "p1_l35",
+                    "p1_l36",
+                    "p1_l37",
+                    "p1_l38",
+                    "p1_l39",
+                    "p1_l40",
+                    "p1_l41",
+                    "p1_l42",
+                    "p1_l43",
+                    "p1_l44",
+                    "p1_l45"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_1",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "electronic structure grants them excellent charge transport\nproperties8, which challenges the conventional belief that CPs\nand MOFs are poor electron conductors23. The excellent charge\ntransport properties and unique programmable topology and com-\nposition of 2D c-CPs offer a rich framework for exploring various\nexotic condensed-matter physics, including topological insulators24–26,\nspin lattices27, quantum spin liquid28, Weyl semimetals29,\nsuperconductivity10,30,31, etc.\nUnlike charge-transfer complex organic superconductors, 2D\nc-MOFs form conductive pathways via in-plane π-d interactions,\ninvolving both through-bond and extended conjugation mechanisms3.\nThe introduction of metal ions facilitates the creation of in-plane π-d\nconductive channels, potentially amplifying electron–electron inter-\nactions and thus promoting superconductivity. Cu-BHT stands as the\nsole superconductor amidst the expansive realm of CPs and MOFs, yet\nexists as a powder sample without precise atomic structure\ncharacterization10,30. Pellets or multi-crystalline films are susceptible to\nexternal factors such as impurities, random crystal orientation, grain\nboundaries, and defects, complicating the precise atomic-scale struc-\nture determination of Cu3BHT and impeding a comprehensive\nunderstanding of its intrinsic electrical characteristics and super-\nconductivity behavior. The lack of atomic-resolution crystal structure\nof Cu3BHT also hinders theoretical investigation of the nature of its\nsuperconductivity10,30. Overcoming these challenges is crucial for\nestablishing the theoretical groundwork needed to propel the\nadvancement of novel CPs and MOFs-based superconductors.\nIn this work, to address this challenge, micro-crystal arrays of\nCu3BHT were realized through liquid-liquid interface reactions, yield-\ning the highest crystallinity and largest single crystals among Cu-BHT\nmaterials. High-quality single crystals allow atomic-precision structural\ndetermination, which revealed a quasi-2D kagome structure with non-\nvan der Waals interactions, characterized by robust interlayer inter-\nactions mediated through Cu–S covalent bonds. This finding contrasts\nsharply with the previously assumed graphite-like layered structure\nand provides the first proof of Cu3BHT ’s exact atomic arrangement.\nSingle-crystal devices were fabricated to reveal the interlayer charge\ntransport properties of Cu3BHT. Cu3BHT shows an intrinsic metallic\nbehavior with electrical conductivity reaching 103 S/cm at room tem-\nperature and 104 S/cm at 2 K. Most notably, Cu3BHT single-crystal\ndevices exhibit a superconductivity transition at 0.25 K. Furthermore,\ntheoretical calculations have further elucidated the superconducting\nmechanism in Cu3BHT, attributed to the enhanced its\nelectron–phonon coupling and electron–electron interaction, which\nare induced by its distinctive kagome structure and interlayer Cu–S\nbonds. This clear illustration of the electrical properties’ origin for\nCu3BHT represents a significant advancement in the field of c-CPs and\nMOFs, offering new insights into the design and engineering of func-\ntional c-CPs-based quantum materials and devices.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l2",
+                    "p2_l3",
+                    "p2_l4",
+                    "p2_l5",
+                    "p2_l6",
+                    "p2_l7",
+                    "p2_l8",
+                    "p2_l9",
+                    "p2_l10",
+                    "p2_l11",
+                    "p2_l12",
+                    "p2_l13",
+                    "p2_l14",
+                    "p2_l15",
+                    "p2_l16",
+                    "p2_l17",
+                    "p2_l18",
+                    "p2_l19",
+                    "p2_l20",
+                    "p2_l21",
+                    "p2_l22",
+                    "p2_l23",
+                    "p2_l24",
+                    "p2_l25",
+                    "p2_l26",
+                    "p2_l27",
+                    "p2_l28",
+                    "p2_l29",
+                    "p2_l30",
+                    "p2_l31",
+                    "p2_l32",
+                    "p2_l33",
+                    "p2_l34",
+                    "p2_l35",
+                    "p2_l36",
+                    "p2_l37",
+                    "p2_l38",
+                    "p2_l39",
+                    "p2_l40",
+                    "p2_l41",
+                    "p2_l42",
+                    "p2_l43",
+                    "p2_l44",
+                    "p2_l45",
+                    "p2_l46",
+                    "p2_l47",
+                    "p2_l48",
+                    "p2_l49"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "300 K and 104 S/cm at 2 K. Notably, superconductivity in Cu3BHT crystals is observedat0.25K,attributedtoenhancedelectron-electroninteractionsand electron-phononcouplinginthenon-vanderWaalsstructure.Thediscoveryof thisclearcorrelationbetweenatomic-levelcrystalstructureandelectrical propertiesprovidesacrucialfoundationforadvancingsuperconductor coordinationpolymers,withpotentialtorevolutionizefuturequantum",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.0,
+              "observation_ids": [
+                "p1_l22",
+                "p1_l23",
+                "p1_l24",
+                "p1_l25",
+                "p1_l26",
+                "p1_l27"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p1_furniture_p1_l46",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p1_l46"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p2_furniture_p2_l1",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p2_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p2_l50",
+            "type": "section",
+            "page_start": 2,
+            "page_end": 6,
+            "children": [
+              {
+                "id": "unidentified_p2_2",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Synthesis of Cu3BHT micro-crystal array\nMicro-crystal arrays of Cu3BHT were prepared through interfacial self-\nassembly between a toluene solution of ligand and an aqueous solu-\ntion of the Cu source. The crystallinity of 2D c-CPs is closely associated\nwith reaction reversibility32. Especially, higher reaction temperatures\ncan make the coordination reaction more reversible33,34. Dichlor-\nomethane is the most common solvent choice for interfacial synthesis\nof 2D c-CPs8,10. However, its low boiling point limits the achievable\nreaction temperatures, thereby constraining the reversibility of the\nreaction and the concentration of the ligand. To overcome these\nchallenges, we substituted dichloromethane with toluene, a solvent\nwith a higher boiling point. Our synthesis trials revealed that tem-\nperature and precursor concentration are critical factors influencing\nthe sizes of Cu3BHT crystals. Controlled crystal growth was achieved\nby reacting a 1.85 mmol/L toluene solution of the ligand and a\n2 × 10−2 mol/L CuCl2 aqueous solution at 75 °C for 1 week, as shown in\nSupplementary Figs. 1–4.\nThe scanning electron microscopy (SEM) image presented in\nFig. 1d illustrates that highly oriented micro-crystal is densely packed\nin the Cu3BHT film. These crystals are significantly larger than those\nreported in previous studies8, with lengths reaching several micro-\nmeters and a cross-sectional area exceeding 104 nm2. Additionally,\nphase-pure single crystals of Cu3BHT, which are suitable for both the\nsingle structure determination and single-crystal device fabrication,\ncan now be efficiently produced through simple ultrasonication of\nCu3BHT micro-crystal arrays.\nThe powder X-ray diffraction (PXRD) patterns and Raman spectra\nof the synthesized Cu3BHT demonstrate markedly improved quality\nover previous studies8,10, particularly with respect to the full width at\nhalf maximum (FWHM) and the significantly increased number of\ndetectable peaks (Supplementary Figs. 5–7). These improvements in\ncrystallinity are crucial for enhancing the resolution of structural\ndetermination for Cu3BHT. The synchrotron PXRD (λ = 0.458086 Å)\nresult of the meticulously grown Cu3BHT samples is displayed in\nFig. 1g. The sample’s monoclinic crystal system is well-indexed, with\nunit cell parameters a = 14.8082(10) Å, b = 8.6706(6) Å, c = 6.8357(5) Å,\nα = γ = 90° and β = 97.342(2)°. Notably, two closely spaced peaks at the\nlowest angle (3.51° and 3.57°, d-spacing = 7.4788 and 7.3531 Å) are\nindexed as (110) and (200), respectively. These peaks, corresponding\nto the in-plane hexagonal periodic packing, were indistinguishable in\nprevious reports due to peak overlap8,10. This finding indicates that the\nin-plane structure of Cu3BHT possesses a lower symmetry than a\nperfect hexagonal lattice.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l51",
+                    "p2_l52",
+                    "p2_l53",
+                    "p2_l54",
+                    "p2_l55",
+                    "p2_l56",
+                    "p2_l57",
+                    "p2_l58",
+                    "p2_l59",
+                    "p2_l60",
+                    "p2_l61",
+                    "p2_l62",
+                    "p2_l63",
+                    "p2_l64",
+                    "p2_l65",
+                    "p2_l66",
+                    "p2_l67",
+                    "p2_l68",
+                    "p2_l69",
+                    "p2_l70",
+                    "p2_l71",
+                    "p2_l72",
+                    "p2_l73",
+                    "p2_l74",
+                    "p2_l75",
+                    "p2_l76",
+                    "p2_l77",
+                    "p2_l78",
+                    "p2_l79",
+                    "p2_l80",
+                    "p2_l81",
+                    "p2_l82",
+                    "p2_l83",
+                    "p2_l84",
+                    "p2_l85",
+                    "p2_l86",
+                    "p2_l87",
+                    "p2_l88",
+                    "p2_l89",
+                    "p2_l90",
+                    "p2_l91",
+                    "p2_l92",
+                    "p2_l93"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p2_3",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Single crystal structure characterization of Cu3BHT\nThe successful synthesis of high-quality crystals enabled the first\natomic-resolution structure analysis of Cu3BHT. High-resolution\nscanning transmission electron microscopy (HR-STEM) images\nrevealed a 2D kagome lattice of Cu atoms in Cu3BHT (Fig. 1e and\nSupplementary Fig. 8), which is consistent with previous reports8,10,30.\nFurthermore, the atomic-precision structure of Cu3BHT was directly\nsolved using the Microcrystal electron diffraction (Micro-ED) method\nin TEM with an ab initio approach. As shown in Fig. 1f, the structure of\nCu3BHT is depicted along the c-axis. The high resolution of the Micro-\nED dataset, reaching up to 0.696 Å (indicated by the yellow circle),\nfacilitated the direct location of all non-hydrogen atoms within the\nstructure (Supplementary Fig. 9). In contrast, previous structure\ndeterminations of Cu3BHT only reached a resolution of 2.3660 Å10.\nThis structure was subsequently refined against high-resolution syn-\nchrotron PXRD data through Rietveld refinement. Our results indicate\nthat Cu3BHT crystallizes in the monoclinic P21/c space group, indicat-\ning an ABAB double-layer stacking structure.\nThe single crystal structure of Cu3BHT is depicted in Fig. 1. Each\nBHT ligand issurrounded by six Cu atoms, with Cu–S distances ranging\nfrom 2.26(1) to 2.33(9) Å (Supplementary Fig. 10). Each Cu atom is\nlinked to two BHT ligands, forming a kagome lattice (Fig. 1a and Sup-\nplementary Fig. 11). Notably, the atomic-resolution structure has\nrevealed a critical feature of Cu3BHT that was previously overlooked.\nUnlike the commonly assumed van der Waals interactions and π–π\ninteractions between layers in 2D c-CPs, Cu–S bonds (2.662(6) Å) are\npresent to connect adjacent Cu3BHT layers (Fig. 1b). The length of the\nCu–S bonds reported here is similar to other Cu–S bonds that have\nbeen observed in the crystal structures of other materials35,36. There are\ntwo distinct coordination environments for Cu within Cu3BHT. Spe-\ncifically, two-thirds of the Cu atoms exhibit 4-coordination in a square\nplanar geometry, whereas the remaining third are 5-coordinated,\nforming a square pyramidal structure. Similarly, the S atoms split into\ntwo-thirds μ2 and one-third μ3 categories. Although the average\ninterlayer distance is 3.32 Å, a markedly shorter covalent contact of\n2.66 Å occurs between the layers through Cu–S bonds. From another",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l94",
+                    "p2_l95",
+                    "p2_l96",
+                    "p2_l97",
+                    "p2_l98",
+                    "p2_l99",
+                    "p2_l100",
+                    "p2_l101",
+                    "p2_l102",
+                    "p2_l103",
+                    "p2_l104",
+                    "p2_l105",
+                    "p2_l106",
+                    "p2_l107",
+                    "p2_l108",
+                    "p2_l109",
+                    "p2_l110",
+                    "p2_l111",
+                    "p2_l112",
+                    "p2_l113",
+                    "p2_l114",
+                    "p2_l115",
+                    "p2_l116",
+                    "p2_l117",
+                    "p2_l118",
+                    "p2_l119",
+                    "p2_l120",
+                    "p2_l121",
+                    "p2_l122",
+                    "p2_l123",
+                    "p2_l124",
+                    "p2_l125",
+                    "p2_l126",
+                    "p2_l127",
+                    "p2_l128",
+                    "p2_l129"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_1",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "a b\n2.66 A\nA\n2.26\n3.32 A\n2.33A\nb\na\ne\n3 μm\n2 μm\ng\nCu\nS\nC\nd\nc\nc Ln-1\nb\nS L n\nL\nCu n+1\na c\nc b\n200\nFFT 110 0.696 A\n2 nm\nL\nn+2\nf",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l2",
+                    "p3_l3",
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6",
+                    "p3_l7",
+                    "p3_l8",
+                    "p3_l9",
+                    "p3_l10",
+                    "p3_l11",
+                    "p3_l12",
+                    "p3_l13",
+                    "p3_l14",
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17",
+                    "p3_l18",
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21",
+                    "p3_l22",
+                    "p3_l23",
+                    "p3_l24",
+                    "p3_l25",
+                    "p3_l26",
+                    "p3_l27",
+                    "p3_l28",
+                    "p3_l29",
+                    "p3_l30",
+                    "p3_l31"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_2",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Calculation",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_3",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Observation",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l33"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_4",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Difference",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l34"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_5",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Bragg peaks\n)011( )002(\n)013( )004(\n)200(\n)201(\n)006(\n)040(\n)044(\n).u.bra(\nytisnetnI\n5 10 15 20\nFig. 1 | Single crystal structure of Cu3BHT. a A representation of the crystal\nstructure of Cu3BHT viewed along the c direction. b The metal-ligand connectivity\nof the five-coordinate Cu atoms and layer stacking of Cu3BHT. c The charge\ntransport network formed by Cu–S bonds. d The SEM micrograph reveals that\nclosely packed single crystals is formed in Cu3BHT film. e HR-STEM image of\n2θ (degree)\nCu3BHT (inset: fast Fourier transform (FFT) of the micrograph). f High-resolution\nMicro-ED data. g PXRD data of synthesized Cu3BHT. Blue line: calculated inten-\nsities; orange line: observed intensities; gray line: Bragg peaks; black line:\ndifference.\nstructural perspective, it can be seen as a Cu–S network of the\n4.8.8 net, aligned with the (100) plane. The axial Cu–S bonds link\nthe layers vertically, endowing Cu3BHT with a distinctive non-van\nder Waals 2D structure that includes both a fully conjugated 2D plane\nand vertically oriented short covalent interactions between lay-\ners (Fig. 1c).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l35",
+                    "p3_l36",
+                    "p3_l37",
+                    "p3_l38",
+                    "p3_l39",
+                    "p3_l40",
+                    "p3_l41",
+                    "p3_l42",
+                    "p3_l43",
+                    "p3_l44",
+                    "p3_l45",
+                    "p3_l46",
+                    "p3_l47",
+                    "p3_l48",
+                    "p3_l49",
+                    "p3_l50",
+                    "p3_l51",
+                    "p3_l52",
+                    "p3_l53",
+                    "p3_l54",
+                    "p3_l55",
+                    "p3_l56",
+                    "p3_l57",
+                    "p3_l58",
+                    "p3_l59",
+                    "p3_l60",
+                    "p3_l61"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p3_6",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "Single crystal device characterization\nFour probe single-crystal devices were fabricated to reveal the intrinsic\nelectrical properties of Cu3BHT. The SEM image of the device (Fig. 2a)\nreveals that a typical Cu3BHT crystal exhibits a rod-like morphology\nwith an edge-on orientation. Four electrodes (5 nm Ti/250 nm Au) were\ndeposited perpendicular to the long axis of the crystal, enabling the\ncharacterization of charge transport along the out-of-plane direction\n([001] direction) (Supplementary Figs. 12–14). In Supplementary\nFig. 13, the SEM image and elemental mapping confirm the structural\nintegrity of the Cu3BHT single-crystal device, with no visible cracks or\nboundary damage observed after electron beam lithography (EBL).\nThis stability is attributed to the precise optimization of electron beam\ndosage, ensuring effective photoresist development while preserving\nthe crystal structure. As indicated in Fig. 2b, the linear voltage-current\nbehavior confirms the Ohmic contact, ensuring the reliability of elec-\ntrical measurements. The negligible difference in conductivity\nbetween two-probe and four-probe measurements at room tempera-\nture confirms minimal contact resistance between Cu3BHT and the\nelectrodes. The electrical conductivity of Cu3BHT along the out-of-\nplane direction is estimated to be approximately 103 S/cm at 300 K,\nincreasing to 104 S/cm at 2 K (Fig. 2b, c).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l62",
+                    "p3_l63",
+                    "p3_l64",
+                    "p3_l65",
+                    "p3_l66",
+                    "p3_l67",
+                    "p3_l68",
+                    "p3_l69",
+                    "p3_l70",
+                    "p3_l71",
+                    "p3_l72",
+                    "p3_l73",
+                    "p3_l74",
+                    "p3_l75",
+                    "p3_l76",
+                    "p3_l77",
+                    "p3_l78",
+                    "p3_l79",
+                    "p3_l80",
+                    "p3_l81",
+                    "p3_l82"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_1",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "a b\n6\nFour-probe\n4 Two-probe\n2\n0\n−2\n−4\n−6\n−3 −2 −1 0 1\nd\n2.4\n2.0\n1.6\n1.2\n0 0.5 1.0 1.5 2.0 2.5\n))T(ρ(gol\n1 μm\ne\n0.06\nlog(ρ(T))\nLinear fit of second regime\nLinear fit of third regime\n0.03\n0.00\n−0.03\nlog(T(K))\n).u.bra(",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l2",
+                    "p4_l3",
+                    "p4_l4",
+                    "p4_l5",
+                    "p4_l6",
+                    "p4_l7",
+                    "p4_l8",
+                    "p4_l9",
+                    "p4_l10",
+                    "p4_l11",
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15",
+                    "p4_l16",
+                    "p4_l17",
+                    "p4_l18",
+                    "p4_l19",
+                    "p4_l20",
+                    "p4_l21",
+                    "p4_l22",
+                    "p4_l23",
+                    "p4_l24",
+                    "p4_l25",
+                    "p4_l26",
+                    "p4_l27",
+                    "p4_l28",
+                    "p4_l29"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_2",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "R/RΔ\n0\nC\nu\n3B\nH\nT\ns\n[0\n0\n1\n]\nAu\nTi/\nelectrode\nin\ng\nle\nc\nry\ns\nta\nl",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l30",
+                    "p4_l31",
+                    "p4_l32",
+                    "p4_l33",
+                    "p4_l34",
+                    "p4_l35",
+                    "p4_l36",
+                    "p4_l37",
+                    "p4_l38",
+                    "p4_l39",
+                    "p4_l40",
+                    "p4_l41",
+                    "p4_l42",
+                    "p4_l43",
+                    "p4_l44",
+                    "p4_l45",
+                    "p4_l46",
+                    "p4_l47",
+                    "p4_l48",
+                    "p4_l49",
+                    "p4_l50",
+                    "p4_l51",
+                    "p4_l52"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_3",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Cu BHT 1\n3\nCu BHT 2\n3\nCu BHT 3\n3",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l53",
+                    "p4_l54",
+                    "p4_l55",
+                    "p4_l56",
+                    "p4_l57",
+                    "p4_l58"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_4",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "ΔR/R =2.3%\n100 K 0",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l59",
+                    "p4_l60"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_5",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "ΔR/R =1.9%\n0\n20 K\nΔR/R =1.8%\n0\n−9 −6 −3 0 3\n)Aμ(\nI",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l61",
+                    "p4_l62",
+                    "p4_l63",
+                    "p4_l64",
+                    "p4_l65",
+                    "p4_l66",
+                    "p4_l67",
+                    "p4_l68"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_6",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "V (mV)",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l69"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_7",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "B (T)\nc\n2 3\n)K003(ρ/)T(ρ\n0 5 10 15 20",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l70",
+                    "p4_l71",
+                    "p4_l72",
+                    "p4_l73",
+                    "p4_l74"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_8",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Binding energy (eV)\nf\n1.2\n1.0\n0\n0\n.\n.\n6\n8",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l75",
+                    "p4_l76",
+                    "p4_l77",
+                    "p4_l78",
+                    "p4_l79",
+                    "p4_l80",
+                    "p4_l81",
+                    "p4_l82",
+                    "p4_l83",
+                    "p4_l84"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_9",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Ref.8\nRef.10\n0.4\nCu BHT 1\n3\n0.2 Cu 3 BHT 2\nCu BHT 3\n0.0 3\n0 100 200 300",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l85",
+                    "p4_l86",
+                    "p4_l87",
+                    "p4_l88",
+                    "p4_l89",
+                    "p4_l90",
+                    "p4_l91",
+                    "p4_l92",
+                    "p4_l93"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_10",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Fermi edge\n-0.4 0.0 0.4\nBinding energy (eV)\n6 9",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l94",
+                    "p4_l95",
+                    "p4_l96",
+                    "p4_l97"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_11",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "T (K)\n).u.bra(\nytisnetnI\nFig. 2 | Electrical properties of Cu3BHT. a The SEM image of a single crystal magnetic field. e The relationship between magnetic induction intensity and\nCu3BHTdevice.bOut-of-planetwo-probeandfour-probeI–Vcurvesweremea- resistancechange,withmagneticfieldorientationalignedwiththecurrentdirec-\nsuredfromaCu3BHTsingle-crystaldeviceatroomtemperature.cFour-probe tion.fUPSdataforthevalencebandregionofCu3BHTwereacquiredat300K,and\ntemperature-dependentnormalizedresistivityofthreesinglecrystaldevicesand theFermiedgeisshownbythereddottedline.\ncompared with previous reports. d log(ρ(T)) vs log(T) for Cu3BHT 2 at zero\nThe high interlayer conductivity may be attributed to van der\nWaals and π–π interactions, as well as the covalently bonded Cu–S\nnetwork, as shown in the previous discussion (Fig. 1c). The interlayer\nCu–S bonding may not only increase the efficiency of charge carrier\ntransport but also stabilize the stacking structure, preventing the\nPeierls transition37,38. Figure 2c shows the temperature dependence of\nnormalized out-of-plane resistivity (ρ(T)/ρ(300 K) vs T), with the\nresidual-resistance ratio (RRR) value reaching up to 10, comparable to\nthat of typical copper exposed to environmental conditions39. This is\nsignificantly higher thanother metallic MOFs, which typically have RRR\nvalues close to 18,10, indicating the high quality of our Cu3BHT crystal\nand its strong metallic behavior. The temperature-dependent resis-\ntivity and conductivity of the single-crystal devices were characterized\nusing the four-probe method, as illustrated in Supplementary\nFigs. 15 and 16. Three devices were measured, and their results were\ncompared with those previously reported poly-crystalline Cu-BHT\nsamples8,10. All three single-crystal devices consistently demonstrated\nclear metallic behavior from 2 to 300 K. The measurements based on\nfilm samples are more sample-dependent (Supplementary Fig. 17). This\nis primarily due to the film samples containing numerous crystal\nboundaries and less precise control over crystal orientations, resulting\nin a mixture of intrinsic and extrinsic charge transport properties. In\nconclusion, our results provide a more intrinsic and detailed picture of\nthe charge transport properties of Cu3BHT.\nThe log(ρ) vs log(T) plot in Fig. 2d illustrates that the temperature\ndependence of Cu3BHT can be divided into three distinct regimes. At\nvery low temperatures ( < 10 K), the resistivity of Cu3BHT shows\nminimal temperature dependence, marked by a pronounced mini-\nmum resistance value. This phenomenon may be attributed to the\nsignificant exchange coupling between the conduction electron gas\nand impurities (such as trace amounts of free Cu2+ ions), which induces\na novel electronic state that stabilizes the resistivity. Between 20 and\n100 K, the resistivity exhibits a linear temperature dependence, ρ∝T,\nwhich can be attributed to the metallic charge transport behavior. This\nlinear dependence is often regarded as a key indicator of non-Fermi-\nliquid behavior40. As the temperature rises, the amplitude of lattice\nvibrations escalates, consequently intensifying electron–phonon\nscattering. However, as temperatures surpass 100 K, the resistivity\nexhibits a power-law dependence, ρ∝T0.31. This change is likely due to\nthe saturation of lattice vibrations and carrier scattering mechanisms,\nwhere the scattering probability ceases to increase significantly with\ntemperature, leading to a slower rise in resistivity. The single-crystal\ndevice used in this study enables the exploration of complex metallic\nbehaviors in 2D c-CPs that were previously unexplored.\nThe metallic properties of Cu3BHT are supported by the results of\nmagnetoresistance measurements shown in Fig. 2e. When subjected to\nan external magnetic field at 1.7 K, the electrical resistance of single-\ncrystal Cu3BHT increases by approximately 2%, consistent with\nordinary magnetoresistance41. This response can be attributed to the\nmagnetic field’s effect on electron motion within the lattice, which\nleads to increased scattering events and, consequently, higher overall\nresistance. Additionally, ultraviolet photoelectron spectroscopy (UPS)\nanalysis indicates that the Fermi level of Cu3BHT intersects with the\nconduction band, as illustrated in Fig. 2f, providing additional support\nfor the material’s metallic behavior.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l98",
+                    "p4_l99",
+                    "p4_l100",
+                    "p4_l101",
+                    "p4_l102",
+                    "p4_l103",
+                    "p4_l104",
+                    "p4_l105",
+                    "p4_l106",
+                    "p4_l107",
+                    "p4_l108",
+                    "p4_l109",
+                    "p4_l110",
+                    "p4_l111",
+                    "p4_l112",
+                    "p4_l113",
+                    "p4_l114",
+                    "p4_l115",
+                    "p4_l116",
+                    "p4_l117",
+                    "p4_l118",
+                    "p4_l119",
+                    "p4_l120",
+                    "p4_l121",
+                    "p4_l122",
+                    "p4_l123",
+                    "p4_l124",
+                    "p4_l125",
+                    "p4_l126",
+                    "p4_l127",
+                    "p4_l128",
+                    "p4_l129",
+                    "p4_l130",
+                    "p4_l131",
+                    "p4_l132",
+                    "p4_l133",
+                    "p4_l134",
+                    "p4_l135",
+                    "p4_l136",
+                    "p4_l137",
+                    "p4_l138",
+                    "p4_l139",
+                    "p4_l140",
+                    "p4_l141",
+                    "p4_l142",
+                    "p4_l143",
+                    "p4_l144",
+                    "p4_l145",
+                    "p4_l146",
+                    "p4_l147",
+                    "p4_l148",
+                    "p4_l149",
+                    "p4_l150",
+                    "p4_l151",
+                    "p4_l152",
+                    "p4_l153",
+                    "p4_l154",
+                    "p4_l155",
+                    "p4_l156",
+                    "p4_l157",
+                    "p4_l158",
+                    "p4_l159",
+                    "p4_l160"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_12",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "Superconductivity characterization and magnetic properties\nTo investigate the Cu3BHT crystal’s magnetic properties, magnetiza-\ntion measurements were performed under applied magnetic fields\nranging from 0 to 5 T at various temperatures. The resulting curves\nconsistently demonstrate paramagnetic characteristics across these\ntemperatures (Fig. 3a). As shown in Fig. 3b, no divergence was\nobserved between the temperature dependence of magnetic sus-\nceptibilities collected from zero-field-cooled (ZFC) and field-cooled\n(FC) measurements, indicating the absence of long-range magnetic\nordering down to at least 2 K. The temperature dependence of",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l161",
+                    "p4_l162",
+                    "p4_l163",
+                    "p4_l164",
+                    "p4_l165",
+                    "p4_l166",
+                    "p4_l167",
+                    "p4_l168",
+                    "p4_l169",
+                    "p4_l170"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "a b\nd e\n1.0\n0.8\n0.6\n0.4\n0.2\n0.0\n0.2 0.4 0.6 0.8 1.0\n)K1(ρ/)T(ρ\n0.016\n0.012\n0.008\n0.004\n2",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12",
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_2",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "T (K)\n2 K\n0.03\n3 K\n5 K\n0.02 8 K\n10 K\n0.01\n0.00\n0 1 2 3 4 5\n)βN(\n80\n60\n40\n20\n0\n0.05\n)Ω(\nR\nM\n)g/ume(M",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22",
+                    "p5_l23",
+                    "p5_l24",
+                    "p5_l25",
+                    "p5_l26",
+                    "p5_l27",
+                    "p5_l28",
+                    "p5_l29",
+                    "p5_l30",
+                    "p5_l31",
+                    "p5_l32",
+                    "p5_l33",
+                    "p5_l34",
+                    "p5_l35",
+                    "p5_l36",
+                    "p5_l37"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_3",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "B (T)\nc\nf\n2500\nZFC χ-1\nFC 2000 XT\n1500\n1000\n500\n0\n4 6 8 10 0 100 200 300\n)ume/\nlom(\n0.12\n0.08\n0.04\n0.00\n)lom/Kume(TX\n0.16",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l38",
+                    "p5_l39",
+                    "p5_l40",
+                    "p5_l41",
+                    "p5_l42",
+                    "p5_l43",
+                    "p5_l44",
+                    "p5_l45",
+                    "p5_l46",
+                    "p5_l47",
+                    "p5_l48",
+                    "p5_l49",
+                    "p5_l50",
+                    "p5_l51",
+                    "p5_l52",
+                    "p5_l53",
+                    "p5_l54",
+                    "p5_l55",
+                    "p5_l56"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_4",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "Metallic state\n0.12",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l57",
+                    "p5_l58"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_5",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "Superconductor\n0.08",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l59",
+                    "p5_l60"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "heading_p5_l61",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 6,
+                "children": [
+                  {
+                    "id": "heading_p5_l62",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_6",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "0.00\n0.0 0.1 0.2",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l63",
+                            "p5_l64"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Experimental data",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 7.5,
+                      "observation_ids": [
+                        "p5_l62"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l65",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_7",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": ")T(B\n0 mT\n0.15 0.25 0.35\n1000\n225\n200\n175\n150\n137.5\n125\n112.5\n100\n75\n50\n25",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l66",
+                            "p5_l67",
+                            "p5_l68",
+                            "p5_l69",
+                            "p5_l70",
+                            "p5_l71",
+                            "p5_l72",
+                            "p5_l73",
+                            "p5_l74",
+                            "p5_l75",
+                            "p5_l76",
+                            "p5_l77",
+                            "p5_l78",
+                            "p5_l79",
+                            "p5_l80"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T (K)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.4,
+                      "observation_ids": [
+                        "p5_l65"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l81",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_8",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "1-χ",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l82"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T (K)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.4,
+                      "observation_ids": [
+                        "p5_l81"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l83",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_9",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "Fig.3|SuperconductivityandmagneticpropertiesofCu3BHT2.aTherela- temperaturedependenceofnormalizedresistance.eThevariationofresistance\ntionshipbetweenmagnetizationandmagneticfieldsunderdifferenttemperatures. withtemperatureunderanappliedmagneticfieldparalleltotheabplaneranging\nbZero-field-coolingcurveandfield-coolingcurveofCu3BHT.cTemperature from0to1000mT.fThephasediagramofsuperconductivity.\ndependence of magnetic susceptibility and inverse susceptibility. d The\nmagnetic susceptibility, χ(T), was examined under a 500 mT magnetic\nfield. The inverse susceptibility, χ−1(T), was also calculated and is pre-\nsented in Fig. 3c. The susceptibility and its inverse curve clearly follow\nCurie’s law, further supporting the non-Fermi liquid behavior42. These\nmagnetic characterizations collectively confirm the paramagnetic\nnature of Cu3BHT down to at least 2 K. Moreover, χT at 300 K is\napproximately 0.125 emu K/mol, corresponding to an effective\nmoment of μeff = 0.577μB. This value is roughly one-third of the\nexpected value for Cu2+ ions with S = 1/2 (μeff = 1.73μB). This suggests\nthat approximately one-third of the Cu atoms in Cu3BHT should be\nCu2+. The temperature dependence of the direct current (DC) mag-\nnetic susceptibility for Cu3BHT microcrystals from different batches is\nin excellent agreement, thereby confirming the reproducibility of their\nmagnetic properties (Supplementary Fig. 18). This conclusion is fur-\nther supported by X-ray photoelectron spectroscopy (XPS) analysis\n(Supplementary Fig. 19), which indicates that both Cu⁺ and Cu²⁺ exist\nin Cu3BHT with a ratio of approximately 2:1. Combined with the crystal\nstructure analysis, it is suggested that Cu²⁺ ions are associated with a\nsquare pyramidal structure, while Cu⁺ ions adopt a square planar\ncoordination geometry. These results also suggest that copper exhi-\nbits mixed valence in Cu3BHT, with the total anionic charge of BHT\nbeing −4. The mixed valence of copper in Cu3BHT may be caused by\nmetal-to-ligand charge transfer rather than the involvement of an\nexternal oxidizing agent. When Cu²⁺ is reduced to Cu⁺, the ligand is\noxidized to a −4 state. Since three equivalents of Cu²⁺ and one\nequivalent of BHT6− participate in the reaction, the result is a net zero\ncharge. Even when charge transfer occurs between the copper and the\nligand, the result is a net zero charge.\nIn the Cu3BHT crystal, a sharp decline in resistance is observed as\nthe temperature drops to 0.25 K, signaling the onset of super-\nconductivity. The superconducting transition is highly abrupt, with a\ntransition width ΔTc of 40 mK, which is significantly smaller than the\ntransition temperature (Fig. 3d). Furthermore, additional devices\nexhibit superconducting transitions, though with slight variations in\ntransition temperature and ΔTc, likely arising from differences in\ncrystal and device quality (Supplementary Fig. 20). The close agree-\nment in transition temperature between the examined Cu3BHT crystal\nand the thin film sample suggests that both host the same super-\nconducting phase, further highlighting the intrinsic characteristics and\nreproducibility of the material. In the magnetic field range of 0 to 1 T\napplied along the ab plane and the supercurrent flowing along the c-\naxis, the superconducting critical temperature (Tc) shifts toward lower\ntemperatures as the magnetic field strength increases (Fig. 3e). At a\nmagnetic field of 1 T, the superconductivity completely vanishes. By\nemploying the Werthamer–Helfand–Hohenberg (WHH) formula43, the\ncritical magnetic field at zero temperature for Cu3BHT is determined\nto be 0.15 T (Fig. 3f), and the superconducting coherence length is\ncomputed as 47 nm using the expression ξ0 = [Φ0/2πHc2[0�)�0.5. This\nrelatively large coherence length is significantly smaller than the\nsample diameter (~200 nm), indicating the presence of bulk\nsuperconductivity.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l84",
+                            "p5_l85",
+                            "p5_l86",
+                            "p5_l87",
+                            "p5_l88",
+                            "p5_l89",
+                            "p5_l90",
+                            "p5_l91",
+                            "p5_l92",
+                            "p5_l93",
+                            "p5_l94",
+                            "p5_l95",
+                            "p5_l96",
+                            "p5_l97",
+                            "p5_l98",
+                            "p5_l99",
+                            "p5_l100",
+                            "p5_l101",
+                            "p5_l102",
+                            "p5_l103",
+                            "p5_l104",
+                            "p5_l105",
+                            "p5_l106",
+                            "p5_l107",
+                            "p5_l108",
+                            "p5_l109",
+                            "p5_l110",
+                            "p5_l111",
+                            "p5_l112",
+                            "p5_l113",
+                            "p5_l114",
+                            "p5_l115",
+                            "p5_l116",
+                            "p5_l117",
+                            "p5_l118",
+                            "p5_l119",
+                            "p5_l120",
+                            "p5_l121",
+                            "p5_l122",
+                            "p5_l123",
+                            "p5_l124",
+                            "p5_l125",
+                            "p5_l126",
+                            "p5_l127",
+                            "p5_l128",
+                            "p5_l129",
+                            "p5_l130",
+                            "p5_l131",
+                            "p5_l132",
+                            "p5_l133",
+                            "p5_l134",
+                            "p5_l135",
+                            "p5_l136",
+                            "p5_l137",
+                            "p5_l138"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T (K) T (K)",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.4,
+                      "observation_ids": [
+                        "p5_l83"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p5_l139",
+                    "type": "subsubsection",
+                    "page_start": 5,
+                    "page_end": 6,
+                    "children": [
+                      {
+                        "id": "unidentified_p5_10",
+                        "type": "custom",
+                        "page_start": 5,
+                        "page_end": 5,
+                        "children": [],
+                        "text": "Density functional theory (DFT) electronic band structure calculation\nwas conducted based on the atomic-precise crystal structure of\nCu3BHT, revealing its inherent metallic properties (Fig. 4a and Sup-\nplementary Fig. 21), which is in good agreement with UPS results. At\nthe Fermi level, notable contributions to the density of state (DOS)\nstem from the d orbitals of Cu, as well as the p orbitals of S and C\n(Supplementary Fig. 22), indicating a pronounced degree of conjuga-\ntion within the material. The electron band structure of Cu3BHT is\ndepicted along the high-symmetry points of the first Brillouin zone\n(Fig. 4b), revealing prominent bands crossing the Fermi level along\nseveral directions, including Γ–M, Γ–A, A–M, M–B, Γ–B, and Z–D,\nindicating its metallic properties within the plane. Moreover, particular\nemphasis is placed on the material’s metallic characteristics extending\ninto the c direction, as demonstrated by the band crossings at the\nFermi level in the out-of-plane directions Γ–Z and B–D. The in-plane\nmetallic behavior arises from the conductive pathway of π–d con-\njugation interactions between transition metal d orbitals and organic",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p5_l140",
+                            "p5_l141",
+                            "p5_l142",
+                            "p5_l143",
+                            "p5_l144",
+                            "p5_l145",
+                            "p5_l146",
+                            "p5_l147",
+                            "p5_l148",
+                            "p5_l149",
+                            "p5_l150",
+                            "p5_l151",
+                            "p5_l152",
+                            "p5_l153",
+                            "p5_l154",
+                            "p5_l155",
+                            "p5_l156"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      },
+                      {
+                        "id": "unidentified_p6_1",
+                        "type": "custom",
+                        "page_start": 6,
+                        "page_end": 6,
+                        "children": [],
+                        "text": "a\nb\nb*\nB\nD\nΓ\nc* Z\n3.0\n2.0\n1.0\n-1.0\n-2.0\nc\n12\n9\n6",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p6_l2",
+                            "p6_l3",
+                            "p6_l4",
+                            "p6_l5",
+                            "p6_l6",
+                            "p6_l7",
+                            "p6_l8",
+                            "p6_l9",
+                            "p6_l10",
+                            "p6_l11",
+                            "p6_l12",
+                            "p6_l13",
+                            "p6_l14",
+                            "p6_l15",
+                            "p6_l16",
+                            "p6_l17"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "Band structure calculation",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 8.7,
+                      "observation_ids": [
+                        "p5_l139"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "0.04 WHH Fitting",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 7.5,
+                  "observation_ids": [
+                    "p5_l61"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Results",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p2_l50"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p2_furniture_p2_l130",
+            "type": "custom",
+            "page_start": 2,
+            "page_end": 2,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 2",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p2_l130"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p3_furniture_p3_l1",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p3_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p3_furniture_p3_l83",
+            "type": "custom",
+            "page_start": 3,
+            "page_end": 3,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 3",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p3_l83"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p4_furniture_p4_l1",
+            "type": "custom",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p4_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p4_furniture_p4_l171",
+            "type": "custom",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 4",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p4_l171"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p5_furniture_p5_l1",
+            "type": "custom",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p5_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p5_furniture_p5_l157",
+            "type": "custom",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 5",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p5_l157"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p6_furniture_p6_l1",
+            "type": "custom",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p6_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p6_l18",
+            "type": "section",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [
+              {
+                "id": "unidentified_p6_2",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "Cu\nS\nC\n0\nd\n)zHT(ycneuqerF",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_3",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "M Γ A M B Γ Z D B PhDOS\nM\na*\nA\n)ω(λ,)ω(F2α\nM Γ A M B Γ ZD B\n)Ve(",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l25",
+                    "p6_l26",
+                    "p6_l27",
+                    "p6_l28",
+                    "p6_l29",
+                    "p6_l30",
+                    "p6_l31"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_4",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "E-E\nF\n0.0\n0.4\nα2F(ω)\nλ(ω)\n0.3\n0.2\n0.1\n0.0\nTDOS\nCu\nS\nC",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l32",
+                    "p6_l33",
+                    "p6_l34",
+                    "p6_l35",
+                    "p6_l36",
+                    "p6_l37",
+                    "p6_l38",
+                    "p6_l39",
+                    "p6_l40",
+                    "p6_l41",
+                    "p6_l42",
+                    "p6_l43",
+                    "p6_l44",
+                    "p6_l45"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_5",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "DOS\n0 10 20 30 40\nFrequency (THz)\nFig.4|ElectronicbandstructureandphononspectrumofCu3BHT.aElectronic withthesizeofeachcirclebeingproportionaltothemagnitudeofλ qv.dEliashberg\nband structure and DOS of Cu3BHT. b Corresponding first Brillouin zone and high- spectral function α2F(ω) and cumulative frequency-dependent λ(ω).\nsymmetryK-points.c,PhononspectrumwiththeEPCλ qvindicatedbyredcircles,\nligand π orbitals, with the kagome structure formed by densely con-\nnected square pyramidal Cu atoms and BHT ligands. In the c direction,\nthe metallicity predominantly arises from interlayer Cu–S bonds\nformed by pentacoordinate Cu atoms and adjacent S atoms, which\nplay a more significant role than van der Waals interactions, sig-\nnificantly enhancing perpendicular conductivity.\nThe phonon spectrum and density of states for various atoms\n(Fig. 4c), along with the Eliashberg spectral function and the cumula-\ntive frequency function of the electron–phonon coupling (EPC)\nstrength in Cu3BHT (Fig. 4d), indicate pronounced EPC at frequencies\nbelow 6 THz, where phonons are predominantly contributed by the\nvibrations of Cu and S atoms. Specifically, the coordination of square\npyramidal Cu atoms with S atoms within layers and the coordination of\npentacoordinate Cu atoms with S atoms from adjacent layers, play a\nmajor role. The Cu–S bonds not only enhance electron–electron\ninteractions within and between layers but also strengthen\nelectron–phonon coupling, significantly contributing to the material’s\nsuperconducting properties. This underscores the importance of\ninterlayer Cu–S bonding along the π–π stacking direction and provides\nnew insights into the out-of-plane structural characteristics of kagome\nsuperconductors. Furthermore, the vibrational coupling between S\nand C atoms at frequencies around 10 THz indicates strong in-plane\nEPC, whereas the high-frequency stretching vibrations of C atoms at\nfrequencies above 30 THz contribute relatively less to the overall EPC\nstrength (Supplementary Fig. 23). By unfolding the electronic band\nstructures to the Brillouin zone of the kagome lattice formed by Cu\natoms within Cu3BHT, characteristic features of a kagome band\nstructure are observed, including the Dirac cone at the corners of the\nBrillouin zone, a van Hove singularity at the zone boundary center, and\na flat band extending across the entire Brillouin zone (Supplementary\nFig. 24). Despite the presence of hybridized gaps resulting from\ninteractions between the kagome bands and other metallic bands, this\nexploration has the potential to uncover a wealth of emergent quan-\ntum phenomena, which are profoundly significant for discovering and\nunderstanding of new kagome superconductors.\nThe Cu3BHT structure achieves superconductivity through\nunique mechanisms that enhance both electron–electron interactions\nand electron–phonon coupling. This structure features a layered\narrangement where organic ligands and metal ions create π–d con-\njugated conductive pathways within an exceptionally dense kagome\nlattice. The interlayer connectivity is further augmented by penta-\ndentate Cu atoms, which form Cu–S bonds with S atoms from adjacent\nlayers, thereby shortening electron transport distances, increasing\nelectron density, and avoiding Peierls distortion. These features sig-\nnificantly amplify electron–electron interactions. The primary con-\ntributors to electron–phonon coupling in Cu3BHT are the Cu and S\natoms, along with the plane’s S and C atoms. Interlayer Cu–S bonds\nfurther enhance electron–phonon coupling effects in this material.\nThe unique kagome lattice structure and interlayer Cu–S bonds col-\nlectively optimize these properties, distinguishing Cu3BHT’s super-\nconductivity from other organic–inorganic hybrid materials.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l46",
+                    "p6_l47",
+                    "p6_l48",
+                    "p6_l49",
+                    "p6_l50",
+                    "p6_l51",
+                    "p6_l52",
+                    "p6_l53",
+                    "p6_l54",
+                    "p6_l55",
+                    "p6_l56",
+                    "p6_l57",
+                    "p6_l58",
+                    "p6_l59",
+                    "p6_l60",
+                    "p6_l61",
+                    "p6_l62",
+                    "p6_l63",
+                    "p6_l64",
+                    "p6_l65",
+                    "p6_l66",
+                    "p6_l67",
+                    "p6_l68",
+                    "p6_l69",
+                    "p6_l70",
+                    "p6_l71",
+                    "p6_l72",
+                    "p6_l73",
+                    "p6_l74",
+                    "p6_l75",
+                    "p6_l76",
+                    "p6_l77",
+                    "p6_l78",
+                    "p6_l79",
+                    "p6_l80",
+                    "p6_l81",
+                    "p6_l82",
+                    "p6_l83",
+                    "p6_l84",
+                    "p6_l85",
+                    "p6_l86",
+                    "p6_l87",
+                    "p6_l88",
+                    "p6_l89",
+                    "p6_l90",
+                    "p6_l91",
+                    "p6_l92",
+                    "p6_l93",
+                    "p6_l94",
+                    "p6_l95",
+                    "p6_l96",
+                    "p6_l97",
+                    "p6_l98",
+                    "p6_l99",
+                    "p6_l100",
+                    "p6_l101",
+                    "p6_l102"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "3 Total",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 6.1,
+              "observation_ids": [
+                "p6_l18"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p6_l103",
+            "type": "section",
+            "page_start": 6,
+            "page_end": 7,
+            "children": [
+              {
+                "id": "unidentified_p6_6",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "In summary, our study, for the first time, achieved the atomic-precise\ncrystal structure analysis of Cu3BHT, showcasing a unique non-van der\nWaals 2D structure characterized by strong interlayer interactions\nthrough Cu–S covalent bonds. Single-crystal devices of Cu3BHT\noriented in the out-of-plane direction exhibited a complex metallic\nbehavior and a superconducting transition at 0.25 K. DFT calculations\nindicate that the covalently bonded intralayer structure enhances\nelectron–electron interactions and electron–phonon coupling, con-\ntributing to the observed properties. These findings deepen the\nunderstanding of crystal packing structure and electrical properties of\nc-CP materials, thus paving the way for the design of other c-CP-based",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l104",
+                    "p6_l105",
+                    "p6_l106",
+                    "p6_l107",
+                    "p6_l108",
+                    "p6_l109",
+                    "p6_l110",
+                    "p6_l111",
+                    "p6_l112",
+                    "p6_l113",
+                    "p6_l114"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p7_1",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "metallic and superconducting materials. These materials will be\nanticipated to have a substantial impact on the development of c-CP-\nbased quantum devices.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l2",
+                    "p7_l3",
+                    "p7_l4"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Discussion",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p6_l103"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p6_furniture_p6_l115",
+            "type": "custom",
+            "page_start": 6,
+            "page_end": 6,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 6",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p6_l115"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p7_furniture_p7_l1",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p7_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p7_l5",
+            "type": "section",
+            "page_start": 7,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p7_2",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Materials\nCuCl2 was purchased from Alfa Aesar China (Tianjin) Co., Ltd. Toluene\nwas purchased from Beijing Yili Fine Chemicals Co. Ltd. Water was\npurified using the Milli-Q purification system. Both solvents were\ndegassed by Freeze–Thaw method before use. Benzenehexathiol\n(BHT) was synthesized according to the literatures44. All the processing\nsolvents, including ultra-dry methanol, ultra-dry ethanol, acetone,\nmethyl isobutyl ketone (MIBK), polymethyl methacrylate, and methyl\nmethacrylate, were purchased from commercial sources and used as\nreceived. All commercially available chemicals were used without\nfurther purification unless otherwise noted. All air- and water-sensitive\nreactions were performed under a nitrogen atmosphere.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l6",
+                    "p7_l7",
+                    "p7_l8",
+                    "p7_l9",
+                    "p7_l10",
+                    "p7_l11",
+                    "p7_l12",
+                    "p7_l13",
+                    "p7_l14",
+                    "p7_l15",
+                    "p7_l16",
+                    "p7_l17"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p7_3",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Micro-ED data collection and procession of Cu3BHT\nThe sample powder was finely pulverized using an agate mortar,\nthen dispersed in pure ethanol and ultrasonicated for 2 min to\nensure even distribution. A small amount of this dispersion was then\ncarefully placed onto a copper grid, which had been prepared with a\nholey carbon film. The specimen underwent Micro-ED analysis using\na JEOL JEM2100 transmission electron microscope (TEM) operating\nat 200 kV. This microscope was fitted with a Timepix pixel detector\nby Amsterdam Scientific Instruments. To reduce the risk of beam-\ninduced damage, the specimen was cooled to 96 K using a Gatan\ncryo-transfer tomography holder before the start of data collection.\nA Cu3BHT crystal was then positioned within the electron beam and\naligned to the correct mechanical eucentric height. Throughout\nthe data collection phase, the goniometer was in constant rotation,\ncapturing selected-area Electron Diffraction patterns from\nthe crystal at a spot size of 3 with 0.5 s exposure times for each\npattern.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l18",
+                    "p7_l19",
+                    "p7_l20",
+                    "p7_l21",
+                    "p7_l22",
+                    "p7_l23",
+                    "p7_l24",
+                    "p7_l25",
+                    "p7_l26",
+                    "p7_l27",
+                    "p7_l28",
+                    "p7_l29",
+                    "p7_l30",
+                    "p7_l31",
+                    "p7_l32",
+                    "p7_l33",
+                    "p7_l34"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p7_4",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Structure determination of Cu3BHT\nThe final unit cell parameters were refined using synchrotron powder\nX-ray diffraction (SPXRD) through Pawley fitting, which determined\nthe parameters to be a = 14.8082(10) Å, b = 8.6706(6) Å, c = 6.8357(5)\nÅ, with the angles α = γ = 90° and β = 97.342(2)°. Following this, ab\ninitio structure solution of the merged 3D Electron Diffraction (ED)\ndata was conducted using superflip software. This process successfully\nidentified all non-hydrogen atoms within the space group P21/c for the\npreliminary structural model. The final structural refinement was car-\nried out using Jana20065, employing the unit cell parameters obtained\nfrom SPXRD.\nPowder X-ray Diffraction (PXRD) analyses were performed using a\nPanalytical Rigaku D X-ray powder diffractometer, utilizing Cu Kα\nradiation (λ = 1.5406 Å) from a D/max 2500 source and Shanghai syn-\nchrotron radiation light source (λ = 0.458086 Å). Measurements cov-\nered a 2θ range from 5° to 60°, with a step increment of 0.023° and an\nexposure duration of 60 s for each step.\nScanning electron microscopy (SEM) studies were conducted on an\nFEI Quattro S instrument, operating across an acceleration voltage\nrange of 5 to 30 kV. Given the excellent conductivity of Cu3BHT, the\nprocess did not necessitate any supplementary metal coating.\nHigh-resolution transmission electron microscopy (HRTEM) images\nwere captured using a JEOL 2100F transmission electron microscope at\nan acceleration voltage of 120 kV.\nCryo-electron microscopy (cryo-EM) study was performed on an FEI\nTitan Krios TEM (Gatan K2 summit camera) operated at 300 kV with a\nGIF Quantum energy filter (Gatan).\nHigh-resolution scanning transmission electron microscopy (STEM)\nimages were produced with a Nion UltraSTEM 100 microscope,\nfeaturing a spherical aberration corrector and an operational voltage\nof 60 kV.\nUltraviolet photoelectron spectroscopy (UPS) and X-ray photoelec-\ntron spectroscopy (XPS) were performed using the Kratos AXIS Ultra\nPhotoelectron Spectrometer. The measurements were conducted\nunder ultra-high vacuum conditions (3 × 10−9 Torr). The excitation\nsources used are He I (21.11 eV) and monochromatic light source Al Kα\n(1486.6 eV). All binding energy values displayed were calibrated to the\nC1s peak at 284.8 eV, and data analysis was carried out using the\nAvantage software.\nRaman spectroscopy was conducted using a Horiba spectrometer\nwith 532 nm laser excitation to investigate the structural properties of\nCu3BHT.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l35",
+                    "p7_l36",
+                    "p7_l37",
+                    "p7_l38",
+                    "p7_l39",
+                    "p7_l40",
+                    "p7_l41",
+                    "p7_l42",
+                    "p7_l43",
+                    "p7_l44",
+                    "p7_l45",
+                    "p7_l46",
+                    "p7_l47",
+                    "p7_l48",
+                    "p7_l49",
+                    "p7_l50",
+                    "p7_l51",
+                    "p7_l52",
+                    "p7_l53",
+                    "p7_l54",
+                    "p7_l55",
+                    "p7_l56",
+                    "p7_l57",
+                    "p7_l58",
+                    "p7_l59",
+                    "p7_l60",
+                    "p7_l61",
+                    "p7_l62",
+                    "p7_l63",
+                    "p7_l64",
+                    "p7_l65",
+                    "p7_l66",
+                    "p7_l67",
+                    "p7_l68",
+                    "p7_l69",
+                    "p7_l70",
+                    "p7_l71",
+                    "p7_l72",
+                    "p7_l73",
+                    "p7_l74",
+                    "p7_l75",
+                    "p7_l76"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p7_5",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "Device fabrication\nInitially, Cu3BHT was ultrasonically dispersed in methanol, the dis-\npersion was meticulously applied onto a pre-defined Si/SiO2 substrate\nvia a spin-coating process to ensure solvent evaporation and the uni-\nform distribution of single crystals. Following this, the substrate was\ncoated with MMA and PMMA, which were then subjected to thermal\nannealing at temperatures of 150 °C and 170 °C for a duration of two\nminutes, respectively. Utilizing a 30 kV electron beam, lithographic\npatterning was conducted, with MIBK serving as the developer for the\nexposed patterns. This was succeeded by the deposition of a 5 nm\ntitanium layer and a 250 nm gold layer through the process of mag-\nnetron sputtering. The fabrication sequence was finalized with a lift-off\nprocess in acetone, culminating in the preparation of the device.\nVariable temperature electrical conductivity data of single crystals\nusing autocube attoDRY 2100 with SR830 Lock-In Amplifier. Single\ncrystal devices were bonded to chips of attoDRY 2100 with aluminum\nwire using WestBond 7476D wire bonder.\nMagnetic properties were assessed using a Quantum Design\nDynacool D-209 Physical Property Measurement System (PPMS).\nThese measurements of susceptibility were conducted in an external\nfield of 500 mT across temperatures from 1.7 to 300 K. The data were\nthen adjusted to account for the diamagnetic effects, using both\nmeasurements from a blank sample holder and Pascal’s constants for\ncorrection.\nThe superconductivity measurements over a temperature range of\n0.05 to 1 K were performed using a Quantum Design PPMS DynaCool\nsystem equipped with an Electrical Transport Option. In a custom four-\ncontact probe cell, copper wires were affixed to the sample puck’s\ncopper current collector.\nThe superconductivity of Cu3BHT was estimated based on the\ncalculation of electronic propriety, phonon spectrum, and EPC\nstrength within the framework of DFT45,46 and density-functional per-\nturbation theory47, which is implemented in the QE package48. The\ngeneralized gradient approximation (GGA) in the functional type of\nPerdew–Burke–Ernzerh (PBE)49 was employed for the ultrasoft pseu-\ndopotentials, and the cutoff energy was set to 80 Ry for wave functions\nand 640 Ry for charge density. During structural relaxation and self-\nconsistent calculations, the Gaussian spreading value of 0.01 Ry was\nemployed for the method of Methfessel–Paxton first-order spreading\nto determine electron occupations under the uniform 4 × 2 × 4 k-point\nmesh. The dynamic matrix and phonon frequency were computed on a\n1 × 1 × 1 q-point mesh with a 4 × 2 × 4 k-point sampling in the Brillouin\nzone of Cu3BHT, and a finer 8 × 4 × 8 k-point grid is used for the EPC\ncalculations. The cumulative frequency-dependent λ(ω) was calculated\nfrom t∫he Eliashberg spectral function α2F(ω) via the formula\nλ(ω) = 2 ω dω′ α2F(ω′) . The total EPC λ corresponds to the value of\n0 ω′\nλ(ωmax) with the ωmax being the maximum of phonon frequency. The\nsuperconducting transition temperature w[as envaulted]from the\nMcMillan–Allen–Dynes (MAD) T = ω log exp �1.04 × (1 + λ) 50,51. Here\nC 1.2 λ�μ* × (1 + 0.62 × λ)\nthe Coulomb pseudopotential μ* is set to 0.1 and [th∫e logarithmicall]y\naveraged frequency ω is defined by ω = exp 2 ∞ α2F(ω) lnωdω .\nlog log λ 0 ω",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l77",
+                    "p7_l78",
+                    "p7_l79",
+                    "p7_l80",
+                    "p7_l81",
+                    "p7_l82",
+                    "p7_l83",
+                    "p7_l84",
+                    "p7_l85",
+                    "p7_l86",
+                    "p7_l87",
+                    "p7_l88",
+                    "p7_l89",
+                    "p7_l90",
+                    "p7_l91",
+                    "p7_l92",
+                    "p7_l93",
+                    "p7_l94",
+                    "p7_l95",
+                    "p7_l96",
+                    "p7_l97",
+                    "p7_l98",
+                    "p7_l99",
+                    "p7_l100",
+                    "p7_l101",
+                    "p7_l102",
+                    "p7_l103",
+                    "p7_l104",
+                    "p7_l105",
+                    "p7_l106",
+                    "p7_l107",
+                    "p7_l108",
+                    "p7_l109",
+                    "p7_l110",
+                    "p7_l111",
+                    "p7_l112",
+                    "p7_l113",
+                    "p7_l114",
+                    "p7_l115",
+                    "p7_l116",
+                    "p7_l117",
+                    "p7_l118",
+                    "p7_l119",
+                    "p7_l120",
+                    "p7_l121",
+                    "p7_l122",
+                    "p7_l123",
+                    "p7_l124",
+                    "p7_l125",
+                    "p7_l126",
+                    "p7_l127",
+                    "p7_l128",
+                    "p7_l129",
+                    "p7_l130"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p8_1",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "The Vienna Ab initio Simulation Package (VASP)52 was employed to\nunfolding electronic band structures to the Brillouin zone of kagome\nlattice formed by the Cu atoms within Cu3BHT, where the GGA-PBE49\nand projector augmented wave pseudopotentials53 with the energy\ncutoff of 500 eV were used.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l2",
+                    "p8_l3",
+                    "p8_l4",
+                    "p8_l5",
+                    "p8_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Methods",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p7_l5"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p7_furniture_p7_l131",
+            "type": "custom",
+            "page_start": 7,
+            "page_end": 7,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 7",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p7_l131"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p8_furniture_p8_l1",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p8_l1"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p8_furniture_p8_l130",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 8",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p8_l130"
+              ]
+            }
+          },
+          {
+            "id": "unidentified_p9_furniture_p9_l1",
+            "type": "custom",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [],
+            "text": "Article https://doi.org/10.1038/s41467-024-53786-1",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p9_l1"
+              ]
+            }
+          },
+          {
+            "id": "heading_p9_l81",
+            "type": "section",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "unidentified_p9_5",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Supplementary information The online version contains\nsupplementary material available at\nhttps://doi.org/10.1038/s41467-024-53786-1.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l82",
+                    "p9_l83",
+                    "p9_l84"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_6",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Correspondence and requests for materials should be addressed to\nJin-Hu Dou.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l85",
+                    "p9_l86"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_7",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Peer review information Nature Communications thanks Carlos Gómez-\nGarcía, Hiroshi Nishihara, and Takasada Shibauchi for their contribution\nto the peer review of this work. A peer review file is available.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l87",
+                    "p9_l88",
+                    "p9_l89"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_8",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Reprints and permissions information is available at\nhttp://www.nature.com/reprints",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l90",
+                    "p9_l91"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_9",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Publisher’s note Springer Nature remains neutral with regard to jur-\nisdictional claims in published maps and institutional affiliations.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l92",
+                    "p9_l93"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_10",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "Open Access This article is licensed under a Creative Commons\nAttribution-NonCommercial-NoDerivatives 4.0 International License,\nwhich permits any non-commercial use, sharing, distribution and\nreproduction in any medium or format, as long as you give appropriate\ncredit to the original author(s) and the source, provide a link to the\nCreative Commons licence, and indicate if you modified the licensed\nmaterial. You do not have permission under this licence toshare adapted\nmaterial derived from this article or parts of it. The images or other third\nparty material in this article are included in the article’s Creative\nCommons licence, unless indicated otherwise in a credit line to the\nmaterial. If material is not included in the article’s Creative Commons\nlicence and your intended use is not permitted by statutory regulation or\nexceeds the permitted use, you will need to obtain permission directly\nfrom the copyright holder. To view a copy of this licence, visit http://\ncreativecommons.org/licenses/by-nc-nd/4.0/.\n© The Author(s) 2024",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l94",
+                    "p9_l95",
+                    "p9_l96",
+                    "p9_l97",
+                    "p9_l98",
+                    "p9_l99",
+                    "p9_l100",
+                    "p9_l101",
+                    "p9_l102",
+                    "p9_l103",
+                    "p9_l104",
+                    "p9_l105",
+                    "p9_l106",
+                    "p9_l107",
+                    "p9_l108",
+                    "p9_l109"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Additional information",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p9_l81"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p9_furniture_p9_l110",
+            "type": "custom",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [],
+            "text": "NatureCommunications|( 2024)1 5:9342 9",
+            "label": "Unidentified publication furniture",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "candidate_role": "running_header_or_footer",
+              "method": "repeated margin text",
+              "observation_ids": [
+                "p9_l110"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 8,
+        "page_end": 9,
+        "children": [
+          {
+            "id": "heading_p8_l7",
+            "type": "data_availability",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [
+              {
+                "id": "unidentified_p8_2",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "Crystallographic data for the structures reported in this Article have\nbeen deposited at the Cambridge Crystallographic Data Center under\ndeposition number CCDC 12381830. Copies of the data can be\nobtained free of charge via https://www.ccdc.cam.ac.uk/structures/.\nThe data supporting our findings are included in the article and sup-\nplementary files. Additional data generated during the study are\navailable from the corresponding author upon request. Source data\nare provided in this paper.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l8",
+                    "p8_l9",
+                    "p8_l10",
+                    "p8_l11",
+                    "p8_l12",
+                    "p8_l13",
+                    "p8_l14",
+                    "p8_l15"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Data availability",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p8_l7"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p8_l16",
+            "type": "references",
+            "page_start": 8,
+            "page_end": 9,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p8_l16"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p8_3",
+            "type": "custom",
+            "page_start": 8,
+            "page_end": 8,
+            "children": [],
+            "text": "1. Givaja, G., Amo-Ochoa, P., Gómez-García, C. J. & Zamora, F. Elec-\ntrical conductive coordination polymers. Chem. Soc. Rev. 41,\n115–147 (2012).\n2. Wang, M. C., Dong, R. H. & Feng, X. L. Two-dimensional conjugated\nmetal-organic frameworks (2D c-MOFs): chemistry and function for\nMOFtronics. Chem. Soc. Rev. 50, 2764–2793 (2021).\n3. Xie, L. S., Skorupskii, G. & Dinca, M. Electrically conductive metal-\norganic frameworks. Chem. Rev. 120, 8536–8580 (2020).\n4. Li, H., Eddaoudi, M., O’Keeffe, M. & Yaghi, O. M. Design and synth-\nesis of an exceptionally stable and highly porous metal-organic\nframework. Nature 402, 276–279 (1999).\n5. Talin, A. A. et al. Tunable electrical conductivity in metal-organic\nframework thin-film devices. Science 343, 66–69 (2014).\n6. Dou, J. H. et al. Atomically precise single-crystal structures of\nelectrically conducting 2D metal-organic frameworks. Nat. Mater.\n20, 222–228 (2021).\n7. Feng, D. W. et al. Robust and conductive two-dimensional metal-\norganic frameworks with exceptionally high volumetric and areal\ncapacitance. Nat. Energy 3, 30–36 (2018).\n8. Huang, X. et al. A two-dimensional π-d conjugated coordination\npolymer with extremely high electrical conductivity and ambipolar\ntransport behaviour. Nat. Commun. 6, 7408 (2015).\n9. Huang, X. et al. Highly conducting neutral coordination polymer\nwith infinite two-dimensional silver-sulfur networks. J. Am. Chem.\nSoc. 140, 15153–15156 (2018).\n10. Huang, X. et al. Superconductivity in a copper(II)-based coordina-\ntion polymer with perfect kagome structure. Angew. Chem. Int. Ed.\n57, 146–150 (2018).\n11. Kambe, T. et al. Redox control and high conductivity of nickel\nbis(dithiolene) complex π-nanosheet: a potential organic two-\ndimensional topological insulator. J. Am. Chem. Soc. 136,\n14357–14360 (2014).\n12. Liu, J. X. et al. On-liquid-gallium surface synthesis of ultrasmooth\nthin films of conductive metal-organic frameworks. Nat. Synth. 3,\n715–726 (2024).\n13. Dou, J. H. et al. Signature of metallic behavior in the metal-organic\nframeworks M3(hexaiminobenzene)2 (M = Ni, Cu). J. Am. Chem. Soc.\n139, 13608–13611 (2017).\n14. Park, J. et al. Stabilization of hexaaminobenzene in a 2D conductive\nmetal-organic framework for high power sodium storage. J. Am.\nChem. Soc. 140, 10315–10323 (2018).\n15. Skorupskii, G. et al. Efficient and tunable one-dimensional charge\ntransport in layered lanthanide metal-organic frameworks. Nat.\nChem. 12, 131–136 (2020).\n16. Day, R. W. et al. Single crystals of electrically conductive two-\ndimensional metal-organic frameworks: structural and elec-\ntrical transport properties. ACS Cent. Sci. 5, 1959–1964\n(2019).\n17. Hmadeh, M. et al. New porous crystals of extended metal-\ncatecholates. Chem. Mat. 24, 3511–3513 (2012).\n18. Sheberla, D. et al. Conductive MOF electrodes for stable super-\ncapacitors with high areal capacitance. Nat. Mater. 16,\n220–224 (2017).\n19. Miner, E. M. et al. Electrochemical oxygen reduction catalysed by\nNi3(hexaiminotriphenylene)2. Nat. Commun. 7, 10942 (2016).\n20. Sheberla, D. et al. High electrical conductivity in Ni3(2,3,6,7,10,11-\nhexaiminotriphenylene)2, a semiconducting metal-organic gra-\nphene analogue. J. Am. Chem. Soc. 136, 8859–8862 (2014).\n21. Dong, R. et al. High-mobility band-like charge transport in a semi-\nconducting two-dimensional metal-organic framework. Nat. Mater.\n17, 1027–1032 (2018).\n22. Banda, H., Dou, J. H., Chen, T. Y., Zhang, Y. G. & Dinca, M. Dual-ion\nintercalation and high volumetric capacitance in a two-dimensional\nnon-porous coordination polymer. Angew. Chem. Int. Ed. 60,\n27119–27125 (2021).\n23. Zhu, B. J., Wen, D. S., Liang, Z. B. & Zou, R. Q. Conductive metal-\norganic frameworks for electrochemical energy conversion and\nstorage. Coord. Chem. Rev. 446, 214119 (2021).\n24. Kambe, T. et al. π-Conjugated nickel bis(dithiolene) complex\nnanosheet. J. Am. Chem. Soc. 135, 2462–2465 (2013).\n25. Zhang, L. Z. et al. Intrinsic two-dimensional organic topological\ninsulators in metal-dicyanoanthracene lattices. Nano Lett. 16,\n2072–2075 (2016).\n26. Wang, Z. F., Liu, Z. & Liu, F. Organic topological insulators in orga-\nnometallic lattices. Nat. Commun. 4, 1471 (2013).\n27. Lin, L. et al. Lattice strained induced spin regulation in Co-N/S\ncoordination-framework enhanced oxygen reduction reaction.\nAngew. Chem. Int. Ed. 63, 202319518 (2024).\n28. Misumi, Y. et al. Quantum spin liquid state in a two-dimensional\nsemiconductive metal-organic framework. J. Am. Chem. Soc. 142,\n16513–16517 (2020).\n29. Galeotti, G. et al. Synthesis of mesoscale ordered two-dimensional\nπ-conjugated polymers with semiconducting properties. Nat.\nMater. 19, 874–880 (2020).\n30. Takenaka, T. et al. Strongly correlated superconductivity in a\ncopper-based metal-organic framework with a perfect kagome\nlattice. Sci. Adv. 7, eabf3996 (2021).\n31. Zhang, X. M., Zhou, Y. N., Cui, B., Zhao, M. W. & Liu, F. Theoretical\ndiscovery of a superconducting two-dimensional metal-organic\nframework. Nano Lett. 17, 6166–6170 (2017).\n32. Fan, K., Zhang, C. Y., Chen, Y., Wu, Y. C. & Wang, C. L. The chemical\nstates of conjugated coordination polymers. Chemistry 7,\n1224–1243 (2021).\n33. Han, J. L. et al. Determining factors in the growth of MOF single\ncrystals unveiled by in situ interface imaging. Chemistry 8,\n1637–1657 (2022).\n34. Howarth, A. J. et al. Best practices for the synthesis, activation, and\ncharacterization of metal-organic frameworks. Chem. Mat. 29,\n26–39 (2017).\n35. Tang, K. L., Jin, X. L., Long, Y. L., Cui, P. & Tang, Y. Q. Study on the\nreaction of the anionic copper selenolate complex\n[Me4N]2[Cu4(SePh)6] with CS2 in solvents: the crystal structure of a\npolymeric complex [CuS2COMe]n(I). J. Chem. Res. 9,\n452–453 (2000).\n36. Valigura, D., Ondrejovic, G. & Kratsmarsmogrovic, J. Space orien-\ntation and bonding properties of thiourea in N-salicylideneglyci-\nnatocopper(II) complex. Chem. Pap. 41, 183–193 (1987).\n37. Radisavljevic, B. & Kis, A. Mobility engineering and a metal-insulator\ntransition in monolayer MoS2. Nat. Mater. 12, 815–820 (2013).\n38. Denoyer, F., Comes, F., Garito, A. F. & Heeger, A. J. X-ray-diffuse-\nscattering evidence for a phase transition in tetrathiafulvalene tet-\nracyanoquinodimethane (TTF-TCNQ). Phys. Rev. Lett. 35,\n445–449 (1975).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p8_l17",
+                "p8_l18",
+                "p8_l19",
+                "p8_l20",
+                "p8_l21",
+                "p8_l22",
+                "p8_l23",
+                "p8_l24",
+                "p8_l25",
+                "p8_l26",
+                "p8_l27",
+                "p8_l28",
+                "p8_l29",
+                "p8_l30",
+                "p8_l31",
+                "p8_l32",
+                "p8_l33",
+                "p8_l34",
+                "p8_l35",
+                "p8_l36",
+                "p8_l37",
+                "p8_l38",
+                "p8_l39",
+                "p8_l40",
+                "p8_l41",
+                "p8_l42",
+                "p8_l43",
+                "p8_l44",
+                "p8_l45",
+                "p8_l46",
+                "p8_l47",
+                "p8_l48",
+                "p8_l49",
+                "p8_l50",
+                "p8_l51",
+                "p8_l52",
+                "p8_l53",
+                "p8_l54",
+                "p8_l55",
+                "p8_l56",
+                "p8_l57",
+                "p8_l58",
+                "p8_l59",
+                "p8_l60",
+                "p8_l61",
+                "p8_l62",
+                "p8_l63",
+                "p8_l64",
+                "p8_l65",
+                "p8_l66",
+                "p8_l67",
+                "p8_l68",
+                "p8_l69",
+                "p8_l70",
+                "p8_l71",
+                "p8_l72",
+                "p8_l73",
+                "p8_l74",
+                "p8_l75",
+                "p8_l76",
+                "p8_l77",
+                "p8_l78",
+                "p8_l79",
+                "p8_l80",
+                "p8_l81",
+                "p8_l82",
+                "p8_l83",
+                "p8_l84",
+                "p8_l85",
+                "p8_l86",
+                "p8_l87",
+                "p8_l88",
+                "p8_l89",
+                "p8_l90",
+                "p8_l91",
+                "p8_l92",
+                "p8_l93",
+                "p8_l94",
+                "p8_l95",
+                "p8_l96",
+                "p8_l97",
+                "p8_l98",
+                "p8_l99",
+                "p8_l100",
+                "p8_l101",
+                "p8_l102",
+                "p8_l103",
+                "p8_l104",
+                "p8_l105",
+                "p8_l106",
+                "p8_l107",
+                "p8_l108",
+                "p8_l109",
+                "p8_l110",
+                "p8_l111",
+                "p8_l112",
+                "p8_l113",
+                "p8_l114",
+                "p8_l115",
+                "p8_l116",
+                "p8_l117",
+                "p8_l118",
+                "p8_l119",
+                "p8_l120",
+                "p8_l121",
+                "p8_l122",
+                "p8_l123",
+                "p8_l124",
+                "p8_l125",
+                "p8_l126",
+                "p8_l127",
+                "p8_l128",
+                "p8_l129"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p8_l16"
+            }
+          },
+          {
+            "id": "unidentified_p9_1",
+            "type": "custom",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [],
+            "text": "39. Fickett, F. R. Oxygen-free copper at 4K-resistance and magnetore-\nsistance. IEEE Trans. Magn. 19, 228–231 (1983).\n40. Das, P., Saha, P., Singh, M., Kumar, P. & Patnaik, S. Quantum linear\nmagnetoresistance and fermi liquid behavior in Kagome Metal\nNi3In2S2. Preprint at arXiv https://doi.org/10.48550/arXiv.2402.\n10096 (2024).\n41. Ross, A. et al. Structural sensitivity of the spin Hall magnetoresis-\ntance in antiferromagnetic thin films. Phys. Rev. B 102,\n094415 (2020).\n42. Löhneysen, H. v. et al. Non-Fermi-liquid behavior in a heavy-fermion\nalloy at a magnetic instability. Phys. Rev. Lett. 72, 3262–3265 (1994).\n43. Werthamer, N. R., Helfand, E. & Hohenberg, P. C. Temperature and\npurity dependence of the superconducting critical field, Hc2. III.\nelectron spin and spin-orbit effects. Phys. Rev. 147, 295–302 (1965).\n44. Yip, H. K., Schier, A., Riede, J. & Schmidbaur, H. Benzenehexathiol as\na template rim for a golden wheel: synthesis and structure of\n[{CSAu(PPh3)}6]. J. Chem. Soc. Dalton Trans. 15, 2333–2334 (1994).\n45. Hohenberg, P. & Kohn, W. Inhomogeneous electron gas. Phys. Rev.\nB 136, B864–B871 (1964).\n46. Kohn, W. & Sham, L. J. Self-consistent equations including\nexchange and correlation effects. Phys. Rev. 140,\nA1133–A1138 (1965).\n47. Baroni, S., de Gironcoli, S., Dal Corso, A. & Giannozzi, P. Phonons\nand related crystal properties from density-functional perturbation\ntheory. Rev. Mod. Phys. 73, 515–562 (2001).\n48. Giannozzi, P. et al. Quantum ESPRESSO toward the exascale. J.\nChem. Phys. 152, 154105 (2020).\n49. Perdew, J. P., Burke, K. & Ernzerhof, M. Generalized gradient\napproximation made simple. Phys. Rev. Lett. 78, 1396–1396 (1997).\n50. McMillan, W. L. Transition temperature of strong-coupled super-\nconductors. Phys. Rev. 167, 331–344 (1968).\n51. Allen, P. B. & Dynes, R. C. Transition temperature of strong-coupled\nsuperconductors reanalyzed. Phys. Rev. B 12, 905–922 (1975).\n52. Kresse, G. & Furthmuller, J. Efficiency of ab-initio total energy cal-\nculations for metals and semiconductors using a plane-wave basis\nset. Comput. Mater. Sci. 6, 15–50 (1996).\n53. Blochl, P. E. Projector augmented-wave method. Phys. Rev. B 50,\n17953–17979 (1994).",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p9_l2",
+                "p9_l3",
+                "p9_l4",
+                "p9_l5",
+                "p9_l6",
+                "p9_l7",
+                "p9_l8",
+                "p9_l9",
+                "p9_l10",
+                "p9_l11",
+                "p9_l12",
+                "p9_l13",
+                "p9_l14",
+                "p9_l15",
+                "p9_l16",
+                "p9_l17",
+                "p9_l18",
+                "p9_l19",
+                "p9_l20",
+                "p9_l21",
+                "p9_l22",
+                "p9_l23",
+                "p9_l24",
+                "p9_l25",
+                "p9_l26",
+                "p9_l27",
+                "p9_l28",
+                "p9_l29",
+                "p9_l30",
+                "p9_l31",
+                "p9_l32",
+                "p9_l33",
+                "p9_l34",
+                "p9_l35",
+                "p9_l36",
+                "p9_l37",
+                "p9_l38",
+                "p9_l39"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "mixed",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p8_l16"
+            }
+          },
+          {
+            "id": "heading_p9_l40",
+            "type": "acknowledgements",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "unidentified_p9_2",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "This work was financially supported by the National Key R&D Program of\nChina (Grant No. 2023YFE0206400), the National Natural Science\nFoundation of China (Grant No. 22171185, No. 12488201), and the Clinical\nMedicine Plus X-Young Scholars Project at Peking University, backed by\nthe Fundamental Research Funds for the Central Universities. The staff\nof beamlines BL17B1, BL14B1, and BL18U1 of the National Facility for\nProtein Science Shanghai (NFPS) at the Shanghai Synchrotron Radiation\nFacility (SSRF) are acknowledged for their assistance in the data col-\nlection. We appreciate the Molecular Materials and Nanofabrication\nLaboratory (MMNL) in the College of Chemistry and Electron Microscopy\nLaboratory of Peking University for the support of instruments to per-\nform device fabrication and characterization. Cryo-EM data were col-\nlected on the Electron Microscopy Laboratory of Peking University with\nthe assistance. Thanks to Ms. Li Xuemei for her help in sample pre-\nparation and data collection. X.Z. acknowledges financial support from\nthe National Natural Science Foundation of China (No. 12004357).\nThanks to Dr. Yigang Jin for his help in the powder refinement of the\nPXRD date of BHT. Thanks to Ze Li, Sha Wu, and Xinyu Wang for con-\nducting the IR and Raman spectroscopy measurements. S.W. and L.S.\nacknowledge financial support from the Zhejiang Provincial Natural\nScience Foundation of China (Grant No. XHD23B0301) and the Research\nCenter for Industries of the Future (RCIF Project No. WU2023C006) as\nwell as thank Dr. Chao Zhang, Yingchao Wang, and the Instrumentation\nand Service Center for Material Sciences at Westlake University for the\nsupport with the electrical characterization. We sincerely appreciate\nQingqing Ji, Jingyue Wang, and Yue Lu for their helpful discussion.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l41",
+                    "p9_l42",
+                    "p9_l43",
+                    "p9_l44",
+                    "p9_l45",
+                    "p9_l46",
+                    "p9_l47",
+                    "p9_l48",
+                    "p9_l49",
+                    "p9_l50",
+                    "p9_l51",
+                    "p9_l52",
+                    "p9_l53",
+                    "p9_l54",
+                    "p9_l55",
+                    "p9_l56",
+                    "p9_l57",
+                    "p9_l58",
+                    "p9_l59",
+                    "p9_l60",
+                    "p9_l61",
+                    "p9_l62",
+                    "p9_l63",
+                    "p9_l64",
+                    "p9_l65",
+                    "p9_l66"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Acknowledgements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p9_l40"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p9_l67",
+            "type": "author_contributions",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "unidentified_p9_3",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "J.D., Z.P., and X.H. conceived the idea and designed the experiments.\nX.H. synthesized the samples. J.L. and W.X. conducted the structural\nanalysis. Z.P., Y.F. X.C., and T.Z. performed the material investigations,\nfabricated single crystal devices, and conducted the electrical mea-\nsurements. X.Z. performed the DFT calculations of superconductivity\nand electronic property. S.W., S.Q., L.S., and J.W. conducted the mag-\nnetic and superconductivity performance tests. Y.L. and Y.X. performed\nthe fitting of the superconducting phase diagram. Z.P., X.H., Y.F., Y.Z.,\nand J.D. analyzed the experimental data and wrote the main manuscript.\nJ.D. supervised the entire project. All authors contributed to the data\nanalysis and provided feedback on the manuscript.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l68",
+                    "p9_l69",
+                    "p9_l70",
+                    "p9_l71",
+                    "p9_l72",
+                    "p9_l73",
+                    "p9_l74",
+                    "p9_l75",
+                    "p9_l76",
+                    "p9_l77",
+                    "p9_l78"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Author contributions",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p9_l67"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p9_l79",
+            "type": "competing_interests",
+            "page_start": 9,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "unidentified_p9_4",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "The authors declare no competing interests.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l80"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Competing interests",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.7,
+              "observation_ids": [
+                "p9_l79"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

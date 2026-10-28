@@ -1,0 +1,180 @@
+{
+  "body_size": 11.0,
+  "styles": [
+    {
+      "font": "Times New Roman,Bold",
+      "size": 14.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        14
+      ],
+      "examples": [
+        "Direct Observation of d‑Wave Superconducting Gap Symmetry in",
+        "Pressurized La3Ni2O7−δ Single Crystals",
+        "Methods"
+      ]
+    },
+    {
+      "font": "Times New Roman",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 12,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Zi-Yu Cao1,2,*, Di Peng3,4,†, Seokmin Choi2,*, Fujun Lan4,*, Lan Yu4,*, Enkang Zhang5,*, Zhenfang",
+        "Xing4, Yuxin Liu4, Feiyang Zhang4, Tao Luo4, Lixing Chen5, Vuong Thi Anh Hong2, Seung-Yeop",
+        "Paek2, Harim Jang6, Jinghong Xie1, Huayu Liu1, Hongbo Lou3,4, Zhidan Zeng4, Yang Ding4, Jun"
+      ]
+    },
+    {
+      "font": "Times New Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 128,
+      "long_prose_lines": 80,
+      "pages": [
+        1,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "*These authors contributed equally to this work.",
+        "#Correspondence should be addressed to di.peng@hpstar.ac.cn, zhaoj@fudan.edu.cn,",
+        "cailong_liu@jlu.edu.cn, tp8701@skku.edu, or zengqs@hpstar.ac.cn."
+      ]
+    },
+    {
+      "font": "等线 Light",
+      "size": 13.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 19,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "examples": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "font": "Times New Roman,Bold",
+      "size": 11.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 27,
+      "long_prose_lines": 10,
+      "pages": [
+        2,
+        7,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "examples": [
+        "The recent discovery of superconductivity in pressure-stabilized bulk La3Ni2O7−δ, with",
+        "a critical temperature (Tc) exceeding 77 K, has opened a new frontier in high-temperature",
+        "superconductivity research beyond cuprates1-8. Yet, the superconducting gap amplitude"
+      ]
+    },
+    {
+      "font": "Times New Roman",
+      "size": 11.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 271,
+      "long_prose_lines": 247,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "examples": [
+        "The superconducting gap is the fingerprint of a superconducting state. In conventional",
+        "superconductors, the superconducting gap exhibits an isotropic s-wave symmetry with a",
+        "uniform phase across the Fermi surface. By contrast, high-temperature superconductors often"
+      ]
+    },
+    {
+      "font": "Times New Roman,Italic",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        7,
+        8
+      ],
+      "examples": [
+        "B: Condens. Matter 64, 189-193 (1986).",
+        "Phys. Rev. Lett. 132, 106002 (2024).",
+        "Supercon. Sci. Technol. 23, 043001 (2010)."
+      ]
+    },
+    {
+      "font": "Times New Roman,Italic",
+      "size": 10.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "Carnegie Inst. Washington Yearb. 80, 404-406 (1981)."
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

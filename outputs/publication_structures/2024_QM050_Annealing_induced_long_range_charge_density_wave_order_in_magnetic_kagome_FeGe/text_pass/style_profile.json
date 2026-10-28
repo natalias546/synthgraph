@@ -1,0 +1,281 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 16.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "SCIENCE CHINA",
+        "Annealing-induced long-range charge density wave order in",
+        "magnetic kagome FeGe: Fluctuations and disordered structure"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 14.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Physics, Mechanics & Astronomy"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 11.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "•Article•"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 194,
+      "long_prose_lines": 47,
+      "pages": [
+        1,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "November2024 Vol.67 No.11:117012",
+        "https://doi.org/10.1007/s11433-024-2457-7",
+        "ReceivedApril24,2024;acceptedJuly18,2024;publishedonlineSeptember13,2024"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Chenfei Shi1†, Yi Liu2,3†, Bishal Baran Maity4, Qi Wang5,6, Surya Rohith Kotla7,",
+        "Sitaram Ramakrishnan8, Claudio Eisele7, Harshit Agarwal7, Leila Noohinejad9, Qian Tao3,",
+        "Baojuan Kang1, Zhefeng Lou10, Xiaohui Yang11, Yanpeng Qi5,6,12, Xiao Lin10, Zhu-An Xu3,13,"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 8.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 28,
+      "long_prose_lines": 12,
+      "pages": [
+        1,
+        8,
+        9
+      ],
+      "examples": [
+        "1DepartmentofPhysics,MaterialsGenomeInstitute,InstituteforQuantumScienceandTechnology,",
+        "ShanghaiUniversity,Shanghai200444,China;",
+        "2KeyLaboratoryofQuantumPrecisionMeasurementofZhejiangProvince,SchoolofPhysics,ZhejiangUniversityofTechnology,"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 8,
+      "pages": [
+        1,
+        2
+      ],
+      "examples": [
+        "Chargedensitywave(CDW)inkagomematerialswiththegeometricfrustrationisabletocarryunconventionalcharacteristics.",
+        "Recently,aCDWhasbeenobservedbelowtheantiferromagneticorderinkagomeFeGe,inwhichmagnetismandCDWare",
+        "intertwinedtoformanemergentquantumgroundstate.However,theCDWisonlyshort-rangedandthestructuralmodulation"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 9.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "chargedensitywave,kagome,disorderedstructure,fluctuations"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 4,
+      "pages": [
+        1,
+        2
+      ],
+      "examples": [
+        "*Correspondingauthors(SandervanSmaalen,email:smash@uni-bayreuth.de;ShixunCao,email:sxcao@shu.edu.cn;Jin-KeBao,email:baoj",
+        "†Theseauthorscontributedequallytothiswork.",
+        "Citation: C.Shi,Y.Liu,B.B.Maity,Q.Wang,S.R.Kotla,S.Ramakrishnan,C.Eisele,H.Agarwal,L.Noohinejad,Q.Tao,B.Kang,Z.Lou,X.Yan"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "©ScienceChinaPress2024 phys.scichina.com link.springer.com"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 9,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "C.Shi,etal. Sci.China-Phys.Mech.Astron. November(2024) Vol.67 No.11 117012-2",
+        "C.Shi,etal. Sci.China-Phys.Mech.Astron. November(2024) Vol.67 No.11 117012-3",
+        "C.Shi,etal. Sci.China-Phys.Mech.Astron. November(2024) Vol.67 No.11 117012-4"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 11.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4,
+        8
+      ],
+      "examples": [
+        "1 Introduction",
+        "2 Materials and method",
+        "3 Results"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 445,
+      "long_prose_lines": 4,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Charge density wave (CDW) is a collective phenomenon of",
+        "electrons that form charge density modulation usually ac-",
+        "companied by periodic lattice distortion [1]. It is commonly"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 10.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3
+      ],
+      "examples": [
+        "2.1 Sample synthesis",
+        "2.2 Structure characterization",
+        "2.3 Second harmonic generation measurements"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 7,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "short-range CDW correlations above TCDW in all the FeGe Foundation of China (Grant No. 12174334). Yanpeng Qi acknowledge",
+        "samples. Long-range CDW order can precipitate from a National Natural Science Foundation of China (Grant Nos. 52272265,",
+        "anannealedsample,suggestinganorder-disorder-typeCDW the Deutsche Forschungsgemeinschaft (DFG, German Research Founda-"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 8.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "SupportingInformation"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

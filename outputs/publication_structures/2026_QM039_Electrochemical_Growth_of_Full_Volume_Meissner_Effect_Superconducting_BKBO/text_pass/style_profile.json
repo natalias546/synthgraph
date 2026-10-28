@@ -1,0 +1,226 @@
+{
+  "body_size": 12.0,
+  "styles": [
+    {
+      "font": "CMSSBX10",
+      "size": 20.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Electrochemical Growth of Full Volume Meissner",
+        "Effect Superconducting Ba1−xKxBiO3"
+      ]
+    },
+    {
+      "font": "CMSS12",
+      "size": 14.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Oleksandr Foyevtsov,† Kateryna Foyevtsova,† Mohamed Oudah,† Dan",
+        "Bizzotto,∗,‡ and George Sawatzky†"
+      ]
+    },
+    {
+      "font": "CMTI12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "†Department of Physics & Astronomy, Stewart Blusson Quantum Matter Institute,",
+        "University of British Columbia, Vancouver, British Columbia, Canada V6T 1Z1",
+        "‡Department of Chemistry, University of British Columbia, Vancouver, British Columbia,"
+      ]
+    },
+    {
+      "font": "CMSS12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "E-mail: bizzotto@chem.ubc.ca"
+      ]
+    },
+    {
+      "font": "CMBX10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Abstract"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "In this work we show the results of electrochemical synthesis of Ba1−xKxBiO3 crys-",
+        "tals using three different experimental setup configurations. The setups differ between",
+        "each other by varying level of control over physical variables and progressing from a"
+      ]
+    },
+    {
+      "font": "CMR12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 364,
+      "long_prose_lines": 296,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "examples": [
+        "1",
+        "Superconductivity,Crystalgrowth,Bismuthates,Electrocrystallization,ElectrochemicalImpedance",
+        "Spectroscopy"
+      ]
+    },
+    {
+      "font": "NimbusRoman-Regular",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "peS",
+        "52"
+      ]
+    },
+    {
+      "font": "NimbusRoman-Regular",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]noc-rpus.tam-dnoc["
+      ]
+    },
+    {
+      "font": "CMBX12",
+      "size": 17.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4,
+        6,
+        15
+      ],
+      "examples": [
+        "Keywords",
+        "Introduction",
+        "Experimental"
+      ]
+    },
+    {
+      "font": "CMBX12",
+      "size": 14.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "examples": [
+        "Method 1: Constant current growth using a two-electrode config-",
+        "uration",
+        "Method 2: Constant current growth using an improved two-electrode"
+      ]
+    },
+    {
+      "font": "CMMI12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "Z ="
+      ]
+    },
+    {
+      "font": "CMR8",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "CPE Qdl(j2πf)n"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

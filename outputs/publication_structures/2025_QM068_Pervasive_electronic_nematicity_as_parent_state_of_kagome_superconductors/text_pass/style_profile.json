@@ -1,0 +1,476 @@
+{
+  "body_size": 10.9,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 14.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Pervasive electronic nematicity as the parent state of kagome",
+        "superconductors"
+      ]
+    },
+    {
+      "font": "CMR12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 217,
+      "long_prose_lines": 38,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "examples": [
+        "Muxian Xu,1,∗ Siyu Cheng,1,∗ Andrea Capa Salinas,2 Ganesh Pokharel,3,2",
+        "Alexander LaFleur,1 Hong Li,1 Hengxin Tan,4 Brenden R. Ortiz,5 Qinwen Deng,6",
+        "Binghai Yan,7 Ziqiang Wang,1 Stephen D. Wilson,2 and Ilija Zeljkovic1,†"
+      ]
+    },
+    {
+      "font": "CMTI12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        7
+      ],
+      "examples": [
+        "1Department of Physics, Boston College,",
+        "Chestnut Hill, Massachusetts 02467, USA",
+        "2Materials Department, University of California"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "5202",
+        "voN",
+        "72"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]le-rts.tam-dnoc["
+      ]
+    },
+    {
+      "font": "CMBX10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 4,
+      "pages": [
+        2,
+        3,
+        6,
+        14,
+        15,
+        16,
+        17
+      ],
+      "examples": [
+        "I. ABSTRACT",
+        "II. INTRODUCTION",
+        "III. RESULTS"
+      ]
+    },
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 23,
+      "long_prose_lines": 3,
+      "pages": [
+        2,
+        7,
+        9
+      ],
+      "examples": [
+        "Kagome superconductors AV3Sb5 (A = Cs, K, Rb) have developed into an",
+        "exciting playground for realizing and exploring exotic solid state phenomena.",
+        "Abundant experimental evidence suggests that electronic structure breaks rota-"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "∗ These authors contributed equally to this work",
+        "† ilija.zeljkovic@bc.edu"
+      ]
+    },
+    {
+      "font": "CMMI8",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        5,
+        16
+      ],
+      "examples": [
+        "4 Bragg",
+        "2 Bragg",
+        "2 Bragg"
+      ]
+    },
+    {
+      "font": "CMMI12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "tx = (1 − x) t0 + x t1,"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 167,
+      "long_prose_lines": 125,
+      "pages": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "examples": [
+        "[1] D.D.Sante,T.Neupert,G.Sangiovanni,R.Thomale,R.Comin,I.Zeljkovic,J.G.Checkelsky,",
+        "and S. D. Wilson. Kagome metals. arxiv : 2511.12731 (2025).",
+        "[2] X. Feng, K. Jiang, Z. Wang, and J. Hu. Chiral flux phase in the kagome superconductor"
+      ]
+    },
+    {
+      "font": "CMTI10",
+      "size": 10.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        10,
+        11,
+        13
+      ],
+      "examples": [
+        "Nature Physics 18, 265 (2022).",
+        "Phys. Rev. Lett. 129, 157001 (2022).",
+        "Nature Physics 18, 1470 (2022)."
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 41,
+      "long_prose_lines": 0,
+      "pages": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "examples": [
+        "90",
+        "80",
+        "5"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 19,
+      "long_prose_lines": 0,
+      "pages": [
+        14,
+        15,
+        16
+      ],
+      "examples": [
+        "Cs V Sb",
+        "c d e f",
+        "x = 0 x = 0.1 x = 0.33 x = 0.68"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        14,
+        16
+      ],
+      "examples": [
+        "10 nm 20 nm 20 nm 15 nm",
+        "a CDW",
+        "Electronic"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        14
+      ],
+      "examples": [
+        ")K(T"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        14,
+        16,
+        17
+      ],
+      "examples": [
+        "b 100 2x2 QStripe QCDW QBragg",
+        "QBragg",
+        "QCCDW"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        14
+      ],
+      "examples": [
+        "q/QBragg"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 1.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        14
+      ],
+      "examples": [
+        ").u.a("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        14
+      ],
+      "examples": [
+        "ytisnetnI"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        15
+      ],
+      "examples": [
+        ")Vem(",
+        "ygrenE",
+        ")Vem("
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        15
+      ],
+      "examples": [
+        "QCDW QBragg",
+        "QBragg"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        16
+      ],
+      "examples": [
+        "QC QB"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        17
+      ],
+      "examples": [
+        "a c d",
+        "1 nm 1nm",
+        "1nm"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 1.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        17
+      ],
+      "examples": [
+        ").u.a("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        17
+      ],
+      "examples": [
+        "ytisnetnI"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 2.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        17
+      ],
+      "examples": [
+        "QCDW QBragg",
+        "QC Bragg",
+        "QBBragg"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        17
+      ],
+      "examples": [
+        "0.2 q/QBragg 1"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

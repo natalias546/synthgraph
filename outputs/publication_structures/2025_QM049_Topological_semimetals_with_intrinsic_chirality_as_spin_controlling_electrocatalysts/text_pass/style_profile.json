@@ -1,0 +1,1267 @@
+{
+  "body_size": 7.0,
+  "styles": [
+    {
+      "font": "NatureTitlepiece-Bold",
+      "size": 18.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "nature energy"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Medium",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 19,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "examples": [
+        "Article https://doi.org/10.1038/s41560-024-01674-9",
+        "Nature Energy | Volume 10 | January 2025 | 101–109 101",
+        "Nature Energy | Volume 10 | January 2025 | 101–109 102"
+      ]
+    },
+    {
+      "font": "Harding-Bold",
+      "size": 26.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Topological semimetals with intrinsic",
+        "chirality as spin-controlling electrocatalysts",
+        "for the oxygen evolution reaction"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Semibold",
+      "size": 9.2,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Received: 24 November 2023 Xia Wang 1,7 , Qun Yang2,3,7, Sukriti Singh4, Horst Borrmann1, Vicky Hasse1,",
+        "Changjiang Yi1, Yongkang Li2, Marcus Schmidt1, Xiaodong Li 5,",
+        "Gerhard H. Fecher1, Dong Zhou 6, Binghai Yan 2 & Claudia Felser 1"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Medium",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Accepted: 24 October 2024"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Published online: 25 November 2024"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Check for updates Electrocatalytic water splitting is a promising approach for clean hydrogen",
+        "production, but the process is hindered by the sluggish kinetics of the",
+        "anodic oxygen evolution reaction (OER) owing to the spin-dependent"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 8.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "Electrocatalytic water splitting is well suited for the production of",
+        "Topological semimetals, which exhibit high catalytic activities",
+        "conductivity30–35.WhenappliedasOERcatalystsinalkalineelectrolyte,"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 575,
+      "long_prose_lines": 5,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "hydrogen, which could act as a clean and renewable energy carrier to",
+        "help alleviate the current energy crisis1. However, the sluggish kinet-",
+        "ics of the anodic oxygen evolution reaction (OER), which involves the"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 5,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Topological Quantum Chemistry, Max-Planck-Institute for Chemical Physics of Solids, Dresden, Germany. 2Department of Co",
+        "Weizmann Institute of Science, Rehovot, Israel. 3College of Letters and Sciences, University of California Los Angeles, ",
+        "4Institute of Solid-State Physics, Vienna University of Technology, Vienna, Austria. 5Centre for Advancing Electronics D"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Medium2",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 17,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "examples": [
+        "Article https://doi.org/10.1038/s41560-024-01674-9",
+        "Article https://doi.org/10.1038/s41560-024-01674-9",
+        "Article https://doi.org/10.1038/s41560-024-01674-9"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular2",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Mirror",
+        "Rh Rh",
+        "Electron spin Electron spin"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "a c",
+        "b d",
+        "e"
+      ]
+    },
+    {
+      "font": "HardingText-Bold",
+      "size": 7.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 1,
+      "pages": [
+        2,
+        15,
+        16,
+        17
+      ],
+      "examples": [
+        "Fig.1|Crystal-andelectronic-structurechiralityofRhSi,RhSnandRhBiS.",
+        "ExtendedDataFig.6|Schematicillustrationofspinpolarizationalignment",
+        "ExtendedDataFig.7|Theoreticalcalculationofspinpolarizationinchiral"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 48,
+      "long_prose_lines": 11,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "examples": [
+        "a,Illustrationoftheintrinsicallychiralstructure.Handednesscanbe",
+        "distinguishedbyconsideringthehelixformedbyRhatoms.Large(grey)and",
+        "small(blueandred)arrowsrepresentthecurrentflowdirectionandinduced"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular2",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "2 nm"
+      ]
+    },
+    {
+      "font": "HardingText-Bold",
+      "size": 10.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        9
+      ],
+      "examples": [
+        "Homochiralityinsinglecrystals",
+        "ElectrocatalyticOERactivityandstability",
+        "EffectofspinpolarizationonOERkineticsand"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black2",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "a",
+        "c",
+        "b"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 19,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "450",
+        "350",
+        "250"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 3.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ")Vm(",
+        ")Vm(",
+        ")Vm("
+      ]
+    },
+    {
+      "font": "Harding-RegularItalic",
+      "size": 3.7,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "η",
+        "η"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 2.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "01",
+        ") 2–",
+        "01"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "This",
+        "work",
+        "RuO"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "2",
+        "2",
+        "2 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 4.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "mc"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Am("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "ytisned"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 3.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "tnerruC"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 1,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "RhBiS NiFe L D H Ni– N Ir - x – S Ni oxide Co S 3 n S 2 F 2 e– Co Ox CoSe2 Si–S C O"
+      ]
+    },
+    {
+      "font": "HardingText-Bold",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        15
+      ],
+      "examples": [
+        "Fig.2|ElectrocatalyticOERactivities. a,LSVpolarizationcurvesin1 MKOH.",
+        "withcurrentdirectionandcrystalsurface.Whencurrentflowsalongthe(001)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "laitnetoprevO"
+      ]
+    },
+    {
+      "font": "Harding-RegularItalic",
+      "size": 6.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "η",
+        "η"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black3",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "a b",
+        "c d"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "20",
+        "15",
+        "10"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 2.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")2–mc",
+        ")2–mc"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Am(",
+        "Am("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 4.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "AS"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 18,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "RhTe 2",
+        "RhTe 8 × 10−3 RhSi RhSn RhBiS",
+        "Wavelength (nm)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 2.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")stinu .bra("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 3.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ecnabrosbA"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "2",
+        "2",
+        "2 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ytisned"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 3.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "tnerruC"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")V( laitnetoprevO"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 7.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 1,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "R R R h h h S T T e e i 2 74.9 mV dec 6 – 6 1 5 3 . . 4 5 m m V V d d e e c c – – 1 1",
+        "5 2",
+        "e"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 7.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "64.",
+        "d",
+        "V"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "7"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "m"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "V"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "dec–1",
+        "57.4 mV",
+        "4"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "."
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "m"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 5.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "–1"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black4",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "a"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "5",
+        "4",
+        "3"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "RhSi RhSn RhBiS",
+        "e–( ) b",
+        "e–( ) OH– OH–"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 2.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ")%("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "noitaziralop"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 4.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "nipS"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 4.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "SA"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "(mA"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 4.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "cm"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 2.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ") –2"
+      ]
+    },
+    {
+      "font": "HardingText-Semibold",
+      "size": 8.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "Crystal growth and structure refinement",
+        "Materialcharacterization",
+        "Electrochemicalmeasurements"
+      ]
+    },
+    {
+      "font": "HardingText-Regular2",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7
+      ],
+      "examples": [
+        "ERHE(V) = EHg/HgO(V) +0.059pH + 0.098. (1)",
+        "ERHE(V) = EAg/AgCl(V) + 0.059pH + 0.197. (2)",
+        "ECSA = Cdl/Cs, (3)"
+      ]
+    },
+    {
+      "font": "STIXTwoMath-Regular",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7
+      ],
+      "examples": [
+        "ℓmfp = vf ⋅ τ =",
+        "ℏ",
+        "∑"
+      ]
+    },
+    {
+      "font": "HardingText-RegularItalic2",
+      "size": 6.4,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "me"
+      ]
+    },
+    {
+      "font": "HardingText-RegularItalic2",
+      "size": 7.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7
+      ],
+      "examples": [
+        "q",
+        "h"
+      ]
+    },
+    {
+      "font": "HardingText-RegularItalic2",
+      "size": 6.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "e2"
+      ]
+    },
+    {
+      "font": "HardingText-Regular2",
+      "size": 5.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "2",
+        "GL→R =",
+        "n∈R,m∈L"
+      ]
+    },
+    {
+      "font": "HardingText-RegularItalic2",
+      "size": 5.2,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "G"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "= −eURHE"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 266,
+      "long_prose_lines": 2,
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "1. Seh, Z. W. et al. Combining theory and experiment in",
+        "electrocatalysis: insights into materials design. Science 355,",
+        "eaad4998 (2017)."
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic3",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Proc. Natl Acad. Sci. USA 120, e2305541120 (2023).",
+        "26. Simon, J. & Bassoul, P. Design of Molecular Materials:",
+        "Supramolecular Engineering (Wiley-VCH, 2001)."
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic3",
+      "size": 8.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 9,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "P",
+        "h",
+        "ys"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Semibold",
+      "size": 8.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        7,
+        9
+      ],
+      "examples": [
+        "9",
+        "8",
+        "Correspondence and requests for materialsshould be addressed to"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Semibold",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        9
+      ],
+      "examples": [
+        "Supplementary information The online version",
+        "Peer review information Nature Energy thanks Serhiy Cherevko,"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Semibold",
+      "size": 9.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        18
+      ],
+      "examples": [
+        "Extended Data Table 1 | Refinement parameters for single-crystal XRD of RhBiS"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 5,
+      "pages": [
+        18
+      ],
+      "examples": [
+        "All three atoms occupy 4a (x, x, x) positions. Occupancy was refined individually for each site but kept at unity in the",
+        "derived from the anisotropic model. Two smaller crystallites were isolated from a larger ingot, with an extended dataset",
+        "confirmed a cubic ullmannite-type structure with no indication of anti-site disorder. Refinement, including potential tw"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

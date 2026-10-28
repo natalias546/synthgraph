@@ -1,0 +1,1517 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "CMR17",
+      "size": 17.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Chiral, Electronically Decoupled layers of 1T′-WS2",
+        "Topological Insulator via Neutral-Molecule",
+        "Intercalation"
+      ]
+    },
+    {
+      "font": "CMR12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Jiaze Xie1, Fatmagu¨l Katmer1, Fang Yuan1, Jaime M. Moya1,",
+        "Guangming Cheng2, Connor J. Pollak1, Xiaoyu Song3,",
+        "Nirmal Roy4, Yakov Bloch4, Moshe Ben Shalom4,"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 11.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 18,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1*Department of Chemistry, Princeton University, Frick Chemistry",
+        "Laboratory, Princeton, 08544, NJ, USA.",
+        "2Princeton Materials Institute, Princeton University, Bowen Hall 70"
+      ]
+    },
+    {
+      "font": "CMBX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Abstract"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 19,
+      "long_prose_lines": 18,
+      "pages": [
+        1,
+        2
+      ],
+      "examples": [
+        "Monolayer 1T′-WS2 is predicted to be a two-dimensional topological insulator,",
+        "butitsintrinsicelectronicpropertiesaremaskedbystronginterlayercouplingin",
+        "its metallic and superconducting bulk parent phase, 2M-WS2. Isolating mono-"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 644,
+      "long_prose_lines": 499,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "examples": [
+        "1",
+        "Since the isolation of graphene initiated the field of two-dimensional (2D) materi-",
+        "als [1, 2], a wide range of atomically thin crystals have been identified, exhibiting"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "11",
+        "1v75401.7062:viXra"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "luJ"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 6.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "]ics-lrtm.tam-dnoc["
+      ]
+    },
+    {
+      "font": "CMR8",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 106,
+      "long_prose_lines": 89,
+      "pages": [
+        2,
+        3,
+        5,
+        7,
+        8,
+        10,
+        11,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "examples": [
+        "Keywords:intercalationchemistry,topologicalinsulators,chirality,vanderWaals",
+        "superlattices",
+        "WS2 bulk(b),andamine-intercalatedWS2 superlattices(c).The1T′ monolayerispredictedtobea"
+      ]
+    },
+    {
+      "font": "CMBX12",
+      "size": 14.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4,
+        12,
+        13,
+        16,
+        22
+      ],
+      "examples": [
+        "1 Introduction",
+        "2 Results",
+        "3 Conclusion"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "(a) 1T’-WS2 monolayer: distorted-octahedral W zig-zag chains Predicted QSH insulator"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "a c C2 analogous to 1T’-WTe2",
+        "b 2D TI",
+        "metallic and superconductive"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 18,
+      "long_prose_lines": 1,
+      "pages": [
+        3,
+        11,
+        24,
+        26
+      ],
+      "examples": [
+        "Distorted octahedron",
+        "Molecular spacers break interlayer coupling",
+        "while preserving intact monolayer"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 21,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        11,
+        22,
+        25,
+        26
+      ],
+      "examples": [
+        "C2 m",
+        "a",
+        "b c i"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.2,
+      "bold": true,
+      "italic": false,
+      "line_count": 46,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        11,
+        23,
+        26,
+        27
+      ],
+      "examples": [
+        "(b) 2M-WS bulk: strong coupled bulk 3D topological matter",
+        "(c) Amine-intercalated 1T′-WS superlattice: decoupled monolayer-like bulk Isolated 2D TI in bulk",
+        "Long-distance σ-donation vdw-FET Chiral interfaces"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "₂",
+        "₂"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.2,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        25
+      ],
+      "examples": [
+        "NH2 n NH2",
+        "R/S/rac-MBA DDA (n = 10)",
+        "50"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "This work HexA (n = 4) Decoupled layers"
+      ]
+    },
+    {
+      "font": "CMBX8",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 10,
+      "pages": [
+        3,
+        5,
+        7,
+        8,
+        10,
+        11,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "examples": [
+        "Fig. 1 Crystal structures and topological hierarchy of WS2. 1T′-WS2 monolayer (a), 2M-",
+        "Fig. 2 Synthesis and structural and chemical characterization of amine-intercalated",
+        "Fig.3 Structuralevolutionofamine-intercalatedWS2 atatomicresolution,exemplified"
+      ]
+    },
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        6,
+        7,
+        9,
+        10,
+        13,
+        15
+      ],
+      "examples": [
+        "2.1 Synthesis and Chemical Characterization",
+        "2.2 Structural Characterization at Atomic Resolution",
+        "2.3 Physical Characterization"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 29,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        8
+      ],
+      "examples": [
+        "a",
+        "b c",
+        "(a)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 34,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        7
+      ],
+      "examples": [
+        "5 10 15 20 25",
+        "Recovered 2M-WS2",
+        "after deintercalation"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        24,
+        27
+      ],
+      "examples": [
+        "2θ (°, λ = 0.7093 Å)",
+        "2θ (°, λ = 0.7093 Å)",
+        "4 WS 2 (S-MBA) 0.5"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        8,
+        24,
+        27
+      ],
+      "examples": [
+        "139 WS2(R-MBA)0.5",
+        "2M-WS2",
+        "100 150 200 250 300 350 400 450"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "407",
+        "131",
+        "284 322"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "Raman Shift (cm-1)",
+        "Binding Energy (eV)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 2.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ").u.a(",
+        ").u.a("
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        11,
+        22,
+        25
+      ],
+      "examples": [
+        "ytisnetnI",
+        "ytisnetnI",
+        "noitprosbA"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "C2/m, bilayer-like bulk",
+        "P21/m, monolayer-like bulk"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "(100) d = 17.2 Å WS2(R-MBA)0.5"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "33.4",
+        "33.4"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "W 3p3/2",
+        "W 4f5/2 W 4f7/2"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 24,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        7,
+        24,
+        25,
+        27
+      ],
+      "examples": [
+        "1.5",
+        "1.0",
+        "0.5"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 20,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        22
+      ],
+      "examples": [
+        "WS2(R-MBA)0.5",
+        "2M-WS2",
+        "1.00"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "2M-WS2 31.3"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        26
+      ],
+      "examples": [
+        "Temperature (°C)",
+        "0",
+        "−20"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ")gm/Wm(",
+        "wolF"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        22
+      ],
+      "examples": [
+        "taeH",
+        "thgieW",
+        "thgieW"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Interlayer",
+        "expansion",
+        "In-plane"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        ",CD"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "1.0",
+        "0.8",
+        "0.6"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "2",
+        "0.2 0.00 2M-WS2 lom WS2(R-MBA)0.5"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        8,
+        24
+      ],
+      "examples": [
+        "Temperature (K) Temperature (K)",
+        "20",
+        "10"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "K 003",
+        "K 003"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        8,
+        27
+      ],
+      "examples": [
+        "(a) (b)",
+        "Ea= 21 meV",
+        "(300-200 K)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        8,
+        24,
+        25
+      ],
+      "examples": [
+        "0.03",
+        "lom",
+        "eO"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "(a) (b) (c)",
+        "Monolayer (P21/m) Bilayer (P2/m) WS2-NH3 (P21/m)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.2,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "a",
+        "b c"
+      ]
+    },
+    {
+      "font": "Cambria",
+      "size": 8.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "ℤ₂= 1 ℤ₂= 1"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 32,
+      "long_prose_lines": 0,
+      "pages": [
+        11,
+        27
+      ],
+      "examples": [
+        "2.0",
+        "1.5",
+        "1.0"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        11,
+        26
+      ],
+      "examples": [
+        "Wavelength (nm)",
+        "Wavelength (nm)",
+        "Wavelength (nm)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        11,
+        26
+      ],
+      "examples": [
+        "dezilamroN",
+        "lom"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        11,
+        25
+      ],
+      "examples": [
+        ")gedm(",
+        ")gedm(",
+        ")gedm("
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "DC",
+        "DC",
+        "DC"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 2.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        22,
+        25
+      ],
+      "examples": [
+        ")%(",
+        ")%(",
+        ")%("
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        22
+      ],
+      "examples": [
+        "Temperature (°C)�",
+        "Temperature (°C)�",
+        "Temperature (°C)�"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 5.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 0,
+      "pages": [
+        22,
+        23
+      ],
+      "examples": [
+        "WS2(HexA)0.3 1.00",
+        "2",
+        "2 0.5"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        22
+      ],
+      "examples": [
+        "82.4 %, 0.44 S-MBA",
+        "81.7 %, 0.46 rac-MBA",
+        "81.4 %, 0.47 R-MBA 90.2 %, 0.27 HexA 71.7 %, 0.52 DDA"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 33,
+      "long_prose_lines": 0,
+      "pages": [
+        23
+      ],
+      "examples": [
+        "100 200",
+        "2M-WS",
+        "300 400"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        23
+      ],
+      "examples": [
+        "Raman Shift (cm-1)",
+        "Binding Energy (eV)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        23
+      ],
+      "examples": [
+        "(a) (b)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        23
+      ],
+      "examples": [
+        "2θ (°)",
+        "Temperature (°C)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        24
+      ],
+      "examples": [
+        "Temperature (K)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 3.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        24,
+        25,
+        26
+      ],
+      "examples": [
+        "K003",
+        "wolF",
+        ",CD"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.1,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        24
+      ],
+      "examples": [
+        "(a)",
+        "(b)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        24
+      ],
+      "examples": [
+        "0.0010 WS (R-MBA)"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        24
+      ],
+      "examples": [
+        "−50 ZFC"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        24
+      ],
+      "examples": [
+        "Temperature (K)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 25,
+      "long_prose_lines": 0,
+      "pages": [
+        25
+      ],
+      "examples": [
+        "1.00",
+        "0.95",
+        "0.90"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        25
+      ],
+      "examples": [
+        "Temperature (°C)�",
+        "Temperature (°C)",
+        "Temperature (K)"
+      ]
+    },
+    {
+      "font": "MS-UIGothic",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        25
+      ],
+      "examples": [
+        "）"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 2.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        25
+      ],
+      "examples": [
+        ")lom"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 1.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        25
+      ],
+      "examples": [
+        "/"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 2.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        25
+      ],
+      "examples": [
+        "χ"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 2.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        25
+      ],
+      "examples": [
+        "lom"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 2.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        25
+      ],
+      "examples": [
+        ",CD"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.2,
+      "bold": true,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        26,
+        27
+      ],
+      "examples": [
+        "2 0.5",
+        "2",
+        "2 0.5"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        26,
+        27
+      ],
+      "examples": [
+        "2θ (°)",
+        "Wavelength (nm)",
+        "Wavelength (nm)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        26
+      ],
+      "examples": [
+        "Temperature (K)"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        27
+      ],
+      "examples": [
+        "� noitprosbA",
+        "� noitprosbA"
+      ]
+    },
+    {
+      "font": "MalgunGothic",
+      "size": 2.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        27
+      ],
+      "examples": [
+        "2 SW(�",
+        "2 SW(�"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 4.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        27
+      ],
+      "examples": [
+        ")gedm("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 11.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        "(a)",
+        "(c)",
+        "(e)"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        "6L",
+        "4L",
+        "2L 1L"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 9.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        "1.5",
+        "1.4",
+        "1.3"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        ")mn(",
+        "PK"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        "thgieH"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        "0.6±0.2 nm",
+        "1±0.2 nm",
+        "0.6±0.2 nm"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        ")V("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        "V"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 9.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        28
+      ],
+      "examples": [
+        "2",
+        "1",
+        "0"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

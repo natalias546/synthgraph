@@ -1,0 +1,2903 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2023_QM065_Direct_observation_of_topological_surface_states_in_layered_kagome_lattice_with_broken_time_reversal_symmetry.pdf",
+    "pages": 9,
+    "sha256": "e61489402782ecc78ab67d909d49f66b2fb6e0f5cd52db3d19cb7f638561930d",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 9.0,
+    "body_font_family": "NimbusRomNo9L-Regu"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 9,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 9,
+        "children": [
+          {
+            "id": "heading_p1_l1",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 4,
+            "children": [
+              {
+                "id": "heading_p1_l3",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_1",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "1State Key Laboratory of Functional Materials for Informatics,\nShanghai Institute of Microsystem and Information Technology,\nChinese Academy of Sciences, Shanghai 200050, China\n2NationalSynchrotronRadiationLaboratory,UniversityofScienceandTechnologyofChina,Hefei,Anhui230029,China\n3SchoolofPhysicalScienceandTechnology, ShanghaiTechUniversity, Shanghai201210, China\n4Shanghai Synchrotron Radiation Facility, Shanghai Advanced Research Institute,\nChinese Academy of Sciences, Shanghai 201210, China\n5National Laboratory of Solid State Microstructures, School of Physics,\nCollaborativeInnovationCenterofAdvancedMicrostructures,NanjingUniversity,Nanjing210093,China\n6Key Laboratory of Artificial Structures and Quantum Control (Ministry of Education),\nShenyang National Laboratory for Materials Science, School of Physics and Astronomy,\nShanghai Jiao Tong University, Shanghai 200240, China\n7ShanghaiTechLaboratoryforTopologicalPhysics,ShanghaiTechUniversity,Shanghai201210,China",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l5",
+                        "p1_l6",
+                        "p1_l7",
+                        "p1_l8",
+                        "p1_l9",
+                        "p1_l10",
+                        "p1_l11",
+                        "p1_l12",
+                        "p1_l13",
+                        "p1_l14",
+                        "p1_l15",
+                        "p1_l16",
+                        "p1_l17"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "heading_p1_l18",
+                    "type": "subsubsection",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [
+                      {
+                        "id": "unidentified_p1_2",
+                        "type": "custom",
+                        "page_start": 1,
+                        "page_end": 1,
+                        "children": [],
+                        "text": "fromtheirintrinsicmagnetismandthebreakingoftime-reversalsymmetry. However,sofar,fewexamplesof\nintrinsic magnetic topological materials have been confirmed experimentally, which significantly hinder our\ncomprehensiveunderstandingoftheabundantphysicalpropertiesinthissystem. Thekagomelattices,which\nhost diversity of electronic structure signatures such as Dirac nodes, flat bands, and saddle points, provide\nanalternativeandpromisingplatformforin-depthinvestigationsintocorrelationsandbandtopology. Inthis\narticle, drawing inspiration from the stacking configuration of MnBi2Te4, we conceive and then synthesize\na high-quality single crystal EuTi3Bi4, which is a unique natural heterostructure consisting of both topological\nkagome layers and magnetic interlayers. We investigate the electronic structure of EuTi3Bi4 and uncover distinct\nfeaturesofanisotropicmultipleVanHovesingularitie(VHS)thatmightpreventFermisurfacenesting,leading\nto the absence of a charge density wave (CDW). In addition, we identify the topological nontrivial surface\nstates that serve as connections between different saddle bands in the vicinity of the Fermi level. Combined\nwith calculations, we establish that, the effective time-reversal symmetry S=θτ1/2 play a crucial role in the\nantiferromagnetic ground state of EuTi3Bi4, which ensures the stability of the topological surface states and\ngives rise to their intriguing topological nature. Therefore, EuTi3Bi4 offers the rare opportunity to investigate\ncorrelatedtopologicalstatesinmagnetickagomematerials.",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p1_l19",
+                            "p1_l20",
+                            "p1_l21",
+                            "p1_l22",
+                            "p1_l23",
+                            "p1_l24",
+                            "p1_l25",
+                            "p1_l26",
+                            "p1_l27",
+                            "p1_l28",
+                            "p1_l29",
+                            "p1_l30",
+                            "p1_l31",
+                            "p1_l32",
+                            "p1_l33"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      }
+                    ],
+                    "title": "Magnetictopologicalquantummaterialsdisplayadiverserangeoffascinatingphysicalpropertieswhicharise",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.0,
+                      "observation_ids": [
+                        "p1_l18"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "ZhichengJiang,1,∗TongruiLi,2,∗JianYuan,3,∗ZhengtaiLiu,4,†ZhipengCao,5SoohyunCho,2MingfangShu,6,5YichenYang,1 JianyangDing,1ZhikaiLi,3JiayuLiu,1ZhonghaoLiu,1JishanLiu,4JieMa,6,5ZheSun,2YanfengGuo,3,7,‡andDaweiShen2,§",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p1_l3",
+                    "p1_l4"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l34",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_3",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "with broken TRS.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l49"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "In solids, the reservation of symmetries defines kinds of topological invariants, which classify various topolog- ical quantum materials. Among them, the time-reversal symmetry (TRS) is most fundamental, as exemplified by two-dimensional quantum spin hall insulators and three- dimensional topological insulators (TIs), in which the preser- vation of TRS protects the exotic helical topological edge and surface states, respectively [1, 2]. Nevertheless, the breaking of TRS in topological quantum materials would usually give rise to more unexpected exotic topological states, including magnetic Wely semimetals [3–6], quantum anomalous Hall insulators [7, 8], and axion insulators [9–11], promoting re- markable progresses in both fundamental researches and spin- tronics related applications [12]. In this regard, it is always highly desired to achieve more magnetic topological states",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p1_l34",
+                    "p1_l35",
+                    "p1_l36",
+                    "p1_l37",
+                    "p1_l38",
+                    "p1_l39",
+                    "p1_l40",
+                    "p1_l41",
+                    "p1_l42",
+                    "p1_l43",
+                    "p1_l44",
+                    "p1_l45",
+                    "p1_l46",
+                    "p1_l47",
+                    "p1_l48"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l50",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_4",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "∗ Equal contributions\n† Equal contributions; ztliu@mail.sim.ac.cn\n‡ guoyf@shanghaitech.edu.cn\n§ dwshen@ustc.edu.cn\n3202\npeS\n4\n]le-rts.tam-dnoc[\n1v97510.9032:viXra\ning were eventually proven to inevitably lead to inhomoge-\nneous clustering of dopants [13, 14], this strategy naturally\ngave way to searching for intrinsic magnetic topological ma-\nterials without external dosage of magnetic elements [15–\n17], which is promising to provide a much cleaner platform\nto study magnetic topological states. While, despite many\ntheoretical proposals, very few examples of intrinsic mag-\nnetic topological insulators\\semimetals have been confirmed\nexperimentally [18, 19]. To date, the best-known example",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l52",
+                        "p1_l53",
+                        "p1_l54",
+                        "p1_l55",
+                        "p1_l56",
+                        "p1_l57",
+                        "p1_l58",
+                        "p1_l59",
+                        "p1_l60",
+                        "p1_l61",
+                        "p1_l62",
+                        "p1_l63",
+                        "p1_l64",
+                        "p1_l65",
+                        "p1_l66",
+                        "p1_l67",
+                        "p1_l68",
+                        "p1_l69"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "However, given that early tremendous efforts to introduce magnetism into TIs with fine-tuned magnetic element dop-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p1_l50",
+                    "p1_l51"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l70",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_5",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "TRS [16, 21–23].",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l75"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "MnBi2Te4 is a naturally occurring heterostrucure of magnetic MnTe and topological insulating Bi2Te3 layers [15, 20]. The combination of TRS and primitive cell translation symmetry protects the helical topological surface Dirac states parallel to the antiferromagnetic order even in the presence of broken",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p1_l70",
+                    "p1_l71",
+                    "p1_l72",
+                    "p1_l73",
+                    "p1_l74"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l76",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p1_6",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "topological invariant [26, 27]. Besides, a diver-\nsity of correlated electronic phases have been discovered in\nkagome materials, such as the magnetic order [28–31], ne-",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l83",
+                        "p1_l84",
+                        "p1_l85"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p2_1",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "maticity [32–34] and unconventional superconductivity [35–\n37]. In this sense, kagome-latticed compounds would nat-\nurally server as an alternative and appropriate incubator for\nintriguing magnetic topological states.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l1",
+                        "p2_l2",
+                        "p2_l3",
+                        "p2_l4"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Kagome lattices, which host diversity of electronic struc- ture signatures such as Dirac points, flat bands and saddle points, provide the playground for in-depth investigations into band topology and correlations [24, 25]. Specifically, their band characteristic structure, including flat and Dirac-like bands in the vicinity of Fermi level (EF), has been identified to feature Z2",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p1_l76",
+                    "p1_l77",
+                    "p1_l78",
+                    "p1_l79",
+                    "p1_l80",
+                    "p1_l81",
+                    "p1_l82"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l5",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_2",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "of the AM3X4 family with typical kagome lattices [38, 39].",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l8"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "In this article, drawing inspiration from the stacking config- uration of MnBi2Te4, we conceive and then successfully syn- thesize a high-quality single crystal of EuTi3Bi4, a member",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l5",
+                    "p2_l6",
+                    "p2_l7"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l9",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_3",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "connecting different VHSs but also provide evidence for their\npersistence across magnetic phase transitions. We discover\nthat, despite the broken TRS in the ground state of EuTi3Bi4,\nthe effective TRS introduced by the unique crystal structure\npreserves these topological surface states and then lead to\na nontrivial z4p topological classification. Our work reveals\nthe anisotropic VHSs and robust topological surface states in",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l18",
+                        "p2_l19",
+                        "p2_l20",
+                        "p2_l21",
+                        "p2_l22",
+                        "p2_l23",
+                        "p2_l24"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Transport measurements unveil the out-of-plane antiferro- magnetic (AFM) ground state therein, confirming its bro- ken TRS at low temperatures. By combining high-resolution angle-resolved photoemission spectroscopy (ARPES) with first-principles calculations, we extensively investigate its low-lying electronic structure and reveal multiple anisotropic Van Hove singularities (VHSs) in the pseudo-hexagonal Bril- louin zone (BZ). Additionally, we not only identify spectro- scopic fingerprints of topologically nontrivial surface states",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l9",
+                    "p2_l10",
+                    "p2_l11",
+                    "p2_l12",
+                    "p2_l13",
+                    "p2_l14",
+                    "p2_l15",
+                    "p2_l16",
+                    "p2_l17"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l25",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_4",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "lattices.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l27"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "EuTi3Bi4, thereby laying the groundwork for further under- standing of unique correlated topological physics in kagome",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l25",
+                    "p2_l26"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l28",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_5",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "Crystal and magnetic nature of EuTi3Bi4 single crystals.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l29"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Results",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l28"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l30",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "title": "EuTi3Bi4 crystallizes in the orthorhombic space group",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l30"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l31",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_6",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "= 10.422(3) Å, and c = 25.474(8) Å. In contrast to other typi-\ncal kagome lattices such as AM3X5 (P6/mmm) and AM6X6\n(P6/mmm), EuTi3",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l32",
+                        "p2_l33",
+                        "p2_l34"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "No.69 (Fmmm) with lattice constants of a = 5.9957(15) Å, b",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l31"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l35",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_7",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "possesses four kagome layers in one\nunit cell. The crystal is primarily composed of [Ti3Bi4] lay-\ners stacking along the c axis, with Eu atoms situated between\nthese layers (Fig. 1a). In this way, Eu atoms form a zigzag\nsublattice that intertwines with honeycomb layers of Bi atoms\nand staggered layers of Ti-based kagome networks. Figure. 1b\nshows the three-dimensional orthorhombic BZ together with\nits projection along the [0001] direction. We note that the\npresence of the orthorhombic EuBi2 layer effectively reduces\nthe crystalline symmetry of EuTi3Bi4 to D2h, which differs\nfrom the well-known D6h symmetry in AV3Sb5. In Fig. 1c,\nwe display the result of first-principles calculations for the\nbulk band structure of EuTi3Bi4, which reveals the presence of\nmultiple van Hove singularities (VHS) in the vicinity of Fermi\nlevel (EF) at the high-symmetry point Y, along with flat bands\nat around 0.4 eV below EF. These characteristics are com-\nmonly observed in kagome lattices, including AV3Sb5.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l36",
+                        "p2_l37",
+                        "p2_l38",
+                        "p2_l39",
+                        "p2_l40",
+                        "p2_l41",
+                        "p2_l42",
+                        "p2_l43",
+                        "p2_l44",
+                        "p2_l45",
+                        "p2_l46",
+                        "p2_l47",
+                        "p2_l48",
+                        "p2_l49",
+                        "p2_l50",
+                        "p2_l51",
+                        "p2_l52"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Bi4",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l35"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l53",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_8",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "(Fig. 1e), signifying the formation of long-range magnetic or-\nder. Magnetic anisotropy is observed below 10.5 K, seen by\nthe clear different magnitude between χab and χc (χc/χab ∼\n2",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l56",
+                        "p2_l57",
+                        "p2_l58",
+                        "p2_l59"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "The temperature dependent electrical resistivity presented in Fig. 1d shows an anomaly near ∼ 10.5 K, which coin- cides well with the peak in magnetic susceptibility χ(T) curve",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l53",
+                    "p2_l54",
+                    "p2_l55"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l60",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_9",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "peaks when B ⊥ c, but diverge when B // c. This result sug-\ngests relatively weak interlayer magnetic coupling, facilitat-\ning the transition from the antiferromagnetic (AFM) state to\nthe ferromagnetic (FM) state. Figure 1f presents the magne-\ntization versus both in-plane and out-of-plane applied field,\nshowing a quicker saturation along the c-axis, which indicates\nthat the magnetic easy axis is along the c-axis. The inset\nof Fig. 1f demonstrates a tiny hysteresis loop, which can be\naccounted by magnetic configurations of either weak FM or",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l64",
+                        "p2_l65",
+                        "p2_l66",
+                        "p2_l67",
+                        "p2_l68",
+                        "p2_l69",
+                        "p2_l70",
+                        "p2_l71",
+                        "p2_l72"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "3.4 at 10.5 K). Under 100 Oe magnetic field, χab drops rather sharply below 10.5 K, indicative of an antiferromagnetic-like order [40]. Additionally, near the magnetic transition temper- ature, ZFC and FC magnetization curves exhibit overlapping",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l60",
+                    "p2_l61",
+                    "p2_l62",
+                    "p2_l63"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l73",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_10",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "samples [43].\nAnisotropic multiple Van Hove singularities in EuTi3Bi4.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l76",
+                        "p2_l77"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "AFM with small spin moments canting [41, 42]. Note that the hysteresis loop center slightly shifts away from the zero point, suggesting the possible alternating AFM and FM domains in",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l73",
+                    "p2_l74",
+                    "p2_l75"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l78",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_11",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "(Γ, K, M, M′) hereafter. The stacked plots of constant energy\ncontours at different binding energies are compared in Fig.\n2a. The sophisticated Fermi surface topology of EuTi3Bi4 is\nmainly composed of one inner circular and one larger hexago-\nnal electron pockets around the center of BZ, and multiple tri-\nangular hole pockets centred at the corner of BZ, respectively.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l84",
+                        "p2_l85",
+                        "p2_l86",
+                        "p2_l87",
+                        "p2_l88",
+                        "p2_l89"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "In Fig. 2, we present a comprehensive investigation of the low-energy electronic structure of EuTi3Bi4 through both ARPES and first-principles calculations. By examining a wa- terfall plot for a wide range of photon energies at a constant binding energy, a rather weak kz dispersion (see Supplemen- tary Fig. 1) is observed, and thus we use the projected 2D BZ",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l78",
+                    "p2_l79",
+                    "p2_l80",
+                    "p2_l81",
+                    "p2_l82",
+                    "p2_l83"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l90",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_12",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "′\neach other at M , as highlighted in Fig. 2a.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l95",
+                        "p2_l96"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Despite the roughly hexagonal symmetric character of the FS stemming from the kagome lattice, upon one closer examina- tion, we could still identify an anisotropy of state distribution near EF in the projected BZ: the outermost triangular Fermi pockets centered at K nearly touch at M, yet are far apart from",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l90",
+                    "p2_l91",
+                    "p2_l92",
+                    "p2_l93",
+                    "p2_l94"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l97",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_13",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "(labeled as VHS1, VHS2 and VHS3) were discovered to be\nlocated at different binding energies, and we note that the",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l101",
+                        "p2_l102"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Such anisotropy in the low-lying electronic structure stands out even more clearly in corresponding photoemission inten- sity plots taken along high-symmetry directions. As shown in Fig. 2b (Γ-M-K), multiple kagome-lattice derived VHSs",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l97",
+                    "p2_l98",
+                    "p2_l99",
+                    "p2_l100"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l103",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_14",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "along another high-symmetry direction (Γ-M ′ -K), although",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l104"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "VHS1 bands lies in close proximity to EF. In sharp contrast,",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l103"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l105",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [
+                  {
+                    "id": "unidentified_p2_15",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "2e. In addition, more details on these VHSs can be identified\naccording to their band dispersions exhibiting opposite con-\ncavities along two orthogonal directions, as shown in Fig. 2f\nand 2g, where three VHS bands display hole-like characteris-\ntics along Γ-M (M ′ ), while form electron-like bands along the\n′\nperpendicular K-M (M ) direction.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l110",
+                        "p2_l111",
+                        "p2_l112",
+                        "p2_l113",
+                        "p2_l114",
+                        "p2_l115",
+                        "p2_l116"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "VHS2 and VHS3 are situated at similar binding energies, the VHS1 were revealed to be around 200 meV below EF. No- tably, the first-principles calculations along these two high- symmetry cuts remarkably reproduce these singularities and their anisotropy, as comparatively illustrated in Fig. 2c and",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l105",
+                    "p2_l106",
+                    "p2_l107",
+                    "p2_l108",
+                    "p2_l109"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p2_l117",
+                "type": "subsection",
+                "page_start": 2,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_1",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "in AV3Sb5 serves as the primary driving force for the forma-\ntion of charge ordering and superconductivity therein [44–\n48]. Moreover, recent reports on one another kagome metal",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l1",
+                        "p3_l2",
+                        "p3_l3"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Note that previous studies proposed that the VHS near EF",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p2_l117"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l4",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_2",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "′\nings between M and M points via ordinary wave vectors in\nkagome metals are prohibited due to the anisotropy of VHSs\nnear EF, as schematically displayed in Fig. 2h. Our finding of\nanisotropic VHSs might offer a plausible explanation for the\nabsence of charge ordering in EuTi3Bi4.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l9",
+                        "p3_l10",
+                        "p3_l11",
+                        "p3_l12",
+                        "p3_l13",
+                        "p3_l14"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "ATi3Bi5, in which no evidence of long-range charge order- ing has been discovered, provide further support to this hy- pothesis, as the VHSs in these materials are significantly far away from EF. In the case of EuTi3Bi4, despite the pres- ence of VHSs rather close to the Fermi level, electron scatter-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6",
+                    "p3_l7",
+                    "p3_l8"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l15",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_3",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "′\nare absent near M but only appear around M. Notably, at M,\nthe SS1 band gives rise to a surface-VHS at around 190 meV\nbelow EF, which is reminiscent of the kagome surface state\npreviously discovered in AV6Sn6 systems.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l39",
+                        "p3_l40",
+                        "p3_l41",
+                        "p3_l42",
+                        "p3_l43"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Observation of robust surface states in EuTi3Bi4 Intrigu- ingly, the careful comparison of band dispersion along K-M obtained from ARPES (Fig. 2b) and calculation (Fig. 2c) re- veals some extra features which could not be captured by the bulk band structure calculation, as highlighted by two green arrows in Fig. 2b. These bands might be thus of the surface state nature. In Fig. 3a, we can provide the greater visibil- ity of these bands in the corresponding momentum distribu- tion curves (MDCs), and assign them as SS1 and SS2, re- spectively. Based on our photon energy–dependent ARPES measurements (Fig. 3c), both bands exhibit rather weak kz dispersion over half of the out-of-plane BZ, further confirm- ing their two-dimensional surface-state nature. Below EF, we have discovered that SS2 progressively separates into two dis- tinct branches, which become significantly pronounced at a binding energy of 180 meV and then merge into VHS2 and VHS3, respectively. In order to gain more insights into the origin of these bands, we employ an iterative Green function approach to calculate the surface states along the Γ − M − K direction. As shown in Fig. 3b and Fig. S2, two additional surface bands can be identified to connect three VHS bands, in an excellent agreement with our experiments in the vicin- ity of EF (Fig. 2b). Besides, we discovered that these surface bands, in fact, present a similar anisotropy to bulk VHSs; they",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17",
+                    "p3_l18",
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21",
+                    "p3_l22",
+                    "p3_l23",
+                    "p3_l24",
+                    "p3_l25",
+                    "p3_l26",
+                    "p3_l27",
+                    "p3_l28",
+                    "p3_l29",
+                    "p3_l30",
+                    "p3_l31",
+                    "p3_l32",
+                    "p3_l33",
+                    "p3_l34",
+                    "p3_l35",
+                    "p3_l36",
+                    "p3_l37",
+                    "p3_l38"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l44",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_4",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "Figs. 1e and 1f, which is as well consistent with recent re-\nports [49]. This drove us to investigate the interplay be-\ntween magnetic phase transitions and electronic structure of",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l46",
+                        "p3_l47",
+                        "p3_l48"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "The magnetic susceptibility taken with different field ori- entations show anisotropic characteristics, as illustrated in",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l44",
+                    "p3_l45"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l49",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_5",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "sure declined from 6×10−11 Torr to 3×10−10 Torr and main-\ntained for thirty minutes, we found that SS1 eventually van-\nished completely. Even after restoring the base pressure to its\noriginal level, we did not observe the reappearance of SS1,\nas depicted in Fig. S3. This finding demonstrates that SS1 is\nvulnerable to surface perturbation primarily attributed to the\n3\nadsorption of gas molecules on the surface under a degraded\nvacuum environment, which would kill the delicate surface\nstates. In stark contrast, SS2 is still visible during this pro-\ncess, as highlighted in both intensity plots and corresponding\ncurvature differential spectra (Fig. S3). Furthermore, our cal-\nculations demonstrate that SS2 originates from band inversion\ninduced by the spin-orbit coupling (SOC) and suggest its non-\ntrivial topological characteristics, regardless of whether it is\nin a paramagnetic or magnetic ordered phase (Fig. 3e). Ac-\ncordingly, it is highly likely that, despite the breaking of time-\nreversal symmetry in the magnetic ordered phase, the topo-\nlogical properties of SS2 should be protected by other sym-\nmetries. Given the intricate hyposymmetric crystal structure\nof EuTi3Bi4, we will delve into a detailed discussion of the\norigin of these surface states in the subsequent section.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l55",
+                        "p3_l56",
+                        "p3_l57",
+                        "p3_l58",
+                        "p3_l59",
+                        "p3_l60",
+                        "p3_l61",
+                        "p3_l62",
+                        "p3_l63",
+                        "p3_l64",
+                        "p3_l65",
+                        "p3_l66",
+                        "p3_l67",
+                        "p3_l68",
+                        "p3_l69",
+                        "p3_l70",
+                        "p3_l71",
+                        "p3_l72",
+                        "p3_l73",
+                        "p3_l74",
+                        "p3_l75",
+                        "p3_l76"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "EuTi3Bi4. To this end, we carried out detailed temperature- dependent ARPES measurements. Surprisingly, the surface states remain stable across the magnetic transition tempera- ture (TN) when the base vacuum was kept in a rather high vac- uum pressure, indicating their robustness against the break- ing of TRS (Fig. 3d). However, when the base vacuum pres-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l49",
+                    "p3_l50",
+                    "p3_l51",
+                    "p3_l52",
+                    "p3_l53",
+                    "p3_l54"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l77",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_6",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "AFM state.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l78"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Topology analysis of the electronic structure in PM and",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l77"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l79",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_7",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "� n− − n+\nz4 = k k mod 4 (.1)\n2\nk,k∈TRIM\n�\nz2,j = n−k mod 2 (.2)\nk∈TRIM,kj =π\nwhere n− and n+ represent numbers of odd and even parity\nk k",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l83",
+                        "p3_l84",
+                        "p3_l85",
+                        "p3_l86",
+                        "p3_l87",
+                        "p3_l88",
+                        "p3_l89",
+                        "p3_l90",
+                        "p3_l91"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "As this material is in the paramagnetic (PM) phase with the reservation of both time-reversal and inversion symmetries, we can use the Fu-Kane like formulae [50, 51] to determine z 4 and z 2, j=1,2,3 indicators:",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l79",
+                    "p3_l80",
+                    "p3_l81",
+                    "p3_l82"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l92",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_8",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "ical non-trivial property with z4 = 3 (See details in Table I\nof SM). In order to study the topological properties of these\nsurface states in detail, we first determined that SS2 is pro-\nduced by a hybrid gap between the 76th and 78th bulk bands\nas shown in Fig. 4a and 4b (green dotted line). We found that\nthe 76th bulk band has a non-zero strong topological indica-\ntors with z4 = 1, so SS2 is topologically nontrivial in nature\non the Γ to K high symmetry path, but the Dirac point near\nthe Γ point merge with the bulk band and they are difficult to\ndistinguish. In addition, SS1 is produced at the point M of\nthe 78th and 80th bulk bands with z4 = 0, so we could de-\ntermine that it is of topologically trivial nature on the Γ to M\nhigh symmetry path(See details in SM).",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l96",
+                        "p3_l97",
+                        "p3_l98",
+                        "p3_l99",
+                        "p3_l100",
+                        "p3_l101",
+                        "p3_l102",
+                        "p3_l103",
+                        "p3_l104",
+                        "p3_l105",
+                        "p3_l106",
+                        "p3_l107",
+                        "p3_l108"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Kramer pairs of occupied bands at the time-reversal-invariant momenta (TRIM), respectively. First of all, according to our calculation, the whole system has 80 valence electrons in the PM state, and the overall performance is the strong topolog-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l92",
+                    "p3_l93",
+                    "p3_l94",
+                    "p3_l95"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l109",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [
+                  {
+                    "id": "unidentified_p3_9",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "in the antiferromagnetic (AFM) phase of EuTi3Bi4 (Fig. S4).",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l116"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "In fact, we can not rule out the possibility of ferromag- netism according to the transport results, however, there isn’t observable band splitting in ARPES data in the magnetism temperature region, so we prefer the possibility of weak an- tiferromagnetism. Next, to theoretically identify the band topology of EuTi3Bi4 in its magnetic ground state accurately, we have considered nine most likely magnetic configurations",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l109",
+                    "p3_l110",
+                    "p3_l111",
+                    "p3_l112",
+                    "p3_l113",
+                    "p3_l114",
+                    "p3_l115"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p3_l117",
+                "type": "subsection",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "title": "Among these configurations, states with the out-of-plane mag- netic momenta are energetically favorable to those with in- plane magnetic momenta. Finally, we extracted that the mag- netic configuration 1 hosts the lowest energy under the same",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p3_l117",
+                    "p3_l118",
+                    "p3_l119",
+                    "p3_l120"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l1",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_1",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "then determined to be 68.520 (CAcca) with a θτ1/2 effective\ntime-reversal symmetry. Here, θ represents the time-reversal\n� �\noperator, and τ = 1 1 1 denotes the half translation op-\n1/2 2 2 2\nerator connecting spin-up and spin-down of the Eu atom, as\nillustrated in Fig. 4c and 4d. We note that each band is still\ndoubly degenerate obviously.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l2",
+                        "p4_l3",
+                        "p4_l4",
+                        "p4_l5",
+                        "p4_l6",
+                        "p4_l7",
+                        "p4_l8",
+                        "p4_l9"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Hubburd U condition. Accordingly, such a configuration is",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l1"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l10",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_2",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "(LCEBR). In other words, EuTi3Bi4 with 196 electrons is a\nnon-trivial insulator or topological with non-trivial symmetry\nindicators. Furthermore, we calculated the topological indi-\ncators according to the method proposed by Chen et al. [54].",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l16",
+                        "p4_l17",
+                        "p4_l18",
+                        "p4_l19"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "To further analyze the topological properties of EuTi3Bi4 in the AFM phase, we employed the so-called magnetic topo- logical quantum chemistry (MTQC) method through the Bil- bao crystallographic server [52, 53]. This method revealed that the occupied bands of EuTi3Bi4 could not be expressed as a linear combination of elementary band representations",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l10",
+                    "p4_l11",
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l20",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_3",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "1 � 1 � �\nz′ = z = N− − N + mod 2 (.3)\n2p 2 4p 4 k k\nk∈TRIM\nwhere, N− and N− are numbers of occupied bands with odd\nk k\nand even parity of at TRIM, respectively. The results of z′ =\n2p",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l23",
+                        "p4_l24",
+                        "p4_l25",
+                        "p4_l26",
+                        "p4_l27",
+                        "p4_l28",
+                        "p4_l29",
+                        "p4_l30"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "The magnetic space group (MSG) of the lowest ground state energy is 68.520, and it is possible to calculate the topological parity-based invariant z4p index, which is defined as:",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l20",
+                    "p4_l21",
+                    "p4_l22"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Directobservationoftopologicalsurfacestatesinthelayeredkagomelatticewithbroken time-reversalsymmetry",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p1_l1",
+                "p1_l2"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p4_l31",
+            "type": "section",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [
+              {
+                "id": "unidentified_p4_4",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "which is consistent with the MTQC identification.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l32"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "heading_p4_l33",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_5",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "topologically nontrivial on the Γ to K high symmetry path,\nwhile SS1 is topologically trivial on the Γ to M high symme-\ntry path, consistent with our experimental findings.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l41",
+                        "p4_l42",
+                        "p4_l43"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Interestingly, surface states of EuTi3Bi4 persist even in its AFM phase, as shown in Fig. 4e and 4f (green dotted line). To determine the topological properties of these surface states in antiferromagnetic phase, we first identify SS2 and SS1 pro- duced at the 188th bulk band and 192nd bulk band of the antiferromagnetic, respectively . Using the parity values of time-reversal momentum at 8 TRIM, we possessed the table as shown in Table II in SM. This result indicates that SS2 is",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l33",
+                    "p4_l34",
+                    "p4_l35",
+                    "p4_l36",
+                    "p4_l37",
+                    "p4_l38",
+                    "p4_l39",
+                    "p4_l40"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l44",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_6",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "surface-state dispersions that connect different saddle bands.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l51"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Discussion We successfully synthesize the EuTi3Bi4 and conduct a comprehensive exploration of its electronic structure by ex- ploiting the combination of ARPES and DFT calculations. We identifiy multiple VHSs derived from the kagome lattice in EuTi3Bi4, as well as their anisotropic characteristics originat- ing from the crystal symmetry. Additionally, we uncover two",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l44",
+                    "p4_l45",
+                    "p4_l46",
+                    "p4_l47",
+                    "p4_l48",
+                    "p4_l49",
+                    "p4_l50"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l52",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_7",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "remain unaffected by magnetism but also exhibit strong ro-\nbustness against surface perturbations. We demonstrate that\nthe surface band SS2 originates from hybridization gap with\nthe effective time-reversal symmetry, arising from the half\ntranslation operator connecting spin-up and spin-down of the",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l53",
+                        "p4_l54",
+                        "p4_l55",
+                        "p4_l56",
+                        "p4_l57"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Remarkably, we discover that the surface bands SS2 not only",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l52"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l58",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_8",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "4\ntopological electronic states in the kagome material EuTi3Bi4,\nand provides a new avenue for investigating the intricate inter-\nplay between magnetism, spin-orbit coupling, and topological\nsurface states in frustrated kagome lattices.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l61",
+                        "p4_l62",
+                        "p4_l63",
+                        "p4_l64",
+                        "p4_l65"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Eu atom in the antiferromagnetic ground state, ensures the sta- bility of surface states with z4p topological classification, rem- iniscent of MnBi2Te4. In this context, our work unveil new",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l58",
+                    "p4_l59",
+                    "p4_l60"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l66",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_9",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "in a furnace up to 1000 ◦C within 10 hours, kept at that tem-\nperature for 20 hours, and then cooled down to 800 ◦C within",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l74",
+                        "p4_l75"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Methods Sample growth and characterization The EuTi3Bi4 crystals were synthesized by using bismuth as the flux. High purity elements of europium rod (99.9 %, Alfa Aesar), titanium powder (99.99 %, Macklin), and bis- muth pellet (99.999 %, Aladdin) were mixed in a molar ratio of 1:1:20 and placed into an alumina crucible, which was then sealed into a quartz tube in vacuum. The assembly was heated",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l66",
+                    "p4_l67",
+                    "p4_l68",
+                    "p4_l69",
+                    "p4_l70",
+                    "p4_l71",
+                    "p4_l72",
+                    "p4_l73"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "1 and z4p = 2, indicate the presence of non-trivial topology,",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.0,
+              "observation_ids": [
+                "p4_l31"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p4_l76",
+            "type": "section",
+            "page_start": 4,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p4_10",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "at a temperature decreasing rate of 2◦C/h. The excess bis-\nmuth was removed at this temperature by quickly placing the\nassembly into a high-speed centrifuge.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l77",
+                    "p4_l78",
+                    "p4_l79"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "heading_p4_l80",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_11",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "at 7 K with a base pressure of better than 6 × 10−11 Torr.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l82"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "ARPES experiments All EuTi3Bi4 single crystal samples were cleaved in situ",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l80",
+                    "p4_l81"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l83",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_12",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "03U beamline of Shanghai Synchrotron Radiation Facility\n(SSRF)[55] with liner horizontal polarization lights [56]. In\nour measurements, light’s linear horizontal polarization is par-\nallel to the ground and the incident angle on sample is θ =\n45◦ with respect to the sample’s normal direction, along with\nthe slit direction that is perpendicular to the ground. During\nthe experiment, the beam size is set to 15 × 15 mm2. All\ndata were acquired with a Scienta-Omicron DA30 electron\nanalyzer. The total energy resolution was set to 10∼20 meV\ndepending on the photon energy applied, and the angular res-\nolution was set to be 0.2◦.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l84",
+                        "p4_l85",
+                        "p4_l86",
+                        "p4_l87",
+                        "p4_l88",
+                        "p4_l89",
+                        "p4_l90",
+                        "p4_l91",
+                        "p4_l92",
+                        "p4_l93",
+                        "p4_l94"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "High-resolution ARPES measurements were performed at the",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l83"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l95",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_13",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "(PBE) [59]. The Brillouin zone integration was carried out on\na 6×6×10 Monkhorst-Pack k mesh, and the cut-off energy was\nset to 450 eV. The experimentally lattice parameters were uti-\nlized, and the spin-orbit coupling (SOC) effect was included\nin all the calculations. The tight binding model based on max-\nimally localized Wannier functions [60, 61] was constructed\nto reproduce the spectral functions with the selection of Eu\nd, Ti d, and Bi p orbitals in the paramagnetic state. Surface\nstates were calculated using iterative Green function methods\n[62, 63] as implemented in WANNIERTOOLS [64]. The par-\nity analysis was performed using the IRVSP code [65].",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l102",
+                        "p4_l103",
+                        "p4_l104",
+                        "p4_l105",
+                        "p4_l106",
+                        "p4_l107",
+                        "p4_l108",
+                        "p4_l109",
+                        "p4_l110",
+                        "p4_l111",
+                        "p4_l112"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Band calculations The electronic structure calculations for EuTi3Bi4 were per- formed using density functional theory (DFT) within the pro- jector augmented wave (PAW) method [57] as implemented in Vienna ab initio Simulation Package (VASP) [58]. The exchange-correlation functional was based on the general- ized gradient approximation of Perdew, Burke, and Ernzerhof",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l95",
+                    "p4_l96",
+                    "p4_l97",
+                    "p4_l98",
+                    "p4_l99",
+                    "p4_l100",
+                    "p4_l101"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l113",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p4_14",
+                    "type": "custom",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "text": "formed on an 8×8×3 Monkhorst-Pack k mesh, the cut-off\nenergy was set to 450 eV. A Hubbard-like correction with",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p4_l115",
+                        "p4_l116"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "In the AFM calculations, the 4f electrons of Eu were treated as valence electron. The Brillouin zone integration was per-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l113",
+                    "p4_l114"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p4_l117",
+                "type": "subsection",
+                "page_start": 4,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p5_1",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "energy level. To reproduce the spectral functions in the AFM\nstate, the tight-binding model based on maximally localized",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l1",
+                        "p5_l2"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "U=6eV was applied to the 4f orbital of Eu, which resulted in a good match with the energy position of the ARPES 4f",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p4_l117",
+                    "p4_l118"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p5_l3",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p5_2",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "energy for different magnetic configurations, a denser K mesh\nof 18×18×3 was employed, and cut-off energy was set to 380\neV.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l5",
+                        "p5_l6",
+                        "p5_l7"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "Wannier functions[60, 61] was utilized, which included Eu d and f, Ti d and Bi p orbitals. In order to calculate ground state",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p5_l3",
+                    "p5_l4"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p5_l8",
+                "type": "subsection",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [
+                  {
+                    "id": "unidentified_p5_3",
+                    "type": "custom",
+                    "page_start": 5,
+                    "page_end": 5,
+                    "children": [],
+                    "text": "sponding authors upon request.",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p5_l11"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "two_column",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  }
+                ],
+                "title": "The authors declare that the main data supporting the find- ings of this study are available within the paper and its Sup- plementary Material. Extra data are available from the corre-",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "5 hours. It was subsequently slowly cooled down to 500 ◦C",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.0,
+              "observation_ids": [
+                "p4_l76"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 5,
+        "page_end": 9,
+        "children": [
+          {
+            "id": "heading_p5_l12",
+            "type": "acknowledgements",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p5_4",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "We thank Prof. Xiangang Wan, Prof. Yi Zheng, Prof.\nYang Liu and Prof. Dong Qian for the useful discussions.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l13",
+                    "p5_l14"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_5",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "We acknowledge the support by the National Natural Science",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l15"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_6",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "Foundation of China (Grants Nos. U2032208, 92065201,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_7",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "U2032213). Y. F. G was sponsored by Double First-Class Ini-\ntiative Fund of ShanghaiTech University and the open projects\nfrom State Key Laboratory of Functional Materials for Infor-\n[1] Bernevig, B. A., Hughes, T. L. & Zhang, S.-C. Quantum spin\nhall effect and topological phase transition in HgTe quantum\nwells. Science 314, 1757–1761 (2006).\n[2] Fu, L. & Kane, C. L. Topological insulators with inversion\nsymmetry. Phys. Rev. B 76, 045302 (2007).\n[3] Wan, X., Turner, A. M., Vishwanath, A. & Savrasov, S. Y.\nTopological semimetal and fermi-arc surface states in the elec-\ntronic structure of pyrochlore iridates. Phys. Rev. B 83, 205101\n(2011).\n[4] Wang, Z. et al. Time-reversal-breaking Weyl fermions in mag-\nnetic Heusler alloys. Phys. Rev. Lett. 117, 236401 (2016).\n[5] Liu, D. et al. Magnetic weyl semimetal phase in a Kagome´\ncrystal. Science 365, 1282–1285 (2019).\n[6] Kuroda, K. et al. Evidence for magnetic Weyl fermions in a\ncorrelated metal. Nature materials 16, 1090–1095 (2017).\n[7] Yu, R. et al. Quantized anomalous Hall effect in magnetic topo-\nlogical insulators. Science 329, 61–64 (2010).\n[8] Chang, C.-Z. et al. Experimental observation of the quantum\nanomalous Hall effect in a magnetic topological insulator. Sci-\nence 340, 167–170 (2013).\n[9] Li, R., Wang, J., Qi, X.-L. & Zhang, S.-C. Dynamical axion\nfield in topological magnetic insulators. Nature Physics 6, 284–\n288 (2010).\n[10] Xiao, D. et al. Realization of the axion insulator state in quan-\ntum anomalous Hall sandwich heterostructures. Phys. Rev. Lett.\n120, 056801 (2018).\n[11] Mogi, M. et al. A magnetic heterostructure of topological in-\nsulators as a candidate for an axion insulator. Nature materials\n16, 516–521 (2017).\n[12] Sˇmejkal, L., Mokrousov, Y., Yan, B. & MacDonald, A. H.\nTopological antiferromagnetic spintronics. Nature physics 14,\n242–251 (2018).\n[13] Sessi, P. et al. Dual nature of magnetic dopants and compet-\ning trends in topological insulators. Nature communications 7,\n12027 (2016).\n[14] Lee, I. et al. Imaging Dirac-mass disorder from mag-\nnetic dopant atoms in the ferromagnetic topological insulator\nCrx(Bi0.1Sb0.9)2−xTe3. Proceedings of the National Academy of\n5\nmatics (Grant No. SKL2022). J.M. was supported by the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22",
+                    "p5_l23",
+                    "p5_l24",
+                    "p5_l25",
+                    "p5_l26",
+                    "p5_l27",
+                    "p5_l28",
+                    "p5_l29",
+                    "p5_l30",
+                    "p5_l31",
+                    "p5_l32",
+                    "p5_l33",
+                    "p5_l34",
+                    "p5_l35",
+                    "p5_l36",
+                    "p5_l37",
+                    "p5_l38",
+                    "p5_l39",
+                    "p5_l40",
+                    "p5_l41",
+                    "p5_l42",
+                    "p5_l43",
+                    "p5_l44",
+                    "p5_l45",
+                    "p5_l46",
+                    "p5_l47",
+                    "p5_l48",
+                    "p5_l49",
+                    "p5_l50",
+                    "p5_l51",
+                    "p5_l52",
+                    "p5_l53",
+                    "p5_l54",
+                    "p5_l55",
+                    "p5_l56",
+                    "p5_l57",
+                    "p5_l58",
+                    "p5_l59"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_8",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "National Key Research and Development Program of China\n(Grant No. 2022YFA1402704). Part of this research used",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l60",
+                    "p5_l61"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_9",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "Beamline 03U of the Shanghai Synchrotron Radiation Fa-\ncility, which is supported by ME2 project under Contract",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l62",
+                    "p5_l63"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_10",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "No.11227902 from National Natural Science Foundation of",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l64"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_11",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "China. The authors also thank the support from Analytical\nInstrumentation Center (#SPST-AIC10112914). .",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l65",
+                    "p5_l66"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_12",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "Author contributions Z.C.J. and Z.T.L. performed the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l67"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_13",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "ARPES experiment and analyzed the resulting data. T.R.L.,\nZ. S. and Z.P.C. performed the theoretical calculations. J.Y.\nand Y.F.G. synthesized the single crystals and characterized\nthe basic properties. J.Y, M.F.S., Z.K.L. and J.M. performed\nthe transport measurements. Y.F.G. and D.W.S. supervised the\nproject. S.C., Y.C.Y., J.Y.D., J.Y.L.,J.S.L. contributed to the\ndevelopment and maintenance of the ARPES systems, beam-\nline and related software development. Z.C.J, T.R.L., Z.T.L,\nD.W.S wrote the manuscript with input from all coauthors.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l68",
+                    "p5_l69",
+                    "p5_l70",
+                    "p5_l71",
+                    "p5_l72",
+                    "p5_l73",
+                    "p5_l74",
+                    "p5_l75",
+                    "p5_l76"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Acknowledgements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.0,
+              "observation_ids": [
+                "p5_l12"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p5_l77",
+            "type": "competing_interests",
+            "page_start": 5,
+            "page_end": 9,
+            "children": [
+              {
+                "id": "unidentified_p5_14",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "The authors declare no competing interests.\nSciences 112, 1316–1321 (2015).\n[15] Gong, Y. et al. Experimental realization of an intrinsic mag-\nnetic topological insulator. Chinese Physics Letters 36, 076801\n(2019).\n[16] Li, J. et al. Intrinsic magnetic topological insulators in van der\nWaals layered MnBi2Te4-family materials. Science Advances\n5, eaaw5685 (2019).\n[17] Hirahara, T. et al. Large-gap magnetic topological heterostruc-\nture formed by subsurface incorporation of a ferromagnetic\nlayer. Nano letters 17, 3493–3500 (2017).\n[18] Li, H. et al. Dirac surface states in intrinsic magnetic topolog-\nical insulators EuSn 2 As 2 and MnBi 2n Te 3n+1 . Phys. Rev. X 9,\n041039 (2019).\n[19] Li, P. et al. Giant room temperature anomalous Hall effect\nand tunable topology in a ferromagnetic topological semimetal\nCo2MnAl. Nature communications 11, 3476 (2020).\n[20] Otrokov, M. M. et al. Highly-ordered wide bandgap materials\nfor quantized anomalous Hall and magnetoelectric effects. 2D\nMaterials 4, 025082 (2017).\n[21] Otrokov, M. M. et al. Prediction and observation of an antifer-\nromagnetic topological insulator. Nature 576, 416–422 (2019).\n[22] Chen, B. et al. Intrinsic magnetic topological insulator phases\nin the sb doped MnBi2Te4 bulks and thin flakes. Nature com-\nmunications 10, 4469 (2019).\n[23] Zhang, D. et al. Topological axion states in the magnetic insula-\ntor MnBi2Te4 with the quantized magnetoelectric effect. Phys-\nical review letters 122, 206401 (2019).\n[24] Mazin, I. et al. Theoretical prediction of a strongly correlated\nDirac metal. Nature communications 5, 4261 (2014).\n[25] Chisnell, R. et al. Topological magnon bands in a Kagome\nlattice ferromagnet. Physical review letters 115, 147201 (2015).\n[26] Ye, L. et al. Massive dirac fermions in a ferromagnetic Kagome\nmetal. Nature 555, 638–642 (2018).\n[27] Kang, M. et al. Dirac fermions and flat bands in the ideal\nKagome metal FeSn. Nature materials 19, 163–169 (2020).\n[28] Nakatsuji, S., Kiyohara, N. & Higo, T. Large anomalous Hall\neffect in a non-collinear antiferromagnet at room temperature.\nNature 527, 212–215 (2015).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l78",
+                    "p5_l79",
+                    "p5_l80",
+                    "p5_l81",
+                    "p5_l82",
+                    "p5_l83",
+                    "p5_l84",
+                    "p5_l85",
+                    "p5_l86",
+                    "p5_l87",
+                    "p5_l88",
+                    "p5_l89",
+                    "p5_l90",
+                    "p5_l91",
+                    "p5_l92",
+                    "p5_l93",
+                    "p5_l94",
+                    "p5_l95",
+                    "p5_l96",
+                    "p5_l97",
+                    "p5_l98",
+                    "p5_l99",
+                    "p5_l100",
+                    "p5_l101",
+                    "p5_l102",
+                    "p5_l103",
+                    "p5_l104",
+                    "p5_l105",
+                    "p5_l106",
+                    "p5_l107",
+                    "p5_l108",
+                    "p5_l109",
+                    "p5_l110",
+                    "p5_l111",
+                    "p5_l112",
+                    "p5_l113",
+                    "p5_l114",
+                    "p5_l115",
+                    "p5_l116"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "[29] Liu, E. et al. Giant anomalous Hall effect in a ferromag-\nnetic Kagome-lattice semimetal. Nature physics 14, 1125–1131\n(2018).\n[30] Yin, J.-X. et al. Quantum-limit chern topological magnetism in\nTbMn6Sn6. Nature 583, 533–536 (2020).\n[31] Teng, X. et al. Discovery of charge density wave in a Kagome\nlattice antiferromagnet. Nature 609, 490–495 (2022).\n[32] Xiang, Y. et al. Twofold symmetry of c-axis resistivity in topo-\nlogical Kagome superconductor CsV3Sb5 with in-plane rotating\nmagnetic field. Nature communications 12, 6727 (2021).\n[33] Nie, L. et al. Charge-density-wave-driven electronic nematicity\nin a Kagome superconductor. Nature 604, 59–64 (2022).\n[34] Xu, Y. et al. Three-state nematicity and magneto-optical Kerr\neffect in the charge density waves in Kagome superconductors.\nNature physics 18, 1470–1475 (2022).\n[35] Ortiz, B. R. et al. Superconductivity in the Z2 kagome metal\nkv3sb5. Phys. Rev. Mater. 5, 034801 (2021).\n[36] Yin, Q. et al. Superconductivity and normal-state properties of\nkagome metal RbV3Sb5 single crystals. Chinese Physics Letters\n38, 037403 (2021).\n[37] Ortiz, B. R. et al. CsV3Sb5: A Z2 topological kagome metal\nwith a superconducting ground state. Phys. Rev. Lett. 125,\n247002 (2020).\n[38] Ovchinnikov, A. & Bobev, S. Bismuth as a reactive solvent in\nthe synthesis of multicomponent transition-metal-bearing bis-\nmuthides. Inorganic Chemistry 59, 3459–3470 (2019).\n[39] Ortiz, B. R. et al. YbV3Sb4 and EuV3Sb4 vanadium-based\nkagome metals with Yb2+ and Eu2+ zigzag chains. Phys. Rev.\nMater. 7, 064201 (2023).\n[40] Jiang, S. et al. Metamagnetic transition in EuFe2As2 single\ncrystals. New Journal of Physics 11, 025007 (2009).\n[41] Felner, I., Galstyan, E. & Nowik, I. Possible origin of the higher\nmagnetic phase transition in RuSr2Eu1.5Ce0.5Cu2O10. Phys.\nRev. B 71, 064510 (2005).\n[42] Nayak, A. K. et al. Large zero-field cooled exchange-bias in\nbulk Mn2PtGa. Phys. Rev. Lett. 110, 127204 (2013).\n[43] Meiklejohn, W. H. & Bean, C. P. New magnetic anisotropy.\nPhys. Rev. 102, 1413–1414 (1956).\n[44] Cho, S. et al. Emergence of new van hove singularities in\nthe charge density wave state of a topological kagome metal\nRbV3Sb5. Phys. Rev. Lett. 127, 236401 (2021).\n[45] Wang, C., Liu, S., Jeon, H. & Cho, J.-H. Origin of charge\ndensity wave in the layered kagome metal CsV3Sb5. Phys. Rev.\nB 105, 045135 (2022).\n[46] Hu, Y. et al. Rich nature of van hove singularities in Kagome\nsuperconductor CsV3Sb5. Nature Communications 13, 2220\n(2022).\n[47] Li, Y. et al. Tuning the competition between supercon-\nductivity and charge order in the kagome superconductor\nCsV1−xNbxV3Sb5. Phys. Rev. B 105, L180507 (2022).\n[48] Oey, Y. M., Kaboudvand, F., Ortiz, B. R., Seshadri, R. & Wil-\n6\nson, S. D. Tuning charge density wave order and superconduc-\ntivity in the kagome metals KV3Sb5−xSnx and RbV3Sb5−xSnx.\nPhys. Rev. Mater. 6, 074802 (2022).\n[49] Ortiz, B. R. et al. Evolution of highly anisotropic magnetism\nin the titanium-based kagome metals LnTi3Bi4 (Ln: La...Gd3+,\nEu2+, Yb2+). arXiv preprint arXiv:2308.16138 (2023).\n[50] Fu, L. & Kane, C. L. Topological insulators with inversion\nsymmetry. Phys. Rev. B 76, 045302 (2007).\n[51] Song, Z., Zhang, T., Fang, Z. & Fang, C. Quantitative mappings\nbetween symmetry and topology in solids. Nature Communica-\ntions 9, 3530 (2018).\n[52] Xu, Y. et al. High-throughput calculations of magnetic topo-\nlogical materials. Nature 586, 702–707 (2020).\n[53] Bradlyn, B. et al. Topological quantum chemistry. Nature 547,\n298–305 (2017).\n[54] Peng, B., Jiang, Y., Fang, Z., Weng, H. & Fang, C. Topological\nclassification and diagnosis in magnetically ordered electronic\nmaterials. Phys. Rev. B 105, 235138 (2022).\n[55] Yang, Y.-C. et al. High-resolution ARPES endstation for in situ\nelectronic structure investigations at SSRF. Nuclear Science\nand Techniques 32, 31 (2021).\n[56] Sun, Z. et al. Performance of the BL03U beamline at SSRF.\nJournal of Synchrotron Radiation 27, 1388–1394 (2020).\n[57] Blo¨chl, P. E. Projector augmented-wave method. Phys. Rev. B\n50, 17953–17979 (1994).\n[58] Kresse, G. & Furthmu¨ller, J. Efficient iterative schemes for\nab initio total-energy calculations using a plane-wave basis set.\nPhys. Rev. B 54, 11169–11186 (1996).\n[59] Perdew, J. P., Burke, K. & Ernzerhof, M. Generalized gradient\napproximation made simple. Phys. Rev. Lett. 77, 3865–3868\n(1996).\n[60] Marzari, N. & Vanderbilt, D. Maximally localized generalized\nwannier functions for composite energy bands. Phys. Rev. B 56,\n12847–12865 (1997).\n[61] Souza, I., Marzari, N. & Vanderbilt, D. Maximally localized\nwannier functions for entangled energy bands. Phys. Rev. B 65,\n035109 (2001).\n[62] Sancho, M. P. L., Sancho, J. M. L. & Rubio, J. Quick iterative\nscheme for the calculation of transfer matrices: application to\nmo (100). Journal of Physics F: Metal Physics 14, 1205 (1984).\n[63] Sancho, M. P. L., Sancho, J. M. L., Sancho, J. M. L. & Rubio,\nJ. Highly convergent schemes for the calculation of bulk and\nsurface Green functions. Journal of Physics F: Metal Physics\n15, 851 (1985).\n[64] Wu, Q., Zhang, S., Song, H., Troyer, M. & Soluyanov, A. A.\nWanniertools: An open-source software package for novel\ntopological materials. Comput. Phys. Commun. 224, 405–416\n(2017).\n[65] Gao, J., Wu, Q., Persson, C. & Wang, Z. Irvsp: To obtain irre-\nducible representations of electronic states in the VASP. Com-\nputer Physics Communications 261, 107760 (2021).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l1",
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10",
+                    "p6_l11",
+                    "p6_l12",
+                    "p6_l13",
+                    "p6_l14",
+                    "p6_l15",
+                    "p6_l16",
+                    "p6_l17",
+                    "p6_l18",
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24",
+                    "p6_l25",
+                    "p6_l26",
+                    "p6_l27",
+                    "p6_l28",
+                    "p6_l29",
+                    "p6_l30",
+                    "p6_l31",
+                    "p6_l32",
+                    "p6_l33",
+                    "p6_l34",
+                    "p6_l35",
+                    "p6_l36",
+                    "p6_l37",
+                    "p6_l38",
+                    "p6_l39",
+                    "p6_l40",
+                    "p6_l41",
+                    "p6_l42",
+                    "p6_l43",
+                    "p6_l44",
+                    "p6_l45",
+                    "p6_l46",
+                    "p6_l47",
+                    "p6_l48",
+                    "p6_l49",
+                    "p6_l50",
+                    "p6_l51",
+                    "p6_l52",
+                    "p6_l53",
+                    "p6_l54",
+                    "p6_l55",
+                    "p6_l56",
+                    "p6_l57",
+                    "p6_l58",
+                    "p6_l59",
+                    "p6_l60",
+                    "p6_l61",
+                    "p6_l62",
+                    "p6_l63",
+                    "p6_l64",
+                    "p6_l65",
+                    "p6_l66",
+                    "p6_l67",
+                    "p6_l68",
+                    "p6_l69",
+                    "p6_l70",
+                    "p6_l71",
+                    "p6_l72",
+                    "p6_l73",
+                    "p6_l74",
+                    "p6_l75",
+                    "p6_l76",
+                    "p6_l77",
+                    "p6_l78",
+                    "p6_l79",
+                    "p6_l80",
+                    "p6_l81",
+                    "p6_l82",
+                    "p6_l83",
+                    "p6_l84",
+                    "p6_l85",
+                    "p6_l86",
+                    "p6_l87",
+                    "p6_l88",
+                    "p6_l89",
+                    "p6_l90",
+                    "p6_l91",
+                    "p6_l92",
+                    "p6_l93",
+                    "p6_l94",
+                    "p6_l95",
+                    "p6_l96",
+                    "p6_l97",
+                    "p6_l98",
+                    "p6_l99",
+                    "p6_l100",
+                    "p6_l101",
+                    "p6_l102",
+                    "p6_l103"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_1",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "7\nFIG.1. Structuralandtransportpropertiesofthemulti-layertitanium-basedkagomecompounds. aCrystalstructurewithuintcellof\nEuTi3Bi4; b Three-dimensional Brillouin zone with its 2D projected Brillouin zone; c DFT calculated band structure along the Γ − A − Y − Γ\ndirection of EuTi3Bi4 with spin-orbital coupling; d The electronic resistivity of EuTi3Bi4, the inset zooms in around TN; e Zero-field-cooled\n(ZFC)andfield-cooled(FC)magneticsusceptibilityversustemperaturewithB=0.01T;fField-dependentmagnetizationcurvesforthetwo\ndirections,measuredat2K.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l1",
+                    "p7_l2",
+                    "p7_l3",
+                    "p7_l4",
+                    "p7_l5",
+                    "p7_l6"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p8_1",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "8\nFIG. 2. Anisotropic Van Hove Signatures (vHS) in EuTi3Bi4. a The stacking constant energy maps of EuTi3Bi4 from EF to EF - 0.3 eV;\nbARPESintensityplottakenalongK-M-Γdirection;cCalculatedbulkbandstructurealongthesamedirectioninb;dARPESintensityplot\ntakenalongK-M ′ -Γdirection;eCalculatedbulkbandstructurealongthesamedirectionind;f-gExperimentallyidentifiedVHsdispersions\nin EuTi3Bi4 by ARPES. The panels 1-5 in f (g) plot the ARPES spectra measured perpendicular to the K-M-Γ (K-M′-Γ) direction, with the cut\n′\n3 crossing the M (M ); h Schematic of the in-plane Brillouin zone of EuTi3Bi4 (red hexagonal frames). The non-equivalent high-symmetried\nmomentumonthecenterofBrillouinzoneedgesaremarkedwithMandM′.ThecutlinesaroundMandM′inf-garemarkedwith1-5.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l1",
+                    "p8_l2",
+                    "p8_l3",
+                    "p8_l4",
+                    "p8_l5",
+                    "p8_l6",
+                    "p8_l7",
+                    "p8_l8"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p9_1",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "9\nFIG. 3. Multiple surface states in EuTi3Bi4. a Momentum distribution curves (MDCs) around the Van Hove signatures along the K-M-Γ\ndirection, withthereddotsmarkthebulkbandsandthegreentrianglesmarkthesurfacestates(SS1andSS2); bSpectrumcalculationof\nthe bulk and surface state along the K-M-Γ direction; c Photon energy dependent measurements of the ARPES spectra at EF along K-M-Γ\ndirectioninarangeof45to80eV,withsurfacestateSS1andSS2markedbygreenarrows;dSidebysidecomparisonofthetemperature\nevolutionofARPESintensityplotsalongthe K-M-K direction(lefthalfpanels)andtheircorrespondingcurvaturederivativespectra(right\nhalfpanels). Thetemperaturesequenceissetto7K,9K,12K,25Kandreturnbackto7K;eSpectrumcalculationwiththesurfacestates.\nLefthalfpanelineisparamagnetic(PM)state,righthalfpanelineisantiferromagnetic(AFM)state.\nFIG. 4. Topological properties of EuTi3Bi4. a Bulk band calculation in paramagnetic state and different occupied band index are marked\nwith different colors; b Spectrum calculation in paramagnetic state, left panel is bulk projected calculation, right panel is surface states\ncalculation;cTopviewofthetranslationhalf-latticevectoroftheantiferromagneticstate;dfrontalviewoftranslatedhalf-latticevectorofthe\nantiferromagneticstate;eBulkbandcalculationinantiferromagneticstateanddifferentoccupiedbandindexaremarkedwithdifferentcolors;\nfSpectrumcalculationinantiferromagneticstate,leftpanelisbulkprojectedcalculation,rightpanelissurfacestatescalculation.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l1",
+                    "p9_l2",
+                    "p9_l3",
+                    "p9_l4",
+                    "p9_l5",
+                    "p9_l6",
+                    "p9_l7",
+                    "p9_l8",
+                    "p9_l9",
+                    "p9_l10",
+                    "p9_l11",
+                    "p9_l12",
+                    "p9_l13"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Competing interests",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 10.0,
+              "observation_ids": [
+                "p5_l77"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

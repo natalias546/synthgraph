@@ -1,0 +1,373 @@
+{
+  "body_size": 12.0,
+  "styles": [
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 16.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Evidence for Anion-Free-Electron Duality and Enhanced",
+        "Superconducting Role of Interstitial Anionic Electrons in",
+        "Electrides"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 28,
+      "long_prose_lines": 22,
+      "pages": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "examples": [
+        "Zhao Liu1, Xiang Wang1, Yin Yang1, Pengcheng Ma1, Zhijun Tu2,3, Xinyu Wang4, Donghan Jia4,",
+        "Wenju Zhou4, Huiyang Gou4, Hechang Lei2,3*, Qiang Xu5*, Zhonghao Liu1* and Tian Cui1,6*",
+        "Corresponding Authors"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 10.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Institute of High Pressure Physics, School of Physical Science and Technology, Ningbo University,",
+        "Ningbo, 315211, People’s Republic of China",
+        "2School of Physics and Beijing Key Laboratory of Opto-electronic Functional Materials & Micro-nano"
+      ]
+    },
+    {
+      "font": "Times,Bold",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        9,
+        11
+      ],
+      "examples": [
+        "ABSTRACT",
+        "Results",
+        "Phonon-mediated superconductivity"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 269,
+      "long_prose_lines": 237,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "examples": [
+        "The discovery of superconducting electrides, characterized by interstitial anionic",
+        "electrons (IAEs) residing in lattice cavities, has established a distinctive platform for",
+        "investigating superconductors. Yet the superconducting origin and the fundamental"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        10
+      ],
+      "examples": [
+        "Introduction",
+        "Single-crystal synthesis, characterizations, ARPES measurements and",
+        "calculation methods"
+      ]
+    },
+    {
+      "font": "Times",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 120,
+      "long_prose_lines": 69,
+      "pages": [
+        2,
+        3,
+        4,
+        7,
+        10,
+        11,
+        12,
+        13
+      ],
+      "examples": [
+        "with 108.2 K at 300 GPa 10. However, the fundamental role of IAEs in facilitating or",
+        "enhancing superconductivity remains deeply controversial and constitutes a",
+        "consistency between theoretical insights and experimental observations in revealing"
+      ]
+    },
+    {
+      "font": "Times,Bold",
+      "size": 14.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        9,
+        10
+      ],
+      "examples": [
+        "Conflicts of interest",
+        "Author Information",
+        "Acknowledgments"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 9.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "T c"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 12,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "1",
+        ".2",
+        "g e x p"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 7.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "ω l o"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 12.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "μ",
+        "=",
+        "[[["
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 9.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "∗ +"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "1 𝛾",
+        "𝛼2𝐹(𝜔) = ∑ 𝒒𝑣 𝛿(𝜔−𝜔 )",
+        "2𝜋𝑁(𝐸𝑓) 𝜔𝒒𝑣 𝒒,𝑣"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "𝑞𝑣",
+        "𝑚𝑛 𝒌"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "λ 2 d",
+        "2 F ( ) α ω"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 12.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "ω",
+        "ω"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 15.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "= ∫"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 7.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "; lo g"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 12.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "2",
+        "λ",
+        "d"
+      ]
+    },
+    {
+      "font": "SymbolMT",
+      "size": 12.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "ω",
+        "ω α ω ω",
+        "ω"
+      ]
+    },
+    {
+      "font": "Times,Italic",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        12
+      ],
+      "examples": [
+        "16 Dong, X. & Oganov, A. R. in Correlations in Condensed Matter under"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

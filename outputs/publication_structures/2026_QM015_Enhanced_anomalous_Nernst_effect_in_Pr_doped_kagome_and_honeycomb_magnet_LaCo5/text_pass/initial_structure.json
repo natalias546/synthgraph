@@ -1,0 +1,2140 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2026_QM015_Enhanced_anomalous_Nernst_effect_in_Pr_doped_kagome_and_honeycomb_magnet_LaCo5.pdf",
+    "pages": 6,
+    "sha256": "10c2de9f93f91e0aad144580963c1e8651c89df58e604f6cef2cfba804201714",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 10.0,
+    "body_font_family": "LMRoman10-Regular"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 6,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 6,
+        "children": [
+          {
+            "id": "heading_p1_l1",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 4,
+            "children": [
+              {
+                "id": "heading_p1_l2",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_1",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "Ma,1 Qian Tao,1 Xiaofeng Xu,2 Sheng Xu,1,2,∗ and Zhu-An Xu1,3,4,5,†\n1School of Physics, Zhejiang University, Hangzhou 310058, China\n2Key Laboratory of Quantum Precision Measurement of Zhejiang Province,\nSchool of Physics and Optical Engineering, Zhejiang University of Technology,Hangzhou, China\n3State Key Laboratory of Silicon and Advanced Semiconductor Materials, Zhejiang University, Hangzhou, 310058, China\n4Hefei National Laboratory, Hefei 230088, China\n5Wuhan National High Magnetic Field Center, Huazhong University of Science & Technology, Wuhan, 430074, China\n(Dated: September 14, 2026)",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l3",
+                        "p1_l4",
+                        "p1_l5",
+                        "p1_l6",
+                        "p1_l7",
+                        "p1_l8",
+                        "p1_l9",
+                        "p1_l10"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "heading_p1_l11",
+                    "type": "subsubsection",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [
+                      {
+                        "id": "unidentified_p1_2",
+                        "type": "custom",
+                        "page_start": 1,
+                        "page_end": 1,
+                        "children": [],
+                        "text": "tals. Magnetic field-dependent magnetization measurements reveal that Pr substitution induces\nnegligible changes in the magnetic properties of LaCo5, with the ferromagnetic ordering predomi-\nnantlygovernedbytheCosublattices. Remarkably,thedopedsystemsexhibitsignificantenhance-\nments in the anomalous Nernst effect. At 300 K, the anomalous Nernst thermopower SyAx reaches\n6.5 µV/K in La0.55Pr0.45Co5, corresponding to a ∼ 40 % enhancement compared to the parent com-\npound. This significant improvement can be predominantly attributed to Pr-doping-induced Fermi\nlevel modification, which directly leads to a redistribution of Berry curvature across the Fermi sur-\nface. This work highlights the effectiveness of Pr doping in boosting the anomalous Nernst effect\nof La1−xPrxCo5, offering a practical strategy to design advanced materials for room-temperature\nenergy-harvesting technologies and high-efficiency thermal sensing devices.\nThe Nernst effect, a thermoelectric conversion mech-\nanism that transforms thermal gradients into transverse\nelectrical signals, holds significant promise for applica-\ntions in waste heat recovery and highly sensitive thermal\nsensors [1–6]. In conventional ferromagnetic systems, the\nanomalous Nernst thermopower (SxAy) empirically scales\nwith the magnetization SxAy = QSµ0M, in which QS is\nanomalous Nernst coefficient and ranges from 0.05 to\n1 µVK−1T−1 for trivial ferromagnets. Recent explo-\nrations of magnetic topological quantum materials have\nrevealed that their non-zero Berry curvature can generate\na giant anomalous Nernst effect (ANE) [7–14].\nThe Nernst thermopower is expressed as [15],",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p1_l12",
+                            "p1_l13",
+                            "p1_l14",
+                            "p1_l15",
+                            "p1_l16",
+                            "p1_l17",
+                            "p1_l18",
+                            "p1_l19",
+                            "p1_l20",
+                            "p1_l21",
+                            "p1_l22",
+                            "p1_l23",
+                            "p1_l24",
+                            "p1_l25",
+                            "p1_l26",
+                            "p1_l27",
+                            "p1_l28",
+                            "p1_l29",
+                            "p1_l30",
+                            "p1_l31",
+                            "p1_l32",
+                            "p1_l33",
+                            "p1_l34"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": false
+                        }
+                      }
+                    ],
+                    "title": "In this work, we report the successful synthesis of La1−xPrxCo5 (x = 0.09, 0.21, 0.45) single crys-",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.0,
+                      "observation_ids": [
+                        "p1_l11"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "Zheng Li,1 Yueyang Wu,1 Tianhao Li,1 Jun-jian Mi,1 Shu-Xiang Li,1 Jiang",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p1_l2"
+                  ],
+                  "layout_review_required": true
+                }
+              },
+              {
+                "id": "heading_p1_l35",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 4,
+                "children": [
+                  {
+                    "id": "unidentified_p1_3",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "S = − y = xx xy xy xx (1)\nxy ∇xT σx2x + σx2y\ne2 Z d3k\nσ = − f(k)Ω (k) (2)\nxy ℏ BZ (2π)3 B\nek Z d3k\nα = B s(k)Ω (k) (3)\nxy ℏ BZ (2π)3 B\nwhere σxy and αxy are the Hall conductivity and Nernst\nconductivity, respectively, e is the charge of an elec-\ntron, ℏ is the Planck’s constant h divided by 2π, kB\nis the Boltzmann’s constant, ΩB(k) is the Berry curva-\nture, f(k) is the Fermi-Dirac distribution function and\ns(k) = −f(k)ln(f(k)) − (1 − f(k))ln(1 − f(k)). In\n∗ shengxu@zjut.edu.cn\n† zhuan@zju.edu.cn\n6202\npeS\n11\n]ics-lrtm.tam-dnoc[\n1v25421.9062:viXra\nmagnetic topological materials, the SxAy predominantly\nstems from the Berry curvature—an intrinsic property\nof the electronic band structure dictated by magnetic-\nordering-induced time-reversal symmetry breaking and\nspin-orbit coupling—which demonstrates significant tem-\nperature dependence.[15–17]. The SxAy of Co3Sn2S2\npeaks at ∼2.9 µV/K at 80 K but diminishes sharply to\n∼0.13 µV/K at 300 K [9]. Similarly, Mn3Sn exhibits a\nmaximum SxAy of ∼0.6 µV/K at 160 K, which declines\nto ∼0.37 µV/K at 300 K [10]. In contrast, TbMn6Sn6\ndemonstrates enhanced performance at elevated temper-\natures, achieving SxAy∼ 2.15 µV/K at 300 K and fur-\nther increasing to ∼2.4 µV/K at 320 K [18]. Partic-\nularly noteworthy are Heusler alloys such as Co2MnGa,\nwhich have emerged as leading candidates for large room-\ntemperature ANE [19–22]. Xu et al. reported a giant\nANE thermopower of approximately 8 µV/K at 300 K in\nCo2MnGa single crystals [19]. Within the family of RCo5\n(R\n= Lanthanum rare earth ) compounds, which posses\ns\na crystal structure analogous to LaCo5, an ANE ther-\nmopower of 3.1 µV/K at 300 K was reported in SmCo5\n[23]. These examples highlight the ongoing efforts and\ndiverse material platforms being explored for enhancing\nANE, especially at room temperatures.\nIn our prior work, we observed a large Berry\ncurvature-driven room-temperature anomalous Nernst\nthermopower (4.6 µV/K at 300 K) in LaCo5 single\ncrystals—a kagome and honeycomb magnet with a high\nCurie temperature (TC = 840 K) [26, 27]. First-principles\ncalculations revealed a dense distribution of Weyl points\nnear the Fermi level, suggesting a strong Berry curva-\nture contribution [26]. To further optimize the ANE, in\nthis work, we engineered Pr-doped LaCo5 (La1−xPrxCo5,\nx = 0.09, 0.21, 0.45) by introducing chemical pressure via\npartial Pr-for-La substitution. Crucially, this strategy",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l36",
+                        "p1_l37",
+                        "p1_l38",
+                        "p1_l39",
+                        "p1_l40",
+                        "p1_l41",
+                        "p1_l42",
+                        "p1_l43",
+                        "p1_l44",
+                        "p1_l45",
+                        "p1_l46",
+                        "p1_l47",
+                        "p1_l48",
+                        "p1_l49",
+                        "p1_l50",
+                        "p1_l51",
+                        "p1_l52",
+                        "p1_l53",
+                        "p1_l54",
+                        "p1_l55",
+                        "p1_l56",
+                        "p1_l57",
+                        "p1_l58",
+                        "p1_l59",
+                        "p1_l60",
+                        "p1_l61",
+                        "p1_l62",
+                        "p1_l63",
+                        "p1_l64",
+                        "p1_l65",
+                        "p1_l66",
+                        "p1_l67",
+                        "p1_l68",
+                        "p1_l69",
+                        "p1_l70",
+                        "p1_l71",
+                        "p1_l72",
+                        "p1_l73",
+                        "p1_l74",
+                        "p1_l75",
+                        "p1_l76",
+                        "p1_l77",
+                        "p1_l78",
+                        "p1_l79",
+                        "p1_l80",
+                        "p1_l81",
+                        "p1_l82",
+                        "p1_l83",
+                        "p1_l84",
+                        "p1_l85",
+                        "p1_l86",
+                        "p1_l87",
+                        "p1_l88",
+                        "p1_l89",
+                        "p1_l90",
+                        "p1_l91",
+                        "p1_l92",
+                        "p1_l93"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  },
+                  {
+                    "id": "unidentified_p2_1",
+                    "type": "custom",
+                    "page_start": 2,
+                    "page_end": 2,
+                    "children": [],
+                    "text": "2\nFIG. 1. (a-d) SEM images with EDS elemental maps of La0.91Pr0.09Co5, showing the spatial distributions of La, Pr, and\nCo. (e–h) SEM images with EDS elemental maps of La0.79Pr0.21Co5, showing the spatial distributions of La, Pr, and Co.\n(i-l) SEM images with EDS elemental maps of La0.55Pr0.45Co5, showing the spatial distributions of La, Pr, and Co. (m)\nPowder XRD patterns of the samples as-grown indexed to the P6/mmm space group. (n) Temperature-dependent resistivity\nfor La1−xPrxCo5.\npreserved the ferromagnetic order, while manipulating\nthe Fermi level to enhance Berry curvature effects. The\noptimized composition La0.55Pr0.45Co5 achieved SyAx ≈\n6.5 µV/K at 300 K, representing a ∼40 % enhancement\nover the parent compound.\nSingle crystals of La1−xPrxCo5 were synthesized via\nthe self-flux method. Stoichiometric mixtures of La/Pr\ningots and Co powder with nominal ratios La : Pr : Co\n= 38 : 1.5 : 62 (x = 0.09), 38 : 4 : 62 (x = 0.21)\nand 38 : 10 : 62 (x = 0.45) were sealed in alumina\ncruciblesundervacuumwithinquartztubes. Theassem-\nblies were heated to 1180 ◦C followed by slow cooling\nto 920 ◦C at 2 ◦C/h, with subsequent flux removal via\ncentrifugation. The chemical homogeneity was verified\nthrough energy-dispersive spectroscopy (EDS) mapping,\nas shown in Figs. 1(a-l). The phase purity was con-\nfirmed by the powder X-ray Diffraction (XRD) patterns,\nasshowninFig. 1(m). Therefinedlatticeparametersare\nlisted in Table I. The hexagonal lattice contracts along\nthea-axiswhileitexpandsalongthec-axiswithincreas-\ning Pr content. Metallic behavior persists across both\ncompositions, as displayed in Fig. 1(n), evidenced by\nmonotonically decreasing ρxx(T) from 300 K to 2.5 K.\nFurthermore, the temperature-dependent magnetization\nwith the magnetic field applied along the c-axis indicate\nthatallthreecompoundsremainferromagneticbelow300\nK, as shown in Figs. 2(a-c). The isothermal magnetiza-\nFIG. 2. (a-c) Temperature-dependent magnetization for tioncurvesmeasuredbetween300Kand10K(Figs. 2(d-\nLa 1−x Pr x Co 5 with B=1 T applied along c-axis. (d-f) Field- f)) demonstrate rapid saturation behavior, aligning with\ndependent magnetization isotherms for La Pr Co .\n1−x x 5 both the magnetic characteristics and saturation mag-\nnetization values of LaCo5. This observation strongly",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p2_l1",
+                        "p2_l2",
+                        "p2_l3",
+                        "p2_l4",
+                        "p2_l5",
+                        "p2_l6",
+                        "p2_l7",
+                        "p2_l8",
+                        "p2_l9",
+                        "p2_l10",
+                        "p2_l11",
+                        "p2_l12",
+                        "p2_l13",
+                        "p2_l14",
+                        "p2_l15",
+                        "p2_l16",
+                        "p2_l17",
+                        "p2_l18",
+                        "p2_l19",
+                        "p2_l20",
+                        "p2_l21",
+                        "p2_l22",
+                        "p2_l23",
+                        "p2_l24",
+                        "p2_l25",
+                        "p2_l26",
+                        "p2_l27",
+                        "p2_l28",
+                        "p2_l29",
+                        "p2_l30",
+                        "p2_l31",
+                        "p2_l32",
+                        "p2_l33",
+                        "p2_l34",
+                        "p2_l35",
+                        "p2_l36",
+                        "p2_l37",
+                        "p2_l38"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "unidentified_p3_1",
+                    "type": "custom",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "text": "3\nFIG. 3. (a,b) Schematic illustrations for AHE and ANE measurements. (c,d) Field-dependent ρyx for La1−xPrxCo5 with B\napplied along c-axis at 10 K and 300 K, respectively. (e,f) Field-dependent σxy for La1−xPrxCo5 at 10 K and 300 K, respectively.\nTABLE I. The refined lattice parameters.\na (Å) b (Å) c (Å)",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p3_l1",
+                        "p3_l2",
+                        "p3_l3",
+                        "p3_l4",
+                        "p3_l5"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "mixed",
+                      "layout_review_required": true,
+                      "possible_graphical_content": true
+                    }
+                  },
+                  {
+                    "id": "heading_p3_l6",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "title": "LaCo5 5.105 5.105 3.965",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.0,
+                      "observation_ids": [
+                        "p3_l6"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p3_l7",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "title": "La0.91Pr0.09Co5 5.103 5.103 3.978",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.0,
+                      "observation_ids": [
+                        "p3_l7"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p3_l8",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 3,
+                    "children": [],
+                    "title": "La0.79Pr0.21Co5 5.098 5.098 3.983",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.0,
+                      "observation_ids": [
+                        "p3_l8"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p3_l9",
+                    "type": "subsubsection",
+                    "page_start": 3,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p3_2",
+                        "type": "custom",
+                        "page_start": 3,
+                        "page_end": 3,
+                        "children": [],
+                        "text": "suggests the persistence of robust ferromagnetic ordering\nat temperatures exceeding room temperature. The nar-\nrow hysteresis loops indicate weak soft ferromagnetism\ndominated by domain dynamics [28].\nFigures 3(a, b) show schematic illustrations of the mea-\nsurement configurations for the AHE and the ANE, re-\nspectively. The test samples were cut into a long strip\nshape with a thickness of approximately 0.1 mm. To\nestablish a thermal gradient for the thermoelectric mea-\nsurements, one end of the sample was attached to a 1 kΩ\nchip resistor (heater) and the other end to a heat sink.\nThis setup created a longitudinal temperature gradient\n(−∇T ∼ 0.4 - 1.0 K/mm) along the x-direction of the\nsample as shown in Fig. 3(b). Temperatures at two points\nalong the sample length were monitored using thermo-\ncouples to determine the temperature gradient. The two\njunctions of this thermocouple were carefully placed in\ngood thermal contact (via thermal grease, ensuring elec-\ntrical insulation) with the side of the sample, aligned\nalong its length and separated by a precisely measured\ndistance. High-precision Keithley 2182A Nanovoltmeter\nwas used to collect the voltage difference. The Nernst\nand Hall signals were measured at both positive and neg-\native magnetic field polarities, and the difference of the\ntwo polarities was deduced to remove the longitudinal\ncontribution from the voltage probe misalignment.\nThe Pr-doped systems exhibit giant AHE character-\nistics, as shown in Figs. 3 (c,d). By linearly extrap-\nolating the field-dependent ρyx(B) data from the satu-\nration regime to zero field, the ρAyx was obtained. For\nLa0.91Pr0.09Co5, the anomalous Hall resistivity (ρAyx)\nreaches ∼1.15 µΩ · cm at 10 K, decreasing to ∼0.95\nµΩ · cm at 300 K. In La0.79Pr0.21Co5, the anoma-\nlous Hall resistivity (ρAyx) reaches ∼1.00 µΩ · cm at 10\nK, decreasing to ∼0.78 µΩ · cm at 300 K. Similarly,\nthe ρAyx in La0.55Pr0.45Co5 slightly decreases from ρAyx\n∼1.51 µΩ · cm at 10 K to ∼1.32 µΩ · cm at 300 K.\nThe anomalous Hall conductivity (AHC), calculated via\nσxAy ≈ ρAyx/ρ2xx, reveals critical doping effects: at 10\nK, La0.91Pr0.09Co5 achieves σxAy ≈ 635 Ω−1cm−1, ex-\nceeding both the La0.55Pr0.45Co5 (∼375 Ω−1cm−1) and\nLa0.79Pr0.21Co5 (∼535 Ω−1cm−1). Room-temperature\nσxAy values converge to ∼145 Ω−1cm−1 for both x =\n0.21 and 0.45 systems—a 3 times enhancement over\nLaCo5 (∼50 Ω−1cm−1). In La0.91Pr0.09Co5, the room-\ntemperature AHC is about 110 Ω−1cm−1. Given the\nlarge number of Weyl points near the Fermi energy in\nthe parent material LaCo5, the variation in AHC could\nbe attributed to the shift in the Fermi energy induced by\nPr doping, which alters the Berry curvature integral over\nthe entire Brillouin zone [26].\nTo further investigate the effect of Fermi level modifi-\ncation suggested by the AHC evolution under Pr doping,\nwe conducted systematic ANE measurements—a critical\nprobe of Berry curvature distribution near the Fermi sur-\nface [15, 25], as the intrinsic ANE primarily originates",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p3_l10",
+                            "p3_l11",
+                            "p3_l12",
+                            "p3_l13",
+                            "p3_l14",
+                            "p3_l15",
+                            "p3_l16",
+                            "p3_l17",
+                            "p3_l18",
+                            "p3_l19",
+                            "p3_l20",
+                            "p3_l21",
+                            "p3_l22",
+                            "p3_l23",
+                            "p3_l24",
+                            "p3_l25",
+                            "p3_l26",
+                            "p3_l27",
+                            "p3_l28",
+                            "p3_l29",
+                            "p3_l30",
+                            "p3_l31",
+                            "p3_l32",
+                            "p3_l33",
+                            "p3_l34",
+                            "p3_l35",
+                            "p3_l36",
+                            "p3_l37",
+                            "p3_l38",
+                            "p3_l39",
+                            "p3_l40",
+                            "p3_l41",
+                            "p3_l42",
+                            "p3_l43",
+                            "p3_l44",
+                            "p3_l45",
+                            "p3_l46",
+                            "p3_l47",
+                            "p3_l48",
+                            "p3_l49",
+                            "p3_l50",
+                            "p3_l51",
+                            "p3_l52",
+                            "p3_l53",
+                            "p3_l54",
+                            "p3_l55",
+                            "p3_l56",
+                            "p3_l57",
+                            "p3_l58",
+                            "p3_l59",
+                            "p3_l60",
+                            "p3_l61",
+                            "p3_l62",
+                            "p3_l63",
+                            "p3_l64",
+                            "p3_l65"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      },
+                      {
+                        "id": "unidentified_p4_1",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "4\n2\n0\n- 2\n- 4\n- 2 - 1 0 1 2\n) 1-",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l1",
+                            "p4_l2",
+                            "p4_l3",
+                            "p4_l4",
+                            "p4_l5",
+                            "p4_l6",
+                            "p4_l7"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "La0.55Pr0.45Co5 5.090 5.090 3.990",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 9.0,
+                      "observation_ids": [
+                        "p3_l9"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l8",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_2",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "m\nA(\n�\nxy\nL a 0 . 9 1 P r 0 . 0 9 C o 5\n0\n- 5\n- 1 0\n- 1 5\n0 1 0 0 2 0 0 3 0 0",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l9",
+                            "p4_l10",
+                            "p4_l11",
+                            "p4_l12",
+                            "p4_l13",
+                            "p4_l14",
+                            "p4_l15",
+                            "p4_l16",
+                            "p4_l17",
+                            "p4_l18"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "K 1-",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 0.0,
+                      "observation_ids": [
+                        "p4_l8"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l19",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_3",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": ")\nK/",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l20",
+                            "p4_l21"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "B ( T )",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 7.9,
+                      "observation_ids": [
+                        "p4_l19"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l22",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_4",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "S",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l23"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "V μ ( xx",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 0.0,
+                      "observation_ids": [
+                        "p4_l22"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l24",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_5",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "6\n4\n4 0 - 1 6 0 K\n2 0 0 - 3 0 0 K\n2\nF i t t i n g\n0 1 0 0 2 0 0 3 0 0\nT ( K )\n) 1-",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l25",
+                            "p4_l26",
+                            "p4_l27",
+                            "p4_l28",
+                            "p4_l29",
+                            "p4_l30",
+                            "p4_l31",
+                            "p4_l32",
+                            "p4_l33"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T ( K )",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 4.8,
+                      "observation_ids": [
+                        "p4_l24"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l34",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_6",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "m\nA(",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l35",
+                            "p4_l36"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "K 1-",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 0.0,
+                      "observation_ids": [
+                        "p4_l34"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l37",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_7",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "xy\n4\n2\n0 L a 0 . 9 1 P r 0 . 0 9 C o 5 5\n4\n- 2 3\n2\n- 4 1 1 0 0 2 0 0 3 0 0\n- 2 - 1 0 1 2",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l38",
+                            "p4_l39",
+                            "p4_l40",
+                            "p4_l41",
+                            "p4_l42",
+                            "p4_l43",
+                            "p4_l44",
+                            "p4_l45",
+                            "p4_l46"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "A �",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 2.4,
+                      "observation_ids": [
+                        "p4_l37"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l47",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_8",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "μ\n)\nK/\nV\n(\nS\nxy\n2 5 0 1 2 0\n2 0 0 8 0\n1 6 0 4 0",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l48",
+                            "p4_l49",
+                            "p4_l50",
+                            "p4_l51",
+                            "p4_l52",
+                            "p4_l53",
+                            "p4_l54",
+                            "p4_l55",
+                            "p4_l56",
+                            "p4_l57"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "L a 0 . 9 1 P r 0 . 0 9 C o 5",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 4.5,
+                      "observation_ids": [
+                        "p4_l47"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l58",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_9",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": ")\nK/\nV\nμ (\nxy",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l59",
+                            "p4_l60",
+                            "p4_l61",
+                            "p4_l62",
+                            "p4_l63"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "B ( T )",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 8.0,
+                      "observation_ids": [
+                        "p4_l58"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l64",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [],
+                    "title": "A S",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 0.0,
+                      "observation_ids": [
+                        "p4_l64"
+                      ],
+                      "layout_review_required": true
+                    }
+                  },
+                  {
+                    "id": "heading_p4_l65",
+                    "type": "subsubsection",
+                    "page_start": 4,
+                    "page_end": 4,
+                    "children": [
+                      {
+                        "id": "unidentified_p4_10",
+                        "type": "custom",
+                        "page_start": 4,
+                        "page_end": 4,
+                        "children": [],
+                        "text": "6\n4",
+                        "label": "Unidentified content",
+                        "review_required": true,
+                        "attributes": {
+                          "custom_type": "unidentified",
+                          "method": "unclassified first pass",
+                          "observation_ids": [
+                            "p4_l66",
+                            "p4_l67"
+                          ],
+                          "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                          "reading_order_method": "local_geometry_fallback",
+                          "page_layout": "mixed",
+                          "layout_review_required": true,
+                          "possible_graphical_content": true
+                        }
+                      }
+                    ],
+                    "title": "T ( K )",
+                    "review_required": true,
+                    "attributes": {
+                      "method": "generic heading typography and spacing",
+                      "font_size": 5.6,
+                      "observation_ids": [
+                        "p4_l65"
+                      ],
+                      "layout_review_required": true
+                    }
+                  }
+                ],
+                "title": "E σ α − σ α",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 10.0,
+                  "observation_ids": [
+                    "p1_l35"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Enhanced anomalous Nernst effect in Pr-doped kagome and honeycomb magnet LaCo5",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p1_l1"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p4_l68",
+            "type": "section",
+            "page_start": 4,
+            "page_end": 4,
+            "children": [
+              {
+                "id": "unidentified_p4_11",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "0\n- 2\n- 4\n- 6\n- 2 - 1\n) 1-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l69",
+                    "p4_l70",
+                    "p4_l71",
+                    "p4_l72",
+                    "p4_l73",
+                    "p4_l74"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_12",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "K 1-\nm\nA(\n�\nxy\n4\n2\n0\n- 2\n- 4\n- 2 - 1\n4\n0 1 2\n5\n4\n3\n2\n1\n1 0 0 2 0 0 3 0 0\n0 1 2\nB (T )\nμ\n)\nK/\nV\n(\nS\nxy\n3 0 0 K B // c\n2 5 0 1 2 0\n2 0 0 8 0\n1 6 0 4 0",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l75",
+                    "p4_l76",
+                    "p4_l77",
+                    "p4_l78",
+                    "p4_l79",
+                    "p4_l80",
+                    "p4_l81",
+                    "p4_l82",
+                    "p4_l83",
+                    "p4_l84",
+                    "p4_l85",
+                    "p4_l86",
+                    "p4_l87",
+                    "p4_l88",
+                    "p4_l89",
+                    "p4_l90",
+                    "p4_l91",
+                    "p4_l92",
+                    "p4_l93",
+                    "p4_l94",
+                    "p4_l95",
+                    "p4_l96",
+                    "p4_l97",
+                    "p4_l98",
+                    "p4_l99",
+                    "p4_l100",
+                    "p4_l101",
+                    "p4_l102",
+                    "p4_l103",
+                    "p4_l104",
+                    "p4_l105",
+                    "p4_l106"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_13",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "L a 0 . 7 9 P r 0 . 2 1 C o 5\nB (T )\n8",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l107",
+                    "p4_l108",
+                    "p4_l109"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "2 L a 0 . 7 9 P r 0 . 2 1 C o 5",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 4.5,
+              "observation_ids": [
+                "p4_l68"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p4_l110",
+            "type": "section",
+            "page_start": 4,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p4_14",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "4\n2\n0 1 0 0\n) 1-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l111",
+                    "p4_l112",
+                    "p4_l113",
+                    "p4_l114"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_15",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "K 1-\nm\nA(",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l115",
+                    "p4_l116",
+                    "p4_l117"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_16",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "A �\nxy\n)\nK/\nV\nμ (\nxy",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l118",
+                    "p4_l119",
+                    "p4_l120",
+                    "p4_l121",
+                    "p4_l122",
+                    "p4_l123",
+                    "p4_l124"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_17",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "A S",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l125"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_18",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "T ( K )\n6\n4\n2\n0\n- 2\n- 4\n- 6\n- 2 - 1 0 1 2\n) 1-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l126",
+                    "p4_l127",
+                    "p4_l128",
+                    "p4_l129",
+                    "p4_l130",
+                    "p4_l131",
+                    "p4_l132",
+                    "p4_l133",
+                    "p4_l134",
+                    "p4_l135"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_19",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "K 1-\nm",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l136",
+                    "p4_l137"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_20",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "A (\n�\nxy\nL a 0 . 5 5 P r 0 . 4 5 C o 5\n0\n- 1 0\n- 2 0\n0 1 0 0 2 0 0 3 0 0",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l138",
+                    "p4_l139",
+                    "p4_l140",
+                    "p4_l141",
+                    "p4_l142",
+                    "p4_l143",
+                    "p4_l144",
+                    "p4_l145"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_21",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "B ( T )\n) K/",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l146",
+                    "p4_l147"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_22",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "V μ ( xx S\n0\n- 5\n- 1 0 - 1 5\n0 1 0 0 2 0 0 3 0 0\nT ( K )\n) K/",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l148",
+                    "p4_l149",
+                    "p4_l150",
+                    "p4_l151",
+                    "p4_l152",
+                    "p4_l153",
+                    "p4_l154"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_23",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "V μ ( xx S",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l155"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_24",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "T ( K )\n4 0 - 1 6 0 K\n2 0 0 - 3 0 0 K\nF i t t i n g\n2 0 0 3 0 0\n8\n6\n4\n2\n0 1 0 0 2 0 0 3 0 0",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l156",
+                    "p4_l157",
+                    "p4_l158",
+                    "p4_l159",
+                    "p4_l160",
+                    "p4_l161",
+                    "p4_l162",
+                    "p4_l163",
+                    "p4_l164",
+                    "p4_l165"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_25",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "T (K )\n( a ) 3 0 0 K B // c ( b )\n( d ) ( e )\n( h )\n( g )\n) 1-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l166",
+                    "p4_l167",
+                    "p4_l168",
+                    "p4_l169",
+                    "p4_l170",
+                    "p4_l171"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_26",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "K 1-\nm",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l172",
+                    "p4_l173"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_27",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "A (",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l174"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_28",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "A �\nxy\n8\n4\n0\n6\n- 4 4\n2\n1 0 0 2 0 0 3 0 0\n- 8\n- 2 - 1 0 1 2",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l175",
+                    "p4_l176",
+                    "p4_l177",
+                    "p4_l178",
+                    "p4_l179",
+                    "p4_l180",
+                    "p4_l181",
+                    "p4_l182",
+                    "p4_l183",
+                    "p4_l184",
+                    "p4_l185"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_29",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "L a 0 . 5 5 P r 0 . 4 5 C o 5\n4 0 - 1 6 0 K\n2 0 0 - 3 0 0 K\nF i t t i n g",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l186",
+                    "p4_l187",
+                    "p4_l188",
+                    "p4_l189"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_30",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "T ( K )\nμ\n)\nK/\nV\n(\nS\nxy\n3 0 0 K B // c\n2 5 0 1 2 0\n2 0 0 8 0\n1 6 0 4 0",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l190",
+                    "p4_l191",
+                    "p4_l192",
+                    "p4_l193",
+                    "p4_l194",
+                    "p4_l195",
+                    "p4_l196",
+                    "p4_l197",
+                    "p4_l198",
+                    "p4_l199",
+                    "p4_l200",
+                    "p4_l201"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_31",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "L a 0 . 5 5 P r 0 . 4 5 C o 5",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l202"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_32",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "B ( T )\n)\nK/\nV\nμ (\nxy",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l203",
+                    "p4_l204",
+                    "p4_l205",
+                    "p4_l206",
+                    "p4_l207",
+                    "p4_l208"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_33",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "A S\n( c )",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l209",
+                    "p4_l210"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_34",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "T ( K )\n( f )\n( i )\nFIG. 4. (a-c) Field-dependent Syx for La1−xPrxCo5 at different temperatures. (d-f) Field-dependent αyx for La1−xPrxCo5.\nInsets: The corresponding temperature-dependent Sxx. (g-i) Temperature-dependent αyAx for La1−xPrxCo5.\nfrom Berry curvature hotspots within thermally acces-\nsible states. As shown in Figs. 4(a-c), the large ANE\nis observed in all of the three compounds, in which the\nSyAx increase with the increasing temperature and reach a\nmaximum of about 4.3 µV/K for x = 0.09, 4.1 µV/K for\nx = 0.29, and 6.5 µV/K for x = 0.45, respectively. The\nvalue of SyAx was determined by linearly extrapolating the\nfield-dependent Syx(B) data from the saturation regime\nto zero field. To further study the origin of the ANE, the\nanomalous Nernst conductivity (αyAx) is obtained by Eq.\n(1) and displayed in Figs. 4(d-f). At low temperature,\nthe αyAx induced by the Berry curvature exhibits a linear\nbehavior with temperature, α y A x = −π2 3 k |e B 2 | T (∂ ∂ σ E yx ) E=EF ,\nfollowing the Mott relation [15, 29]. As shown in Figs.\n4(g-i), the αyAx of these three compounds exhibit a lin-\near temperature dependence below 160 K, indicating the\nANE in these three compounds stem from the intrinsic\nBerry curvature mechanism [30]. Above 160 K, the αyAx\ndeviates from the linear relationship similar to the par-\nent compound LaCo5 [26]. While the lattice parameters\nin this system evolve monotonically with increasing Pr\ndoping concentration, the anomalous Nernst signal SyAx\nexhibits non-monotonic behavior. This discrepancy may\noriginate from the dense distribution of Weyl nodes near\nthe Fermi level [26], where even slight shifts in Fermi\nenergy can lead to a nonlinear response in the Berry cur-\nvature. Such behavior is commonly observed in doped\ntopological magnets, a representative example is found\nin In- and Ni-doped Co3Sn2S2 films [31].\nThe room-temperature ANE holds particular signif-\nicance for practical applications. Figure 5 compares\nthe SyAx of LaCo5-based materials with representa-\ntive magnetic topological counterparts at 300 K, along\nwith their respective peak-effect temperatures. Cur-\nrent benchmark kagome systems typically exhibit room-\ntemperature SyAx typically below 6 µV/K, whereas our\noptimized La0.55Pr0.45Co5 achieves 6.5 µV/K, which ex-\nhibits a ∼40 % enhancement compared with the parent\nmaterial LaCo5. In addition, given the ultrahigh Curie\ntemperature (TC = 840 K) of the parent LaCo5 and the\npositive temperature coefficient of SyAx in La1−xPrxCo5\n(x = 0.09, 0.21, 0.45), these systems exhibit promis-",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l211",
+                    "p4_l212",
+                    "p4_l213",
+                    "p4_l214",
+                    "p4_l215",
+                    "p4_l216",
+                    "p4_l217",
+                    "p4_l218",
+                    "p4_l219",
+                    "p4_l220",
+                    "p4_l221",
+                    "p4_l222",
+                    "p4_l223",
+                    "p4_l224",
+                    "p4_l225",
+                    "p4_l226",
+                    "p4_l227",
+                    "p4_l228",
+                    "p4_l229",
+                    "p4_l230",
+                    "p4_l231",
+                    "p4_l232",
+                    "p4_l233",
+                    "p4_l234",
+                    "p4_l235",
+                    "p4_l236",
+                    "p4_l237",
+                    "p4_l238",
+                    "p4_l239",
+                    "p4_l240",
+                    "p4_l241",
+                    "p4_l242",
+                    "p4_l243",
+                    "p4_l244",
+                    "p4_l245",
+                    "p4_l246",
+                    "p4_l247",
+                    "p4_l248",
+                    "p4_l249",
+                    "p4_l250",
+                    "p4_l251",
+                    "p4_l252",
+                    "p4_l253",
+                    "p4_l254",
+                    "p4_l255",
+                    "p4_l256",
+                    "p4_l257"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "mixed",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "1 0\nS m a x\nA N E\nS 3 0 0 K\nA N E\n8\n6\n4\n2\n0\nS a m p l e s\n)\nK/\nV\nμ\n(\nA\nS\nxy\nF M A F M\n)\nK\n0\n8(\nS\nn\nS\no\nC\n2\n2\n3\ni\nS\nn\nM\n)\nK\n2\n5(\ne\nGl\nA\nn\nM\n)\nK\n0\n2\n3(\nn\nS\nn\nM\nb\nT\n6\n6\na\nG\ne\nF\n3\ni\nS\nl\nA\nn\nM\no\nC\n73.0\n36.0\n2\na\nG\nn\nM\no\nC\n2\nn",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l1",
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12",
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16",
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22",
+                    "p5_l23",
+                    "p5_l24",
+                    "p5_l25",
+                    "p5_l26",
+                    "p5_l27",
+                    "p5_l28",
+                    "p5_l29",
+                    "p5_l30",
+                    "p5_l31",
+                    "p5_l32",
+                    "p5_l33",
+                    "p5_l34",
+                    "p5_l35",
+                    "p5_l36",
+                    "p5_l37",
+                    "p5_l38",
+                    "p5_l39",
+                    "p5_l40",
+                    "p5_l41",
+                    "p5_l42",
+                    "p5_l43",
+                    "p5_l44",
+                    "p5_l45",
+                    "p5_l46",
+                    "p5_l47",
+                    "p5_l48",
+                    "p5_l49",
+                    "p5_l50",
+                    "p5_l51",
+                    "p5_l52",
+                    "p5_l53",
+                    "p5_l54",
+                    "p5_l55",
+                    "p5_l56",
+                    "p5_l57",
+                    "p5_l58",
+                    "p5_l59",
+                    "p5_l60",
+                    "p5_l61",
+                    "p5_l62",
+                    "p5_l63",
+                    "p5_l64",
+                    "p5_l65",
+                    "p5_l66",
+                    "p5_l67",
+                    "p5_l68",
+                    "p5_l69",
+                    "p5_l70",
+                    "p5_l71",
+                    "p5_l72",
+                    "p5_l73",
+                    "p5_l74",
+                    "p5_l75",
+                    "p5_l76",
+                    "p5_l77",
+                    "p5_l78",
+                    "p5_l79",
+                    "p5_l80",
+                    "p5_l81",
+                    "p5_l82"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_2",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "S e F\n2\n3\no\nC\nm\nS\n5\no C a\nL\n5\no",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l83",
+                    "p5_l84",
+                    "p5_l85",
+                    "p5_l86",
+                    "p5_l87",
+                    "p5_l88",
+                    "p5_l89",
+                    "p5_l90",
+                    "p5_l91",
+                    "p5_l92",
+                    "p5_l93",
+                    "p5_l94"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p5_3",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "C r P\na\nL\n5\n90.0 19.0 o C r P\na\nL\n5\n12.0 97.0\no\nC\nr\nP\na\nL\n5\n54.0\n55.0\n)\nK\n0\n0\n2(\nn\nS\nn\nM\n3\n)\nK\n0\n0\n1(\ne\nG\nn\nM\n3\n)\nK\n0\n6\n1(\ni B n M b\nY\n2\n)\nK\n0\n0\n2( n S n\nM\nY\n6 6\nFIG. 5. Comparison of anomalous Nernst thermopower be-\ntween LaCo5 system materials in the present study and pre-\nviously reported ferromagnet, and antiferromagnet materials\n[9, 10, 18, 19, 23, 24, 26, 33–38].\ning potential for delivering enhanced SyAx at elevated\ntemperatures (400–600 K)—a critical regime for high-\ntemperature waste heat recovery.\nIn summary, we synthesized single-crystalline\nLa1−xPrxCo5 (x = 0.09, 0.21, 0.45) and demonstrated\nthat Pr doping significantly enhances the ANE while pre-\nserving the robust ferromagnetic order. Remarkably, the\noptimized La0.55Pr0.45Co5 achieves a room-temperature\nanomalus Nernst thermopower 6.5 µV/K, which is\n40 % improvement over LaCo5 and suggested to stem\n[1] X. Zhang and S.-C. Zhang, Proc. SPIE Int. Soc. Opt.\nEng. 8373, 837309 (2012).\n[2] K. Biswas, J. He, I. D. Blum, C.-I. Wu, T. P. Hogan, D.\nN. Seidman, V. P. Dravid, and M. G. Kanatzidis, Nature\n489, 414 (2012).\n[3] L.-D. Zhao, S.-H. Lo, Y. Zhang, H. Sun, G. Tan, C. Uher,\nC. Wolverton, V. P. Dravid, and M. G. Kanatzidis, Na-\nture 508, 373 (2014).\n[4] J. P. Heremans, R. J. Cava, and N. Samarth, Nat. Rev.\nMater. 2, 17049 (2017).\n[5] J. He and T. M. Tritt, Science 357, eaak9997 (2017).\n[6] J. Mao, H. Zhu, Z. Ding, Z. Liu, G. A. Gamage, G. Chen,\nand Z. Ren, Science 365, 495 (2019).\n[7] H. Zhang, C. Q. Xu, and X. Ke, Phys. Rev. B 103,\nL201101 (2021).\n[8] L. Ding, J. Koo, L. Xu, X. Li, X. Lu, L. Zhao, Q. Wang,\nQ. Yin, H. Lei, B. Yan, Z. Zhu, and K. Behnia, Phys.\nRev. X 9, 041061 (2019).\n[9] S. N. Guin, P. Vir, Y. Zhang, N. Kumar, S. J. Watzman,\nC. Fu, E. Liu, K. Manna, W. Schnelle, J. Gooth, C.\nShekhar, Y. Sun, and C. Felser, Adv. Mater. 31, 1806622\n5\nfrom the Fermi level modification and Berry curvature\nredistribution. Crucially, the material maintains a\nhigh Curie temperature and exhibits a positive SyAx-T\ncorrelation, suggesting further performance gains at\nelevated temperatures. This work establishes rare-earth\ndoping as a scalable strategy. The synergy of high TC,\ntemperature-resilient ANE, and tunable Berry curvature\nopens avenues for room-temperature energy-harvesting\ntechnologies and high-efficiency thermal sensing devices.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l95",
+                    "p5_l96",
+                    "p5_l97",
+                    "p5_l98",
+                    "p5_l99",
+                    "p5_l100",
+                    "p5_l101",
+                    "p5_l102",
+                    "p5_l103",
+                    "p5_l104",
+                    "p5_l105",
+                    "p5_l106",
+                    "p5_l107",
+                    "p5_l108",
+                    "p5_l109",
+                    "p5_l110",
+                    "p5_l111",
+                    "p5_l112",
+                    "p5_l113",
+                    "p5_l114",
+                    "p5_l115",
+                    "p5_l116",
+                    "p5_l117",
+                    "p5_l118",
+                    "p5_l119",
+                    "p5_l120",
+                    "p5_l121",
+                    "p5_l122",
+                    "p5_l123",
+                    "p5_l124",
+                    "p5_l125",
+                    "p5_l126",
+                    "p5_l127",
+                    "p5_l128",
+                    "p5_l129",
+                    "p5_l130",
+                    "p5_l131",
+                    "p5_l132",
+                    "p5_l133",
+                    "p5_l134",
+                    "p5_l135",
+                    "p5_l136",
+                    "p5_l137",
+                    "p5_l138",
+                    "p5_l139",
+                    "p5_l140",
+                    "p5_l141",
+                    "p5_l142",
+                    "p5_l143",
+                    "p5_l144",
+                    "p5_l145",
+                    "p5_l146",
+                    "p5_l147",
+                    "p5_l148",
+                    "p5_l149",
+                    "p5_l150",
+                    "p5_l151",
+                    "p5_l152",
+                    "p5_l153",
+                    "p5_l154",
+                    "p5_l155",
+                    "p5_l156",
+                    "p5_l157",
+                    "p5_l158",
+                    "p5_l159",
+                    "p5_l160",
+                    "p5_l161",
+                    "p5_l162",
+                    "p5_l163",
+                    "p5_l164",
+                    "p5_l165",
+                    "p5_l166",
+                    "p5_l167",
+                    "p5_l168",
+                    "p5_l169",
+                    "p5_l170",
+                    "p5_l171",
+                    "p5_l172",
+                    "p5_l173",
+                    "p5_l174",
+                    "p5_l175",
+                    "p5_l176",
+                    "p5_l177",
+                    "p5_l178",
+                    "p5_l179",
+                    "p5_l180",
+                    "p5_l181",
+                    "p5_l182",
+                    "p5_l183",
+                    "p5_l184",
+                    "p5_l185",
+                    "p5_l186",
+                    "p5_l187",
+                    "p5_l188",
+                    "p5_l189",
+                    "p5_l190",
+                    "p5_l191",
+                    "p5_l192",
+                    "p5_l193"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "6 L a 0 . 7 9 P r 0 . 2 1 C o 5",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 4.5,
+              "observation_ids": [
+                "p4_l110"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 5,
+        "page_end": 6,
+        "children": [
+          {
+            "id": "heading_p5_l194",
+            "type": "acknowledgements",
+            "page_start": 5,
+            "page_end": 5,
+            "children": [
+              {
+                "id": "unidentified_p5_4",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "This work was supported by the National Natural Sci-\nence Foundation of China (Grant No. 12574177;\n12204410), the National Key R&D Program of\nChina (Grant No.2019YFA0308602), the Innova-\ntion program for Quantum Science and Technology\n(Grant No. 2021ZD0302500), the Zhejiang Provin-\ncial Natural Science Foundation of China (Grant No.\nLMS25A040002), and the Interdisciplinary program of\nWuhan National High Magnetic Field Center (Grant\nNo. WHMFC2025015), Huazhong University of Science\nand Technology\nAUTHOR DECLARATIONS\nThe authors have no conflicts to disclose.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l195",
+                    "p5_l196",
+                    "p5_l197",
+                    "p5_l198",
+                    "p5_l199",
+                    "p5_l200",
+                    "p5_l201",
+                    "p5_l202",
+                    "p5_l203",
+                    "p5_l204",
+                    "p5_l205",
+                    "p5_l206",
+                    "p5_l207"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "ACKNOWLEDGMENTS",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 9.0,
+              "observation_ids": [
+                "p5_l194"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p5_l208",
+            "type": "data_availability",
+            "page_start": 5,
+            "page_end": 6,
+            "children": [
+              {
+                "id": "unidentified_p5_5",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "The data that support the findings of this study are\navailable from the corresponding authors upon reason-\nable request.\n(2019).\n[10] M. Ikhlas, T. Tomita, T. Koretsune, M.- T. Suzuki, D.\nNishio-Hamane, R. Arita, Y. Otani, and S. Nakatsuji,\nNat. Phys. 13, 1085 (2017).\n[11] H. Zhang, J. Koo, C. Xu, M. Sretenovic, B. Yan, and X.\nKe, Nat. Commun. 13, 1091 (2022).\n[12] S. Roychowdhury, A. M. Ochs, S. N. Guin, K. Samanta,\nJ. Noky, C. Shekhar, M. G. Vergniory, J. E. Goldberger\nand C. Felser, Adv. Mater. 34, 2201350 (2022).\n[13] C. Wuttke, F. Caglieris, S. Sykora, F. Scaravaggi, A. B.\nWolter, K. Manna, V. Suss, C. Shekhar, C. Felser, B.\nBuchner and C. Hess, Phys. Rev. B 100, 085111 (2019).\n[14] A. Sakai, S. Minami, T. Koretsune, T. Chen, T. Higo,\nY. Wang, T. Nomoto, M. Hirayama, S. Miwa, D. Nishio-\nHamane, F. Ishii, R. Arita and S. Nakatsuji, Nature 581,\n53–57 (2020).\n[15] D. Xiao, Y. Yao, Z. Fang, Q. Niu, Berry-phase effect in\nanomalous thermoelectric transport. Phys. Rev. Lett. 97,\n026603 (2006).\n[16] D. F. Liu, A. J. Liang, E. K. Liu, Q. N. Xu, Y. W.Li,\nC. Chen, D. Pei, W. J. Shi, S. K. Mo, P. Dudin, T.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l209",
+                    "p5_l210",
+                    "p5_l211",
+                    "p5_l212",
+                    "p5_l213",
+                    "p5_l214",
+                    "p5_l215",
+                    "p5_l216",
+                    "p5_l217",
+                    "p5_l218",
+                    "p5_l219",
+                    "p5_l220",
+                    "p5_l221",
+                    "p5_l222",
+                    "p5_l223",
+                    "p5_l224",
+                    "p5_l225",
+                    "p5_l226",
+                    "p5_l227",
+                    "p5_l228",
+                    "p5_l229",
+                    "p5_l230",
+                    "p5_l231",
+                    "p5_l232"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "Kim, C. Cacho, G. Li, Y. Sun, L. X. Yang, Z. K. Liu,\nS. S. P. Parkin, C. Felser, and Y. L. Chen, Science 365,\n1282–1285 (2019).\n[17] E. Liu, Y. Sun, N. Kumar, L. Muechler, A. Sun, L. Jiao,\nS.-Y. Yang, D. Liu, A. Liang, Q. Xu, J. Kroder, V. Süß,\nH. Borrmann, C. Shekhar, Z. Wang, C. Xi, W. Wang,\nW. Schnelle, S. Wirth, Y. Chen, S. T. B. Goennenwein\nand C. Felser, Nat. Phys. 14, 1125 (2018).\n[18] X. Xu, J.-X. Yin, W. Ma, H.-R. Tian, X.-B. Qiang, H.\nZhou, J, Shen, H. Lu, T,-R. Chang, Z. Qu, S, Jia, Nat.\nCommun. 13, 1197 (2022).\n[19] L. Xu, X. Li, L. Ding, T. Chen, A. Sakai, B. Fauque,\nS. Nakatsuji, Z. Zhu, K. Behnia, Phys. Rev. B 101,\n180404(R) (2020).\n[20] A. Sakai, Y. P. Mizuta, A. A. Nugroho, R. Sihombing,\nT. Koretsune, M.-T. Suzuki, N. Takemori, R. Ishii, D.\nNishio-Hamane, R. Arita, P. Goswami, S. Nakatsuji, Nat.\nPhys. 14, 1119-1124 (2018).\n[21] S. N. Guin, K. Manna, J. Noky, S. J. Watzman, C. Fu,\nN. Kumar, W. Schnelle, C. Shekhar, Y. Sun, J. Gooth,\nC. Felser, NPG Asia Mater. 11, 16 (2019).\n[22] W. Zhou, A. Miura, T. Hirai, Y. Sakuraba, K.-i. Uchida.\nAppl. Phys. Lett. 122, 062402 (2019).\n[23] A. Miura, H. Sepehri-Amin, K. Masuda, H. Tsuchiura,\nY. Miura, R. Iguchi , Y. Sakuraba, J. Shiomi, K. Hono,\nK. Uchida, Appl. Phys. Lett. 115, 222403 (2019).\n[24] S. N. Guin, K. Manna, J. Noky, S. J. Watzman, C. Fu,\nN. Kumar, W. Schnelle, C. Shekhar, Y. Sun, J. Gooth,\nC. Felser, NPG Asia Mater. 11, 16 (2019).\n[25] A. Sakai, Y.P. Mizuta, A.A. Nugroho, R. Sihombing,\nT. Koretsune, M.-T. Suzuki, N. Takemori, R. Ishii, D.\nNishio-Hamane, R. Arita, P. Goswami, S. Nakatsuji, Nat.\nPhys. 14, 1119 (2018).\n6\n[26] S. Xu, L. Zhou, S.-X. Li, X.-Y. Zeng, C. Jiang, J.-J. Mi,\nZ. Li, T.-L. Xia, and Z.-A. Xu, Mater. Today. Phys. 38,\n101269 (2023).\n[27] W.A.J.J. Velge, K.H.J. Buschow, J. Appl. Phys. 39, 1717\n(1968).\n[28] Z. Yang, M. Lange, A. Volodin, R. Szymczak, and V. V.\nMoshchalkov, Nat. Mater. 3, 793 (2004).\n[29] M. Cutler, N. F. Mott, Observation of Anderson local-\nization in an electron gas. Phys. Rev. 181, 1336–1340\n(1969).\n[30] N. Nagaosa, J. Sinova, S. Onoda, A.H. MacDonald, N.P.\nOng, Rev. Mod. Phys. 82, 1539 (2010).\n[31] S. Noguchi, K. Fujiwara, Y. Yanagi, M. Suzuki, T. Hirai,\nT. Seki, K. Uchida, and A. Tsukazaki, Nat. Phys. 20,\n254 (2024).\n[32] Solid State Physics. Von N. W. Ashcroft und N. D. Mer-\nmin; Holt, Rinehart and Winston, New York , XXII, 826\nSeiten, (1976).\n[33] Y. Hirokane, Y. Tomioka, Y. Imai, A. Maeda, Y. Onose,\nPhys. Rev. B 93, 014436 (2016).\n[34] S. N. Guin, Q. Xu, N. Kumar, H. Kung, S. Dufresne,\nC. Le, P. Vir, M. Michiardi, T. Pedersen, S. Gorovikov,\nS. Zhdanovich, K. Manna, G. Auffermann, W. Schnelle,\nJ. Gooth, C. Shekhar, A. Damascelli, Y. Sun, C. Felser,\nAdv. Mater. 33, 2006301 (2021).\n[35] Z. Fan, S. Minami, S. Akamatsu, A. Sakai, T. Chen, D.\nNishio-Hamane, and S. Nakatsuji, Adv. Funct. Mater.\n32, 2206519 (2022).\n[36] Y. Li, J. Zhou, M. Li, L. Qiao, C. Jiang, Q. Chen, Y. Li,\nQ. Tao, Z.-A. Xu, Phys. Rev. Appl. 19, 014026 (2023).\n[37] Y. Pan, C. Le, B. He, S.J. Watzman, M. Yao, J. Gooth,\nJ.P. Heremans, Y. Sun, C. Felser, Nat. Mater. 21,\n203–209 (2020).\n[38] Y. Sakuraba, K. Hyodo, A. Sakuma, and S. Mitani, Phys.\nRev. B 101, 134407 (2020).",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l1",
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10",
+                    "p6_l11",
+                    "p6_l12",
+                    "p6_l13",
+                    "p6_l14",
+                    "p6_l15",
+                    "p6_l16",
+                    "p6_l17",
+                    "p6_l18",
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24",
+                    "p6_l25",
+                    "p6_l26",
+                    "p6_l27",
+                    "p6_l28",
+                    "p6_l29",
+                    "p6_l30",
+                    "p6_l31",
+                    "p6_l32",
+                    "p6_l33",
+                    "p6_l34",
+                    "p6_l35",
+                    "p6_l36",
+                    "p6_l37",
+                    "p6_l38",
+                    "p6_l39",
+                    "p6_l40",
+                    "p6_l41",
+                    "p6_l42",
+                    "p6_l43",
+                    "p6_l44",
+                    "p6_l45",
+                    "p6_l46",
+                    "p6_l47",
+                    "p6_l48",
+                    "p6_l49",
+                    "p6_l50",
+                    "p6_l51",
+                    "p6_l52",
+                    "p6_l53",
+                    "p6_l54",
+                    "p6_l55",
+                    "p6_l56",
+                    "p6_l57",
+                    "p6_l58",
+                    "p6_l59",
+                    "p6_l60",
+                    "p6_l61",
+                    "p6_l62",
+                    "p6_l63",
+                    "p6_l64",
+                    "p6_l65",
+                    "p6_l66",
+                    "p6_l67",
+                    "p6_l68",
+                    "p6_l69"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "two_column",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "DATA AVAILABILITY",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 9.0,
+              "observation_ids": [
+                "p5_l208"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

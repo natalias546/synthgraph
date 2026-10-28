@@ -1,0 +1,1385 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "pdf": "C:\\Users\\jlu2\\code\\2025-jel245\\synthgraph\\data\\publications\\Publications\\2025_QM108_Anomalous_Hall_Effect_in_Cr_doped_Sb2Te3_Magnetic_Topological_Insulator.pdf",
+    "pages": 22,
+    "sha256": "3d3c96358e995fbb0b96461c869976a92d79556444532ea8c5ac2ff6d96a27ad",
+    "page_numbering": "one-based physical PDF pages"
+  },
+  "extraction": {
+    "library": "pdfplumber",
+    "version": "0.11.10",
+    "method": "Layout-aware generic numbered and unnumbered heading extraction against original schema",
+    "limitations": [
+      "Heading levels are inferred from document typography. Remaining content and layouts require source review."
+    ],
+    "body_font_size": 12.0,
+    "body_font_family": "TimesNewRomanPSMT"
+  },
+  "document": {
+    "id": "article",
+    "type": "article",
+    "page_start": 1,
+    "page_end": 22,
+    "children": [
+      {
+        "id": "front",
+        "type": "front_matter",
+        "page_start": 1,
+        "page_end": 1,
+        "children": []
+      },
+      {
+        "id": "body",
+        "type": "body",
+        "page_start": 1,
+        "page_end": 22,
+        "children": [
+          {
+            "id": "unidentified_p1_1",
+            "type": "custom",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [],
+            "text": "Observation of Anomalous Hall Effect in Bulk Single Crystals of n-type Cr-doped Sb2Te3",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p1_l1"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false
+            }
+          },
+          {
+            "id": "heading_p1_l2",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [
+              {
+                "id": "unidentified_p1_2",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "Ali Sarikhania,†,*, Mathew Pollardb,†, Jacob Cookc, Sheng Qiub, Seng Huat Leeb, Laleh\nAvazpourb, Jack Crewseb, William Fahrenholtzd, Guang Bianc, and Yew San Hora,b,*\na Material Research Center, Missouri University of Science and Technology, Rolla, MO 65409\nb Department of Physics, Missouri University of Science and Technology, Rolla, MO 65409\nc Department of Physics and Astronomy, University of Missouri, Columbia, MO 65211\nd Department of Materials Science and Engineering, Missouri University of Science and Technology,",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l3",
+                    "p1_l4",
+                    "p1_l5",
+                    "p1_l6",
+                    "p1_l7",
+                    "p1_l8"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "heading_p1_l9",
+                "type": "subsection",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [
+                  {
+                    "id": "unidentified_p1_3",
+                    "type": "custom",
+                    "page_start": 1,
+                    "page_end": 1,
+                    "children": [],
+                    "text": "† Equal Contribution.\n* Corresponding Authors: yhor@mst.edu (Y. S. Hor), as5kw@mst.edu (A. Sarikhani)",
+                    "label": "Unidentified content",
+                    "review_required": true,
+                    "attributes": {
+                      "custom_type": "unidentified",
+                      "method": "unclassified first pass",
+                      "observation_ids": [
+                        "p1_l10",
+                        "p1_l11"
+                      ],
+                      "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                      "reading_order_method": "local_geometry_fallback",
+                      "page_layout": "single_or_uncertain",
+                      "layout_review_required": true,
+                      "possible_graphical_content": false
+                    }
+                  }
+                ],
+                "title": "Rolla, MO 65409",
+                "review_required": true,
+                "attributes": {
+                  "method": "generic heading typography and spacing",
+                  "font_size": 11.0,
+                  "observation_ids": [
+                    "p1_l9"
+                  ],
+                  "layout_review_required": true
+                }
+              }
+            ],
+            "title": "Magnetic Topological Insulator",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p1_l2"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p1_l12",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 1,
+            "children": [
+              {
+                "id": "unidentified_p1_4",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "condensed matter physics and future technological innovations. Among the materials\ngarnering attention is Sb2Te3, a compound that theoretically exhibits topological insulating\nproperties. However, its inherent p-type nature prevents the direct experimental\nverification of its Dirac surface state due to the Fermi level’s alignment with the valence\nband. In this study, by doping Cr atoms into Sb2Te3, n-type behavior is observed in the",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l13",
+                    "p1_l14",
+                    "p1_l15",
+                    "p1_l16",
+                    "p1_l17"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "The exploration of topological Dirac surface states is significant in the realms of",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p1_l12"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p1_l18",
+            "type": "section",
+            "page_start": 1,
+            "page_end": 10,
+            "children": [
+              {
+                "id": "unidentified_p1_5",
+                "type": "custom",
+                "page_start": 1,
+                "page_end": 1,
+                "children": [],
+                "text": "ferromagnetism with a high transition temperature of approximately 170 K but also\nexhibits an anomalous Hall effect (AHE). The Cr doping also allows for a controlled\nmethod for Fermi level tuning into the band gap. These properties spotlight its potential as\nan n-type magnetic topological insulator (MTI) as well as a material candidate for the\nquantum anomalous Hall effect (QAHE), opening new avenues for applications in\nspintronics and quantum devices.\n1/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p1_l19",
+                    "p1_l20",
+                    "p1_l21",
+                    "p1_l22",
+                    "p1_l23",
+                    "p1_l24",
+                    "p1_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p2_1",
+                "type": "custom",
+                "page_start": 2,
+                "page_end": 2,
+                "children": [],
+                "text": "Three-dimensional topological insulators (TIs) have garnered significant attention over the\npast decade due to their unique electronic structure, i.e. an insulating bulk coexisting with\ngapless surface states protected by time-reversal symmetry (TRS) [1,2]. These surface states\noriginate from strong spin-orbit coupling, as depicted in materials like Sb2Te3, Bi2Se3 and\nBi2Te3, and are characterized by linearly dispersing Dirac cones that connect the valence and\nconduction bands, while the bulk remains gapped [3]. Doping TIs with magnetic cations\nintroduces magnetic exchange interactions that can induce a long-range magnetic order,\ntransforming a non-magnetic TI into a magnetic topological insulator (MTI) [4,5]. This magnetic\ndoping not only modifies the electronic structure by shifting the Fermi level, enabling tuning\nbetween the valence and conduction bands, but also fundamentally alters the topological\nprotection of the surface states. Specifically, the introduction of magnetism breaks TRS and\nopens a gap at the Dirac point, thereby destroying the intrinsic spin-momentum locking\ncharacteristic of pristine TIs [6].\nDirect observation of surface states in topological insulators (TIs) is commonly achieved\nusing angle-resolved photoemission spectroscopy (ARPES), which provides direct evidence of\nthe Dirac cone, particularly in n-type systems where the Fermi level lies near or within the bulk\nband gap [7]. However, in p-type materials such as pristine Sb2Te3, the Fermi level resides deep\nwithin the valence band, making it difficult to resolve the surface Dirac states, as they become\nobscured by the bulk electronic structure. Previous efforts to achieve n-type conduction in TIs,\nsuch as doping Bi2Se3 with Mn, Cu, or Ca [8-10], have demonstrated tunability of the charge\ncarrier type, but successfully converting Sb2Te3 to n-type conduction has remained a significant\nchallenge [11-13]. Nevertheless, precise Fermi level tuning through chemical doping is crucial,\nnot only for revealing gapped surface states, but also for enabling quantum phenomena such as\n2/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p2_l1",
+                    "p2_l2",
+                    "p2_l3",
+                    "p2_l4",
+                    "p2_l5",
+                    "p2_l6",
+                    "p2_l7",
+                    "p2_l8",
+                    "p2_l9",
+                    "p2_l10",
+                    "p2_l11",
+                    "p2_l12",
+                    "p2_l13",
+                    "p2_l14",
+                    "p2_l15",
+                    "p2_l16",
+                    "p2_l17",
+                    "p2_l18",
+                    "p2_l19",
+                    "p2_l20",
+                    "p2_l21",
+                    "p2_l22",
+                    "p2_l23",
+                    "p2_l24"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p3_1",
+                "type": "custom",
+                "page_start": 3,
+                "page_end": 3,
+                "children": [],
+                "text": "the quantum anomalous Hall effect [14-18], which has been recently observed in intrinsic\nmagnetic topological insulators like the septuple-layer MnBi2Te4 [19].\nIn this study, we report the first successful realization of n-type Sb2Te3 through Cr doping,\nas confirmed by Hall resistance measurements. This enables direct experimental verification of\nthe material’s topological surface states using ARPES. With the Fermi level shifted into the bulk\nband gap, the long-concealed Dirac states become accessible, solidifying the identification of\nSb2Te3 as a topological insulator. Moreover, Cr doping introduces robust ferromagnetic ordering\nwith a Curie temperature of approximately 170 K, indicative of strong magnetic exchange\ninteractions between the Cr ions embedded in the host lattice. This magnetic behavior, when\ncombined with the system’s intrinsic spin-orbit coupling, gives rise to a pronounced anomalous\nHall effect (AHE), a hallmark of magnetic topological systems, in which the spontaneous\nmagnetization acts as an internal pseudo-magnetic field that deflects charge carriers [20,21]. Our\nARPES measurements further demonstrate that the Fermi level can be tuned into the gap opened\nby magnetic exchange interactions at the Dirac point, offering a realistic pathway toward QAHE\nobservation in this system. Taken together, our findings establish Cr-doped n-type Sb2Te3 single\ncrystal as a rare example of a bulk magnetic topological insulator exhibiting both\nferromagnetism and AHE. The successful n-type tuning, combined with the emergence of robust\nspin-charge interaction, positions this material as a highly promising candidate for dissipationless\nspintronic devices and quantum electronic applications [22-26].\nThe X-ray diffraction (XRD) patterns of Cr0.2Sb2Te3 and Cr0.2Sb2Te3-δ single crystals\ndisplay a series of sharp and intense (0 0 n) reflections, indicative of highly oriented crystalline\ngrowth along the c-axis, as depicted in Figure 1a. The presence of only (0 0 n) peaks confirms\nthe formation of a well-ordered layered structure consistent with the rhombohedral crystal\nsymmetry (space group 𝑅3𝑚) typical of the Sb2Te3 family. A slight difference in peak positions\n3/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p3_l1",
+                    "p3_l2",
+                    "p3_l3",
+                    "p3_l4",
+                    "p3_l5",
+                    "p3_l6",
+                    "p3_l7",
+                    "p3_l8",
+                    "p3_l9",
+                    "p3_l10",
+                    "p3_l11",
+                    "p3_l12",
+                    "p3_l13",
+                    "p3_l14",
+                    "p3_l15",
+                    "p3_l16",
+                    "p3_l17",
+                    "p3_l18",
+                    "p3_l19",
+                    "p3_l20",
+                    "p3_l21",
+                    "p3_l22",
+                    "p3_l23",
+                    "p3_l24",
+                    "p3_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p4_1",
+                "type": "custom",
+                "page_start": 4,
+                "page_end": 4,
+                "children": [],
+                "text": "between the Te-deficient (Cr0.2Sb2Te3-δ) and stoichiometric (Cr0.2Sb2Te3) samples may reflect\nsubtle lattice parameter changes due to Te vacancies, which can influence the interlayer spacing\nand potentially tune the electronic and magnetic properties. As indicated in Figure 1b, each\nquintuple layer consists of 5 atomic planes stacked along the crystallographic c-axis in the\nsequence Te(1)-Sb-Te(2)-Sb-Te(1). These layers are held together by weak van der Waals\nforces, allowing for easy cleavage along the basal plane. The Cr atoms can be intercalated in\nbetween these quintuple layers without disrupting the intralayer covalent bonding network.\nFigure 1c show scanning tunneling microscopy (STM) images at multiple scales for the\ncleaved surface of Cr0.2Sb2Te3 single crystals. Figure 1c presents a large-area topographic scan\n(~200 nm scale) that reveals atomically flat terraces separated by step edges, indicating clean\ncleavage along the van der Waals gap between quintuple layers. These terraces are consistent\nwith the natural c-axis cleavage plane of the rhombohedral Sb2Te3 structure. Figure 1c also\nzooms into a smaller area (~80 × 80 nm²), highlighting the uniform topography and distribution\nof nanoscale contrast features. These bright and dark spots are likely due to point defects such as\nsubstitutional Cr atoms, Cr intercalants, or intrinsic vacancies (Te or Sb), reflecting the dopant\nincorporation and local stoichiometry variation during crystal growth. The inset in the lower-\nright corner of Figure 1c displays an atomic-resolution STM image, clearly resolving the surface\nhexagonal lattice with a periodicity consistent with the (0001) plane of Sb2Te3. The observed\nlattice symmetry confirms high crystallinity and long-range structural order at the atomic scale.\nMinor local distortions in lattice contrast further support the presence of atomic scale\ninhomogeneities associated with Cr doping.\nFigure 2a displays the temperature-dependent DC magnetization (MDC) of CrxSb2Te3\nsingle crystals with varying Cr concentrations (x = 0.05, 0.1, 0.15, and 0.2), measured under\napplied field H = 5 kOe. All samples exhibit a clear ferromagnetic transition near ~170 K, with\n4/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p4_l1",
+                    "p4_l2",
+                    "p4_l3",
+                    "p4_l4",
+                    "p4_l5",
+                    "p4_l6",
+                    "p4_l7",
+                    "p4_l8",
+                    "p4_l9",
+                    "p4_l10",
+                    "p4_l11",
+                    "p4_l12",
+                    "p4_l13",
+                    "p4_l14",
+                    "p4_l15",
+                    "p4_l16",
+                    "p4_l17",
+                    "p4_l18",
+                    "p4_l19",
+                    "p4_l20",
+                    "p4_l21",
+                    "p4_l22",
+                    "p4_l23",
+                    "p4_l24",
+                    "p4_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p5_1",
+                "type": "custom",
+                "page_start": 5,
+                "page_end": 5,
+                "children": [],
+                "text": "increasing magnetization magnitude correlating with higher Cr content. This transition is\nattributed to long-range ferromagnetic ordering induced by Cr doping. For the highest doping\nlevel (x = 0.2), an additional gradual increase in magnetization is observed below ~20 K,\naccompanied by a saturation trend as temperature approaches zero. While the origin of this low-\ntemperature feature remains to be fully clarified, its behavior is distinct from simple\nparamagnetism and may suggest the presence of additional magnetic interactions or phase\ninhomogeneity at high Cr concentrations. Further studies are required to determine whether this\nlow-temperature upturn reflects a secondary ferromagnetic contribution, local magnetic ordering,\nor another mechanism.\nFigure 2b presents isothermal magnetization curves (MDC vs. μ0H) for Cr0.2Sb2Te3 single\ncrystals measured at 2 K and 5 K under different field orientations. At both temperatures, clear\nhysteresis loops are observed when the magnetic field is applied along the c-axis (red and blue\ncurves), indicating ferromagnetic ordering with a coercive field and remanent magnetization. In\ncontrast, when the field is applied in the ab plane at 5 K (green curve), the magnetization exhibits\na nearly linear, non-hysteretic response, suggesting that the ab direction behaves as a magnetic\nhard axis. At 2 K, when the magnetic field is applied along the c-axis (blue curve), the hysteresis\nloop becomes more pronounced compared to the 5 K measurement (red curve), consistent with\nstronger ferromagnetic order at lower temperatures. This anisotropic behavior confirms the\npresence of uniaxial magnetic anisotropy in Cr0.2Sb2Te3, with the magnetic easy axis oriented\nalong the c-axis, perpendicular to the layered crystal planes. Such behavior is characteristic of\nCr-doped topological insulators and has been similarly observed in Cr-doped Bi2Se3 systems\n[27]. It arises from the interplay between strong spin-orbit coupling and the intrinsic structural\nanisotropy of the van der Waals-layered lattice, which favors out-of-plane spin alignment. The\npronounced difference in magnetization response between the c-axis and in-plane directions\n5/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p5_l1",
+                    "p5_l2",
+                    "p5_l3",
+                    "p5_l4",
+                    "p5_l5",
+                    "p5_l6",
+                    "p5_l7",
+                    "p5_l8",
+                    "p5_l9",
+                    "p5_l10",
+                    "p5_l11",
+                    "p5_l12",
+                    "p5_l13",
+                    "p5_l14",
+                    "p5_l15",
+                    "p5_l16",
+                    "p5_l17",
+                    "p5_l18",
+                    "p5_l19",
+                    "p5_l20",
+                    "p5_l21",
+                    "p5_l22",
+                    "p5_l23",
+                    "p5_l24",
+                    "p5_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p6_1",
+                "type": "custom",
+                "page_start": 6,
+                "page_end": 6,
+                "children": [],
+                "text": "further supports this magnetic anisotropy, confirming that the easy axis lies perpendicular to the\nbasal plane [28].\nThe metallic behavior observed in Cr-doped Sb2Te3 is consistent with the ferromagnetic\nordering evidenced in the magnetization results. To further explore the transport characteristics,\nFigure 3a shows the temperature dependence of the longitudinal resistivity (ρxx) for Cr0.2Sb2Te3\nand Te-deficient Cr0.2Sb2Te3-δ single crystals. Both samples exhibit a gradual decrease in\nresistivity with decreasing temperature, indicating metallic conduction enabled by Cr-induced\ncharge carriers, suggesting that the Fermi level is tuned into or near the conduction band.\nNotably, below approximately 20 K, the resistivity shows a subtle deviation from the monotonic\nmetallic trend with a slight flattening or reduced slope. This feature may reflect enhanced\nscattering effects at low temperatures, possibly arising from magnetic impurities (Cr ions),\nstructural disorder, or weak localization phenomena. In magnetically doped topological\ninsulators, such low-temperature deviations are frequently attributed to interactions between\nitinerant carriers and localized magnetic moments, or to increased quantum interference effects.\nThese behaviors highlight the complex interplay between magnetic and electronic degrees of\nfreedom in Cr-doped Sb2Te3.\nFollowing the metallic behavior observed in the longitudinal resistivity (Figure 3a), we\nfurther examined the carrier type and magnetic response through Hall resistivity (Rxy)\nmeasurements. Figures 3b and 3c show the transverse Hall resistivity as a function of magnetic\nfield for Cr0.2Sb2Te3 and Cr0.2Sb2Te3-δ, respectively, across a range of temperatures from 2 to 150\nK. The insets present full-field measurements up to ±5 T, while the main panels highlight the\nlow-field regime where the anomalous Hall effect (AHE) emerges. At low temperatures, both\nsamples exhibit a clear hysteresis in Rxy that saturates around ±0.05 T, consistent with the\ncoercive field seen in the magnetization data (Figure 2b). This confirms the presence of\n6/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p6_l1",
+                    "p6_l2",
+                    "p6_l3",
+                    "p6_l4",
+                    "p6_l5",
+                    "p6_l6",
+                    "p6_l7",
+                    "p6_l8",
+                    "p6_l9",
+                    "p6_l10",
+                    "p6_l11",
+                    "p6_l12",
+                    "p6_l13",
+                    "p6_l14",
+                    "p6_l15",
+                    "p6_l16",
+                    "p6_l17",
+                    "p6_l18",
+                    "p6_l19",
+                    "p6_l20",
+                    "p6_l21",
+                    "p6_l22",
+                    "p6_l23",
+                    "p6_l24",
+                    "p6_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p7_1",
+                "type": "custom",
+                "page_start": 7,
+                "page_end": 7,
+                "children": [],
+                "text": "ferromagnetism and a strong AHE contribution, which follows the relation Rxy = R₀B + RₛM.\nHere, the anomalous term (RₛM) dominates at low fields due to magnetization, while the\nordinary Hall term (R₀B) becomes evident at higher fields [29,30]. In this equation, R₀ is\nordinary Hall coefficient while Rₛ represents the anomalous Hall coefficient. The close\nagreement between the coercive field in the Hall and magnetization data further supports this\ninterpretation. Most notably, the sign of the high-field slope of Rxy reveals the dominant carrier\ntype. In stoichiometric Cr0.2Sb2Te3 (Figure 3b), the slope is positive, indicating p-type (hole-like)\nconduction. In contrast, the Te-deficient Cr0.2Sb2Te3-δ sample (Figure 3c) exhibits a negative\nslope, demonstrating a transition to n-type (electron-like) carriers. This change is attributed to the\nintroduction of Te vacancies, which act as donor defects, providing extra electrons and shifting\nthe Fermi level toward or into the conduction band.\nThis Fermi level tuning is particularly significant, as Sb2Te3 is inherently p-type, and\nachieving stable n-type conductivity has been a longstanding challenge. To our knowledge, this\nrepresents one of the first demonstrations of n-type behavior in bulk Cr-doped Sb2Te3, made\npossible through controlled Te deficiency. Such Fermi level tuning is essential for aligning it\nnear the Dirac point and enabling magnetic gap opening in the topological surface states below\nthe Curie temperature, which is a prerequisite for realizing the quantum anomalous Hall effect.\nUnlike other systems such as Bi2Se3, where gate voltage provides a direct handle on Fermi level\ntuning, the carrier density in Cr-doped Sb2Te3 appears to be governed by a complex interplay\namong Cr incorporation, Sb/Te site occupancy, and resulting defect chemistry. While the precise\nrelationship remains to be determined, our data suggest that compositions with increased Te\nvacancies are most effective in pushing the system toward n-type behavior.\nThe variability in carrier type and Fermi level position observed in our Hall measurements\nis further examined via angle-resolved photoemission spectroscopy (ARPES). Figure 4a shows\n7/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p7_l1",
+                    "p7_l2",
+                    "p7_l3",
+                    "p7_l4",
+                    "p7_l5",
+                    "p7_l6",
+                    "p7_l7",
+                    "p7_l8",
+                    "p7_l9",
+                    "p7_l10",
+                    "p7_l11",
+                    "p7_l12",
+                    "p7_l13",
+                    "p7_l14",
+                    "p7_l15",
+                    "p7_l16",
+                    "p7_l17",
+                    "p7_l18",
+                    "p7_l19",
+                    "p7_l20",
+                    "p7_l21",
+                    "p7_l22",
+                    "p7_l23",
+                    "p7_l24",
+                    "p7_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p8_1",
+                "type": "custom",
+                "page_start": 8,
+                "page_end": 8,
+                "children": [],
+                "text": "the ARPES spectrum of a representative Cr0.2Sb2Te3 sample, overlaid with DFT-calculated bulk\nband structure. The spectrum displays characteristic energy-momentum dispersion of the\nmagnetic topological insulator, with a partially visible topological surface state (TSS) near the Γ-\npoint. The Fermi level lies below the Dirac point and within the valence band, consistent with the\np-type character revealed by Hall measurements (Figure 3b). By systematically varying Sb and\nCr concentrations, we achieve a Fermi level tuning range of approximately 0.057 eV. For\nexample, increasing Sb content raises the Fermi level by ~0.038 eV relative to the Cr0.2Sb2Te3\nbaseline, moving it closer to the Dirac point. Although the Dirac point is not yet fully reached,\nthese adjustments bring the Fermi level within or near the bulk band gap, suggesting that further\noptimization could enable direct observation of a magnetically gapped surface state for realizing\nthe quantum anomalous Hall effect.\nFigures 4b illustrates the electronic structure of the higher Fermi level sample, i.e., the Te-\ndeficient Cr0.2Sb2Te3-δ, which exhibits n-type behavior in Hall measurements (Figure 3c).\nSurprisingly, the ARPES spectrum of Cr0.2Sb2Te3-δ appears nearly identical to that of the\nstoichiometric sample, showing no clear Fermi level shift into the conduction band. This\ndiscrepancy between ARPES and transport measurements likely stems from the surface-sensitive\nnature of ARPES, which probes only the top few atomic layers. In Te-deficient samples, surface\nband bending or depletion effects may pin the Fermi level closer to the valence band, even when\nthe bulk exhibits n-type conduction. Additionally, time-dependent surface degradation or sample\ninhomogeneity such as Cr segregation seen in the STM image (Figure 1d) may further obscure\nsubtle changes in the electronic structure. Despite this inconsistency, the overall trend of Fermi\nlevel tuning remains evident, and Hall measurements reliably indicate bulk carrier type.\nAddressing surface-bulk discrepancies through improved surface preparation, gated ARPES, or\nbulk-sensitive spectroscopies could provide more definitive confirmation in future studies. It is\n8/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p8_l1",
+                    "p8_l2",
+                    "p8_l3",
+                    "p8_l4",
+                    "p8_l5",
+                    "p8_l6",
+                    "p8_l7",
+                    "p8_l8",
+                    "p8_l9",
+                    "p8_l10",
+                    "p8_l11",
+                    "p8_l12",
+                    "p8_l13",
+                    "p8_l14",
+                    "p8_l15",
+                    "p8_l16",
+                    "p8_l17",
+                    "p8_l18",
+                    "p8_l19",
+                    "p8_l20",
+                    "p8_l21",
+                    "p8_l22",
+                    "p8_l23",
+                    "p8_l24",
+                    "p8_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p9_1",
+                "type": "custom",
+                "page_start": 9,
+                "page_end": 9,
+                "children": [],
+                "text": "also worth noting that the ARPES measurements were conducted at liquid nitrogen temperature\n(109 K). In contrast, the Hall resistance data for both the Cr-intercalated and Te-deficient\nsamples exhibit linear behavior at around this temperature, without pronounced p- or n-type\nhysteresis features. Future studies could explore performing ARPES at lower temperatures to\nbetter capture the electronic environment associated with n-type conduction.\nFurthermore, the AHE observed in Figures 3b and 3c is consistent with ferromagnetic\nhysteresis seen in magnetization (Figure 2b) and the electronic structure inferred from ARPES.\nAt 2 K, the coercive field (~0.02 T) marks the field at which net magnetization switches\ndirection, canceling the transverse Hall voltage due to equal contributions from spin-up and spin-\ndown carriers. As the field increases past the saturation point (~0.05 T), full spin polarization is\nachieved, producing a maximum in Rxy. This symmetry in AHE hysteresis under positive and\nnegative magnetic fields confirms the magnetic origin of the Hall signal and its proportionality to\nspontaneous magnetization. Together, these results provide a coherent picture of magnetic and\nelectronic behavior in Cr-doped Sb2Te3 and demonstrate the material’s potential for tunable\ntopological transport [31].\nIn this study, we demonstrate the observation of an intrinsic AHE in bulk single crystals of\nCr-doped Sb2Te3, confirming that ferromagnetic ordering and topological transport features can\ncoexist in the bulk of this magnetic topological insulator system. By reducing the Te\nstoichiometry to Cr0.2Sb2Te3-δ, we successfully converted the material from p-type to n-type\nconduction, as confirmed by Hall measurements. While ARPES did not reveal a clear Fermi\nlevel shift into the conduction band for the Te-deficient sample, this discrepancy is likely due to\nthe surface sensitivity of ARPES, in contrast to the bulk nature of transport measurements. Cr\ndoping introduced ferromagnetism with a Curie temperature around 170 K, which supports the\nemergence of the AHE. Although the Dirac point was not directly accessed, we show that the\n9/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p9_l1",
+                    "p9_l2",
+                    "p9_l3",
+                    "p9_l4",
+                    "p9_l5",
+                    "p9_l6",
+                    "p9_l7",
+                    "p9_l8",
+                    "p9_l9",
+                    "p9_l10",
+                    "p9_l11",
+                    "p9_l12",
+                    "p9_l13",
+                    "p9_l14",
+                    "p9_l15",
+                    "p9_l16",
+                    "p9_l17",
+                    "p9_l18",
+                    "p9_l19",
+                    "p9_l20",
+                    "p9_l21",
+                    "p9_l22",
+                    "p9_l23",
+                    "p9_l24",
+                    "p9_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p10_1",
+                "type": "custom",
+                "page_start": 10,
+                "page_end": 10,
+                "children": [],
+                "text": "Fermi level can be tuned closer to the bulk band gap by adjusting the elemental composition,\nparticularly Te deficiency. These results establish that AHE can be robustly realized in bulk Cr-\ndoped Sb2Te3 single crystals and underscore the potential of this system for exploring magnetic\ntopological transport.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p10_l1",
+                    "p10_l2",
+                    "p10_l3",
+                    "p10_l4"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Hall resistance measurements. Remarkably, the Cr-doped Sb2Te3 not only shows",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p1_l18"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p15_l2",
+            "type": "section",
+            "page_start": 15,
+            "page_end": 16,
+            "children": [
+              {
+                "id": "unidentified_p15_2",
+                "type": "custom",
+                "page_start": 15,
+                "page_end": 15,
+                "children": [],
+                "text": "High-quality single crystals of Cr-doped Sb2Te3 were synthesized using a modified\nBridgman growth method via slow cooling in evacuated quartz ampoules. Stoichiometric\namounts of high-purity elemental chromium (Cr, 99.999%), antimony (Sb, 99.999%), and\ntellurium (Te, 99.999%) were carefully weighed in a glovebox to minimize surface oxidation.\nThe typical target compositions used were CrxSb2Te3 with x = 0.05-0.2, including both\nstoichiometric and Te-deficient variants, i.e., Cr0.2Sb2Te3-δ. The elemental mixtures were loaded\ninto clean, dry quartz ampoules with 10 mm inner diameter and approximately 10 cm in length.\nThe ampoules were thoroughly evacuated (~10-6 mbar) and flame-sealed under high vacuum to\nprevent contamination and oxidation during the high-temperature process. To further ensure\ncleanliness and promote uniform mixing, the ampoules were flushed multiple times with ultra-\nhigh-purity argon gas before final evacuation.\nThe sealed ampoules were placed in a box furnace and heated gradually to 950 °C at a rate\nof 0.5 °C/min. The mixtures were maintained at this temperature for 24 hours to allow for\ncomplete and homogeneous mixing of the constituent elements. Periodic manual rocking or\nspinning of the ampoules was performed during the period to promote uniform distribution and\nreaction of Cr with the Sb-Te matrix. After homogenization, the precursor was cooled slowly to\nroom temperature at a rate of 0.5 °C/min to promote the formation of large, well-ordered single\ncrystals. Slow cooling is crucial for minimizing crystal defects and phase separation, particularly\nfor doped systems with narrow solidification windows. Upon reaching room temperature, the\nampoules were opened, and the resulting crystals were mechanically cleaved to expose shiny\nlamellar flakes along the basal (0001) plane, typical of the rhombohedral Sb2Te3 structure. The\nas-grown crystals were gray, shiny, and easily cleavable, with thicknesses ranging from hundreds\n15/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p15_l3",
+                    "p15_l4",
+                    "p15_l5",
+                    "p15_l6",
+                    "p15_l7",
+                    "p15_l8",
+                    "p15_l9",
+                    "p15_l10",
+                    "p15_l11",
+                    "p15_l12",
+                    "p15_l13",
+                    "p15_l14",
+                    "p15_l15",
+                    "p15_l16",
+                    "p15_l17",
+                    "p15_l18",
+                    "p15_l19",
+                    "p15_l20",
+                    "p15_l21",
+                    "p15_l22",
+                    "p15_l23",
+                    "p15_l24",
+                    "p15_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p16_1",
+                "type": "custom",
+                "page_start": 16,
+                "page_end": 16,
+                "children": [],
+                "text": "of microns to several millimeters. All samples (with nominal compositions of CrxSb2Te3 and\nCr0.2Sb2Te3-δ with δ=0.1) were stored in an inert atmosphere to minimize surface oxidation prior\nto characterization.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p16_l1",
+                    "p16_l2",
+                    "p16_l3"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Synthesis",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p15_l2"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p16_l4",
+            "type": "section",
+            "page_start": 16,
+            "page_end": 16,
+            "children": [
+              {
+                "id": "unidentified_p16_2",
+                "type": "custom",
+                "page_start": 16,
+                "page_end": 16,
+                "children": [],
+                "text": "The crystal structures of Cr0.2Sb2Te3-δ and Cr0.2Sb2Te3 were characterized using a\nPANalytical X’Pert Multi-Purpose Diffractometer equipped with a copper source\n(λ = 0.15418 nm) and a minimum step size of 2θ = 0.06°. All major peaks in the XRD patterns of\nCr0.2Sb2Te3-δ and Cr0.2Sb2Te3 correspond to the cubic lattice of antimony telluride (Sb2Te3). The\npeaks indexed as (0 0 n), where n = 3, 6, 9…, are clearly indicated in Figure 1a. As shown in the\nXRD patterns, no impurity phases are detected in either Cr0.2Sb2Te3-δ or Cr0.2Sb2Te3. The c-axis\nlattice parameter of undoped Sb2Te3 decreases from 30.458 Å to 30.419 Å for Cr0.2Sb2Te3-δ, and\nto 30.402 Å for Cr0.2Sb2Te3. These values indicate only slight changes compared to the undoped\nSb2Te3 structure. Lattice parameters were determined using the Rietveld refinement method,\nwhich is widely employed for analyzing ion-substituted crystal systems.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p16_l5",
+                    "p16_l6",
+                    "p16_l7",
+                    "p16_l8",
+                    "p16_l9",
+                    "p16_l10",
+                    "p16_l11",
+                    "p16_l12",
+                    "p16_l13",
+                    "p16_l14"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "X-ray Diffraction",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p16_l4"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p16_l15",
+            "type": "section",
+            "page_start": 16,
+            "page_end": 16,
+            "children": [
+              {
+                "id": "unidentified_p16_3",
+                "type": "custom",
+                "page_start": 16,
+                "page_end": 16,
+                "children": [],
+                "text": "A Quantum Design Physical Property Measurement System (PPMS) was used throughout\nthis study. Magnetization as a function of temperature and magnetic field was measured using the\nDC magnetization module of the PPMS. Hall resistance measurements were conducted using a\nfive-probe configuration under the ACT option, and the Hall resistance for the bulk material was\ncorrected by factoring in the sample thickness (t), which corresponds to the lamellar crystal\nthickness along the c-axis.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p16_l16",
+                    "p16_l17",
+                    "p16_l18",
+                    "p16_l19",
+                    "p16_l20",
+                    "p16_l21"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Transport Measurements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p16_l15"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p16_l22",
+            "type": "section",
+            "page_start": 16,
+            "page_end": 17,
+            "children": [
+              {
+                "id": "unidentified_p16_4",
+                "type": "custom",
+                "page_start": 16,
+                "page_end": 16,
+                "children": [],
+                "text": "The Cr-doped Sb2Te3 single crystals were prepared for STM and ARPES measurements by\nin-situ cleaving the surface in an integrated MBE-STM ultrahigh vacuum (UHV) system with base\n16/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p16_l23",
+                    "p16_l24",
+                    "p16_l25"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p17_1",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "pressure below 2 × 10−10 mbar. Surface topography mappings were performed in situ by using the\nSPECS Aarhus-150 scanning tunneling microscopy (STM) system with a Tungsten tip at room\ntemperature. Angle Resolved Photo-emission Spectroscopy (ARPES) measurements were\nperformed in situ at liquid nitrogen temperatures (109 K) using a SPECS PHOIBOS-150\nhemisphere analyzer with a SPECS UVS 300 helium discharge lamp (He Iα = 21.2 eV). The energy\nresolution is 40 meV at 109 K. Characteristic, high intensity electron bands at Γ were quantified\nusing a Gaussian Multi-peak fitting (GMPF) of the summed intensity profile ± 0.05 Å−1 around\nthe zone center, as implemented in the Igor Pro Multi-peak fitting software package. Smoothing\nfactors were increased in the GMPF until the characteristic intensity peak at ~ -0.2 eV consolidated\ninto a singular peak feature.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l1",
+                    "p17_l2",
+                    "p17_l3",
+                    "p17_l4",
+                    "p17_l5",
+                    "p17_l6",
+                    "p17_l7",
+                    "p17_l8",
+                    "p17_l9",
+                    "p17_l10"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "ARPES-STM Measurements",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p16_l22"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p17_l11",
+            "type": "section",
+            "page_start": 17,
+            "page_end": 17,
+            "children": [
+              {
+                "id": "unidentified_p17_2",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "All theoretical band structure and first-principles calculations were performed with density\nfunctional theory (DFT) as implemented in the Vienna ab initio Simulation Package (VASP). We\nused the Perdew-Burke-Ernzerhof (PBE) form for the exchange-correlation functional with a\nplane-wave cut-off energy of 300 eV. Spin-Orbit Coupling (SOC) was included in all\ncalculations.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l12",
+                    "p17_l13",
+                    "p17_l14",
+                    "p17_l15",
+                    "p17_l16"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "DFT Calculations",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p17_l11"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "back",
+        "type": "back_matter",
+        "page_start": 10,
+        "page_end": 22,
+        "children": [
+          {
+            "id": "heading_p10_l5",
+            "type": "references",
+            "page_start": 10,
+            "page_end": 15,
+            "children": [],
+            "title": "References",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p10_l5"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "unidentified_p10_2",
+            "type": "custom",
+            "page_start": 10,
+            "page_end": 10,
+            "children": [],
+            "text": "[1] Hasan, M. Z. and Kane, C. L. Topological insulators. Rev. Mod. Phys. 82, 3045\n(2010). https://doi.org/10.1103/RevModPhys.82.3045\n[2] Xia, Y. et al. Observation of a large-gap topological-insulator class with a single\nDirac cone on the surface. Nature Physics 5, 398-402 (2009).\nhttps://doi.org/10.1038/NPHYS1274\n[3] Anirban, A. 15 years of topological insulators. Nat Rev Phys 5, 267 (2023).\nhttps://doi.org/10.1038/s42254-023-00587-y\n[4] Zhang, W. et al. Electronic fingerprints of Cr and V dopants in the topological\ninsulator Sb2Te3. Phys. Rev. B 98, 115165 (2018). https://doi.org/10.1103/PhysRevB.98.115165\n[5] Tokura, Y., Yasuda, K. & Tsukazaki, A. Magnetic topological insulators. Nat Rev\nPhys 1, 126-143 (2019). https://doi.org/10.1038/s42254-018-0011-5\n[6] Bernevig, B. A., Felser, C. & Beidenkopf, H. Progress and prospects in magnetic\ntopological materials. Nature 603, 41-51 (2022). https://doi.org/10.1038/s41586-021-04105-x\n10/22",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p10_l6",
+                "p10_l7",
+                "p10_l8",
+                "p10_l9",
+                "p10_l10",
+                "p10_l11",
+                "p10_l12",
+                "p10_l13",
+                "p10_l14",
+                "p10_l15",
+                "p10_l16",
+                "p10_l17",
+                "p10_l18",
+                "p10_l19"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p10_l5"
+            }
+          },
+          {
+            "id": "unidentified_p11_1",
+            "type": "custom",
+            "page_start": 11,
+            "page_end": 11,
+            "children": [],
+            "text": "[7] Feng, B. et al. Discovery of 2D anisotropic Dirac cones. Adv. Mater. 30, 1704025\n(2018). https://doi.org/10.1002/adma.201704025\n[8] Choi, Y. H. et al. Simple tuning of carrier type in topological insulator Bi2Se3 by\nMn doping. Appl. Phys. Lett. 101, 152103 (2012). https://doi.org/10.1063/1.4755767\n[9] Sun, G. et al. Enhanced thermoelectric performance of n-type Bi2Se3 doped with\nCu. Journal of Alloys and Compounds 639, 9-14 (2015).\nhttps://doi.org/10.1016/j.jallcom.2015.03.124\n[10] Hor, Y. S. et al. P-type Bi2Se3 for topological insulator and low-temperature\nthermoelectric applications. Phys. Rev. B 79, 195208 (2009).\nhttps://doi.org/10.1103/PhysRevB.79.195208\n[11] Testardi, L. R. et al. Transport properties of p-type Bi2Te3- Sb2Te3 alloys in the\ntemperature range 80-370°K. Journal of Physics and Chemistry of Solids 23, 1209-1217 (1962).\nhttps://doi.org/10.1016/0022-3697(62)90168-3\n[12] Zou, H. et al. Preparation and characterization of p-type Sb2Te3 and n-type Bi2Te3\nthin films grown by coevaporation. J. of Vacuum Sci. & Tech. A 19, 899 (2001).\nhttps://doi.org/10.1116/1.1354600\n[13] Chen, Y. L. et al. Massive Dirac fermion on the surface of a magnetically doped\ntopological insulator. Science 329, 659-662 (2010). https://doi.org/10.1126/science.1189924\n11/22",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p11_l1",
+                "p11_l2",
+                "p11_l3",
+                "p11_l4",
+                "p11_l5",
+                "p11_l6",
+                "p11_l7",
+                "p11_l8",
+                "p11_l9",
+                "p11_l10",
+                "p11_l11",
+                "p11_l12",
+                "p11_l13",
+                "p11_l14",
+                "p11_l15",
+                "p11_l16",
+                "p11_l17",
+                "p11_l18",
+                "p11_l19"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p10_l5"
+            }
+          },
+          {
+            "id": "unidentified_p12_1",
+            "type": "custom",
+            "page_start": 12,
+            "page_end": 12,
+            "children": [],
+            "text": "[14] Yu, R. et al. Quantized anomalous Hall effect in magnetic topological insulators.\nScience 329, 61-64 (2010). https://doi.org/10.1126/science.1187485\n[15] Qi, X. et al. Topological field theory of time-reversal invariant insulators. Phys.\nRev. B 81, 159901 (2010). https://doi.org/10.1103/PhysRevB.78.195424\n[16] Chang, C.Z. et al. Experimental observation of the quantum anomalous Hall\neffect in a magnetic topological insulator. Science 340, 167-170 (2013).\nhttps://doi.org/10.1126/science.1234414\n[17] Nomura, K., and Nagaosa, N. Surface-quantized anomalous Hall current and the\nmagnetoelectric effect in magnetically disordered topological insulators. Phys. Rev. Lett. 106,\n166802 (2011). https://doi.org/10.1103/PhysRevLett.106.166802\n[18] Liu, C. et al. Quantum anomalous Hall effect in Hg1-yMnyTe quantum wells.\nPhys. Rev. Lett. 101, 146802 (2008). https://doi.org/10.1103/PhysRevLett.101.146802\n[19] Deng, Y. et al., Quantum anomalous Hall effect in intrinsic magnetic topological\ninsulator MnBi2Te4. Science 367, 895-900 (2020). https://doi.org/10.1126/science.aax8156\n[20] Yakout, S. M. Spintronics: future technology for new data storage and\ncommunication devices. Jour. of Superconductivity and Novel Magnetism 33, 2557 (2020).\nhttps://doi.org/10.1007/s10948-020-05545-8\n12/22",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p12_l1",
+                "p12_l2",
+                "p12_l3",
+                "p12_l4",
+                "p12_l5",
+                "p12_l6",
+                "p12_l7",
+                "p12_l8",
+                "p12_l9",
+                "p12_l10",
+                "p12_l11",
+                "p12_l12",
+                "p12_l13",
+                "p12_l14",
+                "p12_l15",
+                "p12_l16",
+                "p12_l17",
+                "p12_l18"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p10_l5"
+            }
+          },
+          {
+            "id": "unidentified_p13_1",
+            "type": "custom",
+            "page_start": 13,
+            "page_end": 13,
+            "children": [],
+            "text": "[21] Guo, J. et al. Chemically induced ferromagnetism near room temperature in single\ncrystal (Zn1−xCrx)Te half-metal. RSC Adv. 13, 8551 (2023).\nhttps://doi.org/10.1039/D2RA08105A\n[22] Gilbert, M. J. Topological electronics. Commun Phys 4, 70 (2021).\nhttps://doi.org/10.1038/s42005-021-00569-5\n[23] He, M., Sun, H. & He, Q. L. Topological insulator: Spintronics and quantum\ncomputations. Front. Phys. 14, 43401 (2019). https://doi.org/10.1007/s11467-019-0893-4\n[24] Krishnan, K. M. Fundamentals and applications of magnetic materials, Oxford\nUniversity Press (2016). ISBN 978-0-19-957044-7.\n[25] Bergmann, G. et al. Anisotropic current induced in topological surface states due\nto spin-polarized tunneling from a ferromagnet. J. of Applied Physics 127, 073905 (2020).\nhttps://doi.org/10.1063/1.5099985\n[26] Liu, J., & Hesjedal, T. Magnetic topological insulator heterostructures: a\nreview. Adv. Mater. 35, 2102427 (2023). https://doi.org/10.1002/adma.202102427\n[27] Chang, C. et al. Chemical-potential-dependent gap opening at the Dirac surface\nstates of Bi2Se3 induced by aggregated substitutional Cr atoms. Phys. Rev. Lett. 112, 056801\n(2014). https://doi.org/10.1103/PhysRevLett.112.109901\n[28] Johnson, M. T. et al. Magnetic anisotropy in metallic multilayers. Rep. Prog.\nPhys. 59, 1409 (1996). https://doi.org/10.1088/0034-4885/59/11/002\n13/22",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p13_l1",
+                "p13_l2",
+                "p13_l3",
+                "p13_l4",
+                "p13_l5",
+                "p13_l6",
+                "p13_l7",
+                "p13_l8",
+                "p13_l9",
+                "p13_l10",
+                "p13_l11",
+                "p13_l12",
+                "p13_l13",
+                "p13_l14",
+                "p13_l15",
+                "p13_l16",
+                "p13_l17",
+                "p13_l18",
+                "p13_l19",
+                "p13_l20"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p10_l5"
+            }
+          },
+          {
+            "id": "unidentified_p14_1",
+            "type": "custom",
+            "page_start": 14,
+            "page_end": 14,
+            "children": [],
+            "text": "[29] Nagaosa, N. et al. Anomalous Hall effect. Rev. Mod. Phys. 82, 1539 (2010).\nhttps://doi.org/10.1103/RevModPhys.82.1539\n[30] Maryenko, D. et al. Observation of anomalous Hall effect in a non-magnetic two-\ndimensional electron system. Nat. Commun. 8, 14777 (2017).\nhttps://doi.org/10.1038/ncomms14777\n[31] Smylie, M. P. et al. Robust odd-parity superconductivity in the doped topological\ninsulator NbxBi2Se3. Phys. Rev. B 96, 115145 (2017).\nhttps://doi.org/10.1103/PhysRevB.96.115145\n14/22",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p14_l1",
+                "p14_l2",
+                "p14_l3",
+                "p14_l4",
+                "p14_l5",
+                "p14_l6",
+                "p14_l7",
+                "p14_l8",
+                "p14_l9"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": true,
+              "intended_parent_id": "heading_p10_l5"
+            }
+          },
+          {
+            "id": "unidentified_p15_1",
+            "type": "custom",
+            "page_start": 15,
+            "page_end": 15,
+            "children": [],
+            "text": "Methods",
+            "label": "Unidentified content",
+            "review_required": true,
+            "attributes": {
+              "custom_type": "unidentified",
+              "method": "unclassified first pass",
+              "observation_ids": [
+                "p15_l1"
+              ],
+              "scope": "Unclassified content in reading order; semantic element boundaries require review",
+              "reading_order_method": "local_geometry_fallback",
+              "page_layout": "single_or_uncertain",
+              "layout_review_required": true,
+              "possible_graphical_content": false,
+              "intended_parent_id": "heading_p10_l5"
+            }
+          },
+          {
+            "id": "heading_p17_l17",
+            "type": "competing_interests",
+            "page_start": 17,
+            "page_end": 17,
+            "children": [
+              {
+                "id": "unidentified_p17_3",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "The authors declare no competing interests.",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l18"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              }
+            ],
+            "title": "Competing interests",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p17_l17"
+              ],
+              "layout_review_required": true
+            }
+          },
+          {
+            "id": "heading_p17_l19",
+            "type": "acknowledgements",
+            "page_start": 17,
+            "page_end": 22,
+            "children": [
+              {
+                "id": "unidentified_p17_4",
+                "type": "custom",
+                "page_start": 17,
+                "page_end": 17,
+                "children": [],
+                "text": "The authors thank Dr. Eric Bohannan for helpful support and discussion on XRD\nmeasurements. The work was partially supported by a grant from NSF DMR-1255607. Materials\nResearch Center at Missouri S&T sponsored in part for pursuing this research.\n17/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p17_l20",
+                    "p17_l21",
+                    "p17_l22",
+                    "p17_l23"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p18_1",
+                "type": "custom",
+                "page_start": 18,
+                "page_end": 18,
+                "children": [],
+                "text": "Figure Captions\nFigure 1. a X-ray diffraction (XRD) patterns of Cr0.2Sb2Te3-δ and Cr0.2Sb2Te3 single crystals,\nshowing the (0 0 n) reflections of the rhombohedral Sb2Te3 structure.\nb Schematic illustration of the rhombohedral unit cell with Cr intercalation between the\nquintuple van der Waals layers.\nc Scanning tunneling microscopy (STM) image of the cleaved surface, highlighting atomic-level\ntopography.\nFigure 2. a Temperature-dependent magnetization (M-T) for samples with x = 0.05, 0.1, 0.15,\nand 0.2, revealing a ferromagnetic transition near 170 K. Lower x samples show suppressed\nmagnetic response but similar transition temperature. b Isothermal DC magnetization of Cr-\ndoped Sb2Te3 measured at 2 K and 5 K with magnetic field applied parallel and perpendicular to\nthe ab plane, showing clear ferromagnetic hysteresis out-of-plane.\nFigure 3. a Longitudinal resistivity (ρₓₓ) as a function of temperature from 5 K to 300 K,\nillustrating metallic behavior with Cr doping. b Hall resistance (Rxy) vs magnetic field for\nCr0.2Sb2Te3 at various temperatures, displaying p-type anomalous Hall effect (AHE) hysteresis\nbelow the Curie temperature. c Hall resistance for Te-deficient Cr0.2Sb2Te3-δ, indicating a\ntransition to n-type behavior.\nFigure 4. ARPES spectra for the two representative samples at liquid nitrogen temperatures\n(109 K): a Cr0.2Sb2Te3, b Cr0.2Sb2Te3-δ. Band dispersions along the Γ-K and Γ-M directions show\nsystematic shifts in Fermi level with doping. Fermi level positions are tuned within a range of\n~0.057 eV, approaching the Dirac point in panel.\n18/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p18_l1",
+                    "p18_l2",
+                    "p18_l3",
+                    "p18_l4",
+                    "p18_l5",
+                    "p18_l6",
+                    "p18_l7",
+                    "p18_l8",
+                    "p18_l9",
+                    "p18_l10",
+                    "p18_l11",
+                    "p18_l12",
+                    "p18_l13",
+                    "p18_l14",
+                    "p18_l15",
+                    "p18_l16",
+                    "p18_l17",
+                    "p18_l18",
+                    "p18_l19",
+                    "p18_l20",
+                    "p18_l21",
+                    "p18_l22"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": false
+                }
+              },
+              {
+                "id": "unidentified_p19_1",
+                "type": "custom",
+                "page_start": 19,
+                "page_end": 19,
+                "children": [],
+                "text": "Figure 1\n19/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p19_l1",
+                    "p19_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p20_1",
+                "type": "custom",
+                "page_start": 20,
+                "page_end": 20,
+                "children": [],
+                "text": "Figure 2\n20/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p20_l1",
+                    "p20_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p21_1",
+                "type": "custom",
+                "page_start": 21,
+                "page_end": 21,
+                "children": [],
+                "text": "Figure 3\n21/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p21_l1",
+                    "p21_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              },
+              {
+                "id": "unidentified_p22_1",
+                "type": "custom",
+                "page_start": 22,
+                "page_end": 22,
+                "children": [],
+                "text": "Figure 4\n22/22",
+                "label": "Unidentified content",
+                "review_required": true,
+                "attributes": {
+                  "custom_type": "unidentified",
+                  "method": "unclassified first pass",
+                  "observation_ids": [
+                    "p22_l1",
+                    "p22_l2"
+                  ],
+                  "scope": "Unclassified content in reading order; semantic element boundaries require review",
+                  "reading_order_method": "local_geometry_fallback",
+                  "page_layout": "single_or_uncertain",
+                  "layout_review_required": true,
+                  "possible_graphical_content": true
+                }
+              }
+            ],
+            "title": "Acknowledgments",
+            "review_required": true,
+            "attributes": {
+              "method": "generic heading typography and spacing",
+              "font_size": 12.0,
+              "observation_ids": [
+                "p17_l19"
+              ],
+              "layout_review_required": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

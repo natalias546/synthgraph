@@ -1,0 +1,1243 @@
+{
+  "body_size": 10.0,
+  "styles": [
+    {
+      "font": "CMBX12",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Correlated charge order intertwined with time-reversal symmetry-breaking nodal",
+        "superconductivity in the dual flat band kagome superconductor CeRu3Si2"
+      ]
+    },
+    {
+      "font": "CMR10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 621,
+      "long_prose_lines": 3,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "examples": [
+        "O. Gerguri,1,2,∗ P. Kral,1,∗ M. Spitaler,1 M. Salamin,3 J.N. Graham,1 A. Doll,1 I. Bia�lo,2 I. Plokhikh,4,5 J.",
+        "Krieger,1 T. J. Hicken,1 J. Oppliger,2 L. Martinelli,2 A. Steppke,1 N. Shepelin,1 R. Khasanov,1 M.v. Zimmermann,6",
+        "B. Monserrat,7 H. Luetkens,1 J. Chang,2 F.O. von Rohr,3 Sun-Woo Kim,7,8,† and Z. Guguchia1,‡"
+      ]
+    },
+    {
+      "font": "CMTI9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 9,
+      "long_prose_lines": 7,
+      "pages": [
+        1,
+        12
+      ],
+      "examples": [
+        "1PSI Center for Neutron and Muon Sciences, 5232 Villigen PSI, Switzerland",
+        "2Physik-Institut, Universit¨at Zu¨rich, Winterthurerstrasse 190, CH-8057 Zu¨rich, Switzerland",
+        "3Department of Quantum Matter Physics, University of Geneva, CH-1211 Geneva, Switzerland"
+      ]
+    },
+    {
+      "font": "CMR9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 192,
+      "long_prose_lines": 39,
+      "pages": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12
+      ],
+      "examples": [
+        "(Dated: March 31, 2026)",
+        "space along the (0 0 1) direction at 8 r.l.u. (reciprocal lattice units), obtained at various temperatures between 10 K ",
+        "K.Themainreflectionsaresplit,duetotheformationoforthorhombicdomains. Arrowsindicatethereciprocallatticevectors."
+      ]
+    },
+    {
+      "font": "CMBX9",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 40,
+      "long_prose_lines": 21,
+      "pages": [
+        1,
+        2,
+        4,
+        7,
+        8,
+        9,
+        11
+      ],
+      "examples": [
+        "Kagomematerialsprovideapowerfulplatformforexploringhowflatelectronicbands",
+        "promotesymmetry-breakingquantumstates, yetstudieshavesofarfocusedmainlyon",
+        "kagome-derived d-electron flat bands. In this paper, we introduce CeRu3Si2, a kagome"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "6202",
+        "82",
+        "1v80472.3062:viXra"
+      ]
+    },
+    {
+      "font": "Times-Roman",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "raM",
+        "]noc-rpus.tam-dnoc["
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 13.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "1 0 K",
+        "7 0 K",
+        "3 0 K 5 0 K"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 15.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "H i n ( H",
+        ", K , 8 ) [ r . l . u ]"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 0.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 120,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "]",
+        "u",
+        "."
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 1.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "b"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 15.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "a b",
+        "d e",
+        "g"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "B r a g g",
+        "C O - I I",
+        "a * C O"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 33,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        5,
+        8
+      ],
+      "examples": [
+        "a Parent structure (P6/mmm) b",
+        "Ce",
+        "Ru"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 6.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "y",
+        "y y"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 5.9,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "x",
+        "x x"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 7.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "d e",
+        "c",
+        "f"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ")Ve(",
+        ")Ve("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "ygrenE",
+        "ygrenE",
+        ")Vem("
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Ru-d Ce-f",
+        "CO",
+        "no CO-II"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Ru-d",
+        "Ce-f",
+        "Si"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 6.9,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Ru-dxy /dx2-y2 Ru-dxz /dyz Ru-dz2 Ce-f"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 45,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "8 6",
+        "6 5",
+        "4 3"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�� c �"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "(��"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 9.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "��",
+        "��",
+        "��"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�",
+        "�������� mc �"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5,
+        8
+      ],
+      "examples": [
+        "�������������",
+        "K 3 (�/",
+        "T (�"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "����"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 3.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.2,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "( a ) ( c ) ( e ) 1 .2",
+        "( b ) ( d ) ( f )"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "T *",
+        "T * T *"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "0 T",
+        "0 .0 5 T",
+        "0 .2 5 T"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "T c ,o n s e t 0 .1 5 T",
+        "T c ,z e ro 0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "2 0",
+        "M R",
+        "1 0"
+      ]
+    },
+    {
+      "font": "Symbol",
+      "size": 9.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "ρ"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "2 1 6 0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "1 5 0 5 9 1 4 1 8 μ 0 H c 2"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 7.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "T c , o n s e t N o r m . �"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 14.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 30,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7
+      ],
+      "examples": [
+        "1 . 0",
+        "0 . 8",
+        "0 . 6"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 13.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "( b )",
+        "( a )",
+        "( c )"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 0.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7
+      ],
+      "examples": [
+        "P",
+        "T",
+        "T"
+      ]
+    },
+    {
+      "font": "Symbol",
+      "size": 14.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7
+      ],
+      "examples": [
+        "μ",
+        "Δ μ"
+      ]
+    },
+    {
+      "font": "Symbol",
+      "size": 0.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "μ",
+        "Δ",
+        "Γ"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 4.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "�"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 14.8,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "T"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "T R S B"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 13.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "6",
+        "4",
+        "2"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 13.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 13,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0 5 0 1 0 0 1 5 0 2 0 0",
+        "8 K",
+        "2 5 K"
+      ]
+    },
+    {
+      "font": "Symbol",
+      "size": 4.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        ")",
+        "(",
+        ")"
+      ]
+    },
+    {
+      "font": "Symbol",
+      "size": 2.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Β(",
+        "Τ("
+      ]
+    },
+    {
+      "font": "Symbol",
+      "size": 4.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Κ051",
+        "Κ032"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 0.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        "B",
+        "2-",
+        ")"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 13.8,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "T",
+        "T"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 37,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        8
+      ],
+      "examples": [
+        "2",
+        "*",
+        "1"
+      ]
+    },
+    {
+      "font": "CMMI9",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "T1∗."
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 13.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "L a R u 3 S i 2",
+        "N o d e l e s s",
+        "Y R u 3 S i 2"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 12.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "T T R S B ( K )"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 12.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "( a )",
+        "( b )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 14.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "� - 1"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 10.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "H T F"
+      ]
+    },
+    {
+      "font": "CMEX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        7,
+        10,
+        11
+      ],
+      "examples": [
+        "�",
+        "� 2 � σ2t2 �",
+        "⟨B⟩ = � A s,i B int,s,i (2)"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 9.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "� � ��",
+        "� � ��",
+        "� � ��"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "0 . 2 5 K 1 . 6 K",
+        "C e R u 3 S i 2",
+        "N o r m a l S t a t e"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 9.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "T i m e ( � � )"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.3,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "( a ) ( c )",
+        "( e )",
+        "( f )"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "( b ) 1 . 6 K ( d )"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "s �",
+        "�"
+      ]
+    },
+    {
+      "font": "Arial-ItalicMT",
+      "size": 9.4,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "T",
+        "T"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "c",
+        "c"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "��"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 2.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "��"
+      ]
+    },
+    {
+      "font": "SegoeUISymbol",
+      "size": 0.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "×"
+      ]
+    },
+    {
+      "font": "unknown",
+      "size": 1.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "��"
+      ]
+    },
+    {
+      "font": "CMR6",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "eff"
+      ]
+    },
+    {
+      "font": "CMBX10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        10,
+        11
+      ],
+      "examples": [
+        "First-principles calculations: We performed den-",
+        "Magnetotransport measurements: Magneto-",
+        "Muon Spin Rotation Experiments:"
+      ]
+    },
+    {
+      "font": "CMMI7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "TF s,i 2 µ int,s,i",
+        "As,1 + As,2",
+        "γ2 A + A i µ int,s,i"
+      ]
+    },
+    {
+      "font": "CMR7",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "i=0",
+        "2",
+        "i=0"
+      ]
+    },
+    {
+      "font": "CMMI10",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "σ SC (0, ∆ 0,i ) π 0 ∆(T,φ) ∂E E2 − ∆ i (T, φ)2"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

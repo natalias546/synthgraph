@@ -1,0 +1,347 @@
+{
+  "body_size": 9.0,
+  "styles": [
+    {
+      "font": "Corbel2",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "www.nature.com/scientificreports",
+        "www.nature.com/scientificreports/",
+        "www.nature.com/scientificreports/"
+      ]
+    },
+    {
+      "font": "Corbel-Bold",
+      "size": 26.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "OPEN Enhancement of superconductivity",
+        "and phase diagram of Ta‑doped",
+        "Kagome superconductor CsV3Sb5"
+      ]
+    },
+    {
+      "font": "Corbel-Bold",
+      "size": 10.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 1,
+      "pages": [
+        1,
+        2,
+        4
+      ],
+      "examples": [
+        "Jinjin Liu 1,4, Qing Li 2, Yongkai Li 1,4,5, Xinwei Fan 2, Jun Li 3*, Peng Zhu 1,4,5, Hanbin Deng 6,",
+        "Jia‑Xin Yin 6, Huaixin Yang 3, Jianqi Li 3, Hai‑Hu Wen 2* & Zhiwei Wang 1,4,5*",
+        "Experiments"
+      ]
+    },
+    {
+      "font": "Corbel-Bold",
+      "size": 9.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 13,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Kagome superconductors AV3Sb5 (A=K, Rb, and Cs) have attracted enormous interest due to",
+        "the coexistence of charge density wave (CDW) order, unconventional superconductivity (SC) and",
+        "anomalous Hall effect (AHE). In this paper, we reported an intensive investigation on Cs(V1−xTax)3Sb5"
+      ]
+    },
+    {
+      "font": "MinionPro-Regular",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 200,
+      "long_prose_lines": 182,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "The newly discovered Kagome superconductor AV3Sb5 (A=K, Rb, Cs) family attracted tremendous attention",
+        "because it is considered to be a good platform for studying electron correlation, lattice geometry and",
+        "nontrivial band topology. Different kinds of techniques have already revealed that this material exhibits many"
+      ]
+    },
+    {
+      "font": "Corbel2",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 4,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Centre for Quantum Physics, Key Laboratory of Advanced Optoelectronic Quantum Architecture and",
+        "of China. 2National Laboratory of Solid State Microstructures and Department of Physics, Collaborative",
+        "China. 3Beijing National Laboratory for Condensed Matter Physics, Institute of Physics, Chinese Academy"
+      ]
+    },
+    {
+      "font": "Corbel",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 5,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Measurement (MOE), School of Physics, Beijing Institute of Technology, Beijing 100081, People’s Republic",
+        "Innovation Center of Advanced Microstructures, Nanjing University, Nanjing 210093, People’s Republic of",
+        "of Sciences, Beijing 100190, People’s Republic of China. 4Beijing Key Lab of Nanophotonics and Ultrafine"
+      ]
+    },
+    {
+      "font": "Corbel",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 1",
+        "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 2",
+        "Scientific Reports | (2024) 14:9580 | https://doi.org/10.1038/s41598-024-59518-1 3"
+      ]
+    },
+    {
+      "font": "Corbel3",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Vol.:(0123456789)"
+      ]
+    },
+    {
+      "font": "MinionPro-It",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Crystal growth"
+      ]
+    },
+    {
+      "font": "Corbel-Bold",
+      "size": 11.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        7,
+        8
+      ],
+      "examples": [
+        "Discussion",
+        "Conclusions",
+        "References"
+      ]
+    },
+    {
+      "font": "Corbel2",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "Vol:.(1234567890)",
+        "Vol.:(0123456789)",
+        "Vol:.(1234567890)"
+      ]
+    },
+    {
+      "font": "MinionPro-Bold",
+      "size": 7.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "Empirical formula",
+        "Atom",
+        "x/a y/b z/c U (eq)"
+      ]
+    },
+    {
+      "font": "MinionPro-Regular",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 43,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        4
+      ],
+      "examples": [
+        "Formula weight (g/mol)",
+        "Temperature",
+        "Crystal system"
+      ]
+    },
+    {
+      "font": "MinionPro-Bold",
+      "size": 4.5,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Cs(V0.86Ta0.14)3Sb5"
+      ]
+    },
+    {
+      "font": "MinionPro-Regular",
+      "size": 5.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Cs(V0.86 0.14 3 5"
+      ]
+    },
+    {
+      "font": "MTSYN",
+      "size": 9.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "="
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Received: 10 January 2024; Accepted: 11 April 2024"
+      ]
+    },
+    {
+      "font": "MinionPro-Regular",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 70,
+      "long_prose_lines": 44,
+      "pages": [
+        7,
+        8
+      ],
+      "examples": [
+        "1. Ortiz, B. R. et al. New kagome prototype materials: Discovery of KV3Sb5, RbV3Sb5, and CsV3Sb5. Phys. Rev. Mater. 3, 0",
+        "2. Ortiz, B. R. et al. Superconductivity in the Z2 kagome metal KV3Sb5. Phys. Rev. Mater. 5, 034801 (2021).",
+        "3. Yang, S. Y. et al. Giant, unconventional anomalous Hall effect in the metallic frustrated magnet candidate, KV3Sb5. S"
+      ]
+    },
+    {
+      "font": "MinionPro-It",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "npj Quantum Mater. 7, 30 (2022).",
+        "Quantum Mater. 7, 49 (2022)."
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

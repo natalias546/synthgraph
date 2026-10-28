@@ -1,0 +1,199 @@
+{
+  "body_size": 12.0,
+  "styles": [
+    {
+      "font": "Roboto-Regular",
+      "size": 24.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Synthesis of ultra pure Co3Sn2S2 crystals"
+      ]
+    },
+    {
+      "font": "Roboto-Regular",
+      "size": 12.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 532,
+      "long_prose_lines": 390,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "examples": [
+        "Hong-Jun Gao",
+        "Institute of Physics https://orcid.org/0000-0001-9323-1307",
+        "Senhao Lv"
+      ]
+    },
+    {
+      "font": "DejaVuMathTeXGyre-Regular",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 20,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "examples": [
+        "Page 1/20",
+        "Page 2/20",
+        "Page 3/20"
+      ]
+    },
+    {
+      "font": "Roboto-Regular",
+      "size": 18.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        3,
+        10,
+        11,
+        12,
+        15,
+        20
+      ],
+      "examples": [
+        "Abstract",
+        "Full Text",
+        "Methods"
+      ]
+    },
+    {
+      "font": "MathJax_Math-Italic",
+      "size": 14.3,
+      "bold": false,
+      "italic": true,
+      "line_count": 10,
+      "long_prose_lines": 0,
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "ρ /ρ",
+        "ρ",
+        "ρ"
+      ]
+    },
+    {
+      "font": "MathJax_Main-Regular",
+      "size": 10.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "−ρ"
+      ]
+    },
+    {
+      "font": "MathJax_Math-Italic",
+      "size": 10.7,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "σ = yx"
+      ]
+    },
+    {
+      "font": "MathJax_Math-Italic",
+      "size": 7.1,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "ρ2yx+ρ2xx"
+      ]
+    },
+    {
+      "font": "MathJax_Math-Italic",
+      "size": 12.2,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "σA"
+      ]
+    },
+    {
+      "font": "MathJax_Math-Italic",
+      "size": 14.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "ρ ρ ρA = (aρ + bρ2 ) ∙ M"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

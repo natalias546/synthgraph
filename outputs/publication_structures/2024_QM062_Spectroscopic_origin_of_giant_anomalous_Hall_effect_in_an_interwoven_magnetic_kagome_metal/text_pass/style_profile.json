@@ -1,0 +1,555 @@
+{
+  "body_size": 10.6,
+  "styles": [
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 12.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 33,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        7,
+        8,
+        9,
+        10,
+        14,
+        16,
+        17,
+        18,
+        19,
+        21,
+        22,
+        24,
+        27,
+        29,
+        34,
+        36,
+        37,
+        40,
+        41,
+        42
+      ],
+      "examples": [
+        "Spectroscopic origin of giant anomalous Hall effect in an interwoven magnetic",
+        "kagome metal",
+        "Abstract"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 666,
+      "long_prose_lines": 576,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "examples": [
+        "Erjian Cheng1,#,*, Kaipu Wang2,#, Yiqing Hao3,#, Wenqing Chen4,#, Hengxin Tan5,#, Zongkai Li2,#,",
+        "Meixiao Wang2, Wenli Gao6, Di Wu6, Shuaishuai Sun7, Tianping Ying7, Simin Nie8, Yiwei Li9,",
+        "Walter Schnelle1, Houke Chen10, Xingjiang Zhou6,7, Ralf Koban1, Yulin Chen2,10, Binghai Yan5, Yi-"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 10.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 28,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        19
+      ],
+      "examples": [
+        "1Max Planck Institute for Chemical Physics of Solids, 01187 Dresden, Germany",
+        "2School of Physical Science and Technology, ShanghaiTech Laboratory for Topological Physics,",
+        "ShanghaiTech University, 201210 Shanghai, China"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 10.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        19
+      ],
+      "examples": [
+        "10Department of Physics, University of Oxford, Oxford OX1 3PU, UK",
+        "10Department of Physics, University of Oxford, Oxford OX1 3PU, UK"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 10.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 54,
+      "long_prose_lines": 23,
+      "pages": [
+        3,
+        5,
+        6,
+        9,
+        10,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "examples": [
+        "Interweaved structure, magnetic properties and giant AHC in TbTi3Bi4",
+        "Electronic band folding and large quasi-1D hybridization gap in TbTi3Bi4",
+        "Spin-density-wave (SDW) order and magnetic structure of TbTi3Bi4"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 7.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 20,
+      "long_prose_lines": 0,
+      "pages": [
+        4,
+        7,
+        8
+      ],
+      "examples": [
+        "𝑦𝑥 𝑦𝑥 𝑦𝑥 0 0 𝑦𝑥 𝑦𝑥 0 0",
+        "𝐤𝑠 𝑖 𝐤𝑠 𝐪",
+        "𝐤 𝐤+𝐪𝑠 2 𝐤𝑠′ K"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 0,
+      "pages": [
+        7,
+        8
+      ],
+      "examples": [
+        "𝐻 = ∑ 𝜖𝐤𝑐𝐤†𝑠𝑐𝐤𝑠 + 𝐽𝐾 ∑ 𝑺𝑖 ⋅ 𝒔𝑖 = ∑ 𝜖𝐤𝑐𝐤†𝑠𝑐𝐤𝑠 + 𝐽𝐾 ∑ 𝑺𝐪 ⋅ 𝒔−𝐪, (1)",
+        "𝐽𝐾𝑀",
+        "𝐻 = ∑ (𝜖𝐤"
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 9.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "𝐐 𝑠𝑐†",
+        ")𝜓𝐤s",
+        "𝐤s 2 2"
+      ]
+    },
+    {
+      "font": "Cambria",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "which predicts a hybridization gap Δ=2|ℎ|="
+      ]
+    },
+    {
+      "font": "CambriaMath",
+      "size": 6.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "𝐾",
+        "𝐵"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-ItalicMT",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        10
+      ],
+      "examples": [
+        "Nat. Commun. 12, 317 (2021)."
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 14.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "Acknowledgments",
+        "Author Contributions",
+        "Competing interests"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPS-BoldMT",
+      "size": 10.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 1,
+      "pages": [
+        21,
+        23,
+        25,
+        36,
+        39
+      ],
+      "examples": [
+        "density waves and (b) their driving mechanisms. (i) For the AV3Sb5 (A = K, Rb, Cs) systems, a",
+        "current applied along the a and b axis, respectively. (a,b) Longitudinal resistivity at various",
+        "TbTi3Bi4 measured with LH polarization at 6.3 K. (a) The ARPES intensity plots of TbTi3Bi4"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 11.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        21
+      ],
+      "examples": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        21
+      ],
+      "examples": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        21
+      ],
+      "examples": [
+        "Q"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        21
+      ],
+      "examples": [
+        "∆CDW"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.9,
+      "bold": true,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        22
+      ],
+      "examples": [
+        "a",
+        "c",
+        "b"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 6.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        23
+      ],
+      "examples": [
+        "a b c",
+        "d e f"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.4,
+      "bold": true,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        29
+      ],
+      "examples": [
+        "a",
+        "e",
+        "b"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 8,
+      "long_prose_lines": 0,
+      "pages": [
+        29
+      ],
+      "examples": [
+        ")Å(k1- x",
+        ")Å(k1- x",
+        ")Å(k1- x"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 6.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 68,
+      "long_prose_lines": 0,
+      "pages": [
+        29
+      ],
+      "examples": [
+        "0",
+        "0",
+        "-0"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        29
+      ],
+      "examples": [
+        "E F",
+        "E F"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 21,
+      "long_prose_lines": 0,
+      "pages": [
+        29
+      ],
+      "examples": [
+        "34eV",
+        "6.3K",
+        "34eV"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 2.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        29
+      ],
+      "examples": [
+        "x k",
+        "x k"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 8.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        40
+      ],
+      "examples": [
+        "a b c"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 8.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        40
+      ],
+      "examples": [
+        "40mV -100mV 40mV",
+        "1nm 1nm 1nm"
+      ]
+    },
+    {
+      "font": "ArialMT",
+      "size": 5.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        40
+      ],
+      "examples": [
+        "QBragg QBragg QBragg",
+        "Qsdw Qsdw Qsdw",
+        "Qrec Qrec"
+      ]
+    },
+    {
+      "font": "Arial-BoldMT",
+      "size": 9.7,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        41
+      ],
+      "examples": [
+        "a b",
+        "c d"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

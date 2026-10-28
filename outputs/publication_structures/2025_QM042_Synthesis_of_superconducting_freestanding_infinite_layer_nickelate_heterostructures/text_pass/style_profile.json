@@ -1,0 +1,1800 @@
+{
+  "body_size": 8.2,
+  "styles": [
+    {
+      "font": "NatureTitlepiece-Bold",
+      "size": 18.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "nature synthesis"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Medium",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 18,
+      "long_prose_lines": 0,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "Article https://doi.org/10.1038/s44160-024-00714-2",
+        "Nature Synthesis | Volume 4 | May 2025 | 573–581 573",
+        "Article https://doi.org/10.1038/s44160-024-00714-2"
+      ]
+    },
+    {
+      "font": "Harding-Bold",
+      "size": 26.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Synthesis of superconducting freestanding",
+        "infinite-layer nickelate heterostructures on",
+        "the millimetre scale"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Medium",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Received: 26 February 2024 Yonghun Lee 1,2,8",
+        "Accepted: 29 November 2024",
+        "Check for updates"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Semibold",
+      "size": 9.2,
+      "bold": true,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        ", Xin Wei 1,3,8 , Yijun Yu 1,2, Lopa Bhatt 4, Kyuho Lee1,3,6,",
+        "Berit H. Goodge 4,5,7, Shannon P. Harvey1,2, Bai Yang Wang1,3,",
+        "David A. Muller 4,5, Lena F. Kourkoutis 4,5, Wei-Sheng Lee 1, Srinivas Raghu1,3"
+      ]
+    },
+    {
+      "font": "TimesNewRomanPSMT",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "Published online: 10 January 2025 & Harold Y. Hwang"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Semibold",
+      "size": 5.6,
+      "bold": true,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1,2"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 10.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 0,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "The development of superconductivity in infinite-layer nickelates through",
+        "hole-doping relies on the controlled synthesis of Ni in a high oxidation",
+        "state, followed by topotactic reduction to a very low oxidation state. So"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 8.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 367,
+      "long_prose_lines": 29,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "examples": [
+        "In recent years, the application of soft chemistry techniques to oxide",
+        "thinfilmsandheterostructureshasopenedpathwaysforsynthesizing",
+        "metastable materials and establishing unique sample geometries."
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular",
+      "size": 7.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 5,
+      "pages": [
+        1
+      ],
+      "examples": [
+        "1Stanford Institute for Materials and Energy Sciences, SLAC National Accelerator Laboratory, Menlo Park, CA, USA. 2Depar",
+        "Stanford University, Stanford, CA, USA. 3Department of Physics, Stanford University, Stanford, CA, USA. 4School of Appli",
+        "Cornell University, Ithaca, NY, USA. 5Kavli Institute at Cornell for Nanoscale Science, Cornell University, Ithaca, NY, "
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black2",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4
+      ],
+      "examples": [
+        "a b c",
+        "a"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "SrTiO 3 SrTiO 3",
+        "SrTiO SrTiO",
+        "SrTiO 3 SrTiO 3"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Nd Sr NiO Nd Sr NiO"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular5",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "0.8 0.2 3 CaH 0.8 0.2 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular10",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular10",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "reduction Liftoff"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular4",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "3 3"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular2",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Sr 2 Ca 1 Al 2 O 6 Sr 2 Ca 1 Al 2 O 6"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "SrTiO",
+        "substrate SrTiO3",
+        "substrate"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular3",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "3"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black8",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "e f g"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular13",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "0.4 nm",
+        "0.4 nm"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular16",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "[10] [10]"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular17",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "[00]"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular6",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "–0.4 nm",
+        "–0.4 nm"
+      ]
+    },
+    {
+      "font": "HardingText-Bold",
+      "size": 7.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "examples": [
+        "Fig.1|Schematicdiagramsillustratingthesynthesisoffreestandinginfinite-",
+        "layernickelateheterostructuresandrepresentativeimagesofthesampleat",
+        "Fig.2|Structuralcharacterizationofnickelateheterostructureson"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 63,
+      "long_prose_lines": 9,
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "examples": [
+        "varioussteps.a,TheSTO/Nd0.80Sr0.20NiO3/STO/SCAOheterostructuregrownon",
+        "anSTOsubstrate.b,Topochemicalreduction,selectivelyreducingthenickelate",
+        "layer.c,Liftoff.PolymersupportsareusedthatcompriseasheetofPDMS"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black6",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4
+      ],
+      "examples": [
+        "d",
+        "d"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular12",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Polymer support"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular8",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        4
+      ],
+      "examples": [
+        "Nd 0.8 Sr 0.2 NiO 2 R su e p m p o o v r e t Nd 0.8 Sr 0.2 NiO 2",
+        "Nd Sr NiO"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular9",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Target substrate",
+        "Target substrate"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "h"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular7",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Membrane"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular11",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        2
+      ],
+      "examples": [
+        "Al dot"
+      ]
+    },
+    {
+      "font": "HardingText-Regular",
+      "size": 8.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 1,
+      "pages": [
+        2,
+        4,
+        6,
+        7
+      ],
+      "examples": [
+        "nickelate heterostructures as a viable platform to probe and manipu-",
+        "comparison, we also studied freestanding heterostructures synthe-",
+        "in Fig. 1g shows a step-and-terrace morphology, consistent with the"
+      ]
+    },
+    {
+      "font": "HardingText-Bold",
+      "size": 10.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 16,
+      "long_prose_lines": 0,
+      "pages": [
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "examples": [
+        "Synthesisstrategiesforfreestanding",
+        "heterostructures",
+        "Growth,topochemicalreductionand"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 37,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "20 25 30 35 40 45 50",
+        "8.5",
+        "9.5"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 14,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "7.5 STO (103)",
+        "(103)",
+        "(103)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 2.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 11,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        ") 1–",
+        ") 1–",
+        "]).u.a("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "mn(",
+        "mn(",
+        "mn("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic",
+      "size": 5.3,
+      "bold": false,
+      "italic": true,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Q",
+        "Q",
+        "Q"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 1.8,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "]100[",
+        "]100[",
+        "]100["
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black9",
+      "size": 8.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "a *",
+        "b *",
+        "c *"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 3.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 7,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "ytisnetni[gol",
+        "log[intensity",
+        "log[intensity"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "*",
+        "2θ (deg)",
+        "Q (nm–1) Q (nm–1)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 8.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "*"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black9",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "e f",
+        "g h"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular18",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "Nd0.80Sr0.20NiO2",
+        "Nd0.80Sr0.20NiO3",
+        "Nd0.85Sr0.15NiO2"
+      ]
+    },
+    {
+      "font": "HardingText-Bold",
+      "size": 7.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        3
+      ],
+      "examples": [
+        "substratesandinfreestandingform. a,XRDθ–2θsymmetricscanand"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular39",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "SrTiO cap"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular39",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "3"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular8",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "0.8 0.2 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular20",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "SrTiO buffer"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular20",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "3"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic2",
+      "size": 6.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "c"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular19",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "5 nm"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic5",
+      "size": 6.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "b"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular21",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "3 nm"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic6",
+      "size": 6.5,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "a"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black5",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "b c"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular22",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Concentration",
+        "Ti Ni Nd (a.u.)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular27",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "0 1",
+        "0"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular28",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Sim. ADF Ti-L 2,3 Nd-M 4,5",
+        "Sim. ADF Ti-L Nd-M"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular31",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Top"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular31",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "interface"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular32",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "c"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular29",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "2,3 4,5"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular34",
+      "size": 3.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        ")mn(",
+        ")mn("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular34",
+      "size": 3.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ecnatsiD",
+        "ecnatsiD"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular33",
+      "size": 3.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "Bottom"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular33",
+      "size": 3.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "interface"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular35",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "0.5 nm",
+        "0.5 nm"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular36",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "ε xx 110+ ε xx 110 (%)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular38",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        4
+      ],
+      "examples": [
+        "7.0"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular40",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 44,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "30",
+        "28",
+        "26"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular40",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 5,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "1 mm",
+        "T (K)",
+        "T (K)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular40",
+      "size": 3.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ")Vµ(",
+        "(µV)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular40",
+      "size": 3.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ")V(eR p"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular40",
+      "size": 2.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "Im(Vp)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Black10",
+      "size": 9.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "a",
+        "c",
+        "d"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular41",
+      "size": 3.7,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        ")mc",
+        ")mc",
+        ")mc"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular41",
+      "size": 4.9,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "Ωm(",
+        "Ωm(",
+        "Ωm("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular41",
+      "size": 3.4,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "ρ )mc"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular41",
+      "size": 4.2,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "Ωm("
+      ]
+    },
+    {
+      "font": "Harding-RegularItalic3",
+      "size": 3.1,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "ρ"
+      ]
+    },
+    {
+      "font": "Harding-RegularItalic3",
+      "size": 3.7,
+      "bold": false,
+      "italic": true,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        5
+      ],
+      "examples": [
+        "ρ",
+        "ρ"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular42",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "NGO"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular53",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "25"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular56",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "20"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular57",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "15"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular58",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "10"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular59",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "3.85 3.87 3.89"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular43",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "a (Å)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular44",
+      "size": 2.1,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        ")K("
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic9",
+      "size": 3.6,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "T"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular44",
+      "size": 2.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "tesno,c"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular62",
+      "size": 5.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "3.91"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular45",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "LSAT STO"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular47",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Nd Sr NiO thin film on NGO (this work)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular47",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.85 0.15 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular48",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Nd Sr NiO freestanding from NGO (this work)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular48",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.85 0.15 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular49",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Nd Sr NiO thin film on STO (this work)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular49",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.8 0.2 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular50",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Nd Sr NiO freestanding from STO (this work)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular50",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.8 0.2 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular51",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Nd Sr NiO thin film (ref. 15)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular51",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.85 0.15 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular52",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Nd Sr NiO thin film (ref. 27)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular52",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.8 0.2 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular54",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Pr Sr NiO thin film (ref. 14)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular54",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.8 0.2 2"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular55",
+      "size": 6.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "Pr Sr NiO hydrostatic pressure (ref. 16)"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular55",
+      "size": 4.5,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        6
+      ],
+      "examples": [
+        "0.82 0.18 2"
+      ]
+    },
+    {
+      "font": "HardingText-Semibold",
+      "size": 8.8,
+      "bold": true,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        7
+      ],
+      "examples": [
+        "Thin-film growth",
+        "Topochemical reduction",
+        "Heterostructure liftoff and transfer"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Regular",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 148,
+      "long_prose_lines": 14,
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "examples": [
+        "1. Li, D. et al. Superconductivity in an infinite-layer nickelate. Nature",
+        "572, 624–627 (2019).",
+        "2. Crespin, M., Levitz, P. & Gatineau, L. Reduced forms of LaNiO3"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic10",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 4,
+      "long_prose_lines": 0,
+      "pages": [
+        7,
+        8
+      ],
+      "examples": [
+        "J. Chem. Soc. Faraday Trans. 2 79, 1181–1194 (1983).",
+        "Commun. Mater. 1, 16 (2020).",
+        "J. Appl. Crystallogr. 51, 1745–1751 (2018)."
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Semibold",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "Supplementary information The online version",
+        "Peer review information Nature Synthesis thanks the anonymous"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-Semibold",
+      "size": 8.0,
+      "bold": true,
+      "italic": false,
+      "line_count": 2,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "Correspondence and requests for materialsshould be addressed to",
+        "Reprints and permissions informationis available at"
+      ]
+    },
+    {
+      "font": "GraphikNaturel-RegularItalic10",
+      "size": 8.0,
+      "bold": false,
+      "italic": true,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        8
+      ],
+      "examples": [
+        "Nature Synthesis team."
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}

@@ -1,0 +1,224 @@
+{
+  "source_sha256": "2fdfe305c75b6945417afbe9e1b28cbcf8979ff5bde2b449f9b85ab8a1332c81",
+  "schema_sha256": "9b756d2cb803c07756ce13e73f0caae03d68a972bbe6506c6a8a34c380e94060",
+  "validation": {
+    "schema_valid": true,
+    "page_ranges_valid": true,
+    "unique_ids": true,
+    "nodes": 199
+  },
+  "coverage_complete": true,
+  "unowned_blocks": [],
+  "multiply_owned_blocks": {},
+  "observed_blocks": 632,
+  "unidentified_nodes": [
+    "x000016",
+    "x000017",
+    "x000018",
+    "x000019",
+    "x000020",
+    "x000022",
+    "x000024",
+    "x000026",
+    "x000027",
+    "x000028",
+    "x000030",
+    "x000032",
+    "x000034",
+    "x000036",
+    "x000039",
+    "x000041",
+    "x000043",
+    "x000045",
+    "x000047",
+    "x000049",
+    "x000050",
+    "x000052",
+    "x000054",
+    "x000056",
+    "x000058",
+    "x000060",
+    "x000062",
+    "x000063",
+    "x000064",
+    "x000066",
+    "x000068",
+    "x000069",
+    "x000072",
+    "x000074",
+    "x000076",
+    "x000078",
+    "x000080",
+    "x000082",
+    "x000084",
+    "x000086",
+    "x000088",
+    "x000090",
+    "x000092",
+    "x000094",
+    "x000097",
+    "x000098",
+    "x000100",
+    "x000102",
+    "x000103",
+    "x000105",
+    "x000108",
+    "x000110",
+    "x000111",
+    "x000114",
+    "x000116",
+    "x000118",
+    "x000120",
+    "x000121",
+    "x000123",
+    "x000125",
+    "x000127",
+    "x000129",
+    "x000130",
+    "x000133",
+    "x000134",
+    "x000136",
+    "x000138",
+    "x000139",
+    "x000140",
+    "x000141",
+    "x000142",
+    "x000143",
+    "x000145",
+    "x000148",
+    "x000150",
+    "x000153",
+    "x000155",
+    "x000157",
+    "x000159",
+    "x000162",
+    "x000165",
+    "x000167",
+    "x000169",
+    "x000170",
+    "x000172",
+    "x000174",
+    "x000176",
+    "x000177",
+    "x000178",
+    "x000179",
+    "x000180",
+    "x000181",
+    "x000182",
+    "x000183"
+  ],
+  "type_counts": {
+    "article": 1,
+    "front_matter": 1,
+    "body": 1,
+    "section": 1,
+    "subsection": 1,
+    "custom": 94,
+    "subsubsection": 10,
+    "paragraph": 74,
+    "figure": 5,
+    "caption": 5,
+    "image": 5,
+    "back_matter": 1
+  },
+  "layout": [
+    {
+      "page": 1,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 73
+    },
+    {
+      "page": 2,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 74
+    },
+    {
+      "page": 3,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 59
+    },
+    {
+      "page": 4,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 88
+    },
+    {
+      "page": 5,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 65
+    },
+    {
+      "page": 6,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 53
+    },
+    {
+      "page": 7,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "mixed",
+      "band_count": 1,
+      "band_layouts": [
+        "mixed"
+      ],
+      "raw_line_count": 64
+    },
+    {
+      "page": 8,
+      "method": "local_geometry_fallback",
+      "review_required": true,
+      "layout": "two_column",
+      "band_count": 1,
+      "band_layouts": [
+        "two_column"
+      ],
+      "raw_line_count": 24
+    }
+  ],
+  "independently_verified_correct": false,
+  "reference_numbers": [],
+  "citations": {
+    "entries": 0,
+    "field_counts": {},
+    "partial_entries": 0,
+    "all_require_review": true,
+    "policy": "Preserve raw text; parse literal spans; keep unsupported syntax unresolved; no bibliographic existence verification."
+  },
+  "association_policy": "Explicit references propose a parent; ambiguity stays unresolved; all relations require review."
+}

@@ -1,0 +1,156 @@
+{
+  "body_size": 11.3,
+  "styles": [
+    {
+      "font": "F2",
+      "size": 11.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 15,
+      "long_prose_lines": 1,
+      "pages": [
+        1,
+        2,
+        3,
+        8,
+        11,
+        12,
+        13,
+        14,
+        17
+      ],
+      "examples": [
+        "Synthesis of Bulk Superconducting LiNbO2 Crystals through CaH2 Reduction",
+        "1. Introduction",
+        "2. Results"
+      ]
+    },
+    {
+      "font": "F3",
+      "size": 11.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 37,
+      "long_prose_lines": 19,
+      "pages": [
+        1,
+        17
+      ],
+      "examples": [
+        "Ryan Paxson1,2,*, Stephanie J. Hong3, Bicky S. Moirangthem6, Parham Kabirifar5, Saya Takeuchi1,",
+        "Tianyu Li3, Chih-Yu Lee1, Haotong Liang1, Keenan Avers2, Kamal R. Joshi6, Amlan Datta6, Makariy",
+        "A. Tanatar6, Shanta Saha2, Joseph A. Dura4, Peter Zavalij3, Johnpierre Paglione2, Ruslan Prozorov6,"
+      ]
+    },
+    {
+      "font": "F1",
+      "size": 11.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 483,
+      "long_prose_lines": 404,
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "examples": [
+        "1",
+        "Hydride assisted reduction has proven to be an effective method to tune the properties of metal",
+        "oxides.[1,2] Through anion stoichiometry manipulation, e.g. inserting H- ions and removing oxygen"
+      ]
+    },
+    {
+      "font": "F4",
+      "size": 8.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 6,
+      "long_prose_lines": 0,
+      "pages": [
+        11,
+        13
+      ],
+      "examples": [
+        "𝜏 ≈ 𝐿�/4𝐷",
+        "� 𝑘 𝑇",
+        "�"
+      ]
+    },
+    {
+      "font": "F4",
+      "size": 9.6,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "𝐸�"
+      ]
+    },
+    {
+      "font": "F4",
+      "size": 11.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 3,
+      "long_prose_lines": 0,
+      "pages": [
+        11
+      ],
+      "examples": [
+        "𝐷 = 𝐷 exp(− )",
+        "𝐸� 1 1",
+        "𝐷 /𝐷 = exp[− � − �]"
+      ]
+    },
+    {
+      "font": "F4",
+      "size": 7.3,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        13
+      ],
+      "examples": [
+        "��"
+      ]
+    },
+    {
+      "font": "F1",
+      "size": 15.0,
+      "bold": false,
+      "italic": false,
+      "line_count": 1,
+      "long_prose_lines": 0,
+      "pages": [
+        17
+      ],
+      "examples": [
+        "Supporting Information"
+      ]
+    }
+  ],
+  "method": "Repeated per-page body sizes, style differences, spacing and layout; no fixed font names"
+}
