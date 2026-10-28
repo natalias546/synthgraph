@@ -182,7 +182,26 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
     class PageTables(BaseModel):
         tables: list[TableTranscription]
 
+    class Axis(BaseModel):
+        quantity: str = Field(description="what is plotted, as labelled, e.g. 'resistivity', 'M/H', 'Intensity'")
+        unit: Optional[str] = Field(None, description="unit as labelled, e.g. 'mΩ cm', 'emu/mol Oe', 'a.u.'")
+
+    class Panel(BaseModel):
+        panel: str = Field(description="panel label as printed, e.g. '(a)'; '' if single panel")
+        plot_type: str = Field(description="e.g. line plot, scatter, XRD pattern, ARPES map, micrograph, crystal structure, schematic, photo")
+        x_axis: Optional[Axis] = None
+        y_axis: Optional[Axis] = None
+        series_or_samples: list[str] = Field(default_factory=list, description="legend entries / sample names exactly as printed")
+        conditions: list[str] = Field(default_factory=list, description="conditions printed in the panel, e.g. 'H // c', 'T = 2 K', 'P = 15 GPa'")
+        what_it_shows: str = Field(description="one sentence: which quantity vs which variable, for which samples; NO numeric readings")
+
+    class FigureDescription(BaseModel):
+        panels: list[Panel]
+        materials_printed: list[str] = Field(default_factory=list, description="formulas/material names printed in the figure")
+        summary: str = Field(description="one or two sentences on what the figure documents")
+
     return {
+        "figure_description": FigureDescription,
         "samples_processes": SamplesProcesses,
         "measurements": Measurements,
         "relations": RelationsOut,

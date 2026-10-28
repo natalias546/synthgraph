@@ -67,3 +67,20 @@ def match_key(text: str) -> str:
     text = re.sub(r"\s+", " ", text)
     text = re.sub(r"\s*([-/=(),;:])\s*", r"\1", text)
     return text.strip().casefold()
+
+
+_WORD_END = re.compile(r"^[a-z]{0,4}(tion|sion|ity|ing|ed|ly|ment|ness|ance|ence|ous|ive|able|ible|ical|ure|ism|ist|"
+                       r"ize|ise|ated|ating|ation|ductor|ductivity|ductance|ent|ant|ary|ory|al|er|ic)s?$")
+
+
+def dehyphenate(text: str) -> str:
+    """Repair line-break hyphenation left inside one text block ("depo- sited" -> "deposited"),
+    using the same keep/drop rules as join_lines ("n- type" -> "n-type")."""
+    def fix(m):
+        left, right = m.group(1), m.group(2)
+        keep = (len(left) == 1 or any(ch.isdigit() for ch in left) or any(ch.isupper() for ch in left[1:])
+                or (left.lower() in PRESERVE_HYPHEN_PREFIXES and not _SUFFIX.match(right))
+                # two long fragments, right one not a word ending: a real compound ("temperature-dependent")
+                or (len(left) >= 5 and len(right) >= 5 and not _WORD_END.match(right)))
+        return f"{left}-{right}" if keep else f"{left}{right}"
+    return re.sub(r"\b([A-Za-z0-9]+)- ([a-z][A-Za-z]*)", fix, text)

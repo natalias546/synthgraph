@@ -21,8 +21,8 @@ from .schemas import build_schemas
 from .structure import build_structure
 from .validate import validate_paper
 
-PIPELINE_VERSION = "0.1.0"
-STAGES = ["ingest", "structure", "tables", "pass1", "pass2", "pass3", "validate", "resolve"]
+PIPELINE_VERSION = "0.2.0"
+STAGES = ["ingest", "structure", "visuals", "pass1", "pass2", "pass3", "validate", "resolve"]
 
 
 class Pipeline:
@@ -36,17 +36,40 @@ class Pipeline:
         self.llm = ClaudeExtractor(cfg.model, cfg.cache_dir, load_api_key(cfg.project_root),
                                    max_output_tokens=cfg.max_output_tokens, allow_live_calls=cfg.allow_live_calls,
                                    use_prompt_caching=cfg.use_prompt_caching, mock_responder=mock_responder)
-        self.use_vision_for_tables = cfg.extra.get("use_vision_for_tables", True)
+        self._docling = None
+        if cfg.parser not in ("docling", "pdfplumber"):
+            raise ValueError(f"parser must be 'docling' or 'pdfplumber', not {cfg.parser!r}")
+
+    @property
+    def docling(self):
+        """One Docling converter per Pipeline (its models load once, on first use)."""
+        if self._docling is None:
+            from .docling_ingest import DoclingParser
+            self._docling = DoclingParser(self.cfg.docling)
+        return self._docling
 
     # ------------------------------------------------------------------
     def papers(self) -> list[Path]:
-        return sorted(p for p in self.cfg.papers_dir.glob("*.pdf"))
+        """All PDFs under data/publications/, including subfolders."""
+        return sorted((p for p in self.cfg.papers_dir.rglob("*") if p.is_file() and p.suffix.lower() == ".pdf"),
+                      key=lambda p: p.name.lower())
+
+    def find_papers(self, names) -> list[Path]:
+        """Resolve file names (or stems / paper IDs) to PDFs anywhere under data/publications/."""
+        all_pdfs = self.papers()
+        out, missing = [], []
+        for n in names:
+            hits = [p for p in all_pdfs if n in (p.name, p.stem, paper_id_from_filename(p))]
+            (out.extend(hits) if hits else missing.append(n))
+        if missing:
+            raise FileNotFoundError(f"Not found under {self.cfg.papers_dir}: {missing}")
+        return out
 
     def update_checksums(self) -> dict:
         """Record SHA-256 of every file in data/publications/ in checksums.json (relative paths as keys)."""
         path = self.cfg.checksums_file
         current = read_json(path) if path.exists() and path.read_text(encoding="utf-8").strip() else {}
-        for f in sorted(self.cfg.papers_dir.iterdir()):
+        for f in sorted(self.cfg.papers_dir.rglob("*")):
             if f.is_file() and not f.name.startswith("."):
                 current[f.relative_to(self.cfg.project_root).as_posix()] = sha256_file(f)
         write_json(path, dict(sorted(current.items())))
@@ -83,20 +106,33 @@ class Pipeline:
             return res, fp
 
         pdf_hash = sha256_file(pdf)
-        ing, fp_ing = stage("ingest", {"pdf": pdf_hash}, lambda: ingest_pdf(pdf))
-        if stop_at < 1:
-            return out
-        st, fp_st = stage("structure", {"up": fp_ing}, lambda: build_structure(ing))
+        if self.cfg.parser == "docling":
+            from .docling_ingest import load_docling_document, structure_from_docling
+            ing, fp_ing = stage("ingest", {"pdf": pdf_hash, "parser": "docling", "docling": self.docling.fingerprint()},
+                                lambda: self.docling.convert(pdf, store.dir))
+            if stop_at < 1:
+                return out
+            st, fp_st = stage("structure", {"up": fp_ing},
+                              lambda: structure_from_docling(load_docling_document(store.dir / "docling.json"), ing, pdf))
+        else:
+            ing, fp_ing = stage("ingest", {"pdf": pdf_hash, "parser": "pdfplumber"}, lambda: ingest_pdf(pdf))
+            if stop_at < 1:
+                return out
+            st, fp_st = stage("structure", {"up": fp_ing}, lambda: build_structure(ing))
         if stop_at < 2:
             return out
 
-        def do_tables():
-            if not self.use_vision_for_tables:
-                return {"paragraphs": [], "skipped": True}
-            return {"paragraphs": X.run_table_vision(self.llm, self.schemas, pdf, st, pid, self.system),
+        def do_visuals():
+            if self.cfg.parser == "docling":
+                return X.run_visuals_docling(self.llm, self.schemas, st, store.dir, pid, self.system,
+                                             self.cfg.table_vision, self.cfg.figure_vision)
+            if self.cfg.table_vision == "never":
+                return {"overrides": {}, "added": [], "skipped": True}
+            return {"overrides": {}, "added": X.run_table_vision(self.llm, self.schemas, pdf, st, pid, self.system),
                     "pages": X.table_pages(st)}
-        tb, fp_tb = stage("tables", {"up": fp_st, "model": self.cfg.model, "vision": self.use_vision_for_tables}, do_tables)
-        paragraphs = st["paragraphs"] + tb["paragraphs"]
+        vis, fp_vis = stage("visuals", {"up": fp_st, "model": self.cfg.model, "table_vision": self.cfg.table_vision,
+                                        "figure_vision": self.cfg.figure_vision}, do_visuals)
+        paragraphs = [{**p, **vis["overrides"].get(p["id"], {})} for p in st["paragraphs"]] + vis["added"]
         if stop_at < 3:
             return out
 
