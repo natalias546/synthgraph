@@ -94,7 +94,8 @@ def _group_lines(chars: list[dict], tol: float = 1.2) -> list[list[dict]]:
         else:
             rows.append([c])
     # Split a baseline row at large horizontal gaps (column gutter, table cells), so text
-    # from two columns that happens to share a baseline stays in separate lines.
+    # from two columns that happens to share a baseline stays in separate lines. Nature's
+    # gutter is only ~1.4 em, so the cut sits at 1 em (word spaces stay well below that).
     lines: list[list[dict]] = []
     for row in rows:
         row.sort(key=lambda c: c["x0"])
@@ -102,7 +103,7 @@ def _group_lines(chars: list[dict], tol: float = 1.2) -> list[list[dict]]:
         for c in row[1:]:
             vis = [x for x in cur if x.get("text", "").strip()] or cur
             size = statistics.median(x["size"] for x in vis)
-            if c["x0"] - max(x["x1"] for x in cur) > 1.5 * size:
+            if c["x0"] - max(x["x1"] for x in cur) > 1.0 * size:
                 lines.append(cur)
                 cur = [c]
             else:
@@ -244,6 +245,9 @@ def ingest_pdf(pdf_path: Path) -> dict:
                 pos = next((i for i, b in enumerate(blocks) if b["top"] > t["bbox"][1]), len(blocks))
                 blocks.insert(pos, {"kind": "table", "rows": t["rows"], "top": round(t["bbox"][1], 1),
                                     "bbox": [round(v, 1) for v in t["bbox"]], "flow": "table"})
+            # Stable block IDs, so the structure stage can prove every block is placed exactly once.
+            for i, b in enumerate(blocks):
+                b["id"] = f"p{pno}.b{i}"
             result["pages"].append({
                 "page": pno,
                 "layout": "two_column" if gutter is not None else "single_or_uncertain",

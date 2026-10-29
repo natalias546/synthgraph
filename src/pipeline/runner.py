@@ -21,7 +21,7 @@ from .schemas import build_schemas
 from .structure import build_structure
 from .validate import validate_paper
 
-PIPELINE_VERSION = "0.1.0"
+PIPELINE_VERSION = "0.2.0"  # bump when a stage's code changes its output, so saved stages are redone
 STAGES = ["ingest", "structure", "tables", "pass1", "pass2", "pass3", "validate", "resolve"]
 
 
@@ -40,13 +40,13 @@ class Pipeline:
 
     # ------------------------------------------------------------------
     def papers(self) -> list[Path]:
-        return sorted(p for p in self.cfg.papers_dir.glob("*.pdf"))
+        return sorted(p for p in self.cfg.papers_dir.rglob("*.pdf"))  # PDFs may sit in subfolders
 
     def update_checksums(self) -> dict:
         """Record SHA-256 of every file in data/publications/ in checksums.json (relative paths as keys)."""
         path = self.cfg.checksums_file
         current = read_json(path) if path.exists() and path.read_text(encoding="utf-8").strip() else {}
-        for f in sorted(self.cfg.papers_dir.iterdir()):
+        for f in sorted(self.cfg.papers_dir.rglob("*")):
             if f.is_file() and not f.name.startswith("."):
                 current[f.relative_to(self.cfg.project_root).as_posix()] = sha256_file(f)
         write_json(path, dict(sorted(current.items())))
