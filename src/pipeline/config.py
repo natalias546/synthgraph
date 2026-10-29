@@ -22,6 +22,13 @@ class Config:
     cache_dir: Path | None = None              # data/cache/ (Claude responses + prompts)
     checksums_file: Path | None = None         # checksums.json
 
+    # PDF parsing
+    parser: str = "docling"                    # "docling" (layout model) or "pdfplumber" (heuristic fallback)
+    docling: dict = field(default_factory=dict)  # overrides for docling_ingest.DOCLING_DEFAULTS
+    table_vision: str = "fallback"             # Claude reads table crops: "fallback" (only tables Docling
+                                               # couldn't structure), "always", or "never"
+    figure_vision: bool = False                # Claude describes each figure crop (axes, samples; no values)
+
     # Claude settings
     model: str = "claude-sonnet-5-5"           # cheaper bulk option: claude-haiku-5-5; strongest: claude-opus-5-5
     max_output_tokens: int = 16000
@@ -60,6 +67,10 @@ class Config:
     def fingerprint_fields(self) -> dict:
         """Settings that change extraction results (used for stage skipping)."""
         return {
+            "parser": self.parser,
+            "docling": self.docling,
+            "table_vision": self.table_vision,
+            "figure_vision": self.figure_vision,
             "model": self.model,
             "max_output_tokens": self.max_output_tokens,
             "max_chars_per_call": self.max_chars_per_call,

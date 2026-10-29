@@ -45,6 +45,7 @@ VALUES
 - data_origin: experimental (measured in this work), computed (DFT/simulation/modeling in this work), cited_from_other_work (values quoted from other papers, typically with a citation in the introduction or discussion), unclear.
 - polarity: negated for explicit negatives ("no change in lifetime was observed"), hypothetical for expectations, proposals or predictions ("could reach", "is expected to").
 - Do not read numbers off figures. If text only describes a figure qualitatively, give no numeric value (source_location figure_only_described).
+- Figures appear as "[Figure N | type] caption". A "Figure content" note after it was written by a vision model from the image: use it only to see which quantity was measured on which samples under which conditions, never as a source of numeric values.
 
 ONTOLOGY
 - ontology_class / technique_class / property_class must be one of the allowed labels below. Choose the MOST SPECIFIC label that fits. If none fits, use OTHER and give proposed_*_label (a concise class name). Never force a poor fit.
@@ -73,8 +74,10 @@ def system_prompt(profile: Profile) -> str:
 # ---------------------------------------------------------------------------
 def paragraph_header(p: dict, sections: dict) -> str:
     sec = sections.get(p["section_id"], {})
-    kind = {"caption": " | caption", "table": " | table (parsed from PDF)",
-            "table_transcription": " | table (transcribed from page image)"}.get(p["kind"], "")
+    kind = {"caption": " | caption", "figure": " | figure",
+            "table": " | table" + (" (transcribed from image)" if p.get("text_source") == "claude_vision" else ""),
+            "table_transcription": " | table (transcribed from page image)",
+            "formula": " | formula", "footnote": " | footnote", "list_item": " | list item"}.get(p["kind"], "")
     return f"[{p['id']} | {sec.get('heading', '?')} ({p['role']}) | page {p['page']}{kind}]"
 
 
@@ -153,6 +156,69 @@ def run_table_vision(llm: ClaudeExtractor, schemas: dict, pdf_path: Path, struct
                         "kind": "table_transcription", "page": page, "page_end": page, "text": text,
                         "rows": rows, "unreadable_parts": t["unreadable_parts"], "provenance": "claude_vision"})
     return new
+
+
+TABLE_CROP_TASK = """This image is ONE table cropped from a research paper (its caption may be included).
+Transcribe it into table_label, caption, column_headers and rows. Copy cell contents exactly, including units,
+± values, sub/superscripts (write superscripts as ^{...}, e.g. cm^{-3}) and footnote markers. Repeat merged
+header cells into each column they span. Use '' for empty cells. Put anything unreadable in unreadable_parts."""
+
+FIGURE_TASK = """This image is ONE figure cropped from a materials-science paper. Its caption is: {caption}
+Describe each panel: plot type, axis quantities and units exactly as labelled, legend entries / sample names,
+and printed conditions (field direction, temperature, pressure...). Do NOT read numeric values off the data:
+no peak positions, transition temperatures or magnitudes. Say what each panel documents in one sentence."""
+
+
+def run_visuals_docling(llm: ClaudeExtractor, schemas: dict, structure: dict, paper_dir: Path, paper_id: str,
+                        system: str, table_vision: str = "fallback", figure_vision: bool = False) -> dict:
+    """Claude vision on Docling's crops. Returns {"overrides": {paragraph_id: {...}}, "added": []}.
+
+    Tables: re-transcribe the crop when Docling's structure looks broken ("fallback") or always.
+    Figures: optional description of what each panel shows (no numeric readings)."""
+    overrides = {}
+    paras = {p["id"]: p for p in structure["paragraphs"]}
+    for t in structure.get("tables", []):
+        p = paras[t["paragraph_id"]]
+        want = table_vision == "always" or (table_vision == "fallback" and t.get("needs_vision"))
+        if not want or not t.get("crop") or not (paper_dir / t["crop"]).exists():
+            continue
+        res = llm.ask(f"table_{t['paragraph_id']}", system=system, task=TABLE_CROP_TASK,
+                      schema=schemas["page_tables"], images=[(paper_dir / t["crop"]).read_bytes()],
+                      paper_id=paper_id, max_tokens=8000)
+        if not res["tables"]:
+            continue
+        tt = res["tables"][0]
+        rows = [tt["column_headers"]] + tt["rows"]
+        md = "\n".join("| " + " | ".join(c.replace("\n", " ") for c in r) + " |" for r in rows)
+        cap = p.get("caption") or f"{tt['table_label']}. {tt['caption']}"
+        text = f"{cap}\n{md}" + (f"\nFootnotes: {' '.join(tt['footnotes'])}" if tt["footnotes"] else "")
+        overrides[p["id"]] = {"text": text, "rows": rows, "text_source": "claude_vision",
+                              "docling_text": p["text"], "unreadable_parts": tt["unreadable_parts"]}
+    if figure_vision:
+        skip = {"logo", "signature", "qr_code", "bar_code", "stamp", "icon"}
+        for f in structure.get("figures", []):
+            cls = (f.get("classification") or {}).get("class", "")
+            if not f.get("crop") or cls in skip or not (paper_dir / f["crop"]).exists():
+                continue
+            p = paras[f["paragraph_id"]]
+            res = llm.ask(f"figure_{f['paragraph_id']}", system=system,
+                          task=FIGURE_TASK.format(caption=p.get("caption") or "(none)"),
+                          schema=schemas["figure_description"], images=[(paper_dir / f["crop"]).read_bytes()],
+                          paper_id=paper_id, max_tokens=3000)
+            lines = []
+            for pn in res["panels"]:
+                ax = ""
+                if pn.get("y_axis") or pn.get("x_axis"):
+                    y, x = pn.get("y_axis") or {}, pn.get("x_axis") or {}
+                    ax = f" {y.get('quantity', '?')}{' (' + y['unit'] + ')' if y.get('unit') else ''} vs " \
+                         f"{x.get('quantity', '?')}{' (' + x['unit'] + ')' if x.get('unit') else ''};"
+                extra = (f" samples: {', '.join(pn['series_or_samples'])};" if pn["series_or_samples"] else "") + \
+                        (f" conditions: {', '.join(pn['conditions'])};" if pn["conditions"] else "")
+                lines.append(f"{pn['panel'] or 'single panel'} [{pn['plot_type']}]{ax}{extra} {pn['what_it_shows']}")
+            note = "Figure content (vision model, no values read): " + res["summary"] + " " + " | ".join(lines)
+            overrides[p["id"]] = {**overrides.get(p["id"], {}), "text": p["text"] + "\n" + note,
+                                  "figure_description": res}
+    return {"overrides": overrides, "added": []}
 
 
 # ---------------------------------------------------------------------------
@@ -324,11 +390,19 @@ def main():
     ap.add_argument("--force", nargs="*", default=(), choices=STAGES, help="stages to recompute")
     ap.add_argument("--model", default=None, help="e.g. claude-sonnet-5-5 (default), claude-haiku-5-5, claude-opus-5-5")
     ap.add_argument("--no-live", action="store_true", help="only replay cached Claude responses")
-    ap.add_argument("--no-table-vision", action="store_true", help="skip sending table pages as images")
+    ap.add_argument("--parser", choices=["docling", "pdfplumber"], default="docling",
+                    help="PDF parser: docling layout model (default) or the pdfplumber heuristics")
+    ap.add_argument("--table-vision", choices=["fallback", "always", "never"], default="fallback",
+                    help="send table crops to Claude: only tables Docling couldn't structure (default), all, or none")
+    ap.add_argument("--figure-vision", action="store_true", help="have Claude describe each figure crop (extra cost)")
+    ap.add_argument("--ocr", action="store_true", help="run OCR in Docling (scanned PDFs; slower)")
+    ap.add_argument("--debug-pages", action="store_true",
+                    help="draw detected text/tables/figures/headings on page images (data/extractions/<paper>/debug/)")
     ap.add_argument("--no-export", action="store_true", help="skip writing data/graph/")
     args = ap.parse_args()
 
-    kw = {"allow_live_calls": not args.no_live, "extra": {"use_vision_for_tables": not args.no_table_vision}}
+    kw = {"allow_live_calls": not args.no_live, "parser": args.parser, "table_vision": args.table_vision,
+          "figure_vision": args.figure_vision, "docling": {"do_ocr": True} if args.ocr else {}}
     if args.model:
         kw["model"] = args.model
     cfg = Config(project_root=root, **kw)
@@ -338,9 +412,19 @@ def main():
     print("ontology:", cfg.ontology_file.name, "| Claude:", pl.llm.status)
     for w in pl.profile.warnings:
         print("WARNING:", w)
-    papers = [cfg.papers_dir / p for p in args.papers] if args.papers else None
+    papers = pl.find_papers(args.papers) if args.papers else None
+    print(f"{len(papers or pl.papers())} PDFs to process (searching {cfg.papers_dir} and subfolders)")
     run = pl.run_all(until=args.until, force=tuple(args.force), papers=papers)
     print(f"done: {len(run['results'])} papers, {len(run['errors'])} errors")
+    if args.debug_pages and args.parser == "docling":
+        from .pipeline.docling_ingest import load_docling_document, render_debug_pages
+        from .pipeline.io_utils import paper_id_from_filename
+        for pid, r in run["results"].items():
+            if "structure" in r:
+                d = cfg.outputs_dir / pid
+                pdf = next(p for p in pl.papers() if paper_id_from_filename(p) == pid)
+                pngs = render_debug_pages(pdf, r["structure"], load_docling_document(d / "docling.json"), d / "debug")
+                print(f"  debug pages: {d / 'debug'} ({len(pngs)} pages)")
     for k, v in run["errors"].items():
         print("  ", k, "->", v)
     if not args.no_export and args.until == "resolve":
