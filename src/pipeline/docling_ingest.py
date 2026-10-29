@@ -22,10 +22,11 @@ from __future__ import annotations
 import difflib
 import importlib.metadata
 import re
+from collections import Counter
 from pathlib import Path
 
 from .clean import clean_text, dehyphenate, join_lines
-from .structure import CAPTION, role_for
+from .structure import CAPTION, find_title, infer_abstract, role_for
 
 DOCLING_DEFAULTS = {
     "do_ocr": False,                 # born-digital PDFs don't need OCR; True for scanned pages (slower)
@@ -172,6 +173,19 @@ class CharReader:
             return ""
         lines = sorted(_group_lines(inside), key=lambda ln: min(c["top"] for c in ln))
         return join_lines([_line_text(ln)[0] for ln in lines])
+
+    def title(self) -> str:
+        """Fallback when Docling labels no title: the largest text on page 1 that reads like a title."""
+        from .ingest import _group_lines, _line_text
+        chars, _ = self._chars(1)
+        sizes = Counter(round(c["size"], 1) for c in chars if c["text"].strip())
+        body = sizes.most_common(1)[0][0] if sizes else 10.0
+        blocks = []
+        for i, ln in enumerate(sorted(_group_lines(chars), key=lambda ln: min(c["top"] for c in ln))):
+            text, style = _line_text(ln)
+            if text:
+                blocks.append({"kind": "line", "id": f"t{i}", "text": text, **style})
+        return clean_text(join_lines([b["text"] for b in find_title([{"blocks": blocks}], body, set())]))
 
 
 def _alnum(s: str) -> str:
@@ -368,16 +382,32 @@ def structure_from_docling(doc, ingest: dict, pdf_path: Path | None = None) -> d
                     if m:
                         extra["caption_of"] = f"{'table' if m.group('kind').lower().startswith('tab') else 'figure'} {m.group('num')}"
                 add_par(kind, text, item, **extra)
+        title_source = "docling" if title else None
+        if not title and pdf_path:
+            fallback = reader or CharReader(pdf_path)
+            try:
+                title = fallback.title()
+            finally:
+                if fallback is not reader:
+                    fallback.close()
+            title_source = "pdf_font_size" if title else None
     finally:
         if reader:
             reader.close()
 
+    # Nature-style papers have no "Abstract" header for Docling to find.
+    abstract = infer_abstract(sections, paragraphs)
+
     roles = sorted({s["role"] for s in sections})
     warnings = list(ingest.get("warnings", []))
+    if abstract:
+        warnings.append(f"No abstract heading; inferred the abstract from paragraph on page {abstract['page_start']}.")
     if "methods" not in roles:
         warnings.append("No methods/experimental section detected; process extraction will scan all body text.")
     if not title:
         warnings.append("No title detected.")
+    elif title_source == "pdf_font_size":
+        warnings.append("Docling found no title; used the largest text on page 1.")
     uncaptioned = sum(1 for f in figures if not f["has_caption"])
     if uncaptioned:
         warnings.append(f"{uncaptioned} figure(s) without a caption (logos, inset images or caption not linked).")
@@ -386,6 +416,7 @@ def structure_from_docling(doc, ingest: dict, pdf_path: Path | None = None) -> d
         warnings.append(f"{bad_tables} table(s) Docling could not structure well (vision fallback candidates).")
     return {
         "title": title,
+        "title_source": title_source,
         "sections": sections,
         "paragraphs": paragraphs,
         "tables": tables,
