@@ -14,6 +14,7 @@ from .config import Config, load_api_key, software_versions
 from .export import GraphBuilder, write_ontology_gaps, write_review_queue
 from .ingest import ingest_pdf
 from .io_utils import StageStore, paper_id_from_filename, read_json, sha256_file, sha256_json, write_json
+from .observations import write_observations
 from .llm import ClaudeExtractor
 from ..ontology_loader import Ontology, Profile
 from .resolve import resolve_paper
@@ -21,7 +22,7 @@ from .schemas import build_schemas
 from .structure import build_structure
 from .validate import validate_paper
 
-PIPELINE_VERSION = "0.3.0"  # bump when a stage's code changes its output, so saved stages are redone
+PIPELINE_VERSION = "0.3.1"  # bump when a stage's code changes its output, so saved stages are redone
 STAGES = ["ingest", "structure", "visuals", "pass1", "pass2", "pass3", "validate", "resolve"]
 
 
@@ -119,6 +120,8 @@ class Pipeline:
             if stop_at < 1:
                 return out
             st, fp_st = stage("structure", {"up": fp_ing}, lambda: build_structure(ing))
+        # Flat reading-order list for the LLM notebooks (same shape as the old text pass).
+        write_observations(st, store.dir / "observations.json")
         if stop_at < 2:
             return out
 

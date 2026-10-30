@@ -175,6 +175,11 @@ def segment(pages: list[dict], body: float, skip: set[str], headings: set[str]) 
                     "text": text,
                     "line_ids": [b["id"] for b in buf],
                 })
+                pages_in = sorted({b["_page"] for b in buf})
+                if len(pages_in) > 1:  # per-page pieces of a paragraph that crosses a page break
+                    paragraphs[-1]["page_texts"] = [
+                        {"page": pg, "text": join_lines([b["text"] for b in buf if b["_page"] == pg])}
+                        for pg in pages_in]
         buf, buf_kind = [], "text"
 
     def open_section(heading, role, level, page, line_ids):

@@ -211,17 +211,31 @@ def _boxes(item, doc) -> list[dict]:
     return out
 
 
-def _best_text(item, doc, reader: CharReader | None) -> tuple[str, str]:
-    base = clean_text(dehyphenate(item.text or ""))
+def _page_texts(pages: list[int], parts: list[str]) -> list[dict] | None:
+    """Per-page pieces of a block that crosses a page break (None for single-page blocks)."""
+    if len(set(pages)) < 2:
+        return None
+    merged: dict[int, list[str]] = {}
+    for page, part in zip(pages, parts):
+        merged.setdefault(page, []).append(part)
+    return [{"page": page, "text": clean_text(join_lines(ps))} for page, ps in merged.items()]
+
+
+def _best_text(item, doc, reader: CharReader | None) -> tuple[str, str, list[dict] | None]:
+    raw = item.text or ""
+    base = clean_text(dehyphenate(raw))
+    pages = [p.page_no for p in item.prov or []]
+    # Docling records which characters of the block sit on which page (charspan).
+    base_pages = _page_texts(pages, [dehyphenate(raw[p.charspan[0]:p.charspan[1]]) for p in item.prov or []])
     if reader is None or not item.prov:
-        return base, "docling"
+        return base, "docling", base_pages
     parts = []
     for bx in _boxes(item, doc):
         parts.append(reader.text_in(bx["page"], bx["bbox"]))
     re_text = clean_text(join_lines(parts))
     if "^{" in re_text and _agrees(re_text, base):
-        return re_text, "pdf_chars"
-    return base, "docling"
+        return re_text, "pdf_chars", _page_texts(pages, parts)
+    return base, "docling", base_pages
 
 
 def _table_grid(table, doc, reader: CharReader | None) -> tuple[list[list[str]], int]:
@@ -367,7 +381,7 @@ def structure_from_docling(doc, ingest: dict, pdf_path: Path | None = None) -> d
                 kind = {DocItemLabel.CAPTION: "caption", DocItemLabel.FOOTNOTE: "footnote",
                         DocItemLabel.FORMULA: "formula", DocItemLabel.LIST_ITEM: "list_item",
                         DocItemLabel.REFERENCE: "reference", DocItemLabel.CODE: "code"}.get(lab, "text")
-                text, src = _best_text(item, doc, reader)
+                text, src, page_texts = _best_text(item, doc, reader)
                 if not text:
                     continue
                 if src == "pdf_chars":
@@ -377,6 +391,8 @@ def structure_from_docling(doc, ingest: dict, pdf_path: Path | None = None) -> d
                 if kind == "formula" and getattr(item, "orig", None) and not text.strip():
                     text = clean_text(item.orig)
                 extra = {"text_source": src}
+                if page_texts:
+                    extra["page_texts"] = page_texts
                 if kind == "caption":
                     m = CAPTION.match(text)
                     if m:
