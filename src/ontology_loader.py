@@ -1,4 +1,4 @@
-"""Load the OWL ontology and the slice manifest; create the matching Neo4j schema.
+"""Load the v11 materials-science ontology profile and create the Neo4j class schema.
 
 Protégé stays the source of truth. This module reads classes, labels, definitions,
 synonyms, the subclass hierarchy and object properties (rdflib, with an owlready2
@@ -42,9 +42,76 @@ def _local_name(iri: str) -> str:
 def _pick_literal(values, lang="en"):
     vals = list(values)
     for v in vals:
-        if getattr(v, "language", None) in (lang, None):
+        if getattr(v, "language", None) == lang:
             return str(v)
-    return str(vals[0]) if vals else None
+    for v in vals:
+        if getattr(v, "language", None) is None:
+            return str(v)
+    return sorted(map(str, vals))[0] if vals else None
+
+
+def _is_legacy_label(label: str) -> bool:
+    return label.strip().casefold().startswith(("deprecated ", "obsolete "))
+
+
+def _read_rdfxml_vocabulary(path: Path):
+    """Read only named class/property declarations from a very large RDF/XML OWL file.
+
+    Avoid retaining hundreds of thousands of Materials Project/chemistry individuals in
+    rdflib. This is a vocabulary profile loader, not a lossless OWL reasoner. It retains
+    named type, label, definition, synonyms, subclass, domain/range and deprecation.
+    """
+    import xml.etree.ElementTree as ET
+    import rdflib
+    from rdflib.namespace import OWL, RDF, RDFS, SKOS
+
+    ns = "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}"
+    g = rdflib.Graph()
+    types = {str(OWL.Class), str(RDFS.Class), str(OWL.ObjectProperty), str(OWL.DatatypeProperty)}
+    wanted = {str(RDFS.label), str(SKOS.prefLabel), str(RDFS.comment),
+              str(RDFS.subClassOf), str(RDFS.domain), str(RDFS.range),
+              str(OWL.deprecated), *_DEF_PROPS, *_SYN_PROPS}
+    language = "{http://www.w3.org/XML/1998/namespace}lang"
+    depth = 0
+    root = None
+    for action, elem in ET.iterparse(path, events=("start", "end")):
+        if action == "start":
+            depth += 1
+            if depth == 1:
+                root = elem
+                if not elem.tag.endswith("}RDF"):
+                    raise ValueError("Expected RDF/XML root; use rdflib or owlready2 for other syntaxes")
+            continue
+        if depth == 2:
+            uri = elem.get(ns + "about")
+            if uri:
+                typ = []
+                # rdf:Description, owl:Class etc are all valid RDF/XML descriptions.
+                if elem.tag != ns + "Description":
+                    typ.append(elem.tag.strip("{}").replace("}", ""))
+                typ.extend(c.get(ns + "resource") for c in elem if c.tag == ns + "type")
+                useful = [x for x in typ if x in types]
+                if useful:
+                    subject = rdflib.URIRef(uri)
+                    for t in useful:
+                        g.add((subject, RDF.type, rdflib.URIRef(t)))
+                    for c in elem:
+                        pred_iri = c.tag.strip("{}").replace("}", "")
+                        if pred_iri not in wanted:
+                            continue
+                        pred = rdflib.URIRef(pred_iri)
+                        resource = c.get(ns + "resource")
+                        if resource:
+                            obj = rdflib.URIRef(resource)
+                        elif c.text and c.text.strip():
+                            obj = rdflib.Literal(c.text.strip(), lang=c.get(language))
+                        else:
+                            continue
+                        g.add((subject, pred, obj))
+            if root is not None:
+                root.clear()  # free processed descriptions and all nested individuals
+        depth -= 1
+    return g
 
 
 @dataclass
@@ -54,6 +121,7 @@ class OntClass:
     definition: str | None = None
     synonyms: list[str] = field(default_factory=list)
     parents: list[str] = field(default_factory=list)
+    deprecated: bool = False
 
 
 @dataclass
@@ -64,6 +132,7 @@ class OntProperty:
     domain: list[str] = field(default_factory=list)
     range: list[str] = field(default_factory=list)
     definition: str | None = None
+    deprecated: bool = False
 
 
 class Ontology:
@@ -72,21 +141,29 @@ class Ontology:
         from rdflib.namespace import OWL, RDF, RDFS, SKOS
 
         self.path = Path(path)
+        if not self.path.is_file():
+            raise FileNotFoundError(f"Ontology not found: {self.path}")
         self.loaded_with = "rdflib"
-        fmt = {".ttl": "turtle", ".owl": "xml", ".rdf": "xml", ".xml": "xml", ".nt": "nt", ".jsonld": "json-ld"}.get(
-            self.path.suffix.lower(), None)
-        raw = self.path.read_bytes()[:4000].decode("utf-8", errors="ignore")
+        fmt = {".ttl": "turtle", ".owl": "xml", ".rdf": "xml", ".xml": "xml",
+               ".nt": "nt", ".jsonld": "json-ld"}.get(self.path.suffix.lower())
+        raw = self.path.read_bytes()[:4000].decode("utf-8-sig", errors="ignore")
         owl_xml = "<Ontology" in raw and 'xmlns="http://www.w3.org/2002/07/owl#"' in raw
+        rdf_xml = "<rdf:RDF" in raw or "<RDF" in raw
         g = None
-        if not owl_xml:
+        if rdf_xml and not owl_xml:
             try:
-                g = rdflib.Graph()
-                g.parse(self.path, format=fmt)
+                g = _read_rdfxml_vocabulary(self.path)
+                self.loaded_with = "rdfxml_vocabulary_stream"
+            except Exception as exc:
+                raise ValueError(f"Could not read RDF/XML vocabulary from {self.path}: {exc}") from exc
+        elif not owl_xml:
+            try:
+                g = rdflib.Graph().parse(self.path, format=fmt)
             except Exception:
                 g = None
         if g is None:
             g = self._load_with_owlready2()
-        self.graph = g
+        self.graph = g  # RDF/XML path contains only schema vocabulary; not individual data
 
         def label_of(s):
             lab = _pick_literal(g.objects(s, RDFS.label)) or _pick_literal(g.objects(s, SKOS.prefLabel))
@@ -99,28 +176,37 @@ class Ontology:
                     return v.strip()
             return None
 
+        def deprecated(s, label):
+            if _is_legacy_label(label):
+                return True
+            return any(str(o).lower() in ("true", "1") for o in g.objects(s, OWL.deprecated))
+
         self.classes: dict[str, OntClass] = {}
         for s in set(g.subjects(RDF.type, OWL.Class)) | set(g.subjects(RDF.type, RDFS.Class)):
             if isinstance(s, rdflib.URIRef):
                 syns = sorted({str(o) for p in _SYN_PROPS for o in g.objects(s, rdflib.URIRef(p))})
-                parents = [str(o) for o in g.objects(s, RDFS.subClassOf) if isinstance(o, rdflib.URIRef)]
-                self.classes[str(s)] = OntClass(str(s), label_of(s), defn(s), syns, parents)
-        # Classes that only appear as subClassOf targets (e.g. imported BFO terms)
+                parents = sorted({str(o) for o in g.objects(s, RDFS.subClassOf)
+                                  if isinstance(o, rdflib.URIRef)})
+                label = label_of(s)
+                self.classes[str(s)] = OntClass(str(s), label, defn(s), syns, parents,
+                                                 deprecated(s, label))
         for c in list(self.classes.values()):
             for p in c.parents:
                 if p not in self.classes and not p.endswith("#Thing"):
-                    self.classes[p] = OntClass(p, label_of(rdflib.URIRef(p)), defn(rdflib.URIRef(p)))
+                    pr = rdflib.URIRef(p)
+                    label = label_of(pr)
+                    self.classes[p] = OntClass(p, label, defn(pr), deprecated=deprecated(pr, label))
 
         self.properties: dict[str, OntProperty] = {}
         for kind, t in (("object", OWL.ObjectProperty), ("data", OWL.DatatypeProperty)):
             for s in g.subjects(RDF.type, t):
                 if isinstance(s, rdflib.URIRef):
+                    label = label_of(s)
                     self.properties[str(s)] = OntProperty(
-                        str(s), label_of(s), kind,
-                        [str(o) for o in g.objects(s, RDFS.domain) if isinstance(o, rdflib.URIRef)],
-                        [str(o) for o in g.objects(s, RDFS.range) if isinstance(o, rdflib.URIRef)],
-                        defn(s),
-                    )
+                        str(s), label, kind,
+                        sorted({str(o) for o in g.objects(s, RDFS.domain) if isinstance(o, rdflib.URIRef)}),
+                        sorted({str(o) for o in g.objects(s, RDFS.range) if isinstance(o, rdflib.URIRef)}),
+                        defn(s), deprecated(s, label))
 
         self.children: dict[str, list[str]] = defaultdict(list)
         for c in self.classes.values():
@@ -130,8 +216,7 @@ class Ontology:
         for c in self.classes.values():
             self._by_label[c.label.casefold()].append(c.iri)
             for syn in c.synonyms:
-                self._by_label.setdefault("syn::" + syn.casefold(), []).append(c.iri)
-        # self.classes is filled from a set, so sort: a shared label must resolve the same way every run.
+                self._by_label["syn::" + syn.casefold()].append(c.iri)
         for hits in self._by_label.values():
             hits.sort()
 
@@ -153,19 +238,23 @@ class Ontology:
         return world.as_rdflib_graph()
 
     # ---- lookups -------------------------------------------------------------
-    def find_class(self, ref: str) -> str | None:
+    def find_class(self, ref: str, include_deprecated: bool = False) -> str | None:
         if ref in self.classes:
-            return ref
-        hits = self._by_label.get(ref.casefold())
-        return hits[0] if hits else None
+            return ref if (include_deprecated or not self.classes[ref].deprecated) else None
+        candidates = self._by_label.get(ref.casefold(), []) or self._by_label.get("syn::" + ref.casefold(), [])
+        return next((i for i in candidates if include_deprecated or not self.classes[i].deprecated), None)
 
-    def find_property(self, ref: str) -> str | None:
+    def find_property(self, ref: str, kind: str | None = None,
+                      include_deprecated: bool = False) -> str | None:
         if ref in self.properties:
-            return ref
-        for p in self.properties.values():
-            if p.label.casefold() == ref.casefold() or _local_name(p.iri).casefold() == ref.casefold():
-                return p.iri
-        return None
+            p = self.properties[ref]
+            return ref if (kind is None or p.kind == kind) and (include_deprecated or not p.deprecated) else None
+        key = ref.strip().replace("_", " ").replace("-", " ").casefold()
+        hits = [p.iri for p in self.properties.values()
+                if (kind is None or p.kind == kind) and (include_deprecated or not p.deprecated)
+                and (p.label.replace("_", " ").replace("-", " ").casefold() == key
+                     or _local_name(p.iri).replace("_", " ").replace("-", " ").casefold() == key)]
+        return sorted(hits)[0] if hits else None
 
     def descendants(self, iri: str, include_self=True) -> list[str]:
         out, stack, seen = [], [iri], set()
@@ -238,55 +327,63 @@ class Profile:
         self.raw = json.loads(Path(manifest_path).read_text(encoding="utf-8"))
         self.groups: dict[str, EntityGroup] = {}
         self.warnings: list[str] = []
+        exclude_deprecated = self.raw.get("exclude_deprecated", True)
+        require_roots = self.raw.get("require_roots", False)
+        missing_any = {}
         for name, spec in self.raw["entity_groups"].items():
             iris, missing = [], []
             excluded = set()
             for ref in spec.get("exclude", []) or []:
-                x = ontology.find_class(ref)
+                x = ontology.find_class(ref, include_deprecated=True)
                 if x:
                     excluded.update(ontology.descendants(x))
             for ref in spec.get("roots", []):
-                x = ontology.find_class(ref)
+                x = ontology.find_class(ref, include_deprecated=not exclude_deprecated)
                 if not x:
                     missing.append(ref)
                     continue
                 same_label = ontology._by_label.get(ref.casefold(), [])
                 if len(same_label) > 1:
-                    self.warnings.append(f"group '{name}': root '{ref}' matches {len(same_label)} classes, using {x}; "
-                                         f"give the full IRI to choose another: {same_label}")
-                cand = ontology.descendants(x, include_self=spec.get("include_root", True)) \
-                    if spec.get("include_descendants", True) else [x]
-                iris += [c for c in cand if c not in excluded and c not in iris]
+                    self.warnings.append(
+                        f"group '{name}': ambiguous root '{ref}', selected {x}; use full IRI: {same_label}")
+                cand = (ontology.descendants(x, include_self=spec.get("include_root", True))
+                        if spec.get("include_descendants", True) else [x])
+                iris += [c for c in cand if c not in excluded and c not in iris
+                         and (not exclude_deprecated or not ontology.classes[c].deprecated)]
             if missing:
-                self.warnings.append(f"group '{name}': roots not found in ontology: {missing}")
-            # Deterministic order => identical prompts/schemas across runs => cache hits.
+                missing_any[name] = missing
+                self.warnings.append(f"group '{name}': missing/inactive roots: {missing}")
             iris.sort(key=lambda i: (ontology.classes[i].label.casefold(), i))
             labels, l2i = [], {}
             for i in iris:
                 lab = ontology.classes[i].label
-                if lab in l2i:  # duplicate label: disambiguate with the IRI local name
+                if lab in l2i:
                     lab = f"{lab} ({_local_name(i)})"
+                if lab in l2i:
+                    lab = f"{ontology.classes[i].label} ({i})"
                 labels.append(lab)
                 l2i[lab] = i
             labels.append(OTHER)
             self.groups[name] = EntityGroup(name, spec.get("description", ""), iris, labels, l2i, missing)
             if len(labels) == 1:
-                self.warnings.append(f"group '{name}' has no ontology classes; every item will be OTHER "
-                                     "(add the classes in Protégé or edit the profile roots).")
+                self.warnings.append(f"group '{name}' has no active ontology classes; every item will be OTHER")
+        if missing_any and require_roots:
+            raise ValueError(f"Configured roots missing from {ontology.path.name}: {missing_any}. "
+                             "Ensure the v11 ontology is installed or correct slice_manifest.json.")
 
         self.relations: dict[str, RelationSpec] = {}
         for r in self.raw["relations"]:
             iri = None
             for ref in r.get("ontology_property", []) or []:
-                iri = ontology.find_property(ref)
+                iri = ontology.find_property(ref, kind="object", include_deprecated=not exclude_deprecated)
                 if iri:
                     break
             self.relations[r["name"]] = RelationSpec(
-                r["name"], r["definition"].strip(), r["subject_groups"], r["object_groups"], iri, r.get("pass", "relations"))
+                r["name"], r["definition"].strip(), r["subject_groups"],
+                r["object_groups"], iri, r.get("pass", "relations"))
         gaps = [n for n, r in self.relations.items() if r.ontology_iri is None]
         if gaps:
-            self.warnings.append("relations with no matching object property in the ontology (add in Protégé "
-                                 f"or map via 'ontology_property'): {gaps}")
+            self.warnings.append(f"relations lacking active ontology object properties: {gaps}")
 
     def iri_for(self, group: str, label: str) -> str | None:
         return self.groups[group].label_to_iri.get(label)
@@ -341,7 +438,9 @@ def resolve_ontology_file(ontology_dir: Path, manifest_path: Path | None = None)
         p = Path(wanted) if Path(wanted).is_absolute() else ontology_dir / wanted
         if p.exists():
             return p, notes
-        notes.append(f"{wanted} not found in {ontology_dir}")
+        raise FileNotFoundError(f"Configured ontology '{wanted}' was not found in {ontology_dir}. "
+                                "Copy the v11 OWL into ontology/ or set ONTOLOGY_FILE explicitly. "
+                                "Refusing to silently load an older ontology.")
     others = [p for ext in ("*.owl", "*.rdf", "*.ttl") for p in sorted(ontology_dir.glob(ext)) if p.name != STARTER]
     if others:
         notes.append(f"using {others[0].name}")
@@ -363,7 +462,7 @@ def create_neo4j_schema(ontology: Ontology, driver, database: str | None = None,
     their IRI as kg_key, so extracted instances link to them with INSTANCE_OF.
     """
     rows = [{"key": c.iri, "props": {"kg_key": c.iri, "id": c.iri, "name": c.label, "definition": c.definition,
-                                     "synonyms": c.synonyms}} for c in ontology.classes.values()]
+                                     "synonyms": c.synonyms, "deprecated": c.deprecated}} for c in ontology.classes.values()]
     for r in rows:
         r["props"] = {k: v for k, v in r["props"].items() if v not in (None, [])}
     edges = [{"s": c.iri, "t": p} for c in ontology.classes.values() for p in c.parents if p in ontology.classes]
@@ -388,6 +487,11 @@ def main():
     ap = argparse.ArgumentParser(description="Load the ontology, report the slice, and create the Neo4j schema.")
     ap.add_argument("--dry-run", action="store_true", help="only print the ontology/slice summary")
     args = ap.parse_args()
+    try:
+        from dotenv import load_dotenv
+        load_dotenv(root / ".env")
+    except ImportError:
+        pass
     manifest = root / "ontology" / "slice_manifest.json"
     path, notes = resolve_ontology_file(root / "ontology", manifest)
     for n in notes:

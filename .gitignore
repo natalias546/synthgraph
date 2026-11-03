@@ -26,7 +26,8 @@ outputs/
 notebooks/* copy.ipynb
 
 # Large ontology files
-ontology/matsci-v10-semantic-closure.owl
+ontology/
+*.owl
 
 # OS / editor
 .DS_Store
