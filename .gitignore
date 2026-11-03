@@ -25,9 +25,14 @@ outputs/
 # Personal working copies of tracked notebooks
 notebooks/* copy.ipynb
 
+<<<<<<< HEAD
 # Large ontology files
 ontology/
 *.owl
+=======
+# Large ontology files (~160 MB each); every team member keeps them locally
+ontology/*.owl
+>>>>>>> 1fda4ce23f51f721b65c31701361a42749a0926e
 
 # OS / editor
 .DS_Store

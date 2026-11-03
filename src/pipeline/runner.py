@@ -161,15 +161,10 @@ class Pipeline:
                     "pages": X.table_pages(st)}
         vis, fp_vis = stage("visuals", {"up": fp_st, "model": self.cfg.model, "table_vision": self.cfg.table_vision,
                                         "figure_vision": self.cfg.figure_vision}, do_visuals)
-        paragraphs = [{**p, **vis["overrides"].get(p["id"], {})} for p in st["paragraphs"]] + vis["added"]
         if stop_at < 3:
             return out
 
-        structure_all = {**st, "paragraphs": paragraphs}
-        docs = X.build_documents(structure_all, st["title"], self.cfg.skip_sections, self.cfg.max_chars_per_call)
-        llm_fp = {"docs": sha256_json([d["text"] for d in docs]), "system": sha256_json(self.system),
-                  "fewshot": sha256_json(self.fewshot), "cfg": self.cfg.fingerprint_fields(),
-                  "schemas": sha256_json({k: v.model_json_schema() for k, v in self.schemas.items()})}
+        paragraphs, docs, llm_fp = self._llm_inputs(st, vis)
         p1, fp1 = stage("pass1", llm_fp, lambda: X.run_pass1(self.llm, self.schemas, self.system, docs, self.fewshot, pid, self.profile))
         if stop_at < 4:
             return out
@@ -192,13 +187,36 @@ class Pipeline:
             {"chunk": d["chunk"], "chars": d["chars"]} for d in docs]}
         return out
 
+    def _llm_inputs(self, st, vis):
+        """Paragraphs (with table/figure vision applied), the documents sent to Claude, and the fingerprint
+        inputs of the Claude passes."""
+        paragraphs = [{**p, **vis["overrides"].get(p["id"], {})} for p in st["paragraphs"]] + vis["added"]
+        docs = X.build_documents({**st, "paragraphs": paragraphs}, st["title"], self.cfg.skip_sections,
+                                 self.cfg.max_chars_per_call)
+        llm_fp = {"docs": sha256_json([d["text"] for d in docs]), "system": sha256_json(self.system),
+                  "fewshot": sha256_json(self.fewshot), "cfg": self.cfg.fingerprint_fields(),
+                  "schemas": sha256_json({k: v.model_json_schema() for k, v in self.schemas.items()})}
+        return paragraphs, docs, llm_fp
+
+    def _pass_saved(self, pid, st, passes) -> bool:
+        """True if pass1..passes are saved for these exact inputs (same check run_paper uses to skip them)."""
+        store = StageStore(self.cfg.outputs_dir, pid)
+        if not passes:
+            return store.path("visuals").exists()
+        vis = store.load("visuals")
+        if vis is None:
+            return False
+        llm_fp, up = self._llm_inputs(st, vis)[2], None
+        for k in range(1, passes + 1):
+            up = sha256_json({"v": PIPELINE_VERSION, "stage": f"pass{k}", **llm_fp, **({"up": up} if up else {})})
+        return store.load(f"pass{passes}", up) is not None
+
     def estimate_cost(self, papers=None, until="resolve", show=True) -> dict:
         """What the Claude stages up to `until` would cost for these papers, before calling anything.
         Parses papers that aren't parsed yet (free). See src/pipeline/cost.py for the assumptions."""
         from . import cost
         stop = STAGES.index(until)
         passes = max(0, min(3, stop - STAGES.index("visuals")))
-        last_stage = f"pass{passes}" if passes else "visuals"
         count = cost.TokenCounter(self.llm.client, self.cfg.model)
         system_tokens = count(self.system)
         skip_figures = {"logo", "signature", "qr_code", "bar_code", "stamp", "icon"}
@@ -215,7 +233,7 @@ class Pipeline:
                     images += sum(1 for f in st.get("figures", []) if f.get("crop") and
                                   (f.get("classification") or {}).get("class", "") not in skip_figures)
             rows.append({"paper_id": pid, "doc_tokens": [count(d["text"]) for d in docs] if passes else [],
-                         "images": images, "saved": (self.cfg.outputs_dir / pid / f"{last_stage}.json").exists()})
+                         "images": images, "saved": self._pass_saved(pid, st, passes)})
         outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
         result = cost.estimate(self.cfg.model, system_tokens, rows, outputs, passes)
         result["text"] = cost.summary_text(self.cfg.model, system_tokens, count.exact, outputs, result)

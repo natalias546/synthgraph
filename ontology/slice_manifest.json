@@ -1,5 +1,6 @@
 {
   "_comment": [
+<<<<<<< HEAD
     "v11 parsing-aligned ontology profile. Additions preserve original group names and 12 original relation names.",
     "Place this manifest under ontology/slice_manifest.json, and matsci-v11-parsing-aligned-cleaned.owl in the same ontology/ directory.",
     "Roots accept IRIs or labels. Prefer full IRIs; ambiguous labels generate warnings.",
@@ -7,6 +8,15 @@
     "Scientific context is typed by domain instead of placing all generically dependent continuants in OTHER.",
     "Class labels serve as LLM display labels; ontology IRIs remain the canonical identifiers.",
     "Record-layer properties (wasMeasuredOn, hasReportedPropertyValue) require reified measurement/value records to satisfy their declared domains/ranges."
+=======
+    "Slice manifest: which part of the ontology the extractor may use.",
+    "ontology_file: the OWL file in ontology/ to load (RDF/XML, Turtle or OWL/XML). If missing, the first other .owl/.rdf/.ttl file is used, then the starter ontology.",
+    "Use the full IRI for a root whose label is shared by several classes (the profile warns when that happens); e.g. two classes are labelled 'material'.",
+    "entity_groups: classes are referenced by rdfs:label (case-insensitive) or full IRI. Every root found is used together with all its subclasses; roots that do not exist are reported as warnings, so alternatives can be listed.",
+    "The allowed labels become enums in Claude's output schema. Anything that fits none of them comes back as OTHER plus a proposed class label; those proposals end up in data/graph/ontology_gaps.csv.",
+    "relations: 'ontology_property' lists candidate object-property labels/IRIs; if none is found the relation is still extracted but flagged as an ontology gap. pass=implicit: produced by the structure of passes 1-2; pass=relations: offered to Claude in pass 3.",
+    "The enriched ontology adds Materials Project database classes (under MPInformationRecord); they describe database records, not things in papers, so 'other' excludes them."
+>>>>>>> 1fda4ce23f51f721b65c31701361a42749a0926e
   ],
   "ontology_file": "matsci-v11-parsing-aligned-cleaned.owl",
   "entity_groups": {
@@ -29,6 +39,10 @@
       "description": "Steps that create or modify a sample (crystal growth: flux, chemical vapour transport, electrochemical, Bridgman; annealing, doping, quenching, exfoliation, polishing, simulation).",
       "roots": [
         "http://purl.obolibrary.org/obo/BFO_0000015"
+      ],
+      "exclude": [
+        "http://purl.obolibrary.org/obo/OBI_0000070",
+        "measurement technique"
       ]
     },
     "process_attribute": {
@@ -48,14 +62,29 @@
       "description": "Measured or computed properties (critical temperature, carrier lifetime, magnetic susceptibility, lattice parameter, residual resistivity ratio).",
       "roots": [
         "material property",
-        "quality"
+        "quality",
+        "unclassified property",
+        "spatial extend"
       ],
       "exclude": [
         "function",
-        "application"
+        "application",
+        "atomic bond",
+        "polymer crosslink",
+        "medical application role",
+        "hand holdable disposition",
+        "cut function",
+        "heat treatment function",
+        "irradiation function",
+        "magnetizing function",
+        "manufacturing function",
+        "shape",
+        "geometry shape",
+        "organic composition"
       ]
     },
     "application": {
+<<<<<<< HEAD
       "description": "Reported or proposed use of a material/device (spintronics, photovoltaics, batteries, sensing, etc.); distinguish proposed vs demonstrated in application status.",
       "roots": [
         "https://w3id.org/matsci/ontology/extraction/MaterialsApplication"
@@ -114,11 +143,18 @@
       "roots": [
         "https://w3id.org/matsci/ontology/extraction/ScientificDatasetMention"
       ]
+=======
+      "description": "Reported or proposed use of a material or device (spintronics, photovoltaics, batteries, sensing...).",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/MaterialsApplication"
+      ]
+>>>>>>> 1fda4ce23f51f721b65c31701361a42749a0926e
     },
     "other": {
       "description": "Reserved for truly uncategorized domain objects, e.g. charge carriers or data products. Prefer explicit scientific_context groups and unresolved_terms for new words.",
       "roots": [
         "charge carrier",
+<<<<<<< HEAD
         "Data Product"
       ]
     },
@@ -126,6 +162,15 @@
       "description": "Unknown scientific words, acronyms, provisional concepts for expert review",
       "roots": [
         "https://w3id.org/matsci/ontology/extraction/UnmappedScientificTerm"
+=======
+        "Data Product",
+        "generically dependent continuant"
+      ],
+      "exclude": [
+        "https://w3id.org/matsci/ontology/materials-project/MPInformationRecord",
+        "measurement technique",
+        "https://w3id.org/matsci/ontology/extraction/MaterialsApplication"
+>>>>>>> 1fda4ce23f51f721b65c31701361a42749a0926e
       ]
     }
   },
