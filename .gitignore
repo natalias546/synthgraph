@@ -25,8 +25,8 @@ outputs/
 # Personal working copies of tracked notebooks
 notebooks/* copy.ipynb
 
-# Large ontology files
-ontology/matsci-v10-semantic-closure.owl
+# Large ontology files (~160 MB each); every team member keeps them locally
+ontology/*.owl
 
 # OS / editor
 .DS_Store

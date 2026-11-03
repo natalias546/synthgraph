@@ -5,9 +5,10 @@
     "Use the full IRI for a root whose label is shared by several classes (the profile warns when that happens); e.g. two classes are labelled 'material'.",
     "entity_groups: classes are referenced by rdfs:label (case-insensitive) or full IRI. Every root found is used together with all its subclasses; roots that do not exist are reported as warnings, so alternatives can be listed.",
     "The allowed labels become enums in Claude's output schema. Anything that fits none of them comes back as OTHER plus a proposed class label; those proposals end up in data/graph/ontology_gaps.csv.",
-    "relations: 'ontology_property' lists candidate object-property labels/IRIs; if none is found the relation is still extracted but flagged as an ontology gap. pass=implicit: produced by the structure of passes 1-2; pass=relations: offered to Claude in pass 3."
+    "relations: 'ontology_property' lists candidate object-property labels/IRIs; if none is found the relation is still extracted but flagged as an ontology gap. pass=implicit: produced by the structure of passes 1-2; pass=relations: offered to Claude in pass 3.",
+    "The enriched ontology adds Materials Project database classes (under MPInformationRecord); they describe database records, not things in papers, so 'other' excludes them."
   ],
-  "ontology_file": "matsci-v10-semantic-closure.owl",
+  "ontology_file": "matsci-v11-parsing-aligned-cleaned.owl",
   "entity_groups": {
     "material": {
       "description": "Chemical identity of a substance: a compound or element (e.g. Ba1-xKxBiO3, Bi2O3, KOH, Te as a dopant), or a material class (semiconductor, crystalline material).",
@@ -28,6 +29,10 @@
       "description": "Steps that create or modify a sample (crystal growth: flux, chemical vapour transport, electrochemical, Bridgman; annealing, doping, quenching, exfoliation, polishing, simulation).",
       "roots": [
         "http://purl.obolibrary.org/obo/BFO_0000015"
+      ],
+      "exclude": [
+        "http://purl.obolibrary.org/obo/OBI_0000070",
+        "measurement technique"
       ]
     },
     "process_attribute": {
@@ -47,16 +52,32 @@
       "description": "Measured or computed properties (critical temperature, carrier lifetime, magnetic susceptibility, lattice parameter, residual resistivity ratio).",
       "roots": [
         "material property",
-        "quality"
+        "quality",
+        "unclassified property",
+        "spatial extend"
       ],
       "exclude": [
         "function",
-        "application"
+        "application",
+        "atomic bond",
+        "polymer crosslink",
+        "medical application role",
+        "hand holdable disposition",
+        "cut function",
+        "heat treatment function",
+        "irradiation function",
+        "magnetizing function",
+        "manufacturing function",
+        "shape",
+        "geometry shape",
+        "organic composition"
       ]
     },
     "application": {
-      "description": "Intended application of a material or device. No matching class in the ontology yet: every item comes back as OTHER with a proposed class (see data/graph/ontology_gaps.csv).",
-      "roots": []
+      "description": "Reported or proposed use of a material or device (spintronics, photovoltaics, batteries, sensing...).",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/MaterialsApplication"
+      ]
     },
     "other": {
       "description": "Other entities worth keeping (charge carriers, data products...).",
@@ -64,6 +85,11 @@
         "charge carrier",
         "Data Product",
         "generically dependent continuant"
+      ],
+      "exclude": [
+        "https://w3id.org/matsci/ontology/materials-project/MPInformationRecord",
+        "measurement technique",
+        "https://w3id.org/matsci/ontology/extraction/MaterialsApplication"
       ]
     }
   },
