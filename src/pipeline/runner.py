@@ -18,13 +18,14 @@ from .io_utils import StageStore, paper_id_from_filename, read_json, sha256_file
 from .observations import write_observations
 from .llm import ClaudeExtractor
 from ..ontology_loader import Ontology, Profile
+from ..ontology_resolver import OntologyResolver, annotate_validation
 from .resolve import resolve_paper
 from .schemas import build_schemas
 from .structure import build_structure
 from .validate import validate_paper
 
 PIPELINE_VERSION = "0.3.2"  # bump when a stage's code changes its output, so saved stages are redone
-STAGES = ["ingest", "structure", "visuals", "pass1", "pass2", "pass3", "validate", "resolve"]
+STAGES = ["ingest", "structure", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve"]
 
 
 class Pipeline:
@@ -51,6 +52,11 @@ class Pipeline:
     @cached_property
     def schemas(self):
         return build_schemas(self.profile)
+
+    @cached_property
+    def ontology_resolver(self):
+        """Local vocabulary matcher: no API calls, no changes to the OWL ontology."""
+        return OntologyResolver(self.profile)
 
     @cached_property
     def system(self):
@@ -174,13 +180,26 @@ class Pipeline:
             return out
         p3, fp3 = stage("pass3", {**llm_fp, "up": fp2},
                         lambda: X.run_pass3(self.llm, self.schemas, self.system, docs, self.fewshot, self.profile, p1, p2, pid))
-        if stop_at < 6:
+        if stop_at < STAGES.index("ontology_resolve"):
             return out
-        val, fp_val = stage("validate", {"up": fp3, "profile": sha256_json(self.profile.summary()),
-                                         "min_conf": self.cfg.min_confidence_for_auto_accept},
-                            lambda: validate_paper({"pass1": p1, "pass2": p2, "pass3": p3}, paragraphs, self.profile,
-                                                   self.cfg.min_confidence_for_auto_accept))
-        if stop_at < 7:
+        # Resolve source scientific terms against the v11 OWL vocabulary without an
+        # additional model call. Only unique exact labels/approved aliases get IRIs.
+        aligned, fp_aligned = stage("ontology_resolve",
+                                    {"up": fp3, "resolver": self.ontology_resolver.fingerprint},
+                                    lambda: self.ontology_resolver.resolve_extraction(
+                                        {"pass1": p1, "pass2": p2, "pass3": p3}))
+        if stop_at < STAGES.index("validate"):
+            return out
+
+        def do_validate():
+            validated = validate_paper(aligned, paragraphs, self.profile,
+                                       self.cfg.min_confidence_for_auto_accept)
+            return annotate_validation(validated, aligned)
+
+        val, fp_val = stage("validate", {"up": fp_aligned,
+                                       "profile": sha256_json(self.profile.summary()),
+                                       "min_conf": self.cfg.min_confidence_for_auto_accept}, do_validate)
+        if stop_at < STAGES.index("resolve"):
             return out
         stage("resolve", {"up": fp_val}, lambda: resolve_paper(val))
         out["meta"] = {"title": st["title"], "pdf": pdf.name, "sha256": pdf_hash, "documents": [

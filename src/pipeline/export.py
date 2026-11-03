@@ -115,8 +115,13 @@ class GraphBuilder:
             elif it["kind"] == "entity":
                 nid = f"{paper_id}::{d['id']}"
                 self.node(nid, "Entity", name=d["name"], aliases=d.get("aliases"),
-                          ontology_class=d["ontology_class"], **base(it))
-                g = "application" if self.profile.iri_for("application", d["ontology_class"]) else "other"
+                          ontology_class=d["ontology_class"],
+                          entity_group=d.get("entity_group"), **base(it))
+                # v11 scientific context groups (phenomenon, mechanism, software,
+                # phase, etc.) must retain their actual OWL type on export.
+                g = d.get("entity_group") or "other"
+                if g not in self.profile.groups or not self.profile.iri_for(g, d["ontology_class"]):
+                    g = "application" if self.profile.iri_for("application", d["ontology_class"]) else "other"
                 self._class_edge(nid, g, d["ontology_class"], d.get("proposed_class_label"))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
