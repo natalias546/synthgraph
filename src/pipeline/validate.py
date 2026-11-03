@@ -197,7 +197,9 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
             ("input_ids", ["sample", "material"]), ("output_sample_ids", ["sample"]),
             ("precursor_material_ids", ["material"]), ("follows_step_id", ["process"])])
         for prm in p["parameters"]:
-            pv = check("parameter", {**prm, "confidence": p.get("confidence")}, "attribute_class", "process_attribute")
+            # Parameters have no evidence of their own (see schemas.py); they are checked against the step's.
+            pv = check("parameter", {**prm, "evidence": prm.get("evidence") or p.get("evidence", []),
+                                     "confidence": p.get("confidence")}, "attribute_class", "process_attribute")
             if prm.get("value") is not None:
                 ev_nums = set().union(*[_numbers(anch.text.get(a.get("actual_paragraph_id") or a["paragraph_id"], ""))
                                         for a in pv["evidence_anchors"]] or [set()])

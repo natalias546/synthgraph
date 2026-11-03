@@ -34,6 +34,7 @@ class Config:
     max_output_tokens: int = 16000
     allow_live_calls: bool = True              # False = replay cache only (no charges)
     use_prompt_caching: bool = True            # reuse the paper text across the 3 passes
+    max_cost_usd: float | None = None          # stop before any Claude call if the high cost estimate is above this
 
     # Text handling
     max_chars_per_call: int = 120_000          # long papers are split into section chunks
@@ -59,8 +60,13 @@ class Config:
         self.checksums_file = Path(self.checksums_file or r / "checksums.json")
         load_env(r)
         if self.ontology_file is None:
-            self.ontology_file, self.notes = resolve_ontology_file(r / "ontology", self.profile_file)
-        self.ontology_file = Path(self.ontology_file)
+            try:
+                self.ontology_file, self.notes = resolve_ontology_file(r / "ontology", self.profile_file)
+            except FileNotFoundError as exc:
+                # Parsing doesn't need the ontology; Pipeline.ontology raises when the LLM stages do.
+                self.notes = [str(exc)]
+        if self.ontology_file is not None:
+            self.ontology_file = Path(self.ontology_file)
         for d in (self.outputs_dir, self.cache_dir, self.graph_dir):
             d.mkdir(parents=True, exist_ok=True)
 

@@ -25,6 +25,7 @@ import re
 from pathlib import Path
 
 from .pipeline.llm import ClaudeExtractor, IncompleteOutput
+from .pipeline.schemas import snap_classes
 from .ontology_loader import Profile
 
 RULES = """You extract structured knowledge from materials-science papers into a knowledge graph.
@@ -245,7 +246,7 @@ PASS1_TASK = """TASK (pass 1 of 3): Extract the MATERIALS, SAMPLES and PROCESS H
 Focus on experimental/methods sections, but also check abstract, results, captions and tables for sample definitions and process variations.
 - materials: chemical identity/phase (incl. dopants, precursors, substrates as materials). IDs M1, M2, ...
 - samples: every distinct specimen with its process history (IDs S1, S2, ...). Include devices and computational structures (is_simulated_only=true).
-- process_steps: every step that creates or modifies a sample (IDs PR1, PR2, ...), with order, inputs/outputs and ALL stated parameters.
+- process_steps: every step that creates or modifies a sample (IDs PR1, PR2, ...), with order, inputs/outputs and ALL stated parameters. A step's evidence must quote the sentences that state its parameter values (parameters have no evidence of their own).
 Do not extract measurement results in this pass."""
 
 PASS2_TASK = """TASK (pass 2 of 3): Extract every MEASUREMENT / CHARACTERIZATION and every reported PROPERTY VALUE.
@@ -305,10 +306,11 @@ def _prefix_ids(obj, prefix: str, id_fields=("id",), ref_fields=()):
     return obj
 
 
-def run_pass1(llm, schemas, system, docs, fewshot, paper_id) -> dict:
+def run_pass1(llm, schemas, system, docs, fewshot, paper_id, profile=None) -> dict:
     task = PASS1_TASK + examples_block(fewshot, "samples_processes")
     out = {"materials": [], "samples": [], "process_steps": [], "unresolved_notes": []}
     runs = _ask_chunks(llm, "pass1_samples_processes", system, docs, task, schemas["samples_processes"], paper_id)
+    runs = [(d, snap_classes(r, profile, "samples_processes") if profile else r) for d, r in runs]
     for d, r in runs:
         pre = f"c{d['chunk']}_" if len(runs) > 1 else ""
         for m in r["materials"]:
@@ -340,10 +342,11 @@ def registry_pass1(p1: dict) -> str:
     return json.dumps(reg, ensure_ascii=False, indent=1)
 
 
-def run_pass2(llm, schemas, system, docs, fewshot, p1, paper_id) -> dict:
+def run_pass2(llm, schemas, system, docs, fewshot, p1, paper_id, profile=None) -> dict:
     task = PASS2_TASK.format(registry=registry_pass1(p1)) + examples_block(fewshot, "measurements")
     out = {"measurements": [], "unresolved_notes": []}
     runs = _ask_chunks(llm, "pass2_measurements", system, docs, task, schemas["measurements"], paper_id)
+    runs = [(d, snap_classes(r, profile, "measurements") if profile else r) for d, r in runs]
     for d, r in runs:
         pre = f"c{d['chunk']}_" if len(runs) > 1 else ""
         for m in r["measurements"]:
@@ -361,6 +364,7 @@ def run_pass3(llm, schemas, system, docs, fewshot, profile, p1, p2, paper_id) ->
         + examples_block(fewshot, "relations")
     out = {"entities": [], "relations": [], "rejected_candidates": []}
     runs = _ask_chunks(llm, "pass3_relations", system, docs, task, schemas["relations"], paper_id)
+    runs = [(d, snap_classes(r, profile, "relations")) for d, r in runs]
     for d, r in runs:
         pre = f"c{d['chunk']}_" if len(runs) > 1 else ""
         for e in r["entities"]:
@@ -389,6 +393,8 @@ def main():
     ap.add_argument("--until", default="resolve", choices=STAGES, help="last stage to run")
     ap.add_argument("--force", nargs="*", default=(), choices=STAGES, help="stages to recompute")
     ap.add_argument("--model", default=None, help="e.g. claude-sonnet-5-5 (default), claude-haiku-5-5, claude-opus-5-5")
+    ap.add_argument("--max-cost", type=float, default=None,
+                    help="stop before any Claude call if the high cost estimate (USD) is above this")
     ap.add_argument("--no-live", action="store_true", help="only replay cached Claude responses")
     ap.add_argument("--parser", choices=["docling", "pdfplumber"], default="docling",
                     help="PDF parser: docling layout model (default) or the pdfplumber heuristics")
@@ -402,19 +408,25 @@ def main():
     args = ap.parse_args()
 
     kw = {"allow_live_calls": not args.no_live, "parser": args.parser, "table_vision": args.table_vision,
-          "figure_vision": args.figure_vision, "docling": {"do_ocr": True} if args.ocr else {}}
+          "figure_vision": args.figure_vision, "docling": {"do_ocr": True} if args.ocr else {},
+          "max_cost_usd": args.max_cost}
     if args.model:
         kw["model"] = args.model
     cfg = Config(project_root=root, **kw)
     for n in cfg.notes:
         print("note:", n)
     pl = Pipeline(cfg)
-    print("ontology:", cfg.ontology_file.name, "| Claude:", pl.llm.status)
-    for w in pl.profile.warnings:
+    parse_only = args.until in ("ingest", "structure")
+    print("ontology:", cfg.ontology_file.name if cfg.ontology_file else "none", "| Claude:", pl.llm.status)
+    for w in [] if parse_only else pl.profile.warnings:
         print("WARNING:", w)
     papers = pl.find_papers(args.papers) if args.papers else None
     print(f"{len(papers or pl.papers())} PDFs to process (searching {cfg.papers_dir} and subfolders)")
-    run = pl.run_all(until=args.until, force=tuple(args.force), papers=papers)
+    from .pipeline.cost import CostLimitExceeded
+    try:
+        run = pl.run_all(until=args.until, force=tuple(args.force), papers=papers)
+    except CostLimitExceeded as exc:
+        raise SystemExit(f"Stopped before any Claude call: {exc}")
     print(f"done: {len(run['results'])} papers, {len(run['errors'])} errors")
     if args.debug_pages and args.parser == "docling":
         from .pipeline.docling_ingest import load_docling_document, render_debug_pages

@@ -26,6 +26,7 @@ def clean_text(text: str) -> str:
     for k, v in {**LIGATURES, **DASHES}.items():
         text = text.replace(k, v)
     text = unicodedata.normalize("NFC", text)
+    text = re.sub(r"[\x01-\x08\x0b\x0c\x0e-\x1f]", " ", text)   # control characters some fonts use as spaces
     text = text.replace(" ", " ")
     return re.sub(r"[ \t]+", " ", text).strip()
 

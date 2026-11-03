@@ -8,7 +8,7 @@ confidence 0..1 are checked in validate.py instead of in the schema.
 """
 from __future__ import annotations
 
-from typing import Literal, Optional
+from typing import Annotated, Literal, Optional
 
 from pydantic import BaseModel, Field, create_model
 
@@ -32,13 +32,31 @@ def _lit(labels: list[str]):
     return Literal[tuple(labels)]  # type: ignore[valid-type]
 
 
+# The API compiles enums into a grammar, and long label lists make it too large (400 "The compiled grammar
+# is too large"). Longer lists become free text, described by the glossary in the system prompt, and
+# snap_classes() maps each answer to an exact label after the call (or to OTHER, keeping the answer as
+# the proposed label).
+MAX_ENUM = 60
+
+
+def _cls(labels: list[str], group: str):
+    if len(labels) <= MAX_ENUM:
+        return _lit(labels)
+    return Annotated[str, Field(description=f"an exact label from the '{group}' list of ALLOWED ONTOLOGY LABELS, or {OTHER}")]
+
+
+def _other_labels(profile: Profile) -> list[str]:
+    g = profile.groups
+    return list(dict.fromkeys([l for l in g["application"].labels + g["other"].labels if l != OTHER] + [OTHER]))
+
+
 def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
     g = profile.groups
-    MatClass, SampleClass = _lit(g["material"].labels), _lit(g["sample"].labels)
-    ProcClass, AttrClass = _lit(g["process"].labels), _lit(g["process_attribute"].labels)
-    TechClass, PropClass = _lit(g["technique"].labels), _lit(g["property"].labels)
-    other_labels = [l for l in g["application"].labels + g["other"].labels if l != OTHER] + [OTHER]
-    OtherClass = _lit(list(dict.fromkeys(other_labels)))
+    MatClass, SampleClass = _cls(g["material"].labels, "material"), _cls(g["sample"].labels, "sample")
+    ProcClass = _cls(g["process"].labels, "process")
+    AttrClass = _cls(g["process_attribute"].labels, "process_attribute")
+    TechClass, PropClass = _cls(g["technique"].labels, "technique"), _cls(g["property"].labels, "property")
+    OtherClass = _cls(_other_labels(profile), "application/other")
     rel_names = [r.name for r in profile.relations_for("relations")] or ["related_to"]
     RelName = _lit(rel_names)
     proposed = (Optional[str], Field(None, description=f"Required when ontology_class is {OTHER}: a concise class name that should be added to the ontology"))
@@ -52,7 +70,8 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
         value_max=(Optional[float], Field(None, description="upper bound if a range, else null")),
         value_text=(str, Field(..., description="value exactly as written, with unit")),
         unit=(Optional[str], None),
-        evidence=(list[Evidence], ...),
+        # No evidence list of its own: one per parameter made pass 1's schema too large for structured
+        # outputs. The step's evidence quotes its parameters; validate.py checks values against it.
     )
     Material = create_model(
         "Material",
@@ -207,3 +226,49 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
         "relations": RelationsOut,
         "page_tables": PageTables,
     }
+
+
+def _match(value, labels: list[str]) -> str | None:
+    """The exact label for an answer: same text, same text ignoring case, or a duplicate label's base text
+    ("crystal" for "crystal (PMD_0020003)") when only one label has that base."""
+    if not isinstance(value, str):
+        return None
+    if value in labels:
+        return value
+    v = value.strip().casefold()
+    exact = [l for l in labels if l.casefold() == v]
+    if exact:
+        return exact[0]
+    base = [l for l in labels if l.casefold().split(" (")[0] == v]
+    return base[0] if len(base) == 1 else None
+
+
+def _snap(obj: dict, field: str, labels: list[str], proposed: str) -> None:
+    hit = _match(obj.get(field), labels)
+    if hit is None:   # not an ontology label: keep Claude's wording as the proposed class (an ontology gap)
+        if not obj.get(proposed) and obj.get(field) not in (None, OTHER):
+            obj[proposed] = obj[field]
+        hit = OTHER
+    obj[field] = hit
+
+
+def snap_classes(data: dict, profile: Profile, kind: str) -> dict:
+    """Map free-text class answers (fields too long for an enum, see MAX_ENUM) to exact ontology labels."""
+    g = profile.groups
+    if kind == "samples_processes":
+        for m in data["materials"]:
+            _snap(m, "ontology_class", g["material"].labels, "proposed_class_label")
+        for s in data["samples"]:
+            _snap(s, "ontology_class", g["sample"].labels, "proposed_class_label")
+        for p in data["process_steps"]:
+            _snap(p, "ontology_class", g["process"].labels, "proposed_class_label")
+            for prm in p["parameters"]:
+                _snap(prm, "attribute_class", g["process_attribute"].labels, "proposed_class_label")
+    elif kind == "measurements":
+        for m in data["measurements"]:
+            _snap(m, "technique_class", g["technique"].labels, "proposed_technique_label")
+            _snap(m, "property_class", g["property"].labels, "proposed_property_label")
+    elif kind == "relations":
+        for e in data["entities"]:
+            _snap(e, "ontology_class", _other_labels(profile), "proposed_class_label")
+    return data

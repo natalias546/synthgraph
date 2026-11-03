@@ -131,6 +131,9 @@ class Ontology:
             self._by_label[c.label.casefold()].append(c.iri)
             for syn in c.synonyms:
                 self._by_label.setdefault("syn::" + syn.casefold(), []).append(c.iri)
+        # self.classes is filled from a set, so sort: a shared label must resolve the same way every run.
+        for hits in self._by_label.values():
+            hits.sort()
 
     def _load_with_owlready2(self):
         """Fallback for OWL/XML and other formats rdflib can't parse (owlready2 -> rdflib view)."""
@@ -247,6 +250,10 @@ class Profile:
                 if not x:
                     missing.append(ref)
                     continue
+                same_label = ontology._by_label.get(ref.casefold(), [])
+                if len(same_label) > 1:
+                    self.warnings.append(f"group '{name}': root '{ref}' matches {len(same_label)} classes, using {x}; "
+                                         f"give the full IRI to choose another: {same_label}")
                 cand = ontology.descendants(x, include_self=spec.get("include_root", True)) \
                     if spec.get("include_descendants", True) else [x]
                 iris += [c for c in cand if c not in excluded and c not in iris]

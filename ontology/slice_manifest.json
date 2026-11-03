@@ -2,6 +2,7 @@
   "_comment": [
     "Slice manifest: which part of the ontology the extractor may use.",
     "ontology_file: the OWL file in ontology/ to load (RDF/XML, Turtle or OWL/XML). If missing, the first other .owl/.rdf/.ttl file is used, then the starter ontology.",
+    "Use the full IRI for a root whose label is shared by several classes (the profile warns when that happens); e.g. two classes are labelled 'material'.",
     "entity_groups: classes are referenced by rdfs:label (case-insensitive) or full IRI. Every root found is used together with all its subclasses; roots that do not exist are reported as warnings, so alternatives can be listed.",
     "The allowed labels become enums in Claude's output schema. Anything that fits none of them comes back as OTHER plus a proposed class label; those proposals end up in data/graph/ontology_gaps.csv.",
     "relations: 'ontology_property' lists candidate object-property labels/IRIs; if none is found the relation is still extracted but flagged as an ontology gap. pass=implicit: produced by the structure of passes 1-2; pass=relations: offered to Claude in pass 3."
@@ -9,21 +10,24 @@
   "ontology_file": "matsci-v10-semantic-closure.owl",
   "entity_groups": {
     "material": {
-      "description": "Chemical identity / phase of matter (e.g. c-Si, a-Si:H, SiNx, a dopant element, a precursor gas).",
+      "description": "Chemical identity of a substance: a compound or element (e.g. Ba1-xKxBiO3, Bi2O3, KOH, Te as a dopant), or a material class (semiconductor, crystalline material).",
       "roots": [
-        "material"
+        "https://w3id.org/pmd/co/PMD_0000000",
+        "https://w3id.org/matsci/ontology/integration/dumontier/Compound",
+        "https://w3id.org/matsci/ontology/ElementalSubstance"
       ]
     },
     "sample": {
-      "description": "A specific physical specimen made or measured in this paper (wafer, film, stack, device), identified by its process history.",
+      "description": "A specific physical specimen made or measured in this paper (a single crystal, a crystal batch, a flake, a film, a device), identified by its process history.",
       "roots": [
-        "sample"
+        "Specimen",
+        "https://w3id.org/pmd/co/PMD_0020003"
       ]
     },
     "process": {
-      "description": "Steps that create or modify a sample (deposition, annealing, doping, etching, cleaning, growth, simulation).",
+      "description": "Steps that create or modify a sample (crystal growth: flux, chemical vapour transport, electrochemical, Bridgman; annealing, doping, quenching, exfoliation, polishing, simulation).",
       "roots": [
-        "process"
+        "http://purl.obolibrary.org/obo/BFO_0000015"
       ]
     },
     "process_attribute": {
@@ -33,13 +37,14 @@
       ]
     },
     "technique": {
-      "description": "Measurement / characterization / computational methods.",
+      "description": "Measurement / characterization / computational methods (XRD, magnetic susceptibility, resistivity, ARPES, STM, heat capacity, DFT).",
       "roots": [
-        "measurement technique"
+        "measurement technique",
+        "http://purl.obolibrary.org/obo/OBI_0000070"
       ]
     },
     "property": {
-      "description": "Measured or computed properties, including device performance metrics.",
+      "description": "Measured or computed properties (critical temperature, carrier lifetime, magnetic susceptibility, lattice parameter, residual resistivity ratio).",
       "roots": [
         "material property",
         "quality"
@@ -50,10 +55,8 @@
       ]
     },
     "application": {
-      "description": "Intended application of a material or device.",
-      "roots": [
-        "application"
-      ]
+      "description": "Intended application of a material or device. No matching class in the ontology yet: every item comes back as OTHER with a proposed class (see data/graph/ontology_gaps.csv).",
+      "roots": []
     },
     "other": {
       "description": "Other entities worth keeping (charge carriers, data products...).",
@@ -125,6 +128,7 @@
         "process_attribute"
       ],
       "ontology_property": [
+        "has process attribute",
         "has attribute",
         "has_attribute",
         "has parameter"
@@ -164,7 +168,7 @@
     {
       "name": "part_of",
       "pass": "relations",
-      "definition": "A layer/component is physically part of a larger sample or device (e.g. a SiNx layer is part of a passivation stack).",
+      "definition": "A layer/component is physically part of a larger sample or device (e.g. a NbSe2 flake is part of a van der Waals heterostructure device).",
       "subject_groups": [
         "sample",
         "material"
@@ -181,7 +185,7 @@
     {
       "name": "composed_of",
       "pass": "relations",
-      "definition": "A sample is made of / contains this material (e.g. a film composed of a-Si:H, a wafer doped with boron).",
+      "definition": "A sample is made of / contains this material (e.g. a Te-doped PtBi2 crystal composed of PtBi2 with Te as dopant).",
       "subject_groups": [
         "sample"
       ],
@@ -223,13 +227,14 @@
       ],
       "ontology_property": [
         "influences",
-        "affects"
+        "affects",
+        "changes quality"
       ]
     },
     {
       "name": "derived_from",
       "pass": "relations",
-      "definition": "A sample was made from another sample (e.g. an annealed film derived from the as-deposited film).",
+      "definition": "A sample was made from another sample (e.g. an annealed crystal derived from the as-grown crystal).",
       "subject_groups": [
         "sample"
       ],

@@ -153,6 +153,7 @@ class CharReader:
         import pdfplumber
         self._pdf = pdfplumber.open(pdf_path)
         self._pages = {}
+        self.glyphs: dict[str, Counter] = {}   # misread character -> what the PDF says (see _learn_glyphs)
 
     def close(self):
         self._pdf.close()
@@ -199,6 +200,64 @@ def _agrees(a: str, b: str, threshold: float = 0.9) -> bool:
     return difflib.SequenceMatcher(None, x, y, autojunk=False).ratio() >= threshold
 
 
+def _same_order(a: str, b: str, max_off: int = 2) -> bool:
+    """Same words in the same order, give or take one word split or joined at a line break.
+    A count, not a ratio: a few moved words in a long paragraph would pass any ratio."""
+    def words(t):
+        return [w for w in re.sub(r"\^\{[^}]*\}", " ", t).casefold().split() if re.search(r"[a-z]{3}", w)]
+    x, y = words(a), words(b)
+    if not x:
+        return False
+    same = sum(m.size for m in difflib.SequenceMatcher(None, x, y, autojunk=False).get_matching_blocks())
+    return len(x) + len(y) - 2 * same <= max_off
+
+
+# Latin Extended A/B, plus the rarely used start of the Greek block (U+0370-037F; real Greek letters
+# such as α, β start at U+0386): Docling decodes some fonts' digits and brackets into these.
+EXTENDED_LATIN = re.compile(r"[Ā-ɏͰ-Ϳ]")
+
+
+def _misdecoded(docling_text: str, pdf_text: str) -> bool:
+    """Docling misreads some fonts' digits as Latin Extended letters ("Ni ř In Ř S Ř" for Ni3In2S2);
+    pdfplumber reads the same glyphs correctly. Real accented names (Dvořák) appear in both texts."""
+    odd = set(EXTENDED_LATIN.findall(docling_text))
+    return bool(pdf_text) and bool(odd - set(EXTENDED_LATIN.findall(pdf_text)))
+
+
+def _learn_glyphs(docling_text: str, pdf_text: str, glyphs: dict) -> None:
+    """Align the two texts and record which character each misread one stands for (ŗ -> 1).
+    Only one-to-one substitutions count, so a reordered line in the PDF text teaches nothing."""
+    keep = set(EXTENDED_LATIN.findall(pdf_text))
+    a, b = docling_text.replace(" ", ""), pdf_text.replace(" ", "")
+    for op, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        if op == "replace" and i2 - i1 == j2 - j1:
+            for x, y in zip(a[i1:i2], b[j1:j2]):
+                if EXTENDED_LATIN.match(x) and x not in keep and not EXTENDED_LATIN.match(y):
+                    glyphs.setdefault(x, Counter())[y] += 1
+
+
+def _apply_glyphs(text: str, glyphs: dict) -> str:
+    table = {k: c.most_common(1)[0][0] for k, c in glyphs.items()}
+    return "".join(table.get(ch, ch) for ch in text)
+
+
+def _prime_glyphs(doc, reader) -> None:
+    """Learn the misread characters from the whole paper before building any text, so the first
+    blocks (title, abstract) are repaired as well as the later ones."""
+    if reader is None:
+        return
+    for item in doc.texts:
+        if item.prov and EXTENDED_LATIN.search(item.text or ""):
+            pdf = clean_text(join_lines([reader.text_in(bx["page"], bx["bbox"]) for bx in _boxes(item, doc)]))
+            if _misdecoded(item.text, pdf):
+                _learn_glyphs(clean_text(item.text), pdf, reader.glyphs)
+
+
+def _fix_glyphs(text: str, reader) -> str:
+    """Captions have no box of their own here; apply what the paper's text blocks taught."""
+    return _apply_glyphs(text, reader.glyphs) if reader is not None and reader.glyphs else text
+
+
 # ---------------------------------------------------------------------------
 # DoclingDocument -> structure
 # ---------------------------------------------------------------------------
@@ -221,7 +280,7 @@ def _page_texts(pages: list[int], parts: list[str]) -> list[dict] | None:
     return [{"page": page, "text": clean_text(join_lines(ps))} for page, ps in merged.items()]
 
 
-def _best_text(item, doc, reader: CharReader | None) -> tuple[str, str, list[dict] | None]:
+def _best_text(item, doc, reader: CharReader | None, scripts: bool = True) -> tuple[str, str, list[dict] | None]:
     raw = item.text or ""
     base = clean_text(dehyphenate(raw))
     pages = [p.page_no for p in item.prov or []]
@@ -233,9 +292,23 @@ def _best_text(item, doc, reader: CharReader | None) -> tuple[str, str, list[dic
     for bx in _boxes(item, doc):
         parts.append(reader.text_in(bx["page"], bx["bbox"]))
     re_text = clean_text(join_lines(parts))
-    if "^{" in re_text and _agrees(re_text, base):
+    src = "docling"
+    if _misdecoded(base, re_text):
+        # Keep Docling's reading order; swap the misread characters for what the PDF says.
+        _learn_glyphs(base, re_text, reader.glyphs)
+        fixed = _apply_glyphs(base, reader.glyphs)
+        if _misdecoded(fixed, re_text):
+            if _agrees(re_text, base, 0.7):
+                return re_text, "pdf_chars", _page_texts(pages, parts)
+        else:
+            base, src = fixed, "docling+glyph_fix"
+            base_pages = [{**pt, "text": _apply_glyphs(pt["text"], reader.glyphs)} for pt in base_pages] \
+                if base_pages else None
+    # The re-read keeps superscripts, but its line grouping can scramble words around sub/superscripts
+    # or drop spaces; use it only when its words come in the same order as Docling's.
+    if scripts and "^{" in re_text and _agrees(re_text, base) and _same_order(re_text, base):
         return re_text, "pdf_chars", _page_texts(pages, parts)
-    return base, "docling", base_pages
+    return base, src, base_pages
 
 
 def _table_grid(table, doc, reader: CharReader | None) -> tuple[list[list[str]], int]:
@@ -253,6 +326,11 @@ def _table_grid(table, doc, reader: CharReader | None) -> tuple[list[list[str]],
                 alt = clean_text(reader.text_in(page_no, (bb.l, bb.t, bb.r, bb.b), pad=0.5))
                 if "^{" in alt and _agrees(alt, txt, 0.85):
                     txt, upgraded = alt, upgraded + 1
+                elif _misdecoded(txt, alt):
+                    _learn_glyphs(txt, alt, reader.glyphs)
+                    fixed = _apply_glyphs(txt, reader.glyphs)
+                    txt = fixed if not _misdecoded(fixed, alt) else alt
+                    upgraded += 1
             out.append(txt)
         rows.append(out)
     return rows, upgraded
@@ -334,16 +412,17 @@ def structure_from_docling(doc, ingest: dict, pdf_path: Path | None = None) -> d
         return p
 
     try:
+        _prime_glyphs(doc, reader)
         for item, _level in doc.iterate_items():
             ref = getattr(item, "self_ref", None)
             if ref in caption_refs:
                 continue
             page = item.prov[0].page_no if getattr(item, "prov", None) else current["page_end"]
             if isinstance(item, TitleItem):
-                title = title or clean_text(item.text)
+                title = title or _best_text(item, doc, reader, scripts=False)[0]
                 continue
             if isinstance(item, SectionHeaderItem):
-                heading = clean_text(item.text)
+                heading = _best_text(item, doc, reader, scripts=False)[0]
                 if not title and page == 1 and current["role"] == "front_matter" and len(sections) == 1 \
                         and role_for(heading) is None and len(heading.split()) > 4:
                     title = heading   # some papers' titles are detected as headers
@@ -353,7 +432,7 @@ def structure_from_docling(doc, ingest: dict, pdf_path: Path | None = None) -> d
             if isinstance(item, TableItem):
                 rows, up = _table_grid(item, doc, reader)
                 stats["table_cells_from_pdf_chars"] += up
-                cap = clean_text(item.caption_text(doc) or "")
+                cap = _fix_glyphs(clean_text(item.caption_text(doc) or ""), reader)
                 foot = " ".join(clean_text(doc.texts[int(f.cref.split("/")[-1])].text)
                                 for f in (item.footnotes or []) if f.cref.startswith("#/texts/"))
                 q = _table_quality(rows)
@@ -366,7 +445,7 @@ def structure_from_docling(doc, ingest: dict, pdf_path: Path | None = None) -> d
                                "crop": crops.get(ref), **q})
                 continue
             if isinstance(item, PictureItem):
-                cap = clean_text(item.caption_text(doc) or "")
+                cap = _fix_glyphs(clean_text(item.caption_text(doc) or ""), reader)
                 cls = _classification(item)
                 m = CAPTION.match(cap)
                 label = f"figure {m.group('num')}" if m else f"figure (unnumbered #{len(figures) + 1})"

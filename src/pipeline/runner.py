@@ -7,6 +7,7 @@ re-run never pays twice for the same call.
 from __future__ import annotations
 
 import traceback
+from functools import cached_property
 from pathlib import Path
 
 from .. import extract as X
@@ -22,24 +23,49 @@ from .schemas import build_schemas
 from .structure import build_structure
 from .validate import validate_paper
 
-PIPELINE_VERSION = "0.3.1"  # bump when a stage's code changes its output, so saved stages are redone
+PIPELINE_VERSION = "0.3.2"  # bump when a stage's code changes its output, so saved stages are redone
 STAGES = ["ingest", "structure", "visuals", "pass1", "pass2", "pass3", "validate", "resolve"]
 
 
 class Pipeline:
     def __init__(self, cfg: Config, mock_responder=None):
         self.cfg = cfg
-        self.ontology = Ontology(cfg.ontology_file)
-        self.profile = Profile(self.ontology, cfg.profile_file)
-        self.schemas = build_schemas(self.profile)
-        self.system = X.system_prompt(self.profile)
-        self.fewshot = X.load_fewshot(cfg.fewshot_file)
-        self.llm = ClaudeExtractor(cfg.model, cfg.cache_dir, load_api_key(cfg.project_root),
-                                   max_output_tokens=cfg.max_output_tokens, allow_live_calls=cfg.allow_live_calls,
-                                   use_prompt_caching=cfg.use_prompt_caching, mock_responder=mock_responder)
+        self._mock_responder = mock_responder
         self._docling = None
         if cfg.parser not in ("docling", "pdfplumber"):
             raise ValueError(f"parser must be 'docling' or 'pdfplumber', not {cfg.parser!r}")
+
+    # The ontology and Claude client load on first use, so parsing (until="structure")
+    # runs without an ontology file or API key.
+    @cached_property
+    def ontology(self):
+        if self.cfg.ontology_file is None:
+            raise FileNotFoundError(f"No ontology for the LLM stages: {'; '.join(self.cfg.notes)}. Put the .owl in "
+                                    "ontology/ or set ONTOLOGY_FILE; parsing alone needs neither (until='structure').")
+        return Ontology(self.cfg.ontology_file)
+
+    @cached_property
+    def profile(self):
+        return Profile(self.ontology, self.cfg.profile_file)
+
+    @cached_property
+    def schemas(self):
+        return build_schemas(self.profile)
+
+    @cached_property
+    def system(self):
+        return X.system_prompt(self.profile)
+
+    @cached_property
+    def fewshot(self):
+        return X.load_fewshot(self.cfg.fewshot_file)
+
+    @cached_property
+    def llm(self):
+        cfg = self.cfg
+        return ClaudeExtractor(cfg.model, cfg.cache_dir, load_api_key(cfg.project_root),
+                               max_output_tokens=cfg.max_output_tokens, allow_live_calls=cfg.allow_live_calls,
+                               use_prompt_caching=cfg.use_prompt_caching, mock_responder=self._mock_responder)
 
     @property
     def docling(self):
@@ -144,11 +170,11 @@ class Pipeline:
         llm_fp = {"docs": sha256_json([d["text"] for d in docs]), "system": sha256_json(self.system),
                   "fewshot": sha256_json(self.fewshot), "cfg": self.cfg.fingerprint_fields(),
                   "schemas": sha256_json({k: v.model_json_schema() for k, v in self.schemas.items()})}
-        p1, fp1 = stage("pass1", llm_fp, lambda: X.run_pass1(self.llm, self.schemas, self.system, docs, self.fewshot, pid))
+        p1, fp1 = stage("pass1", llm_fp, lambda: X.run_pass1(self.llm, self.schemas, self.system, docs, self.fewshot, pid, self.profile))
         if stop_at < 4:
             return out
         p2, fp2 = stage("pass2", {**llm_fp, "up": fp1},
-                        lambda: X.run_pass2(self.llm, self.schemas, self.system, docs, self.fewshot, p1, pid))
+                        lambda: X.run_pass2(self.llm, self.schemas, self.system, docs, self.fewshot, p1, pid, self.profile))
         if stop_at < 5:
             return out
         p3, fp3 = stage("pass3", {**llm_fp, "up": fp2},
@@ -166,9 +192,49 @@ class Pipeline:
             {"chunk": d["chunk"], "chars": d["chars"]} for d in docs]}
         return out
 
-    def run_all(self, until="resolve", force=(), papers=None, stop_on_error=False) -> dict:
+    def estimate_cost(self, papers=None, until="resolve", show=True) -> dict:
+        """What the Claude stages up to `until` would cost for these papers, before calling anything.
+        Parses papers that aren't parsed yet (free). See src/pipeline/cost.py for the assumptions."""
+        from . import cost
+        stop = STAGES.index(until)
+        passes = max(0, min(3, stop - STAGES.index("visuals")))
+        last_stage = f"pass{passes}" if passes else "visuals"
+        count = cost.TokenCounter(self.llm.client, self.cfg.model)
+        system_tokens = count(self.system)
+        skip_figures = {"logo", "signature", "qr_code", "bar_code", "stamp", "icon"}
+        rows = []
+        for pdf in papers or self.papers():
+            pid = paper_id_from_filename(pdf)
+            st = self.run_paper(pdf, until="structure")["structure"]
+            docs = X.build_documents(st, st["title"], self.cfg.skip_sections, self.cfg.max_chars_per_call)
+            images = 0
+            if stop >= STAGES.index("visuals") and self.cfg.parser == "docling":
+                images = sum(1 for t in st.get("tables", []) if t.get("crop") and (
+                    self.cfg.table_vision == "always" or (self.cfg.table_vision == "fallback" and t.get("needs_vision"))))
+                if self.cfg.figure_vision:
+                    images += sum(1 for f in st.get("figures", []) if f.get("crop") and
+                                  (f.get("classification") or {}).get("class", "") not in skip_figures)
+            rows.append({"paper_id": pid, "doc_tokens": [count(d["text"]) for d in docs] if passes else [],
+                         "images": images, "saved": (self.cfg.outputs_dir / pid / f"{last_stage}.json").exists()})
+        outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
+        result = cost.estimate(self.cfg.model, system_tokens, rows, outputs, passes)
+        result["text"] = cost.summary_text(self.cfg.model, system_tokens, count.exact, outputs, result)
+        if show:
+            print(result["text"], flush=True)
+        return result
+
+    def run_all(self, until="resolve", force=(), papers=None, stop_on_error=False, max_cost_usd=None) -> dict:
+        """Run the stages for each paper. Before the first Claude call, the cost estimate is printed;
+        with max_cost_usd (argument or Config), the run stops if the high estimate is above it."""
         results, errors = {}, {}
         self.update_checksums()
+        if STAGES.index(until) >= STAGES.index("visuals") and (self.llm.client or self.cfg.allow_live_calls):
+            from .cost import CostLimitExceeded
+            est = self.estimate_cost(papers, until)
+            limit = max_cost_usd if max_cost_usd is not None else self.cfg.max_cost_usd
+            if limit is not None and est["high_usd"] > limit:
+                raise CostLimitExceeded(f"High estimate ${est['high_usd']:.2f} is above max_cost_usd=${limit:.2f}. "
+                                        "Raise the limit or run fewer papers.")
         for pdf in papers or self.papers():
             print(f"[{pdf.name}]", flush=True)
             try:

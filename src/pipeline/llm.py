@@ -51,6 +51,49 @@ def _enum_values(schema: dict) -> dict[str, str]:
     return out
 
 
+def _all_required(schema):
+    """Mark every property required. Optional properties multiply the grammar the API compiles for
+    structured outputs (400 "compiled grammar is too large" / "Schema is too complex"); required fields
+    that may be null or [] say the same thing. Responses still validate against the Pydantic model."""
+    if isinstance(schema, dict):
+        if schema.get("type") == "object" and "properties" in schema:
+            schema["required"] = list(schema["properties"])
+        for v in schema.values():
+            _all_required(v)
+    elif isinstance(schema, list):
+        for v in schema:
+            _all_required(v)
+    return schema
+
+
+def _plain_text_for_nullable_strings(schema, names: set | None = None) -> set:
+    """Turn 'string or null' properties into plain strings ("" = none) and return their names.
+    Each nullable field is a union in the compiled grammar; pass 1 has too many of them."""
+    names = set() if names is None else names
+    if isinstance(schema, dict):
+        for name, prop in (schema.get("properties") or {}).items():
+            alts = prop.get("anyOf") if isinstance(prop, dict) else None
+            if alts and len(alts) == 2 and {"type": "null"} in alts and any(a == {"type": "string"} for a in alts):
+                prop.pop("anyOf")
+                prop["type"] = "string"
+                names.add(name)
+        for v in schema.values():
+            _plain_text_for_nullable_strings(v, names)
+    elif isinstance(schema, list):
+        for v in schema:
+            _plain_text_for_nullable_strings(v, names)
+    return names
+
+
+def _blank_to_none(data, names: set):
+    """Undo _plain_text_for_nullable_strings on a response: "" back to None for those fields."""
+    if isinstance(data, dict):
+        return {k: None if k in names and v == "" else _blank_to_none(v, names) for k, v in data.items()}
+    if isinstance(data, list):
+        return [_blank_to_none(v, names) for v in data]
+    return data
+
+
 def _repair_enum_case(data, enums: dict[str, str]):
     """Structured outputs may differ from enum values only in capitalization; fix that."""
     if isinstance(data, dict):
@@ -91,7 +134,8 @@ class ClaudeExtractor:
         from anthropic import transform_schema
 
         max_tokens = max_tokens or self.max_output_tokens
-        json_schema = transform_schema(schema)
+        json_schema = _all_required(transform_schema(schema))
+        blank_means_none = _plain_text_for_nullable_strings(json_schema)
         image_hashes = [sha256_bytes(b) for b in images or []]
         request = {
             "model": self.model, "system": system, "document": document, "task": task,
@@ -144,7 +188,7 @@ class ClaudeExtractor:
         if response.stop_reason == "refusal":
             raise RuntimeError(f"{label}: the model refused this request")
         text = "".join(b.text for b in response.content if getattr(b, "type", None) == "text")
-        raw = json.loads(text)
+        raw = _blank_to_none(json.loads(text), blank_means_none)
         try:
             data = schema.model_validate(raw).model_dump()
         except ValidationError:
