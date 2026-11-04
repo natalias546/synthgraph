@@ -30,7 +30,11 @@ CACHE_WRITE = 1.25
 
 # Output tokens per call (including thinking) assumed until real responses exist: (low, high).
 OUTPUT_GUESS = {"pass1": (3000, 12000), "pass2": (4000, 16000), "pass3": (2000, 8000),
-                "table": (1000, 3000), "figure": (500, 1500)}
+                "table": (1000, 3000), "figure": (500, 1500), "resolve": (600, 2000)}
+# Ontology adjudication (small model, after pass 3): batches of up to 15 unmatched terms with their
+# candidate classes. Calls per paper drop as the shared decision memory fills up.
+RESOLVE_CALLS_PER_PAPER = (1, 5)
+RESOLVE_INPUT_TOKENS = 4500
 TASK_TOKENS = 700          # fixed task instructions + few-shot examples, per pass call
 REGISTRY_SHARE = 0.5       # the registry passed to passes 2-3 is roughly half the earlier passes' output
 IMAGE_TOKENS = 1600        # a table/figure crop after the API's resize (about the maximum)
@@ -49,6 +53,8 @@ def _call_type(label: str) -> str | None:
         return "table"
     if label.startswith("figure"):
         return "figure"
+    if label.startswith("resolve_"):
+        return "resolve"
     return None
 
 
@@ -131,6 +137,18 @@ def estimate(model: str, system_tokens: int, papers: list[dict], outputs: dict, 
             "calls": sum(r["calls"] for r in rows)}
 
 
+def resolver_estimate(model: str, n_papers: int, outputs: dict | None = None) -> dict:
+    """Low/high USD for the ontology adjudication calls of n_papers (assumption-based, see constants)."""
+    if model not in PRICES or n_papers == 0:
+        return {"calls": (0, 0), "low_usd": 0.0, "high_usd": 0.0}
+    p_in, p_out, _ = (x / 1e6 for x in PRICES[model])
+    out = (outputs or {}).get("resolve") or OUTPUT_GUESS["resolve"]
+    lo_calls, hi_calls = (n_papers * c for c in RESOLVE_CALLS_PER_PAPER)
+    return {"calls": (lo_calls, hi_calls),
+            "low_usd": round(lo_calls * (RESOLVE_INPUT_TOKENS * p_in + out[0] * p_out), 3),
+            "high_usd": round(hi_calls * (RESOLVE_INPUT_TOKENS * p_in + out[1] * p_out), 3)}
+
+
 def summary_text(model: str, system_tokens: int, exact: bool, outputs: dict, result: dict) -> str:
     new = [r for r in result["rows"] if not r["saved"]]
     saved = len(result["rows"]) - len(new)
@@ -141,7 +159,10 @@ def summary_text(model: str, system_tokens: int, exact: bool, outputs: dict, res
         f"  Claude calls: {result['calls']}  |  system prompt: {system_tokens:,} tokens (cached)  |  "
         f"paper text: {docs:,} tokens ({'counted exactly' if exact else 'estimated from characters'})",
         "  output per call: " + ", ".join(f"{k} {lo:,.0f}-{hi:,.0f} ({src})" for k, (lo, hi, src) in outputs.items()
-                                          if k != "figure"),
+                                          if k not in ("figure", "resolve")),
+        *([f"  ontology adjudication ({result['resolver']['model']}): {result['resolver']['calls'][0]}-"
+           f"{result['resolver']['calls'][1]} small calls, ${result['resolver']['low_usd']:.2f} - "
+           f"${result['resolver']['high_usd']:.2f} (included below)"] if result.get("resolver") else []),
         f"  ESTIMATED COST: ${result['low_usd']:.2f} - ${result['high_usd']:.2f}",
     ]
     return "\n".join(lines)

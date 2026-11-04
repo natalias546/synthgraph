@@ -1,4 +1,4 @@
-"""Claude entity/relationship extraction, constrained by the ontology slice.
+"""Claude entity/relationship extraction. Ontology classes are assigned afterwards by src/ontology_resolver.
 
 Run the whole pipeline from the repo root:
     python -m src.extract                          # all PDFs in data/publications/
@@ -14,8 +14,10 @@ Outputs: data/extractions/<paper_id>/<stage>.json and data/graph/ (load with src
   Pass 3: other entities (applications, ...) and relations from the profile, with
           rejected candidates kept (Spangher notebook design).
 
-All passes see the SAME document text (so prompt caching works), and the same
-system prompt (rules + ontology glossary). Only the task block changes.
+All passes see the SAME document text (so prompt caching works), and the same system prompt
+(rules + short descriptions of the kinds of things to extract). The ontology is NOT in the prompt:
+Claude names things in the paper's own terms plus a generic type_term, and the ontology_resolve
+stage maps those terms onto the v11 classes (exact labels, memory, retrieval, small adjudication call).
 """
 from __future__ import annotations
 
@@ -25,7 +27,6 @@ import re
 from pathlib import Path
 
 from .pipeline.llm import ClaudeExtractor, IncompleteOutput
-from .pipeline.schemas import snap_classes
 from .ontology_loader import Profile
 
 RULES = """You extract structured knowledge from materials-science papers into a knowledge graph.
@@ -48,8 +49,11 @@ VALUES
 - Do not read numbers off figures. If text only describes a figure qualitatively, give no numeric value (source_location figure_only_described).
 - Figures appear as "[Figure N | type] caption". A "Figure content" note after it was written by a vision model from the image: use it only to see which quantity was measured on which samples under which conditions, never as a source of numeric values.
 
-ONTOLOGY
-- ontology_class / technique_class / property_class must be one of the allowed labels below. Choose the MOST SPECIFIC label that fits. If none fits, use OTHER and give proposed_*_label (a concise class name). Never force a poor fit.
+TERMS (ontology mapping is done later, not by you)
+- Name every thing as the paper does (name_in_text, name_in_paper, property_name_in_text, ...), and give a generic type in plain scientific words in type_term / property_term / technique_term (e.g. "single crystal", "flux growth", "magnetic susceptibility measurement", "superconducting transition temperature").
+- A type term is a kind, not an instance: "single crystal", not "crystal #3"; "annealing", not "the 2nd anneal".
+- Keep conditions out of terms: "resistivity" with the temperature as a condition, not "resistivity at 2 K".
+- Prefer the standard name over a local abbreviation in the type term (write "angle-resolved photoemission spectroscopy" for ARPES); keep the abbreviation in the *_in_text field.
 
 RELATIONS
 - Co-occurrence is not a relation. Do not chain relations transitively. Preserve direction, negation and scope.
@@ -61,9 +65,12 @@ CONFIDENCE
 
 
 def system_prompt(profile: Profile) -> str:
-    parts = [RULES, "\nALLOWED ONTOLOGY LABELS (with synonyms/definitions where available):"]
+    """Rules plus one line per kind of thing (from slice_manifest.json). No class lists: the ontology
+    is applied after extraction, so it can change without re-running Claude."""
+    parts = [RULES, "\nKINDS OF THINGS (pass-3 entities use these names in entity_group):"]
     for name, g in profile.groups.items():
-        parts.append(f"\n## {name}: {g.description}\n{profile.class_glossary(name)}")
+        if g.description:
+            parts.append(f"- {name}: {g.description}")
     parts.append("\n## relations offered in the relation pass")
     for r in profile.relations_for("relations"):
         parts.append(f"- {r.name} ({'/'.join(r.subject_groups)} -> {'/'.join(r.object_groups)}): {r.definition}")
@@ -259,10 +266,10 @@ IDs: ME1, ME2, ...
 REGISTRY (from pass 1):
 {registry}"""
 
-PASS3_TASK = """TASK (pass 3 of 3): Extract other ENTITIES (applications, charge carriers, data products ...; IDs X1, X2, ...) and RELATIONS between IDs.
+PASS3_TASK = """TASK (pass 3 of 3): Extract APPLICATIONS (IDs A1, A2, ...), other scientific ENTITIES (phenomena, mechanisms, models, instruments, software, phases, structures, datasets ...; IDs X1, X2, ... with entity_group) and RELATIONS between IDs.
 Allowed predicates: {predicates}
 Rules:
-- subject_id/object_id must be IDs from the REGISTRY below or your own X# entities. For 'influences', the subject may be a process step (PR#) or a parameter (PR#.p#) and the object is a property written as PROP:<property label from the allowed property labels> (e.g. PROP:carrier lifetime). Give the trend and the studied range in scope.
+- subject_id/object_id must be IDs from the REGISTRY below or your own X# entities. For 'influences', the subject may be a process step (PR#) or a parameter (PR#.p#) and the object is a property written as PROP:<generic property name> (e.g. PROP:superconducting transition temperature). Give the trend and the studied range in scope.
 - Do not restate relations already captured by passes 1-2 (process inputs/outputs, measurement links).
 - Put tempting but unsupported pairs into rejected_candidates with the reason (e.g. co-occurrence only, cited work, hypothetical).
 
@@ -310,7 +317,6 @@ def run_pass1(llm, schemas, system, docs, fewshot, paper_id, profile=None) -> di
     task = PASS1_TASK + examples_block(fewshot, "samples_processes")
     out = {"materials": [], "samples": [], "process_steps": [], "unresolved_notes": []}
     runs = _ask_chunks(llm, "pass1_samples_processes", system, docs, task, schemas["samples_processes"], paper_id)
-    runs = [(d, snap_classes(r, profile, "samples_processes") if profile else r) for d, r in runs]
     for d, r in runs:
         pre = f"c{d['chunk']}_" if len(runs) > 1 else ""
         for m in r["materials"]:
@@ -330,12 +336,12 @@ def run_pass1(llm, schemas, system, docs, fewshot, paper_id, profile=None) -> di
 
 def registry_pass1(p1: dict) -> str:
     reg = {
-        "materials": [{k: m[k] for k in ("id", "ontology_class", "name", "formula", "aliases")} for m in p1["materials"]],
-        "samples": [{k: s[k] for k in ("id", "ontology_class", "name_in_paper", "aliases", "description", "material_ids")}
+        "materials": [{k: m.get(k) for k in ("id", "name", "formula", "type_term", "aliases")} for m in p1["materials"]],
+        "samples": [{k: s.get(k) for k in ("id", "name_in_paper", "type_term", "aliases", "description", "material_ids")}
                     for s in p1["samples"]],
-        "process_steps": [{"id": p["id"], "ontology_class": p["ontology_class"], "name_in_text": p["name_in_text"],
+        "process_steps": [{"id": p["id"], "type_term": p.get("type_term"), "name_in_text": p["name_in_text"],
                            "inputs": p["input_ids"], "outputs": p["output_sample_ids"],
-                           "parameters": [{"id": x["id"], "attribute": x["attribute_class"], "value_text": x["value_text"]}
+                           "parameters": [{"id": x["id"], "type_term": x.get("type_term"), "value_text": x["value_text"]}
                                           for x in p["parameters"]]}
                           for p in p1["process_steps"]],
     }
@@ -346,7 +352,6 @@ def run_pass2(llm, schemas, system, docs, fewshot, p1, paper_id, profile=None) -
     task = PASS2_TASK.format(registry=registry_pass1(p1)) + examples_block(fewshot, "measurements")
     out = {"measurements": [], "unresolved_notes": []}
     runs = _ask_chunks(llm, "pass2_measurements", system, docs, task, schemas["measurements"], paper_id)
-    runs = [(d, snap_classes(r, profile, "measurements") if profile else r) for d, r in runs]
     for d, r in runs:
         pre = f"c{d['chunk']}_" if len(runs) > 1 else ""
         for m in r["measurements"]:
@@ -357,21 +362,25 @@ def run_pass2(llm, schemas, system, docs, fewshot, p1, paper_id, profile=None) -
 
 def run_pass3(llm, schemas, system, docs, fewshot, profile, p1, p2, paper_id) -> dict:
     reg = json.loads(registry_pass1(p1))
-    reg["measurements"] = [{"id": m["id"], "technique": m["technique_class"], "property": m["property_class"],
+    reg["measurements"] = [{"id": m["id"], "technique": m.get("technique_term"), "property": m.get("property_term"),
                             "samples": m["sample_ids"], "value_text": m["value_text"]} for m in p2["measurements"]]
     preds = ", ".join(r.name for r in profile.relations_for("relations"))
     task = PASS3_TASK.format(predicates=preds, registry=json.dumps(reg, ensure_ascii=False, indent=1)) \
         + examples_block(fewshot, "relations")
-    out = {"entities": [], "relations": [], "rejected_candidates": []}
+    out = {"entities": [], "applications": [], "relations": [], "rejected_candidates": [],
+           "comparisons": [], "unresolved_terms": []}
     runs = _ask_chunks(llm, "pass3_relations", system, docs, task, schemas["relations"], paper_id)
-    runs = [(d, snap_classes(r, profile, "relations")) for d, r in runs]
     for d, r in runs:
         pre = f"c{d['chunk']}_" if len(runs) > 1 else ""
         for e in r["entities"]:
             out["entities"].append(_prefix_ids(e, pre))
+        for a in r.get("applications", []):
+            out["applications"].append(_prefix_ids(a, pre))
+        out["comparisons"] += r.get("comparisons", [])
+        out["unresolved_terms"] += r.get("unresolved_terms", [])
         for rel in r["relations"]:  # this chunk's own X# entities need the same prefix
             for f in ("subject_id", "object_id"):
-                if pre and re.fullmatch(r"X\d+", rel[f] or ""):
+                if pre and re.fullmatch(r"[XA]\d+", rel[f] or ""):
                     rel[f] = pre + rel[f]
             out["relations"].append(rel)
         out["rejected_candidates"] += r["rejected_candidates"]
@@ -405,11 +414,16 @@ def main():
     ap.add_argument("--debug-pages", action="store_true",
                     help="draw detected text/tables/figures/headings on page images (data/extractions/<paper>/debug/)")
     ap.add_argument("--no-export", action="store_true", help="skip writing data/graph/")
+    ap.add_argument("--no-resolver-llm", action="store_true",
+                    help="ontology mapping without the small adjudication model (exact labels, aliases and memory only)")
+    ap.add_argument("--resolver-model", default=None, help="model for ontology adjudication (default claude-haiku-5-5)")
     args = ap.parse_args()
 
     kw = {"allow_live_calls": not args.no_live, "parser": args.parser, "table_vision": args.table_vision,
           "figure_vision": args.figure_vision, "docling": {"do_ocr": True} if args.ocr else {},
-          "max_cost_usd": args.max_cost}
+          "max_cost_usd": args.max_cost, "resolver_llm": not args.no_resolver_llm}
+    if args.resolver_model:
+        kw["resolver_model"] = args.resolver_model
     if args.model:
         kw["model"] = args.model
     cfg = Config(project_root=root, **kw)

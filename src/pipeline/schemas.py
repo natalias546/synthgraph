@@ -1,13 +1,14 @@
-"""Materials-science structured extraction, version 2 (for the v11 ontology profile).
+"""Structured-output schemas for the Claude extraction passes (v11 profile).
 
-Drop-in successor to extraction/schemas.py. Keep schemas.py unchanged until reviewed.
-Deploy this file as src/extraction/schemas.py after approval; a hyphenated file name
-is a distribution label, not a valid normal Python import module name.
+Extraction and ontology mapping are separate jobs. These schemas ask Claude for the paper's own
+scientific terms: what each thing is called, a generic `type_term` (e.g. "single crystal", "flux growth",
+"magnetic susceptibility measurement"), descriptions and evidence. They contain NO ontology class lists.
+src/ontology_resolver then fills the ontology fields (ontology_class / ontology_iri /
+proposed_class_label, property_class / property_iri, technique_class / technique_iri, attribute_class)
+that validation, export and evaluation read.
 
-Backward compatible output keys: figure_description, samples_processes, measurements,
-relations, page_tables. Additional optional lists on relations: applications,
-comparisons, unresolved_terms. All ontology identities are returned as canonical IRIs
-by snap_classes(); no approximate/fuzzy matching that could invent identity.
+Coarse typing still comes from the extraction: where a mention sits (material, sample, process step,
+parameter, measurement property/technique, application) or `entity_group` for pass-3 entities.
 """
 from __future__ import annotations
 
@@ -79,30 +80,19 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
     missing = required.difference(g)
     if missing:
         raise ValueError(f"v11 ontology profile groups missing: {sorted(missing)}")
-    if len(g["application"].class_iris) == 0:
-        raise ValueError("Application root unresolved: install v11 ontology and slice_manifest.json")
 
-    MatClass = _cls(g["material"].labels, "material")
-    SampleClass = _cls(g["sample"].labels, "sample")
-    ProcClass = _cls(g["process"].labels, "process")
-    AttrClass = _cls(g["process_attribute"].labels, "process_attribute")
-    TechClass = _cls(g["technique"].labels, "technique")
-    PropClass = _cls(g["property"].labels, "property")
-    AppClass = _cls(g["application"].labels, "application")
-    ContextClass = _cls(_other_labels(profile), "scientific context")
     GroupName = _lit([name for name in CONTEXT_GROUPS if name in g])
     rel_names = [r.name for r in profile.relations_for("relations")] or ["related_to"]
     RelName = _lit(rel_names)
-    proposed = (Optional[str], Field(None,
-                 description=f"If ontology_class is {OTHER}, retain the exact unresolved class term"))
-    uri = (Optional[str], Field(None, description="Resolved canonical OWL class IRI; assigned during postprocessing"))
+
+    def type_term(examples: str):
+        return (str, Field(..., description=f"Generic type in plain scientific words, not a name or formula: {examples}. "
+                                            "Do not try to match any ontology; a later step does that."))
 
     Parameter = create_model(
         "Parameter",
-        attribute_class=(AttrClass, ...),
-        proposed_class_label=proposed,
-        ontology_iri=uri,
         name_in_text=(str, ...),
+        type_term=type_term("the kind of parameter, e.g. 'temperature', 'time duration', 'heating rate', 'pressure'"),
         symbol=(Optional[str], None),
         value=(Optional[float], Field(None, description="Lower bound when a numeric range")),
         value_max=(Optional[float], None),
@@ -113,8 +103,9 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
     Material = create_model(
         "Material",
         id=(str, Field(..., description="M1, M2, ...")),
-        ontology_class=(MatClass, ...), proposed_class_label=proposed, ontology_iri=uri,
         name=(str, ...), formula=(Optional[str], None),
+        type_term=type_term("the kind of material, e.g. 'kagome metal', 'elemental substance', 'oxide', "
+                            "'flux', 'precursor powder', 'substrate'"),
         original_formula_notation=(Optional[str], None),
         aliases=(list[str], Field(default_factory=list)),
         evidence=(list[Evidence], ...), confidence=(float, ...),
@@ -122,8 +113,9 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
     Sample = create_model(
         "Sample",
         id=(str, Field(..., description="S1, S2, ...")),
-        ontology_class=(SampleClass, ...), proposed_class_label=proposed, ontology_iri=uri,
         name_in_paper=(str, Field(..., description="Sample name used in paper")),
+        type_term=type_term("the kind of specimen, e.g. 'single crystal', 'polycrystalline pellet', 'thin film', "
+                            "'flake', 'powder'"),
         aliases=(list[str], Field(default_factory=list)),
         description=(str, Field(..., description="State, formula, form, composition, dopants")),
         material_ids=(list[str], Field(default_factory=list)),
@@ -133,8 +125,9 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
     ProcessStep = create_model(
         "ProcessStep",
         id=(str, Field(..., description="PR1, PR2, ...")),
-        ontology_class=(ProcClass, ...), proposed_class_label=proposed, ontology_iri=uri,
         name_in_text=(str, ...),
+        type_term=type_term("the generic kind of process, e.g. 'flux growth', 'annealing', "
+                            "'chemical vapour transport', 'solid-state reaction', 'cutting', 'DFT calculation'"),
         step_order=(Optional[int], None), follows_step_id=(Optional[str], None),
         input_ids=(list[str], Field(default_factory=list)),
         output_sample_ids=(list[str], Field(default_factory=list)),
@@ -153,16 +146,17 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
     Measurement = create_model(
         "Measurement",
         id=(str, Field(..., description="ME1, ME2, ...")),
-        technique_class=(TechClass, ...), proposed_technique_label=(Optional[str], None),
-        technique_iri=(Optional[str], None),
-        technique_name_in_text=(str, ...), instrument=(Optional[str], None),
+        technique_name_in_text=(str, ...),
+        technique_term=type_term("generic name of the technique, e.g. 'x-ray diffraction', "
+                                 "'magnetic susceptibility measurement', 'ARPES', 'four-probe resistivity measurement'"),
+        instrument=(Optional[str], None),
         software=(Optional[str], None), computational_method=(Optional[str], None),
         settings=(list[Condition], Field(default_factory=list)),
         sample_ids=(list[str], Field(default_factory=list)),
         material_ids=(list[str], Field(default_factory=list)),
-        property_class=(PropClass, ...), proposed_property_label=(Optional[str], None),
-        property_iri=(Optional[str], None),
         property_name_in_text=(str, ...),
+        property_term=type_term("generic name of the measured/computed quantity, e.g. 'superconducting "
+                                "transition temperature', 'resistivity', 'lattice parameter', 'band gap'"),
         value=(Optional[float], None), value_max=(Optional[float], None),
         value_text=(Optional[str], None), unit=(Optional[str], None),
         uncertainty_text=(Optional[str], None),
@@ -182,7 +176,6 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
         "OtherEntity",
         id=(str, Field(..., description="X1, X2, ...")),
         entity_group=(GroupName, "other"),
-        ontology_class=(ContextClass, ...), proposed_class_label=proposed, ontology_iri=uri,
         name=(str, ...), aliases=(list[str], Field(default_factory=list)),
         original_symbol=(Optional[str], None),
         term_definition=(Optional[str], None),
@@ -192,8 +185,8 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
     ApplicationEntity = create_model(
         "ApplicationEntity",
         id=(str, Field(..., description="A1, A2, ...")),
-        ontology_class=(AppClass, ...), proposed_class_label=proposed, ontology_iri=uri,
-        name=(str, ...), aliases=(list[str], Field(default_factory=list)),
+        name=(str, Field(..., description="the application as a generic field, e.g. 'spintronics', 'quantum computing'")),
+        aliases=(list[str], Field(default_factory=list)),
         application_status=(ApplicationStatus, ...),
         material_ids=(list[str], Field(default_factory=list)),
         sample_ids=(list[str], Field(default_factory=list)),
@@ -203,15 +196,13 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
         "UnresolvedTerm",
         id=(str, Field(..., description="U1, U2, ...")),
         raw_term=(str, ...), possible_definition=(Optional[str], None),
-        proposed_parent_iri=(Optional[str], None),
         reason_unresolved=(str, ...), review_status=(ReviewStatus, "unreviewed"),
         evidence=(list[Evidence], ...),
     )
     Relation = create_model(
         "Relation",
         subject_id=(str, ...), predicate=(RelName, ...),
-        predicate_iri=(Optional[str], None),
-        object_id=(str, ...),
+        object_id=(str, Field(..., description="an ID, or PROP:<generic property name> for 'influences'")),
         trend=(Literal["increases", "decreases", "non_monotonic", "no_effect", "not_applicable"], "not_applicable"),
         scope=(Optional[str], None),
         polarity=(Literal["affirmed", "negated", "hypothetical"], ...),

@@ -27,7 +27,8 @@ outputs/
 notebooks/* copy.ipynb
 
 # Large ontology files (~160 MB each); every team member keeps them locally
-ontology/*.owl
+*.owl
+compressed_owl/v11/
 
 # OS / editor
 .DS_Store

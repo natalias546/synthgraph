@@ -21,6 +21,7 @@ class Config:
     gold_dir: Path | None = None               # data/gold/
     cache_dir: Path | None = None              # data/cache/ (Claude responses + prompts)
     checksums_file: Path | None = None         # checksums.json
+    resolution_dir: Path | None = None         # data/resolution/ (decision memory + review CSV)
 
     # PDF parsing
     parser: str = "docling"                    # "docling" (layout model) or "pdfplumber" (heuristic fallback)
@@ -35,6 +36,13 @@ class Config:
     allow_live_calls: bool = True              # False = replay cache only (no charges)
     use_prompt_caching: bool = True            # reuse the paper text across the 3 passes
     max_cost_usd: float | None = None          # stop before any Claude call if the high cost estimate is above this
+
+    # Ontology resolution (after the Claude passes; see src/ontology_resolver)
+    resolver_llm: bool = True                  # adjudicate unmatched terms with a small model; False = exact
+                                               # labels / aliases / memory only, the rest stays OTHER for review
+    resolver_model: str = "claude-haiku-5-5"   # cheap model for choosing among retrieved candidate classes
+    resolver_top_k: int = 8                    # candidate classes retrieved per term (plus their parents)
+    resolver_review_below: float = 0.8         # adjudications below this confidence go to review
 
     # Text handling
     max_chars_per_call: int = 120_000          # long papers are split into section chunks
@@ -58,6 +66,7 @@ class Config:
         self.gold_dir = Path(self.gold_dir or r / "data" / "gold")
         self.cache_dir = Path(self.cache_dir or r / "data" / "cache")
         self.checksums_file = Path(self.checksums_file or r / "checksums.json")
+        self.resolution_dir = Path(self.resolution_dir or r / "data" / "resolution")
         load_env(r)
         if self.ontology_file is None:
             try:
@@ -67,7 +76,7 @@ class Config:
                 self.notes = [str(exc)]
         if self.ontology_file is not None:
             self.ontology_file = Path(self.ontology_file)
-        for d in (self.outputs_dir, self.cache_dir, self.graph_dir):
+        for d in (self.outputs_dir, self.cache_dir, self.graph_dir, self.resolution_dir):
             d.mkdir(parents=True, exist_ok=True)
 
     def fingerprint_fields(self) -> dict:

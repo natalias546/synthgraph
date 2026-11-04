@@ -52,11 +52,15 @@ class GraphBuilder:
                 if p in self.nodes:
                     self.edges.append({"source": c.iri, "type": "SUBCLASS_OF", "target": p})
 
-    def _class_edge(self, nid, group, label, proposed=None):
-        iri = self.profile.iri_for(group, label)
+    def _class_edge(self, nid, group, label, proposed=None, iri=None):
+        """INSTANCE_OF the resolved class. The resolver's IRI wins (it may come from a fallback group,
+        e.g. a process parameter typed as the property 'temperature'); else the label is looked up."""
+        if not (iri and iri in self.profile.ontology.classes):
+            iri = self.profile.iri_for(group, label)
         if iri:
             self.edge(nid, "INSTANCE_OF", iri)
-        elif label == OTHER:
+        if proposed and (label == OTHER or iri):
+            # OTHER: the class the ontology lacks; typed to a broader class: the narrower concept it lacks
             self.nodes[nid]["proposed_class"] = proposed
 
     # -- one paper --------------------------------------------------------------
@@ -78,29 +82,30 @@ class GraphBuilder:
                           ontology_class=d["ontology_class"])
                 self.nodes[gid].setdefault("aliases", [])
                 self.nodes[gid]["aliases"] = sorted(set(self.nodes[gid]["aliases"]) | set(d.get("aliases", [])) | {d["name"]})
-                self._class_edge(gid, "material", d["ontology_class"], d.get("proposed_class_label"))
+                self._class_edge(gid, "material", d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
                 local[d["id"]] = gid
                 self.edge(gid, "MENTIONED_IN", paper_id, **base(it))
             elif it["kind"] == "sample":
                 nid = f"{paper_id}::{d['id']}"
-                self.node(nid, "Sample", name=d["name_in_paper"], description=d["description"],
+                self.node(nid, "Sample", name=d["name_in_paper"], description=d["description"], type_term=d.get("type_term"),
                           aliases=d.get("aliases"), is_simulated_only=d.get("is_simulated_only"),
                           ontology_class=d["ontology_class"], **base(it))
-                self._class_edge(nid, "sample", d["ontology_class"], d.get("proposed_class_label"))
+                self._class_edge(nid, "sample", d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
             elif it["kind"] == "process_step":
                 nid = f"{paper_id}::{d['id']}"
-                self.node(nid, "ProcessStep", name=d["name_in_text"], step_order=d.get("step_order"),
+                self.node(nid, "ProcessStep", name=d["name_in_text"], type_term=d.get("type_term"), step_order=d.get("step_order"),
                           equipment=d.get("equipment"), polarity=d.get("polarity"),
                           ontology_class=d["ontology_class"], **base(it))
-                self._class_edge(nid, "process", d["ontology_class"], d.get("proposed_class_label"))
+                self._class_edge(nid, "process", d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
             elif it["kind"] == "measurement":
                 nid = f"{paper_id}::{d['id']}"
                 self.node(nid, "Measurement", property=d["property_class"], technique=d["technique_class"],
                           property_in_text=d["property_name_in_text"], technique_in_text=d["technique_name_in_text"],
+                          property_term=d.get("property_term"), technique_term=d.get("technique_term"),
                           value=d.get("value"), value_max=d.get("value_max"), value_text=d.get("value_text"),
                           unit=d.get("unit"), value_si=d.get("value_si"), unit_si=d.get("unit_si"),
                           uncertainty=d.get("uncertainty_text"), data_origin=d.get("data_origin"),
@@ -112,6 +117,16 @@ class GraphBuilder:
                           proposed_technique=d.get("proposed_technique_label"), **base(it))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
+            elif it["kind"] == "application":
+                # Applications are shared across papers (one "spintronics" node); the
+                # per-paper claim (status, evidence) lives on MENTIONED_IN / INTENDED_FOR.
+                key = d.get("ontology_iri") or "name:" + " ".join(d["name"].casefold().split())
+                nid = "APP:" + key
+                self.node(nid, "Application", name=d["name"], ontology_class=d["ontology_class"])
+                self.nodes[nid]["aliases"] = sorted(set(self.nodes[nid].get("aliases", [])) | set(d.get("aliases") or []) | {d["name"]})
+                self._class_edge(nid, "application", d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
+                local[d["id"]] = nid
+                self.edge(nid, "MENTIONED_IN", paper_id, application_status=d.get("application_status"), **base(it))
             elif it["kind"] == "entity":
                 nid = f"{paper_id}::{d['id']}"
                 self.node(nid, "Entity", name=d["name"], aliases=d.get("aliases"),
@@ -122,7 +137,7 @@ class GraphBuilder:
                 g = d.get("entity_group") or "other"
                 if g not in self.profile.groups or not self.profile.iri_for(g, d["ontology_class"]):
                     g = "application" if self.profile.iri_for("application", d["ontology_class"]) else "other"
-                self._class_edge(nid, g, d["ontology_class"], d.get("proposed_class_label"))
+                self._class_edge(nid, g, d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
 
@@ -134,7 +149,7 @@ class GraphBuilder:
                 self.node(nid, "Parameter", name=d["name_in_text"], attribute=d["attribute_class"],
                           value=d.get("value"), value_max=d.get("value_max"), value_text=d.get("value_text"),
                           unit=d.get("unit"), value_si=d.get("value_si"), unit_si=d.get("unit_si"), **base(it))
-                self._class_edge(nid, "process_attribute", d["attribute_class"], d.get("proposed_class_label"))
+                self._class_edge(nid, "process_attribute", d["attribute_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
                 local[d["id"]] = nid
                 self.edge(local[it["parent_id"]], "HAS_PARAMETER", nid, paper_id=paper_id)
 
@@ -158,6 +173,10 @@ class GraphBuilder:
                         self.edge(me, "HAS_OUTPUT", local[x], **prov)
                 if d.get("follows_step_id") in local:
                     self.edge(local[d["follows_step_id"]], "PRECEDES", me, **prov)
+            elif k == "application":
+                for x in d.get("material_ids", []) + d.get("sample_ids", []):
+                    if x in local:
+                        self.edge(local[x], "INTENDED_FOR", me, **prov, application_status=d.get("application_status"))
             elif k == "measurement":
                 for x in d.get("sample_ids", []):
                     if x in local:
@@ -165,8 +184,8 @@ class GraphBuilder:
                 for x in d.get("material_ids", []):
                     if x in local:
                         self.edge(me, "OF_MATERIAL", local[x], **prov)
-                t = self.profile.iri_for("technique", d["technique_class"])
-                p = self.profile.iri_for("property", d["property_class"])
+                t = d.get("technique_iri") or self.profile.iri_for("technique", d["technique_class"])
+                p = d.get("property_iri") or self.profile.iri_for("property", d["property_class"])
                 if t:
                     self.edge(me, "USES_TECHNIQUE", t, paper_id=paper_id)
                 if p:

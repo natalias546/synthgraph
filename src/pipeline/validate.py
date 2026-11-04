@@ -137,10 +137,13 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
         for lab in profile.groups[gname].labels:
             other_label_group.setdefault(lab, gname)
     for e in p3["entities"]:
-        kinds[e["id"]] = other_label_group.get(e["ontology_class"], "other")
+        kinds[e["id"]] = e.get("entity_group") or other_label_group.get(e.get("ontology_class"), "other")
+    for a in p3.get("applications", []):
+        kinds[a["id"]] = "application"
     property_labels = set(profile.groups["property"].labels)
     dup_ids = [i for i, c in Counter(
-        [x["id"] for x in p1["materials"] + p1["samples"] + p1["process_steps"] + p2["measurements"] + p3["entities"]]
+        [x["id"] for x in p1["materials"] + p1["samples"] + p1["process_steps"] + p2["measurements"] + p3["entities"]
+         + p3.get("applications", [])]
     ).items() if c > 1]
 
     def check(kind, obj, class_field=None, group=None, proposed_field="proposed_class_label", refs=()):
@@ -214,7 +217,7 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
     for m in p2["measurements"]:
         it = check("measurement", m, "property_class", "property", proposed_field="proposed_property_label",
                    refs=[("sample_ids", ["sample"]), ("material_ids", ["material"])])
-        if m["technique_class"] == OTHER:
+        if m.get("technique_class") == OTHER:
             it["notes"].append("technique not in ontology (gap)")
             it["technique_gap"] = {"group": "technique", "proposed_label": m.get("proposed_technique_label"),
                                    "text": m.get("technique_name_in_text")}
@@ -235,6 +238,14 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
         items.append(it)
     for e in p3["entities"]:
         items.append(check("entity", e, "ontology_class", kinds.get(e["id"], "other")))
+    for a in p3.get("applications", []):
+        it = check("application", a, "ontology_class", "application",
+                   refs=[("material_ids", ["material"]), ("sample_ids", ["sample"])])
+        if a.get("application_status") not in (None, "demonstrated"):
+            it["notes"].append(f"application_status={a.get('application_status')}")
+            if it["status"] == "auto_accepted":
+                it["status"] = "needs_review"
+        items.append(it)
     for i, r in enumerate(p3["relations"], 1):
         r.setdefault("id", f"R{i}")
         spec = profile.relations.get(r["predicate"])
