@@ -1,0 +1,403 @@
+"""Materials-science structured extraction, version 2 (for the v11 ontology profile).
+
+Drop-in successor to extraction/schemas.py. Keep schemas.py unchanged until reviewed.
+Deploy this file as src/extraction/schemas.py after approval; a hyphenated file name
+is a distribution label, not a valid normal Python import module name.
+
+Backward compatible output keys: figure_description, samples_processes, measurements,
+relations, page_tables. Additional optional lists on relations: applications,
+comparisons, unresolved_terms. All ontology identities are returned as canonical IRIs
+by snap_classes(); no approximate/fuzzy matching that could invent identity.
+"""
+from __future__ import annotations
+
+import re
+import unicodedata
+from typing import Annotated, Literal, Optional
+
+from pydantic import BaseModel, Field, create_model
+
+from ..ontology_loader import OTHER, Profile
+
+
+class Evidence(BaseModel):
+    paragraph_id: str = Field(description="Stable paragraph/table/caption ID, e.g. P0012")
+    quote: str = Field(description="Exact quote from the source (short, usually <=30 words)")
+    page: Optional[int] = Field(None, description="Physical one-based PDF page when known")
+    span_start: Optional[int] = Field(None, description="Zero-based offset within original source text")
+    span_end: Optional[int] = Field(None, description="Exclusive end offset in original source text")
+    source_artifact_id: Optional[str] = Field(None, description="Figure, table, caption or page anchor")
+    original_notation: Optional[str] = Field(None, description="Original text, preserving subscripts and symbols")
+
+
+class Condition(BaseModel):
+    name: str = Field(description="Condition name, e.g. temperature, wavelength, substrate")
+    value_text: str = Field(description="Exact value with unit as printed, e.g. '300 K' or 'AM1.5G'")
+    symbol: Optional[str] = Field(None, description="Symbol as printed, e.g. T_c, T_a, H_parallel")
+    unit: Optional[str] = None
+    uncertainty_text: Optional[str] = None
+
+
+Polarity = Literal["reported", "negated", "hypothetical"]
+ApplicationStatus = Literal["proposed", "demonstrated", "cited", "hypothetical", "negated", "unclear"]
+ReviewStatus = Literal["unreviewed", "approved", "rejected", "unresolved"]
+
+# Claude/OpenRouter grammar size limits: do not enumerate hundreds of class names.
+MAX_ENUM = 60
+# Scientific context groups are dedicated OWL subtrees; no giant GDC/OTHER catch-all.
+CONTEXT_GROUPS = (
+    "phenomenon", "mechanism", "theory_model", "instrument", "software",
+    "phase", "structure", "reference", "dataset", "other", "unmapped",
+)
+
+
+def _lit(labels: list[str]):
+    return Literal[tuple(labels or [OTHER])]  # type: ignore[valid-type]
+
+
+def _cls(labels: list[str], group: str):
+    if len(labels) <= MAX_ENUM:
+        return _lit(labels)
+    return Annotated[str, Field(description=(
+        f"Select an exact active label from allowed ontology group '{group}', "
+        f"or {OTHER}. Canonical URI is assigned by snap_classes after extraction."
+    ))]
+
+
+def _other_labels(profile: Profile) -> list[str]:
+    """Legacy helper name: union of typed scientific context groups (not application)."""
+    groups = profile.groups
+    labels = [label for group in CONTEXT_GROUPS if group in groups
+              for label in groups[group].labels if label != OTHER]
+    return list(dict.fromkeys(labels + [OTHER]))
+
+
+def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
+    g = profile.groups
+    required = {"material", "sample", "process", "process_attribute", "technique",
+                "property", "application", "other"}
+    missing = required.difference(g)
+    if missing:
+        raise ValueError(f"v11 ontology profile groups missing: {sorted(missing)}")
+    if len(g["application"].class_iris) == 0:
+        raise ValueError("Application root unresolved: install v11 ontology and slice_manifest.json")
+
+    MatClass = _cls(g["material"].labels, "material")
+    SampleClass = _cls(g["sample"].labels, "sample")
+    ProcClass = _cls(g["process"].labels, "process")
+    AttrClass = _cls(g["process_attribute"].labels, "process_attribute")
+    TechClass = _cls(g["technique"].labels, "technique")
+    PropClass = _cls(g["property"].labels, "property")
+    AppClass = _cls(g["application"].labels, "application")
+    ContextClass = _cls(_other_labels(profile), "scientific context")
+    GroupName = _lit([name for name in CONTEXT_GROUPS if name in g])
+    rel_names = [r.name for r in profile.relations_for("relations")] or ["related_to"]
+    RelName = _lit(rel_names)
+    proposed = (Optional[str], Field(None,
+                 description=f"If ontology_class is {OTHER}, retain the exact unresolved class term"))
+    uri = (Optional[str], Field(None, description="Resolved canonical OWL class IRI; assigned during postprocessing"))
+
+    Parameter = create_model(
+        "Parameter",
+        attribute_class=(AttrClass, ...),
+        proposed_class_label=proposed,
+        ontology_iri=uri,
+        name_in_text=(str, ...),
+        symbol=(Optional[str], None),
+        value=(Optional[float], Field(None, description="Lower bound when a numeric range")),
+        value_max=(Optional[float], None),
+        value_text=(str, Field(..., description="Exact text and unit as written")),
+        unit=(Optional[str], None),
+        uncertainty_text=(Optional[str], None),
+    )
+    Material = create_model(
+        "Material",
+        id=(str, Field(..., description="M1, M2, ...")),
+        ontology_class=(MatClass, ...), proposed_class_label=proposed, ontology_iri=uri,
+        name=(str, ...), formula=(Optional[str], None),
+        original_formula_notation=(Optional[str], None),
+        aliases=(list[str], Field(default_factory=list)),
+        evidence=(list[Evidence], ...), confidence=(float, ...),
+    )
+    Sample = create_model(
+        "Sample",
+        id=(str, Field(..., description="S1, S2, ...")),
+        ontology_class=(SampleClass, ...), proposed_class_label=proposed, ontology_iri=uri,
+        name_in_paper=(str, Field(..., description="Sample name used in paper")),
+        aliases=(list[str], Field(default_factory=list)),
+        description=(str, Field(..., description="State, formula, form, composition, dopants")),
+        material_ids=(list[str], Field(default_factory=list)),
+        is_simulated_only=(bool, False),
+        evidence=(list[Evidence], ...), confidence=(float, ...),
+    )
+    ProcessStep = create_model(
+        "ProcessStep",
+        id=(str, Field(..., description="PR1, PR2, ...")),
+        ontology_class=(ProcClass, ...), proposed_class_label=proposed, ontology_iri=uri,
+        name_in_text=(str, ...),
+        step_order=(Optional[int], None), follows_step_id=(Optional[str], None),
+        input_ids=(list[str], Field(default_factory=list)),
+        output_sample_ids=(list[str], Field(default_factory=list)),
+        precursor_material_ids=(list[str], Field(default_factory=list)),
+        parameters=(list[Parameter], Field(default_factory=list)),
+        equipment=(Optional[str], None),
+        software=(Optional[str], None),
+        polarity=(Polarity, "reported"),
+        evidence=(list[Evidence], ...), confidence=(float, ...),
+    )
+    SamplesProcesses = create_model(
+        "SamplesProcesses", materials=(list[Material], ...),
+        samples=(list[Sample], ...), process_steps=(list[ProcessStep], ...),
+        unresolved_notes=(list[str], Field(default_factory=list)),
+    )
+    Measurement = create_model(
+        "Measurement",
+        id=(str, Field(..., description="ME1, ME2, ...")),
+        technique_class=(TechClass, ...), proposed_technique_label=(Optional[str], None),
+        technique_iri=(Optional[str], None),
+        technique_name_in_text=(str, ...), instrument=(Optional[str], None),
+        software=(Optional[str], None), computational_method=(Optional[str], None),
+        settings=(list[Condition], Field(default_factory=list)),
+        sample_ids=(list[str], Field(default_factory=list)),
+        material_ids=(list[str], Field(default_factory=list)),
+        property_class=(PropClass, ...), proposed_property_label=(Optional[str], None),
+        property_iri=(Optional[str], None),
+        property_name_in_text=(str, ...),
+        value=(Optional[float], None), value_max=(Optional[float], None),
+        value_text=(Optional[str], None), unit=(Optional[str], None),
+        uncertainty_text=(Optional[str], None),
+        parameter_symbol=(Optional[str], Field(None, description="e.g. T_c, T_a")),
+        conditions=(list[Condition], Field(default_factory=list)),
+        data_origin=(Literal["experimental", "computed", "cited_from_other_work", "unclear"], ...),
+        polarity=(Polarity, "reported"),
+        source_location=(Literal["text", "table", "figure_caption", "figure_only_described"], ...),
+        evidence=(list[Evidence], ...), confidence=(float, ...),
+    )
+    Measurements = create_model(
+        "Measurements", measurements=(list[Measurement], ...),
+        unresolved_notes=(list[str], Field(default_factory=list)),
+    )
+
+    OtherEntity = create_model(
+        "OtherEntity",
+        id=(str, Field(..., description="X1, X2, ...")),
+        entity_group=(GroupName, "other"),
+        ontology_class=(ContextClass, ...), proposed_class_label=proposed, ontology_iri=uri,
+        name=(str, ...), aliases=(list[str], Field(default_factory=list)),
+        original_symbol=(Optional[str], None),
+        term_definition=(Optional[str], None),
+        review_status=(ReviewStatus, "unreviewed"),
+        evidence=(list[Evidence], ...), confidence=(float, ...),
+    )
+    ApplicationEntity = create_model(
+        "ApplicationEntity",
+        id=(str, Field(..., description="A1, A2, ...")),
+        ontology_class=(AppClass, ...), proposed_class_label=proposed, ontology_iri=uri,
+        name=(str, ...), aliases=(list[str], Field(default_factory=list)),
+        application_status=(ApplicationStatus, ...),
+        material_ids=(list[str], Field(default_factory=list)),
+        sample_ids=(list[str], Field(default_factory=list)),
+        evidence=(list[Evidence], ...), confidence=(float, ...),
+    )
+    UnresolvedTerm = create_model(
+        "UnresolvedTerm",
+        id=(str, Field(..., description="U1, U2, ...")),
+        raw_term=(str, ...), possible_definition=(Optional[str], None),
+        proposed_parent_iri=(Optional[str], None),
+        reason_unresolved=(str, ...), review_status=(ReviewStatus, "unreviewed"),
+        evidence=(list[Evidence], ...),
+    )
+    Relation = create_model(
+        "Relation",
+        subject_id=(str, ...), predicate=(RelName, ...),
+        predicate_iri=(Optional[str], None),
+        object_id=(str, ...),
+        trend=(Literal["increases", "decreases", "non_monotonic", "no_effect", "not_applicable"], "not_applicable"),
+        scope=(Optional[str], None),
+        polarity=(Literal["affirmed", "negated", "hypothetical"], ...),
+        support_type=(Literal["direct", "indirect_document"], ...),
+        bridge_ids=(list[str], Field(default_factory=list)),
+        evidence=(list[Evidence], ...), confidence=(float, ...),
+    )
+    ComparisonRecord = create_model(
+        "ComparisonRecord",
+        id=(str, Field(..., description="CMP1, CMP2, ...")),
+        subject_id=(str, ...), comparator_id=(str, ...),
+        property_name=(Optional[str], None),
+        baseline_value_text=(Optional[str], None),
+        target_value_text=(Optional[str], None),
+        trend=(Literal["increases", "decreases", "equal", "different", "non_monotonic", "unspecified"], "unspecified"),
+        conditions=(list[Condition], Field(default_factory=list)),
+        scope=(Optional[str], None),
+        causal_status=(Literal["not_established", "claimed", "unknown"], "not_established"),
+        evidence=(list[Evidence], ...), confidence=(float, ...),
+    )
+
+    class Rejected(BaseModel):
+        subject_id: str
+        predicate: str
+        object_id: str
+        reason: str
+
+    RelationsOut = create_model(
+        "RelationsOut",
+        entities=(list[OtherEntity], ...),
+        relations=(list[Relation], ...),
+        rejected_candidates=(list[Rejected], ...),
+        applications=(list[ApplicationEntity], Field(default_factory=list)),
+        comparisons=(list[ComparisonRecord], Field(default_factory=list)),
+        unresolved_terms=(list[UnresolvedTerm], Field(default_factory=list)),
+    )
+
+    class TableTranscription(BaseModel):
+        table_label: str
+        caption: str
+        column_headers: list[str]
+        rows: list[list[str]]
+        footnotes: list[str] = Field(default_factory=list)
+        unreadable_parts: list[str] = Field(default_factory=list)
+
+    class PageTables(BaseModel):
+        tables: list[TableTranscription]
+
+    class Axis(BaseModel):
+        quantity: str
+        unit: Optional[str] = None
+
+    class Panel(BaseModel):
+        panel: str
+        plot_type: str
+        x_axis: Optional[Axis] = None
+        y_axis: Optional[Axis] = None
+        series_or_samples: list[str] = Field(default_factory=list)
+        conditions: list[str] = Field(default_factory=list)
+        what_it_shows: str
+
+    class FigureDescription(BaseModel):
+        panels: list[Panel]
+        materials_printed: list[str] = Field(default_factory=list)
+        summary: str
+
+    return {
+        "figure_description": FigureDescription,
+        "samples_processes": SamplesProcesses,
+        "measurements": Measurements,
+        "relations": RelationsOut,
+        "page_tables": PageTables,
+    }
+
+
+def _canonical(s: str) -> str:
+    return re.sub(r"[\s_-]+", " ", unicodedata.normalize("NFKC", s).strip()).casefold()
+
+
+def _match(value, labels: list[str]) -> str | None:
+    """Match a label exactly or via unique canonicalized spelling; never fuzzy-match."""
+    if not isinstance(value, str):
+        return None
+    if value in labels:
+        return value
+    k = _canonical(value)
+    hits = [lab for lab in labels if _canonical(lab) == k]
+    if len(hits) == 1:
+        return hits[0]
+    # Original label prior to disambiguation e.g. 'crystal (PMD_0020003)'.
+    hits = [lab for lab in labels if _canonical(lab.split(" (")[0]) == k]
+    return hits[0] if len(hits) == 1 else None
+
+
+def _group_match(value: str | None, profile: Profile, group: str) -> tuple[str, str] | None:
+    if not isinstance(value, str) or not value.strip() or value == OTHER:
+        return None
+    g = profile.groups[group]
+    if value in g.class_iris:
+        iri = value
+        return next((lab, iri) for lab, i in g.label_to_iri.items() if i == iri)
+    label = _match(value, g.labels)
+    if label is not None and label != OTHER:
+        return label, g.label_to_iri[label]
+    # Only exact ontology synonyms, alternate labels, and local IRI names.
+    needle = _canonical(value)
+    candidates = []
+    for lab, iri in g.label_to_iri.items():
+        c = profile.ontology.classes[iri]
+        local = re.split(r"[/#]", iri)[-1]
+        names = list(c.synonyms) + [local]
+        if needle in {_canonical(name) for name in names}:
+            candidates.append((lab, iri))
+    return candidates[0] if len(candidates) == 1 else None
+
+
+def _snap_group(obj: dict, field: str, group: str, proposed_field: str,
+                profile: Profile, iri_field: str = "ontology_iri") -> None:
+    original = obj.get(field)
+    # Explicit URI wins when valid for this group; otherwise preserve it as unresolved.
+    requested = obj.get(iri_field)
+    resolved = _group_match(requested, profile, group) if requested else None
+    if resolved is None:
+        resolved = _group_match(original, profile, group)
+    if resolved:
+        obj[field], obj[iri_field] = resolved
+        if obj.get(proposed_field) == obj[field]:
+            obj[proposed_field] = None
+    else:
+        if not obj.get(proposed_field) and original not in (None, OTHER):
+            obj[proposed_field] = original
+        obj[field], obj[iri_field] = OTHER, None
+
+
+def _snap(obj: dict, field: str, labels: list[str], proposed: str) -> None:
+    """Legacy utility used elsewhere: group-free label snapping only."""
+    hit = _match(obj.get(field), labels)
+    if hit is None:
+        if not obj.get(proposed) and obj.get(field) not in (None, OTHER):
+            obj[proposed] = obj[field]
+        hit = OTHER
+    obj[field] = hit
+
+
+def snap_classes(data: dict, profile: Profile, kind: str) -> dict:
+    """Attach canonical active ontology IRIs; keep unresolved terminology for review.
+
+    Call on the parsed dict *before* final validation/storage. This does not assert
+    semantic truth; it merely ensures identifiers resolve into the declared slice.
+    """
+    g = profile.groups
+    if kind == "samples_processes":
+        for m in data.get("materials", []):
+            _snap_group(m, "ontology_class", "material", "proposed_class_label", profile)
+        for s in data.get("samples", []):
+            _snap_group(s, "ontology_class", "sample", "proposed_class_label", profile)
+        for p in data.get("process_steps", []):
+            _snap_group(p, "ontology_class", "process", "proposed_class_label", profile)
+            for prm in p.get("parameters", []):
+                _snap_group(prm, "attribute_class", "process_attribute", "proposed_class_label", profile)
+    elif kind == "measurements":
+        for m in data.get("measurements", []):
+            _snap_group(m, "technique_class", "technique", "proposed_technique_label",
+                        profile, "technique_iri")
+            _snap_group(m, "property_class", "property", "proposed_property_label",
+                        profile, "property_iri")
+    elif kind == "relations":
+        for a in data.get("applications", []):
+            _snap_group(a, "ontology_class", "application", "proposed_class_label", profile)
+        for e in data.get("entities", []):
+            group = e.get("entity_group") or "other"
+            raw_class = e.get("ontology_class")
+            if group not in g or group not in CONTEXT_GROUPS:
+                group = "unmapped"
+            # Recover group if model left default 'other' but selected an unambiguous class from a typed group.
+            if group == "other" and raw_class not in (None, OTHER):
+                matches = [name for name in CONTEXT_GROUPS if name in g
+                           and _group_match(raw_class, profile, name)]
+                if len(matches) == 1:
+                    group = matches[0]
+            e["entity_group"] = group
+            _snap_group(e, "ontology_class", group, "proposed_class_label", profile)
+            if e.get("ontology_class") == OTHER:
+                e["review_status"] = "unresolved"
+        for r in data.get("relations", []):
+            spec = profile.relations.get(r.get("predicate"))
+            if spec:
+                r["predicate_iri"] = spec.ontology_iri
+    return data
