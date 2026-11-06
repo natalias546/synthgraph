@@ -13,7 +13,7 @@ from pathlib import Path
 from ..ontology_loader import OTHER, Profile
 from .resolve import global_material_id
 
-INCLUDE_STATUSES = ("auto_accepted", "needs_review")
+INCLUDE_STATUSES = ("auto_accepted",)
 
 
 def _ev(it: dict) -> str:
@@ -52,15 +52,11 @@ class GraphBuilder:
                 if p in self.nodes:
                     self.edges.append({"source": c.iri, "type": "SUBCLASS_OF", "target": p})
 
-    def _class_edge(self, nid, group, label, proposed=None, iri=None):
-        """INSTANCE_OF the resolved class. The resolver's IRI wins (it may come from a fallback group,
-        e.g. a process parameter typed as the property 'temperature'); else the label is looked up."""
-        if not (iri and iri in self.profile.ontology.classes):
-            iri = self.profile.iri_for(group, label)
+    def _class_edge(self, nid, group, label, proposed=None):
+        iri = self.profile.iri_for(group, label)
         if iri:
             self.edge(nid, "INSTANCE_OF", iri)
-        if proposed and (label == OTHER or iri):
-            # OTHER: the class the ontology lacks; typed to a broader class: the narrower concept it lacks
+        elif label == OTHER:
             self.nodes[nid]["proposed_class"] = proposed
 
     # -- one paper --------------------------------------------------------------
@@ -82,30 +78,29 @@ class GraphBuilder:
                           ontology_class=d["ontology_class"])
                 self.nodes[gid].setdefault("aliases", [])
                 self.nodes[gid]["aliases"] = sorted(set(self.nodes[gid]["aliases"]) | set(d.get("aliases", [])) | {d["name"]})
-                self._class_edge(gid, "material", d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
+                self._class_edge(gid, "material", d["ontology_class"], d.get("proposed_class_label"))
                 local[d["id"]] = gid
                 self.edge(gid, "MENTIONED_IN", paper_id, **base(it))
             elif it["kind"] == "sample":
                 nid = f"{paper_id}::{d['id']}"
-                self.node(nid, "Sample", name=d["name_in_paper"], description=d["description"], type_term=d.get("type_term"),
+                self.node(nid, "Sample", name=d["name_in_paper"], description=d["description"],
                           aliases=d.get("aliases"), is_simulated_only=d.get("is_simulated_only"),
                           ontology_class=d["ontology_class"], **base(it))
-                self._class_edge(nid, "sample", d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
+                self._class_edge(nid, "sample", d["ontology_class"], d.get("proposed_class_label"))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
             elif it["kind"] == "process_step":
                 nid = f"{paper_id}::{d['id']}"
-                self.node(nid, "ProcessStep", name=d["name_in_text"], type_term=d.get("type_term"), step_order=d.get("step_order"),
+                self.node(nid, "ProcessStep", name=d["name_in_text"], step_order=d.get("step_order"),
                           equipment=d.get("equipment"), polarity=d.get("polarity"),
                           ontology_class=d["ontology_class"], **base(it))
-                self._class_edge(nid, "process", d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
+                self._class_edge(nid, "process", d["ontology_class"], d.get("proposed_class_label"))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
             elif it["kind"] == "measurement":
                 nid = f"{paper_id}::{d['id']}"
                 self.node(nid, "Measurement", property=d["property_class"], technique=d["technique_class"],
                           property_in_text=d["property_name_in_text"], technique_in_text=d["technique_name_in_text"],
-                          property_term=d.get("property_term"), technique_term=d.get("technique_term"),
                           value=d.get("value"), value_max=d.get("value_max"), value_text=d.get("value_text"),
                           unit=d.get("unit"), value_si=d.get("value_si"), unit_si=d.get("unit_si"),
                           uncertainty=d.get("uncertainty_text"), data_origin=d.get("data_origin"),
@@ -118,15 +113,29 @@ class GraphBuilder:
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
             elif it["kind"] == "application":
-                # Applications are shared across papers (one "spintronics" node); the
-                # per-paper claim (status, evidence) lives on MENTIONED_IN / INTENDED_FOR.
-                key = d.get("ontology_iri") or "name:" + " ".join(d["name"].casefold().split())
-                nid = "APP:" + key
-                self.node(nid, "Application", name=d["name"], ontology_class=d["ontology_class"])
-                self.nodes[nid]["aliases"] = sorted(set(self.nodes[nid].get("aliases", [])) | set(d.get("aliases") or []) | {d["name"]})
-                self._class_edge(nid, "application", d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
+                nid = f"{paper_id}::{d['id']}"
+                self.node(nid, "Application", name=d["name"], ontology_class=d["ontology_class"],
+                          application_status=d.get("application_status"), aliases=d.get("aliases"), **base(it))
+                self._class_edge(nid, "application", d["ontology_class"], d.get("proposed_class_label"))
                 local[d["id"]] = nid
-                self.edge(nid, "MENTIONED_IN", paper_id, application_status=d.get("application_status"), **base(it))
+                self.edge(nid, "REPORTED_IN", paper_id)
+            elif it["kind"] == "unresolved_term":
+                nid = f"{paper_id}::{d['id']}"
+                self.node(nid, "UnresolvedTerm", name=d["raw_term"],
+                          proposed_parent_iri=d.get("proposed_parent_iri"),
+                          possible_definition=d.get("possible_definition"),
+                          review_reason=d.get("reason_unresolved"), **base(it))
+                local[d["id"]] = nid
+                self.edge(nid, "REPORTED_IN", paper_id)
+            elif it["kind"] == "comparison":
+                nid = f"{paper_id}::{d['id']}"
+                self.node(nid, "Comparison", property_in_text=d.get("property_name"),
+                          baseline_value_text=d.get("baseline_value_text"),
+                          target_value_text=d.get("target_value_text"),
+                          conditions=json.dumps(d.get("conditions", []), ensure_ascii=False),
+                          trend=d.get("trend"), causal_status=d.get("causal_status"), **base(it))
+                local[d["id"]] = nid
+                self.edge(nid, "REPORTED_IN", paper_id)
             elif it["kind"] == "entity":
                 nid = f"{paper_id}::{d['id']}"
                 self.node(nid, "Entity", name=d["name"], aliases=d.get("aliases"),
@@ -137,7 +146,7 @@ class GraphBuilder:
                 g = d.get("entity_group") or "other"
                 if g not in self.profile.groups or not self.profile.iri_for(g, d["ontology_class"]):
                     g = "application" if self.profile.iri_for("application", d["ontology_class"]) else "other"
-                self._class_edge(nid, g, d["ontology_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
+                self._class_edge(nid, g, d["ontology_class"], d.get("proposed_class_label"))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
 
@@ -149,7 +158,7 @@ class GraphBuilder:
                 self.node(nid, "Parameter", name=d["name_in_text"], attribute=d["attribute_class"],
                           value=d.get("value"), value_max=d.get("value_max"), value_text=d.get("value_text"),
                           unit=d.get("unit"), value_si=d.get("value_si"), unit_si=d.get("unit_si"), **base(it))
-                self._class_edge(nid, "process_attribute", d["attribute_class"], d.get("proposed_class_label"), d.get("ontology_iri"))
+                self._class_edge(nid, "process_attribute", d["attribute_class"], d.get("proposed_class_label"))
                 local[d["id"]] = nid
                 self.edge(local[it["parent_id"]], "HAS_PARAMETER", nid, paper_id=paper_id)
 
@@ -174,9 +183,15 @@ class GraphBuilder:
                 if d.get("follows_step_id") in local:
                     self.edge(local[d["follows_step_id"]], "PRECEDES", me, **prov)
             elif k == "application":
-                for x in d.get("material_ids", []) + d.get("sample_ids", []):
-                    if x in local:
-                        self.edge(local[x], "INTENDED_FOR", me, **prov, application_status=d.get("application_status"))
+                for field, edge_type in (("material_ids", "INTENDED_FOR"), ("sample_ids", "INTENDED_FOR")):
+                    for x in d.get(field, []):
+                        if x in local:
+                            self.edge(local[x], edge_type, me, **prov)
+            elif k == "comparison":
+                for field, edge_type in (("subject_id", "COMPARISON_SUBJECT"),
+                                         ("comparator_id", "COMPARISON_COMPARATOR")):
+                    if d.get(field) in local:
+                        self.edge(me, edge_type, local[d[field]], **prov)
             elif k == "measurement":
                 for x in d.get("sample_ids", []):
                     if x in local:
@@ -184,8 +199,8 @@ class GraphBuilder:
                 for x in d.get("material_ids", []):
                     if x in local:
                         self.edge(me, "OF_MATERIAL", local[x], **prov)
-                t = d.get("technique_iri") or self.profile.iri_for("technique", d["technique_class"])
-                p = d.get("property_iri") or self.profile.iri_for("property", d["property_class"])
+                t = self.profile.iri_for("technique", d["technique_class"])
+                p = self.profile.iri_for("property", d["property_class"])
                 if t:
                     self.edge(me, "USES_TECHNIQUE", t, paper_id=paper_id)
                 if p:
@@ -274,7 +289,7 @@ class GraphBuilder:
             for k in ("value", "value_max", "value_si"):
                 if isinstance(n.get(k), (int, float)):
                     g.add((s, KG[k], Literal(n[k], datatype=XSD.double)))
-            for k in ("value_text", "unit", "unit_si", "data_origin", "status", "paper_id", "evidence", "proposed_class"):
+            for k in ("value_text", "unit", "unit_si", "data_origin", "status", "paper_id", "evidence", "proposed_class", "property_in_text", "name", "application_status", "causal_status", "baseline_value_text", "target_value_text", "proposed_parent_iri", "review_reason"):
                 if n.get(k):
                     g.add((s, KG[k], Literal(n[k])))
         for e in self.edges:
@@ -286,6 +301,23 @@ class GraphBuilder:
             else:
                 p = URIRef(e["ontology_property"]) if e.get("ontology_property") else KG[e["type"].lower()]
                 g.add((s, p, o))
+                # Keep edge-level source evidence and review status in RDF, not
+                # just the JSONL export. Standard RDF reification is queryable by n10s.
+                if any(e.get(k) is not None for k in ("evidence", "status", "paper_id", "confidence")):
+                    import hashlib
+                    sig = json.dumps({"s": e["source"], "p": str(p), "o": e["target"],
+                                      "paper": e.get("paper_id"), "evidence": e.get("evidence")},
+                                     sort_keys=True, ensure_ascii=False)
+                    assertion = KG["assertion/" + hashlib.sha256(sig.encode()).hexdigest()[:24]]
+                    g.add((assertion, RDF.type, RDF.Statement))
+                    g.add((assertion, RDF.subject, s))
+                    g.add((assertion, RDF.predicate, p))
+                    g.add((assertion, RDF.object, o))
+                    for key in ("paper_id", "status", "evidence", "polarity", "support_type", "scope", "trend"):
+                        if e.get(key) is not None:
+                            g.add((assertion, KG[key], Literal(str(e[key]))))
+                    if isinstance(e.get("confidence"), (float, int)):
+                        g.add((assertion, KG.confidence, Literal(float(e["confidence"]), datatype=XSD.double)))
         g.serialize(path, format="turtle")
         return len(g)
 
@@ -311,6 +343,14 @@ def write_review_queue(resolved_by_paper: dict, path: Path):
                 "summary": summary,
                 "issues": "; ".join(it["issues"] + it["notes"]), "confidence": d.get("confidence"),
                 "page": ev.get("page"), "quote": ev.get("quote"), "anchor": ev.get("anchor"),
+                "reviewer_decision": "", "reviewer_comment": "",
+            })
+        for rejected in res.get("rejected_candidates", []):
+            rows.append({
+                "paper_id": pid, "kind": "rejected_candidate", "id": "", "status": "rejected",
+                "summary": f"{rejected.get('subject_id')} {rejected.get('predicate')} {rejected.get('object_id')}",
+                "issues": rejected.get("reason", ""), "confidence": None,
+                "page": None, "quote": None, "anchor": None,
                 "reviewer_decision": "", "reviewer_comment": "",
             })
     with open(path, "w", newline="", encoding="utf-8-sig") as f:  # utf-8-sig opens cleanly in Excel

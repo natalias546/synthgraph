@@ -1,0 +1,434 @@
+@prefix ex: <https://w3id.org/matsci/ontology/extraction/> .
+@prefix lit: <https://w3id.org/matsci/ontology/literature/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/matsci/ontology/extraction> a owl:Ontology ;
+    rdfs:label "Materials-science schema alignment and application vocabulary"@en ;
+    rdfs:comment "Additive vocabulary for scientific parsing and classification. Application classes describe reported intended uses, not physical functions. No change to schemas.py."@en ;
+    owl:versionInfo "2026-11-03" .
+
+ex:BatteryApplication a owl:Class ;
+    rdfs:label "battery application"@en ;
+    rdfs:comment "Use in battery electrodes, electrolytes or related battery components."@en ;
+    rdfs:subClassOf ex:EnergyStorageApplication .
+
+ex:BiomedicalMaterialApplication a owl:Class ;
+    rdfs:label "biomedical material application"@en ;
+    rdfs:comment "Use in biomedical devices, implants or biocompatible materials."@en ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/BiomedicalApplication> ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:BiosensorApplication a owl:Class ;
+    rdfs:label "biosensor application"@en ;
+    rdfs:comment "Use in biochemical or biological sensing."@en ;
+    rdfs:subClassOf ex:SensorApplication .
+
+ex:ElectrocatalysisApplication a owl:Class ;
+    rdfs:label "electrocatalysis application"@en ;
+    rdfs:comment "Use in electrochemically driven catalytic reactions."@en ;
+    rdfs:subClassOf ex:CatalysisApplication .
+
+ex:ElectrochromicApplication a owl:Class ;
+    rdfs:label "electrochromic application"@en ;
+    rdfs:comment "Use in electrically controlled light absorption or coloration."@en ;
+    rdfs:subClassOf ex:OptoelectronicApplication .
+
+ex:ElectronicStateMention a owl:Class ;
+    rdfs:label "electronic state mention"@en ;
+    rdfs:comment "Mention of an electronic, topological or magnetic electronic state."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:EnvironmentalRemediationApplication a owl:Class ;
+    rdfs:label "environmental remediation application"@en ;
+    rdfs:comment "Use in removing, immobilizing or transforming environmental contaminants."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:FigureOrTableMention a owl:Class ;
+    rdfs:label "figure or table mention"@en ;
+    rdfs:comment "Reference to a figure, panel, equation or table in source literature."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:GasSensorApplication a owl:Class ;
+    rdfs:label "gas sensor application"@en ;
+    rdfs:comment "Use in gas detection or gas sensing."@en ;
+    rdfs:subClassOf ex:SensorApplication .
+
+ex:HallEffectMention a owl:Class ;
+    rdfs:label "Hall effect mention"@en ;
+    rdfs:comment "Evidence-linked mention of ordinary or anomalous Hall effect."@en ;
+    rdfs:subClassOf ex:ScientificPhenomenonMention .
+
+ex:HydrogenStorageApplication a owl:Class ;
+    rdfs:label "hydrogen storage application"@en ;
+    rdfs:comment "Use in hydrogen uptake, storage and release."@en ;
+    rdfs:subClassOf ex:EnergyStorageApplication .
+
+ex:KagomeMotifMention a owl:Class ;
+    rdfs:label "kagome structural motif mention"@en ;
+    rdfs:comment "Evidence-linked mention of a kagome structural motif; not an assertion that a sample has that structure."@en ;
+    rdfs:subClassOf ex:CrystalMotifMention .
+
+ex:LiteratureReferenceMention a owl:Class ;
+    rdfs:label "literature reference mention"@en ;
+    rdfs:comment "Mention of a document, cited paper, or bibliographic record."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:MagneticMemoryApplication a owl:Class ;
+    rdfs:label "magnetic memory application"@en ;
+    rdfs:comment "Use in information storage based on magnetic states."@en ;
+    rdfs:subClassOf ex:SpintronicsApplication .
+
+ex:MembraneSeparationApplication a owl:Class ;
+    rdfs:label "membrane separation application"@en ;
+    rdfs:comment "Use in filtration or selective separation membranes."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:OpticalCoatingApplication a owl:Class ;
+    rdfs:label "optical coating application"@en ;
+    rdfs:comment "Use in functional optical coatings."@en ;
+    rdfs:subClassOf ex:PhotonicApplication .
+
+ex:PhotocatalysisApplication a owl:Class ;
+    rdfs:label "photocatalysis application"@en ;
+    rdfs:comment "Use in reactions assisted by photogenerated charge carriers."@en ;
+    rdfs:subClassOf ex:CatalysisApplication .
+
+ex:PhotodetectorApplication a owl:Class ;
+    rdfs:label "photodetector application"@en ;
+    rdfs:comment "Use in light-detection devices or photoconductive detectors."@en ;
+    rdfs:subClassOf ex:OptoelectronicApplication .
+
+ex:PhotovoltaicApplication a owl:Class ;
+    rdfs:label "photovoltaic application"@en ;
+    rdfs:comment "Use in solar-energy conversion or photovoltaic devices."@en ;
+    rdfs:subClassOf ex:OptoelectronicApplication .
+
+ex:PiezoelectricApplication a owl:Class ;
+    rdfs:label "piezoelectric application"@en ;
+    rdfs:comment "Use in strain-sensitive electrical transduction and actuation."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:ProtectiveCoatingApplication a owl:Class ;
+    rdfs:label "protective coating application"@en ;
+    rdfs:comment "Use as protective functional coating or barrier."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:RadiationShieldingApplication a owl:Class ;
+    rdfs:label "radiation shielding application"@en ;
+    rdfs:comment "Use for attenuation or protection against ionizing radiation."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:ScientificAcronymCandidate a owl:Class ;
+    rdfs:label "scientific acronym candidate"@en ;
+    rdfs:comment "Acronym with candidate expansion and evidence; not automatically an exact synonym."@en ;
+    rdfs:subClassOf lit:ScientificTerminologyEntry .
+
+ex:ScientificConditionMention a owl:Class ;
+    rdfs:label "scientific condition mention"@en ;
+    rdfs:comment "Mention of an experimental or simulated condition and its symbol or value."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:ScientificDatasetMention a owl:Class ;
+    rdfs:label "scientific dataset mention"@en ;
+    rdfs:comment "Mention of a dataset, repository, tabulation or benchmark."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:ScientificInstrumentMention a owl:Class ;
+    rdfs:label "scientific instrument mention"@en ;
+    rdfs:comment "Mention of a named scientific instrument or apparatus."@en ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/MeasuringDevice> ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:ScientificMechanismMention a owl:Class ;
+    rdfs:label "scientific mechanism mention"@en ;
+    rdfs:comment "Mention of a proposed or established explanatory mechanism."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:ScientificModelMention a owl:Class ;
+    rdfs:label "scientific model mention"@en ;
+    rdfs:comment "Mention of a physical, statistical or computational model."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:ScientificSoftwareMention a owl:Class ;
+    rdfs:label "scientific software mention"@en ;
+    rdfs:comment "Mention of scientific computation, simulation, or analysis software."@en ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/Software> ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:ScientificStructureMention a owl:Class ;
+    rdfs:label "scientific structure mention"@en ;
+    rdfs:comment "Mention of a crystallographic, microstructural or electronic structure."@en ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/CrystalStructure> ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:ScientificTheoryMention a owl:Class ;
+    rdfs:label "scientific theory mention"@en ;
+    rdfs:comment "Mention of an explanatory theoretical framework."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:StructuralEngineeringApplication a owl:Class ;
+    rdfs:label "structural engineering application"@en ;
+    rdfs:comment "Use as a structural or load-bearing material."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:SupercapacitorApplication a owl:Class ;
+    rdfs:label "supercapacitor application"@en ;
+    rdfs:comment "Use in electrochemical capacitors."@en ;
+    rdfs:subClassOf ex:EnergyStorageApplication .
+
+ex:SuperconductingDeviceApplication a owl:Class ;
+    rdfs:label "superconducting device application"@en ;
+    rdfs:comment "Use in technology relying on superconductivity."@en ;
+    rdfs:subClassOf ex:QuantumTechnologyApplication .
+
+ex:ThermalManagementApplication a owl:Class ;
+    rdfs:label "thermal management application"@en ;
+    rdfs:comment "Use for heat transfer, thermal insulation, or thermal regulation."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:ThermoelectricApplication a owl:Class ;
+    rdfs:label "thermoelectric application"@en ;
+    rdfs:comment "Use in thermoelectric energy conversion or cooling."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:TopologicalPhaseMention a owl:Class ;
+    rdfs:label "topological phase mention"@en ;
+    rdfs:comment "Evidence-linked mention of a topological phase or state."@en ;
+    rdfs:subClassOf ex:MaterialPhaseMention .
+
+ex:WeakAntilocalizationMention a owl:Class ;
+    rdfs:label "weak antilocalization mention"@en ;
+    rdfs:comment "Evidence-linked mention of weak antilocalization."@en ;
+    rdfs:subClassOf ex:ScientificPhenomenonMention .
+
+ex:applicationEvidenceText a owl:DatatypeProperty ;
+    rdfs:label "applicationEvidenceText"@en ;
+    rdfs:comment "literal source quote supporting application claim"@en ;
+    rdfs:domain ex:ScientificApplicationClaim ;
+    rdfs:range xsd:string .
+
+ex:applicationStatus a owl:DatatypeProperty ;
+    rdfs:label "applicationStatus"@en ;
+    rdfs:comment "reported, proposed, demonstrated, negated or hypothetical"@en ;
+    rdfs:domain ex:ScientificApplicationClaim ;
+    rdfs:range xsd:string .
+
+ex:candidateScientificCategory a owl:DatatypeProperty ;
+    rdfs:label "candidateScientificCategory"@en ;
+    rdfs:comment "intermediate coarse scientific category for hierarchical label selection"@en ;
+    rdfs:domain ex:ScientificContextRecord ;
+    rdfs:range xsd:string .
+
+ex:compared_with a owl:ObjectProperty ;
+    rdfs:label "compared_with"@en ;
+    rdfs:comment "Direct comparison between two identified resources within a paper; neither symmetry nor causality is assumed. For metrics and conditions, also create a ScientificComparisonRecord."@en .
+
+ex:comparisonBasis a owl:DatatypeProperty ;
+    rdfs:label "comparisonBasis"@en ;
+    rdfs:comment "property or variable being compared"@en ;
+    rdfs:domain ex:ScientificComparisonRecord ;
+    rdfs:range xsd:string .
+
+ex:comparisonConclusion a owl:DatatypeProperty ;
+    rdfs:label "comparisonConclusion"@en ;
+    rdfs:comment "source-supported comparison statement"@en ;
+    rdfs:domain ex:ScientificComparisonRecord ;
+    rdfs:range xsd:string .
+
+ex:comparisonDirection a owl:DatatypeProperty ;
+    rdfs:label "comparisonDirection"@en ;
+    rdfs:comment "direction or trend reported in the source"@en ;
+    rdfs:domain ex:ScientificComparisonRecord ;
+    rdfs:range xsd:string .
+
+ex:comparisonScope a owl:DatatypeProperty ;
+    rdfs:label "comparisonScope"@en ;
+    rdfs:comment "conditions, sample selection and other applicability restrictions"@en ;
+    rdfs:domain ex:ScientificComparisonRecord ;
+    rdfs:range xsd:string .
+
+ex:hasApplicationCategory a owl:ObjectProperty ;
+    rdfs:label "hasApplicationCategory"@en ;
+    rdfs:comment "Reported application category of an evidence-linked claim."@en ;
+    rdfs:domain ex:ScientificApplicationClaim ;
+    rdfs:range ex:MaterialsApplication .
+
+ex:hasApplicationClaim a owl:ObjectProperty ;
+    rdfs:label "hasApplicationClaim"@en ;
+    rdfs:comment "Associates the extracted material mention with an evidence-linked claim about its use."@en ;
+    rdfs:domain lit:MaterialMention ;
+    rdfs:range ex:ScientificApplicationClaim .
+
+ex:hasApplicationEvidence a owl:ObjectProperty ;
+    rdfs:label "hasApplicationEvidence"@en ;
+    rdfs:comment "Source span supporting a reported application claim."@en ;
+    rdfs:domain ex:ScientificApplicationClaim ;
+    rdfs:range lit:LiteratureEvidenceSpan .
+
+ex:hasComparedValue a owl:ObjectProperty ;
+    rdfs:label "hasComparedValue"@en ;
+    rdfs:comment "Reported measured/computed or qualitative value used in a comparison."@en ;
+    rdfs:domain ex:ScientificComparisonRecord ;
+    rdfs:range ex:ScientificValueRecord .
+
+ex:hasComparisonCondition a owl:ObjectProperty ;
+    rdfs:label "hasComparisonCondition"@en ;
+    rdfs:comment "Experimental or computational conditions for the comparison."@en ;
+    rdfs:domain ex:ScientificComparisonRecord ;
+    rdfs:range ex:ScientificComparisonCondition .
+
+ex:hasComparisonEvidence a owl:ObjectProperty ;
+    rdfs:label "hasComparisonEvidence"@en ;
+    rdfs:comment "Source passage supporting the comparison."@en ;
+    rdfs:domain ex:ScientificComparisonRecord ;
+    rdfs:range lit:LiteratureEvidenceSpan .
+
+ex:hasComparisonReference a owl:ObjectProperty ;
+    rdfs:label "hasComparisonReference"@en ;
+    rdfs:comment "Record to its reference, baseline or comparator entity."@en ;
+    rdfs:domain ex:ScientificComparisonRecord .
+
+ex:hasComparisonSubject a owl:ObjectProperty ;
+    rdfs:label "hasComparisonSubject"@en ;
+    rdfs:comment "Record to its primary compared entity, without forcing all objects into the same upper ontology."@en ;
+    rdfs:domain ex:ScientificComparisonRecord .
+
+ex:hasProvisionalTerm a owl:ObjectProperty ;
+    rdfs:label "hasProvisionalTerm"@en ;
+    rdfs:comment "Associates an extracted record with terminology pending ontology review."@en ;
+    rdfs:domain lit:ScientificExtractionRecord ;
+    rdfs:range ex:UnmappedScientificTerm .
+
+ex:hasReportedPropertyValue a owl:ObjectProperty ;
+    rdfs:label "hasReportedPropertyValue"@en ;
+    rdfs:comment "Connects a claim or measurement record to a value record (not the physical has-quality relation)."@en ;
+    rdfs:domain lit:ScientificExtractionRecord ;
+    rdfs:range ex:ScientificValueRecord .
+
+ex:influences a owl:ObjectProperty ;
+    rdfs:label "influences"@en ;
+    rdfs:comment "Source-reported association or influence; do not infer causality from this property. Qualify using evidence and trend records."@en .
+
+ex:intended_for a owl:ObjectProperty ;
+    rdfs:label "intended_for"@en ;
+    rdfs:comment "Informationally reported intended application of a material or specimen; not identical to RO_0000085 has function."@en ;
+    rdfs:range ex:MaterialsApplication .
+
+ex:referencesScientificContext a owl:ObjectProperty ;
+    rdfs:label "referencesScientificContext"@en ;
+    rdfs:comment "Record references contextual phenomenon, instrument, software, theory or structure."@en ;
+    rdfs:domain lit:ScientificExtractionRecord ;
+    rdfs:range ex:ScientificContextRecord .
+
+ex:refersToApplication a owl:ObjectProperty ;
+    rdfs:label "refersToApplication"@en ;
+    rdfs:comment "An extraction record refers to a materials application concept."@en ;
+    rdfs:domain lit:ScientificExtractionRecord ;
+    rdfs:range ex:MaterialsApplication .
+
+ex:termResolutionStatus a owl:DatatypeProperty ;
+    rdfs:label "termResolutionStatus"@en ;
+    rdfs:comment "unresolved, provisional, mapped, reviewed, rejected"@en ;
+    rdfs:domain ex:UnmappedScientificTerm ;
+    rdfs:range xsd:string .
+
+ex:wasMeasuredOn a owl:ObjectProperty ;
+    rdfs:label "wasMeasuredOn"@en ;
+    rdfs:comment "Relates a recorded measurement to the material mention described by the source."@en ;
+    rdfs:domain lit:ScientificMeasurementRecord ;
+    rdfs:range lit:MaterialMention .
+
+ex:CrystalMotifMention a owl:Class ;
+    rdfs:label "crystal motif mention"@en ;
+    rdfs:comment "Mention of a structural motif such as kagome, honeycomb or layered motifs."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:MaterialPhaseMention a owl:Class ;
+    rdfs:label "material phase mention"@en ;
+    rdfs:comment "Mention of a material phase or phase label."@en ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:PhotonicApplication a owl:Class ;
+    rdfs:label "photonic application"@en ;
+    rdfs:comment "Use in photonic systems, optical waveguides or light manipulation."@en ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/OpticalApplication> ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:QuantumTechnologyApplication a owl:Class ;
+    rdfs:label "quantum technology application"@en ;
+    rdfs:comment "Use in quantum information, coherent devices or quantum sensing."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:ScientificComparisonCondition a owl:Class ;
+    rdfs:label "scientific comparison condition"@en ;
+    rdfs:comment "Condition under which a comparison is made; separate from comparable object identity."@en ;
+    rdfs:subClassOf lit:ExperimentalConditionRecord .
+
+ex:SpintronicsApplication a owl:Class ;
+    rdfs:label "spintronics application"@en ;
+    rdfs:comment "Use of electronic spin or spin-dependent transport in devices."@en ;
+    rdfs:subClassOf ex:ElectronicApplication .
+
+ex:CatalysisApplication a owl:Class ;
+    rdfs:label "catalysis application"@en ;
+    rdfs:comment "Use of a material as or within a catalyst."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:ElectronicApplication a owl:Class ;
+    rdfs:label "electronic application"@en ;
+    rdfs:comment "Use of a material in electronic components, devices or circuits."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:ScientificPhenomenonMention a owl:Class ;
+    rdfs:label "scientific phenomenon mention"@en ;
+    rdfs:comment "Mention of an observed or predicted physical/chemical phenomenon."@en ;
+    rdfs:seeAlso <https://w3id.org/matsci/ontology/PhysicalPhenomenon> ;
+    rdfs:subClassOf ex:ScientificContextRecord .
+
+ex:ScientificValueRecord a owl:Class ;
+    rdfs:label "scientific value record"@en ;
+    rdfs:comment "Value, unit and qualifier as reported in literature; distinct from the physical quality measured."@en ;
+    rdfs:subClassOf lit:ScientificExtractionRecord .
+
+ex:SensorApplication a owl:Class ;
+    rdfs:label "sensor application"@en ;
+    rdfs:comment "Use in measuring or detecting physical, chemical or biological signals."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:UnmappedScientificTerm a owl:Class ;
+    rdfs:label "unmapped scientific term"@en ;
+    rdfs:comment "Source phrase preserved while ontology alignment is unknown or needs human review."@en ;
+    rdfs:subClassOf lit:ScientificTerminologyEntry .
+
+ex:EnergyStorageApplication a owl:Class ;
+    rdfs:label "energy storage application"@en ;
+    rdfs:comment "Use of a material in energy storage."@en ;
+    rdfs:subClassOf ex:MaterialsApplication .
+
+ex:OptoelectronicApplication a owl:Class ;
+    rdfs:label "optoelectronic application"@en ;
+    rdfs:comment "Use of a material in coupled optical and electronic technologies."@en ;
+    rdfs:subClassOf ex:ElectronicApplication .
+
+ex:ScientificApplicationClaim a owl:Class ;
+    rdfs:label "scientific application claim"@en ;
+    rdfs:comment "A source-supported statement asserting, suggesting, rejecting, or hypothetically proposing a material application."@en ;
+    rdfs:subClassOf lit:QualifiedScientificClaim .
+
+ex:ScientificComparisonRecord a owl:Class ;
+    rdfs:label "scientific comparison record"@en ;
+    rdfs:comment "Reified statement relating compared entities with scope, direction, metrics and evidence; comparison alone does not establish causation."@en ;
+    rdfs:subClassOf lit:ScientificExtractionRecord .
+
+ex:ScientificContextRecord a owl:Class ;
+    rdfs:label "scientific context record"@en ;
+    rdfs:comment "An evidence-linked informational record for concepts that do not fit the primary material/process/technique/property slots."@en ;
+    rdfs:subClassOf lit:ScientificExtractionRecord .
+
+ex:MaterialsApplication a owl:Class ;
+    rdfs:label "materials application"@en ;
+    rdfs:comment "An informational description of a reported, proposed, or intended use of a material; not proof that the application has been demonstrated."@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+

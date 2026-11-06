@@ -18,11 +18,11 @@ from .io_utils import StageStore, paper_id_from_filename, read_json, sha256_file
 from .observations import write_observations
 from .llm import ClaudeExtractor
 from ..ontology_loader import Ontology, Profile
-from ..ontology_resolver import (RESOLVER_SYSTEM, MappingDecisions, OntologyResolver, ResolutionMemory,
-                                 annotate_validation, write_resolution_review)
+from ..ontology_resolver import OntologyResolver, annotate_validation
 from .resolve import resolve_paper
 from .schemas import build_schemas
 from .structure import build_structure
+from .evidence_context import enrich_structure
 from .validate import validate_paper
 
 PIPELINE_VERSION = "0.4.0"  # bump when a stage's code changes its output, so saved stages are redone
@@ -56,31 +56,8 @@ class Pipeline:
 
     @cached_property
     def ontology_resolver(self):
-        """Maps extracted terms onto the ontology (src/ontology_resolver). Never edits the OWL file."""
+        """Local vocabulary matcher: no API calls, no changes to the OWL ontology."""
         return OntologyResolver(self.profile)
-
-    @cached_property
-    def resolution_memory(self):
-        """Decisions shared across papers: each (group, term) is adjudicated once per ontology version."""
-        return ResolutionMemory(self.cfg.resolution_dir / "resolution_memory.json")
-
-    @cached_property
-    def resolver_llm(self):
-        """Small model for choosing among retrieved candidate classes (same cache folder as the passes)."""
-        cfg = self.cfg
-        return ClaudeExtractor(cfg.resolver_model, cfg.cache_dir, load_api_key(cfg.project_root),
-                               max_output_tokens=4000, allow_live_calls=cfg.allow_live_calls,
-                               use_prompt_caching=cfg.use_prompt_caching, mock_responder=self._mock_responder)
-
-    def resolve_ontology(self, extraction: dict, paper_id: str) -> dict:
-        """Run the ontology_resolve stage for one paper's passes 1-3."""
-        def ask(label, task):
-            return self.resolver_llm.ask(label, system=RESOLVER_SYSTEM, task=task, schema=MappingDecisions,
-                                         paper_id=paper_id, max_tokens=4000)
-        return self.ontology_resolver.resolve_extraction(
-            extraction, ask=ask if self.cfg.resolver_llm else None, memory=self.resolution_memory, paper_id=paper_id,
-            top_k=self.cfg.resolver_top_k, review_below=self.cfg.resolver_review_below,
-            model=self.cfg.resolver_model if self.cfg.resolver_llm else None)
 
     @cached_property
     def system(self):
@@ -170,12 +147,12 @@ class Pipeline:
             if stop_at < 1:
                 return out
             st, fp_st = stage("structure", {"up": fp_ing},
-                              lambda: structure_from_docling(load_docling_document(store.dir / "docling.json"), ing, pdf))
+                              lambda: enrich_structure(structure_from_docling(load_docling_document(store.dir / "docling.json"), ing, pdf)))
         else:
             ing, fp_ing = stage("ingest", {"pdf": pdf_hash, "parser": "pdfplumber"}, lambda: ingest_pdf(pdf))
             if stop_at < 1:
                 return out
-            st, fp_st = stage("structure", {"up": fp_ing}, lambda: build_structure(ing))
+            st, fp_st = stage("structure", {"up": fp_ing}, lambda: enrich_structure(build_structure(ing)))
         # Flat reading-order list for the LLM notebooks (same shape as the old text pass).
         write_observations(st, store.dir / "observations.json")
         if stop_at < 2:
@@ -206,14 +183,12 @@ class Pipeline:
                         lambda: X.run_pass3(self.llm, self.schemas, self.system, docs, self.fewshot, self.profile, p1, p2, pid))
         if stop_at < STAGES.index("ontology_resolve"):
             return out
-        # Map the extracted terms onto the ontology: exact labels / approved aliases, shared decision
-        # memory, local candidate retrieval, then a small adjudication call for what is left.
-        # Changing the ontology or the reviewed aliases re-runs only this stage and the ones after it.
+        # Resolve source scientific terms against the v11 OWL vocabulary without an
+        # additional model call. Only unique exact labels/approved aliases get IRIs.
         aligned, fp_aligned = stage("ontology_resolve",
-                                    {"up": fp3, "resolver": self.ontology_resolver.fingerprint,
-                                     "llm": self.cfg.resolver_llm and self.cfg.resolver_model,
-                                     "top_k": self.cfg.resolver_top_k, "review_below": self.cfg.resolver_review_below},
-                                    lambda: self.resolve_ontology({"pass1": p1, "pass2": p2, "pass3": p3}, pid))
+                                    {"up": fp3, "resolver": self.ontology_resolver.fingerprint},
+                                    lambda: self.ontology_resolver.resolve_extraction(
+                                        {"pass1": p1, "pass2": p2, "pass3": p3}))
         if stop_at < STAGES.index("validate"):
             return out
 
@@ -235,7 +210,12 @@ class Pipeline:
     def _llm_inputs(self, st, vis):
         """Paragraphs (with table/figure vision applied), the documents sent to Claude, and the fingerprint
         inputs of the Claude passes."""
-        paragraphs = [{**p, **vis["overrides"].get(p["id"], {})} for p in st["paragraphs"]] + vis["added"]
+        from collections import defaultdict
+        cues = defaultdict(set)
+        for ev in st.get("semantic_evidence", []):
+            cues[ev["paragraph_id"]].update(ev.get("scientific_roles", []))
+        paragraphs = [{**p, **vis["overrides"].get(p["id"], {}),
+                       "scientific_cues": sorted(cues[p["id"]])} for p in st["paragraphs"]] + vis["added"]
         docs = X.build_documents({**st, "paragraphs": paragraphs}, st["title"], self.cfg.skip_sections,
                                  self.cfg.max_chars_per_call)
         llm_fp = {"docs": sha256_json([d["text"] for d in docs]), "system": sha256_json(self.system),
@@ -281,15 +261,6 @@ class Pipeline:
                          "images": images, "saved": self._pass_saved(pid, st, passes)})
         outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
         result = cost.estimate(self.cfg.model, system_tokens, rows, outputs, passes)
-        if stop >= STAGES.index("ontology_resolve") and self.cfg.resolver_llm:
-            new = sum(1 for r in rows if not r["saved"])
-            seen = cost.observed_outputs(self.cfg.cache_dir, self.cfg.resolver_model).get("resolve", [])
-            res = cost.resolver_estimate(self.cfg.resolver_model, new,
-                                         {"resolve": cost.output_range({"resolve": seen})["resolve"][:2]} if seen else None)
-            result["resolver"] = {**res, "model": self.cfg.resolver_model}
-            result["low_usd"] += res["low_usd"]
-            result["high_usd"] += res["high_usd"]
-            result["calls"] += res["calls"][1]
         result["text"] = cost.summary_text(self.cfg.model, system_tokens, count.exact, outputs, result)
         if show:
             print(result["text"], flush=True)
@@ -320,39 +291,27 @@ class Pipeline:
         return {"results": results, "errors": errors}
 
     # ------------------------------------------------------------------
-    def write_resolution_review(self, results: dict, path: Path | None = None) -> int:
-        """data/resolution/resolution_review.csv: every non-exact ontology decision across papers, most
-        frequent first, with an empty `action` column to fill in (see apply_resolution_review)."""
-        aligned = {pid: r["ontology_resolve"] for pid, r in results.items() if "ontology_resolve" in r}
-        return write_resolution_review(aligned, path or self.cfg.resolution_dir / "resolution_review.csv")
-
-    def apply_resolution_review(self, path: Path | None = None) -> dict:
-        """Apply the actions filled into resolution_review.csv (approve / reject / remap / gap) to
-        src/ontology_resolver/scientific_aliases.json. Afterwards re-run: only ontology_resolve and the
-        stages after it are redone, without new extraction calls."""
-        from ..ontology_resolver import apply_resolution_review
-        res = apply_resolution_review(path or self.cfg.resolution_dir / "resolution_review.csv",
-                                      self.ontology_resolver, self.resolution_memory)
-        self.__dict__.pop("ontology_resolver", None)      # reload with the new aliases
-        return res
-
     def export(self, results: dict, out_dir: Path | None = None, prune_classes=True) -> dict:
         """Write data/graph/: nodes.jsonl, relationships.jsonl, graph.ttl, review_queue.csv,
         ontology_gaps.csv, run_manifest.json."""
         out_dir = Path(out_dir or self.cfg.graph_dir)
-        gb = GraphBuilder(self.profile)
-        resolved = {}
-        for pid, r in results.items():
-            if "resolve" in r:
-                resolved[pid] = r["resolve"]
-                gb.add_paper(pid, r.get("meta", {}), r["resolve"])
-        if prune_classes:
-            gb.prune_unused_classes()
-        info = gb.write(out_dir)
-        info["rdf_triples"] = gb.write_turtle(out_dir / "graph.ttl")
+        resolved = {pid: r["resolve"] for pid, r in results.items() if "resolve" in r}
+        def graph_for(statuses, destination):
+            gb = GraphBuilder(self.profile, include_statuses=statuses)
+            for pid, res in resolved.items():
+                gb.add_paper(pid, results[pid].get("meta", {}), res)
+            if prune_classes:
+                gb.prune_unused_classes()
+            info = gb.write(destination)
+            info["rdf_triples"] = gb.write_turtle(destination / "graph.ttl")
+            return info
+        # The canonical graph contains only mechanically auto-accepted assertions.
+        # They remain unverified scientific facts; reviewed/provisional claims are segregated.
+        info = graph_for(("auto_accepted",), out_dir)
+        candidate_dir = out_dir / "candidates"
+        info["candidate_graph"] = graph_for(("auto_accepted", "needs_review"), candidate_dir)
         info["review_queue_rows"] = write_review_queue(resolved, out_dir / "review_queue.csv")
         info["ontology_gap_rows"] = len(write_ontology_gaps(resolved, out_dir / "ontology_gaps.csv"))
-        info["resolution_review_rows"] = self.write_resolution_review(results)
         write_json(out_dir / "run_manifest.json", self.manifest())
         return info
 
