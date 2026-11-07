@@ -134,8 +134,12 @@ def _group_of(item_id: str, kinds: dict[str, str]) -> str | None:
     return kinds.get(item_id)
 
 
-def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, min_conf: float) -> dict:
+def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, min_conf: float,
+                   approved_primary_sentence_ids: set[str] | None = None,
+                   approved_visual_paragraph_ids: set[str] | None = None) -> dict:
+    """Validate with an optional pre-LLM evidence allowlist (fail closed when supplied)."""
     anch = Anchorer(paragraphs)
+    approved_visual_paragraph_ids = approved_visual_paragraph_ids or set()
     p1, p2, p3 = extraction["pass1"], extraction["pass2"], extraction["pass3"]
     items: list[dict] = []
     kinds: dict[str, str] = {}
@@ -178,6 +182,18 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
             notes.append("quote only matches after normalization; exact source offsets unavailable")
         if any(a["anchor"] == "found_in_other_paragraph" for a in anchors):
             notes.append("quote found in a different paragraph than cited")
+        if approved_primary_sentence_ids is not None:
+            # Original paragraph text remains available for audit, but only a
+            # reviewer-approved PRIMARY sentence can support an asserted fact.
+            # Context-only or unreviewed sentences are not evidence allowlists.
+            for a in anchors:
+                if a.get("paragraph_id") in approved_visual_paragraph_ids and a.get("literal_match"):
+                    continue
+                ids = a.get("evidence_sentence_ids", [])
+                if (not a.get("literal_match") or not ids or
+                        not set(ids).issubset(approved_primary_sentence_ids)):
+                    issues.append("evidence quote not grounded exclusively in approved PRIMARY source sentences")
+                    break
         if obj.get("id") in dup_ids:
             notes.append("duplicate ID")
         for f, allowed in refs:
