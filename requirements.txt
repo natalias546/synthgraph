@@ -34,3 +34,7 @@ uvicorn==0.54.0
 # Notebooks (optional)
 jupyterlab
 ipykernel
+
+# Optional Jupyter UI for pre-LLM human evidence and ontology candidate review.
+# Existing requirements.txt intentionally remains unchanged.
+ipywidgets>=8,<9

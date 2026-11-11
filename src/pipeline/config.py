@@ -21,6 +21,7 @@ class Config:
     gold_dir: Path | None = None               # data/gold/
     cache_dir: Path | None = None              # data/cache/ (Claude responses + prompts)
     checksums_file: Path | None = None         # checksums.json
+    resolution_dir: Path | None = None         # data/resolution/ (decision memory + review CSV)
 
     # PDF parsing
     parser: str = "docling"                    # "docling" (layout model) or "pdfplumber" (heuristic fallback)
@@ -33,8 +34,15 @@ class Config:
     model: str = "claude-sonnet-5-5"           # cheaper bulk option: claude-haiku-5-5; strongest: claude-opus-5-5
     max_output_tokens: int = 16000
     allow_live_calls: bool = True              # False = replay cache only (no charges)
-    use_prompt_caching: bool = True            # reuse the paper text across the 3 passes
+    use_prompt_caching: bool = True            # cache the system prompt (the ontology glossary; same for all papers)
+    system_cache_ttl: str = "1h"               # "1h" or "5m"; a paper's passes take minutes, so a 5m entry expires
+                                               # before the next paper reaches the same pass
     max_cost_usd: float | None = None          # stop before any Claude call if the high cost estimate is above this
+
+    # Pre-LLM human review (src/pipeline/pre_llm_review.py)
+    pre_llm_review: bool = False               # False: Claude reads the full paper and every table/figure crop
+                                               # (subject to table_vision/figure_vision). True: Claude reads only
+                                               # sentences approved in pre_llm_review.json, and only approved crops.
 
     # Text handling
     max_chars_per_call: int = 120_000          # long papers are split into section chunks
@@ -58,6 +66,7 @@ class Config:
         self.gold_dir = Path(self.gold_dir or r / "data" / "gold")
         self.cache_dir = Path(self.cache_dir or r / "data" / "cache")
         self.checksums_file = Path(self.checksums_file or r / "checksums.json")
+        self.resolution_dir = Path(self.resolution_dir or r / "data" / "resolution")
         load_env(r)
         if self.ontology_file is None:
             try:
@@ -67,7 +76,7 @@ class Config:
                 self.notes = [str(exc)]
         if self.ontology_file is not None:
             self.ontology_file = Path(self.ontology_file)
-        for d in (self.outputs_dir, self.cache_dir, self.graph_dir):
+        for d in (self.outputs_dir, self.cache_dir, self.graph_dir, self.resolution_dir):
             d.mkdir(parents=True, exist_ok=True)
 
     def fingerprint_fields(self) -> dict:
@@ -81,6 +90,7 @@ class Config:
             "max_output_tokens": self.max_output_tokens,
             "max_chars_per_call": self.max_chars_per_call,
             "skip_sections": list(self.skip_sections),
+            "pre_llm_review": self.pre_llm_review,
         }
 
     def as_dict(self) -> dict:

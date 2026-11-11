@@ -18,13 +18,17 @@ from .io_utils import StageStore, paper_id_from_filename, read_json, sha256_file
 from .observations import write_observations
 from .llm import ClaudeExtractor
 from ..ontology_loader import Ontology, Profile
+from ..ontology_resolver import OntologyResolver, annotate_validation
 from .resolve import resolve_paper
 from .schemas import build_schemas
 from .structure import build_structure
+from .evidence_context import enrich_structure
+from .pre_llm_review import (make_candidates, read_or_create_review, reviewed_selection,
+                             review_summary, approved_documents, apply_reviewed_mappings, ReviewRequired)
 from .validate import validate_paper
 
-PIPELINE_VERSION = "0.3.2"  # bump when a stage's code changes its output, so saved stages are redone
-STAGES = ["ingest", "structure", "visuals", "pass1", "pass2", "pass3", "validate", "resolve"]
+PIPELINE_VERSION = "0.5.0"  # bump when a stage's code changes its output, so saved stages are redone
+STAGES = ["ingest", "structure", "pre_llm_candidates", "human_review", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve"]
 
 
 class Pipeline:
@@ -53,6 +57,11 @@ class Pipeline:
         return build_schemas(self.profile)
 
     @cached_property
+    def ontology_resolver(self):
+        """Local vocabulary matcher: no API calls, no changes to the OWL ontology."""
+        return OntologyResolver(self.profile)
+
+    @cached_property
     def system(self):
         return X.system_prompt(self.profile)
 
@@ -65,7 +74,8 @@ class Pipeline:
         cfg = self.cfg
         return ClaudeExtractor(cfg.model, cfg.cache_dir, load_api_key(cfg.project_root),
                                max_output_tokens=cfg.max_output_tokens, allow_live_calls=cfg.allow_live_calls,
-                               use_prompt_caching=cfg.use_prompt_caching, mock_responder=self._mock_responder)
+                               use_prompt_caching=cfg.use_prompt_caching, system_cache_ttl=cfg.system_cache_ttl,
+                               mock_responder=self._mock_responder)
 
     @property
     def docling(self):
@@ -140,100 +150,214 @@ class Pipeline:
             if stop_at < 1:
                 return out
             st, fp_st = stage("structure", {"up": fp_ing},
-                              lambda: structure_from_docling(load_docling_document(store.dir / "docling.json"), ing, pdf))
+                              lambda: enrich_structure(structure_from_docling(load_docling_document(store.dir / "docling.json"), ing, pdf)))
         else:
             ing, fp_ing = stage("ingest", {"pdf": pdf_hash, "parser": "pdfplumber"}, lambda: ingest_pdf(pdf))
             if stop_at < 1:
                 return out
-            st, fp_st = stage("structure", {"up": fp_ing}, lambda: build_structure(ing))
+            st, fp_st = stage("structure", {"up": fp_ing}, lambda: enrich_structure(build_structure(ing)))
         # Flat reading-order list for the LLM notebooks (same shape as the old text pass).
         write_observations(st, store.dir / "observations.json")
-        if stop_at < 2:
+        if stop_at < STAGES.index("pre_llm_candidates"):
             return out
+        candidates, fp_candidates = stage(
+            "pre_llm_candidates", {"up": fp_st, "resolver": self.ontology_resolver.fingerprint},
+            lambda: make_candidates(st, self.ontology_resolver))
+        if stop_at < STAGES.index("human_review"):
+            return out
+        review_path = store.dir / "pre_llm_review.json"
+        if self.cfg.pre_llm_review:
+            review = read_or_create_review(review_path, st, candidates)
+            out["human_review"] = {"path": str(review_path), "summary": review_summary(review, candidates)}
+        else:
+            out["human_review"] = {"skipped": True, "reason": "Config.pre_llm_review is False (full paper sent)"}
+        if stop_at < STAGES.index("visuals"):
+            return out
+        # With review on, this fails closed before any Claude/vision client or prompt is constructed.
+        selection = self._selection(st, candidates, review_path)
+        full_paper = selection.get("full_paper", False)
+        approved_visuals = set(selection["approved_visuals"])
+        # With review on, a visual crop must be explicitly approved by its source paragraph ID.
+        relevant_tables = [t for t in st.get("tables", []) if t.get("paragraph_id") in approved_visuals]
+        relevant_figures = [f for f in st.get("figures", []) if f.get("paragraph_id") in approved_visuals]
 
         def do_visuals():
             if self.cfg.parser == "docling":
-                return X.run_visuals_docling(self.llm, self.schemas, st, store.dir, pid, self.system,
+                if not relevant_tables and not relevant_figures:
+                    return {"overrides": {}, "added": [], "skipped": True}
+                chosen = {**st, "tables": relevant_tables, "figures": relevant_figures}
+                return X.run_visuals_docling(self.llm, self.schemas, chosen, store.dir, pid, self.system,
                                              self.cfg.table_vision, self.cfg.figure_vision)
             if self.cfg.table_vision == "never":
                 return {"overrides": {}, "added": [], "skipped": True}
-            return {"overrides": {}, "added": X.run_table_vision(self.llm, self.schemas, pdf, st, pid, self.system),
-                    "pages": X.table_pages(st)}
-        vis, fp_vis = stage("visuals", {"up": fp_st, "model": self.cfg.model, "table_vision": self.cfg.table_vision,
+            filtered = st if full_paper else {
+                **st, "paragraphs": [p for p in st["paragraphs"] if p["id"] in approved_visuals]}
+            if not filtered["paragraphs"] or not X.table_pages(filtered):
+                return {"overrides": {}, "added": [], "skipped": True}
+            return {"overrides": {}, "added": X.run_table_vision(self.llm, self.schemas, pdf, filtered, pid, self.system),
+                    "pages": X.table_pages(filtered)}
+        vis, fp_vis = stage("visuals", {"up": fp_candidates, "review": selection["review_fingerprint"],
+                                        "approved_visuals": sorted(approved_visuals),
+                                        "model": self.cfg.model, "table_vision": self.cfg.table_vision,
                                         "figure_vision": self.cfg.figure_vision}, do_visuals)
-        if stop_at < 3:
+        if stop_at < STAGES.index("pass1"):
             return out
 
-        paragraphs, docs, llm_fp = self._llm_inputs(st, vis)
+        paragraphs, docs, llm_fp = self._llm_inputs(st, vis, selection)
         p1, fp1 = stage("pass1", llm_fp, lambda: X.run_pass1(self.llm, self.schemas, self.system, docs, self.fewshot, pid, self.profile))
-        if stop_at < 4:
+        if stop_at < STAGES.index("pass2"):
             return out
         p2, fp2 = stage("pass2", {**llm_fp, "up": fp1},
                         lambda: X.run_pass2(self.llm, self.schemas, self.system, docs, self.fewshot, p1, pid, self.profile))
-        if stop_at < 5:
+        if stop_at < STAGES.index("pass3"):
             return out
         p3, fp3 = stage("pass3", {**llm_fp, "up": fp2},
                         lambda: X.run_pass3(self.llm, self.schemas, self.system, docs, self.fewshot, self.profile, p1, p2, pid))
-        if stop_at < 6:
+        if stop_at < STAGES.index("ontology_resolve"):
             return out
-        val, fp_val = stage("validate", {"up": fp3, "profile": sha256_json(self.profile.summary()),
-                                         "min_conf": self.cfg.min_confidence_for_auto_accept},
-                            lambda: validate_paper({"pass1": p1, "pass2": p2, "pass3": p3}, paragraphs, self.profile,
-                                                   self.cfg.min_confidence_for_auto_accept))
-        if stop_at < 7:
+        # Resolve source scientific terms against the v11 OWL vocabulary without an
+        # additional model call. Only unique exact labels/approved aliases get IRIs.
+        aligned, fp_aligned = stage("ontology_resolve",
+                                    {"up": fp3, "resolver": self.ontology_resolver.fingerprint},
+                                    lambda: apply_reviewed_mappings(
+                                        self.ontology_resolver.resolve_extraction(
+                                            {"pass1": p1, "pass2": p2, "pass3": p3}),
+                                        selection, self.ontology_resolver))
+        if stop_at < STAGES.index("validate"):
+            return out
+
+        def do_validate():
+            validated = validate_paper(aligned, paragraphs, self.profile,
+                                       self.cfg.min_confidence_for_auto_accept,
+                                       approved_primary_sentence_ids=(
+                                           None if full_paper else {e["id"] for e in selection["extract"]}),
+                                       approved_visual_paragraph_ids=set(selection["approved_visuals"]))
+            return annotate_validation(validated, aligned)
+
+        val, fp_val = stage("validate", {"up": fp_aligned,
+                                       "profile": sha256_json(self.profile.summary()),
+                                       "min_conf": self.cfg.min_confidence_for_auto_accept}, do_validate)
+        if stop_at < STAGES.index("resolve"):
             return out
         stage("resolve", {"up": fp_val}, lambda: resolve_paper(val))
-        out["meta"] = {"title": st["title"], "pdf": pdf.name, "sha256": pdf_hash, "documents": [
-            {"chunk": d["chunk"], "chars": d["chars"]} for d in docs]}
+        out["meta"] = {"title": st["title"], "pdf": pdf.name, "sha256": pdf_hash,
+                       "review_fingerprint": selection["review_fingerprint"],
+                       "approved_primary_sentence_ids": [e["id"] for e in selection["extract"]],
+                       "approved_visual_paragraph_ids": selection["approved_visuals"],
+                       "documents": [{"chunk": d["chunk"], "chars": d["chars"]} for d in docs]}
         return out
 
-    def _llm_inputs(self, st, vis):
+    def _selection(self, st, candidates, review_path) -> dict:
+        """What Claude may read. With Config.pre_llm_review off: the whole paper and every table/figure crop
+        (table_vision/figure_vision still apply). With it on: only reviewer-approved sentences and crops."""
+        if not self.cfg.pre_llm_review:
+            visuals = [x["paragraph_id"] for x in st.get("tables", []) + st.get("figures", [])
+                       if x.get("paragraph_id")]
+            return {"full_paper": True, "extract": [], "context_only": [], "hints": {},
+                    "review_fingerprint": None, "approved_visuals": visuals, "counts": {}}
+        review = read_or_create_review(review_path, st, candidates)
+        return reviewed_selection(st, candidates, review, self.ontology_resolver)
+
+    def _documents(self, st, paragraphs, selection) -> list[dict]:
+        if selection.get("full_paper"):
+            return X.build_documents({**st, "paragraphs": paragraphs}, st["title"],
+                                     self.cfg.skip_sections, self.cfg.max_chars_per_call)
+        return approved_documents(st, selection, self.cfg.max_chars_per_call)
+
+    def _llm_inputs(self, st, vis, selection):
         """Paragraphs (with table/figure vision applied), the documents sent to Claude, and the fingerprint
         inputs of the Claude passes."""
-        paragraphs = [{**p, **vis["overrides"].get(p["id"], {})} for p in st["paragraphs"]] + vis["added"]
-        docs = X.build_documents({**st, "paragraphs": paragraphs}, st["title"], self.cfg.skip_sections,
-                                 self.cfg.max_chars_per_call)
-        llm_fp = {"docs": sha256_json([d["text"] for d in docs]), "system": sha256_json(self.system),
-                  "fewshot": sha256_json(self.fewshot), "cfg": self.cfg.fingerprint_fields(),
-                  "schemas": sha256_json({k: v.model_json_schema() for k, v in self.schemas.items()})}
-        return paragraphs, docs, llm_fp
+        from collections import defaultdict
+        cues = defaultdict(set)
+        for ev in st.get("semantic_evidence", []):
+            cues[ev["paragraph_id"]].update(ev.get("scientific_roles", []))
+        paragraphs = [{**p, **vis["overrides"].get(p["id"], {}),
+                       "scientific_cues": sorted(cues[p["id"]])} for p in st["paragraphs"]] + vis["added"]
+        docs = self._documents(st, paragraphs, selection)
+        if selection.get("full_paper"):  # vision transcriptions are already in the full document
+            return paragraphs, docs, self._llm_fp(docs, selection)
+        # Transcriptions from explicitly approved vision assets may supplement
+        # the source sentence packets; they are never silently included.
+        visual_paragraphs = [p for p in paragraphs if p.get("text_source") == "claude_vision"
+                             and p["id"] in selection["approved_visuals"]]
+        visual_paragraphs += [p for p in vis.get("added", []) if p.get("provenance") == "claude_vision"]
+        if visual_paragraphs:
+            extras = X.build_documents({**st, "paragraphs": visual_paragraphs}, st["title"],
+                                       self.cfg.skip_sections, self.cfg.max_chars_per_call)
+            for extra in extras:
+                extra["chunk"] = len(docs)
+                docs.append(extra)
+        return paragraphs, docs, self._llm_fp(docs, selection)
 
-    def _pass_saved(self, pid, st, passes) -> bool:
-        """True if pass1..passes are saved for these exact inputs (same check run_paper uses to skip them)."""
+    def _llm_fp(self, docs, selection) -> dict:
+        return {"review": selection["review_fingerprint"], "candidates": self.ontology_resolver.fingerprint,
+                "docs": sha256_json([d["text"] for d in docs]), "system": sha256_json(self.system),
+                "fewshot": sha256_json(self.fewshot), "cfg": self.cfg.fingerprint_fields(),
+                "schemas": sha256_json({k: v.model_json_schema() for k, v in self.schemas.items()})}
+
+    def _pass_saved(self, pid, st, passes, selection=None) -> bool:
+        """True only when the exact reviewed input and output-stage hashes match."""
         store = StageStore(self.cfg.outputs_dir, pid)
-        if not passes:
-            return store.path("visuals").exists()
-        vis = store.load("visuals")
-        if vis is None:
+        if selection is None:
             return False
-        llm_fp, up = self._llm_inputs(st, vis)[2], None
+        can = store.load("pre_llm_candidates")
+        if not can:
+            return False
+        visual_fp = sha256_json({"v": PIPELINE_VERSION, "stage": "visuals",
+                                 "up": can.get("_fingerprint"),
+                                 "review": selection["review_fingerprint"],
+                                 "approved_visuals": sorted(selection["approved_visuals"]),
+                                 "model": self.cfg.model,
+                                 "table_vision": self.cfg.table_vision,
+                                 "figure_vision": self.cfg.figure_vision})
+        vis = store.load("visuals", visual_fp)
+        if not vis:
+            return False
+        if passes == 0:
+            return True
+        llm_fp = self._llm_inputs(st, vis, selection)[2]
+        up = None
         for k in range(1, passes + 1):
-            up = sha256_json({"v": PIPELINE_VERSION, "stage": f"pass{k}", **llm_fp, **({"up": up} if up else {})})
-        return store.load(f"pass{passes}", up) is not None
+            inputs = {**llm_fp, **({"up": up} if up else {})}
+            up = sha256_json({"v": PIPELINE_VERSION, "stage": f"pass{k}", **inputs})
+            if store.load(f"pass{k}", up) is None:
+                return False
+        return True
 
     def estimate_cost(self, papers=None, until="resolve", show=True) -> dict:
-        """What the Claude stages up to `until` would cost for these papers, before calling anything.
-        Parses papers that aren't parsed yet (free). See src/pipeline/cost.py for the assumptions."""
+        """What the Claude stages up to `until` would cost, before calling anything. With
+        Config.pre_llm_review on, only approved text/vision is counted and every paper must have a valid review."""
         from . import cost
         stop = STAGES.index(until)
         passes = max(0, min(3, stop - STAGES.index("visuals")))
-        count = cost.TokenCounter(self.llm.client, self.cfg.model)
-        system_tokens = count(self.system)
-        skip_figures = {"logo", "signature", "qr_code", "bar_code", "stamp", "icon"}
-        rows = []
+        # With review on, fail closed for the complete batch before contacting token-counting APIs.
+        approved = []
         for pdf in papers or self.papers():
             pid = paper_id_from_filename(pdf)
-            st = self.run_paper(pdf, until="structure")["structure"]
-            docs = X.build_documents(st, st["title"], self.cfg.skip_sections, self.cfg.max_chars_per_call)
+            r = self.run_paper(pdf, until="human_review")
+            st, candidates = r["structure"], r["pre_llm_candidates"]
+            selection = self._selection(st, candidates, StageStore(self.cfg.outputs_dir, pid).dir / "pre_llm_review.json")
+            approved.append((pdf, pid, st, selection))
+        count = cost.TokenCounter(self.llm.client, self.cfg.model)
+        system_tokens = count(self.system)
+        rows = []
+        for pdf, pid, st, selection in approved:
+            docs = self._documents(st, st["paragraphs"], selection)
+            approved_assets = set(selection["approved_visuals"])
             images = 0
-            if stop >= STAGES.index("visuals") and self.cfg.parser == "docling":
-                images = sum(1 for t in st.get("tables", []) if t.get("crop") and (
-                    self.cfg.table_vision == "always" or (self.cfg.table_vision == "fallback" and t.get("needs_vision"))))
-                if self.cfg.figure_vision:
-                    images += sum(1 for f in st.get("figures", []) if f.get("crop") and
-                                  (f.get("classification") or {}).get("class", "") not in skip_figures)
+            if stop >= STAGES.index("visuals"):
+                if self.cfg.parser == "docling":
+                    if self.cfg.table_vision != "never":
+                        images += sum(1 for t in st.get("tables", []) if t.get("paragraph_id") in approved_assets
+                                      and t.get("crop") and (self.cfg.table_vision == "always"
+                                      or (self.cfg.table_vision == "fallback" and t.get("needs_vision"))))
+                    if self.cfg.figure_vision:
+                        images += sum(1 for f in st.get("figures", []) if f.get("paragraph_id") in approved_assets and f.get("crop"))
+                elif self.cfg.table_vision != "never":
+                    images = len({p["page"] for p in st["paragraphs"] if p["id"] in approved_assets
+                                  and (p["kind"] == "table" or p.get("caption_of", "").startswith("table"))})
             rows.append({"paper_id": pid, "doc_tokens": [count(d["text"]) for d in docs] if passes else [],
-                         "images": images, "saved": self._pass_saved(pid, st, passes)})
+                         "images": images, "saved": self._pass_saved(pid, st, passes, selection)})
         outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
         result = cost.estimate(self.cfg.model, system_tokens, rows, outputs, passes)
         result["text"] = cost.summary_text(self.cfg.model, system_tokens, count.exact, outputs, result)
@@ -241,13 +365,35 @@ class Pipeline:
             print(result["text"], flush=True)
         return result
 
+    def check_schemas(self, until="resolve", show=True) -> dict:
+        """Confirm the API accepts every output schema the stages up to `until` will send (a few tokens each;
+        a schema that passed before is remembered). Raises SchemaTooComplex naming any refused schema."""
+        stop = STAGES.index(until)
+        names = []
+        if stop >= STAGES.index("visuals"):
+            if self.cfg.table_vision != "never":
+                names.append("page_tables")
+            if self.cfg.figure_vision:
+                names.append("figure_description")
+        names += [n for n, s in (("samples_processes", "pass1"), ("measurements", "pass2"), ("relations", "pass3"),
+                                 ("applications_comparisons", "pass3")) if stop >= STAGES.index(s)]
+        status = self.llm.check_schemas({n: self.schemas[n] for n in names})
+        if show and status:
+            print("Output schemas:", ", ".join(f"{k} {v}" for k, v in status.items()), flush=True)
+        return status
+
     def run_all(self, until="resolve", force=(), papers=None, stop_on_error=False, max_cost_usd=None) -> dict:
         """Run the stages for each paper. Before the first Claude call, the cost estimate is printed;
         with max_cost_usd (argument or Config), the run stops if the high estimate is above it."""
         results, errors = {}, {}
         self.update_checksums()
-        if STAGES.index(until) >= STAGES.index("visuals") and (self.llm.client or self.cfg.allow_live_calls):
+        if STAGES.index(until) >= STAGES.index("visuals"):
             from .cost import CostLimitExceeded
+            # Fail fast (before parsing review, estimating or calling Claude on a paper) if the API would
+            # refuse an output schema; see the RULES in schemas.py.
+            self.check_schemas(until)
+            # estimate_cost first validates every human review manifest, then
+            # optionally counts tokens; no paid work can precede approval.
             est = self.estimate_cost(papers, until)
             limit = max_cost_usd if max_cost_usd is not None else self.cfg.max_cost_usd
             if limit is not None and est["high_usd"] > limit:
@@ -270,16 +416,21 @@ class Pipeline:
         """Write data/graph/: nodes.jsonl, relationships.jsonl, graph.ttl, review_queue.csv,
         ontology_gaps.csv, run_manifest.json."""
         out_dir = Path(out_dir or self.cfg.graph_dir)
-        gb = GraphBuilder(self.profile)
-        resolved = {}
-        for pid, r in results.items():
-            if "resolve" in r:
-                resolved[pid] = r["resolve"]
-                gb.add_paper(pid, r.get("meta", {}), r["resolve"])
-        if prune_classes:
-            gb.prune_unused_classes()
-        info = gb.write(out_dir)
-        info["rdf_triples"] = gb.write_turtle(out_dir / "graph.ttl")
+        resolved = {pid: r["resolve"] for pid, r in results.items() if "resolve" in r}
+        def graph_for(statuses, destination):
+            gb = GraphBuilder(self.profile, include_statuses=statuses)
+            for pid, res in resolved.items():
+                gb.add_paper(pid, results[pid].get("meta", {}), res)
+            if prune_classes:
+                gb.prune_unused_classes()
+            info = gb.write(destination)
+            info["rdf_triples"] = gb.write_turtle(destination / "graph.ttl")
+            return info
+        # The canonical graph contains only mechanically auto-accepted assertions.
+        # They remain unverified scientific facts; reviewed/provisional claims are segregated.
+        info = graph_for(("auto_accepted",), out_dir)
+        candidate_dir = out_dir / "candidates"
+        info["candidate_graph"] = graph_for(("auto_accepted", "needs_review"), candidate_dir)
         info["review_queue_rows"] = write_review_queue(resolved, out_dir / "review_queue.csv")
         info["ontology_gap_rows"] = len(write_ontology_gaps(resolved, out_dir / "ontology_gaps.csv"))
         write_json(out_dir / "run_manifest.json", self.manifest())

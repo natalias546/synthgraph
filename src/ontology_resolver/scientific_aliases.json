@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "aliases": [],
+  "unresolved_concepts": [
+    {
+      "term": "magnetoresistance",
+      "group": "property",
+      "canonical_name": "magnetoresistance",
+      "description": "Magnetic-field-dependent change in electrical resistance or resistivity. Do not equate with resistivity."
+    },
+    {
+      "term": "mr",
+      "group": "property",
+      "canonical_name": "magnetoresistance",
+      "required_context_any": ["magnetoresistance", "magnetic field", "transport"],
+      "description": "MR is ambiguous; expand only with supporting context."
+    },
+    {
+      "term": "residual resistivity ratio",
+      "group": "property",
+      "canonical_name": "residual resistivity ratio",
+      "description": "A ratio of resistivities at specified temperatures; not identical to resistivity."
+    },
+    {
+      "term": "rrr",
+      "group": "property",
+      "canonical_name": "residual resistivity ratio",
+      "required_context_any": ["residual resistivity", "resistivity ratio"],
+      "description": "RRR is an acronym; the paper must support this expansion."
+    },
+    {
+      "term": "topological surface states",
+      "group": "phenomenon",
+      "canonical_name": "topological surface states",
+      "description": "Electronic states; not physical material constituents."
+    }
+  ]
+}

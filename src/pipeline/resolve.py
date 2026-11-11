@@ -35,9 +35,25 @@ def material_key(name: str, formula: str | None = None) -> str:
 
 
 def _value_key(m: dict):
+    """Only merge observations of the same quantity under the same conditions.
+
+    Two unresolved properties are *not* the same just because both have class
+    OTHER (e.g. RRR and magnetoresistance at the same numeric value).
+    """
     v = m.get("value_si") if m.get("value_si") is not None else m.get("value")
+    prop = m.get("property_iri") or (
+        "unmapped:" + unicodedata.normalize("NFKC", m.get("property_name_in_text") or
+                                            m.get("proposed_property_label") or "").casefold().strip()
+        if m.get("property_class") == "OTHER" else m.get("property_class")
+    )
+    conditions = tuple(sorted(
+        (str(c.get("name", "")).casefold().strip(), str(c.get("value_text", "")).casefold().strip())
+        for c in (m.get("conditions") or []) if isinstance(c, dict)
+    ))
     return (tuple(sorted(m.get("sample_ids") or [])), tuple(sorted(m.get("material_ids") or [])),
-            m.get("property_class"), None if v is None else round(float(v), 6), m.get("data_origin"))
+            prop, None if v is None else round(float(v), 6),
+            m.get("value_max"), m.get("unit_si") or m.get("unit"),
+            m.get("data_origin"), conditions)
 
 
 def resolve_paper(validated: dict) -> dict:

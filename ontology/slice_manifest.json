@@ -1,12 +1,12 @@
 {
   "_comment": [
-    "Slice manifest: which part of the ontology the extractor may use.",
-    "ontology_file: the OWL file in ontology/ to load (RDF/XML, Turtle or OWL/XML). If missing, the first other .owl/.rdf/.ttl file is used, then the starter ontology.",
-    "Use the full IRI for a root whose label is shared by several classes (the profile warns when that happens); e.g. two classes are labelled 'material'.",
-    "entity_groups: classes are referenced by rdfs:label (case-insensitive) or full IRI. Every root found is used together with all its subclasses; roots that do not exist are reported as warnings, so alternatives can be listed.",
-    "The allowed labels become enums in Claude's output schema. Anything that fits none of them comes back as OTHER plus a proposed class label; those proposals end up in data/graph/ontology_gaps.csv.",
-    "relations: 'ontology_property' lists candidate object-property labels/IRIs; if none is found the relation is still extracted but flagged as an ontology gap. pass=implicit: produced by the structure of passes 1-2; pass=relations: offered to Claude in pass 3.",
-    "The enriched ontology adds Materials Project database classes (under MPInformationRecord); they describe database records, not things in papers, so 'other' excludes them."
+    "v11 parsing-aligned ontology profile. Additions preserve original group names and 12 original relation names.",
+    "Place this manifest under ontology/slice_manifest.json, and matsci-v11-parsing-aligned-cleaned.owl in the same ontology/ directory.",
+    "Roots accept IRIs or labels. Prefer full IRIs; ambiguous labels generate warnings.",
+    "Deprecated named classes/properties are excluded from LLM choices by default (see exclude_deprecated).",
+    "Scientific context is typed by domain instead of placing all generically dependent continuants in OTHER.",
+    "Class labels serve as LLM display labels; ontology IRIs remain the canonical identifiers.",
+    "Record-layer properties (wasMeasuredOn, hasReportedPropertyValue) require reified measurement/value records to satisfy their declared domains/ranges."
   ],
   "ontology_file": "matsci-v11-parsing-aligned-cleaned.owl",
   "entity_groups": {
@@ -29,10 +29,6 @@
       "description": "Steps that create or modify a sample (crystal growth: flux, chemical vapour transport, electrochemical, Bridgman; annealing, doping, quenching, exfoliation, polishing, simulation).",
       "roots": [
         "http://purl.obolibrary.org/obo/BFO_0000015"
-      ],
-      "exclude": [
-        "http://purl.obolibrary.org/obo/OBI_0000070",
-        "measurement technique"
       ]
     },
     "process_attribute": {
@@ -52,44 +48,84 @@
       "description": "Measured or computed properties (critical temperature, carrier lifetime, magnetic susceptibility, lattice parameter, residual resistivity ratio).",
       "roots": [
         "material property",
-        "quality",
-        "unclassified property",
-        "spatial extend"
+        "quality"
       ],
       "exclude": [
         "function",
-        "application",
-        "atomic bond",
-        "polymer crosslink",
-        "medical application role",
-        "hand holdable disposition",
-        "cut function",
-        "heat treatment function",
-        "irradiation function",
-        "magnetizing function",
-        "manufacturing function",
-        "shape",
-        "geometry shape",
-        "organic composition"
+        "application"
       ]
     },
     "application": {
-      "description": "Reported or proposed use of a material or device (spintronics, photovoltaics, batteries, sensing...).",
+      "description": "Reported or proposed use of a material/device (spintronics, photovoltaics, batteries, sensing, etc.); distinguish proposed vs demonstrated in application status.",
       "roots": [
         "https://w3id.org/matsci/ontology/extraction/MaterialsApplication"
       ]
     },
+    "phenomenon": {
+      "description": "Scientific phenomena (AHE, magnetoresistance, superconductivity, WAL, etc.)",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/ScientificPhenomenonMention"
+      ]
+    },
+    "mechanism": {
+      "description": "Proposed or established physical mechanisms and interactions",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/ScientificMechanismMention"
+      ]
+    },
+    "theory_model": {
+      "description": "Theories, numerical/physical models, approximations",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/ScientificModelMention"
+      ]
+    },
+    "instrument": {
+      "description": "Measurement or process instrument and model names",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/ScientificInstrumentMention"
+      ]
+    },
+    "software": {
+      "description": "Software packages, programs, versions, electronic structure tools",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/ScientificSoftwareMention"
+      ]
+    },
+    "phase": {
+      "description": "Physical, structural, magnetic, electronic and other material phases",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/MaterialPhaseMention"
+      ]
+    },
+    "structure": {
+      "description": "Crystal structure and motifs, space groups, kagome lattices",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/ScientificStructureMention"
+      ]
+    },
+    "reference": {
+      "description": "External papers, citations, references and identifiers",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/LiteratureReferenceMention"
+      ]
+    },
+    "dataset": {
+      "description": "Experimental/computational datasets, repositories and data products",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/ScientificDatasetMention"
+      ]
+    },
     "other": {
-      "description": "Other entities worth keeping (charge carriers, data products...).",
+      "description": "Reserved for truly uncategorized domain objects, e.g. charge carriers or data products. Prefer explicit scientific_context groups and unresolved_terms for new words.",
       "roots": [
         "charge carrier",
-        "Data Product",
-        "generically dependent continuant"
-      ],
-      "exclude": [
-        "https://w3id.org/matsci/ontology/materials-project/MPInformationRecord",
-        "measurement technique",
-        "https://w3id.org/matsci/ontology/extraction/MaterialsApplication"
+        "Data Product"
+      ]
+    },
+    "unmapped": {
+      "description": "Unknown scientific words, acronyms, provisional concepts for expert review",
+      "roots": [
+        "https://w3id.org/matsci/ontology/extraction/UnmappedScientificTerm"
       ]
     }
   },
@@ -106,10 +142,7 @@
         "material"
       ],
       "ontology_property": [
-        "has input",
-        "has_input",
-        "hasInput",
-        "has specified input"
+        "http://purl.obolibrary.org/obo/RO_0002233"
       ]
     },
     {
@@ -123,10 +156,7 @@
         "sample"
       ],
       "ontology_property": [
-        "has output",
-        "has_output",
-        "hasOutput",
-        "has specified output"
+        "http://purl.obolibrary.org/obo/RO_0002234"
       ]
     },
     {
@@ -140,7 +170,7 @@
         "process"
       ],
       "ontology_property": [
-        "precedes"
+        "http://purl.obolibrary.org/obo/BFO_0000063"
       ]
     },
     {
@@ -154,10 +184,7 @@
         "process_attribute"
       ],
       "ontology_property": [
-        "has process attribute",
-        "has attribute",
-        "has_attribute",
-        "has parameter"
+        "https://w3id.org/pmd/co/PMD_0000009"
       ]
     },
     {
@@ -171,9 +198,9 @@
         "sample"
       ],
       "ontology_property": [
-        "measured on",
-        "has specified input"
-      ]
+        "https://w3id.org/matsci/ontology/extraction/wasMeasuredOn"
+      ],
+      "mapping_note": "Record-level only: wasMeasuredOn requires a ScientificMeasurementRecord as subject and a MaterialMention as object; do not assert on a technique class."
     },
     {
       "name": "has_property_value",
@@ -186,10 +213,9 @@
         "property"
       ],
       "ontology_property": [
-        "has quality",
-        "has_quality",
-        "bearer of"
-      ]
+        "https://w3id.org/matsci/ontology/extraction/hasReportedPropertyValue"
+      ],
+      "mapping_note": "Record-level only: hasReportedPropertyValue points from a ScientificExtractionRecord to a ScientificValueRecord, not a raw numeric literal or a material-property class."
     },
     {
       "name": "part_of",
@@ -203,9 +229,7 @@
         "sample"
       ],
       "ontology_property": [
-        "part of",
-        "part_of",
-        "BFO_0000050"
+        "http://purl.obolibrary.org/obo/BFO_0000050"
       ]
     },
     {
@@ -219,10 +243,9 @@
         "material"
       ],
       "ontology_property": [
-        "has part",
-        "composed of",
-        "has component"
-      ]
+        "http://purl.obolibrary.org/obo/BFO_0000051"
+      ],
+      "mapping_note": "BFO has part captures physical part-whole only. Stoichiometric occupancy is modeled separately using literature:hasOccupancy."
     },
     {
       "name": "intended_for",
@@ -236,9 +259,9 @@
         "application"
       ],
       "ontology_property": [
-        "intended for",
-        "has function"
-      ]
+        "https://w3id.org/matsci/ontology/extraction/intended_for"
+      ],
+      "mapping_note": "Intended application claim, not an asserted realized function."
     },
     {
       "name": "influences",
@@ -252,10 +275,9 @@
         "property"
       ],
       "ontology_property": [
-        "influences",
-        "affects",
-        "changes quality"
-      ]
+        "https://w3id.org/matsci/ontology/extraction/influences"
+      ],
+      "mapping_note": "Broad evidence-qualified influence, not automatic causality; record trend, conditions, polarity and evidence."
     },
     {
       "name": "derived_from",
@@ -268,8 +290,7 @@
         "sample"
       ],
       "ontology_property": [
-        "derives from",
-        "derived from"
+        "http://purl.obolibrary.org/obo/RO_0001000"
       ]
     },
     {
@@ -287,8 +308,11 @@
         "process"
       ],
       "ontology_property": [
-        "compared with"
-      ]
+        "https://w3id.org/matsci/ontology/extraction/compared_with"
+      ],
+      "mapping_note": "Non-causal comparison; use structured comparison records for properties, baseline/target and conditions."
     }
-  ]
+  ],
+  "exclude_deprecated": true,
+  "require_roots": true
 }

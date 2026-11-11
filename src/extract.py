@@ -79,7 +79,9 @@ def paragraph_header(p: dict, sections: dict) -> str:
             "table": " | table" + (" (transcribed from image)" if p.get("text_source") == "claude_vision" else ""),
             "table_transcription": " | table (transcribed from page image)",
             "formula": " | formula", "footnote": " | footnote", "list_item": " | list item"}.get(p["kind"], "")
-    return f"[{p['id']} | {sec.get('heading', '?')} ({p['role']}) | page {p['page']}{kind}]"
+    cues = p.get("scientific_cues", [])
+    cue_text = " | candidate roles: " + ", ".join(cues[:4]) if cues else ""
+    return f"[{p['id']} | {sec.get('heading', '?')} ({p['role']}) | page {p['page']}{kind}{cue_text}]"
 
 
 def build_documents(structure: dict, title: str, skip_roles, max_chars: int) -> list[dict]:
@@ -259,14 +261,26 @@ IDs: ME1, ME2, ...
 REGISTRY (from pass 1):
 {registry}"""
 
-PASS3_TASK = """TASK (pass 3 of 3): Extract other ENTITIES (applications, charge carriers, data products ...; IDs X1, X2, ...) and RELATIONS between IDs.
+PASS3_TASK = """TASK (pass 3 of 3): Extract other ENTITIES (phenomena, mechanisms, models, charge carriers, data products ...; IDs X1, X2, ...) and RELATIONS between IDs.
 Allowed predicates: {predicates}
 Rules:
-- subject_id/object_id must be IDs from the REGISTRY below or your own X# entities. For 'influences', the subject may be a process step (PR#) or a parameter (PR#.p#) and the object is a property written as PROP:<property label from the allowed property labels> (e.g. PROP:carrier lifetime). Give the trend and the studied range in scope.
+- subject_id/object_id must be IDs from the REGISTRY below or your own X#/A# entities. For 'influences', the subject may be a process step (PR#) or a parameter (PR#.p#) and the object is a property written as PROP:<property label from the allowed property labels> (e.g. PROP:carrier lifetime). Give the trend and the studied range in scope.
 - Do not restate relations already captured by passes 1-2 (process inputs/outputs, measurement links).
 - Put tempting but unsupported pairs into rejected_candidates with the reason (e.g. co-occurrence only, cited work, hypothetical).
+- Populate unresolved_terms[] for scientifically meaningful terms not mapped to the ontology; never invent IRIs.
+- A hypothesis is not an established influences relation; preserve it as qualified evidence or reject the direct edge.
+- Applications and comparisons are extracted in a separate call; do not encode them as entities or relations.
 
 REGISTRY (from passes 1-2):
+{registry}"""
+
+PASS3B_TASK = """TASK (pass 3, second part): Extract APPLICATIONS (IDs A1, A2, ...) and COMPARISONS (IDs CMP1, CMP2, ...).
+Rules:
+- applications[]: uses of a material or sample that the paper describes, with application_status (proposed / demonstrated / cited / hypothetical ...) and evidence. Link them with material_ids / sample_ids from the REGISTRY below.
+- comparisons[]: results or observations the paper compares, including the SAME material across papers or conditions. subject_id and comparator_id must be IDs from the REGISTRY; give both reported values as written when the paper states them.
+- A comparison is not a causal claim: set causal_status to 'claimed' only when the paper itself asserts the cause.
+
+REGISTRY (from passes 1-3):
 {registry}"""
 
 
@@ -362,7 +376,13 @@ def run_pass3(llm, schemas, system, docs, fewshot, profile, p1, p2, paper_id) ->
     preds = ", ".join(r.name for r in profile.relations_for("relations"))
     task = PASS3_TASK.format(predicates=preds, registry=json.dumps(reg, ensure_ascii=False, indent=1)) \
         + examples_block(fewshot, "relations")
-    out = {"entities": [], "relations": [], "rejected_candidates": []}
+    out = {"entities": [], "relations": [], "rejected_candidates": [], "applications": [],
+           "comparisons": [], "unresolved_terms": []}
+
+    def local_prefixer(pre):
+        return lambda ref: pre + ref if pre and isinstance(ref, str) and re.fullmatch(r"(?:X|A|U|CMP)\d+", ref) else ref
+
+    # Call 3a: entities, relations, rejected candidates, unresolved terms.
     runs = _ask_chunks(llm, "pass3_relations", system, docs, task, schemas["relations"], paper_id)
     runs = [(d, snap_classes(r, profile, "relations")) for d, r in runs]
     for d, r in runs:
@@ -371,10 +391,31 @@ def run_pass3(llm, schemas, system, docs, fewshot, profile, p1, p2, paper_id) ->
             out["entities"].append(_prefix_ids(e, pre))
         for rel in r["relations"]:  # this chunk's own X# entities need the same prefix
             for f in ("subject_id", "object_id"):
-                if pre and re.fullmatch(r"X\d+", rel[f] or ""):
+                if pre and re.fullmatch(r"(?:X|A)\d+", rel[f] or ""):
                     rel[f] = pre + rel[f]
             out["relations"].append(rel)
-        out["rejected_candidates"] += r["rejected_candidates"]
+        for u in r.get("unresolved_terms", []):
+            u.setdefault("review_status", "unreviewed")
+            out["unresolved_terms"].append(_prefix_ids(u, pre))
+        for rejected in r.get("rejected_candidates", []):
+            out["rejected_candidates"].append(rejected)
+
+    # Call 3b: applications and comparisons (a separate schema keeps each under the API's grammar limit).
+    reg["entities"] = [{"id": e["id"], "name": e["name"], "group": e.get("entity_group")} for e in out["entities"]]
+    task_b = PASS3B_TASK.format(registry=json.dumps(reg, ensure_ascii=False, indent=1))
+    runs_b = _ask_chunks(llm, "pass3b_applications", system, docs, task_b, schemas["applications_comparisons"], paper_id)
+    runs_b = [(d, snap_classes(r, profile, "relations")) for d, r in runs_b]
+    for d, r in runs_b:
+        pre = f"c{d['chunk']}_" if len(runs_b) > 1 else ""
+        prefix_local = local_prefixer(pre)
+        for a in r.get("applications", []):
+            a["material_ids"] = [prefix_local(x) for x in a.get("material_ids", [])]
+            a["sample_ids"] = [prefix_local(x) for x in a.get("sample_ids", [])]
+            out["applications"].append(_prefix_ids(a, pre))
+        for c in r.get("comparisons", []):
+            for f in ("subject_id", "comparator_id"):
+                c[f] = prefix_local(c.get(f))
+            out["comparisons"].append(_prefix_ids(c, pre))
     return out
 
 
@@ -405,11 +446,13 @@ def main():
     ap.add_argument("--debug-pages", action="store_true",
                     help="draw detected text/tables/figures/headings on page images (data/extractions/<paper>/debug/)")
     ap.add_argument("--no-export", action="store_true", help="skip writing data/graph/")
+    ap.add_argument("--pre-llm-review", action="store_true",
+                    help="send Claude only sentences/crops approved in <paper>/pre_llm_review.json (default: full paper)")
     args = ap.parse_args()
 
     kw = {"allow_live_calls": not args.no_live, "parser": args.parser, "table_vision": args.table_vision,
           "figure_vision": args.figure_vision, "docling": {"do_ocr": True} if args.ocr else {},
-          "max_cost_usd": args.max_cost}
+          "max_cost_usd": args.max_cost, "pre_llm_review": args.pre_llm_review}
     if args.model:
         kw["model"] = args.model
     cfg = Config(project_root=root, **kw)
