@@ -281,14 +281,16 @@ class Ontology:
     def is_a(self, iri: str, ancestor: str) -> bool:
         return iri == ancestor or ancestor in self.ancestors(iri)
 
-    def tree_text(self, root_ref: str | None = None, max_depth: int = 8) -> str:
-        """Indented class tree, like Protégé's class hierarchy view."""
+    def tree_text(self, root_ref: str | None = None, max_depth: int = 8,
+                  include_deprecated: bool = False) -> str:
+        """Indented class tree, like Protégé's class hierarchy view. Deprecated classes (never used
+        by the pipeline) are hidden unless include_deprecated=True."""
         roots = [self.find_class(root_ref)] if root_ref else [
             c.iri for c in self.classes.values() if not any(p in self.classes for p in c.parents)]
         lines = []
 
         def walk(i, d):
-            if d > max_depth:
+            if d > max_depth or (self.classes[i].deprecated and not include_deprecated):
                 return
             lines.append("  " * d + self.classes[i].label)
             for ch in sorted(self.children.get(i, []), key=lambda x: self.classes[x].label.lower()):

@@ -1,19 +1,20 @@
 """Structured-output schemas for the Claude extraction passes (v11 profile).
 
-Extraction and ontology mapping are separate jobs. These schemas ask Claude for the paper's own
-scientific terms: what each thing is called, a generic `type_term` (e.g. "single crystal", "flux growth",
-"magnetic susceptibility measurement"), descriptions and evidence. They contain NO ontology class lists.
-src/ontology_resolver then fills the ontology fields (ontology_class / ontology_iri /
-proposed_class_label, property_class / property_iri, technique_class / technique_iri, attribute_class)
-that validation, export and evaluation read.
+These schemas ask Claude for the paper's own scientific terms (what each thing is called, a generic
+`type_term` such as "single crystal" or "magnetic susceptibility measurement", descriptions, evidence)
+AND for an ontology class label per term (ontology_class / property_class / technique_class /
+attribute_class), chosen from the glossary in the system prompt, or OTHER. The class fields are plain
+strings, not enums (enums of hundreds of labels exceed the grammar limit): snap_classes checks each
+label against its ontology group and attaches the IRI, and src/ontology_resolver then prefers an exact
+label match of the term and records Claude's choice otherwise (flagged for review where it matters).
 
 Coarse typing still comes from the extraction: where a mention sits (material, sample, process step,
 parameter, measurement property/technique, application) or `entity_group` for pass-3 entities.
 
 RULES FOR CHANGING THESE SCHEMAS (the API compiles each one into a grammar and rejects it with
 400 "compiled grammar is too large" past a size limit; pass 1 has hit it twice):
-  1. Only ask Claude for what only Claude can know: what the paper says, and quotes. Anything code can
-     compute (pages, character offsets, IDs, ontology classes/IRIs) does not belong here.
+  1. Only ask Claude for what only Claude can know: what the paper says, quotes, and which glossary
+     label fits. Anything code can compute (pages, character offsets, IDs, IRIs) does not belong here.
   2. Avoid optional numbers (Optional[int/float]) and optional nested objects: each is a union in the
      grammar, and a union inside a model that is nested in every record (like Evidence) is multiplied
      by every record type. Optional strings are fine (llm.py turns them into plain strings, "" = none).
@@ -97,8 +98,16 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
 
     def type_term(examples: str):
         return (str, Field(..., description=f"Generic type in plain scientific words, not a name or formula: {examples}. "
-                                            "Do not try to match any ontology; a later step does that."))
+                                            "Give it even when an ontology class is chosen."))
 
+    def onto(group: str, what: str = "this item"):
+        return (str, Field(..., description=(
+            f"Ontology class of {what}: an exact label copied from the '## {group}' section of the ontology "
+            f"glossary, the most specific one that fits; {OTHER} if none fits. Never force a poor fit.")))
+
+    # Pass 1 (materials, samples, process steps, parameters) has NO class fields: it is at the grammar
+    # limit, and even one class field made the API refuse it (checked 2026-11-11). Its items are linked by
+    # the resolver through name/type_term. Passes 2-3 (measurements, entities, applications) do have them.
     Parameter = create_model(
         "Parameter",
         name_in_text=(str, ...),
@@ -159,6 +168,7 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
         technique_name_in_text=(str, ...),
         technique_term=type_term("generic name of the technique, e.g. 'x-ray diffraction', "
                                  "'magnetic susceptibility measurement', 'ARPES', 'four-probe resistivity measurement'"),
+        technique_class=onto("technique", "the technique"),
         instrument=(Optional[str], None),
         software=(Optional[str], None), computational_method=(Optional[str], None),
         settings=(list[Condition], Field(default_factory=list)),
@@ -167,6 +177,7 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
         property_name_in_text=(str, ...),
         property_term=type_term("generic name of the measured/computed quantity, e.g. 'superconducting "
                                 "transition temperature', 'resistivity', 'lattice parameter', 'band gap'"),
+        property_class=onto("property", "the measured quantity"),
         value=(Optional[float], None), value_max=(Optional[float], None),
         value_text=(Optional[str], None), unit=(Optional[str], None),
         uncertainty_text=(Optional[str], None),
@@ -187,6 +198,9 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
         id=(str, Field(..., description="X1, X2, ...")),
         entity_group=(GroupName, "other"),
         name=(str, ...), aliases=(list[str], Field(default_factory=list)),
+        ontology_class=(str, Field(..., description=(
+            "Ontology class: an exact label copied from the glossary section named by entity_group "
+            f"(e.g. '## phenomenon'), the most specific that fits; {OTHER} if none fits."))),
         original_symbol=(Optional[str], None),
         term_definition=(Optional[str], None),
         evidence=(list[Evidence], ...), confidence=(float, ...),
@@ -196,6 +210,7 @@ def build_schemas(profile: Profile) -> dict[str, type[BaseModel]]:
         id=(str, Field(..., description="A1, A2, ...")),
         name=(str, Field(..., description="the application as a generic field, e.g. 'spintronics', 'quantum computing'")),
         aliases=(list[str], Field(default_factory=list)),
+        ontology_class=onto("application", "the application"),
         application_status=(ApplicationStatus, ...),
         material_ids=(list[str], Field(default_factory=list)),
         sample_ids=(list[str], Field(default_factory=list)),
