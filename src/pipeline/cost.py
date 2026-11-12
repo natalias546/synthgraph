@@ -19,18 +19,23 @@ import math
 import statistics
 from pathlib import Path
 
-# USD per million tokens: (input, output, cache read). Writing the 5-minute cache costs 1.25 x input.
-# Check https://www.anthropic.com/pricing before large runs.
+# USD per million tokens: (input, output, cache read). Writing the 5-minute cache costs 1.25 x input,
+# the 1-hour cache 2 x input. Check https://www.anthropic.com/pricing before large runs.
 PRICES = {
     "claude-opus-5-5": (4.00, 20.00, 0.20),
     "claude-sonnet-5-5": (2.00, 10.00, 0.20),
     "claude-haiku-5-5": (0.10, 0.50, 0.01),
 }
-CACHE_WRITE = 1.25
+CACHE_WRITE = 1.25      # 5-minute entries (not used by the pipeline now; kept for reference)
+CACHE_WRITE_1H = 2.0    # 1-hour entries (the system prompt; Config.system_cache_ttl)
 
 # Output tokens per call (including thinking) assumed until real responses exist: (low, high).
-OUTPUT_GUESS = {"pass1": (3000, 12000), "pass2": (4000, 16000), "pass3": (2000, 8000),
-                "table": (1000, 3000), "figure": (500, 1500)}
+OUTPUT_GUESS = {"pass1": (3000, 12000), "pass2": (4000, 16000), "pass3": (2000, 8000), "pass3b": (800, 4000),
+                "table": (1000, 3000), "figure": (500, 1500), "resolve": (600, 2000)}
+# Ontology adjudication (small model, after pass 3): batches of up to 15 unmatched terms with their
+# candidate classes. Calls per paper drop as the shared decision memory fills up.
+RESOLVE_CALLS_PER_PAPER = (1, 5)
+RESOLVE_INPUT_TOKENS = 4500
 TASK_TOKENS = 700          # fixed task instructions + few-shot examples, per pass call
 REGISTRY_SHARE = 0.5       # the registry passed to passes 2-3 is roughly half the earlier passes' output
 IMAGE_TOKENS = 1600        # a table/figure crop after the API's resize (about the maximum)
@@ -42,13 +47,15 @@ class CostLimitExceeded(RuntimeError):
 
 
 def _call_type(label: str) -> str | None:
-    for k in ("pass1", "pass2", "pass3"):
+    for k in ("pass1", "pass2", "pass3b", "pass3"):   # pass3b before pass3 (prefix)
         if label.startswith(k):
             return k
     if label.startswith("table"):
         return "table"
     if label.startswith("figure"):
         return "figure"
+    if label.startswith("resolve_"):
+        return "resolve"
     return None
 
 
@@ -110,17 +117,19 @@ def estimate(model: str, system_tokens: int, papers: list[dict], outputs: dict, 
         for doc in p["doc_tokens"] if passes else []:
             for bound, i in (("low", 0), ("high", 1)):
                 outs = [outputs[k][i] for k in ("pass1", "pass2", "pass3")][:passes]
-                # Each pass has its own output schema, and the schema is part of the cached prefix, so the
-                # passes can't share a cache (measured on the pilot: every call wrote, none read). Across papers
-                # they do: the system prompt is written once per pass in a run and read for every later paper;
-                # the paper text is written by each pass.
-                sys_cost = passes * system_tokens * (CACHE_WRITE * p_in if first else p_read)
-                doc_cost = passes * doc * CACHE_WRITE * p_in
+                n_calls = passes + (passes == 3)   # pass 3 is two calls (3a relations, 3b applications)
+                if passes == 3:
+                    outs.append(outputs["pass3b"][i])
+                # The output schema is part of the cached prefix, so each pass has its own system-prompt
+                # entry (1-hour TTL): written by the first paper, read by every later one (assumes the same
+                # pass recurs <1 h apart). The paper text is not cached (each pass sends a different schema).
+                sys_cost = n_calls * system_tokens * (CACHE_WRITE_1H * p_in if first else p_read)
+                doc_cost = n_calls * doc * p_in
                 registries = sum(sum(outs[:k]) for k in range(1, passes))   # pass 2 sees pass 1, pass 3 sees 1+2
-                task_cost = (passes * TASK_TOKENS + REGISTRY_SHARE * registries) * p_in
+                task_cost = (n_calls * TASK_TOKENS + REGISTRY_SHARE * registries) * p_in
                 cost[bound] += sys_cost + doc_cost + task_cost + sum(outs) * p_out
             first = False
-            calls += passes
+            calls += passes + (passes == 3)
         for _ in range(p["images"]):
             for bound, i in (("low", 0), ("high", 1)):
                 cost[bound] += (system_tokens * p_read + (IMAGE_TOKENS + TASK_TOKENS) * p_in
@@ -129,6 +138,18 @@ def estimate(model: str, system_tokens: int, papers: list[dict], outputs: dict, 
         rows.append({**p, "calls": calls, "low_usd": round(cost["low"], 3), "high_usd": round(cost["high"], 3)})
     return {"rows": rows, "low_usd": sum(r["low_usd"] for r in rows), "high_usd": sum(r["high_usd"] for r in rows),
             "calls": sum(r["calls"] for r in rows)}
+
+
+def resolver_estimate(model: str, n_papers: int, outputs: dict | None = None) -> dict:
+    """Low/high USD for the ontology adjudication calls of n_papers (assumption-based, see constants)."""
+    if model not in PRICES or n_papers == 0:
+        return {"calls": (0, 0), "low_usd": 0.0, "high_usd": 0.0}
+    p_in, p_out, _ = (x / 1e6 for x in PRICES[model])
+    out = (outputs or {}).get("resolve") or OUTPUT_GUESS["resolve"]
+    lo_calls, hi_calls = (n_papers * c for c in RESOLVE_CALLS_PER_PAPER)
+    return {"calls": (lo_calls, hi_calls),
+            "low_usd": round(lo_calls * (RESOLVE_INPUT_TOKENS * p_in + out[0] * p_out), 3),
+            "high_usd": round(hi_calls * (RESOLVE_INPUT_TOKENS * p_in + out[1] * p_out), 3)}
 
 
 def summary_text(model: str, system_tokens: int, exact: bool, outputs: dict, result: dict) -> str:
@@ -141,7 +162,10 @@ def summary_text(model: str, system_tokens: int, exact: bool, outputs: dict, res
         f"  Claude calls: {result['calls']}  |  system prompt: {system_tokens:,} tokens (cached)  |  "
         f"paper text: {docs:,} tokens ({'counted exactly' if exact else 'estimated from characters'})",
         "  output per call: " + ", ".join(f"{k} {lo:,.0f}-{hi:,.0f} ({src})" for k, (lo, hi, src) in outputs.items()
-                                          if k != "figure"),
+                                          if k not in ("figure", "resolve")),
+        *([f"  ontology adjudication ({result['resolver']['model']}): {result['resolver']['calls'][0]}-"
+           f"{result['resolver']['calls'][1]} small calls, ${result['resolver']['low_usd']:.2f} - "
+           f"${result['resolver']['high_usd']:.2f} (included below)"] if result.get("resolver") else []),
         f"  ESTIMATED COST: ${result['low_usd']:.2f} - ${result['high_usd']:.2f}",
     ]
     return "\n".join(lines)

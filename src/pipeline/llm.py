@@ -6,8 +6,12 @@ Mirrors the Spangher notebook's `ask()`:
   * every exact request is written to prompts/ for inspection;
   * incomplete (max_tokens) or refused responses raise instead of becoming empty results;
   * the API key is never printed or saved.
-Prompt caching: the system prompt and the paper text are marked cacheable, so the
-three extraction passes over one paper pay full price for the paper text only once.
+Prompt caching: the output schema (output_config.format) is part of the cached prefix, so each call
+type (pass 1, 2, 3, table, figure) has its own cache entry. The system prompt (the ontology glossary,
+~90% of the input) is marked with a 1-hour TTL: each call type writes its entry once per run and every
+later paper reads it (a 5-minute entry expires before the next paper reaches the same pass). The paper
+text is not marked: each pass sends a different schema, so no later call could read it. (One shared
+schema for all passes would let them share one entry, but its compiled grammar exceeds the API limit.)
 """
 from __future__ import annotations
 
@@ -26,6 +30,10 @@ from .io_utils import sha256_bytes, sha256_json, write_json
 
 class IncompleteOutput(RuntimeError):
     """Output hit max_tokens; the caller should split the input into smaller chunks."""
+
+
+class SchemaTooComplex(RuntimeError):
+    """The API refused an output schema (its compiled grammar is too large). See schemas.py RULES."""
 
 
 class NoCachedResponse(RuntimeError):
@@ -108,7 +116,7 @@ def _repair_enum_case(data, enums: dict[str, str]):
 class ClaudeExtractor:
     def __init__(self, model: str, cache_dir: Path, api_key: str | None, *, max_output_tokens: int = 16000,
                  allow_live_calls: bool = True, use_prompt_caching: bool = True,
-                 mock_responder: Callable | None = None):
+                 system_cache_ttl: str = "1h", mock_responder: Callable | None = None):
         self.model = model
         self.cache_dir = Path(cache_dir)
         (self.cache_dir / "responses").mkdir(parents=True, exist_ok=True)
@@ -116,6 +124,9 @@ class ClaudeExtractor:
         self.max_output_tokens = max_output_tokens
         self.allow_live_calls = allow_live_calls
         self.use_prompt_caching = use_prompt_caching
+        if system_cache_ttl not in ("5m", "1h"):
+            raise ValueError("system_cache_ttl must be '5m' or '1h'")
+        self.system_cache_ttl = system_cache_ttl
         self.mock_responder = mock_responder
         self.ledger: list[dict] = []
         self.client = None
@@ -128,14 +139,60 @@ class ClaudeExtractor:
         return {"model": self.model, "api_key_available": self.client is not None,
                 "live_calls_enabled": self.allow_live_calls, "mock": self.mock_responder is not None}
 
+    @staticmethod
+    def request_schema(schema: type[BaseModel]) -> tuple[dict, set]:
+        """The JSON schema exactly as sent in output_config.format, plus the fields where "" means None."""
+        from anthropic import transform_schema
+        json_schema = _all_required(transform_schema(schema))
+        return json_schema, _plain_text_for_nullable_strings(json_schema)
+
+    def check_schemas(self, schemas: dict[str, type[BaseModel]]) -> dict[str, str]:
+        """Send each output schema once with a tiny prompt (a few tokens each, ~$0.001 in total) so that a
+        schema the API can't compile fails here, by name, before any paper is sent. A schema that passed
+        is remembered in cache_dir/schema_checks.json (per model and exact schema), so it is checked only
+        again after it changes. Returns {name: "ok" | "remembered" | "skipped (...)"}; raises
+        SchemaTooComplex naming every schema that is refused."""
+        import anthropic
+        if self.client is None or not self.allow_live_calls or self.mock_responder is not None:
+            return {name: "skipped (no live API calls)" for name in schemas}
+        memo_path = self.cache_dir / "schema_checks.json"
+        try:
+            memo = json.loads(memo_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            memo = {}
+        status, refused = {}, {}
+        for name, schema in schemas.items():
+            json_schema, _ = self.request_schema(schema)
+            key = sha256_json({"model": self.model, "schema": json_schema})
+            if memo.get(key) == "ok":
+                status[name] = "remembered"
+                continue
+            try:
+                self.client.messages.create(
+                    model=self.model, max_tokens=16, system="Schema check.",
+                    messages=[{"role": "user", "content": "Reply with minimal JSON that fits the schema."}],
+                    output_config={"format": {"type": "json_schema", "schema": json_schema}})
+            except anthropic.BadRequestError as exc:
+                msg = str(exc)
+                if "grammar" in msg.lower() or "schema" in msg.lower():
+                    refused[name] = msg
+                    continue
+                raise
+            memo[key] = "ok"
+            status[name] = "ok"
+        write_json(memo_path, memo)
+        if refused:
+            raise SchemaTooComplex(
+                "The API refused these output schemas (nothing was extracted or charged beyond the check): "
+                + ", ".join(refused) + ". Simplify them following the RULES at the top of "
+                "src/pipeline/schemas.py.\n" + "\n".join(f"  {k}: {v}" for k, v in refused.items()))
+        return status
+
     def ask(self, label: str, *, system: str, task: str, schema: type[BaseModel],
             document: str | None = None, images: list[bytes] | None = None,
             paper_id: str = "_", max_tokens: int | None = None) -> dict:
-        from anthropic import transform_schema
-
         max_tokens = max_tokens or self.max_output_tokens
-        json_schema = _all_required(transform_schema(schema))
-        blank_means_none = _plain_text_for_nullable_strings(json_schema)
+        json_schema, blank_means_none = self.request_schema(schema)
         image_hashes = [sha256_bytes(b) for b in images or []]
         request = {
             "model": self.model, "system": system, "document": document, "task": task,
@@ -163,10 +220,11 @@ class ClaudeExtractor:
             raise NoCachedResponse(
                 f"{label}: no cached response. Set ANTHROPIC_API_KEY (environment or .env) and allow_live_calls=True.")
 
-        cc = {"cache_control": {"type": "ephemeral"}} if self.use_prompt_caching else {}
+        # Cache breakpoint on the system prompt only (identical for every paper; see the module docstring).
+        sys_cc = {"cache_control": {"type": "ephemeral", "ttl": self.system_cache_ttl}} if self.use_prompt_caching else {}
         content = []
         if document:
-            content.append({"type": "text", "text": document, **cc})
+            content.append({"type": "text", "text": document})
         for b in images or []:
             content.append({"type": "image", "source": {"type": "base64", "media_type": "image/png",
                                                         "data": base64.b64encode(b).decode("ascii")}})
@@ -177,7 +235,7 @@ class ClaudeExtractor:
         with self.client.messages.stream(
             model=self.model,
             max_tokens=max_tokens,
-            system=[{"type": "text", "text": system, **cc}],
+            system=[{"type": "text", "text": system, **sys_cc}],
             messages=[{"role": "user", "content": content}],
             output_config={"format": {"type": "json_schema", "schema": json_schema}},
         ) as stream:

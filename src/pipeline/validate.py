@@ -87,11 +87,28 @@ class Anchorer:
         self.key = {pid: match_key(t) for pid, t in self.text.items()}
         self.page = {p["id"]: p["page"] for p in paragraphs}
         self.kind = {p["id"]: p["kind"] for p in paragraphs}
+        from .evidence_context import split_sentences
+        self.spans = {p["id"]: [
+            (a, b, f"{p['id']}:s{i}", sentence)
+            for i, (a, b, sentence) in enumerate(split_sentences(p.get("text", "")), 1)]
+            for p in paragraphs}
 
     def anchor(self, ev: dict) -> dict:
         q = match_key(ev.get("quote", ""))
         pid = ev.get("paragraph_id")
         res = {**ev, "page": self.page.get(pid)}
+        literal = ev.get("quote", "")
+        if pid in self.text and literal:
+            idx = self.text[pid].find(literal)
+            if idx >= 0:
+                res.update(span_start=idx, span_end=idx + len(literal),
+                           literal_match=True)
+                matching = [(sid, sentence) for a, b, sid, sentence in self.spans[pid]
+                            if a < idx + len(literal) and b > idx]
+                res["evidence_sentence_ids"] = [sid for sid, _ in matching]
+                res["source_sentences"] = [sentence for _, sentence in matching]
+            else:
+                res["literal_match"] = False
         if not q:
             return {**res, "anchor": "empty_quote"}
         if pid in self.key and q in self.key[pid]:
@@ -117,8 +134,12 @@ def _group_of(item_id: str, kinds: dict[str, str]) -> str | None:
     return kinds.get(item_id)
 
 
-def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, min_conf: float) -> dict:
+def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, min_conf: float,
+                   approved_primary_sentence_ids: set[str] | None = None,
+                   approved_visual_paragraph_ids: set[str] | None = None) -> dict:
+    """Validate with an optional pre-LLM evidence allowlist (fail closed when supplied)."""
     anch = Anchorer(paragraphs)
+    approved_visual_paragraph_ids = approved_visual_paragraph_ids or set()
     p1, p2, p3 = extraction["pass1"], extraction["pass2"], extraction["pass3"]
     items: list[dict] = []
     kinds: dict[str, str] = {}
@@ -137,10 +158,14 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
         for lab in profile.groups[gname].labels:
             other_label_group.setdefault(lab, gname)
     for e in p3["entities"]:
-        kinds[e["id"]] = other_label_group.get(e["ontology_class"], "other")
+        kinds[e["id"]] = e.get("entity_group") or other_label_group.get(e["ontology_class"], "other")
+    for a in p3.get("applications", []):
+        kinds[a["id"]] = "application"
+    for u in p3.get("unresolved_terms", []):
+        kinds[u["id"]] = "unmapped"
     property_labels = set(profile.groups["property"].labels)
     dup_ids = [i for i, c in Counter(
-        [x["id"] for x in p1["materials"] + p1["samples"] + p1["process_steps"] + p2["measurements"] + p3["entities"]]
+        [x["id"] for x in p1["materials"] + p1["samples"] + p1["process_steps"] + p2["measurements"] + p3["entities"] + p3.get("applications", []) + p3.get("unresolved_terms", []) + p3.get("comparisons", [])]
     ).items() if c > 1]
 
     def check(kind, obj, class_field=None, group=None, proposed_field="proposed_class_label", refs=()):
@@ -153,8 +178,22 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
             issues.append("no evidence quote found in the paper")
         elif n_exact < len(anchors):
             notes.append("some quotes not found")
+        if any(a.get("literal_match") is False and a.get("anchor") == "exact" for a in anchors):
+            notes.append("quote only matches after normalization; exact source offsets unavailable")
         if any(a["anchor"] == "found_in_other_paragraph" for a in anchors):
             notes.append("quote found in a different paragraph than cited")
+        if approved_primary_sentence_ids is not None:
+            # Original paragraph text remains available for audit, but only a
+            # reviewer-approved PRIMARY sentence can support an asserted fact.
+            # Context-only or unreviewed sentences are not evidence allowlists.
+            for a in anchors:
+                if a.get("paragraph_id") in approved_visual_paragraph_ids and a.get("literal_match"):
+                    continue
+                ids = a.get("evidence_sentence_ids", [])
+                if (not a.get("literal_match") or not ids or
+                        not set(ids).issubset(approved_primary_sentence_ids)):
+                    issues.append("evidence quote not grounded exclusively in approved PRIMARY source sentences")
+                    break
         if obj.get("id") in dup_ids:
             notes.append("duplicate ID")
         for f, allowed in refs:
@@ -235,6 +274,30 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
         items.append(it)
     for e in p3["entities"]:
         items.append(check("entity", e, "ontology_class", kinds.get(e["id"], "other")))
+    for a in p3.get("applications", []):
+        it = check("application", a, "ontology_class", "application",
+                   refs=[("material_ids", ["material"]), ("sample_ids", ["sample"])])
+        if a.get("application_status") != "demonstrated":
+            it["notes"].append("application is not demonstrated in this publication")
+        if it["notes"] and it["status"] == "auto_accepted":
+            it["status"] = "needs_review"
+        items.append(it)
+    for u in p3.get("unresolved_terms", []):
+        it = check("unresolved_term", u)
+        it["notes"].append("unresolved ontology terminology requires review")
+        it["status"] = "needs_review" if it["status"] != "rejected" else it["status"]
+        items.append(it)
+    for c in p3.get("comparisons", []):
+        it = check("comparison", c, refs=[("subject_id", None), ("comparator_id", None)])
+        if c.get("subject_id") == c.get("comparator_id"):
+            it["notes"].append("comparison refers to same record; independent observations needed")
+        if not (c.get("baseline_value_text") and c.get("target_value_text")):
+            it["notes"].append("comparison lacks paired reported values")
+        # A comparison remains a qualified observation, not a direct causal edge.
+        it["notes"].append("comparison requires source/condition review")
+        if it["status"] == "auto_accepted":
+            it["status"] = "needs_review"
+        items.append(it)
     for i, r in enumerate(p3["relations"], 1):
         r.setdefault("id", f"R{i}")
         spec = profile.relations.get(r["predicate"])
@@ -245,6 +308,14 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
             it["notes"].append(f"unknown property label {r['object_id'][5:]}")
         if spec and spec.ontology_iri is None:
             it["notes"].append("predicate not in ontology (gap)")
+        if r.get("polarity") != "affirmed" and r.get("predicate") == "influences":
+            it["notes"].append("causal influence is not affirmed; preserve as a qualified claim")
+        if r.get("predicate") == "composed_of" and kinds.get(r.get("object_id")) in (
+                "phenomenon", "mechanism", "theory_model", "software", "reference", "dataset", "phase"):
+            it["issues"].append("non-material entity cannot be a material constituent")
+            it["status"] = "rejected"
+        if r.get("predicate") == "compared_with" and r.get("subject_id") == r.get("object_id"):
+            it["notes"].append("self-comparison: compare distinct observations, not material identity")
         if r.get("support_type") == "indirect_document":
             it["notes"].append("indirect inference")
         if it["notes"] and it["status"] == "auto_accepted":
