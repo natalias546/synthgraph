@@ -22,8 +22,14 @@ from typing import Any
 
 from ..ontology_loader import OTHER, Profile
 
-RESOLVER_VERSION = "1.1.0"
+RESOLVER_VERSION = "1.2.0"
 ALIAS_PATH = Path(__file__).with_name("scientific_aliases.json")
+# v11 labels carry naming-convention suffixes the paper never uses ("spintronics application",
+# "nickel elemental substance", "weak antilocalization mention"). The label without the suffix is
+# indexed as a "label_variant": accepted like an exact label when it is unique in its group.
+LABEL_SUFFIXES = (" analyzing process", " testing process", " elemental substance", " application",
+                  " mention", " process")
+ACCEPTED = ("exact_label", "approved_alias", "label_variant")
 
 
 def normalize(text: str | None) -> str:
@@ -72,6 +78,10 @@ class OntologyResolver:
                     key = normalize(name)
                     if key:
                         self.lookup[group, key].append((e, method))
+                for suffix in LABEL_SUFFIXES:
+                    if normalize(label).endswith(suffix) and len(normalize(label)) > len(suffix):
+                        self.lookup[group, normalize(label)[:-len(suffix)].strip()].append((e, "label_variant"))
+                        break
                 local = iri.rsplit("/", 1)[-1].rsplit("#", 1)[-1]
                 if local and normalize(local) != normalize(label):
                     self.lookup[group, normalize(local)].append((e, "iri_local_name"))
@@ -100,7 +110,7 @@ class OntologyResolver:
         # Preserve all distinct IRIs; exact label beats a synonym of another entry,
         # but multiple exact labels are genuinely ambiguous.
         best: dict[str, tuple[Entry, str]] = {}
-        weights = {"exact_label": 4, "approved_alias": 3, "iri_local_name": 2, "synonym": 1}
+        weights = {"exact_label": 5, "approved_alias": 4, "label_variant": 3, "iri_local_name": 2, "synonym": 1}
         for e, method in matches:
             old = best.get(e.iri)
             if old is None or weights[method] > weights[old[1]]:
@@ -141,21 +151,25 @@ class OntologyResolver:
 
     def resolve(self, term: str, group: str, context: str = "",
                 selected_label: str | None = None, selected_iri: str | None = None,
-                proposed_label: str | None = None) -> dict[str, Any]:
-        """Resolve only unique exact labels/approved aliases. Other hits stay reviewable."""
+                proposed_label: str | None = None, type_term: str | None = None) -> dict[str, Any]:
+        """Resolve only unique exact labels/approved aliases. Other hits stay reviewable.
+
+        Tries the paper's own wording first, then the model's proposed label, then the generic
+        type term the extraction gave (e.g. property_term "band gap" for "optical band gap")."""
         if group not in self.entries:
             return {"status": "unknown_group", "group": group, "term": term,
                     "matched_iri": None, "matched_label": None, "requires_review": True,
                     "candidates": [], "reason": "Group absent from v11 profile"}
-        terms = [x for x in (term, proposed_label) if isinstance(x, str) and x.strip() and x != OTHER]
+        terms = [x for x in (term, proposed_label, type_term) if isinstance(x, str) and x.strip() and x != OTHER]
         for value in terms:
             expanded = self._expanded_term(value, group, context)
             hits = self._hits(group, expanded)
-            if len(hits) == 1 and hits[0][1] in ("exact_label", "approved_alias"):
+            if len(hits) == 1 and hits[0][1] in ACCEPTED:
                 e, method = hits[0]
                 return {"status": "exact_match", "group": group, "term": term,
                         "matched_iri": e.iri, "matched_label": e.label,
-                        "method": method, "requires_review": False, "candidates": [],
+                        "method": method if value == term else f"{method} via {'type_term' if value == type_term else 'proposed_label'}",
+                        "matched_on": value, "requires_review": False, "candidates": [],
                         "reason": "Unique active ontology label / reviewed alias"}
             if hits:
                 return {"status": "ambiguous", "group": group, "term": term,
@@ -210,11 +224,11 @@ class OntologyResolver:
 
     def _apply(self, obj: dict, group: str, field: str, iri_field: str,
                proposed_field: str, term: str, record_id: str, role: str,
-               reports: list[dict], extra: dict | None = None) -> None:
+               reports: list[dict], extra: dict | None = None, type_term: str | None = None) -> None:
         resolution = self.resolve(term=term or obj.get(proposed_field) or obj.get(field) or "",
                                   group=group, context=self._context(obj),
                                   selected_label=obj.get(field), selected_iri=obj.get(iri_field),
-                                  proposed_label=obj.get(proposed_field))
+                                  proposed_label=obj.get(proposed_field), type_term=type_term)
         reports.append({"id": record_id, "role": role, **(extra or {}), **resolution})
         if resolution["status"] == "exact_match":
             obj[field] = resolution["matched_label"]
@@ -233,22 +247,26 @@ class OntologyResolver:
         p1, p2, p3 = p["pass1"], p["pass2"], p["pass3"]
         for m in p1.get("materials", []):
             self._apply(m, "material", "ontology_class", "ontology_iri", "proposed_class_label",
-                        m.get("name", ""), m["id"], "material", reports)
+                        m.get("name", ""), m["id"], "material", reports, type_term=m.get("type_term"))
         for s in p1.get("samples", []):
             self._apply(s, "sample", "ontology_class", "ontology_iri", "proposed_class_label",
-                        s.get("name_in_paper", ""), s["id"], "sample", reports)
+                        s.get("name_in_paper", ""), s["id"], "sample", reports, type_term=s.get("type_term"))
         for proc in p1.get("process_steps", []):
             self._apply(proc, "process", "ontology_class", "ontology_iri", "proposed_class_label",
-                        proc.get("name_in_text", ""), proc["id"], "process", reports)
+                        proc.get("name_in_text", ""), proc["id"], "process", reports,
+                        type_term=proc.get("type_term"))
             for j, param in enumerate(proc.get("parameters", []), 1):
                 self._apply(param, "process_attribute", "attribute_class", "ontology_iri",
                             "proposed_class_label", param.get("name_in_text", ""),
-                            param.get("id", f"{proc['id']}:parameter:{j}"), "parameter", reports)
+                            param.get("id", f"{proc['id']}:parameter:{j}"), "parameter", reports,
+                            type_term=param.get("type_term"))
         for m in p2.get("measurements", []):
             self._apply(m, "property", "property_class", "property_iri", "proposed_property_label",
-                        m.get("property_name_in_text", ""), m["id"], "measurement_property", reports)
+                        m.get("property_name_in_text", ""), m["id"], "measurement_property", reports,
+                        type_term=m.get("property_term"))
             self._apply(m, "technique", "technique_class", "technique_iri", "proposed_technique_label",
-                        m.get("technique_name_in_text", ""), m["id"], "measurement_technique", reports)
+                        m.get("technique_name_in_text", ""), m["id"], "measurement_technique", reports,
+                        type_term=m.get("technique_term"))
         for a in p3.get("applications", []):
             self._apply(a, "application", "ontology_class", "ontology_iri", "proposed_class_label",
                         a.get("name", ""), a["id"], "application", reports)

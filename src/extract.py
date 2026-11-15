@@ -49,7 +49,7 @@ VALUES
 - Figures appear as "[Figure N | type] caption". A "Figure content" note after it was written by a vision model from the image: use it only to see which quantity was measured on which samples under which conditions, never as a source of numeric values.
 
 ONTOLOGY
-- ontology_class / technique_class / property_class must be one of the allowed labels below. Choose the MOST SPECIFIC label that fits. If none fits, use OTHER and give proposed_*_label (a concise class name). Never force a poor fit.
+- ontology_class / technique_class / property_class / attribute_class: copy one label exactly from the matching section of the allowed labels below (## material, ## sample, ## process, ## process_attribute, ## technique, ## property, ## application, or the section named by entity_group). Choose the MOST SPECIFIC label that means the same thing; a broader parent is acceptable when no specific label exists (e.g. "Elemental Substance"). If nothing fits, use OTHER: the name and type_term are kept as the proposed class. Never force a poor fit, and never pick a label from a different section.
 
 RELATIONS
 - Co-occurrence is not a relation. Do not chain relations transitively. Preserve direction, negation and scope.
