@@ -16,6 +16,7 @@ from pathlib import Path
 
 from .io_utils import read_json, sha256_json, write_json
 from ..ontology_resolver.resolver import normalize
+from .claim_provenance import classify_surface
 
 REVIEW_VERSION = "1.0"
 EVIDENCE_DECISIONS = {"pending", "extract", "context_only", "exclude"}
@@ -66,6 +67,10 @@ def _mentions(sentence: str, evidence: dict, resolver) -> list[tuple[int, int, s
             a, b = words[k].start(), words[k + n - 1].end()
             raw = sentence[a:b]
             key = normalize(raw)
+            # Document references, discourse operators and generic sample pronouns
+            # must not become physical ontology classes from matching words alone.
+            if classify_surface(raw, sentence)['route'] != 'scientific_entity':
+                continue
             if len(key) < 3 or key in _GENERIC or any(ch.isdigit() for ch in key) and n > 1:
                 continue
             groups = [group for group in _PRIORITY
@@ -142,7 +147,7 @@ def make_candidates(structure: dict, resolver) -> dict:
 
 
 def new_review(structure: dict, candidate_stage: dict) -> dict:
-    """Start fail-closed; do not grant access to LLM input by default."""
+    """Initialize optional human-review overrides; no evidence is approved here."""
     return {"review_version": REVIEW_VERSION,
             "source_fingerprint": evidence_fingerprint(structure),
             "candidate_fingerprint": candidate_stage["candidate_fingerprint"],
@@ -177,7 +182,8 @@ def set_evidence_decision(review: dict, evidence_id: str, decision: str, note: s
         raise KeyError(f"Unknown evidence ID {evidence_id}")
     if decision not in EVIDENCE_DECISIONS:
         raise ValueError(f"Evidence decision must be one of {sorted(EVIDENCE_DECISIONS)}")
-    review["evidence"][evidence_id] = {"decision": decision, "note": note.strip()}
+    review["evidence"][evidence_id] = {"decision": decision, "note": note.strip(),
+                                        "review_status": "reviewed" if decision != "pending" else "not reviewed"}
 
 
 def set_candidate_decision(review: dict, candidate_stage: dict, resolver, candidate_id: str,
@@ -209,7 +215,8 @@ def set_candidate_decision(review: dict, candidate_stage: dict, resolver, candid
         "decision": decision, "selected_group": group if decision in ("approve", "edit") else None,
         "selected_iri": iri if decision in ("approve", "edit") else None,
         "term_override": (term_override or None) if decision in ("approve", "edit") else None,
-        "note": note.strip()}
+        "note": note.strip(),
+        "review_status": "reviewed" if decision != "pending" else "not reviewed"}
 
 
 def add_manual_candidate(review: dict, structure: dict, resolver, evidence_id: str,
@@ -330,7 +337,7 @@ def review_summary(review: dict, candidates: dict) -> dict:
             "candidate_fingerprint": candidates.get("candidate_fingerprint")}
 
 
-def review_widget(structure: dict, candidate_stage: dict, review_path: Path, resolver):
+def review_widget(structure: dict, candidate_stage: dict, review_path: Path, resolver, _shared_review: dict | None = None):
     """Editable Jupyter evidence/candidate reviewer; requires optional ipywidgets.
 
     Every Save writes pre_llm_review.json. Original source text remains untouched.
@@ -342,7 +349,7 @@ def review_widget(structure: dict, candidate_stage: dict, review_path: Path, res
     except ImportError as exc:
         raise ImportError("Install ipywidgets to use the notebook editor. "
                           "All approval functions are also available directly in Python.") from exc
-    review = read_or_create_review(review_path, structure, candidate_stage)
+    review = _shared_review if _shared_review is not None else read_or_create_review(review_path, structure, candidate_stage)
     evidence = structure.get("semantic_evidence", [])
     if not evidence:
         raise ValueError("No sentence evidence to review")
@@ -520,7 +527,7 @@ def apply_reviewed_mappings(aligned: dict, selection: dict, resolver) -> dict:
             continue
         for h in hints:
             iri, group = h.get("iri"), h["group"]
-            if iri and (group, iri) in resolver.by_iri:
+            if iri and h.get('kind') == 'reviewed_iri_hint' and (group, iri) in resolver.by_iri:
                 reviewed.append((evidence[evid], h))
     if not reviewed:
         return aligned
@@ -578,3 +585,1139 @@ def apply_reviewed_mappings(aligned: dict, selection: dict, resolver) -> dict:
     aligned["ontology_resolution_summary"] = dict(sorted(
         Counter(r["status"] for r in aligned.get("ontology_resolution", [])).items()))
     return aligned
+
+# ---------------------------------------------------------------------------
+# v0.6: paper-local concepts and hierarchical review. Keep the existing v0.5
+# sentence editor and all public functions backward compatible.
+# ---------------------------------------------------------------------------
+from .scientific_context import local_acronyms, safe_context
+from collections import defaultdict as _defaultdict
+import copy as _copy
+
+_make_candidates_v05 = make_candidates
+_new_review_v05 = new_review
+_reviewed_selection_v05 = reviewed_selection
+_review_widget_v05 = review_widget
+_review_summary_v05 = review_summary
+
+
+def make_candidates(structure: dict, resolver) -> dict:
+    result = _make_candidates_v05(structure, resolver)
+    evidence = structure.get('semantic_evidence', [])
+    acronyms = local_acronyms(evidence)
+    defined = {}
+    for row in acronyms:
+        defined.setdefault(row['acronym'].lower(),row)
+    registry = {}
+    by_id = {e['id']:e for e in evidence}
+    kept=[]
+    filtered=[]
+    for c in result['candidates']:
+        ev=by_id.get(c['evidence_id'],{})
+        context=safe_context(c['term'], c['group'], ev.get('sentence',''))
+        if not context['allowed']:
+            filtered.append({'candidate_id':c['id'],'term':c['term'],'reason':context['reason']})
+            continue
+        term=c['term'].strip()
+        local=defined.get(term.lower())
+        expanded=local['expansion'] if local else term
+        # Normalize local acronym + its expansion to one canonical scientific concept.
+        canon=normalize(expanded).replace('anti localization','antilocalization')
+        group=c['group']
+        # Select category using scientific expansion rather than bare acronym.
+        if local:
+            if re.search(r'(magnetoresistan|resistivity ratio|magnetoconductiv)',canon):group='property'
+            elif 'anti' in canon and 'localiz' in canon:group='phenomenon'
+            elif 'surface state' in canon:group='structure' if 'structure' in resolver.entries else c['group']
+            elif 'hikari' in canon or 'hln' in canon or 'larkin' in canon:group='theory_model' if 'theory_model' in resolver.entries else c['group']
+        # Resolve canonical term against the ontology, not the acronym's spelling.
+        if local and group in resolver.entries:
+            r=resolver.resolve(expanded,group,context=ev.get('sentence',''))
+            c['group']=group
+            c['match_status']=r['status']
+            c['matched_iri']=r.get('matched_iri')
+            c['suggestions']=([{'iri':r['matched_iri'],'label':r['matched_label'],'group':group,'relation':'document_defined_acronym'}] if r.get('matched_iri') else [])+[
+                {'group':group,**suggestion} for suggestion in r.get('candidates',[])]
+            c['suggestions']=c['suggestions'][:6]
+        cid='CC_'+hashlib.sha256((group+'|'+canon).encode()).hexdigest()[:18]
+        c['concept_id']=cid
+        c['canonical_term']=expanded
+        c['context_filter']=context
+        item=registry.setdefault(cid,{'id':cid,'canonical_term':expanded,'group':group,
+                                      'aliases':[],'mention_candidate_ids':[], 'evidence_ids':[],
+                                      'matched_iri':None,'match_status':c['match_status'],
+                                      'suggestions':[],'review_status':'not reviewed'})
+        item['aliases'].append(term)
+        item['mention_candidate_ids'].append(c['id'])
+        item['evidence_ids'].append(c['evidence_id'])
+        if c.get('matched_iri'):
+            item['matched_iri']=c['matched_iri'];item['match_status']='exact_match'
+        if c.get('suggestions') and not item['suggestions']:item['suggestions']=c['suggestions']
+        kept.append(c)
+    for c in registry.values():
+        c['aliases']=sorted(set(c['aliases']),key=lambda s:s.lower())
+        c['evidence_ids']=list(dict.fromkeys(c['evidence_ids']))
+        c['mention_candidate_ids']=list(dict.fromkeys(c['mention_candidate_ids']))
+    result['candidates']=kept
+    result['acronyms']=acronyms
+    result['concept_registry']=list(registry.values())
+    result['evidence_blocks']=structure.get('evidence_blocks',[])
+    result['context_filtered']=filtered
+    result['source_assertions']=structure.get('source_assertions',[])
+    result['document_reference_targets']=structure.get('document_reference_targets',[])
+    result['relation_candidates']=structure.get('relation_candidates',[])
+    result['specimen_mentions']=structure.get('specimen_mentions',[])
+    result['discourse_routes_summary']=structure.get('claim_provenance_summary',{}).get('discourse_mention_routes',{})
+    result['summary']=dict(sorted(Counter(x['match_status'] for x in kept).items()))
+    result['version']='2.0'
+    result['candidate_fingerprint']=sha256_json({k:v for k,v in result.items() if k!='candidate_fingerprint'})
+    return result
+
+
+def new_review(structure:dict, candidate_stage:dict)->dict:
+    out=_new_review_v05(structure,candidate_stage)
+    out['review_version']='2.0'
+    out['blocks']={b['id']:{'decision':'pending','note':''} for b in candidate_stage.get('evidence_blocks',[])}
+    out['concepts']={c['id']:{'decision':'pending','selected_iri':None,'selected_group':None,
+                              'term_override':None,'note':''} for c in candidate_stage.get('concept_registry',[])}
+    out['assertions']={a['id']:{'decision':'pending','claim_origin_override':None,'note':''}
+                       for a in candidate_stage.get('source_assertions',[])}
+    out['relation_candidates']={x['id']:{'decision':'pending','note':''}
+                       for x in candidate_stage.get('relation_candidates',[])}
+    for kind in ('evidence','candidates','blocks','concepts','assertions','relation_candidates'):
+        for item in out.get(kind, {}).values():
+            item['review_status'] = 'not reviewed'
+    out['source_snapshot'] = _refresh_snapshot(structure, candidate_stage)
+    out['resolver_fingerprint'] = candidate_stage.get('resolver_fingerprint')
+    return out
+
+
+def set_block_decision(review:dict, block_id:str, decision:str, note:str='')->None:
+    if decision not in EVIDENCE_DECISIONS:raise ValueError(f'Unsupported block decision: {decision}')
+    if block_id not in review.get('blocks',{}):raise KeyError(block_id)
+    review['blocks'][block_id]={'decision':decision,'note':note.strip(),
+                                'review_status':'reviewed' if decision!='pending' else 'not reviewed'}
+
+
+def set_concept_decision(review:dict, candidate_stage:dict, resolver, concept_id:str,decision:str,
+                         *,selected_group:str|None=None,selected_iri:str|None=None,
+                         term_override:str|None=None,note:str='')->None:
+    c=next((x for x in candidate_stage.get('concept_registry',[]) if x['id']==concept_id),None)
+    if c is None or concept_id not in review.get('concepts',{}):raise KeyError(concept_id)
+    if decision not in CANDIDATE_DECISIONS:raise ValueError(decision)
+    group=selected_group or c['group'];iri=selected_iri or None
+    if group not in resolver.entries:raise ValueError('Unknown OWL group: '+group)
+    if iri and (group,iri) not in resolver.by_iri:raise ValueError('IRI is not an active class of '+group)
+    if decision=='approve' and not iri:raise ValueError('Approval of an OWL class requires an active IRI')
+    if decision=='edit' and not ((term_override or c['canonical_term']).strip()):raise ValueError('A term is required')
+    review['concepts'][concept_id]={'decision':decision,'selected_group':group if decision in ('approve','edit') else None,
+                                   'selected_iri':iri if decision in ('approve','edit') else None,
+                                   'term_override':term_override or None,'note':note.strip(),
+                                   'review_status':'reviewed' if decision!='pending' else 'not reviewed'}
+
+
+def set_assertion_decision(review:dict, assertion_id:str, decision:str,
+                           *, claim_origin_override:str|None=None, note:str='')->None:
+    """Review one claim's paper-of-origin without changing the source quote."""
+    if assertion_id not in review.get('assertions',{}):raise KeyError(assertion_id)
+    if decision not in {'pending','approve','reject','edit'}:raise ValueError(decision)
+    if claim_origin_override not in {None,'current_study','cited_study',
+            'background_knowledge','undetermined','mixed_current_and_cited'}:
+        raise ValueError('Invalid assertion origin')
+    if decision=='edit' and claim_origin_override is None:
+        raise ValueError('An origin override is needed when editing')
+    review['assertions'][assertion_id]={'decision':decision,
+        'claim_origin_override':claim_origin_override if decision in ('approve','edit') else None,
+        'note':note.strip(),'review_status':'reviewed' if decision!='pending' else 'not reviewed'}
+
+
+def set_relation_decision(review:dict,relation_id:str,decision:str,note:str='')->None:
+    if relation_id not in review.get('relation_candidates',{}):raise KeyError(relation_id)
+    if decision not in {'pending','approve','reject'}:raise ValueError(decision)
+    review['relation_candidates'][relation_id]={'decision':decision,'note':note.strip(),
+        'review_status':'reviewed' if decision!='pending' else 'not reviewed'}
+
+
+def reviewed_selection(structure:dict,candidate_stage:dict,review:dict,resolver)->dict:
+    """Apply concept/block choices to their members; explicit leaf overrides win."""
+    assert_current(review,structure,candidate_stage)
+    # Safe refresh creates a wholly new, unreviewed manifest; unconfirmed legacy
+    # proposals remain inert. Source packets may still be previewed independently.
+    working=_copy.deepcopy(review)
+    for b in candidate_stage.get('evidence_blocks',[]):
+        choice=review.get('blocks',{}).get(b['id'],{}).get('decision','pending')
+        if choice not in EVIDENCE_DECISIONS or choice=='pending':continue
+        for evid in b['evidence_ids']:
+            if working['evidence'].get(evid,{}).get('decision','pending')=='pending':
+                working['evidence'][evid]={'decision':choice,'note':'inherited from '+b['id']}
+    for c in candidate_stage.get('candidates',[]):
+        if working['candidates'].get(c['id'],{}).get('decision','pending')!='pending':continue
+        root=review.get('concepts',{}).get(c.get('concept_id'),{})
+        if root.get('decision') not in ('approve','reject','edit'):continue
+        working['candidates'][c['id']]={'decision':root['decision'],
+                                       'selected_group':root.get('selected_group'),
+                                       'selected_iri':root.get('selected_iri'),
+                                       'term_override':root.get('term_override'),
+                                       'note':'inherited from concept '+c.get('concept_id','')}
+    # v0.8: evidence inclusion is independent of human review status. By default
+    # include body/caption evidence; do not include bibliography, headers or furniture.
+    # Explicit sentence choices override blocks; explicit exclusions always win.
+    for ev in structure.get('semantic_evidence', []):
+        eid=ev['id']
+        if working.get('evidence', {}).get(eid, {}).get('decision', 'pending') == 'pending':
+            working['evidence'][eid] = {
+                'decision': default_evidence_decision(ev),
+                'note': 'automatic source policy; not human-reviewed',
+                'review_status': 'not reviewed'}
+    result=_reviewed_selection_v05(structure,candidate_stage,working,resolver)
+    # Fingerprint actual review and inherited decisions to force fresh LLM input.
+    result['review_fingerprint']=sha256_json({'policy':'automatic_evidence_v08', 'saved':review,
+                                            'effective':working['evidence'],
+                                            'effective_candidates':working['candidates']})
+    result['counts']['auto_included'] = sum(1 for e in result['extract']
+        if (review.get('evidence', {}).get(e['id'], {}).get('decision', 'pending') == 'pending'
+            and review.get('blocks', {}).get('EB_'+e['paragraph_id'], {}).get('decision', 'pending') == 'pending'))
+    result['counts']['needs_review'] = len(review_issues(structure, candidate_stage)['issue_ids'])
+    for name in ('extract', 'context_only'):
+        result[name] = [dict(e, review_status=('reviewed' if
+            review_state(review.get('evidence', {}).get(e['id'], {})) == 'reviewed' or
+            review_state(review.get('blocks', {}).get('EB_'+e['paragraph_id'], {})) == 'reviewed'
+            else 'not reviewed')) for e in result[name]]
+    primary_ids={e['id'] for e in result['extract']}
+    approved_context_ids=primary_ids|{e['id'] for e in result['context_only']}
+    approved_concepts={c['id'] for c in candidate_stage.get('concept_registry',[])
+                       if review.get('concepts',{}).get(c['id'],{}).get('decision') in ('approve','edit')}
+    result['acronyms']=[a for a in candidate_stage.get('acronyms',[])
+                        if any(eid in primary_ids for eid in a['mentions'])
+                        and (any(eid in approved_context_ids for eid in a['definition_evidence_ids'])
+                             or any(c['id'] in approved_concepts and
+                                    (a['acronym'] in c['aliases'] or normalize(a['expansion'])==normalize(c['canonical_term']))
+                                    for c in candidate_stage.get('concept_registry',[])))]
+    result['source_assertions']=[
+        {**a, 'claim_origin': (
+             review.get('assertions',{}).get(a['id'],{}).get('claim_origin_override') or a['claim_origin']),
+         'origin_review':review_state(review.get('assertions',{}).get(a['id'],{})),
+         'origin_decision':review.get('assertions',{}).get(a['id'],{}).get('decision','pending')}
+        for a in candidate_stage.get('source_assertions',[])
+        if set(a['evidence_ids']).issubset(primary_ids)]
+    result['document_references']=[r for r in structure.get('document_references',[])
+        if r['evidence_id'] in approved_context_ids]
+    result['specimen_mentions']=[s for s in candidate_stage.get('specimen_mentions',[])
+        if s['evidence_id'] in approved_context_ids]
+    result['relation_candidates']=[{**r, 'review_decision':review.get('relation_candidates',{})
+        .get(r['id'],{}).get('decision','pending')} for r in candidate_stage.get('relation_candidates',[])
+        if set(r['evidence_ids']).issubset(primary_ids)]
+    result['concepts']=[{'id':c['id'],'canonical_term':c['canonical_term'],'group':c['group'],
+                         'aliases':c['aliases'],'selected_iri':review.get('concepts',{}).get(c['id'],{}).get('selected_iri')}
+                        for c in candidate_stage.get('concept_registry',[])
+                        if any(e in {x['id'] for x in result['extract']} for e in c['evidence_ids'])]
+    return result
+
+
+def review_summary(review:dict,candidates:dict)->dict:
+    out=_review_summary_v05(review,candidates)
+    out['blocks']=dict(Counter(x.get('decision','pending') for x in review.get('blocks',{}).values()))
+    out['concepts']=dict(Counter(x.get('decision','pending') for x in review.get('concepts',{}).values()))
+    out['assertions']=dict(Counter(x.get('decision','pending') for x in review.get('assertions',{}).values()))
+    out['relation_candidates']=dict(Counter(x.get('decision','pending') for x in review.get('relation_candidates',{}).values()))
+    out['claim_origins']=dict(Counter(a['claim_origin'] for a in candidates.get('source_assertions',[])))
+    out['review_status'] = {kind: dict(Counter(
+        review_state(v) for v in review.get(kind, {}).values()))
+        for kind in ('evidence','blocks','concepts','candidates','assertions','relation_candidates')}
+    out['inclusion_policy'] = 'automatic source evidence; explicit review optional'
+    if review.get('refresh'):
+        out['refresh']={'status':review['refresh'].get('status'),
+                        'counts':review['refresh'].get('counts',{}),
+                        'backup_file':review['refresh'].get('backup_file')}
+    return out
+
+
+def review_widget(structure:dict,candidate_stage:dict,review_path:Path,resolver):
+    """Hierarchy-first Jupyter panel, legacy per-sentence editor kept for exceptions."""
+    try:
+        import ipywidgets as w
+    except ImportError as exc:
+        raise ImportError('Install ipywidgets for hierarchical notebook review') from exc
+    review=read_or_create_review(review_path,structure,candidate_stage)
+    if review.get('refresh', {}).get('status') == 'awaiting_confirmation':
+        # Do not build editable controls from a stale in-memory review: saving
+        # them after confirmation could overwrite the newly confirmed file.
+        from html import escape
+        counts=review['refresh'].get('counts',{})
+        verified=sum(v.get('verified',0) for v in counts.values())
+        manual=sum(v.get('manual_check',0) for v in counts.values())
+        backup=review['refresh'].get('backup_file','(unknown)')
+        overview=w.HTML('<b>Saved review was stale and has been safely backed up.</b> '
+                        f'Old file: {escape(str(backup))}. '
+                        f'{verified} exact matches can be reused after confirmation; '
+                        f'{manual} need individual review. Vision approvals always remain pending. '
+                        'No LLM or vision call is permitted until migration is confirmed.')
+        rows=[]
+        for kind, items in review['refresh'].get('proposals',{}).items():
+            for current_id,p in items.items():
+                if p.get('verified'):continue
+                prior=p.get('previous_source') or {}
+                new=p.get('current_source') or {}
+                before=str(prior.get('sentence') or prior.get('canonical_term') or prior.get('term') or '')
+                after=str(new.get('sentence') or new.get('canonical_term') or new.get('term') or '')
+                rows.append('<tr><td>'+escape(kind)+'</td><td>'+escape(current_id)+'</td><td>'+
+                            escape(p.get('change_kind','unverifiable'))+'</td><td>'+
+                            escape(before[:180])+'</td><td>'+escape(after[:180])+'</td></tr>')
+                if len(rows)>=16:break
+            if len(rows)>=16:break
+        detail=(w.HTML('<b>First unverified or changed proposals (full report is saved in pre_llm_review.json):</b>'
+                       '<table style="width:100%;font-size:12px"><tr><th>Type</th><th>ID</th><th>Status</th>'
+                       '<th>Previous</th><th>Current</th></tr>'+''.join(rows)+'</table>')
+                if rows else w.HTML('No unverified source proposals.'))
+        confirm_button=w.Button(description='Confirm verified matches only',button_style='warning')
+        empty_button=w.Button(description='Start fresh; restore none')
+        feedback=w.Output()
+        def complete(accept):
+            with feedback:
+                feedback.clear_output()
+                try:
+                    result=confirm_refresh(review_path,structure,candidate_stage,resolver,
+                                           accept_verified=accept)
+                    print('Review migration confirmed. Adopted:',result['applied'])
+                    print('Rerun this notebook cell to inspect and edit pending records.')
+                    confirm_button.disabled=True;empty_button.disabled=True
+                except Exception as exc:
+                    print('Could not confirm refresh:',exc)
+        confirm_button.on_click(lambda _:complete(True))
+        empty_button.on_click(lambda _:complete(False))
+        return w.VBox([overview,detail,w.HBox([confirm_button,empty_button]),feedback])
+    blocks=candidate_stage.get('evidence_blocks',[])
+    concepts=candidate_stage.get('concept_registry',[])
+    block_select=w.Dropdown(options=[(f"{b['id']} {b['section_role']} | {b['page']}",b['id']) for b in blocks],
+                            description='Block',layout=w.Layout(width='95%'))
+    block_action=w.Dropdown(options=sorted(EVIDENCE_DECISIONS),description='Decision')
+    block_preview=w.HTML()
+    concept_select=w.Dropdown(options=[(f"{c['canonical_term']} ({c['group']}, {len(c['evidence_ids'])} mentions)",c['id']) for c in concepts],
+                              description='Concept',layout=w.Layout(width='95%'))
+    concept_action=w.Dropdown(options=sorted(CANDIDATE_DECISIONS),description='Decision')
+    group_box=w.Dropdown(options=sorted(resolver.entries),description='Group')
+    term_box=w.Text(description='Canonical',layout=w.Layout(width='95%'))
+    iri_box=w.Text(description='Class IRI',layout=w.Layout(width='95%'))
+    feedback=w.Output()
+    from html import escape
+    evidence_lookup={e['id']:e for e in structure.get('semantic_evidence',[])}
+    def show_block(*_):
+        b=next((x for x in blocks if x['id']==block_select.value),None)
+        if b is None:return
+        block_action.value=review.get('blocks',{}).get(b['id'],{}).get('decision','pending')
+        block_preview.value='<div>'+''.join('<p>'+escape(evidence_lookup[i]['sentence'])+'</p>' for i in b['evidence_ids'][:12] if i in evidence_lookup)+'</div>'
+    def show_concept(*_):
+        c=next((x for x in concepts if x['id']==concept_select.value),None)
+        if c is None:return
+        decision=review.get('concepts',{}).get(c['id'],{})
+        concept_action.value=decision.get('decision','pending')
+        group_box.value=decision.get('selected_group') or c['group']
+        term_box.value=decision.get('term_override') or c['canonical_term']
+        iri_box.value=decision.get('selected_iri') or c.get('matched_iri') or ''
+    def save_block(_):
+        with feedback:
+            feedback.clear_output()
+            try:
+                set_block_decision(review,block_select.value,block_action.value)
+                write_json(review_path,review);print('Saved block',block_select.value)
+            except Exception as e:print(e)
+    def save_concept(_):
+        with feedback:
+            feedback.clear_output()
+            try:
+                c=next(x for x in concepts if x['id']==concept_select.value)
+                set_concept_decision(review,candidate_stage,resolver,c['id'],concept_action.value,
+                                     selected_group=group_box.value,selected_iri=iri_box.value.strip() or None,
+                                     term_override=term_box.value.strip() if term_box.value.strip()!=c['canonical_term'] else None)
+                write_json(review_path,review);print('Saved concept',c['id'])
+            except Exception as e:print(e)
+    bs=w.Button(description='Save block',button_style='success')
+    cs=w.Button(description='Save concept',button_style='success')
+    bs.on_click(save_block);cs.on_click(save_concept)
+    block_select.observe(show_block,names='value')
+    concept_select.observe(show_concept,names='value')
+    show_block();show_concept()
+    hierarchical=w.VBox([w.HTML('<b>Review evidence blocks first, then canonical scientific concepts.</b>'),
+                         block_select,block_preview,block_action,bs,
+                         w.HTML('<b>One concept choice applies to its repeated mentions unless overridden.</b>'),
+                         concept_select,concept_action,term_box,group_box,iri_box,cs,feedback])
+    # v0.5 per-sentence editor still handles exceptional source-specific overrides and vision approvals.
+    legacy=_review_widget_v05(structure,candidate_stage,review_path,resolver,_shared_review=review)
+    assertions=candidate_stage.get('source_assertions',[])
+    # Evidence blocks remain the primary review unit. A third tab handles
+    # attribution for exceptional mixed/current/cited assertions.
+    if assertions:
+        ar_select=w.Dropdown(options=[(f"{a['source_section_role']} | {a['claim_origin']} | {a['clause'][:80]}",a['id'])
+                    for a in assertions],description='Claim',layout=w.Layout(width='95%'))
+        ar_status=w.Dropdown(options=['pending','approve','reject','edit'],description='Review')
+        ar_origin=w.Dropdown(options=['current_study','cited_study','background_knowledge',
+                    'undetermined','mixed_current_and_cited'],description='Origin')
+        ar_preview=w.HTML()
+        ar_feedback=w.Output()
+        def show_assertion(*_):
+            a=next((x for x in assertions if x['id']==ar_select.value),None)
+            if a is None:return
+            v=review.get('assertions',{}).get(a['id'],{})
+            ar_status.value=v.get('decision','pending')
+            ar_origin.value=v.get('claim_origin_override') or a['claim_origin']
+            ar_preview.value='<b>Source:</b> '+escape(a['clause'])+'<p><b>Origin cue:</b> '+escape(a['origin_reason'])+'</p><p>Reference mentions: '+escape(', '.join(a['reference_ids']))+'</p>'
+        def save_assertion(_):
+            with ar_feedback:
+                ar_feedback.clear_output()
+                try:
+                    set_assertion_decision(review,ar_select.value,ar_status.value,
+                        claim_origin_override=ar_origin.value if ar_status.value=='edit' else None)
+                    write_json(review_path,review)
+                    print('Saved claim attribution',ar_select.value)
+                except Exception as exc:print('Review error:',exc)
+        ar_select.observe(show_assertion,names='value')
+        ar_save=w.Button(description='Save claim attribution',button_style='success')
+        ar_save.on_click(save_assertion)
+        show_assertion()
+        refs=candidate_stage.get('document_reference_targets',[])
+        refs_box=w.HTML('<b>Grouped document references:</b> '+escape('; '.join(
+            f"{r['kind']} {r['target_label']} ({len(r['mention_ids'])} mentions)" for r in refs[:60])))
+        attribution_tab=w.VBox([w.HTML("<b>Claims are source-backed candidates, not verified facts. Choose origin explicitly for mixed or misattributed claims.</b>"),
+            refs_box,ar_select,ar_preview,ar_status,ar_origin,ar_save,ar_feedback])
+        tabs=w.Tab(children=[hierarchical,attribution_tab,legacy])
+        tabs.set_title(0,'Blocks & concepts')
+        tabs.set_title(1,'Claims & citations')
+        tabs.set_title(2,'Sentence overrides & visuals')
+    else:
+        tabs=w.Tab(children=[hierarchical,legacy])
+        tabs.set_title(0,'Blocks & concepts')
+        tabs.set_title(1,'Sentence overrides & visuals')
+    return tabs
+
+
+_approved_documents_v05 = approved_documents
+
+def approved_documents(structure:dict, selection:dict, max_chars:int=120_000)->list[dict]:
+    docs=_approved_documents_v05(structure,selection,max_chars)
+    acronym_lines=[]
+    for a in selection.get('acronyms',[]):
+        acronym_lines.append(f"{a['acronym']} = {a['expansion']} [document-defined, source: {','.join(a['definition_evidence_ids'])}; verify source]")
+    if selection.get('source_assertions'):
+        # Compact claim-origin hints. Source text already lives in evidence
+        # packets: do not repeat full quotes (token waste or truncated input).
+        for d in docs:
+            allowed=set(d.get('paragraph_ids',[]))
+            local=[]
+            for a in selection['source_assertions']:
+                if a.get('paragraph_id') not in allowed:continue
+                important=(a.get('claim_origin') in ('mixed_current_and_cited','cited_study')
+                           or a.get('claim_kind') in ('comparison','interpretation')
+                           or a.get('origin_review') == 'reviewed')
+                if important:
+                    local.append(f"{a['id']} [{','.join(a['evidence_ids'])}]: "
+                                 f"origin={a['claim_origin']}; kind={a['claim_kind']}; "
+                                 f"review={a.get('origin_review','pending')}")
+            if local:
+                d['text']='PREFLIGHT ORIGIN CANDIDATES (not verified):\n'+\
+                          '\n'.join(local[:40])+'\n\n'+d['text']
+                d['chars']=len(d['text'])
+    if acronym_lines:
+        glossary='DOCUMENT-LOCAL SCIENTIFIC ACRONYMS (definitions from source, not inferred OWL equivalences):\n'+\
+                 '\n'.join(acronym_lines)+'\n\n'
+        for d in docs:
+            d['text']=glossary+d['text'];d['chars']=len(d['text'])
+    return docs
+
+# ---------------------------------------------------------------------------
+# v0.6 safe review migration: stale stage fingerprints need not discard reviewer
+# work, but an ID alone does not establish that a scientific sentence is equal.
+# ---------------------------------------------------------------------------
+import os as _os
+import shutil as _shutil
+from datetime import datetime as _datetime, timezone as _timezone
+
+
+def _refresh_snapshot(structure: dict, candidate_stage: dict) -> dict:
+    """Small, source-grounded fingerprints saved with NEW reviews for future diffs.
+
+    Legacy v0.5/v0.6 reviews lack this snapshot. In that case reusing an ID
+    after a source change is only an *unverified suggestion*, never approval.
+    """
+    paragraphs = {p['id']: p for p in structure.get('paragraphs', [])}
+    evidence = {}
+    for e in structure.get('semantic_evidence', []):
+        p = paragraphs.get(e.get('paragraph_id'), {})
+        evidence[e['id']] = {
+            'paragraph_id': e.get('paragraph_id'),
+            'parent_sha256': hashlib.sha256(p.get('text', '').encode('utf-8')).hexdigest(),
+            'section_id': e.get('section_id'),
+            'section_role': e.get('section_role'),
+            'source_kind': e.get('source_kind'),
+            'page': e.get('page'),
+            'sentence': e.get('sentence', ''),
+        }
+    # Do not use sentence *ID* in the signature: segmentation revisions can
+    # renumber sentences without changing the exact original source statement.
+    def evsig(eid):
+        return sha256_json(evidence[eid]) if eid in evidence else None
+    blocks = {b['id']: {
+        'members': sorted(evsig(i) for i in b.get('evidence_ids', []) if evsig(i)),
+        'section_role': b.get('section_role'), 'page': b.get('page'),
+    } for b in candidate_stage.get('evidence_blocks', [])}
+    candidates = {c['id']: {
+        'evidence': evsig(c.get('evidence_id')),
+        'term': c.get('term'), 'group': c.get('group'),
+        'matched_iri': c.get('matched_iri'),
+        'suggestions': sorted([[x.get('group'), x.get('iri')] for x in c.get('suggestions', [])
+                               if x.get('group') and x.get('iri')]),
+    } for c in candidate_stage.get('candidates', [])}
+    concepts = {c['id']: {
+        'canonical_term': c.get('canonical_term'), 'group': c.get('group'),
+        'evidence': sorted(evsig(i) for i in c.get('evidence_ids', []) if evsig(i)),
+        'matched_iri': c.get('matched_iri'),
+        'aliases': sorted(normalize(a) for a in c.get('aliases', [])),
+    } for c in candidate_stage.get('concept_registry', [])}
+    visuals = {a['paragraph_id']: {
+        'paragraph_sha256': hashlib.sha256(paragraphs.get(a['paragraph_id'], {}).get('text', '').encode('utf-8')).hexdigest(),
+        'page': a.get('page'), 'caption': a.get('caption'), 'crop': a.get('crop'),
+    } for a in [*structure.get('tables', []), *structure.get('figures', [])]
+               if a.get('paragraph_id')}
+    return {'evidence': evidence, 'blocks': blocks, 'candidates': candidates,
+            'concepts': concepts, 'visuals': visuals}
+
+
+def _refresh_proposals(previous: dict, fresh: dict, resolver=None) -> dict:
+    """Produce reviewer-visible proposals. No decision is copied here."""
+    old_snapshot = previous.get('source_snapshot', {})
+    new_snapshot = fresh['source_snapshot']
+    old_source_same = previous.get('source_fingerprint') == fresh.get('source_fingerprint')
+    old_candidates_same = previous.get('candidate_fingerprint') == fresh.get('candidate_fingerprint')
+    ontology_unchanged = (old_candidates_same or
+                          (bool(previous.get('resolver_fingerprint')) and
+                           previous.get('resolver_fingerprint') == fresh.get('resolver_fingerprint')))
+    categories = ('evidence', 'blocks', 'candidates', 'concepts', 'visuals')
+    proposals, removed = {}, {}
+    for kind in categories:
+        old_choices = previous.get(kind, {})
+        new_choices = fresh.get(kind, {})
+        old_records = old_snapshot.get(kind, {})
+        new_records = new_snapshot.get(kind, {})
+        # Signature matches are safe only if unique. Duplicate identical
+        # statements require an explicit reviewer rather than arbitrary joins.
+        index = {}
+        for new_id, record in new_records.items():
+            index.setdefault(sha256_json(record), []).append(new_id)
+        proposals[kind] = {}
+        removed[kind] = []
+        used = set()
+        for old_id, value in old_choices.items():
+            if kind == 'visuals':
+                val = {'decision': value}
+            elif isinstance(value, dict):
+                val = _copy.deepcopy(value)
+            else:
+                continue
+            if val.get('decision', 'pending') == 'pending':
+                continue
+            prior_record = old_records.get(old_id)
+            new_id, verified, reason = None, False, 'old source snapshot unavailable'
+            if prior_record is not None:
+                exact = index.get(sha256_json(prior_record), [])
+                if len(exact) == 1:
+                    new_id, verified, reason = exact[0], True, 'exact source-and-candidate signature'
+                elif len(exact) > 1:
+                    reason = 'multiple identical targets; cannot determine source identity'
+                elif old_id in new_choices:
+                    new_id, reason = old_id, 'existing identifier with changed source or mapping'
+            elif old_id in new_choices:
+                new_id = old_id
+                if kind in ('evidence', 'blocks') and old_source_same:
+                    verified, reason = True, 'same full source fingerprint and identifier (legacy review)'
+                elif kind in ('candidates', 'concepts') and old_candidates_same:
+                    verified, reason = True, 'same full candidate fingerprint and identifier (legacy review)'
+                else:
+                    reason = 'legacy identifier only; prior text/mapping cannot be verified'
+            if new_id is None or new_id in used:
+                removed[kind].append(old_id)
+                continue
+            used.add(new_id)
+            # A stable IRI is not proof that its OWL definition/aliases are
+            # unchanged. Only compare mappings when the ontology resolver's
+            # fingerprint is known stable (or the whole candidate stage agrees).
+            if kind in ('candidates', 'concepts') and not ontology_unchanged:
+                verified = False
+                reason = 'ontology candidate vocabulary changed or its previous version is unverified'
+            # An OWL IRI cannot be transferred if it is no longer an active
+            # class in the reviewer-selected group.
+            iri = val.get('selected_iri')
+            group = val.get('selected_group') or new_records.get(new_id, {}).get('group')
+            if iri:
+                if resolver is None or (group, iri) not in resolver.by_iri:
+                    verified = False
+                    reason = 'selected ontology class is not verified active in the current profile'
+            # Image content isn't hashed in the review snapshot; even if its
+            # metadata is equal, paid vision needs an explicit new opt-in.
+            if kind == 'visuals':
+                verified = False
+                reason = 'visual pixels cannot be verified by source metadata alone'
+            change_kind = ('unchanged' if verified else
+                           'changed' if prior_record is not None and
+                           new_records.get(new_id) != prior_record else 'unverifiable')
+            proposals[kind][new_id] = {'from_id': old_id, 'decision': val,
+                                       'verified': verified, 'change_kind': change_kind,
+                                       'reason': reason,
+                                       'previous_source': prior_record,
+                                       'current_source': new_records.get(new_id)}
+    # Human-added candidates are hypotheses; retain them in the diff, but
+    # never silently turn them into source-extracted facts or approved IRIs.
+    proposals['manual_candidates'] = {}
+    removed['manual_candidates'] = []
+    for cid, source in previous.get('manual_candidates', {}).items():
+        eid = source.get('evidence_id')
+        same = old_source_same and eid in fresh['evidence']
+        if not same and old_snapshot.get('evidence', {}).get(eid) is not None:
+            old_ev = old_snapshot['evidence'][eid]
+            same = eid in new_snapshot['evidence'] and new_snapshot['evidence'][eid] == old_ev
+        # A previous human-added OWL mapping still needs stable vocabulary.
+        # Candidate stage fingerprints often change with segmentation, so
+        # compare the independently stored resolver fingerprint when present.
+        same = same and ontology_unchanged
+        if eid in fresh['evidence']:
+            proposals['manual_candidates'][cid] = {
+                'from_id': cid, 'verified': bool(same),
+                'reason': 'source evidence verified' if same else 'source evidence unverified; recreate manually',
+                'source': _copy.deepcopy(source),
+                'decision': _copy.deepcopy(previous.get('candidates', {}).get(cid, {'decision': 'pending'}))}
+        else:
+            removed['manual_candidates'].append(cid)
+    return {'proposals': proposals, 'removed': removed}
+
+
+def refresh_review(path: Path, structure: dict, candidate_stage: dict,
+                   resolver=None, *, dry_run: bool = False) -> dict:
+    """Safely rebase a stale human review onto NEW parser and ontology outputs.
+
+    The old review is copied to a timestamped backup. The new manifest starts
+    entirely pending; prior decisions are reviewable proposals, NEVER active.
+    Only explicitly confirmed, source-verifiable proposals may be transferred.
+    A legacy review with changed source fingerprints has no provenance snapshot,
+    so matching its IDs does not constitute evidence that the text is unchanged.
+
+    Returns {'review': ..., 'summary': ..., 'backup_path': ..., 'status': ...}.
+    This function never calls a model or modifies the ontology.
+    """
+    path = Path(path)
+    if not path.exists():
+        fresh = new_review(structure, candidate_stage)
+        if not dry_run:
+            write_json(path, fresh)
+        return {'status': 'created', 'review': fresh, 'summary': review_summary(fresh, candidate_stage),
+                'backup_path': None}
+    previous = read_json(path)
+    try:
+        assert_current(previous, structure, candidate_stage)
+    except ReviewRequired:
+        pass
+    else:
+        return {'status': 'current', 'review': previous,
+                'summary': review_summary(previous, candidate_stage), 'backup_path': None}
+    fresh = new_review(structure, candidate_stage)
+    diff = _refresh_proposals(previous, fresh, resolver)
+    counts = {kind: {
+        'verified': sum(p['verified'] for p in items.values()),
+        'manual_check': sum(not p['verified'] for p in items.values()),
+        'removed': len(diff['removed'][kind]),
+        'new': len(set(fresh.get(kind, {})) - set(previous.get(kind, {})) - set(items)),
+        'unchanged': sum(p.get('change_kind') == 'unchanged' for p in items.values()),
+        'changed': sum(p.get('change_kind') == 'changed' for p in items.values()),
+        'unverifiable': sum(p.get('change_kind', 'unverifiable') == 'unverifiable' for p in items.values()),
+    } for kind, items in diff['proposals'].items()}
+    fresh['refresh'] = {
+        'status': 'awaiting_confirmation', 'previous_source_fingerprint': previous.get('source_fingerprint'),
+        'previous_candidate_fingerprint': previous.get('candidate_fingerprint'),
+        'previous_review_version': previous.get('review_version'),
+        'proposals': diff['proposals'], 'removed': diff['removed'], 'counts': counts,
+        'backup_file': None, 'confirmed_at': None,
+    }
+    if dry_run:
+        return {'status': 'preview', 'review': fresh, 'summary': counts, 'backup_path': None}
+    stamp = _datetime.now(_timezone.utc).strftime('%Y%m%dT%H%M%S_%fZ')
+    backup = path.with_name(f'{path.stem}.backup_{stamp}{path.suffix}')
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if backup.exists():
+        raise FileExistsError(f'Review backup already exists; not overwriting: {backup}')
+    # Never silently destroy a review if a backup cannot be created.
+    _shutil.copy2(path, backup)
+    if not backup.exists() or backup.read_bytes() != path.read_bytes():
+        raise OSError('Cannot verify the saved human-review backup; original review was not changed')
+    fresh['refresh']['backup_file'] = backup.name
+    tmp = path.with_name(path.name + '.refresh_tmp')
+    try:
+        write_json(tmp, fresh)
+        _os.replace(tmp, path)
+    finally:
+        if tmp.exists():
+            tmp.unlink()
+    return {'status': 'refreshed_pending_confirmation', 'review': fresh,
+            'summary': counts, 'backup_path': str(backup)}
+
+
+def confirm_refresh(path: Path, structure: dict, candidate_stage: dict, resolver,
+                    *, accept_verified: bool = True) -> dict:
+    """Explicitly activate proven-equal proposals, then close the migration gate.
+
+    Unverified legacy-ID matches and visual approvals stay pending. A reviewer
+    can inspect/edit those using the existing hierarchy and sentence editors.
+    Calling with accept_verified=False confirms the refreshed manifest but
+    intentionally carries over NONE of the old decisions.
+    """
+    path = Path(path)
+    review = read_json(path)
+    assert_current(review, structure, candidate_stage)
+    info = review.get('refresh', {})
+    if info.get('status') != 'awaiting_confirmation':
+        raise ReviewRequired('No unconfirmed refreshed review was found at this path.')
+    applied = Counter()
+    if accept_verified:
+        for kind in ('evidence', 'blocks', 'concepts', 'candidates'):
+            for new_id, proposal in info.get('proposals', {}).get(kind, {}).items():
+                if not proposal.get('verified') or review.get(kind, {}).get(new_id, {}).get('decision') != 'pending':
+                    continue
+                val = proposal['decision']; decision = val.get('decision', 'pending')
+                if decision == 'pending':
+                    continue
+                try:
+                    if kind == 'evidence':
+                        set_evidence_decision(review, new_id, decision, val.get('note', ''))
+                    elif kind == 'blocks':
+                        set_block_decision(review, new_id, decision, val.get('note', ''))
+                    elif kind == 'concepts':
+                        set_concept_decision(review, candidate_stage, resolver, new_id, decision,
+                                             selected_group=val.get('selected_group'),
+                                             selected_iri=val.get('selected_iri'),
+                                             term_override=val.get('term_override'),
+                                             note=val.get('note', ''))
+                    elif kind == 'candidates':
+                        set_candidate_decision(review, candidate_stage, resolver, new_id, decision,
+                                               selected_group=val.get('selected_group'),
+                                               selected_iri=val.get('selected_iri'),
+                                               term_override=val.get('term_override'),
+                                               note=val.get('note', ''))
+                except (KeyError, ValueError):
+                    continue  # changed/invalid mappings stay pending, not dropped into OWL
+                applied[kind] += 1
+        for cid, proposal in info.get('proposals', {}).get('manual_candidates', {}).items():
+            if not proposal.get('verified'):
+                continue
+            source = proposal['source']
+            try:
+                new_id = add_manual_candidate(review, structure, resolver, source['evidence_id'],
+                                              source['term'], source['group'])
+                val = proposal['decision']
+                if val.get('decision', 'pending') != 'pending':
+                    set_candidate_decision(review, candidate_stage, resolver, new_id,
+                                           val['decision'], selected_group=val.get('selected_group'),
+                                           selected_iri=val.get('selected_iri'),
+                                           term_override=val.get('term_override'),
+                                           note=val.get('note', ''))
+                applied['manual_candidates'] += 1
+            except (KeyError, ValueError):
+                continue
+    info['status'] = 'confirmed'
+    info['confirmed_at'] = _datetime.now(_timezone.utc).isoformat()
+    info['applied'] = dict(sorted(applied.items()))
+    review['refresh'] = info
+    write_json(path, review)
+    return {'status': 'confirmed', 'review': review, 'applied': dict(sorted(applied.items())),
+            'summary': review_summary(review, candidate_stage)}
+
+
+# ---------------------------------------------------------------------------
+# v0.8 review is OPTIONAL for source inclusion. "review_status" is always a
+# binary human inspection flag; inclusion/mapping decisions are independent.
+# ---------------------------------------------------------------------------
+
+# Source categories that are not primary scientific assertions. A figure caption
+# is text (and may be transmitted), but crop pixels always require opt-in vision.
+_NONPRIMARY_ROLES = {'references', 'bibliography', 'furniture'}
+_NONPRIMARY_KINDS = {'reference', 'code'}
+
+
+def default_evidence_decision(e: dict) -> str:
+    """Conservative source policy; never use a review flag to decide inclusion."""
+    if (e.get('section_role') in _NONPRIMARY_ROLES or
+            e.get('source_kind') in _NONPRIMARY_KINDS or
+            'bibliographic_entry' in e.get('scientific_roles', [])):
+        return 'exclude'
+    if not e.get('sentence', '').strip():
+        return 'exclude'
+    # Front matter often contains author names, affiliations and paper metadata.
+    if e.get('section_role') == 'front_matter' and not e.get('scientific_roles'):
+        return 'exclude'
+    return 'extract'
+
+
+def review_state(item: dict) -> str:
+    """Binary status, including legacy review manifests."""
+    raw = item.get('review_status')
+    if raw in ('reviewed', 'not reviewed'):
+        return raw
+    if item.get('decision', 'pending') not in ('pending', None):
+        return 'reviewed'
+    return 'not reviewed'
+
+
+def set_review_status(review: dict, kind: str, item_id: str, reviewed: bool = True) -> None:
+    """Mark inspection without implying extraction approval or OWL equivalence."""
+    if kind not in ('evidence','blocks','concepts','candidates','assertions','relation_candidates'):
+        raise ValueError(f'Unsupported review category: {kind}')
+    item = review.get(kind, {}).get(item_id)
+    if item is None:
+        raise KeyError(f'{kind}: {item_id}')
+    item['review_status'] = 'reviewed' if reviewed else 'not reviewed'
+
+
+def review_issues(structure: dict, candidate_stage: dict) -> dict:
+    """Source-backed issue candidates: not a verdict on scientific correctness."""
+    by_evidence = _defaultdict(list)
+    for c in candidate_stage.get('candidates', []):
+        iri_options = {(v.get('group'), v.get('iri')) for v in c.get('suggestions', []) if v.get('iri')}
+        status = c.get('match_status', '')
+        if status != 'exact_match':
+            by_evidence[c['evidence_id']].append('unmatched/approximate OWL: '+c['term'])
+        if re.fullmatch(r'(?i)EDAX|EDX|EDS', c.get('term','').strip()):
+            by_evidence[c['evidence_id']].append('EDX/EDAX/EDS alias requires context check')
+        elif len(iri_options) > 1:
+            by_evidence[c['evidence_id']].append('multiple OWL choices: '+c['term'])
+    for a in candidate_stage.get('source_assertions', []):
+        if a.get('claim_origin') in ('undetermined','mixed_current_and_cited') and (
+            a.get('reference_ids') or a.get('claim_kind') in ('comparison','interpretation')):
+            for eid in a.get('evidence_ids', []):
+                by_evidence[eid].append('ambiguous claim origin')
+    for r in candidate_stage.get('relation_candidates', []):
+        if r.get('status') in ('requires_operand_review','qualified_claim_only'):
+            for eid in r.get('evidence_ids', []):
+                by_evidence[eid].append('unresolved relation: '+r.get('relation_type',''))
+    for mention in candidate_stage.get('specimen_mentions', []):
+        if mention.get('link_status') == 'unresolved':
+            by_evidence[mention['evidence_id']].append('unlinked specimen mention')
+    # Blocks with no scientific candidates but explicit experimental/result cues
+    # should be inspectable too; don't flag every generic paragraph.
+    with_candidate = {c['evidence_id'] for c in candidate_stage.get('candidates', [])}
+    for ev in structure.get('semantic_evidence', []):
+        if (ev['id'] not in with_candidate and default_evidence_decision(ev) == 'extract'
+                and set(ev.get('scientific_roles', [])) & {'result','method','quantitative_evidence'}):
+            by_evidence[ev['id']].append('scientific evidence without a recognized OWL term')
+    blocks = candidate_stage.get('evidence_blocks', [])
+    block_issues = {}
+    for b in blocks:
+        reasons = sorted({r for eid in b.get('evidence_ids', []) for r in by_evidence.get(eid, [])})
+        if reasons:
+            block_issues[b['id']] = reasons
+    return {'issue_ids': sorted(by_evidence), 'evidence_reasons': dict(by_evidence),
+            'block_reasons': block_issues}
+
+
+def preflight_tables(structure: dict, candidate_stage: dict, review: dict | None = None) -> dict:
+    """Actual pandas tables for the notebook, no LLM calls and no approval gate."""
+    import pandas as pd
+    issues = review_issues(structure, candidate_stage)
+    evidence = {e['id']:e for e in structure.get('semantic_evidence', [])}
+    rows=[]
+    for ev in structure.get('semantic_evidence', []):
+        choice=(review or {}).get('evidence', {}).get(ev['id'], {})
+        block_id='EB_'+str(ev.get('paragraph_id',''))
+        override=choice.get('decision','pending')
+        block_override=(review or {}).get('blocks', {}).get(block_id, {}).get('decision','pending')
+        effective = override if override != 'pending' else (block_override if block_override != 'pending' else default_evidence_decision(ev))
+        rows.append({'evidence_id':ev['id'],'block_id':block_id,'page':ev.get('page'),
+                     'section':ev.get('section_role'),'kind':ev.get('source_kind'),
+                     'review_status':('reviewed' if review_state(choice)=='reviewed' or
+                          review_state((review or {}).get('blocks',{}).get(block_id,{}))=='reviewed'
+                          else 'not reviewed'),'include_as':effective,
+                     'needs_review':bool(issues['evidence_reasons'].get(ev['id'])),
+                     'review_reasons':'; '.join(issues['evidence_reasons'].get(ev['id'], [])),
+                     'sentence':ev.get('sentence', '')})
+    candidates=[]
+    for c in candidate_stage.get('candidates', []):
+        choice=(review or {}).get('candidates', {}).get(c['id'], {})
+        candidates.append({'candidate_id':c['id'],'evidence_id':c['evidence_id'],
+                 'page':evidence.get(c['evidence_id'], {}).get('page'),
+                 'term':c['term'],'group':c['group'], 'match_status':c['match_status'],
+                 'matched_iri':c.get('matched_iri'),
+                 'alternatives':'; '.join(x.get('label','') for x in c.get('suggestions', [])),
+                 'review_status':('reviewed' if review_state(choice)=='reviewed' or
+                      review_state((review or {}).get('concepts',{}).get(c.get('concept_id'),{}))=='reviewed'
+                      else 'not reviewed'),
+                 'needs_review':c['evidence_id'] in issues['issue_ids']})
+    block_rows=[]
+    for b in candidate_stage.get('evidence_blocks', []):
+        choice=(review or {}).get('blocks', {}).get(b['id'], {})
+        block_rows.append({'block_id':b['id'],'page':b.get('page'),'section':b.get('section_role'),
+              'kind':b.get('source_kind'),'lines':len(b.get('evidence_ids', [])),
+              'needs_review':b['id'] in issues['block_reasons'],
+              'review_reasons':'; '.join(issues['block_reasons'].get(b['id'], [])),
+              'review_status':review_state(choice),
+              'preview':' '.join(evidence[eid].get('sentence','') for eid in b.get('evidence_ids', []) if eid in evidence)[:260]})
+    return {'evidence':pd.DataFrame(rows), 'candidates':pd.DataFrame(candidates),
+            'blocks':pd.DataFrame(block_rows),
+            'assertions':pd.DataFrame(candidate_stage.get('source_assertions', [])),
+            'references':pd.DataFrame(candidate_stage.get('document_reference_targets', []))}
+
+
+def transmission_tables(structure: dict, selection: dict, max_chars: int = 120_000) -> dict:
+    """Exact text packets used by the LLM, plus a row-per-primary-sentence view."""
+    import pandas as pd
+    packets=approved_documents(structure, selection, max_chars)
+    sent_rows=[]
+    for e in selection.get('extract', []):
+        sent_rows.append({'evidence_id':e['id'],'paragraph_id':e['paragraph_id'],
+            'page':e.get('page'), 'section':e.get('section_role'),
+            'source_kind':e.get('source_kind'), 'send_as':'PRIMARY',
+            'review_status':e.get('review_status','not reviewed'),
+            'sentence':e.get('sentence','')})
+    for e in selection.get('context_only', []):
+        if not any(f"[CONTEXT ONLY {e['id']} |" in d['text'] for d in packets):
+            continue  # Context-only evidence not adjacent to a primary is not transmitted.
+        sent_rows.append({'evidence_id':e['id'],'paragraph_id':e['paragraph_id'],
+            'page':e.get('page'), 'section':e.get('section_role'),
+            'source_kind':e.get('source_kind'), 'send_as':'CONTEXT ONLY',
+            'review_status':e.get('review_status','not reviewed'),
+            'sentence':e.get('sentence','')})
+    return {'sentences':pd.DataFrame(sent_rows),
+      'packets':pd.DataFrame([{'chunk':d['chunk'],'chars':d['chars'],
+          'paragraph_ids':', '.join(d['paragraph_ids']), 'exact_llm_input':d['text']} for d in packets]),
+      'packets_raw':packets}
+
+
+def figure_inspector(structure: dict, paper_output_dir: Path):
+    """Inspect SAVED Docling crop pixels + structured extractions without paid vision.
+
+    Does not request any model interpretation and never changes vision approvals.
+    """
+    try:
+        import ipywidgets as w
+        import pandas as pd
+        from IPython.display import Image, display
+    except ImportError as exc:
+        raise ImportError('Install ipywidgets, pandas and IPython for crop inspection') from exc
+    root = Path(paper_output_dir).resolve()
+    items = [('figure', x) for x in structure.get('figures', [])] + [('table', x) for x in structure.get('tables', [])]
+    if not items:
+        return w.HTML('No Docling figures or tables are present in this extraction.')
+    opts=[(f"{kind}: {x.get('label', x.get('paragraph_id'))} | page {x.get('page', '?')}", idx)
+          for idx,(kind,x) in enumerate(items)]
+    choice=w.Dropdown(options=opts, description='Crop',layout=w.Layout(width='95%'))
+    details=w.Output(layout=w.Layout(border='1px solid #ddd',padding='8px'))
+    def render(*_):
+        kind, asset=items[choice.value]
+        pid=asset.get('paragraph_id')
+        crops=asset.get('crop')
+        with details:
+            details.clear_output(wait=True)
+            if crops:
+                candidate=(root / crops).resolve()
+                if not candidate.is_relative_to(root):
+                    print('Unsafe crop path was rejected')
+                elif candidate.exists() and candidate.suffix.lower() in ('.png','.jpg','.jpeg','.webp'):
+                    display(Image(filename=str(candidate),width=750))
+                else:
+                    print('Saved Docling crop not found:',crops)
+            else:
+                print('No segmented Docling crop was saved for this asset.')
+            print('Docling metadata and extracted scientific context (not image verified):')
+            display(pd.DataFrame([{'kind':kind,'paragraph_id':pid,'page':asset.get('page'),
+               'label':asset.get('label'), 'caption':asset.get('caption'),
+               'classification':str(asset.get('classification','')),
+               'crop_path':crops}]).T.rename(columns={0:'value'}))
+            if kind=='table':
+                p=next((x for x in structure.get('paragraphs', []) if x['id']==pid), {})
+                if p.get('rows'):display(pd.DataFrame(p['rows']))
+            else:
+                plots=[x for x in structure.get('plots', []) if x.get('source_paragraph_id')==pid]
+                if plots:display(pd.DataFrame(plots).T)
+            evidence=[e for e in structure.get('semantic_evidence', []) if e['paragraph_id']==pid]
+            if evidence:display(pd.DataFrame([{'evidence_id':e['id'],'sentence':e.get('sentence','')}
+                                             for e in evidence]))
+    choice.observe(render,names='value');render()
+    return w.VBox([w.HTML('<b>Saved Docling segmented crop and extracted data. Inspection does not approve a vision API call.</b>'),
+                   choice,details])
+
+
+def review_widget(structure: dict, candidate_stage: dict, review_path: Path, resolver,
+                  *, show_all: bool = False):
+    """Default ambiguous/unmatched evidence reviewer; toggle to inspect every line.
+
+    Review status is binary. Decision controls are separate optional overrides.
+    """
+    try:
+        import ipywidgets as w
+        from html import escape
+    except ImportError as exc:
+        raise ImportError('Install ipywidgets to display the optional review widget') from exc
+    review=read_or_create_review(review_path,structure,candidate_stage)
+    if review.get('refresh', {}).get('status') == 'awaiting_confirmation':
+        msg=w.HTML('<b>Previous human decisions were backed up after a source/ontology change.</b> '
+                   'The automatic source selection below uses fresh evidence. Prior approvals remain inactive. '
+                   'Confirm migration only if you want to restore verified previous review choices.')
+        a=w.Button(description='Restore verified choices',button_style='warning')
+        b=w.Button(description='Discard old choices')
+        out=w.Output()
+        def confirm(flag):
+            with out:
+                out.clear_output()
+                try:
+                    confirm_refresh(review_path,structure,candidate_stage,resolver,accept_verified=flag)
+                    print('Review refresh confirmed. Rerun this cell to edit the current manifest.')
+                    a.disabled=b.disabled=True
+                except Exception as exc:print(exc)
+        a.on_click(lambda _:confirm(True));b.on_click(lambda _:confirm(False))
+        return w.VBox([msg,w.HBox([a,b]),out])
+    issue=review_issues(structure,candidate_stage)
+    evidence={e['id']:e for e in structure.get('semantic_evidence', [])}
+    blocks=candidate_stage.get('evidence_blocks',[])
+    concepts=candidate_stage.get('concept_registry',[])
+    by_concept={c['id']:c for c in concepts}
+    flagged_eids=set(issue['issue_ids'])
+    flagged_cids={c['concept_id'] for c in candidate_stage.get('candidates', [])
+                  if c['evidence_id'] in flagged_eids and c.get('concept_id')}
+    flagged_assertions={x['id'] for x in candidate_stage.get('source_assertions', [])
+        if any(eid in flagged_eids for eid in x.get('evidence_ids', []))}
+    all_mode=w.Checkbox(value=show_all,description='Inspect all lines / concepts / claims',indent=False)
+    headline=w.HTML('<b>Default: only ambiguous or unmatched items.</b> Auto-selected primary text needs no manual approval. '
+                    'The Review status flag tracks inspection, not whether evidence is included.')
+    summary=w.HTML()
+    block_sel=w.Dropdown(description='Block',layout=w.Layout(width='95%'))
+    block_preview=w.HTML()
+    block_decision=w.Dropdown(options=[('Use automatic policy','pending'),('Include as PRIMARY','extract'),
+              ('Use as context only','context_only'),('Exclude','exclude')],description='Send as')
+    block_reviewed=w.Checkbox(description='Reviewed',indent=False)
+    save_block=w.Button(description='Save block',button_style='success')
+    concept_sel=w.Dropdown(description='Concept',layout=w.Layout(width='95%'))
+    concept_preview=w.HTML()
+    concept_choice=w.Dropdown(options=[('Keep automatic match / unresolved candidate','pending'),
+          ('Approve active OWL class','approve'),('Edit / unresolved','edit'),('Reject mapping','reject')],description='Mapping')
+    concept_reviewed=w.Checkbox(description='Reviewed',indent=False)
+    term=w.Text(description='Term',layout=w.Layout(width='95%'))
+    group=w.Dropdown(options=sorted(resolver.entries),description='OWL group')
+    iri=w.Text(description='OWL IRI',layout=w.Layout(width='95%'))
+    save_concept=w.Button(description='Save concept',button_style='success')
+    sentence_sel=w.Dropdown(description='Sentence',layout=w.Layout(width='95%'))
+    sentence_preview=w.HTML()
+    sentence_choice=w.Dropdown(options=[('Inherit block / automatic policy','pending'),
+          ('Include as PRIMARY','extract'),('Use as context only','context_only'),('Exclude','exclude')],description='Send as')
+    sentence_reviewed=w.Checkbox(description='Reviewed',indent=False)
+    save_sentence=w.Button(description='Save sentence',button_style='success')
+    claim_sel=w.Dropdown(description='Claim',layout=w.Layout(width='95%'))
+    claim_preview=w.HTML()
+    claim_reviewed=w.Checkbox(description='Reviewed',indent=False)
+    claim_origin=w.Dropdown(options=['current_study','cited_study','background_knowledge',
+              'undetermined','mixed_current_and_cited'],description='Origin')
+    save_claim=w.Button(description='Save claim',button_style='success')
+    assets=[(kind,item) for kind in ('figure','table') for item in structure.get('figures' if kind=='figure' else 'tables', [])
+            if item.get('paragraph_id')]
+    asset_sel=w.Dropdown(description='Asset',options=[(f"{kind} {a.get('label',a['paragraph_id'])}",a['paragraph_id'])
+        for kind,a in assets],layout=w.Layout(width='95%'))
+    vision_decision=w.Dropdown(options=[('Do not send crop to vision','pending'),
+              ('Approve paid vision analysis','approve'),('Reject paid vision','reject')],description='Vision')
+    save_vision=w.Button(description='Save vision choice',button_style='warning')
+    messages=w.Output()
+    def persist():
+        write_json(review_path,review)
+        state=review_summary(review,candidate_stage)
+        summary.value=(f"<b>Candidate lines:</b> {len(evidence)} &nbsp; "
+          f"<b>Flagged:</b> {len(flagged_eids)} &nbsp; "
+          f"<b>Manual review:</b> {state['review_status']['evidence']} &nbsp; "
+          f"<b>Unreviewed text is included by default (except bibliography/furniture).</b>")
+    def refresh_choices(*_):
+        selected_blocks=[b for b in blocks if all_mode.value or b['id'] in issue['block_reasons']]
+        selected_concepts=[c for c in concepts if all_mode.value or c['id'] in flagged_cids]
+        selected_evs=[e for e in structure.get('semantic_evidence',[]) if all_mode.value or e['id'] in flagged_eids]
+        selected_claims=[a for a in candidate_stage.get('source_assertions',[]) if all_mode.value or a['id'] in flagged_assertions]
+        block_sel.options=[(f"{b['id']} | p{b.get('page')} | {b.get('section_role')}",b['id']) for b in selected_blocks]
+        concept_sel.options=[(f"{c['canonical_term']} [{c['group']}; {c['match_status']}]",c['id']) for c in selected_concepts]
+        sentence_sel.options=[(f"{e['id']} | {e['sentence'][:110]}",e['id']) for e in selected_evs]
+        claim_sel.options=[(f"{a['claim_origin']} | {a['clause'][:105]}",a['id']) for a in selected_claims]
+        for control in (block_sel,concept_sel,sentence_sel,claim_sel):
+            control.disabled=not bool(control.options)
+    def update_block(*_):
+        b=next((b for b in blocks if b['id']==block_sel.value),None)
+        if not b:return
+        saved=review.get('blocks',{}).get(b['id'],{})
+        block_reviewed.value=review_state(saved)=='reviewed'
+        block_decision.value=saved.get('decision','pending')
+        text=''.join('<li>'+escape(evidence[eid]['sentence'])+'</li>' for eid in b.get('evidence_ids',[]) if eid in evidence)
+        block_preview.value=('<b>Reason:</b> '+escape('; '.join(issue['block_reasons'].get(b['id'], [])) or 'No flagged mismatch')+
+                             '<ol>'+text+'</ol>')
+    def update_concept(*_):
+        c=by_concept.get(concept_sel.value)
+        if not c:return
+        val=review.get('concepts',{}).get(c['id'],{})
+        concept_reviewed.value=review_state(val)=='reviewed'
+        concept_choice.value=val.get('decision','pending')
+        term.value=val.get('term_override') or c['canonical_term']
+        group.value=val.get('selected_group') or c['group']
+        iri.value=val.get('selected_iri') or c.get('matched_iri') or ''
+        concept_preview.value='<b>Suggested:</b> '+escape(str(c.get('suggestions', [])[:3]))
+    def update_sentence(*_):
+        ev=evidence.get(sentence_sel.value)
+        if not ev:return
+        val=review.get('evidence',{}).get(ev['id'],{})
+        sentence_choice.value=val.get('decision','pending')
+        sentence_reviewed.value=review_state(val)=='reviewed'
+        sentence_preview.value='<b>Reason:</b> '+escape('; '.join(issue['evidence_reasons'].get(ev['id'],[])) or 'No flagged mismatch')+              '<p>'+escape(ev.get('sentence',''))+'</p>'
+    def update_claim(*_):
+        a=next((x for x in candidate_stage.get('source_assertions',[]) if x['id']==claim_sel.value),None)
+        if not a:return
+        val=review.get('assertions',{}).get(a['id'],{})
+        claim_reviewed.value=review_state(val)=='reviewed'
+        claim_origin.value=val.get('claim_origin_override') or a['claim_origin']
+        claim_preview.value='<p>'+escape(a['clause'])+'</p><small>'+escape(a.get('origin_reason',''))+'</small>'
+    def update_vision(*_):
+        vision_decision.value=review.get('visuals',{}).get(asset_sel.value,'pending')
+    def save(kind, callback):
+        with messages:
+            messages.clear_output()
+            try:
+                callback()
+                persist()
+                print('Saved',kind,'(review status and inclusion are separate).')
+            except Exception as ex:print('Could not save:',ex)
+    def do_block():
+        set_block_decision(review,block_sel.value,block_decision.value)
+        set_review_status(review,'blocks',block_sel.value,block_reviewed.value)
+    def do_concept():
+        c=by_concept[concept_sel.value]
+        set_concept_decision(review,candidate_stage,resolver,c['id'],concept_choice.value,
+            selected_group=group.value,selected_iri=iri.value.strip() or None,
+            term_override=(term.value.strip() if term.value.strip()!=c['canonical_term'] else None))
+        set_review_status(review,'concepts',c['id'],concept_reviewed.value)
+    def do_sentence():
+        set_evidence_decision(review,sentence_sel.value,sentence_choice.value)
+        set_review_status(review,'evidence',sentence_sel.value,sentence_reviewed.value)
+    def do_claim():
+        a=next(x for x in candidate_stage.get('source_assertions',[]) if x['id']==claim_sel.value)
+        override=claim_origin.value != a['claim_origin']
+        set_assertion_decision(review,a['id'],'edit' if override else ('approve' if claim_reviewed.value else 'pending'),
+            claim_origin_override=claim_origin.value if override else None)
+        set_review_status(review,'assertions',a['id'],claim_reviewed.value)
+    def do_vision():
+        set_visual_decision(review,asset_sel.value,vision_decision.value)
+    save_block.on_click(lambda _:save('block',do_block))
+    save_concept.on_click(lambda _:save('concept',do_concept))
+    save_sentence.on_click(lambda _:save('sentence',do_sentence))
+    save_claim.on_click(lambda _:save('claim',do_claim))
+    save_vision.on_click(lambda _:save('visual',do_vision))
+    block_sel.observe(update_block,names='value')
+    concept_sel.observe(update_concept,names='value')
+    sentence_sel.observe(update_sentence,names='value')
+    claim_sel.observe(update_claim,names='value')
+    asset_sel.observe(update_vision,names='value')
+    all_mode.observe(refresh_choices,names='value')
+    refresh_choices();update_block();update_concept();update_sentence();update_claim();update_vision();persist()
+    block_page=w.VBox([block_sel,block_preview,w.HBox([block_decision,block_reviewed]),save_block])
+    concepts_page=w.VBox([concept_sel,concept_preview,concept_choice,term,group,iri,
+                          concept_reviewed,save_concept])
+    line_page=w.VBox([sentence_sel,sentence_preview,sentence_choice,sentence_reviewed,save_sentence])
+    claims_page=w.VBox([claim_sel,claim_preview,claim_origin,claim_reviewed,save_claim])
+    visual_page=w.VBox([w.HTML('Figure/table image inspection is available through figure_inspector() below. '
+        'These controls only govern optional <b>paid vision</b> calls.'),asset_sel,vision_decision,save_vision])
+    tabs=w.Tab(children=[block_page,concepts_page,line_page,claims_page,visual_page])
+    for n,title in enumerate(('Flagged blocks','OWL concepts','Sentence overrides','Claim attribution','Vision opt-in')):
+        tabs.set_title(n,title)
+    return w.VBox([headline,all_mode,summary,tabs,messages])

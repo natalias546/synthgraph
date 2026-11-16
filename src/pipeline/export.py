@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from pathlib import Path
 
 from ..ontology_loader import OTHER, Profile
@@ -104,6 +105,8 @@ class GraphBuilder:
                           value=d.get("value"), value_max=d.get("value_max"), value_text=d.get("value_text"),
                           unit=d.get("unit"), value_si=d.get("value_si"), unit_si=d.get("unit_si"),
                           uncertainty=d.get("uncertainty_text"), data_origin=d.get("data_origin"),
+                          attributed_reference=d.get('attributed_reference'),
+                          cited_reference_ids=d.get('cited_reference_ids'),
                           polarity=d.get("polarity"), source_location=d.get("source_location"),
                           conditions=json.dumps(d.get("conditions", []), ensure_ascii=False),
                           settings=json.dumps(d.get("settings", []), ensure_ascii=False),
@@ -112,6 +115,18 @@ class GraphBuilder:
                           proposed_technique=d.get("proposed_technique_label"), **base(it))
                 local[d["id"]] = nid
                 self.edge(nid, "REPORTED_IN", paper_id)
+                if d.get('data_origin') == 'cited_from_other_work':
+                    # A citation mention is NOT a verified prior-publication fact.
+                    for ref in d.get('cited_reference_ids', []):
+                        ref_label=str(ref).strip()
+                        if not re.fullmatch(r'\d+[a-z]?',ref_label,re.I):
+                            continue
+                        cid=f"{paper_id}::citation::{ref_label}"
+                        self.node(cid,'BibliographicCitation',name=ref_label,
+                                  paper_id=paper_id,verified_source=False,
+                                  attribution_status='cited_by_current_paper_unverified')
+                        self.edge(nid,'ATTRIBUTED_TO_CITATION',cid,
+                                  status='source_citation_unverified',paper_id=paper_id)
             elif it["kind"] == "application":
                 nid = f"{paper_id}::{d['id']}"
                 self.node(nid, "Application", name=d["name"], ontology_class=d["ontology_class"],

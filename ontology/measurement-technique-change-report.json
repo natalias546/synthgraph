@@ -1,0 +1,268 @@
+{
+  "source": "/mnt/data/synthgraph_v07_work/base/ontology/matsci-v11-evidence-context-enriched.owl",
+  "output": "/mnt/data/measurement_technique_owl_refactor/ontology/matsci-v11-measurement-restructured.owl",
+  "original_sha256": "56214f9eb0e7465627cfd99fbcd8c386e740e0be48c274ee7ff5a3c4464580db",
+  "updated_sha256": "1359467c3c259d4bac3baba6751fed65e89aadf008fa6112371f7e2e0a0991ae",
+  "original_bytes": 164159966,
+  "updated_bytes": 164192914,
+  "changed_existing_class_count": 13,
+  "changed_classes": [
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/materials/TransmissionElectronMicroscopy",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/core/MeasurementTechnique",
+        "https://w3id.org/matsci/feder-derived/materials/ElectronMicroscopy"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/materials/ElectronMicroscopy"
+      ],
+      "removed": [
+        "https://w3id.org/matsci/feder-derived/core/MeasurementTechnique"
+      ],
+      "added": []
+    },
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/materials/XRayDiffraction",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/materials/MaterialCharacterizationTechnique"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/ontology/measurement/DiffractionTechnique"
+      ],
+      "removed": [
+        "https://w3id.org/matsci/feder-derived/materials/MaterialCharacterizationTechnique"
+      ],
+      "added": [
+        "https://w3id.org/matsci/ontology/measurement/DiffractionTechnique"
+      ]
+    },
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/materials/SecondaryIonMassSpectrometry",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/materials/MaterialCharacterizationTechnique"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/ontology/measurement/MassSpectrometryTechnique"
+      ],
+      "removed": [
+        "https://w3id.org/matsci/feder-derived/materials/MaterialCharacterizationTechnique"
+      ],
+      "added": [
+        "https://w3id.org/matsci/ontology/measurement/MassSpectrometryTechnique"
+      ]
+    },
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/materials/ScanningElectronMicroscopy",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/core/MeasurementTechnique",
+        "https://w3id.org/matsci/feder-derived/materials/ElectronMicroscopy"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/materials/ElectronMicroscopy"
+      ],
+      "removed": [
+        "https://w3id.org/matsci/feder-derived/core/MeasurementTechnique"
+      ],
+      "added": []
+    },
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/materials/MaterialProperty",
+      "old_direct_parents": [
+        "http://purl.obolibrary.org/obo/BFO_0000020"
+      ],
+      "new_direct_parents": [
+        "http://purl.obolibrary.org/obo/BFO_0000020",
+        "https://w3id.org/matsci/ontology/measurement/CharacterizationTarget"
+      ],
+      "removed": [],
+      "added": [
+        "https://w3id.org/matsci/ontology/measurement/CharacterizationTarget"
+      ]
+    },
+    {
+      "iri": "https://w3id.org/matsci/ontology/PhysicalMaterialStructure",
+      "old_direct_parents": [
+        "http://purl.obolibrary.org/obo/BFO_0000019"
+      ],
+      "new_direct_parents": [
+        "http://purl.obolibrary.org/obo/BFO_0000019",
+        "https://w3id.org/matsci/ontology/measurement/CharacterizationTarget"
+      ],
+      "removed": [],
+      "added": [
+        "https://w3id.org/matsci/ontology/measurement/CharacterizationTarget"
+      ]
+    },
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/materials/ElectronMicroscopy",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/materials/MaterialCharacterizationTechnique",
+        "https://w3id.org/matsci/feder-derived/materials/Microscopy"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/materials/Microscopy"
+      ],
+      "removed": [
+        "https://w3id.org/matsci/feder-derived/materials/MaterialCharacterizationTechnique"
+      ],
+      "added": []
+    },
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/core/MeasurementTechnique",
+      "old_direct_parents": [
+        "http://purl.obolibrary.org/obo/BFO_0000001",
+        "http://purl.obolibrary.org/obo/BFO_0000031",
+        "http://purl.obolibrary.org/obo/IAO_0000030",
+        "http://purl.obolibrary.org/obo/IAO_0000033"
+      ],
+      "new_direct_parents": [
+        "http://purl.obolibrary.org/obo/IAO_0000033"
+      ],
+      "removed": [
+        "http://purl.obolibrary.org/obo/BFO_0000001",
+        "http://purl.obolibrary.org/obo/BFO_0000031",
+        "http://purl.obolibrary.org/obo/IAO_0000030"
+      ],
+      "added": []
+    },
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/materials/DifferentialScanningCalorimetry",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/materials/MaterialCharacterizationTechnique"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/ontology/measurement/ThermalAnalysisTechnique"
+      ],
+      "removed": [
+        "https://w3id.org/matsci/feder-derived/materials/MaterialCharacterizationTechnique"
+      ],
+      "added": [
+        "https://w3id.org/matsci/ontology/measurement/ThermalAnalysisTechnique"
+      ]
+    },
+    {
+      "iri": "https://w3id.org/pmd/co/PMD_0000551",
+      "old_direct_parents": [
+        "https://w3id.org/pmd/co/PMD_0025001"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/pmd/co/PMD_0025001",
+        "https://w3id.org/matsci/ontology/measurement/CharacterizationTarget"
+      ],
+      "removed": [],
+      "added": [
+        "https://w3id.org/matsci/ontology/measurement/CharacterizationTarget"
+      ]
+    },
+    {
+      "iri": "https://w3id.org/matsci/feder-derived/measurement-diagnostics/GrazingIncidenceXRayDiffraction",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/core/MeasurementTechnique",
+        "https://w3id.org/matsci/feder-derived/materials/XRayDiffraction"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/feder-derived/materials/XRayDiffraction"
+      ],
+      "removed": [
+        "https://w3id.org/matsci/feder-derived/core/MeasurementTechnique"
+      ],
+      "added": []
+    },
+    {
+      "iri": "https://w3id.org/matsci/ontology/literature/UVVisibleSpectroscopyMethod",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/ontology/ExperimentalMethod"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/ontology/ExperimentalMethod",
+        "https://w3id.org/matsci/ontology/measurement/OpticalSpectroscopyTechnique"
+      ],
+      "removed": [],
+      "added": [
+        "https://w3id.org/matsci/ontology/measurement/OpticalSpectroscopyTechnique"
+      ]
+    },
+    {
+      "iri": "https://w3id.org/matsci/ontology/evidence/RietveldRefinementMethod",
+      "old_direct_parents": [
+        "https://w3id.org/matsci/ontology/ExperimentalMethod"
+      ],
+      "new_direct_parents": [
+        "https://w3id.org/matsci/ontology/ExperimentalMethod",
+        "https://w3id.org/matsci/ontology/measurement/MeasurementDataAnalysisTechnique"
+      ],
+      "removed": [],
+      "added": [
+        "https://w3id.org/matsci/ontology/measurement/MeasurementDataAnalysisTechnique"
+      ]
+    }
+  ],
+  "added_triples": 207,
+  "added_class_count": 14,
+  "added_object_property_count": 5,
+  "added_datatype_property_count": 5,
+  "added_annotation_property_count": 3,
+  "added_alias_records": 10,
+  "alias_records": [
+    {
+      "text": "EDX",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/measurement/EnergyDispersiveXRaySpectroscopy",
+      "review_policy": "review_if_unexpanded"
+    },
+    {
+      "text": "EDS",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/measurement/EnergyDispersiveXRaySpectroscopy",
+      "review_policy": "review_if_unexpanded"
+    },
+    {
+      "text": "EDAX",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/measurement/EnergyDispersiveXRaySpectroscopy",
+      "review_policy": "review_if_instrument_context"
+    },
+    {
+      "text": "SEM",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/feder-derived/materials/ScanningElectronMicroscopy",
+      "review_policy": "review_if_instrument_context"
+    },
+    {
+      "text": "SEM",
+      "role": "instrument",
+      "candidate_iri": "https://w3id.org/pmd/co/PMD_0000922",
+      "review_policy": "review_if_instrument_context"
+    },
+    {
+      "text": "TEM",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/feder-derived/materials/TransmissionElectronMicroscopy",
+      "review_policy": "review_if_instrument_context"
+    },
+    {
+      "text": "XPS",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/measurement/XRayPhotoelectronSpectroscopy",
+      "review_policy": "review_if_unexpanded"
+    },
+    {
+      "text": "XRD",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/feder-derived/materials/XRayDiffraction",
+      "review_policy": "contextual_exact"
+    },
+    {
+      "text": "UV-Vis",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/literature/UVVisibleSpectroscopyMethod",
+      "review_policy": "contextual_exact"
+    },
+    {
+      "text": "UV/VIS",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/literature/UVVisibleSpectroscopyMethod",
+      "review_policy": "contextual_exact"
+    }
+  ]
+}

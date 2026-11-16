@@ -40,9 +40,9 @@ class Config:
     max_cost_usd: float | None = None          # stop before any Claude call if the high cost estimate is above this
 
     # Pre-LLM human review (src/pipeline/pre_llm_review.py)
-    pre_llm_review: bool = False               # False: Claude reads the full paper and every table/figure crop
+    pre_llm_review: bool = True                # False: Claude reads the full paper and every table/figure crop
                                                # (subject to table_vision/figure_vision). True: Claude reads only
-                                               # sentences approved in pre_llm_review.json, and only approved crops.
+                                               # eligible source sentences by default (manual exclusions honored); vision crops require opt-in.
 
     # Text handling
     max_chars_per_call: int = 120_000          # long papers are split into section chunks

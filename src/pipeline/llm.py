@@ -152,9 +152,9 @@ class ClaudeExtractor:
         is remembered in cache_dir/schema_checks.json (per model and exact schema), so it is checked only
         again after it changes. Returns {name: "ok" | "remembered" | "skipped (...)"}; raises
         SchemaTooComplex naming every schema that is refused."""
-        import anthropic
         if self.client is None or not self.allow_live_calls or self.mock_responder is not None:
             return {name: "skipped (no live API calls)" for name in schemas}
+        import anthropic
         memo_path = self.cache_dir / "schema_checks.json"
         try:
             memo = json.loads(memo_path.read_text(encoding="utf-8"))

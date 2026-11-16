@@ -59,6 +59,8 @@ class DoclingParser:
 
     def __init__(self, options: dict | None = None):
         self.options = {**DOCLING_DEFAULTS, **(options or {})}
+        if self.options.get("formula_enrichment"):
+            raise ValueError("Docling formula_enrichment must stay False. Preserve formulas as source objects instead.")
         self._converter = None
 
     def fingerprint(self) -> dict:
@@ -350,8 +352,11 @@ def _table_quality(rows: list[list[str]]) -> dict:
     n_cols = max((len(r) for r in rows), default=0)
     cells = [c for r in rows for c in r]
     empty = sum(1 for c in cells if not c.strip()) / len(cells) if cells else 1.0
-    needs = n_rows < 2 or n_cols < 2 or empty > 0.5
-    return {"rows": n_rows, "cols": n_cols, "empty_fraction": round(empty, 2), "needs_vision": needs}
+    # A 2-column table can hide numerous scientific parameters in one flattened cell.
+    composite = any(len(c) > 160 and len(re.findall(r"(?:\b(?:a|b|c|density|volume|space group|parameter|coordinate)\b|=)", c, re.I)) >= 4 for c in cells)
+    needs = n_rows < 2 or n_cols < 2 or empty > 0.5 or composite
+    return {"rows": n_rows, "cols": n_cols, "empty_fraction": round(empty, 2),
+            "flattened_parameter_cell": composite, "needs_vision": needs}
 
 
 def _classification(pic) -> dict | None:

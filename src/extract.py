@@ -44,12 +44,17 @@ SAMPLES AND PROCESS HISTORY (most important)
 VALUES
 - value_text: exactly as written, including unit and ± uncertainty. value / value_max: numbers only (value_max for ranges). Keep units as written (do not convert). "~5 nm" -> value 5, value_text "~5 nm".
 - data_origin: experimental (measured in this work), computed (DFT/simulation/modeling in this work), cited_from_other_work (values quoted from other papers, typically with a citation in the introduction or discussion), unclear.
+- A paper may compare ITS OWN observation with a CITED study in a SINGLE sentence. Split the assertions conceptually; never label the current result as cited only because a reference occurs nearby.
+- For cited_from_other_work, copy the actual printed reference label into attributed_reference and any explicit numeric citation labels into cited_reference_ids. Do not treat citation as verification of the cited paper's contents.
+- A claim comparing two results is not a measurement made by this paper unless a primary result is explicitly reported.
+- Document-reference tokens (Fig., Table, Ref., Supplementary) and discourse words (consistent, indicating, due to, approximately) are relation/qualifier cues, NOT ontology property classes.
+- If a preflight attribution hint is unreviewed or ambiguous, resolve it from the quoted primary source evidence; do not present it as verified.
 - polarity: negated for explicit negatives ("no change in lifetime was observed"), hypothetical for expectations, proposals or predictions ("could reach", "is expected to").
 - Do not read numbers off figures. If text only describes a figure qualitatively, give no numeric value (source_location figure_only_described).
 - Figures appear as "[Figure N | type] caption". A "Figure content" note after it was written by a vision model from the image: use it only to see which quantity was measured on which samples under which conditions, never as a source of numeric values.
 
 ONTOLOGY
-- ontology_class / technique_class / property_class / attribute_class: copy one label exactly from the matching section of the allowed labels below (## material, ## sample, ## process, ## process_attribute, ## technique, ## property, ## application, or the section named by entity_group). Choose the MOST SPECIFIC label that means the same thing; a broader parent is acceptable when no specific label exists (e.g. "Elemental Substance"). If nothing fits, use OTHER: the name and type_term are kept as the proposed class. Never force a poor fit, and never pick a label from a different section.
+- ontology_class / technique_class / property_class must be one of the allowed labels below. Choose the MOST SPECIFIC label that fits. If none fits, use OTHER and give proposed_*_label (a concise class name). Never force a poor fit.
 
 RELATIONS
 - Co-occurrence is not a relation. Do not chain relations transitively. Preserve direction, negation and scope.
@@ -251,10 +256,14 @@ Focus on experimental/methods sections, but also check abstract, results, captio
 - process_steps: every step that creates or modifies a sample (IDs PR1, PR2, ...), with order, inputs/outputs and ALL stated parameters. A step's evidence must quote the sentences that state its parameter values (parameters have no evidence of their own).
 Do not extract measurement results in this pass."""
 
+# Model-fitted parameters (e.g. HLN alpha and L_phi) are not direct sensor measurements.
+# Preserve the parameter definition, raw uncertainty notation, and fitted model.
 PASS2_TASK = """TASK (pass 2 of 3): Extract every MEASUREMENT / CHARACTERIZATION and every reported PROPERTY VALUE.
 Link each to sample IDs (or material IDs) from the REGISTRY below; do not create new samples. If a value cannot be tied to a registry sample, leave sample_ids empty and explain in unresolved_notes.
 - One Measurement per (technique, property, sample, condition) value. A technique used without a reported value is still a Measurement with value null.
 - Include values in tables (source_location table) and device metrics (efficiency, Voc, Jsc, FF).
+- For values derived by fitting a scientific model (e.g. HLN prefactor alpha and phase coherence length L_phi), set measurement_kind=model_fit, fitted_model_name, fitted_parameter_definition, parameter_symbol, value_text, uncertainty_text and temperature/field conditions where supported. Do not treat fitted parameters as directly observed instrument outputs.
+- Preserve source notation such as 44.9(5) nm and do not invent missing equation expressions or plot axis values.
 - Values quoted from other papers -> data_origin cited_from_other_work; computed values -> computed.
 IDs: ME1, ME2, ...
 

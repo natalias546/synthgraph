@@ -1,0 +1,259 @@
+@prefix ev: <https://w3id.org/matsci/ontology/evidence/> .
+@prefix fcore: <https://w3id.org/matsci/feder-derived/core/> .
+@prefix fmat: <https://w3id.org/matsci/feder-derived/materials/> .
+@prefix lit: <https://w3id.org/matsci/ontology/literature/> .
+@prefix mt: <https://w3id.org/matsci/ontology/measurement/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ev:TechniqueCapabilityRecord a owl:Class ;
+    rdfs:label "technique capability record"@en ;
+    rdfs:comment "Information record connecting a technique class and target class as a documented domain capability, not as evidence of a particular experimental measurement."@en ;
+    rdfs:subClassOf lit:ScientificExtractionRecord .
+
+ev:aliasCandidateClass a owl:AnnotationProperty ;
+    rdfs:label "alias candidate class"@en ;
+    rdfs:comment "Annotation referencing a candidate OWL class IRI; avoids punning a class IRI into a MeasurementTechnique individual."@en .
+
+ev:aliasContextHint a owl:DatatypeProperty ;
+    rdfs:label "alias context hint"@en ;
+    rdfs:comment "Contextual guidance for an acronym and possible competing interpretations."@en ;
+    rdfs:domain ev:TechniqueAliasRecord ;
+    rdfs:range xsd:string .
+
+ev:aliasRequiresContextReview a owl:DatatypeProperty ;
+    rdfs:label "alias requires context review"@en ;
+    rdfs:comment "True when an unqualified occurrence must not become a confirmed technique without local context or human review."@en ;
+    rdfs:domain ev:TechniqueAliasRecord ;
+    rdfs:range xsd:boolean .
+
+ev:aliasResolutionPolicy a owl:DatatypeProperty ;
+    rdfs:label "alias resolution policy"@en ;
+    rdfs:comment "Machine-readable policy: contextual_exact, review_if_unexpanded, or review_if_instrument_context. The downstream pre-LLM reviewer must implement this policy."@en ;
+    rdfs:domain ev:TechniqueAliasRecord ;
+    rdfs:range xsd:string .
+
+ev:aliasRole a owl:DatatypeProperty ;
+    rdfs:label "alias role"@en ;
+    rdfs:comment "Intended candidate role such as technique or instrument."@en ;
+    rdfs:domain ev:TechniqueAliasRecord ;
+    rdfs:range xsd:string .
+
+ev:capabilityTargetClass a owl:AnnotationProperty ;
+    rdfs:label "capability target class"@en ;
+    rdfs:comment "Class-level pointer for a documented possible characterization target."@en .
+
+ev:capabilityTechniqueClass a owl:AnnotationProperty ;
+    rdfs:label "capability technique class"@en ;
+    rdfs:comment "Class-level pointer for a documented possible technique capability; does not imply an actual observation."@en .
+
+ev:combinationMemberTechnique a owl:ObjectProperty ;
+    rdfs:label "combination member technique"@en ;
+    rdfs:comment "Links a combination record to an individual technique specification; should have at least two members, with provenance and approval before asserted use."@en ;
+    rdfs:domain ev:TechniqueCombinationRecord ;
+    rdfs:range fcore:MeasurementTechnique .
+
+ev:hasTechniqueCombinationRecord a owl:ObjectProperty ;
+    rdfs:label "has technique combination record"@en ;
+    rdfs:comment "A material characterization activity is reported to use a combination of techniques. Multiple member technique specifications are recorded on the combination record."@en ;
+    rdfs:domain fmat:MaterialCharacterizationProcess ;
+    rdfs:range ev:TechniqueCombinationRecord .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/001> a ev:TechniqueAliasRecord ;
+    rdfs:label "EDX [technique]" ;
+    ev:aliasCandidateClass mt:EnergyDispersiveXRaySpectroscopy ;
+    ev:aliasContextHint "Typically energy-dispersive X-ray spectroscopy. Confirm when the passage does not expand it or describes hardware." ;
+    ev:aliasRequiresContextReview true ;
+    ev:aliasResolutionPolicy "review_if_unexpanded" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "EDX" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/002> a ev:TechniqueAliasRecord ;
+    rdfs:label "EDS [technique]" ;
+    ev:aliasCandidateClass mt:EnergyDispersiveXRaySpectroscopy ;
+    ev:aliasContextHint "Common spectroscopy abbreviation; require X-ray/elemental-analysis context or an explicit definition." ;
+    ev:aliasRequiresContextReview true ;
+    ev:aliasResolutionPolicy "review_if_unexpanded" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "EDS" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/003> a ev:TechniqueAliasRecord ;
+    rdfs:label "EDAX [technique]" ;
+    ev:aliasCandidateClass mt:EnergyDispersiveXRaySpectroscopy ;
+    ev:aliasContextHint "Can denote energy-dispersive X-ray analysis or a brand/product. Ask whether a technique, detector, instrument, or vendor is intended." ;
+    ev:aliasRequiresContextReview true ;
+    ev:aliasResolutionPolicy "review_if_instrument_context" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "EDAX" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/004> a ev:TechniqueAliasRecord ;
+    rdfs:label "SEM [technique]" ;
+    ev:aliasCandidateClass fmat:ScanningElectronMicroscopy ;
+    ev:aliasContextHint "May denote scanning electron microscopy (technique) or scanning electron microscope (equipment)." ;
+    ev:aliasRequiresContextReview true ;
+    ev:aliasResolutionPolicy "review_if_instrument_context" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "SEM" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/005> a ev:TechniqueAliasRecord ;
+    rdfs:label "SEM [instrument]" ;
+    ev:aliasCandidateClass pmd:PMD_0000922 ;
+    ev:aliasContextHint "When SEM is equipment, propose the existing PMD scanning electron microscope instrument class, not the technique." ;
+    ev:aliasRequiresContextReview true ;
+    ev:aliasResolutionPolicy "review_if_instrument_context" ;
+    ev:aliasRole "instrument" ;
+    ev:techniqueAliasText "SEM" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/006> a ev:TechniqueAliasRecord ;
+    rdfs:label "TEM [technique]" ;
+    ev:aliasCandidateClass fmat:TransmissionElectronMicroscopy ;
+    ev:aliasContextHint "May be a microscopy method or a transmission electron microscope instrument." ;
+    ev:aliasRequiresContextReview true ;
+    ev:aliasResolutionPolicy "review_if_instrument_context" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "TEM" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/007> a ev:TechniqueAliasRecord ;
+    rdfs:label "XPS [technique]" ;
+    ev:aliasCandidateClass mt:XRayPhotoelectronSpectroscopy ;
+    ev:aliasContextHint "Generally X-ray photoelectron spectroscopy, but confirm role when instrument hardware is intended." ;
+    ev:aliasRequiresContextReview true ;
+    ev:aliasResolutionPolicy "review_if_unexpanded" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "XPS" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/008> a ev:TechniqueAliasRecord ;
+    rdfs:label "XRD [technique]" ;
+    ev:aliasCandidateClass fmat:XRayDiffraction ;
+    ev:aliasContextHint "X-ray diffraction; prefer explicit acronym expansion and diffraction context." ;
+    ev:aliasRequiresContextReview false ;
+    ev:aliasResolutionPolicy "contextual_exact" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "XRD" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/009> a ev:TechniqueAliasRecord ;
+    rdfs:label "UV-Vis [technique]" ;
+    ev:aliasCandidateClass lit:UVVisibleSpectroscopyMethod ;
+    ev:aliasContextHint "Ultraviolet-visible spectroscopy; variants UV/VIS and UV–Vis." ;
+    ev:aliasRequiresContextReview false ;
+    ev:aliasResolutionPolicy "contextual_exact" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "UV-Vis" .
+
+<https://w3id.org/matsci/ontology/evidence/technique-alias/010> a ev:TechniqueAliasRecord ;
+    rdfs:label "UV/VIS [technique]" ;
+    ev:aliasCandidateClass lit:UVVisibleSpectroscopyMethod ;
+    ev:aliasContextHint "Ultraviolet-visible spectroscopy." ;
+    ev:aliasRequiresContextReview false ;
+    ev:aliasResolutionPolicy "contextual_exact" ;
+    ev:aliasRole "technique" ;
+    ev:techniqueAliasText "UV/VIS" .
+
+ev:techniqueAliasText a owl:DatatypeProperty ;
+    rdfs:label "technique alias text"@en ;
+    rdfs:comment "Literal surface form to be matched in a paper."@en ;
+    rdfs:domain ev:TechniqueAliasRecord ;
+    rdfs:range xsd:string .
+
+mt:DiffractionTechnique a owl:Class ;
+    rdfs:label "diffraction technique"@en ;
+    rdfs:comment "Technique specification based on diffraction; not a diffraction measurement event."@en ;
+    rdfs:subClassOf fmat:MaterialCharacterizationTechnique .
+
+mt:MassSpectrometryTechnique a owl:Class ;
+    rdfs:label "mass spectrometry technique"@en ;
+    rdfs:comment "Technique measuring mass-to-charge distribution, distinct from optical/X-ray spectroscopy."@en ;
+    rdfs:subClassOf fmat:MaterialCharacterizationTechnique .
+
+mt:MeasurementDataAnalysisTechnique a owl:Class ;
+    rdfs:label "measurement data analysis technique"@en ;
+    rdfs:comment "Specified analysis of data from characterization; does not entail acquiring new raw observations."@en ;
+    rdfs:subClassOf fmat:MaterialCharacterizationTechnique .
+
+mt:OpticalSpectroscopyTechnique a owl:Class ;
+    rdfs:label "optical spectroscopy technique"@en ;
+    rdfs:comment "Spectroscopy using optical excitation, absorption, emission or transmission."@en ;
+    rdfs:subClassOf mt:SpectroscopyTechnique .
+
+mt:ThermalAnalysisTechnique a owl:Class ;
+    rdfs:label "thermal analysis technique"@en ;
+    rdfs:comment "Technique for determining temperature-dependent material behavior and thermodynamic transitions."@en ;
+    rdfs:subClassOf fmat:MaterialCharacterizationTechnique .
+
+mt:canBeCombinedWith a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "can be combined with"@en ;
+    rdfs:comment "Symmetric technique-specification compatibility, not a statement that a combination was performed, nor a transitive relation."@en ;
+    rdfs:domain fcore:MeasurementTechnique ;
+    rdfs:range fcore:MeasurementTechnique .
+
+mt:canCharacterize a owl:ObjectProperty ;
+    rdfs:label "can characterize"@en ;
+    rdfs:comment "Capability of an individual technique specification to characterize a target. Capability is not evidence of measurement having occurred; do not apply this object property directly between two OWL class IRIs."@en ;
+    rdfs:domain fcore:MeasurementTechnique ;
+    rdfs:range mt:CharacterizationTarget .
+
+mt:characterizesProperty a owl:ObjectProperty ;
+    rdfs:label "characterizes property or feature"@en ;
+    rdfs:comment "Links a particular characterization process to the particular material property, composition quality or structural feature that is investigated. Relates individuals; not technique class IRIs to property class IRIs."@en ;
+    rdfs:domain fmat:MaterialCharacterizationProcess ;
+    rdfs:range mt:CharacterizationTarget .
+
+fmat:ScanningElectronMicroscopy skos:altLabel "SEM" .
+
+fmat:TransmissionElectronMicroscopy skos:altLabel "TEM" .
+
+mt:PhotoelectronSpectroscopyTechnique a owl:Class ;
+    rdfs:label "photoelectron spectroscopy technique"@en ;
+    rdfs:comment "Spectroscopy detecting emitted electrons following excitation."@en ;
+    rdfs:subClassOf mt:SpectroscopyTechnique .
+
+mt:XRayPhotoelectronSpectroscopy a owl:Class ;
+    rdfs:label "X-ray photoelectron spectroscopy"@en ;
+    rdfs:comment "X-ray-excited photoelectron spectroscopy used to probe elemental composition and chemical/electronic states near material surfaces."@en ;
+    rdfs:subClassOf mt:PhotoelectronSpectroscopyTechnique ;
+    skos:altLabel "XPS" .
+
+mt:XRaySpectroscopyTechnique a owl:Class ;
+    rdfs:label "X-ray spectroscopy technique"@en ;
+    rdfs:comment "Spectroscopy analyzing characteristic X-ray radiation."@en ;
+    rdfs:subClassOf mt:SpectroscopyTechnique .
+
+ev:TechniqueCombinationRecord a owl:Class ;
+    rdfs:label "technique combination record"@en ;
+    rdfs:comment "Information record describing a particular proposed or verified co-use of multiple techniques in a process, with evidence and review state."@en ;
+    rdfs:subClassOf lit:ScientificExtractionRecord .
+
+lit:UVVisibleSpectroscopyMethod skos:altLabel "UV-Vis",
+        "UV/VIS",
+        "UV–Vis spectroscopy" .
+
+mt:CharacterizationTarget a owl:Class ;
+    rdfs:label "material characterization target"@en ;
+    rdfs:comment "Material characteristic or feature investigated by an activity, encompassing physical properties, material composition, and structure. This is a broad common superclass, not an assertion that all targets are qualities."@en ;
+    rdfs:subClassOf obo:BFO_0000001 .
+
+mt:EnergyDispersiveXRaySpectroscopy a owl:Class ;
+    rdfs:label "energy-dispersive X-ray spectroscopy"@en ;
+    rdfs:comment "Energy-resolved measurement of characteristic X-rays for elemental analysis; a technique, not an EDS detector or EDAX-branded instrument."@en ;
+    rdfs:subClassOf mt:XRaySpectroscopyTechnique ;
+    skos:altLabel "EDAX",
+        "EDS",
+        "EDX",
+        "energy dispersive X-ray spectroscopy",
+        "energy-dispersive X-ray analysis" .
+
+mt:SpectroscopyTechnique a owl:Class ;
+    rdfs:label "spectroscopy technique"@en ;
+    rdfs:comment "Technique specification for acquiring spectra or energy-resolved measurements."@en ;
+    rdfs:subClassOf fmat:MaterialCharacterizationTechnique .
+
+ev:TechniqueAliasRecord a owl:Class ;
+    rdfs:label "technique alias record"@en ;
+    rdfs:comment "A scoped lexical alias used to propose technique or instrument interpretations; separate from OWL sameAs or equivalentClass."@en ;
+    rdfs:subClassOf lit:ScientificTerminologyEntry .
+

@@ -137,7 +137,7 @@ def _group_of(item_id: str, kinds: dict[str, str]) -> str | None:
 def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, min_conf: float,
                    approved_primary_sentence_ids: set[str] | None = None,
                    approved_visual_paragraph_ids: set[str] | None = None) -> dict:
-    """Validate with an optional pre-LLM evidence allowlist (fail closed when supplied)."""
+    """Validate against the pre-LLM selected PRIMARY evidence allowlist (manual review not required)."""
     anch = Anchorer(paragraphs)
     approved_visual_paragraph_ids = approved_visual_paragraph_ids or set()
     p1, p2, p3 = extraction["pass1"], extraction["pass2"], extraction["pass3"]
@@ -184,15 +184,15 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
             notes.append("quote found in a different paragraph than cited")
         if approved_primary_sentence_ids is not None:
             # Original paragraph text remains available for audit, but only a
-            # reviewer-approved PRIMARY sentence can support an asserted fact.
-            # Context-only or unreviewed sentences are not evidence allowlists.
+            # selected PRIMARY sentence can support an asserted fact.
+            # Context-only or excluded sentences are not evidence allowlists.
             for a in anchors:
                 if a.get("paragraph_id") in approved_visual_paragraph_ids and a.get("literal_match"):
                     continue
                 ids = a.get("evidence_sentence_ids", [])
                 if (not a.get("literal_match") or not ids or
                         not set(ids).issubset(approved_primary_sentence_ids)):
-                    issues.append("evidence quote not grounded exclusively in approved PRIMARY source sentences")
+                    issues.append("evidence quote not grounded exclusively in selected PRIMARY source sentences")
                     break
         if obj.get("id") in dup_ids:
             notes.append("duplicate ID")
@@ -259,8 +259,22 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
                                    "text": m.get("technique_name_in_text")}
         if not m["sample_ids"] and not m["material_ids"]:
             it["notes"].append("value not linked to a sample or material")
-        if m.get("data_origin") != "experimental":
-            it["notes"].append(f"data_origin={m.get('data_origin')}")
+        # Provenance category is not itself a quality defect: a documented
+        # computed result can be valid, and an accurately attributed cited
+        # result is not automatically an ontology gap.
+        if m.get('data_origin') == 'unclear':
+            it['notes'].append('measurement origin remains unclear')
+        elif m.get('data_origin') == 'cited_from_other_work':
+            refs=m.get('cited_reference_ids') or []
+            provenance=m.get('attributed_reference')
+            if not (refs or provenance):
+                it['notes'].append('cited measurement has no explicit prior-publication attribution')
+            elif refs:
+                # Require a *source* citation marker, not a generated label alone.
+                quoted_source=' '.join(anch.text.get(a.get('actual_paragraph_id') or a.get('paragraph_id'),'')
+                                       for a in it['evidence_anchors'] if a.get('literal_match'))
+                if not any(re.search(r'\[\s*'+re.escape(str(r))+r'\s*\]',quoted_source) for r in refs):
+                    it['notes'].append('cited reference label not found in quoted evidence paragraphs')
         if m.get("value") is not None:
             ev_nums = set().union(*[_numbers(anch.text.get(a.get("actual_paragraph_id") or a["paragraph_id"], ""))
                                     for a in it["evidence_anchors"]] or [set()])

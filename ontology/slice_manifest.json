@@ -8,7 +8,7 @@
     "Class labels serve as LLM display labels; ontology IRIs remain the canonical identifiers.",
     "Record-layer properties (wasMeasuredOn, hasReportedPropertyValue) require reified measurement/value records to satisfy their declared domains/ranges."
   ],
-  "ontology_file": "matsci-v11-parsing-aligned-cleaned.owl",
+  "ontology_file": "matsci-v11-evidence-context-enriched.owl",
   "entity_groups": {
     "material": {
       "description": "Chemical identity of a substance: a compound or element (e.g. Ba1-xKxBiO3, Bi2O3, KOH, Te as a dopant), or a material class (semiconductor, crystalline material).",
@@ -41,14 +41,17 @@
       "description": "Measurement / characterization / computational methods (XRD, magnetic susceptibility, resistivity, ARPES, STM, heat capacity, DFT).",
       "roots": [
         "measurement technique",
-        "http://purl.obolibrary.org/obo/OBI_0000070"
+        "http://purl.obolibrary.org/obo/OBI_0000070",
+        "https://w3id.org/matsci/ontology/evidence/RietveldRefinementMethod"
       ]
     },
     "property": {
       "description": "Measured or computed properties (critical temperature, carrier lifetime, magnetic susceptibility, lattice parameter, residual resistivity ratio).",
       "roots": [
         "material property",
-        "quality"
+        "quality",
+        "https://w3id.org/matsci/ontology/evidence/ElectricalTransportDerivedQuantity",
+        "https://w3id.org/matsci/ontology/evidence/Magnetoconductivity"
       ],
       "exclude": [
         "function",
@@ -64,7 +67,8 @@
     "phenomenon": {
       "description": "Scientific phenomena (AHE, magnetoresistance, superconductivity, WAL, etc.)",
       "roots": [
-        "https://w3id.org/matsci/ontology/extraction/ScientificPhenomenonMention"
+        "https://w3id.org/matsci/ontology/extraction/ScientificPhenomenonMention",
+        "https://w3id.org/matsci/ontology/evidence/WeakAntilocalization"
       ]
     },
     "mechanism": {
@@ -76,7 +80,8 @@
     "theory_model": {
       "description": "Theories, numerical/physical models, approximations",
       "roots": [
-        "https://w3id.org/matsci/ontology/extraction/ScientificModelMention"
+        "https://w3id.org/matsci/ontology/extraction/ScientificModelMention",
+        "https://w3id.org/matsci/ontology/evidence/HikamiLarkinNagaokaModel"
       ]
     },
     "instrument": {
@@ -100,7 +105,9 @@
     "structure": {
       "description": "Crystal structure and motifs, space groups, kagome lattices",
       "roots": [
-        "https://w3id.org/matsci/ontology/extraction/ScientificStructureMention"
+        "https://w3id.org/matsci/ontology/extraction/ScientificStructureMention",
+        "https://w3id.org/matsci/ontology/evidence/TopologicalSurfaceState",
+        "https://w3id.org/matsci/ontology/CrystallographicAxis"
       ]
     },
     "reference": {
@@ -119,7 +126,11 @@
       "description": "Reserved for truly uncategorized domain objects, e.g. charge carriers or data products. Prefer explicit scientific_context groups and unresolved_terms for new words.",
       "roots": [
         "charge carrier",
-        "Data Product"
+        "Data Product",
+        "https://w3id.org/matsci/ontology/evidence/CanonicalScientificConcept",
+        "https://w3id.org/matsci/ontology/evidence/ScientificEquationRecord",
+        "https://w3id.org/matsci/ontology/evidence/ScientificPlotRecord",
+        "https://w3id.org/matsci/ontology/evidence/ModelFittingResultRecord"
       ]
     },
     "unmapped": {

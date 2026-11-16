@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "notes": "Ontology-controlled alias proposals; a downstream review component must enforce review_policy; not yet wired into SynthGraph.",
+  "entries": [
+    {
+      "text": "EDX",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/measurement/EnergyDispersiveXRaySpectroscopy",
+      "review_policy": "review_if_unexpanded"
+    },
+    {
+      "text": "EDS",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/measurement/EnergyDispersiveXRaySpectroscopy",
+      "review_policy": "review_if_unexpanded"
+    },
+    {
+      "text": "EDAX",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/measurement/EnergyDispersiveXRaySpectroscopy",
+      "review_policy": "review_if_instrument_context"
+    },
+    {
+      "text": "SEM",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/feder-derived/materials/ScanningElectronMicroscopy",
+      "review_policy": "review_if_instrument_context"
+    },
+    {
+      "text": "SEM",
+      "role": "instrument",
+      "candidate_iri": "https://w3id.org/pmd/co/PMD_0000922",
+      "review_policy": "review_if_instrument_context"
+    },
+    {
+      "text": "TEM",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/feder-derived/materials/TransmissionElectronMicroscopy",
+      "review_policy": "review_if_instrument_context"
+    },
+    {
+      "text": "XPS",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/measurement/XRayPhotoelectronSpectroscopy",
+      "review_policy": "review_if_unexpanded"
+    },
+    {
+      "text": "XRD",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/feder-derived/materials/XRayDiffraction",
+      "review_policy": "contextual_exact"
+    },
+    {
+      "text": "UV-Vis",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/literature/UVVisibleSpectroscopyMethod",
+      "review_policy": "contextual_exact"
+    },
+    {
+      "text": "UV/VIS",
+      "role": "technique",
+      "candidate_iri": "https://w3id.org/matsci/ontology/literature/UVVisibleSpectroscopyMethod",
+      "review_policy": "contextual_exact"
+    }
+  ]
+}

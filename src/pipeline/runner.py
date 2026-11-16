@@ -23,11 +23,12 @@ from .resolve import resolve_paper
 from .schemas import build_schemas
 from .structure import build_structure
 from .evidence_context import enrich_structure
+from .source_rdf import write_source_rdf
 from .pre_llm_review import (make_candidates, read_or_create_review, reviewed_selection,
-                             review_summary, approved_documents, apply_reviewed_mappings, ReviewRequired)
+                             review_summary, approved_documents, apply_reviewed_mappings, refresh_review, ReviewRequired)
 from .validate import validate_paper
 
-PIPELINE_VERSION = "0.5.0"  # bump when a stage's code changes its output, so saved stages are redone
+PIPELINE_VERSION = "0.8.0"  # bump when a stage's code changes its output, so saved stages are redone
 STAGES = ["ingest", "structure", "pre_llm_candidates", "human_review", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve"]
 
 
@@ -158,6 +159,9 @@ class Pipeline:
             st, fp_st = stage("structure", {"up": fp_ing}, lambda: enrich_structure(build_structure(ing)))
         # Flat reading-order list for the LLM notebooks (same shape as the old text pass).
         write_observations(st, store.dir / "observations.json")
+        # Source-level RDF is provisional: never add unverified axis/fit guesses
+        # to the curated Neo4j graph by mistake.
+        write_source_rdf(st, store.dir / "source_records.ttl", pid)
         if stop_at < STAGES.index("pre_llm_candidates"):
             return out
         candidates, fp_candidates = stage(
@@ -167,17 +171,24 @@ class Pipeline:
             return out
         review_path = store.dir / "pre_llm_review.json"
         if self.cfg.pre_llm_review:
-            review = read_or_create_review(review_path, st, candidates)
+            try:
+                review = read_or_create_review(review_path, st, candidates)
+            except ReviewRequired:
+                # Safe preflight repair: preserve the old file, generate a new
+                # pending manifest and candidate proposals. NO old approvals
+                # can reach a paid stage without explicit confirmation.
+                refresh = refresh_review(review_path, st, candidates, self.ontology_resolver)
+                review = refresh["review"]
             out["human_review"] = {"path": str(review_path), "summary": review_summary(review, candidates)}
         else:
             out["human_review"] = {"skipped": True, "reason": "Config.pre_llm_review is False (full paper sent)"}
         if stop_at < STAGES.index("visuals"):
             return out
-        # With review on, this fails closed before any Claude/vision client or prompt is constructed.
+        # Select primary source text automatically (with explicit exclusions); paid vision stays opt-in.
         selection = self._selection(st, candidates, review_path)
         full_paper = selection.get("full_paper", False)
         approved_visuals = set(selection["approved_visuals"])
-        # With review on, a visual crop must be explicitly approved by its source paragraph ID.
+        # A visual crop must be opted in by its source paragraph ID.
         relevant_tables = [t for t in st.get("tables", []) if t.get("paragraph_id") in approved_visuals]
         relevant_figures = [f for f in st.get("figures", []) if f.get("paragraph_id") in approved_visuals]
 
@@ -205,6 +216,12 @@ class Pipeline:
 
         paragraphs, docs, llm_fp = self._llm_inputs(st, vis, selection)
         p1, fp1 = stage("pass1", llm_fp, lambda: X.run_pass1(self.llm, self.schemas, self.system, docs, self.fewshot, pid, self.profile))
+        from .claim_provenance import link_specimen_mentions
+        specimen_links = link_specimen_mentions(st, p1)
+        write_json(store.dir / "specimen_link_candidates.json", specimen_links)
+        out["specimen_links"] = {"path": str(store.dir / "specimen_link_candidates.json"),
+                                  "unique_formula_candidates": sum(bool(s['matched_sample_id']) for s in specimen_links),
+                                  "unresolved": sum(not s['matched_sample_id'] for s in specimen_links)}
         if stop_at < STAGES.index("pass2"):
             return out
         p2, fp2 = stage("pass2", {**llm_fp, "up": fp1},
@@ -242,6 +259,7 @@ class Pipeline:
         stage("resolve", {"up": fp_val}, lambda: resolve_paper(val))
         out["meta"] = {"title": st["title"], "pdf": pdf.name, "sha256": pdf_hash,
                        "review_fingerprint": selection["review_fingerprint"],
+                       "selected_primary_sentence_ids": [e["id"] for e in selection["extract"]],
                        "approved_primary_sentence_ids": [e["id"] for e in selection["extract"]],
                        "approved_visual_paragraph_ids": selection["approved_visuals"],
                        "documents": [{"chunk": d["chunk"], "chars": d["chars"]} for d in docs]}
@@ -249,7 +267,7 @@ class Pipeline:
 
     def _selection(self, st, candidates, review_path) -> dict:
         """What Claude may read. With Config.pre_llm_review off: the whole paper and every table/figure crop
-        (table_vision/figure_vision still apply). With it on: only reviewer-approved sentences and crops."""
+        (table_vision/figure_vision still apply). With it on: automatically selected evidence (explicit exclusions honored), and opted-in crops."""
         if not self.cfg.pre_llm_review:
             visuals = [x["paragraph_id"] for x in st.get("tables", []) + st.get("figures", [])
                        if x.get("paragraph_id")]
@@ -326,7 +344,7 @@ class Pipeline:
 
     def estimate_cost(self, papers=None, until="resolve", show=True) -> dict:
         """What the Claude stages up to `until` would cost, before calling anything. With
-        Config.pre_llm_review on, only approved text/vision is counted and every paper must have a valid review."""
+        Config.pre_llm_review on, automatically selected text and explicitly opted-in vision are counted."""
         from . import cost
         stop = STAGES.index(until)
         passes = max(0, min(3, stop - STAGES.index("visuals")))
@@ -389,12 +407,11 @@ class Pipeline:
         self.update_checksums()
         if STAGES.index(until) >= STAGES.index("visuals"):
             from .cost import CostLimitExceeded
-            # Fail fast (before parsing review, estimating or calling Claude on a paper) if the API would
-            # refuse an output schema; see the RULES in schemas.py.
-            self.check_schemas(until)
-            # estimate_cost first validates every human review manifest, then
-            # optionally counts tokens; no paid work can precede approval.
+            # Resolve source-selection manifests without constructing an LLM
+            # client or contacting any token-counting API. Only after source selection
+            # should schema checks/cost estimation reach model infrastructure.
             est = self.estimate_cost(papers, until)
+            self.check_schemas(until)
             limit = max_cost_usd if max_cost_usd is not None else self.cfg.max_cost_usd
             if limit is not None and est["high_usd"] > limit:
                 raise CostLimitExceeded(f"High estimate ${est['high_usd']:.2f} is above max_cost_usd=${limit:.2f}. "

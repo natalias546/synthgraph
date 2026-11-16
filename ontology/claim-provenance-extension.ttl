@@ -1,0 +1,78 @@
+@prefix ev: <https://w3id.org/matsci/ontology/evidence/> .
+@prefix matsci: <https://w3id.org/matsci/ontology/> .
+@prefix lit: <https://w3id.org/matsci/ontology/literature/> .
+@prefix ext: <https://w3id.org/matsci/ontology/extraction/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# Evidence-assertion records are INFO ABOUT physical observations, not
+# measurements themselves. Attribution is publication-relative.
+ev:ScientificPublicationRecord a owl:Class ; rdfs:label "scientific publication record"@en ;
+  rdfs:subClassOf ev:ScientificSourceObject .
+ev:ClaimAttributionRecord a owl:Class ; rdfs:label "claim attribution record"@en ;
+  rdfs:subClassOf matsci:SourceAssertion .
+ev:ClaimOriginCategory a owl:Class ; rdfs:label "claim origin category"@en .
+ev:SourceCitationMention a owl:Class ; rdfs:label "source citation mention"@en ;
+  rdfs:subClassOf ext:LiteratureReferenceMention .
+ev:SupplementarySourceObject a owl:Class ; rdfs:label "supplementary source object"@en ;
+  rdfs:subClassOf ev:ScientificSourceObject .
+ev:ScientificTableSourceObject a owl:Class ; rdfs:label "scientific table source object"@en ;
+  rdfs:subClassOf ev:ScientificSourceObject .
+ev:FigureInsetPanel a owl:Class ; rdfs:label "figure inset panel"@en ;
+  rdfs:subClassOf ev:PlotPanelDescription .
+# Fermi level is an electronic property/energy reference, not a material sample.
+matsci:FermiLevel a owl:Class ; rdfs:label "Fermi level"@en ;
+  rdfs:subClassOf matsci:ElectronicProperty ;
+  skos:altLabel "Fermi energy level"@en ; skos:altLabel "Fermi energy"@en .
+matsci:CrystallographicAxis a owl:Class ; rdfs:label "crystallographic axis"@en ;
+  rdfs:subClassOf matsci:PhysicalMaterialStructure .
+matsci:CrystallographicCAxis a owl:Class ; rdfs:label "crystallographic c-axis"@en ;
+  skos:altLabel "c axis"@en ; skos:altLabel "c-axis"@en ;
+  rdfs:subClassOf matsci:CrystallographicAxis .
+
+# Distinguish assertion occurrence from the reported origin of its information.
+ev:assertedInPublication a owl:ObjectProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range ev:ScientificPublicationRecord ; rdfs:label "asserted in publication"@en .
+ev:attributedToPublication a owl:ObjectProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range ev:ScientificPublicationRecord ; rdfs:label "attributed to publication"@en .
+ev:citesBibliographicEntry a owl:ObjectProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range ev:BibliographicSourceEntry ; rdfs:label "cites bibliographic entry"@en .
+ev:hasClaimOrigin a owl:ObjectProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range ev:ClaimOriginCategory ; rdfs:label "has claim origin"@en .
+ev:reportsObservation a owl:ObjectProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range lit:ScientificMeasurementRecord ; rdfs:label "reports observation"@en .
+ev:agreesWithClaim a owl:ObjectProperty, owl:SymmetricProperty ;
+  rdfs:domain matsci:SourceAssertion ; rdfs:range matsci:SourceAssertion ;
+  rdfs:label "agrees with claim"@en .
+ev:contrastsWithClaim a owl:ObjectProperty, owl:SymmetricProperty ;
+  rdfs:domain matsci:SourceAssertion ; rdfs:range matsci:SourceAssertion ;
+  rdfs:label "contrasts with claim"@en .
+ev:infersFrom a owl:ObjectProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range lit:ScientificExtractionRecord ; rdfs:label "infers from"@en .
+ev:hasCitationMention a owl:ObjectProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range ev:SourceCitationMention ; rdfs:label "has citation mention"@en .
+ev:refersToDocumentObject a owl:ObjectProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range ev:ScientificSourceObject ; rdfs:label "refers to document object"@en .
+ev:hasInsetPanel a owl:ObjectProperty ; rdfs:domain ev:ScientificPlotRecord ;
+  rdfs:range ev:FigureInsetPanel ; rdfs:label "has inset panel"@en .
+
+# Qualifier datatypes: source-specific and explicitly non-truth-asserting.
+ev:attributionStatus a owl:DatatypeProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range xsd:string ; rdfs:label "attribution status"@en .
+ev:claimOriginLabel a owl:DatatypeProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range xsd:string ; rdfs:label "claim origin label"@en .
+ev:claimKindLabel a owl:DatatypeProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range xsd:string ; rdfs:label "claim kind label"@en .
+ev:epistemicStatus a owl:DatatypeProperty ; rdfs:domain matsci:SourceAssertion ;
+  rdfs:range xsd:string ; rdfs:label "epistemic status"@en .
+
+# Controlled, paper-relative origin values. These are classification values,
+# not new classes of physical observations.
+ev:OriginCurrentStudy a ev:ClaimOriginCategory ; rdfs:label "current study"@en .
+ev:OriginCitedStudy a ev:ClaimOriginCategory ; rdfs:label "cited study"@en .
+ev:OriginBackgroundKnowledge a ev:ClaimOriginCategory ; rdfs:label "background knowledge"@en .
+ev:OriginUndetermined a ev:ClaimOriginCategory ; rdfs:label "undetermined"@en .
+ev:OriginMixed a ev:ClaimOriginCategory ; rdfs:label "mixed current and cited"@en .

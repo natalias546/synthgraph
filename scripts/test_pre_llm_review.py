@@ -40,14 +40,12 @@ def test_review(owl: Path):
     stage = make_candidates(st, resolver)
     terms = {(c["term"].casefold(), c["match_status"]) for c in stage["candidates"]}
     assert ("resistivity", "exact_match") in terms
-    assert ("magnetoresistance", "missing_class") in terms
+    assert ("magnetoresistance", "exact_match") in terms
     rev = new_review(st, stage)
-    try:
-        reviewed_selection(st, stage, rev, resolver)
-    except ReviewRequired:
-        pass
-    else:
-        raise AssertionError("Missing human approval did not block the paid stage")
+    automatic = reviewed_selection(st, stage, rev, resolver)
+    assert len(automatic['extract']) >= 2  # source paragraphs flow without manual approval
+    assert all(v['review_status']=='not reviewed' for v in automatic['extract'])
+    assert not automatic['hints']  # no unreviewed class is a human-approved mapping
     set_evidence_decision(rev, "P1:s1", "extract")
     set_evidence_decision(rev, "P1:s2", "extract")
     set_evidence_decision(rev, "P1:s3", "context_only")
@@ -78,8 +76,8 @@ def test_review(owl: Path):
     from src.pipeline.validate import validate_paper
     review2 = copy.deepcopy(rev)
     set_candidate_decision(review2, stage, resolver, missing["id"], "approve",
-                           selected_iri=exact["matched_iri"], selected_group="property",
-                           note="Manually approved broad conceptual alignment for testing")
+                           selected_iri=missing["matched_iri"], selected_group="property",
+                           note="Manually approved exact magnetoresistance class for testing")
     select2 = reviewed_selection(st, stage, review2, resolver)
     m2 = {"id": "ME1", "property_class": "OTHER", "property_iri": None,
           "proposed_property_label": "magnetoresistance", "property_name_in_text": "Magnetoresistance",
@@ -95,7 +93,7 @@ def test_review(owl: Path):
     aligned = apply_reviewed_mappings(resolver.resolve_extraction(extraction), select2, resolver)
     r = next(r for r in aligned["ontology_resolution"] if r["role"] == "measurement_property")
     assert r["status"] == "human_reviewed_mapping" and not r["requires_review"]
-    assert aligned["pass2"]["measurements"][0]["property_iri"] == exact["matched_iri"]
+    assert aligned["pass2"]["measurements"][0]["property_iri"] == missing["matched_iri"]
     # The human mapping does not silently bypass other scientific checks.
     valid = annotate_validation(validate_paper(aligned, st["paragraphs"], profile, .85,
                    approved_primary_sentence_ids={"P1:s1", "P1:s2"}), aligned)
@@ -114,7 +112,7 @@ def test_review(owl: Path):
         else:
             raise AssertionError("Stale evidence was accepted")
     print("PASS: pre-LLM OWL candidate matching, human edits, optional unmapped terms")
-    print("PASS: fail-closed review, literal evidence, selection + context + provenance")
+    print("PASS: optional review, literal evidence, selection + context + provenance")
     print("PASS: persisted review and stale-source detection")
 
     # Exercise real stage ordering using a fresh local PDF and no API key.
@@ -143,19 +141,9 @@ def test_review(owl: Path):
         pl = Pipeline(cfg)
         local = pl.run_paper(pdf, until="human_review")
         assert "human_review" in local and "pre_llm_candidates" in local
-        try:
-            pl.run_paper(pdf, until="visuals")
-        except ReviewRequired:
-            pass
-        else:
-            raise AssertionError("Pipeline did not stop before vision/LLM")
-        # A batch run must fail before creating any Claude client/token counter.
-        try:
-            pl.run_all(until="pass1", papers=[pdf])
-        except ReviewRequired:
-            pass
-        else:
-            raise AssertionError("Batch pipeline did not enforce pre-LLM review")
+        # No evidence approval is required; paid vision is still explicitly opt-in.
+        no_approval = pl.run_paper(pdf, until="visuals")
+        assert no_approval['visuals'].get('skipped') is True
         assert "llm" not in pl.__dict__
         local_review = read_json(Path(local["human_review"]["path"]))
         assert local["structure"]["semantic_evidence"]
@@ -186,7 +174,7 @@ def test_review(owl: Path):
         mocked = Pipeline(cfg, mock_responder=responder)
         whole = mocked.run_paper(pdf, until="resolve")
         assert "ontology_resolve" in whole and "validate" in whole and "resolve" in whole
-        assert len(mocked.llm.ledger) == 3
+        assert len(mocked.llm.ledger) == 4  # pass3 is split into relations and applications calls
         # Even a literally matching quote is invalid when it cites context-only evidence.
         from src.pipeline.validate import validate_paper
         prop = profile.groups["property"].labels[0]
@@ -204,8 +192,8 @@ def test_review(owl: Path):
                                     st["paragraphs"], profile, .85,
                                     approved_primary_sentence_ids={"P1:s1", "P1:s2"})
         assert unapproved["items"][0]["status"] == "rejected"
-        print("PASS: real PDF stages obey approval gate; no paid vision/LLM calls")
-        print("PASS: all downstream stages via offline mock + only reviewed primary evidence accepted")
+        print("PASS: real PDF stages include eligible evidence by default; vision remains opt-in")
+        print("PASS: all downstream stages via offline mock + selected primary evidence only")
 
 
 def main():

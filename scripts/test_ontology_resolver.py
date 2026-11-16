@@ -3,7 +3,7 @@
 Run from the project root:
     python scripts/test_ontology_resolver.py
 or provide an explicitly installed v11 OWL:
-    python scripts/test_ontology_resolver.py --owl ontology/matsci-v11-parsing-aligned-cleaned.owl
+    python scripts/test_ontology_resolver.py --owl ontology/matsci-v11-evidence-context-enriched.owl
 
 No LLM, internet, Neo4j, PDF corpus or API key is required.
 """
@@ -24,7 +24,7 @@ from src.pipeline.validate import validate_paper
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--owl", type=Path, default=ROOT / "ontology" / "matsci-v11-parsing-aligned-cleaned.owl")
+    ap.add_argument("--owl", type=Path, default=ROOT / "ontology" / "matsci-v11-evidence-context-enriched.owl")
     ap.add_argument("--manifest", type=Path, default=ROOT / "ontology" / "slice_manifest.json")
     args = ap.parse_args()
     if not args.owl.is_file() or not args.manifest.is_file():
@@ -39,10 +39,10 @@ def main():
     r1 = resolver.resolve("Resistivity", "property")
     assert r1["status"] == "exact_match" and r1["matched_iri"] in ontology.classes, r1
     r2 = resolver.resolve("magnetoresistance", "property")
-    assert r2["status"] != "exact_match", r2
+    assert r2["status"] == "exact_match", r2
     r3 = resolver.resolve("residual resistivity ratio", "property")
-    assert r3["status"] != "exact_match", r3
-    assert all(x["matched_iri"] is None for x in (r2, r3))
+    assert r3["status"] == "exact_match", r3
+    assert all(x["matched_iri"] in ontology.classes for x in (r2, r3))
 
     evidence = {"paragraph_id": "P1", "quote": "Resistivity was 5 ohm cm and magnetoresistance was 12%."}
     def meas(mid, term, value, label=OTHER):
@@ -59,12 +59,12 @@ def main():
     assert extracted["pass2"]["measurements"][0]["property_class"] == OTHER, "Inputs must not be mutated"
     a, b = aligned["pass2"]["measurements"]
     assert a["property_iri"] == r1["matched_iri"] and a["property_class"] != OTHER
-    assert b["property_class"] == OTHER and b["property_iri"] is None
+    assert b["property_class"] != OTHER and b["property_iri"] == r2["matched_iri"]
     paragraphs = [{"id": "P1", "text": evidence["quote"], "page": 1, "kind": "paragraph"}]
     validated = validate_paper(aligned, paragraphs, profile, 0.85)
     validated = annotate_validation(validated, aligned)
     ids = {it["id"]: it for it in validated["items"]}
-    assert ids["ME2"]["status"] == "needs_review", ids["ME2"]
+    assert ids["ME2"]["status"] != "rejected", ids["ME2"]
     assert aligned["ontology_resolution_summary"]["exact_match"] >= 1
     print("PASS — ontology classes:", len(ontology.classes))
     print("PASS — application classes:", len(profile.groups["application"].class_iris))
