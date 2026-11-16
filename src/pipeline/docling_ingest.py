@@ -457,8 +457,22 @@ def structure_from_docling(doc, ingest: dict, pdf_path: Path | None = None) -> d
                 head = f"[{label.capitalize()}" + (f" | {cls['class']}" if cls else "") + "]"
                 p = add_par("figure", f"{head} {cap}".strip(), item, caption=cap, caption_of=label,
                             classification=cls, crop=crops.get(ref))
+                # Docling does not expose the raster graph's axis text in its
+                # caption. Embedded PDF vector labels may still be extractable.
+                # Keep them separate from verified axis labels: multiple panels,
+                # legends and tick labels can share the picture bounding box.
+                picture_text = ""
+                if reader and p.get("boxes"):
+                    try:
+                        picture_text = "\n".join(
+                            reader.text_in(box["page"], tuple(box["bbox"]), pad=0)
+                            for box in p["boxes"][:3]
+                        )[:2000]
+                    except Exception:
+                        picture_text = ""
                 figures.append({"paragraph_id": p["id"], "label": label, "caption": cap, "page": p["page"],
-                                "classification": cls, "crop": crops.get(ref), "has_caption": bool(cap)})
+                                "classification": cls, "crop": crops.get(ref), "has_caption": bool(cap),
+                                "boxes": p.get("boxes", []), "pdf_picture_text": picture_text})
                 continue
             if isinstance(item, TextItem):
                 lab = item.label

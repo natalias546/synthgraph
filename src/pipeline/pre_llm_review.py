@@ -337,6 +337,28 @@ def review_summary(review: dict, candidates: dict) -> dict:
             "candidate_fingerprint": candidates.get("candidate_fingerprint")}
 
 
+def review_summary_table(review: dict, candidate_stage: dict):
+    """Human-readable pandas review dashboard; never changes selection.
+
+    review_summary() remains the machine-readable dict; review_widget() is
+    the interactive Jupyter editor. The table is a convenient status display.
+    """
+    import pandas as pd
+    state = review_summary(review, candidate_stage)
+    rows=[]
+    names={'evidence':'Source sentences','blocks':'Evidence blocks',
+           'concepts':'Canonical OWL concepts','candidates':'Ontology mentions',
+           'assertions':'Claims','relation_candidates':'Proposed relationships'}
+    for key,title in names.items():
+        counts=state.get('review_status', {}).get(key,{})
+        n_reviewed=counts.get('reviewed',0)
+        n_unreviewed=counts.get('not reviewed',0)
+        rows.append({'category':title, 'reviewed':n_reviewed,
+                     'not_reviewed':n_unreviewed,
+                     'total':n_reviewed+n_unreviewed})
+    return pd.DataFrame(rows)
+
+
 def review_widget(structure: dict, candidate_stage: dict, review_path: Path, resolver, _shared_review: dict | None = None):
     """Editable Jupyter evidence/candidate reviewer; requires optional ipywidgets.
 
@@ -1346,6 +1368,10 @@ def default_evidence_decision(e: dict) -> str:
         return 'exclude'
     if not e.get('sentence', '').strip():
         return 'exclude'
+    if e.get('source_kind') == 'figure' and 'unverified_image_only' in e.get('scientific_roles', []):
+        # The generated '[Figure ...]' placeholder is not scientific evidence.
+        # Preserve original Docling pictures for manual inspection/vision opt-in.
+        return 'exclude'
     # Front matter often contains author names, affiliations and paper metadata.
     if e.get('section_role') == 'front_matter' and not e.get('scientific_roles'):
         return 'exclude'
@@ -1400,6 +1426,10 @@ def review_issues(structure: dict, candidate_stage: dict) -> dict:
     # should be inspectable too; don't flag every generic paragraph.
     with_candidate = {c['evidence_id'] for c in candidate_stage.get('candidates', [])}
     for ev in structure.get('semantic_evidence', []):
+        if ev.get('visual_role') == 'classifier_caption_conflict':
+            by_evidence[ev['id']].append('Docling logo/icon label conflicts with scientific caption')
+        elif ev.get('visual_role') == 'unverified_picture':
+            by_evidence[ev['id']].append('Unverified picture fragment; inspect crop if scientifically relevant')
         if (ev['id'] not in with_candidate and default_evidence_decision(ev) == 'extract'
                 and set(ev.get('scientific_roles', [])) & {'result','method','quantitative_evidence'}):
             by_evidence[ev['id']].append('scientific evidence without a recognized OWL term')
@@ -1497,14 +1527,32 @@ def figure_inspector(structure: dict, paper_output_dir: Path):
     except ImportError as exc:
         raise ImportError('Install ipywidgets, pandas and IPython for crop inspection') from exc
     root = Path(paper_output_dir).resolve()
-    items = [('figure', x) for x in structure.get('figures', [])] + [('table', x) for x in structure.get('tables', [])]
+    # Excluded decorative pictures are audit-only, not preflight figures.
+    # They can be inspected manually by explicitly choosing Show all.
+    items = ([('figure', x) for x in structure.get('figures', [])]
+             + [('table', x) for x in structure.get('tables', [])]
+             + [('excluded decorative', x) for x in structure.get('excluded_decorative_pictures', [])])
     if not items:
         return w.HTML('No Docling figures or tables are present in this extraction.')
     opts=[(f"{kind}: {x.get('label', x.get('paragraph_id'))} | page {x.get('page', '?')}", idx)
           for idx,(kind,x) in enumerate(items)]
+    show_all_images=w.Checkbox(value=False,
+        description='Show all Docling picture fragments (including decorative logos)',indent=False)
     choice=w.Dropdown(options=opts, description='Crop',layout=w.Layout(width='95%'))
+    def refresh_picture_choices(*_):
+        filtered=[(i, kind, x) for i,(kind,x) in enumerate(items)
+            if show_all_images.value or kind=='table'
+            or (kind=='figure' and x.get('visual_role') not in ('decorative_logo','decorative_icon'))]
+        choice.options=[(f"{kind}: {x.get('label',x.get('paragraph_id'))} | "
+               f"{x.get('visual_role','unclassified')} | p{x.get('page','?')}",i)
+               for i,kind,x in filtered]
+        choice.disabled=not bool(filtered)
+    show_all_images.observe(refresh_picture_choices,names='value')
+    refresh_picture_choices()
     details=w.Output(layout=w.Layout(border='1px solid #ddd',padding='8px'))
     def render(*_):
+        if choice.value is None:
+            return
         kind, asset=items[choice.value]
         pid=asset.get('paragraph_id')
         crops=asset.get('crop')
@@ -1524,19 +1572,50 @@ def figure_inspector(structure: dict, paper_output_dir: Path):
             display(pd.DataFrame([{'kind':kind,'paragraph_id':pid,'page':asset.get('page'),
                'label':asset.get('label'), 'caption':asset.get('caption'),
                'classification':str(asset.get('classification','')),
+               'visual_role':asset.get('visual_role','not classified'),
+               'review_reasons':'; '.join(asset.get('visual_review_reasons',[])),
                'crop_path':crops}]).T.rename(columns={0:'value'}))
             if kind=='table':
                 p=next((x for x in structure.get('paragraphs', []) if x['id']==pid), {})
                 if p.get('rows'):display(pd.DataFrame(p['rows']))
             else:
                 plots=[x for x in structure.get('plots', []) if x.get('source_paragraph_id')==pid]
-                if plots:display(pd.DataFrame(plots).T)
+                if plots:
+                    display(pd.DataFrame(plots).T)
+                    for plot in plots:
+                        pairs=plot.get('axis_unit_candidates',[])
+                        if pairs:
+                            print('Candidate units in embedded PDF vector text (axis assignment not verified):')
+                            display(pd.DataFrame(pairs))
             evidence=[e for e in structure.get('semantic_evidence', []) if e['paragraph_id']==pid]
             if evidence:display(pd.DataFrame([{'evidence_id':e['id'],'sentence':e.get('sentence','')}
                                              for e in evidence]))
     choice.observe(render,names='value');render()
-    return w.VBox([w.HTML('<b>Saved Docling segmented crop and extracted data. Inspection does not approve a vision API call.</b>'),
-                   choice,details])
+    return w.VBox([w.HTML('<b>Saved Docling crop and extracted data.</b> Decorative detections are hidden by default, '
+                    'but no raw image is deleted. Show all exposes preflight-excluded pictures for audit. Image inspection never approves paid vision.'),
+                   show_all_images,choice,details])
+
+
+def review_summary_table(review: dict, candidate_stage: dict):
+    """Human-readable pandas review dashboard; never changes selection.
+
+    review_summary() remains the machine-readable dict; review_widget() is
+    the interactive Jupyter editor. The table is a convenient status display.
+    """
+    import pandas as pd
+    state = review_summary(review, candidate_stage)
+    rows=[]
+    names={'evidence':'Source sentences','blocks':'Evidence blocks',
+           'concepts':'Canonical OWL concepts','candidates':'Ontology mentions',
+           'assertions':'Claims','relation_candidates':'Proposed relationships'}
+    for key,title in names.items():
+        counts=state.get('review_status', {}).get(key,{})
+        n_reviewed=counts.get('reviewed',0)
+        n_unreviewed=counts.get('not reviewed',0)
+        rows.append({'category':title, 'reviewed':n_reviewed,
+                     'not_reviewed':n_unreviewed,
+                     'total':n_reviewed+n_unreviewed})
+    return pd.DataFrame(rows)
 
 
 def review_widget(structure: dict, candidate_stage: dict, review_path: Path, resolver,
@@ -1622,8 +1701,9 @@ def review_widget(structure: dict, candidate_stage: dict, review_path: Path, res
         state=review_summary(review,candidate_stage)
         summary.value=(f"<b>Candidate lines:</b> {len(evidence)} &nbsp; "
           f"<b>Flagged:</b> {len(flagged_eids)} &nbsp; "
-          f"<b>Manual review:</b> {state['review_status']['evidence']} &nbsp; "
-          f"<b>Unreviewed text is included by default (except bibliography/furniture).</b>")
+          f"<b>Sentences inspected:</b> {state['review_status']['evidence'].get('reviewed',0)}/{len(evidence)} &nbsp; "
+          f"<b>Unreviewed scientific text is included automatically.</b> "
+          f"Inspect a figure using the separate <code>figure_inspector()</code> cell.")
     def refresh_choices(*_):
         selected_blocks=[b for b in blocks if all_mode.value or b['id'] in issue['block_reasons']]
         selected_concepts=[c for c in concepts if all_mode.value or c['id'] in flagged_cids]

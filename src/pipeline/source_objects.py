@@ -7,7 +7,7 @@ from __future__ import annotations
 import re
 from .scientific_context import quantities
 
-_AXIS_SPLIT = re.compile(r"(?P<y>[A-Za-zαβρΔσ𝜎𝜙φ()/_\s%+-]{1,65}?)\s+(?:versus|vs\.?|against|as a function of)\s+(?P<x>[^,.]{2,90})", re.I)
+_AXIS_SPLIT = re.compile(r"(?P<y>[A-Za-z0-9αβγΔρσ𝜎𝜙φϕθΘµμΩÅ°()/_\s%+.-]{1,65}?)\s+(?:versus|vs\.?|against|as a function of)\s+(?P<x>[^,.]{2,90})", re.I)
 _FUNC = re.compile(r"(?P<y>[A-Za-zαβρΔσ𝜎𝜙φ]+)\s*\(\s*(?P<x>[TH])\s*\)",re.I)
 _EQUAL = re.compile(r"(?:(?:\b[A-ZαβγΔσρ𝜎]\s*\([^)]{1,30}\)|[αβγΔσρ𝜎LφϕBφ][\wφϕ]*)\s*=\s*[^,;\.]{3,180})")
 _FORMULA_INTRO = re.compile(r"(?:equation|formula|expression).{0,140}?(?:given\s+by|written\s+as|defined\s+as|as\s+follows)\s*:?\s*$", re.I)
@@ -15,20 +15,116 @@ _DEF = re.compile(r"\b(?:where|here|denotes?|represents?|is defined as|refers to
 _FIT = re.compile(r"\b(?:Hikami[ -]Larkin[ -]Nagaoka|HLN)\b",re.I)
 
 
-def _visual_role(fig:dict) -> str:
-    name=str(fig.get('classification',{}).get('class','')).lower()
-    cap=fig.get('caption','') or ''
-    cl=cap.lower()
-    if name=='icon' and not cap: return 'decorative_icon'
-    if 'logo' in name and cap: return 'caption_fragment_not_verified_as_graphic'
-    if 'logo' in name and not re.search(r"\b(?:fig\.?|plot|versus|curve|spectrum|diffraction|schematic|fitted)\b",cl):
-        return 'decorative_logo'
-    if re.search(r"\b(?:plot|vs\.?|versus|curve|spectrum|spectra|diffraction|magnetoconductivity|fit)\b",cl) or name in ('line_chart','scatter_chart','bar_chart','histogram'):
-        return 'scientific_plot_candidate'
-    if 'logo' in name and cap:
-        return 'caption_fragment_not_verified_as_graphic'
-    if 'logo' in name:return 'decorative_logo'
-    return 'scientific_figure_or_unknown'
+# Docling picture classification is a weak hint. Preserve the raw picture,
+# while distinguishing an image-only fragment from a supported figure caption.
+_SCIENCE_CAPTION = re.compile(
+    r"\b(?:fig(?:ure)?s?\.?\s*\d+|plots?|curves?|spectr(?:um|a)|diffraction|"
+    r"microscop(?:y|ic)|SEM|TEM|EDX|EDS|EDAX|XPS|XRD|"
+    r"magneto(?:resistance|conductivity)|schematic|micrograph|"
+    r"dependence|histogram|scatter|intensity|photographs?)\b", re.I)
+_CHART_LABELS = {'line_chart', 'scatter_chart', 'bar_chart', 'histogram',
+                 'pie_chart', 'heatmap'}
+_DECORATIVE_LABELS = {'logo', 'icon', 'signature', 'qr_code',
+                      'bar_code', 'stamp', 'decorative', 'decoration',
+                      'watermark'}
+
+
+def _visual_assessment(fig: dict) -> tuple[str, list[str]]:
+    """Conservative source-backed classification; never silently discard crops."""
+    classification = fig.get('classification') or {}
+    name = str(classification.get('class') or '').lower().strip()
+    caption = (fig.get('caption') or '').strip()
+    scientific_caption = bool(_SCIENCE_CAPTION.search(caption))
+    reasons = []
+    if name in _DECORATIVE_LABELS:
+        # Docling can mistakenly associate a nearby *real figure caption* with
+        # a small publisher logo (e.g. Springer above an unrelated Fig. 6).
+        # A caption is NOT independent evidence that the picture is scientific.
+        # For explicit decorative labels, drop the picture from preflight even
+        # when Docling attached a plausible Fig./SEM/plot caption. Preserve
+        # the pixels and the suspect caption in the audit for manual recovery.
+        role = 'decorative_icon' if name == 'icon' else 'decorative_logo'
+        if scientific_caption:
+            return role, [
+                'Docling decorative picture was linked to a scientific-looking '
+                'caption; association is unverified and picture is excluded',
+                'Possible publisher logo with a misattached figure caption',
+            ]
+        if caption:
+            return role, [
+                'Decorative-classified picture has a caption, but the caption '
+                'does not override the decorative classification',
+            ]
+        return role, ['Decorative picture classification; excluded before preflight']
+    if scientific_caption:
+        if name in _CHART_LABELS or re.search(r'\b(?:plot|curve|spectrum|spectra|diffraction|dependence)\b',caption,re.I):
+            return 'scientific_plot_candidate', reasons
+        return 'scientific_figure_candidate', reasons
+    if caption:
+        reasons.append('Caption lacks a recognizable scientific figure cue')
+    else:
+        reasons.append('Picture has no caption; may be a logo, inset or fragment')
+    return 'unverified_picture', reasons
+
+
+def _visual_role(fig: dict) -> str:
+    return _visual_assessment(fig)[0]
+
+
+# Prefer source text (caption or embedded PDF vector text); do not use units
+# from unrelated legend values, tick labels, or speculative image recognition.
+_UNIT_CONTENT = re.compile(
+    r"^(?:%|a\.?u\.?|arb\.?\s*(?:units?)?|°|deg(?:rees?)?|"
+    r"[pnumkMGTµμ]?\s*(?:K|T|Oe|Hz|eV|V|A|W|Pa|m|s|g|J|F|Ω|ohm|S|"
+    r"cm|mm|nm|Å|rad|Torr|emu)(?:[\s*/·.\-^0-9µμΩÅ]+(?:cm|m|g|s|K|Ω|T|Oe|Hz|A|V|nm|mm|Å))?"
+    r"|cm\s*[-^]?\s*[0-9]+|emu\s*/\s*g)$", re.I)
+_AXIS_UNIT = re.compile(r"^(?P<label>.*?)\s*\(\s*(?P<unit>[^()]{1,28})\s*\)\s*$")
+_AXIS_TEXT_PAIR = re.compile(
+    r"(?P<label>[A-Za-zαβγΔρσφϕθΘΩµμ0-9_%/]{1,28}(?:\s+[A-Za-zαβγΔρσφϕθΘΩµμ0-9_%/]{1,20}){0,4})"
+    r"\s*\(\s*(?P<unit>[^()\n]{1,28})\s*\)")
+
+
+def _split_axis_unit(raw: str | None) -> tuple[str | None, str | None]:
+    """Extract explicit axis suffix units: H (T), ρ (μΩ cm), I (a.u.)."""
+    if not raw:
+        return None, None
+    text = raw.strip().rstrip('.,;:')
+    m = _AXIS_UNIT.fullmatch(text)
+    if not m or not m.group('label').strip():
+        return text, None
+    unit = m.group('unit').strip()
+    if not _UNIT_CONTENT.fullmatch(unit):
+        return text, None
+    return m.group('label').strip(), unit
+
+
+def _pdf_axis_unit_candidates(text: str | None) -> list[dict]:
+    """Only explicit label/unit pairs recovered from PDF vector text."""
+    out = []
+    for line in (text or '').splitlines():
+        for m in _AXIS_TEXT_PAIR.finditer(line):
+            label, unit = _split_axis_unit(m.group())
+            if unit and (label, unit) not in {(r['label'], r['unit']) for r in out}:
+                out.append({'label': label, 'unit': unit,
+                            'source': 'pdf_vector_text_inside_picture_unverified'})
+    return out[:25]
+
+
+def _apply_axis_unit(axis_label: str | None, pdf_text: str | None,
+                     source: str) -> dict:
+    label, unit = _split_axis_unit(axis_label)
+    if unit:
+        return {'label': label, 'unit': unit, 'source': source}
+    # Vector-text matches must refer to the SAME explicit axis label. A mere
+    # unit elsewhere on the figure might be a tick, legend, or other panel.
+    if label and pdf_text:
+        norm = lambda t: re.sub(r'\s+', '', t).casefold()
+        matches = [r for r in _pdf_axis_unit_candidates(pdf_text)
+                   if norm(r['label']) == norm(label)]
+        if len({r['unit'] for r in matches}) == 1 and matches:
+            return {'label': label, 'unit': matches[0]['unit'],
+                    'source': 'pdf_vector_label_match_unverified'}
+    return {'label': label, 'unit': None, 'source': source}
 
 
 def _caption_axis(text:str)->tuple[str|None,str|None,str]:
@@ -81,9 +177,12 @@ def enrich_source_objects(structure:dict)->dict:
     for fig in structure.get('figures',[]):
         pid=fig.get('paragraph_id')
         classification=fig.get('classification') or {}
-        role=_visual_role(fig)
+        role, flags=_visual_assessment(fig)
         fig['visual_role']=role
-        if pid in by_id:by_id[pid]['visual_role']=role
+        fig['visual_review_reasons']=flags
+        if pid in by_id:
+            by_id[pid]['visual_role']=role
+            by_id[pid]['visual_review_reasons']=flags
         caption=fig.get('caption') or ''
         x,y,origin=_caption_axis(caption)
         simple=re.search(r'\b([A-Za-zρσM]{1,3})\s*[-–]\s*([HT])\s+plot\b',caption,re.I)
@@ -92,7 +191,7 @@ def enrich_source_objects(structure:dict)->dict:
             origin='caption_inference_unverified'
         if x:
             x=re.sub(r'\s+(?:curve|plots?|graph|diagram)\b.*$', '', x, flags=re.I).strip()
-        if role in {'decorative_logo','decorative_icon'}:
+        if role in {'decorative_logo','decorative_icon','unverified_picture'}:
             continue
         typ=('line' if 'line_chart' in str(classification) or re.search(r'\bcurve|plot\b',caption,re.I)
              else 'spectrum' if re.search(r'spectrum|spectra',caption,re.I)
@@ -106,12 +205,17 @@ def enrich_source_objects(structure:dict)->dict:
         for m in re.finditer(r'(?<!\w)\(?([a-d])\)?\s+(?=\w)',caption):
             if m.group(1) not in [q['panel_label'] for q in panels]:
                 panels.append({'panel_label':m.group(1),'source':'caption_inference_unverified'})
+        x_axis=_apply_axis_unit(x,fig.get('pdf_picture_text'),origin)
+        y_axis=_apply_axis_unit(y,fig.get('pdf_picture_text'),origin)
+        # If the caption has no axes, retain embedded-text pairs as candidates
+        # without asserting x or y orientation (insets/legends are ambiguous).
+        pdf_pairs=_pdf_axis_unit_candidates(fig.get('pdf_picture_text'))
         plots.append({'id':'PLOT_'+str(pid),'source_paragraph_id':pid,'page':fig.get('page'),
                       'caption':caption,'title':None,'plot_type':typ,
-                      'visual_role':role,'crop':fig.get('crop'),
+                      'visual_role':role,'visual_review_reasons':flags, 'crop':fig.get('crop'),
+                      'axis_unit_candidates':pdf_pairs,
                       'classification':classification,
-                      'x_axis':{'label':x,'unit':None,'source':origin},
-                      'y_axis':{'label':y,'unit':None,'source':origin},
+                      'x_axis':x_axis, 'y_axis':y_axis,
                       'panels':panels,'represented_quantity':y,
                       'evidence_ids':by_id.get(pid,{}).get('evidence_ids',[]),
                       'verification_status':'image_not_examined', 'review_status':'not reviewed'})
@@ -155,5 +259,5 @@ def enrich_source_objects(structure:dict)->dict:
     structure['equations']=eqs
     structure['plots']=plots
     structure['fitted_results']=fit_records
-    structure['source_objects_version']='1.0'
+    structure['source_objects_version']='1.1'
     return structure

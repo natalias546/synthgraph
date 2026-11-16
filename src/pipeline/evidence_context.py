@@ -6,7 +6,7 @@ source-type records, quantities and contextual IDs are deterministic candidates.
 from __future__ import annotations
 import re
 from .scientific_context import split_source, quantities, evidence_blocks
-from .source_objects import enrich_source_objects
+from .source_objects import enrich_source_objects, _visual_assessment
 from .claim_provenance import enrich_claim_provenance
 
 _SYMBOL = re.compile(r"\b(?:RRR|MR|AHE|WAL|DFT|ARPES|XRD|CVT|CVD|HLN|TSS|SEM|EDAX|UV[- ]?VIS)\b")
@@ -15,7 +15,73 @@ _METHODS = re.compile(r"\b(?:grown|synthesi[sz]ed|annealed|deposited|fabricated|
 _HYPOTHESIS = re.compile(r"\b(?:may|might|suggests?|possibly|could|hypothes[ie]s|attribut(?:ed|able))\b",re.I)
 _CITATION = re.compile(r"\b(?:previous(?:ly)?|prior work|literature|ref\.|et al\.)\b",re.I)
 
+def _exclude_decorative_pictures(structure:dict)->dict:
+    """Remove confident decorative Docling pictures before preflight indexing.
+
+    An explicit decorative classifier label overrides even a plausible science
+    caption: Docling may attach the neighboring figure caption to a publisher
+    logo. Preserve that suspect attachment in the audit for human recovery.
+    Raw Docling JSON and crop files are deliberately not deleted. A small
+    audit record remains in the structure (outside the evidence/figure lists).
+    """
+    excludes = list(structure.get('excluded_decorative_pictures', []))
+    recorded = {x.get('paragraph_id') for x in excludes}
+    removed_ids = set()
+    kept_figures = []
+
+    def note(pid, fig, role, reasons):
+        if pid in recorded:
+            return
+        excludes.append({
+            'paragraph_id': pid, 'docling_ref': fig.get('docling_ref'),
+            'page': fig.get('page'), 'label': fig.get('label'),
+            'classification': fig.get('classification'),
+            'caption': fig.get('caption', ''), 'crop': fig.get('crop'),
+            'visual_role': role, 'visual_review_reasons': reasons,
+            'excluded_from_preflight': True,
+            'suspected_misattached_caption': bool(fig.get('caption')),
+        })
+        recorded.add(pid)
+
+    for fig in structure.get('figures', []):
+        role, reasons = _visual_assessment(fig)
+        pid = fig.get('paragraph_id')
+        if pid and role in ('decorative_logo', 'decorative_icon'):
+            removed_ids.add(pid)
+            note(pid, fig, role, reasons)
+        else:
+            kept_figures.append(fig)
+
+    # Handle an orphaned figure paragraph (e.g. a legacy structure or partial
+    # Docling figure collection) only when its *own* classifier is decorative.
+    for p in structure.get('paragraphs', []):
+        if p.get('kind') != 'figure' or p['id'] in removed_ids:
+            continue
+        if any(f.get('paragraph_id') == p['id'] for f in kept_figures):
+            continue
+        role, reasons = _visual_assessment(p)
+        if role in ('decorative_logo', 'decorative_icon'):
+            removed_ids.add(p['id'])
+            note(p['id'], p, role, reasons)
+
+    structure['figures'] = kept_figures
+    if removed_ids:
+        structure['paragraphs'] = [p for p in structure.get('paragraphs', [])
+                                   if p.get('id') not in removed_ids]
+    structure['excluded_decorative_pictures'] = excludes
+    structure['visual_filter_summary'] = {
+        'excluded_decorative_pictures': len(excludes),
+        'retained_figures': len(kept_figures),
+        'excluded_with_attached_caption': sum(bool(x.get('suspected_misattached_caption')) for x in excludes),
+        'policy': 'explicit decorative classification overrides potentially misattached captions',
+    }
+    return structure
+
+
 def enrich_structure(structure:dict)->dict:
+    # Filter before generating semantic_evidence, blocks, ontology candidates,
+    # provisional RDF, review manifests, and LLM/vision inputs.
+    structure = _exclude_decorative_pictures(structure)
     ev=[];paras=structure.get('paragraphs',[])
     for p in paras:
         spans=split_source(p.get('text',''),p.get('kind','text'),p.get('role',''))
@@ -28,6 +94,11 @@ def enrich_structure(structure:dict)->dict:
             if qs:roles.append('quantitative_evidence')
             if p.get('role') in ('methods','results','introduction','conclusion'):roles.append('section_'+p['role'])
             if p.get('role')=='references' or p.get('kind')=='reference': roles=['bibliographic_entry']
+            if p.get('kind') == 'figure':
+                # Role is assigned below by enrich_source_objects; we also
+                # route uncaptioned pictures as non-primary before matching.
+                if not p.get('caption','').strip():
+                    roles.append('unverified_image_only')
             evidence={'id':p['evidence_ids'][i],'paragraph_id':pid,
                       'section_id':p.get('section_id'),'section_role':p.get('role'),
                       'source_kind': 'bibliographic_entry' if roles==['bibliographic_entry'] else p.get('kind'),
@@ -57,7 +128,17 @@ def enrich_structure(structure:dict)->dict:
     structure['semantic_evidence']=ev
     structure['semantic_evidence_version']='2.0'
     structure['evidence_blocks']=evidence_blocks(ev)
-    return enrich_claim_provenance(enrich_source_objects(structure))
+    structure=enrich_source_objects(structure)
+    for e in ev:
+        p=next((p for p in paras if p['id']==e['paragraph_id']), {})
+        if p.get('kind') == 'figure':
+            e['visual_role']=p.get('visual_role')
+            if p.get('visual_role') in ('decorative_logo','decorative_icon','unverified_picture'):
+                if 'unverified_image_only' not in e['scientific_roles']:
+                    e['scientific_roles'].append('unverified_image_only')
+            elif p.get('visual_role') == 'classifier_caption_conflict':
+                e['scientific_roles'].append('figure_classification_conflict')
+    return enrich_claim_provenance(structure)
 
 # Kept for downstream Anchorer and legacy notebooks; scientific_context owns the
 # source-aware segmentation implementation.

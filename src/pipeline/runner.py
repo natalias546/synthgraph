@@ -28,7 +28,9 @@ from .pre_llm_review import (make_candidates, read_or_create_review, reviewed_se
                              review_summary, approved_documents, apply_reviewed_mappings, refresh_review, ReviewRequired)
 from .validate import validate_paper
 
-PIPELINE_VERSION = "0.8.0"  # bump when a stage's code changes its output, so saved stages are redone
+PIPELINE_VERSION = "0.8.3"  # exclude miscaptioned logos; estimate from exact preflight packets
+# The Docling conversion is unchanged; reuse the v0.8.1 ingest cache.
+INGEST_CACHE_VERSION = "0.8.1"
 STAGES = ["ingest", "structure", "pre_llm_candidates", "human_review", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve"]
 
 
@@ -134,7 +136,8 @@ class Pipeline:
         stop_at = STAGES.index(until)
 
         def stage(name, fp_inputs, fn):
-            fp = sha256_json({"v": PIPELINE_VERSION, "stage": name, **fp_inputs})
+            stage_version = INGEST_CACHE_VERSION if name == "ingest" else PIPELINE_VERSION
+            fp = sha256_json({"v": stage_version, "stage": name, **fp_inputs})
             cached = None if name in force else store.load(name, fp)
             if cached is not None:
                 out[name] = cached
@@ -341,6 +344,73 @@ class Pipeline:
             if store.load(f"pass{k}", up) is None:
                 return False
         return True
+
+    def estimate_cost_from_preflight(self, package: dict, until: str = "resolve",
+                                     show: bool = True) -> dict:
+        """Price the EXACT reviewed text packets previewed by the notebook.
+
+        package = {paper_id, structure, selection, documents}, where documents
+        is transmission_tables(...)["packets_raw"]. Do not rerun preflight or
+        silently skip a saved extraction: this is a fresh-run cost projection.
+        Token counting may use a provider's free count endpoint, but no model
+        extraction or vision call is made.
+        """
+        from . import cost
+        pid = package["paper_id"]
+        st = package["structure"]
+        selection = package["selection"]
+        docs = package["documents"]
+        if not isinstance(docs, list) or not docs or any(
+                not isinstance(d, dict) or not isinstance(d.get("text"), str)
+                for d in docs):
+            raise ValueError("Preflight package must contain nonempty raw text packets")
+        # Guard against a notebook where the review was changed after the table
+        # was built, or packets were accidentally edited/reordered in memory.
+        expected = self._documents(st, st["paragraphs"], selection)
+        if [d["text"] for d in expected] != [d["text"] for d in docs]:
+            raise ValueError("Preflight package no longer matches the selected evidence; "
+                             "rerun the transmission preview cell before costing")
+        stop = STAGES.index(until)
+        passes = max(0, min(3, stop - STAGES.index("visuals")))
+        count = cost.TokenCounter(self.llm.client, self.cfg.model)
+        system_tokens = count(self.system)
+        approved_assets = set(selection.get("approved_visuals", []))
+        images = 0
+        if stop >= STAGES.index("visuals"):
+            if self.cfg.parser == "docling":
+                if self.cfg.table_vision != "never":
+                    images += sum(1 for t in st.get("tables", [])
+                                  if t.get("paragraph_id") in approved_assets and t.get("crop")
+                                  and (self.cfg.table_vision == "always" or
+                                       (self.cfg.table_vision == "fallback" and t.get("needs_vision"))))
+                if self.cfg.figure_vision:
+                    images += sum(1 for f in st.get("figures", [])
+                                  if f.get("paragraph_id") in approved_assets and f.get("crop"))
+            elif self.cfg.table_vision != "never":
+                images = len({p["page"] for p in st["paragraphs"]
+                              if p["id"] in approved_assets
+                              and (p["kind"] == "table" or
+                                   p.get("caption_of", "").startswith("table"))})
+        rows = [{"paper_id": pid,
+                 "doc_tokens": [count(d["text"]) for d in docs] if passes else [],
+                 "images": images,
+                 "saved": False}]
+        outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
+        result = cost.estimate(self.cfg.model, system_tokens, rows, outputs, passes)
+        result["source"] = "preflight_package"
+        result["packet_count"] = len(docs)
+        result["packet_sha256"] = sha256_json([d["text"] for d in docs])
+        result["text"] = cost.summary_text(self.cfg.model, system_tokens,
+                                            count.exact, outputs, result)
+        result["text"] += ("\n  input: EXACT preflight preview packets "
+                            f"({len(docs)} chunks; hypothetical fresh extraction, "
+                            "not zeroed by an existing cached run)")
+        if images:
+            result["text"] += ("\n  Note: opted-in vision can create extra "
+                               "transcription text packets not in this preview.")
+        if show:
+            print(result["text"], flush=True)
+        return result
 
     def estimate_cost(self, papers=None, until="resolve", show=True) -> dict:
         """What the Claude stages up to `until` would cost, before calling anything. With
