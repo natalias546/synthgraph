@@ -215,6 +215,12 @@ def validate_paper(extraction: dict, paragraphs: list[dict], profile: Profile, m
                 gap = {"group": group, "proposed_label": prop, "text": obj.get("name") or obj.get("name_in_text")
                        or obj.get("name_in_paper") or obj.get("property_name_in_text") or obj.get("technique_name_in_text")}
                 notes.append("class not in ontology (gap)")
+        if obj.get("extraction_method") == "resolver_exact_context_phrase":
+            notes.append("predicate is ontology-resolved but contextual claim requires human/scientific verification")
+        if obj.get("extraction_method") == "llm_context_only":
+            notes.append("LLM support probability is uncalibrated; contextual claim requires review")
+        elif obj.get("candidate_status") == "provisional_not_verified":
+            notes.append("algorithmic measurement association is provisional")
         conf = obj.get("confidence")
         if conf is not None and not (0 <= conf <= 1):
             notes.append(f"confidence out of range ({conf})")

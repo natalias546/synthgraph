@@ -28,10 +28,10 @@ from .pre_llm_review import (make_candidates, read_or_create_review, reviewed_se
                              review_summary, approved_documents, apply_reviewed_mappings, refresh_review, ReviewRequired)
 from .validate import validate_paper
 
-PIPELINE_VERSION = "0.8.3"  # exclude miscaptioned logos; estimate from exact preflight packets
+PIPELINE_VERSION = "0.9.0"  # selectable algorithmic Pass 1/2 and context-only LLM
 # The Docling conversion is unchanged; reuse the v0.8.1 ingest cache.
 INGEST_CACHE_VERSION = "0.8.1"
-STAGES = ["ingest", "structure", "pre_llm_candidates", "human_review", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve"]
+STAGES = ["ingest", "structure", "pre_llm_candidates", "human_review", "algorithmic_registry", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve"]
 
 
 class Pipeline:
@@ -185,12 +185,32 @@ class Pipeline:
             out["human_review"] = {"path": str(review_path), "summary": review_summary(review, candidates)}
         else:
             out["human_review"] = {"skipped": True, "reason": "Config.pre_llm_review is False (full paper sent)"}
+        if stop_at < STAGES.index("algorithmic_registry"):
+            return out
+        # Prepare deterministic, evidence-only Pass 1/2 records before paid calls.
+        # This stage is part of preflight and is available in the notebook.
+        selection = self._selection(st, candidates, review_path)
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_extraction import build_algorithmic_registry
+            registry, fp_registry = stage(
+                "algorithmic_registry",
+                {"up": fp_candidates, "review": selection["review_fingerprint"],
+                 "mode": self.cfg.extraction_mode},
+                lambda: build_algorithmic_registry(st, candidates, selection))
+        else:
+            registry, fp_registry = stage(
+                "algorithmic_registry", {"up": fp_candidates, "mode": "four_pass"},
+                lambda: {"skipped": True, "mode": "four_pass"})
         if stop_at < STAGES.index("visuals"):
             return out
         # Select primary source text automatically (with explicit exclusions); paid vision stays opt-in.
-        selection = self._selection(st, candidates, review_path)
         full_paper = selection.get("full_paper", False)
         approved_visuals = set(selection["approved_visuals"])
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_context import CONTEXT_SYSTEM
+            vision_system = CONTEXT_SYSTEM
+        else:
+            vision_system = self.system
         # A visual crop must be opted in by its source paragraph ID.
         relevant_tables = [t for t in st.get("tables", []) if t.get("paragraph_id") in approved_visuals]
         relevant_figures = [f for f in st.get("figures", []) if f.get("paragraph_id") in approved_visuals]
@@ -200,7 +220,7 @@ class Pipeline:
                 if not relevant_tables and not relevant_figures:
                     return {"overrides": {}, "added": [], "skipped": True}
                 chosen = {**st, "tables": relevant_tables, "figures": relevant_figures}
-                return X.run_visuals_docling(self.llm, self.schemas, chosen, store.dir, pid, self.system,
+                return X.run_visuals_docling(self.llm, self.schemas, chosen, store.dir, pid, vision_system,
                                              self.cfg.table_vision, self.cfg.figure_vision)
             if self.cfg.table_vision == "never":
                 return {"overrides": {}, "added": [], "skipped": True}
@@ -208,7 +228,7 @@ class Pipeline:
                 **st, "paragraphs": [p for p in st["paragraphs"] if p["id"] in approved_visuals]}
             if not filtered["paragraphs"] or not X.table_pages(filtered):
                 return {"overrides": {}, "added": [], "skipped": True}
-            return {"overrides": {}, "added": X.run_table_vision(self.llm, self.schemas, pdf, filtered, pid, self.system),
+            return {"overrides": {}, "added": X.run_table_vision(self.llm, self.schemas, pdf, filtered, pid, vision_system),
                     "pages": X.table_pages(filtered)}
         vis, fp_vis = stage("visuals", {"up": fp_candidates, "review": selection["review_fingerprint"],
                                         "approved_visuals": sorted(approved_visuals),
@@ -218,7 +238,13 @@ class Pipeline:
             return out
 
         paragraphs, docs, llm_fp = self._llm_inputs(st, vis, selection)
-        p1, fp1 = stage("pass1", llm_fp, lambda: X.run_pass1(self.llm, self.schemas, self.system, docs, self.fewshot, pid, self.profile))
+        if self.cfg.extraction_mode == "algorithmic":
+            p1, fp1 = stage("pass1", {"up": fp_registry, "mode": "algorithmic"},
+                             lambda: registry["pass1"])
+        else:
+            p1, fp1 = stage("pass1", llm_fp,
+                             lambda: X.run_pass1(self.llm, self.schemas, self.system,
+                                                 docs, self.fewshot, pid, self.profile))
         from .claim_provenance import link_specimen_mentions
         specimen_links = link_specimen_mentions(st, p1)
         write_json(store.dir / "specimen_link_candidates.json", specimen_links)
@@ -227,12 +253,23 @@ class Pipeline:
                                   "unresolved": sum(not s['matched_sample_id'] for s in specimen_links)}
         if stop_at < STAGES.index("pass2"):
             return out
-        p2, fp2 = stage("pass2", {**llm_fp, "up": fp1},
-                        lambda: X.run_pass2(self.llm, self.schemas, self.system, docs, self.fewshot, p1, pid, self.profile))
+        if self.cfg.extraction_mode == "algorithmic":
+            p2, fp2 = stage("pass2", {"up": fp1, "registry": fp_registry, "mode": "algorithmic"},
+                            lambda: registry["pass2"])
+        else:
+            p2, fp2 = stage("pass2", {**llm_fp, "up": fp1},
+                            lambda: X.run_pass2(self.llm, self.schemas, self.system,
+                                                docs, self.fewshot, p1, pid, self.profile))
         if stop_at < STAGES.index("pass3"):
             return out
-        p3, fp3 = stage("pass3", {**llm_fp, "up": fp2},
-                        lambda: X.run_pass3(self.llm, self.schemas, self.system, docs, self.fewshot, self.profile, p1, p2, pid))
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_context import run_algorithmic_context
+            p3, fp3 = stage("pass3", {**llm_fp, "up": fp2, "registry": fp_registry},
+                            lambda: run_algorithmic_context(self.llm, docs, registry, st, pid))
+        else:
+            p3, fp3 = stage("pass3", {**llm_fp, "up": fp2},
+                            lambda: X.run_pass3(self.llm, self.schemas, self.system,
+                                                docs, self.fewshot, self.profile, p1, p2, pid))
         if stop_at < STAGES.index("ontology_resolve"):
             return out
         # Resolve source scientific terms against the v11 OWL vocabulary without an
@@ -261,6 +298,7 @@ class Pipeline:
             return out
         stage("resolve", {"up": fp_val}, lambda: resolve_paper(val))
         out["meta"] = {"title": st["title"], "pdf": pdf.name, "sha256": pdf_hash,
+                       "extraction_mode": self.cfg.extraction_mode,
                        "review_fingerprint": selection["review_fingerprint"],
                        "selected_primary_sentence_ids": [e["id"] for e in selection["extract"]],
                        "approved_primary_sentence_ids": [e["id"] for e in selection["extract"]],
@@ -311,6 +349,14 @@ class Pipeline:
         return paragraphs, docs, self._llm_fp(docs, selection)
 
     def _llm_fp(self, docs, selection) -> dict:
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_context import CONTEXT_SYSTEM, CONTEXT_SCHEMAS
+            return {"review": selection["review_fingerprint"],
+                    "docs": sha256_json([d["text"] for d in docs]),
+                    "system": sha256_json(CONTEXT_SYSTEM),
+                    "cfg": self.cfg.fingerprint_fields(),
+                    "schemas": sha256_json({k: v.model_json_schema()
+                                            for k, v in CONTEXT_SCHEMAS.items()})}
         return {"review": selection["review_fingerprint"], "candidates": self.ontology_resolver.fingerprint,
                 "docs": sha256_json([d["text"] for d in docs]), "system": sha256_json(self.system),
                 "fewshot": sha256_json(self.fewshot), "cfg": self.cfg.fingerprint_fields(),
@@ -318,6 +364,11 @@ class Pipeline:
 
     def _pass_saved(self, pid, st, passes, selection=None) -> bool:
         """True only when the exact reviewed input and output-stage hashes match."""
+        if self.cfg.extraction_mode == "algorithmic":
+            # The existing four-pass cache-chain cannot certify a two-call run.
+            # Conservatively estimate a fresh extraction; cache mechanisms still
+            # skip actual repeated stages through their exact fingerprints.
+            return False
         store = StageStore(self.cfg.outputs_dir, pid)
         if selection is None:
             return False
@@ -371,9 +422,14 @@ class Pipeline:
             raise ValueError("Preflight package no longer matches the selected evidence; "
                              "rerun the transmission preview cell before costing")
         stop = STAGES.index(until)
-        passes = max(0, min(3, stop - STAGES.index("visuals")))
+        passes = (2 if stop >= STAGES.index("pass3") else 0) if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic" \
+            else max(0, min(3, stop - STAGES.index("visuals")))
         count = cost.TokenCounter(self.llm.client, self.cfg.model)
-        system_tokens = count(self.system)
+        if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic":
+            from .algorithmic_context import CONTEXT_SYSTEM
+            system_tokens = count(CONTEXT_SYSTEM)
+        else:
+            system_tokens = count(self.system)
         approved_assets = set(selection.get("approved_visuals", []))
         images = 0
         if stop >= STAGES.index("visuals"):
@@ -391,13 +447,34 @@ class Pipeline:
                               if p["id"] in approved_assets
                               and (p["kind"] == "table" or
                                    p.get("caption_of", "").startswith("table"))})
+        registry_tokens = 0
+        if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic":
+            from .algorithmic_extraction import build_algorithmic_registry
+            from .algorithmic_context import _registry_view
+            import json
+            candidates = package.get("candidates")
+            if candidates is None:
+                candidates = StageStore(self.cfg.outputs_dir, pid).load("pre_llm_candidates") if hasattr(self.cfg, "outputs_dir") else None
+            if candidates is None:
+                raise ValueError("Algorithmic preflight cost requires candidate-stage data. "
+                                 "Add 'candidates': cand_review to preflight_package")
+            fresh = build_algorithmic_registry(st, candidates, selection)
+            supplied = package.get("algorithmic_registry")
+            if supplied is not None and supplied.get("summary") != fresh.get("summary"):
+                raise ValueError("Algorithmic registry changed; rerun preflight before costing")
+            amb = fresh["ambiguities"]
+            registry_tokens = count(json.dumps(_registry_view(fresh), ensure_ascii=False)
+                                    + json.dumps(amb, ensure_ascii=False))
         rows = [{"paper_id": pid,
                  "doc_tokens": [count(d["text"]) for d in docs] if passes else [],
+                 "registry_tokens": registry_tokens,
                  "images": images,
                  "saved": False}]
         outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
-        result = cost.estimate(self.cfg.model, system_tokens, rows, outputs, passes)
+        result = cost.estimate(self.cfg.model, system_tokens, rows, outputs,
+                               passes, mode=getattr(self.cfg, "extraction_mode", "four_pass"))
         result["source"] = "preflight_package"
+        result["extraction_mode"] = getattr(self.cfg, "extraction_mode", "four_pass")
         result["packet_count"] = len(docs)
         result["packet_sha256"] = sha256_json([d["text"] for d in docs])
         result["text"] = cost.summary_text(self.cfg.model, system_tokens,
@@ -417,7 +494,8 @@ class Pipeline:
         Config.pre_llm_review on, automatically selected text and explicitly opted-in vision are counted."""
         from . import cost
         stop = STAGES.index(until)
-        passes = max(0, min(3, stop - STAGES.index("visuals")))
+        passes = (2 if stop >= STAGES.index("pass3") else 0) if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic" \
+            else max(0, min(3, stop - STAGES.index("visuals")))
         # With review on, fail closed for the complete batch before contacting token-counting APIs.
         approved = []
         for pdf in papers or self.papers():
@@ -427,7 +505,11 @@ class Pipeline:
             selection = self._selection(st, candidates, StageStore(self.cfg.outputs_dir, pid).dir / "pre_llm_review.json")
             approved.append((pdf, pid, st, selection))
         count = cost.TokenCounter(self.llm.client, self.cfg.model)
-        system_tokens = count(self.system)
+        if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic":
+            from .algorithmic_context import CONTEXT_SYSTEM
+            system_tokens = count(CONTEXT_SYSTEM)
+        else:
+            system_tokens = count(self.system)
         rows = []
         for pdf, pid, st, selection in approved:
             docs = self._documents(st, st["paragraphs"], selection)
@@ -444,10 +526,23 @@ class Pipeline:
                 elif self.cfg.table_vision != "never":
                     images = len({p["page"] for p in st["paragraphs"] if p["id"] in approved_assets
                                   and (p["kind"] == "table" or p.get("caption_of", "").startswith("table"))})
+            registry_tokens = 0
+            if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic":
+                from .algorithmic_extraction import build_algorithmic_registry
+                from .algorithmic_context import _registry_view
+                import json
+                c = StageStore(self.cfg.outputs_dir, pid).load("pre_llm_candidates")
+                if c is None:
+                    raise ValueError("Missing pre_llm_candidates stage for algorithmic costing")
+                r = build_algorithmic_registry(st, c, selection)
+                registry_tokens = count(json.dumps(_registry_view(r), ensure_ascii=False)
+                                        + json.dumps(r["ambiguities"], ensure_ascii=False))
             rows.append({"paper_id": pid, "doc_tokens": [count(d["text"]) for d in docs] if passes else [],
+                         "registry_tokens": registry_tokens,
                          "images": images, "saved": self._pass_saved(pid, st, passes, selection)})
         outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
-        result = cost.estimate(self.cfg.model, system_tokens, rows, outputs, passes)
+        result = cost.estimate(self.cfg.model, system_tokens, rows, outputs,
+                               passes, mode=getattr(self.cfg, "extraction_mode", "four_pass"))
         result["text"] = cost.summary_text(self.cfg.model, system_tokens, count.exact, outputs, result)
         if show:
             print(result["text"], flush=True)
@@ -465,7 +560,14 @@ class Pipeline:
                 names.append("figure_description")
         names += [n for n, s in (("samples_processes", "pass1"), ("measurements", "pass2"), ("relations", "pass3"),
                                  ("applications_comparisons", "pass3")) if stop >= STAGES.index(s)]
-        status = self.llm.check_schemas({n: self.schemas[n] for n in names})
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_context import CONTEXT_SCHEMAS
+            chosen = {n: self.schemas[n] for n in names if n in ("page_tables", "figure_description")}
+            if stop >= STAGES.index("pass3"):
+                chosen.update(CONTEXT_SCHEMAS)
+        else:
+            chosen = {n: self.schemas[n] for n in names}
+        status = self.llm.check_schemas(chosen)
         if show and status:
             print("Output schemas:", ", ".join(f"{k} {v}" for k, v in status.items()), flush=True)
         return status

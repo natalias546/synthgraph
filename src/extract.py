@@ -443,6 +443,8 @@ def main():
     ap.add_argument("--until", default="resolve", choices=STAGES, help="last stage to run")
     ap.add_argument("--force", nargs="*", default=(), choices=STAGES, help="stages to recompute")
     ap.add_argument("--model", default=None, help="e.g. claude-sonnet-5-5 (default), claude-haiku-5-5, claude-opus-5-5")
+    ap.add_argument("--extraction-mode", choices=["four_pass", "algorithmic"], default="four_pass",
+                    help="four_pass baseline (four text LLM calls), or algorithmic Pass 1/2 + two contextual calls")
     ap.add_argument("--max-cost", type=float, default=None,
                     help="stop before any Claude call if the high cost estimate (USD) is above this")
     ap.add_argument("--no-live", action="store_true", help="only replay cached Claude responses")
@@ -461,7 +463,8 @@ def main():
 
     kw = {"allow_live_calls": not args.no_live, "parser": args.parser, "table_vision": args.table_vision,
           "figure_vision": args.figure_vision, "docling": {"do_ocr": True} if args.ocr else {},
-          "max_cost_usd": args.max_cost, "pre_llm_review": args.pre_llm_review}
+          "max_cost_usd": args.max_cost, "pre_llm_review": args.pre_llm_review,
+          "extraction_mode": args.extraction_mode}
     if args.model:
         kw["model"] = args.model
     cfg = Config(project_root=root, **kw)

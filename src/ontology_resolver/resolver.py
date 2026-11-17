@@ -22,7 +22,19 @@ from typing import Any
 
 from ..ontology_loader import OTHER, Profile
 
-RESOLVER_VERSION = "1.1.0"
+RESOLVER_VERSION = "1.2.0"
+# Reviewed lexical *predicate* cues, not OWL class assignments or a semantic
+# similarity model. Unknown phrases remain reviewable, never asserted.
+RELATION_PHRASE_ALIASES = {
+    "is part of": "part_of", "part of": "part_of",
+    "composed of": "composed_of", "consists of": "composed_of",
+    "made of": "composed_of", "is made of": "composed_of",
+    "intended for": "intended_for", "developed for": "intended_for",
+    "affects": "influences", "influences": "influences",
+    "derived from": "derived_from", "prepared from": "derived_from",
+    "compared with": "compared_with", "compared to": "compared_with",
+    "in comparison with": "compared_with", "consistent with": "compared_with",
+}
 ALIAS_PATH = Path(__file__).with_name("scientific_aliases.json")
 
 
@@ -285,6 +297,79 @@ class OntologyResolver:
                             "group": "unmapped", "term": u.get("raw_term", ""),
                             "matched_iri": None, "matched_label": None, "requires_review": True,
                             "candidates": [], "reason": u.get("reason_unresolved", "Not mapped")})
+        # Algorithmic mode: Claude returns only relation phrases and confidence,
+        # never ontology predicate labels. Resolve every proposed contextual
+        # relation here, after Pass 3b, using exact active profile vocabulary.
+        if p3.get("context_extraction_mode") == "context_only_no_ontology_labels":
+            name_to_id = defaultdict(set)
+            for m in p1.get("materials", []):
+                for name in (m.get("name"), m.get("formula"), *m.get("aliases", [])):
+                    if name: name_to_id[normalize(name)].add(m["id"])
+            for sample in p1.get("samples", []):
+                for name in (sample.get("name_in_paper"), *sample.get("aliases", [])):
+                    if name: name_to_id[normalize(name)].add(sample["id"])
+            for proc in p1.get("process_steps", []):
+                name_to_id[normalize(proc.get("name_in_text"))].add(proc["id"])
+            for m in p2.get("measurements", []):
+                for name in (m.get("property_name_in_text"), m.get("technique_name_in_text")):
+                    if name: name_to_id[normalize(name)].add(m["id"])
+            for e in p3.get("entities", []):
+                name_to_id[normalize(e.get("name"))].add(e["id"])
+            id_group = {}
+            id_group.update({m["id"]: "material" for m in p1.get("materials", [])})
+            id_group.update({m["id"]: "sample" for m in p1.get("samples", [])})
+            id_group.update({m["id"]: "process" for m in p1.get("process_steps", [])})
+            id_group.update({m["id"]: "measurement" for m in p2.get("measurements", [])})
+            id_group.update({m["id"]: m.get("entity_group", "other") for m in p3.get("entities", [])})
+            id_group.update({m["id"]: "application" for m in p3.get("applications", [])})
+            all_ids = {i for ids in name_to_id.values() for i in ids}
+            def exact_id(term):
+                if term in all_ids: return term
+                ids = name_to_id.get(normalize(term), set())
+                return next(iter(ids)) if len(ids) == 1 else None
+            # Require unique *exact* predicate name or normalized spelling.
+            # Mere semantic resemblance / fuzzy candidate must not be
+            # asserted. The source phrase remains in the audit either way.
+            rel_by_name = defaultdict(list)
+            for rel in self.profile.relations_for("relations"):
+                rel_by_name[normalize(rel.name.replace("_", " "))].append(rel)
+            for i, link in enumerate(p3.get("context_links", []), 1):
+                rid = f"CTXREL{i}"
+                subject = exact_id(link.get("subject_text", ""))
+                object_id = exact_id(link.get("object_text", ""))
+                relation_term = normalize(str(link.get("relation_phrase", "")).replace("_", " "))
+                relation_alias = RELATION_PHRASE_ALIASES.get(relation_term)
+                canonical = normalize(relation_alias.replace("_", " ")) if relation_alias else relation_term
+                matching = rel_by_name.get(canonical, [])
+                valid = (len(matching) == 1 and subject and object_id and subject != object_id
+                         and id_group.get(subject) in matching[0].subject_groups
+                         and id_group.get(object_id) in matching[0].object_groups)
+                if valid:
+                    rel = matching[0]
+                    negated = bool(re.search(r"\b(?:no|not|without|neither)\b", link.get("scope") or "", re.I))
+                    hypothetical = bool(re.search(r"\b(?:may|could|might|possible|potential)\b", link.get("scope") or "", re.I))
+                    obj = {"subject_id": subject, "predicate": rel.name,
+                           "predicate_iri": rel.ontology_iri, "object_id": object_id,
+                           "trend": "not_applicable", "scope": link.get("scope"),
+                           "polarity": "negated" if negated else "hypothetical" if hypothetical else "affirmed",
+                           "support_type": "direct", "bridge_ids": [],
+                           "evidence": link.get("evidence", []),
+                           "confidence": link.get("probability", 0.0),
+                           "extraction_method": "resolver_exact_context_phrase"}
+                    p3["relations"].append(obj)
+                    link["resolution_status"] = "exact_profile_predicate"
+                    reports.append({"id": rid, "role": "context_relation", "status": "exact_match",
+                                    "group": "relation", "term": link.get("relation_phrase", ""),
+                                    "matched_iri": rel.ontology_iri, "matched_label": rel.name,
+                                    "requires_review": False, "reason": "Unique exact active relation and IDs"})
+                else:
+                    link["resolution_status"] = "unresolved_context_relation"
+                    reason = ("ambiguous or unmatched predicate" if len(matching) != 1 else
+                              "subject/object name has no unique registry ID or mismatches predicate domain/range")
+                    reports.append({"id": rid, "role": "context_relation", "status": "unresolved_term",
+                                    "group": "relation", "term": link.get("relation_phrase", ""),
+                                    "matched_iri": None, "matched_label": None,
+                                    "requires_review": True, "reason": reason, "candidates": []})
         counts = Counter(r["status"] for r in reports)
         return {**p, "ontology_resolution": reports,
                 "ontology_resolution_summary": dict(sorted(counts.items())),

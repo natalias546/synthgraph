@@ -30,6 +30,9 @@ class Config:
                                                # couldn't structure), "always", or "never"
     figure_vision: bool = False                # Claude describes each figure crop (axes, samples; no values)
 
+    # Extraction architecture: keep four-pass LLM as a comparison baseline.
+    extraction_mode: str = "four_pass"         # "four_pass" | "algorithmic"
+
     # Claude settings
     model: str = "claude-sonnet-5-5"           # cheaper bulk option: claude-haiku-5-5; strongest: claude-opus-5-5
     max_output_tokens: int = 16000
@@ -74,6 +77,8 @@ class Config:
             except FileNotFoundError as exc:
                 # Parsing doesn't need the ontology; Pipeline.ontology raises when the LLM stages do.
                 self.notes = [str(exc)]
+        if self.extraction_mode not in ("four_pass", "algorithmic"):
+            raise ValueError("extraction_mode must be 'four_pass' or 'algorithmic'")
         if self.ontology_file is not None:
             self.ontology_file = Path(self.ontology_file)
         for d in (self.outputs_dir, self.cache_dir, self.graph_dir, self.resolution_dir):
@@ -82,6 +87,7 @@ class Config:
     def fingerprint_fields(self) -> dict:
         """Settings that change extraction results (used for stage skipping)."""
         return {
+            "extraction_mode": self.extraction_mode,
             "parser": self.parser,
             "docling": self.docling,
             "table_vision": self.table_vision,

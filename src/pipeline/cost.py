@@ -1,6 +1,9 @@
 """Cost estimate for the Claude stages, shown before any call is made.
 
-Per paper and document chunk the pipeline makes three calls (passes 1-3), plus one vision call per
+In four_pass mode, each paper/chunk makes four text calls (1, 2, 3a, 3b).
+In algorithmic mode, Pass 1/2 run locally, followed by two text calls
+(3a and 3b) to contextualize unresolved assertions; the ontology resolver
+runs offline. There is still one optional vision call per
 table crop sent to Claude (and per figure with figure_vision). Every call sends the system prompt
 (rules + ontology glossary) and the paper text, both marked for prompt caching. Each pass has its own
 output schema, which is part of the cached prefix, so the system prompt is written once per pass in a
@@ -31,6 +34,7 @@ CACHE_WRITE_1H = 2.0    # 1-hour entries (the system prompt; Config.system_cache
 
 # Output tokens per call (including thinking) assumed until real responses exist: (low, high).
 OUTPUT_GUESS = {"pass1": (3000, 12000), "pass2": (4000, 16000), "pass3": (2000, 8000), "pass3b": (800, 4000),
+                "context3a": (500, 5000), "context3b": (300, 3000),
                 "table": (1000, 3000), "figure": (500, 1500), "resolve": (600, 2000)}
 # Ontology adjudication (small model, after pass 3): batches of up to 15 unmatched terms with their
 # candidate classes. Calls per paper drop as the shared decision memory fills up.
@@ -47,6 +51,10 @@ class CostLimitExceeded(RuntimeError):
 
 
 def _call_type(label: str) -> str | None:
+    if label.startswith("alg_context3a"):
+        return "context3a"
+    if label.startswith("alg_context3b"):
+        return "context3b"
     for k in ("pass1", "pass2", "pass3b", "pass3"):   # pass3b before pass3 (prefix)
         if label.startswith(k):
             return k
@@ -101,9 +109,12 @@ class TokenCounter:
         return math.ceil(len(text) / CHARS_PER_TOKEN)
 
 
-def estimate(model: str, system_tokens: int, papers: list[dict], outputs: dict, passes: int = 3) -> dict:
+def estimate(model: str, system_tokens: int, papers: list[dict], outputs: dict,
+             passes: int = 3, mode: str = "four_pass") -> dict:
     """papers: [{"paper_id", "doc_tokens": [per chunk], "images": n, "saved": bool}]; passes: how many of
     passes 1-3 the run goes up to. Returns per-paper rows and totals in USD (low/high)."""
+    if mode not in ("four_pass", "algorithmic"):
+        raise ValueError("mode must be four_pass or algorithmic")
     if model not in PRICES:
         raise KeyError(f"No prices for {model}; add it to PRICES in src/pipeline/cost.py")
     p_in, p_out, p_read = (x / 1e6 for x in PRICES[model])
@@ -115,6 +126,21 @@ def estimate(model: str, system_tokens: int, papers: list[dict], outputs: dict, 
         cost = {"low": 0.0, "high": 0.0}
         calls = 0
         for doc in p["doc_tokens"] if passes else []:
+            if mode == "algorithmic":
+                # Context passes have compact prompts, no class glossary, and
+                # no Pass 1/2 model calls. The registry + ambiguity task is
+                # an additional input; estimate conservatively by paper.
+                reg = p.get("registry_tokens", 0)
+                for bound, i in (("low", 0), ("high", 1)):
+                    out1, out2 = outputs["context3a"][i], outputs["context3b"][i]
+                    n = 2 if passes else 0
+                    sys_cost = n * system_tokens * (CACHE_WRITE_1H * p_in if first else p_read)
+                    doc_cost = n * doc * p_in
+                    task_cost = (n * TASK_TOKENS + 2 * reg) * p_in
+                    cost[bound] += sys_cost + doc_cost + task_cost + (out1 + out2) * p_out
+                first = False
+                calls += 2
+                continue
             for bound, i in (("low", 0), ("high", 1)):
                 outs = [outputs[k][i] for k in ("pass1", "pass2", "pass3")][:passes]
                 n_calls = passes + (passes == 3)   # pass 3 is two calls (3a relations, 3b applications)
@@ -137,7 +163,7 @@ def estimate(model: str, system_tokens: int, papers: list[dict], outputs: dict, 
             calls += 1
         rows.append({**p, "calls": calls, "low_usd": round(cost["low"], 3), "high_usd": round(cost["high"], 3)})
     return {"rows": rows, "low_usd": sum(r["low_usd"] for r in rows), "high_usd": sum(r["high_usd"] for r in rows),
-            "calls": sum(r["calls"] for r in rows)}
+            "calls": sum(r["calls"] for r in rows), "extraction_mode": mode}
 
 
 def resolver_estimate(model: str, n_papers: int, outputs: dict | None = None) -> dict:
@@ -157,7 +183,7 @@ def summary_text(model: str, system_tokens: int, exact: bool, outputs: dict, res
     saved = len(result["rows"]) - len(new)
     docs = sum(sum(r["doc_tokens"]) for r in new)
     lines = [
-        f"COST ESTIMATE before any Claude call ({model}; prices in src/pipeline/cost.py)",
+        f"COST ESTIMATE before any Claude call ({model}; mode={result.get('extraction_mode','four_pass')}; prices in src/pipeline/cost.py)",
         f"  papers to extract: {len(new)}" + (f"  (+{saved} already extracted, assumed reused at no cost)" if saved else ""),
         f"  Claude calls: {result['calls']}  |  system prompt: {system_tokens:,} tokens (cached)  |  "
         f"paper text: {docs:,} tokens ({'counted exactly' if exact else 'estimated from characters'})",
