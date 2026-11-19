@@ -16,6 +16,7 @@ from .export import GraphBuilder, write_ontology_gaps, write_review_queue
 from .ingest import ingest_pdf
 from .io_utils import StageStore, paper_id_from_filename, read_json, sha256_file, sha256_json, write_json
 from .observations import write_observations
+from .materials_link import MPLookup, link_paper, write_links_csv
 from .llm import ClaudeExtractor
 from ..ontology_loader import Ontology, Profile
 from ..ontology_resolver import OntologyResolver, annotate_validation
@@ -31,7 +32,7 @@ from .validate import validate_paper
 PIPELINE_VERSION = "0.9.0"  # selectable algorithmic Pass 1/2 and context-only LLM
 # The Docling conversion is unchanged; reuse the v0.8.1 ingest cache.
 INGEST_CACHE_VERSION = "0.8.1"
-STAGES = ["ingest", "structure", "pre_llm_candidates", "human_review", "algorithmic_registry", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve"]
+STAGES = ["ingest", "structure", "pre_llm_candidates", "human_review", "algorithmic_registry", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve", "materials_link"]
 
 
 class Pipeline:
@@ -87,6 +88,12 @@ class Pipeline:
             from .docling_ingest import DoclingParser
             self._docling = DoclingParser(self.cfg.docling)
         return self._docling
+
+    @cached_property
+    def mp_lookup(self) -> MPLookup:
+        """Materials Project formula search (cached under data/cache/mp/). Key: MP_API_KEY."""
+        return MPLookup(self.cfg.cache_dir / "mp", db_version=self.cfg.mp_db_version,
+                        allow_live=self.cfg.mp_allow_live)
 
     # ------------------------------------------------------------------
     def papers(self) -> list[Path]:
@@ -296,7 +303,13 @@ class Pipeline:
                                        "min_conf": self.cfg.min_confidence_for_auto_accept}, do_validate)
         if stop_at < STAGES.index("resolve"):
             return out
-        stage("resolve", {"up": fp_val}, lambda: resolve_paper(val))
+        res, fp_res = stage("resolve", {"up": fp_val}, lambda: resolve_paper(val))
+        # Optional enrichment: link materials to Materials Project entries (computed reference data;
+        # no Claude call). Runs when cfg.mp_link is set, or when asked for explicitly with
+        # until="materials_link". A lookup failure is recorded per material, never raised.
+        if self.cfg.mp_link or until == "materials_link":
+            stage("materials_link", {"up": fp_res, "mp": self.mp_lookup.fingerprint()},
+                  lambda: link_paper(res, st, self.mp_lookup))
         out["meta"] = {"title": st["title"], "pdf": pdf.name, "sha256": pdf_hash,
                        "extraction_mode": self.cfg.extraction_mode,
                        "review_fingerprint": selection["review_fingerprint"],
@@ -601,15 +614,34 @@ class Pipeline:
         return {"results": results, "errors": errors}
 
     # ------------------------------------------------------------------
+    def link_materials(self, results: dict, force: bool = False) -> dict:
+        """Run only the materials_link stage for papers that already have a saved `resolve` output.
+
+        Nothing earlier is re-run and no Claude call is made, so this is safe on a finished batch
+        (e.g. after load_results). Uses the same fingerprint as run_paper, so both share one saved
+        stage. Updates `results` in place and returns it."""
+        for pid, r in results.items():
+            res, st = r.get("resolve"), r.get("structure")
+            if not res or not st:
+                continue
+            store = StageStore(self.cfg.outputs_dir, pid)
+            fp = sha256_json({"v": PIPELINE_VERSION, "stage": "materials_link",
+                              "up": res.get("_fingerprint"), "mp": self.mp_lookup.fingerprint()})
+            cached = None if force else store.load("materials_link", fp)
+            r["materials_link"] = cached if cached is not None else store.save(
+                "materials_link", link_paper(res, st, self.mp_lookup), fp)
+        return results
+
     def export(self, results: dict, out_dir: Path | None = None, prune_classes=True) -> dict:
         """Write data/graph/: nodes.jsonl, relationships.jsonl, graph.ttl, review_queue.csv,
         ontology_gaps.csv, run_manifest.json."""
         out_dir = Path(out_dir or self.cfg.graph_dir)
         resolved = {pid: r["resolve"] for pid, r in results.items() if "resolve" in r}
+        links = {pid: r["materials_link"] for pid, r in results.items() if r.get("materials_link")}
         def graph_for(statuses, destination):
             gb = GraphBuilder(self.profile, include_statuses=statuses)
             for pid, res in resolved.items():
-                gb.add_paper(pid, results[pid].get("meta", {}), res)
+                gb.add_paper(pid, results[pid].get("meta", {}), res, links=links.get(pid))
             if prune_classes:
                 gb.prune_unused_classes()
             info = gb.write(destination)
@@ -620,7 +652,9 @@ class Pipeline:
         info = graph_for(("auto_accepted",), out_dir)
         candidate_dir = out_dir / "candidates"
         info["candidate_graph"] = graph_for(("auto_accepted", "needs_review"), candidate_dir)
-        info["review_queue_rows"] = write_review_queue(resolved, out_dir / "review_queue.csv")
+        info["review_queue_rows"] = write_review_queue(resolved, out_dir / "review_queue.csv", links=links)
+        if links:
+            info["materials_link_rows"] = write_links_csv(links, out_dir / "materials_links.csv")
         info["ontology_gap_rows"] = len(write_ontology_gaps(resolved, out_dir / "ontology_gaps.csv"))
         write_json(out_dir / "run_manifest.json", self.manifest())
         return info

@@ -60,11 +60,40 @@ class GraphBuilder:
         elif label == OTHER:
             self.nodes[nid]["proposed_class"] = proposed
 
+    def _add_mp_link(self, gid: str, paper_id: str, link: dict, db_version: str | None):
+        """Materials Project data hangs off the Material node as COMPUTED reference data.
+
+        CORRESPONDS_TO is drawn only for an unambiguous link; otherwise the candidates are listed on
+        the Material node for review. MP entries are never merged into samples or measurements."""
+        m = self.nodes[gid]
+        if link.get("reduced_formula"):
+            m.setdefault("reduced_formula", link["reduced_formula"])
+        statuses = set(m.get("mp_link_status", [])) | {link["status"]}
+        m["mp_link_status"] = sorted(statuses)
+        if link["status"] != "linked":
+            cands = sorted(set(m.get("mp_candidates", [])) | {c["material_id"] for c in link.get("candidates", [])})
+            if cands:
+                m["mp_candidates"] = cands
+            return
+        entry = next(c for c in link["candidates"] if c["material_id"] == link["mp_id"])
+        nid = "MP:" + entry["material_id"]
+        self.node(nid, "MPEntry", name=entry["material_id"], mp_id=entry["material_id"],
+                  formula=entry.get("formula"), space_group=entry.get("space_group_symbol"),
+                  space_group_number=entry.get("space_group_number"), crystal_system=entry.get("crystal_system"),
+                  energy_above_hull_ev=entry.get("energy_above_hull_ev"), is_stable=entry.get("is_stable"),
+                  theoretical=entry.get("theoretical"), band_gap_ev=entry.get("band_gap_ev"),
+                  icsd_ids=entry.get("icsd_ids"), url=entry.get("url"), db_version=db_version,
+                  source="Materials Project", data_origin="computed")
+        self.edge(gid, "CORRESPONDS_TO", nid, paper_id=paper_id, match_basis=link.get("match_basis"),
+                  paper_space_groups=link.get("paper_space_groups") or None, db_version=db_version,
+                  status="automatic_unverified")
+
     # -- one paper --------------------------------------------------------------
-    def add_paper(self, paper_id: str, meta: dict, resolved: dict):
+    def add_paper(self, paper_id: str, meta: dict, resolved: dict, links: dict | None = None):
         self.node(paper_id, "Paper", title=meta.get("title"), pdf=meta.get("pdf"), sha256=meta.get("sha256"))
         items = [it for it in resolved["items"] if it["status"] in self.include]
         local = {}  # local ID -> graph node ID
+        mp_links = {r["local_id"]: r for r in (links or {}).get("links", [])}
 
         def base(it):
             d = it["data"]
@@ -74,12 +103,17 @@ class GraphBuilder:
         for it in items:
             d = it["data"]
             if it["kind"] == "material":
-                gid = global_material_id(self.profile, d["ontology_class"], d["name"], d.get("formula"))
+                link = mp_links.get(d.get("id"))
+                # A checked formula merges spelling variants across papers (Se3Bi2 = Bi2Se3).
+                key_formula = (link or {}).get("reduced_formula") or d.get("formula")
+                gid = global_material_id(self.profile, d["ontology_class"], d["name"], key_formula)
                 self.node(gid, "Material", name=d["name"], formula=d.get("formula"),
                           ontology_class=d["ontology_class"])
                 self.nodes[gid].setdefault("aliases", [])
                 self.nodes[gid]["aliases"] = sorted(set(self.nodes[gid]["aliases"]) | set(d.get("aliases", [])) | {d["name"]})
                 self._class_edge(gid, "material", d["ontology_class"], d.get("proposed_class_label"))
+                if link:
+                    self._add_mp_link(gid, paper_id, link, (links or {}).get("db_version"))
                 local[d["id"]] = gid
                 self.edge(gid, "MENTIONED_IN", paper_id, **base(it))
             elif it["kind"] == "sample":
@@ -307,6 +341,14 @@ class GraphBuilder:
             for k in ("value_text", "unit", "unit_si", "data_origin", "status", "paper_id", "evidence", "proposed_class", "property_in_text", "name", "application_status", "causal_status", "baseline_value_text", "target_value_text", "proposed_parent_iri", "review_reason"):
                 if n.get(k):
                     g.add((s, KG[k], Literal(n[k])))
+            for k in ("mp_id", "formula", "reduced_formula", "space_group", "crystal_system", "db_version", "source"):
+                if n.get(k):
+                    g.add((s, KG[k], Literal(n[k])))
+            for k in ("energy_above_hull_ev", "band_gap_ev"):
+                if isinstance(n.get(k), (int, float)):
+                    g.add((s, KG[k], Literal(n[k], datatype=XSD.double)))
+            if n["label"] == "MPEntry" and n.get("url"):
+                g.add((s, RDFS.seeAlso, URIRef(n["url"])))
         for e in self.edges:
             s, o = ref(e["source"]), ref(e["target"])
             if e["type"] == "INSTANCE_OF":
@@ -337,8 +379,21 @@ class GraphBuilder:
         return len(g)
 
 
-def write_review_queue(resolved_by_paper: dict, path: Path):
+def write_review_queue(resolved_by_paper: dict, path: Path, links: dict | None = None):
     rows = []
+    for pid, res in (links or {}).items():
+        for r in res.get("links", []):
+            if not r.get("requires_review"):
+                continue
+            cands = ", ".join(f"{c['material_id']} ({c['space_group_symbol']})" for c in r.get("candidates", [])[:6])
+            rows.append({
+                "paper_id": pid, "kind": "mp_link", "id": r["local_id"], "status": r["status"],
+                "summary": f"{r.get('name')} [{r.get('reduced_formula') or r.get('formula')}]"
+                           + (f" -> candidates: {cands}" if cands else ""),
+                "issues": r.get("reason") or "", "confidence": None,
+                "page": None, "quote": None, "anchor": None,
+                "reviewer_decision": "", "reviewer_comment": "",
+            })
     for pid, res in resolved_by_paper.items():
         for it in res["items"]:
             if it["status"] == "auto_accepted":

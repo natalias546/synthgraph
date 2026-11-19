@@ -54,6 +54,13 @@ class Config:
     # Validation
     min_confidence_for_auto_accept: float = 0.85
 
+    # Materials Project linking (src/pipeline/materials_link.py; no Claude call, free API)
+    mp_link: bool = False                      # True: after `resolve`, check formulas and link materials to MP
+                                               # entries (computed reference data). Key: MP_API_KEY in .env
+    mp_db_version: str | None = None           # pin an MP database release (e.g. "2025.09.25") for reproducible
+                                               # runs; None = current release (cached responses are reused)
+    mp_allow_live: bool = True                 # False = use cached MP responses only
+
     extra: dict = field(default_factory=dict)
     notes: list = field(default_factory=list)
 
@@ -129,7 +136,8 @@ def load_env(project_root: Path) -> None:
 
 def software_versions() -> dict:
     out = {"python": platform.python_version(), "platform": platform.platform()}
-    for pkg in ("anthropic", "pdfplumber", "pydantic", "rdflib", "owlready2", "pint", "rank-bm25", "pandas", "neo4j"):
+    for pkg in ("anthropic", "pdfplumber", "pydantic", "rdflib", "owlready2", "pint", "rank-bm25", "pandas", "neo4j",
+                "mp-api", "pymatgen"):
         try:
             out[pkg] = importlib.metadata.version(pkg)
         except importlib.metadata.PackageNotFoundError:

@@ -24,6 +24,7 @@ exposed through a FastAPI service and a chatbot.
 | `src/pipeline/` | Other extraction internals: schemas, Claude client, validation, export (`ingest.py` = old pdfplumber parser) |
 | `src/ontology_resolver/` | Maps extracted terms to ontology classes (no API calls); `scientific_aliases.json` holds approved aliases |
 | `src/pipeline/pre_llm_review.py` | Optional sentence-by-sentence review before any Claude call (`--pre-llm-review`) |
+| `src/pipeline/materials_link.py` | Optional: checks material formulas and links them to Materials Project entries (`--mp-link`) |
 | `compressed_owl/` | Zipped v11 ontology (the `.owl` is ~160 MB, so it is not committed directly) |
 | `src/api.py` | FastAPI wrapping the query functions |
 | `src/chatbot.py` | LLM that calls the API as tools |
@@ -37,7 +38,7 @@ python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-cp .env.example .env             # then fill in your values (incl. ANTHROPIC_API_KEY)
+cp .env.example .env             # then fill in your values (incl. ANTHROPIC_API_KEY; MP_API_KEY for --mp-link)
 docker compose up -d             # local Neo4j at http://localhost:7474
 ```
 
@@ -79,7 +80,32 @@ Useful flags: `python -m src.ontology_loader --dry-run` (slice summary only),
 `--pre-llm-review` (Claude reads only the sentences and table/figure crops approved in
 `data/extractions/<paper>/pre_llm_review.json`; edit it with the widget in `master_pipeline.ipynb`. Default: the full paper).
 
+`--mp-link` (after `resolve`, link materials to Materials Project entries; see below), `--mp-db-version <release>`
+(pin an MP database release for reproducible runs).
+
 To inspect each stage, review results and evaluate against `data/gold/`, use `notebooks/master_pipeline.ipynb`.
+
+### Materials Project linking (optional)
+
+With `--mp-link` (or `Config(mp_link=True)`), a `materials_link` stage runs after `resolve`. It makes no Claude
+call and the Materials Project API is free; put your key from the MP dashboard in `.env` as `MP_API_KEY=...`
+(never commit it). For each material the paper reports:
+
+1. **Formula check (local, works without a key):** subscripts are converted, only real element symbols are accepted
+   (so sample labels and acronyms such as `PR1` or `XRD2` are rejected), variable/doped formulas (`Bi2-xSbxTe3`,
+   `La0.7Sr0.3MnO3`) are set aside, and spellings are reduced (`Se3Bi2` = `Bi₂Se₃` = `Bi2Se3`), which also merges
+   them across papers in the export.
+2. **Lookup:** one batched MP search per paper; responses are cached in `data/cache/mp/`, so reruns cost nothing.
+3. **Decision:** a material is linked only when it is unambiguous: a single MP entry for the formula, or several
+   polymorphs where the paper itself states a space group near that formula (`space group P6/mmm`, `(No. 191)`)
+   and exactly one entry has it. Otherwise all candidates are kept and the material goes to the review queue
+   (`ambiguous`, `space_group_conflict`, `variable_composition`, `invalid_formula`, `not_looked_up`).
+
+Export adds `MPEntry` nodes (MP ID, space group, energy above hull, computed band gap, ICSD IDs, database
+version, link) with `Material -[:CORRESPONDS_TO]-> MPEntry` for linked materials, `rdfs:seeAlso` links in
+`graph.ttl`, and `data/graph/materials_links.csv` (one row per paper material). MP values are **computed (DFT)**
+reference data for an idealized crystal; they are never merged into the paper's samples or measurements.
+Offline test (no key): `python scripts/test_materials_link.py --owl ontology/matsci-v11-provenance-enriched.owl`.
 
 ### How terms get ontology classes
 
