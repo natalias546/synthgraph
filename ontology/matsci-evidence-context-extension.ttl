@@ -1,0 +1,302 @@
+@prefix ev: <https://w3id.org/matsci/ontology/evidence/> .
+@prefix lit: <https://w3id.org/matsci/ontology/literature/> .
+@prefix matsci: <https://w3id.org/matsci/ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ev:BibliographicSourceEntry a owl:Class ;
+    rdfs:label "BibliographicSourceEntry" ;
+    rdfs:comment "One reference entry, independent of internal periods." ;
+    rdfs:subClassOf ev:ScientificSourceObject .
+
+ev:HLNPrefactorDescription a owl:Class ;
+    rdfs:label "HLNPrefactorDescription" ;
+    rdfs:comment "Dimensionless HLN prefactor alpha." ;
+    rdfs:subClassOf ev:FittedParameterDescription .
+
+ev:HikamiLarkinNagaokaModel a owl:Class ;
+    rdfs:label "HikamiLarkinNagaokaModel" ;
+    rdfs:comment "Model of weak (anti)localization corrections to conductivity." ;
+    rdfs:subClassOf matsci:ScientificModel ;
+    skos:altLabel "HLN",
+        "Hikami-Larkin-Nagaoka" .
+
+ev:Magnetoconductivity a owl:Class ;
+    rdfs:label "Magnetoconductivity" ;
+    rdfs:comment "Conductivity as a function of magnetic field." ;
+    rdfs:subClassOf matsci:TransportQuality .
+
+ev:Magnetoresistance a owl:Class ;
+    rdfs:label "Magnetoresistance" ;
+    rdfs:comment "Field-dependent normalized resistance/resistivity response." ;
+    rdfs:subClassOf ev:ElectricalTransportDerivedQuantity ;
+    skos:altLabel "MR",
+        "magneto-resistance" .
+
+ev:PhaseCoherenceLengthDescription a owl:Class ;
+    rdfs:label "PhaseCoherenceLengthDescription" ;
+    rdfs:comment "HLN fitted phase-coherence length L_phi." ;
+    rdfs:subClassOf ev:FittedParameterDescription .
+
+ev:ResidualResistivityRatio a owl:Class ;
+    rdfs:label "ResidualResistivityRatio" ;
+    rdfs:comment "Resistivity ratio at stated high and low temperatures." ;
+    rdfs:subClassOf ev:ElectricalTransportDerivedQuantity ;
+    skos:altLabel "RRR",
+        "residual resistivity ratio" .
+
+ev:RietveldRefinementMethod a owl:Class ;
+    rdfs:label "RietveldRefinementMethod" ;
+    rdfs:comment "Full-profile crystallographic diffraction refinement method." ;
+    rdfs:subClassOf matsci:ExperimentalMethod ;
+    skos:altLabel "Rietveld refinement" .
+
+ev:TopologicalSurfaceState a owl:Class ;
+    rdfs:label "TopologicalSurfaceState" ;
+    rdfs:comment "Electronic state localized at a topological boundary." ;
+    rdfs:subClassOf matsci:ElectronicState ;
+    skos:altLabel "TSS",
+        "topological surface states" .
+
+ev:WeakAntilocalization a owl:Class ;
+    rdfs:label "WeakAntilocalization" ;
+    rdfs:comment "Quantum interference transport phenomenon (not a mention record)." ;
+    rdfs:subClassOf matsci:PhysicalPhenomenon ;
+    skos:altLabel "WAL",
+        "weak anti-localization" .
+
+ev:acronymExpansion a owl:DatatypeProperty ;
+    rdfs:label "acronymExpansion" .
+
+ev:axisInferredFrom a owl:DatatypeProperty ;
+    rdfs:label "axisInferredFrom" .
+
+ev:axisLabel a owl:DatatypeProperty ;
+    rdfs:label "axisLabel" .
+
+ev:axisRole a owl:DatatypeProperty ;
+    rdfs:label "axisRole" .
+
+ev:axisUnit a owl:DatatypeProperty ;
+    rdfs:label "axisUnit" .
+
+ev:conceptCanonicalTerm a owl:DatatypeProperty ;
+    rdfs:label "conceptCanonicalTerm" .
+
+ev:containsEvidenceBlock a owl:ObjectProperty ;
+    rdfs:label "containsEvidenceBlock" ;
+    rdfs:domain ev:ScientificSourceObject ;
+    rdfs:range ev:ScientificEvidenceBlock .
+
+ev:containsEvidenceSpan a owl:ObjectProperty ;
+    rdfs:label "containsEvidenceSpan" ;
+    rdfs:domain ev:ScientificEvidenceBlock .
+
+ev:definitionContextText a owl:DatatypeProperty ;
+    rdfs:label "definitionContextText" .
+
+ev:denotesScientificConcept a owl:ObjectProperty ;
+    rdfs:label "denotesScientificConcept" ;
+    rdfs:domain ev:ScientificConceptMention ;
+    rdfs:range ev:CanonicalScientificConcept .
+
+ev:expressionStatus a owl:DatatypeProperty ;
+    rdfs:label "expressionStatus" .
+
+ev:expressionText a owl:DatatypeProperty ;
+    rdfs:label "expressionText" .
+
+ev:fitModelName a owl:DatatypeProperty ;
+    rdfs:label "fitModelName" .
+
+ev:fitParameterDefinition a owl:DatatypeProperty ;
+    rdfs:label "fitParameterDefinition" .
+
+ev:fitParameterSymbol a owl:DatatypeProperty ;
+    rdfs:label "fitParameterSymbol" .
+
+ev:hasAcronymDefinition a owl:ObjectProperty ;
+    rdfs:label "hasAcronymDefinition" ;
+    rdfs:domain ev:CanonicalScientificConcept ;
+    rdfs:range ev:ScientificAcronymDefinition .
+
+ev:hasConceptMention a owl:ObjectProperty ;
+    rdfs:label "hasConceptMention" ;
+    rdfs:domain ev:CanonicalScientificConcept ;
+    rdfs:range ev:ScientificConceptMention .
+
+ev:hasFitSourceEvidence a owl:ObjectProperty ;
+    rdfs:label "hasFitSourceEvidence" ;
+    rdfs:domain ev:ModelFittingResultRecord .
+
+ev:hasFittedParameter a owl:ObjectProperty ;
+    rdfs:label "hasFittedParameter" ;
+    rdfs:domain ev:ModelFittingResultRecord ;
+    rdfs:range ev:FittedParameterDescription .
+
+ev:hasModelParameterDefinition a owl:ObjectProperty ;
+    rdfs:label "hasModelParameterDefinition" ;
+    rdfs:domain ev:ModelFittingResultRecord ;
+    rdfs:range ev:FittedParameterDescription .
+
+ev:hasNearbyDefinition a owl:ObjectProperty ;
+    rdfs:label "hasNearbyDefinition" ;
+    rdfs:domain ev:ScientificEquationRecord .
+
+ev:hasPlot a owl:ObjectProperty ;
+    rdfs:label "hasPlot" ;
+    rdfs:domain ev:ScientificSourceObject ;
+    rdfs:range ev:ScientificPlotRecord .
+
+ev:hasPlotAxis a owl:ObjectProperty ;
+    rdfs:label "hasPlotAxis" ;
+    rdfs:domain ev:ScientificPlotRecord ;
+    rdfs:range ev:PlotAxisDescription .
+
+ev:hasPlotPanel a owl:ObjectProperty ;
+    rdfs:label "hasPlotPanel" ;
+    rdfs:domain ev:ScientificPlotRecord ;
+    rdfs:range ev:PlotPanelDescription .
+
+ev:hasSourceEquation a owl:ObjectProperty ;
+    rdfs:label "hasSourceEquation" ;
+    rdfs:domain ev:ScientificSourceObject ;
+    rdfs:range ev:ScientificEquationRecord .
+
+ev:hasVisualClassification a owl:ObjectProperty ;
+    rdfs:label "hasVisualClassification" ;
+    rdfs:domain ev:ScientificPlotRecord ;
+    rdfs:range ev:FigureVisualClassification .
+
+ev:plotCaption a owl:DatatypeProperty ;
+    rdfs:label "plotCaption" .
+
+ev:plotCropPath a owl:DatatypeProperty ;
+    rdfs:label "plotCropPath" .
+
+ev:plotTitle a owl:DatatypeProperty ;
+    rdfs:label "plotTitle" .
+
+ev:plotType a owl:DatatypeProperty ;
+    rdfs:label "plotType" .
+
+ev:plotVisualRole a owl:DatatypeProperty ;
+    rdfs:label "plotVisualRole" .
+
+ev:quantityUnit a owl:DatatypeProperty ;
+    rdfs:label "quantityUnit" .
+
+ev:rawValueText a owl:DatatypeProperty ;
+    rdfs:label "rawValueText" .
+
+ev:referencesPlotAxis a owl:ObjectProperty ;
+    rdfs:label "referencesPlotAxis" ;
+    rdfs:domain ev:ModelFittingResultRecord ;
+    rdfs:range ev:PlotAxisDescription .
+
+ev:reviewDecision a owl:DatatypeProperty ;
+    rdfs:label "reviewDecision" .
+
+ev:reviewsCanonicalConcept a owl:ObjectProperty ;
+    rdfs:label "reviewsCanonicalConcept" ;
+    rdfs:domain ev:ScientificReviewDecision ;
+    rdfs:range ev:CanonicalScientificConcept .
+
+ev:reviewsEvidenceBlock a owl:ObjectProperty ;
+    rdfs:label "reviewsEvidenceBlock" ;
+    rdfs:domain ev:ScientificReviewDecision ;
+    rdfs:range ev:ScientificEvidenceBlock .
+
+ev:sourceEvidenceId a owl:DatatypeProperty ;
+    rdfs:label "sourceEvidenceId" .
+
+ev:sourceKind a owl:DatatypeProperty ;
+    rdfs:label "sourceKind" .
+
+ev:sourcePage a owl:DatatypeProperty ;
+    rdfs:label "sourcePage" .
+
+ev:sourceParagraphId a owl:DatatypeProperty ;
+    rdfs:label "sourceParagraphId" .
+
+ev:uncertaintyNotation a owl:DatatypeProperty ;
+    rdfs:label "uncertaintyNotation" .
+
+ev:usesFittingModel a owl:ObjectProperty ;
+    rdfs:label "usesFittingModel" ;
+    rdfs:domain ev:ModelFittingResultRecord .
+
+ev:verificationStatus a owl:DatatypeProperty ;
+    rdfs:label "verificationStatus" .
+
+ev:FigureVisualClassification a owl:Class ;
+    rdfs:label "FigureVisualClassification" ;
+    rdfs:comment "Source-aware figure versus logo classification." ;
+    rdfs:subClassOf ev:ScientificSourceObject .
+
+ev:PlotPanelDescription a owl:Class ;
+    rdfs:label "PlotPanelDescription" ;
+    rdfs:comment "Panel or inset of a source plot." ;
+    rdfs:subClassOf ev:ScientificSourceObject .
+
+ev:ScientificAcronymDefinition a owl:Class ;
+    rdfs:label "ScientificAcronymDefinition" ;
+    rdfs:comment "Document-grounded acronym expansion." ;
+    rdfs:subClassOf lit:ScientificTerminologyEntry .
+
+ev:ElectricalTransportDerivedQuantity a owl:Class ;
+    rdfs:label "ElectricalTransportDerivedQuantity" ;
+    rdfs:comment "Derived transport response or ratio; computation must be reported." ;
+    rdfs:subClassOf matsci:TransportQuality .
+
+ev:PlotAxisDescription a owl:Class ;
+    rdfs:label "PlotAxisDescription" ;
+    rdfs:comment "Candidate axis role, label and unit." ;
+    rdfs:subClassOf ev:ScientificSourceObject .
+
+ev:ScientificConceptMention a owl:Class ;
+    rdfs:label "ScientificConceptMention" ;
+    rdfs:comment "One source-local lexical mention of a canonical concept." ;
+    rdfs:subClassOf lit:ScientificTerminologyEntry .
+
+ev:ScientificEquationRecord a owl:Class ;
+    rdfs:label "ScientificEquationRecord" ;
+    rdfs:comment "Source mathematical expression with nearby explanatory context." ;
+    rdfs:subClassOf ev:ScientificSourceObject .
+
+ev:ScientificReviewDecision a owl:Class ;
+    rdfs:label "ScientificReviewDecision" ;
+    rdfs:comment "Explicit user action distinct from scientific truth." ;
+    rdfs:subClassOf lit:ScientificExtractionRecord .
+
+ev:ScientificEvidenceBlock a owl:Class ;
+    rdfs:label "ScientificEvidenceBlock" ;
+    rdfs:comment "Collection of source evidence for review and model input." ;
+    rdfs:subClassOf lit:ScientificExtractionRecord .
+
+ev:CanonicalScientificConcept a owl:Class ;
+    rdfs:label "CanonicalScientificConcept" ;
+    rdfs:comment "One paper-local canonical scientific concept." ;
+    rdfs:subClassOf lit:ScientificTerminologyEntry .
+
+ev:FittedParameterDescription a owl:Class ;
+    rdfs:label "FittedParameterDescription" ;
+    rdfs:comment "Named fitted-model parameter, not an automatically measured value." ;
+    rdfs:subClassOf lit:ScientificParameterDescription .
+
+ev:ScientificPlotRecord a owl:Class ;
+    rdfs:label "ScientificPlotRecord" ;
+    rdfs:comment "Source figure/plot description, not digitized pixels." ;
+    rdfs:subClassOf ev:ScientificSourceObject .
+
+ev:ModelFittingResultRecord a owl:Class ;
+    rdfs:label "ModelFittingResultRecord" ;
+    rdfs:comment "Fitted parameter value with scientific model and conditions." ;
+    rdfs:subClassOf lit:ScientificMeasurementRecord .
+
+ev:ScientificSourceObject a owl:Class ;
+    rdfs:label "ScientificSourceObject" ;
+    rdfs:comment "Original equation/plot/table bibliographic source object." ;
+    rdfs:subClassOf lit:ScientificExtractionRecord .
+

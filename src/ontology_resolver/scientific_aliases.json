@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "aliases": [
+    {
+      "group": "property",
+      "alias": "magnetoresistance",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/Magnetoresistance",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    },
+    {
+      "group": "property",
+      "alias": "residual resistivity ratio",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/ResidualResistivityRatio",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    },
+    {
+      "group": "property",
+      "alias": "magnetoconductivity",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/Magnetoconductivity",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    },
+    {
+      "group": "phenomenon",
+      "alias": "weak anti-localization",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/WeakAntilocalization",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    },
+    {
+      "group": "phenomenon",
+      "alias": "weak antilocalization",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/WeakAntilocalization",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    },
+    {
+      "group": "structure",
+      "alias": "topological surface states",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/TopologicalSurfaceState",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    },
+    {
+      "group": "theory_model",
+      "alias": "Hikami Larkin Nagaoka model",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/HikamiLarkinNagaokaModel",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    },
+    {
+      "group": "theory_model",
+      "alias": "Hikami Larkin Nagaoka",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/HikamiLarkinNagaokaModel",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    },
+    {
+      "group": "technique",
+      "alias": "Rietveld refinement",
+      "target_iri": "https://w3id.org/matsci/ontology/evidence/RietveldRefinementMethod",
+      "approved": true,
+      "review_note": "Explicit full scientific phrase; NOT abbreviation alone"
+    }
+  ],
+  "unresolved_concepts": [
+    {
+      "term": "magnetoresistance",
+      "group": "property",
+      "canonical_name": "magnetoresistance",
+      "description": "Magnetic-field-dependent change in electrical resistance or resistivity. Do not equate with resistivity."
+    },
+    {
+      "term": "mr",
+      "group": "property",
+      "canonical_name": "magnetoresistance",
+      "required_context_any": [
+        "magnetoresistance",
+        "magnetic field",
+        "transport"
+      ],
+      "description": "MR is ambiguous; expand only with supporting context."
+    },
+    {
+      "term": "residual resistivity ratio",
+      "group": "property",
+      "canonical_name": "residual resistivity ratio",
+      "description": "A ratio of resistivities at specified temperatures; not identical to resistivity."
+    },
+    {
+      "term": "rrr",
+      "group": "property",
+      "canonical_name": "residual resistivity ratio",
+      "required_context_any": [
+        "residual resistivity",
+        "resistivity ratio"
+      ],
+      "description": "RRR is an acronym; the paper must support this expansion."
+    },
+    {
+      "term": "topological surface states",
+      "group": "phenomenon",
+      "canonical_name": "topological surface states",
+      "description": "Electronic states; not physical material constituents."
+    }
+  ]
+}

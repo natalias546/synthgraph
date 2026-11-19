@@ -1,0 +1,360 @@
+{
+  "source": "matsci-v10-literature-materials-project-enriched.owl",
+  "source_sha256": "f67d88c471eb27bd1abd0cbe12dd18305be66ac2f66923b6754493af6bf5f817",
+  "source_bytes": 164135402,
+  "result": "matsci-v11-parsing-aligned-cleaned.owl",
+  "result_sha256": "e7ca47678b3909f3923f6dd30368bf42c9b416f65e9798aed4b7d320fdb4845f",
+  "result_bytes": 164135520,
+  "extension": "matsci-extraction-application-extension.ttl",
+  "new_classes": 56,
+  "application_classes": 31,
+  "scientific_context_classes": 25,
+  "new_object_properties": 16,
+  "new_datatype_properties": 8,
+  "extension_triples": 347,
+  "removed_unreferenced_deprecated_iris": [
+    "http://purl.obolibrary.org/obo/OBI_0000011",
+    "https://w3id.org/pmd/co/PMD_0000503",
+    "https://w3id.org/pmd/co/PMD_0000848",
+    "https://w3id.org/pmd/co/PMD_0000950",
+    "https://w3id.org/pmd/co/PMD_0000975",
+    "https://w3id.org/pmd/co/PMD_0020020",
+    "https://w3id.org/pmd/co/PMD_0020021",
+    "https://w3id.org/pmd/co/PMD_0020023",
+    "https://w3id.org/pmd/co/PMD_0020027",
+    "https://w3id.org/pmd/co/PMD_0020097",
+    "https://w3id.org/pmd/co/PMD_0020099",
+    "https://w3id.org/pmd/co/PMD_0020100",
+    "https://w3id.org/pmd/co/PMD_0020107",
+    "https://w3id.org/pmd/co/PMD_0020109",
+    "https://w3id.org/pmd/co/PMD_0020110",
+    "https://w3id.org/pmd/co/PMD_0020111",
+    "https://w3id.org/pmd/co/PMD_0020112",
+    "https://w3id.org/pmd/co/PMD_0020116",
+    "https://w3id.org/pmd/co/PMD_0020117",
+    "https://w3id.org/pmd/co/PMD_0020118",
+    "https://w3id.org/pmd/co/PMD_0020119",
+    "https://w3id.org/pmd/co/PMD_0020120",
+    "https://w3id.org/pmd/co/PMD_0020121",
+    "https://w3id.org/pmd/co/PMD_0020122",
+    "https://w3id.org/pmd/co/PMD_0020123",
+    "https://w3id.org/pmd/co/PMD_0020124",
+    "https://w3id.org/pmd/co/PMD_0020125",
+    "https://w3id.org/pmd/co/PMD_0020131",
+    "https://w3id.org/pmd/co/PMD_0020134",
+    "https://w3id.org/pmd/co/PMD_0020135",
+    "https://w3id.org/pmd/co/PMD_0020148",
+    "https://w3id.org/pmd/co/PMD_0020217",
+    "https://w3id.org/pmd/co/PMD_0020218",
+    "https://w3id.org/pmd/co/PMD_0020219",
+    "https://w3id.org/pmd/co/PMD_0020220",
+    "https://w3id.org/pmd/co/PMD_0020242",
+    "https://w3id.org/pmd/co/PMD_0025003"
+  ],
+  "retained_referenced_deprecated_iris": {
+    "https://w3id.org/matsci/feder-derived/core/DiagnosticInstrument": {
+      "incoming_reference_count": 4,
+      "label": [
+        "diagnostic instrument"
+      ],
+      "incoming_examples": [
+        {
+          "source": "https://w3id.org/matsci/feder-derived/materials/usesInstrument",
+          "predicate": "range"
+        },
+        {
+          "source": "https://w3id.org/matsci/feder-derived/materials/TransmissionElectronMicroscope",
+          "predicate": "subClassOf"
+        },
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b8418",
+          "predicate": "someValuesFrom"
+        },
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b20158",
+          "predicate": "annotatedSource"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0000512": {
+      "incoming_reference_count": 1,
+      "label": [
+        "DEPRECATED Aggregatzustand",
+        "DEPRECATED aggregate state"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b77",
+          "predicate": "someValuesFrom"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0000591": {
+      "incoming_reference_count": 4,
+      "label": [
+        "Kristallstruktur",
+        "OBSOLETE crystal structure"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b78",
+          "predicate": "someValuesFrom"
+        },
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b9580",
+          "predicate": "someValuesFrom"
+        },
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b6342",
+          "predicate": "someValuesFrom"
+        },
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b1428",
+          "predicate": "someValuesFrom"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0000621": {
+      "incoming_reference_count": 1,
+      "label": [
+        "DEPRECATED elektrische Eigenschaft",
+        "DEPRECATED electrical property"
+      ],
+      "incoming_examples": [
+        {
+          "source": "https://w3id.org/matsci/feder-derived/materials/ElectricalProperty",
+          "predicate": "closeMatch"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0000825": {
+      "incoming_reference_count": 1,
+      "label": [
+        "DEPRECATED magnetische Eigenschaft",
+        "DEPRECATED magnetic property"
+      ],
+      "incoming_examples": [
+        {
+          "source": "https://w3id.org/matsci/feder-derived/materials/MagneticProperty",
+          "predicate": "closeMatch"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020006": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Triklines Primitiv des Bravais-Gitters",
+        "OBSOLETE bravais lattice triclinic primitive"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31927",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020007": {
+      "incoming_reference_count": 1,
+      "label": [
+        "monoklines Grundelement des Bravais-Gitters",
+        "OBSOLETE bravais lattice monoclinic primitive"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31928",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020008": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter monoklin basiszentriert",
+        "OBSOLETE bravais lattice monoclinic base-centered"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31929",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020009": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter orthorombisches Grundelement",
+        "OBSOLETE bravais lattice orthorombic primitive"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31930",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020010": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter orthorhombisch basiszentriert",
+        "OBSOLETE bravais lattice orthorhombic base-centered"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31931",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020011": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter orthorhombisch körperzentriert",
+        "OBSOLETE bravais lattice orthorhombic body-centered"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31932",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020012": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter orthorhombisch flächenzentriert",
+        "OBSOLETE bravais lattice orthorhombic face-centered"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31933",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020013": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter tetragonaler Grundkörper",
+        "OBSOLETE bravais lattice tetragonal primitive"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31934",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020014": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter tetragonal körperzentriert",
+        "OBSOLETE bravais lattice tetragonal body-centered"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31935",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020015": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter, sechseckiges, rhomboedrisches Grundelement",
+        "OBSOLETE bravais lattice hexagonal rhombohedral primitive"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31936",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020016": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter sechseckiges sechseckiges Grundelement",
+        "OBSOLETE bravais lattice hexagonal hexagonal primitive"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31937",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020017": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter, kubisches Grundelement",
+        "OBSOLETE bravais lattice cubic primitive"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31938",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020018": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter kubisch raumzentriert",
+        "OBSOLETE bravais lattice cubic body-centered"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31939",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020019": {
+      "incoming_reference_count": 1,
+      "label": [
+        "Bravais-Gitter kubisch flächenzentriert",
+        "OBSOLETE bravais lattice cubic face-centered"
+      ],
+      "incoming_examples": [
+        {
+          "source": "n0eb93218fd19473d96701ecd0939ac82b31940",
+          "predicate": "first"
+        }
+      ]
+    },
+    "https://w3id.org/pmd/co/PMD_0020216": {
+      "incoming_reference_count": 4,
+      "label": [
+        "DEPRECATED order scale value"
+      ],
+      "incoming_examples": [
+        {
+          "source": "https://w3id.org/pmd/co/PMD_0020242",
+          "predicate": "type"
+        },
+        {
+          "source": "https://w3id.org/pmd/co/PMD_0020219",
+          "predicate": "type"
+        },
+        {
+          "source": "https://w3id.org/pmd/co/PMD_0020217",
+          "predicate": "type"
+        },
+        {
+          "source": "https://w3id.org/pmd/co/PMD_0020218",
+          "predicate": "type"
+        }
+      ]
+    }
+  },
+  "original_source_untouched": true,
+  "rdfxml_bytes_preserved_except_deleted_safe_descriptions_and_added_extension": true,
+  "notes": [
+    "No Pydantic schemas were edited.",
+    "OWL XML syntax validation is not OWL reasoning or Neo4j ingestion.",
+    "Reference scan checks rdf:resource links; also audit external clients before deleting public IRIs."
+  ],
+  "sha256_schema_unchanged": "75bcd8c23b8915149dccfb9ab310c2652f0507195876cf3a2dff0a59eb464edf",
+  "deprecated_iri_total": 57,
+  "cleanup_policy": "Only explicitly owl:deprecated true named RDF descriptions with zero incoming rdf:resource references removed; referenced deprecated definitions retained."
+}

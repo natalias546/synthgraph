@@ -1,0 +1,677 @@
+"""Orchestrator: runs the stages for each paper, saving data/extractions/<paper_id>/<stage>.json.
+
+A stage is skipped when its saved output was produced from the same inputs
+(fingerprint). Claude responses are additionally cached by exact request, so a
+re-run never pays twice for the same call.
+"""
+from __future__ import annotations
+
+import traceback
+from functools import cached_property
+from pathlib import Path
+
+from .. import extract as X
+from .config import Config, load_api_key, software_versions
+from .export import GraphBuilder, write_ontology_gaps, write_review_queue
+from .ingest import ingest_pdf
+from .io_utils import StageStore, paper_id_from_filename, read_json, sha256_file, sha256_json, write_json
+from .observations import write_observations
+from .materials_link import MPLookup, link_paper, write_links_csv
+from .llm import ClaudeExtractor
+from ..ontology_loader import Ontology, Profile
+from ..ontology_resolver import OntologyResolver, annotate_validation
+from .resolve import resolve_paper
+from .schemas import build_schemas
+from .structure import build_structure
+from .evidence_context import enrich_structure
+from .source_rdf import write_source_rdf
+from .pre_llm_review import (make_candidates, read_or_create_review, reviewed_selection,
+                             review_summary, approved_documents, apply_reviewed_mappings, refresh_review, ReviewRequired)
+from .validate import validate_paper
+
+PIPELINE_VERSION = "0.9.0"  # selectable algorithmic Pass 1/2 and context-only LLM
+# The Docling conversion is unchanged; reuse the v0.8.1 ingest cache.
+INGEST_CACHE_VERSION = "0.8.1"
+STAGES = ["ingest", "structure", "pre_llm_candidates", "human_review", "algorithmic_registry", "visuals", "pass1", "pass2", "pass3", "ontology_resolve", "validate", "resolve", "materials_link"]
+
+
+class Pipeline:
+    def __init__(self, cfg: Config, mock_responder=None):
+        self.cfg = cfg
+        self._mock_responder = mock_responder
+        self._docling = None
+        if cfg.parser not in ("docling", "pdfplumber"):
+            raise ValueError(f"parser must be 'docling' or 'pdfplumber', not {cfg.parser!r}")
+
+    # The ontology and Claude client load on first use, so parsing (until="structure")
+    # runs without an ontology file or API key.
+    @cached_property
+    def ontology(self):
+        if self.cfg.ontology_file is None:
+            raise FileNotFoundError(f"No ontology for the LLM stages: {'; '.join(self.cfg.notes)}. Put the .owl in "
+                                    "ontology/ or set ONTOLOGY_FILE; parsing alone needs neither (until='structure').")
+        return Ontology(self.cfg.ontology_file)
+
+    @cached_property
+    def profile(self):
+        return Profile(self.ontology, self.cfg.profile_file)
+
+    @cached_property
+    def schemas(self):
+        return build_schemas(self.profile)
+
+    @cached_property
+    def ontology_resolver(self):
+        """Local vocabulary matcher: no API calls, no changes to the OWL ontology."""
+        return OntologyResolver(self.profile)
+
+    @cached_property
+    def system(self):
+        return X.system_prompt(self.profile)
+
+    @cached_property
+    def fewshot(self):
+        return X.load_fewshot(self.cfg.fewshot_file)
+
+    @cached_property
+    def llm(self):
+        cfg = self.cfg
+        return ClaudeExtractor(cfg.model, cfg.cache_dir, load_api_key(cfg.project_root),
+                               max_output_tokens=cfg.max_output_tokens, allow_live_calls=cfg.allow_live_calls,
+                               use_prompt_caching=cfg.use_prompt_caching, system_cache_ttl=cfg.system_cache_ttl,
+                               mock_responder=self._mock_responder)
+
+    @property
+    def docling(self):
+        """One Docling converter per Pipeline (its models load once, on first use)."""
+        if self._docling is None:
+            from .docling_ingest import DoclingParser
+            self._docling = DoclingParser(self.cfg.docling)
+        return self._docling
+
+    @cached_property
+    def mp_lookup(self) -> MPLookup:
+        """Materials Project formula search (cached under data/cache/mp/). Key: MP_API_KEY."""
+        return MPLookup(self.cfg.cache_dir / "mp", db_version=self.cfg.mp_db_version,
+                        allow_live=self.cfg.mp_allow_live)
+
+    # ------------------------------------------------------------------
+    def papers(self) -> list[Path]:
+        """All PDFs under data/publications/, including subfolders."""
+        return sorted((p for p in self.cfg.papers_dir.rglob("*") if p.is_file() and p.suffix.lower() == ".pdf"),
+                      key=lambda p: p.name.lower())
+
+    def find_papers(self, names) -> list[Path]:
+        """Resolve file names (or stems / paper IDs) to PDFs anywhere under data/publications/."""
+        all_pdfs = self.papers()
+        out, missing = [], []
+        for n in names:
+            hits = [p for p in all_pdfs if n in (p.name, p.stem, paper_id_from_filename(p))]
+            (out.extend(hits) if hits else missing.append(n))
+        if missing:
+            raise FileNotFoundError(f"Not found under {self.cfg.papers_dir}: {missing}")
+        return out
+
+    def update_checksums(self) -> dict:
+        """Record SHA-256 of every file in data/publications/ in checksums.json (relative paths as keys)."""
+        path = self.cfg.checksums_file
+        current = read_json(path) if path.exists() and path.read_text(encoding="utf-8").strip() else {}
+        for f in sorted(self.cfg.papers_dir.rglob("*")):
+            if f.is_file() and not f.name.startswith("."):
+                current[f.relative_to(self.cfg.project_root).as_posix()] = sha256_file(f)
+        write_json(path, dict(sorted(current.items())))
+        return current
+
+    def manifest(self) -> dict:
+        papers = self.papers()
+        return {
+            "pipeline_version": PIPELINE_VERSION,
+            "config": self.cfg.as_dict(),
+            "software": software_versions(),
+            "ontology": self.profile.summary(),
+            "llm": self.llm.status,
+            "system_prompt_sha256": sha256_json(self.system),
+            "ontology_notes": self.cfg.notes,
+            "papers": [{"paper_id": paper_id_from_filename(p), "file": p.name, "sha256": sha256_file(p)} for p in papers],
+        }
+
+    # ------------------------------------------------------------------
+    def run_paper(self, pdf: Path, until: str = "resolve", force: tuple = ()) -> dict:
+        pid = paper_id_from_filename(pdf)
+        store = StageStore(self.cfg.outputs_dir, pid)
+        out = {"paper_id": pid}
+        stop_at = STAGES.index(until)
+
+        def stage(name, fp_inputs, fn):
+            stage_version = INGEST_CACHE_VERSION if name == "ingest" else PIPELINE_VERSION
+            fp = sha256_json({"v": stage_version, "stage": name, **fp_inputs})
+            cached = None if name in force else store.load(name, fp)
+            if cached is not None:
+                out[name] = cached
+                return cached, fp
+            res = store.save(name, fn(), fp)
+            out[name] = res
+            return res, fp
+
+        pdf_hash = sha256_file(pdf)
+        if self.cfg.parser == "docling":
+            from .docling_ingest import load_docling_document, structure_from_docling
+            ing, fp_ing = stage("ingest", {"pdf": pdf_hash, "parser": "docling", "docling": self.docling.fingerprint()},
+                                lambda: self.docling.convert(pdf, store.dir))
+            if stop_at < 1:
+                return out
+            st, fp_st = stage("structure", {"up": fp_ing},
+                              lambda: enrich_structure(structure_from_docling(load_docling_document(store.dir / "docling.json"), ing, pdf)))
+        else:
+            ing, fp_ing = stage("ingest", {"pdf": pdf_hash, "parser": "pdfplumber"}, lambda: ingest_pdf(pdf))
+            if stop_at < 1:
+                return out
+            st, fp_st = stage("structure", {"up": fp_ing}, lambda: enrich_structure(build_structure(ing)))
+        # Flat reading-order list for the LLM notebooks (same shape as the old text pass).
+        write_observations(st, store.dir / "observations.json")
+        # Source-level RDF is provisional: never add unverified axis/fit guesses
+        # to the curated Neo4j graph by mistake.
+        write_source_rdf(st, store.dir / "source_records.ttl", pid)
+        if stop_at < STAGES.index("pre_llm_candidates"):
+            return out
+        candidates, fp_candidates = stage(
+            "pre_llm_candidates", {"up": fp_st, "resolver": self.ontology_resolver.fingerprint},
+            lambda: make_candidates(st, self.ontology_resolver))
+        if stop_at < STAGES.index("human_review"):
+            return out
+        review_path = store.dir / "pre_llm_review.json"
+        if self.cfg.pre_llm_review:
+            try:
+                review = read_or_create_review(review_path, st, candidates)
+            except ReviewRequired:
+                # Safe preflight repair: preserve the old file, generate a new
+                # pending manifest and candidate proposals. NO old approvals
+                # can reach a paid stage without explicit confirmation.
+                refresh = refresh_review(review_path, st, candidates, self.ontology_resolver)
+                review = refresh["review"]
+            out["human_review"] = {"path": str(review_path), "summary": review_summary(review, candidates)}
+        else:
+            out["human_review"] = {"skipped": True, "reason": "Config.pre_llm_review is False (full paper sent)"}
+        if stop_at < STAGES.index("algorithmic_registry"):
+            return out
+        # Prepare deterministic, evidence-only Pass 1/2 records before paid calls.
+        # This stage is part of preflight and is available in the notebook.
+        selection = self._selection(st, candidates, review_path)
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_extraction import build_algorithmic_registry
+            registry, fp_registry = stage(
+                "algorithmic_registry",
+                {"up": fp_candidates, "review": selection["review_fingerprint"],
+                 "mode": self.cfg.extraction_mode},
+                lambda: build_algorithmic_registry(st, candidates, selection))
+        else:
+            registry, fp_registry = stage(
+                "algorithmic_registry", {"up": fp_candidates, "mode": "four_pass"},
+                lambda: {"skipped": True, "mode": "four_pass"})
+        if stop_at < STAGES.index("visuals"):
+            return out
+        # Select primary source text automatically (with explicit exclusions); paid vision stays opt-in.
+        full_paper = selection.get("full_paper", False)
+        approved_visuals = set(selection["approved_visuals"])
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_context import CONTEXT_SYSTEM
+            vision_system = CONTEXT_SYSTEM
+        else:
+            vision_system = self.system
+        # A visual crop must be opted in by its source paragraph ID.
+        relevant_tables = [t for t in st.get("tables", []) if t.get("paragraph_id") in approved_visuals]
+        relevant_figures = [f for f in st.get("figures", []) if f.get("paragraph_id") in approved_visuals]
+
+        def do_visuals():
+            if self.cfg.parser == "docling":
+                if not relevant_tables and not relevant_figures:
+                    return {"overrides": {}, "added": [], "skipped": True}
+                chosen = {**st, "tables": relevant_tables, "figures": relevant_figures}
+                return X.run_visuals_docling(self.llm, self.schemas, chosen, store.dir, pid, vision_system,
+                                             self.cfg.table_vision, self.cfg.figure_vision)
+            if self.cfg.table_vision == "never":
+                return {"overrides": {}, "added": [], "skipped": True}
+            filtered = st if full_paper else {
+                **st, "paragraphs": [p for p in st["paragraphs"] if p["id"] in approved_visuals]}
+            if not filtered["paragraphs"] or not X.table_pages(filtered):
+                return {"overrides": {}, "added": [], "skipped": True}
+            return {"overrides": {}, "added": X.run_table_vision(self.llm, self.schemas, pdf, filtered, pid, vision_system),
+                    "pages": X.table_pages(filtered)}
+        vis, fp_vis = stage("visuals", {"up": fp_candidates, "review": selection["review_fingerprint"],
+                                        "approved_visuals": sorted(approved_visuals),
+                                        "model": self.cfg.model, "table_vision": self.cfg.table_vision,
+                                        "figure_vision": self.cfg.figure_vision}, do_visuals)
+        if stop_at < STAGES.index("pass1"):
+            return out
+
+        paragraphs, docs, llm_fp = self._llm_inputs(st, vis, selection)
+        if self.cfg.extraction_mode == "algorithmic":
+            p1, fp1 = stage("pass1", {"up": fp_registry, "mode": "algorithmic"},
+                             lambda: registry["pass1"])
+        else:
+            p1, fp1 = stage("pass1", llm_fp,
+                             lambda: X.run_pass1(self.llm, self.schemas, self.system,
+                                                 docs, self.fewshot, pid, self.profile))
+        from .claim_provenance import link_specimen_mentions
+        specimen_links = link_specimen_mentions(st, p1)
+        write_json(store.dir / "specimen_link_candidates.json", specimen_links)
+        out["specimen_links"] = {"path": str(store.dir / "specimen_link_candidates.json"),
+                                  "unique_formula_candidates": sum(bool(s['matched_sample_id']) for s in specimen_links),
+                                  "unresolved": sum(not s['matched_sample_id'] for s in specimen_links)}
+        if stop_at < STAGES.index("pass2"):
+            return out
+        if self.cfg.extraction_mode == "algorithmic":
+            p2, fp2 = stage("pass2", {"up": fp1, "registry": fp_registry, "mode": "algorithmic"},
+                            lambda: registry["pass2"])
+        else:
+            p2, fp2 = stage("pass2", {**llm_fp, "up": fp1},
+                            lambda: X.run_pass2(self.llm, self.schemas, self.system,
+                                                docs, self.fewshot, p1, pid, self.profile))
+        if stop_at < STAGES.index("pass3"):
+            return out
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_context import run_algorithmic_context
+            p3, fp3 = stage("pass3", {**llm_fp, "up": fp2, "registry": fp_registry},
+                            lambda: run_algorithmic_context(self.llm, docs, registry, st, pid))
+        else:
+            p3, fp3 = stage("pass3", {**llm_fp, "up": fp2},
+                            lambda: X.run_pass3(self.llm, self.schemas, self.system,
+                                                docs, self.fewshot, self.profile, p1, p2, pid))
+        if stop_at < STAGES.index("ontology_resolve"):
+            return out
+        # Resolve source scientific terms against the v11 OWL vocabulary without an
+        # additional model call. Only unique exact labels/approved aliases get IRIs.
+        aligned, fp_aligned = stage("ontology_resolve",
+                                    {"up": fp3, "resolver": self.ontology_resolver.fingerprint},
+                                    lambda: apply_reviewed_mappings(
+                                        self.ontology_resolver.resolve_extraction(
+                                            {"pass1": p1, "pass2": p2, "pass3": p3}),
+                                        selection, self.ontology_resolver))
+        if stop_at < STAGES.index("validate"):
+            return out
+
+        def do_validate():
+            validated = validate_paper(aligned, paragraphs, self.profile,
+                                       self.cfg.min_confidence_for_auto_accept,
+                                       approved_primary_sentence_ids=(
+                                           None if full_paper else {e["id"] for e in selection["extract"]}),
+                                       approved_visual_paragraph_ids=set(selection["approved_visuals"]))
+            return annotate_validation(validated, aligned)
+
+        val, fp_val = stage("validate", {"up": fp_aligned,
+                                       "profile": sha256_json(self.profile.summary()),
+                                       "min_conf": self.cfg.min_confidence_for_auto_accept}, do_validate)
+        if stop_at < STAGES.index("resolve"):
+            return out
+        res, fp_res = stage("resolve", {"up": fp_val}, lambda: resolve_paper(val))
+        # Optional enrichment: link materials to Materials Project entries (computed reference data;
+        # no Claude call). Runs when cfg.mp_link is set, or when asked for explicitly with
+        # until="materials_link". A lookup failure is recorded per material, never raised.
+        if self.cfg.mp_link or until == "materials_link":
+            stage("materials_link", {"up": fp_res, "mp": self.mp_lookup.fingerprint()},
+                  lambda: link_paper(res, st, self.mp_lookup))
+        out["meta"] = {"title": st["title"], "pdf": pdf.name, "sha256": pdf_hash,
+                       "extraction_mode": self.cfg.extraction_mode,
+                       "review_fingerprint": selection["review_fingerprint"],
+                       "selected_primary_sentence_ids": [e["id"] for e in selection["extract"]],
+                       "approved_primary_sentence_ids": [e["id"] for e in selection["extract"]],
+                       "approved_visual_paragraph_ids": selection["approved_visuals"],
+                       "documents": [{"chunk": d["chunk"], "chars": d["chars"]} for d in docs]}
+        return out
+
+    def _selection(self, st, candidates, review_path) -> dict:
+        """What Claude may read. With Config.pre_llm_review off: the whole paper and every table/figure crop
+        (table_vision/figure_vision still apply). With it on: automatically selected evidence (explicit exclusions honored), and opted-in crops."""
+        if not self.cfg.pre_llm_review:
+            visuals = [x["paragraph_id"] for x in st.get("tables", []) + st.get("figures", [])
+                       if x.get("paragraph_id")]
+            return {"full_paper": True, "extract": [], "context_only": [], "hints": {},
+                    "review_fingerprint": None, "approved_visuals": visuals, "counts": {}}
+        review = read_or_create_review(review_path, st, candidates)
+        return reviewed_selection(st, candidates, review, self.ontology_resolver)
+
+    def _documents(self, st, paragraphs, selection) -> list[dict]:
+        if selection.get("full_paper"):
+            return X.build_documents({**st, "paragraphs": paragraphs}, st["title"],
+                                     self.cfg.skip_sections, self.cfg.max_chars_per_call)
+        return approved_documents(st, selection, self.cfg.max_chars_per_call)
+
+    def _llm_inputs(self, st, vis, selection):
+        """Paragraphs (with table/figure vision applied), the documents sent to Claude, and the fingerprint
+        inputs of the Claude passes."""
+        from collections import defaultdict
+        cues = defaultdict(set)
+        for ev in st.get("semantic_evidence", []):
+            cues[ev["paragraph_id"]].update(ev.get("scientific_roles", []))
+        paragraphs = [{**p, **vis["overrides"].get(p["id"], {}),
+                       "scientific_cues": sorted(cues[p["id"]])} for p in st["paragraphs"]] + vis["added"]
+        docs = self._documents(st, paragraphs, selection)
+        if selection.get("full_paper"):  # vision transcriptions are already in the full document
+            return paragraphs, docs, self._llm_fp(docs, selection)
+        # Transcriptions from explicitly approved vision assets may supplement
+        # the source sentence packets; they are never silently included.
+        visual_paragraphs = [p for p in paragraphs if p.get("text_source") == "claude_vision"
+                             and p["id"] in selection["approved_visuals"]]
+        visual_paragraphs += [p for p in vis.get("added", []) if p.get("provenance") == "claude_vision"]
+        if visual_paragraphs:
+            extras = X.build_documents({**st, "paragraphs": visual_paragraphs}, st["title"],
+                                       self.cfg.skip_sections, self.cfg.max_chars_per_call)
+            for extra in extras:
+                extra["chunk"] = len(docs)
+                docs.append(extra)
+        return paragraphs, docs, self._llm_fp(docs, selection)
+
+    def _llm_fp(self, docs, selection) -> dict:
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_context import CONTEXT_SYSTEM, CONTEXT_SCHEMAS
+            return {"review": selection["review_fingerprint"],
+                    "docs": sha256_json([d["text"] for d in docs]),
+                    "system": sha256_json(CONTEXT_SYSTEM),
+                    "cfg": self.cfg.fingerprint_fields(),
+                    "schemas": sha256_json({k: v.model_json_schema()
+                                            for k, v in CONTEXT_SCHEMAS.items()})}
+        return {"review": selection["review_fingerprint"], "candidates": self.ontology_resolver.fingerprint,
+                "docs": sha256_json([d["text"] for d in docs]), "system": sha256_json(self.system),
+                "fewshot": sha256_json(self.fewshot), "cfg": self.cfg.fingerprint_fields(),
+                "schemas": sha256_json({k: v.model_json_schema() for k, v in self.schemas.items()})}
+
+    def _pass_saved(self, pid, st, passes, selection=None) -> bool:
+        """True only when the exact reviewed input and output-stage hashes match."""
+        if self.cfg.extraction_mode == "algorithmic":
+            # The existing four-pass cache-chain cannot certify a two-call run.
+            # Conservatively estimate a fresh extraction; cache mechanisms still
+            # skip actual repeated stages through their exact fingerprints.
+            return False
+        store = StageStore(self.cfg.outputs_dir, pid)
+        if selection is None:
+            return False
+        can = store.load("pre_llm_candidates")
+        if not can:
+            return False
+        visual_fp = sha256_json({"v": PIPELINE_VERSION, "stage": "visuals",
+                                 "up": can.get("_fingerprint"),
+                                 "review": selection["review_fingerprint"],
+                                 "approved_visuals": sorted(selection["approved_visuals"]),
+                                 "model": self.cfg.model,
+                                 "table_vision": self.cfg.table_vision,
+                                 "figure_vision": self.cfg.figure_vision})
+        vis = store.load("visuals", visual_fp)
+        if not vis:
+            return False
+        if passes == 0:
+            return True
+        llm_fp = self._llm_inputs(st, vis, selection)[2]
+        up = None
+        for k in range(1, passes + 1):
+            inputs = {**llm_fp, **({"up": up} if up else {})}
+            up = sha256_json({"v": PIPELINE_VERSION, "stage": f"pass{k}", **inputs})
+            if store.load(f"pass{k}", up) is None:
+                return False
+        return True
+
+    def estimate_cost_from_preflight(self, package: dict, until: str = "resolve",
+                                     show: bool = True) -> dict:
+        """Price the EXACT reviewed text packets previewed by the notebook.
+
+        package = {paper_id, structure, selection, documents}, where documents
+        is transmission_tables(...)["packets_raw"]. Do not rerun preflight or
+        silently skip a saved extraction: this is a fresh-run cost projection.
+        Token counting may use a provider's free count endpoint, but no model
+        extraction or vision call is made.
+        """
+        from . import cost
+        pid = package["paper_id"]
+        st = package["structure"]
+        selection = package["selection"]
+        docs = package["documents"]
+        if not isinstance(docs, list) or not docs or any(
+                not isinstance(d, dict) or not isinstance(d.get("text"), str)
+                for d in docs):
+            raise ValueError("Preflight package must contain nonempty raw text packets")
+        # Guard against a notebook where the review was changed after the table
+        # was built, or packets were accidentally edited/reordered in memory.
+        expected = self._documents(st, st["paragraphs"], selection)
+        if [d["text"] for d in expected] != [d["text"] for d in docs]:
+            raise ValueError("Preflight package no longer matches the selected evidence; "
+                             "rerun the transmission preview cell before costing")
+        stop = STAGES.index(until)
+        passes = (2 if stop >= STAGES.index("pass3") else 0) if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic" \
+            else max(0, min(3, stop - STAGES.index("visuals")))
+        count = cost.TokenCounter(self.llm.client, self.cfg.model)
+        if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic":
+            from .algorithmic_context import CONTEXT_SYSTEM
+            system_tokens = count(CONTEXT_SYSTEM)
+        else:
+            system_tokens = count(self.system)
+        approved_assets = set(selection.get("approved_visuals", []))
+        images = 0
+        if stop >= STAGES.index("visuals"):
+            if self.cfg.parser == "docling":
+                if self.cfg.table_vision != "never":
+                    images += sum(1 for t in st.get("tables", [])
+                                  if t.get("paragraph_id") in approved_assets and t.get("crop")
+                                  and (self.cfg.table_vision == "always" or
+                                       (self.cfg.table_vision == "fallback" and t.get("needs_vision"))))
+                if self.cfg.figure_vision:
+                    images += sum(1 for f in st.get("figures", [])
+                                  if f.get("paragraph_id") in approved_assets and f.get("crop"))
+            elif self.cfg.table_vision != "never":
+                images = len({p["page"] for p in st["paragraphs"]
+                              if p["id"] in approved_assets
+                              and (p["kind"] == "table" or
+                                   p.get("caption_of", "").startswith("table"))})
+        registry_tokens = 0
+        if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic":
+            from .algorithmic_extraction import build_algorithmic_registry
+            from .algorithmic_context import _registry_view
+            import json
+            candidates = package.get("candidates")
+            if candidates is None:
+                candidates = StageStore(self.cfg.outputs_dir, pid).load("pre_llm_candidates") if hasattr(self.cfg, "outputs_dir") else None
+            if candidates is None:
+                raise ValueError("Algorithmic preflight cost requires candidate-stage data. "
+                                 "Add 'candidates': cand_review to preflight_package")
+            fresh = build_algorithmic_registry(st, candidates, selection)
+            supplied = package.get("algorithmic_registry")
+            if supplied is not None and supplied.get("summary") != fresh.get("summary"):
+                raise ValueError("Algorithmic registry changed; rerun preflight before costing")
+            amb = fresh["ambiguities"]
+            registry_tokens = count(json.dumps(_registry_view(fresh), ensure_ascii=False)
+                                    + json.dumps(amb, ensure_ascii=False))
+        rows = [{"paper_id": pid,
+                 "doc_tokens": [count(d["text"]) for d in docs] if passes else [],
+                 "registry_tokens": registry_tokens,
+                 "images": images,
+                 "saved": False}]
+        outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
+        result = cost.estimate(self.cfg.model, system_tokens, rows, outputs,
+                               passes, mode=getattr(self.cfg, "extraction_mode", "four_pass"))
+        result["source"] = "preflight_package"
+        result["extraction_mode"] = getattr(self.cfg, "extraction_mode", "four_pass")
+        result["packet_count"] = len(docs)
+        result["packet_sha256"] = sha256_json([d["text"] for d in docs])
+        result["text"] = cost.summary_text(self.cfg.model, system_tokens,
+                                            count.exact, outputs, result)
+        result["text"] += ("\n  input: EXACT preflight preview packets "
+                            f"({len(docs)} chunks; hypothetical fresh extraction, "
+                            "not zeroed by an existing cached run)")
+        if images:
+            result["text"] += ("\n  Note: opted-in vision can create extra "
+                               "transcription text packets not in this preview.")
+        if show:
+            print(result["text"], flush=True)
+        return result
+
+    def estimate_cost(self, papers=None, until="resolve", show=True) -> dict:
+        """What the Claude stages up to `until` would cost, before calling anything. With
+        Config.pre_llm_review on, automatically selected text and explicitly opted-in vision are counted."""
+        from . import cost
+        stop = STAGES.index(until)
+        passes = (2 if stop >= STAGES.index("pass3") else 0) if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic" \
+            else max(0, min(3, stop - STAGES.index("visuals")))
+        # With review on, fail closed for the complete batch before contacting token-counting APIs.
+        approved = []
+        for pdf in papers or self.papers():
+            pid = paper_id_from_filename(pdf)
+            r = self.run_paper(pdf, until="human_review")
+            st, candidates = r["structure"], r["pre_llm_candidates"]
+            selection = self._selection(st, candidates, StageStore(self.cfg.outputs_dir, pid).dir / "pre_llm_review.json")
+            approved.append((pdf, pid, st, selection))
+        count = cost.TokenCounter(self.llm.client, self.cfg.model)
+        if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic":
+            from .algorithmic_context import CONTEXT_SYSTEM
+            system_tokens = count(CONTEXT_SYSTEM)
+        else:
+            system_tokens = count(self.system)
+        rows = []
+        for pdf, pid, st, selection in approved:
+            docs = self._documents(st, st["paragraphs"], selection)
+            approved_assets = set(selection["approved_visuals"])
+            images = 0
+            if stop >= STAGES.index("visuals"):
+                if self.cfg.parser == "docling":
+                    if self.cfg.table_vision != "never":
+                        images += sum(1 for t in st.get("tables", []) if t.get("paragraph_id") in approved_assets
+                                      and t.get("crop") and (self.cfg.table_vision == "always"
+                                      or (self.cfg.table_vision == "fallback" and t.get("needs_vision"))))
+                    if self.cfg.figure_vision:
+                        images += sum(1 for f in st.get("figures", []) if f.get("paragraph_id") in approved_assets and f.get("crop"))
+                elif self.cfg.table_vision != "never":
+                    images = len({p["page"] for p in st["paragraphs"] if p["id"] in approved_assets
+                                  and (p["kind"] == "table" or p.get("caption_of", "").startswith("table"))})
+            registry_tokens = 0
+            if getattr(self.cfg, "extraction_mode", "four_pass") == "algorithmic":
+                from .algorithmic_extraction import build_algorithmic_registry
+                from .algorithmic_context import _registry_view
+                import json
+                c = StageStore(self.cfg.outputs_dir, pid).load("pre_llm_candidates")
+                if c is None:
+                    raise ValueError("Missing pre_llm_candidates stage for algorithmic costing")
+                r = build_algorithmic_registry(st, c, selection)
+                registry_tokens = count(json.dumps(_registry_view(r), ensure_ascii=False)
+                                        + json.dumps(r["ambiguities"], ensure_ascii=False))
+            rows.append({"paper_id": pid, "doc_tokens": [count(d["text"]) for d in docs] if passes else [],
+                         "registry_tokens": registry_tokens,
+                         "images": images, "saved": self._pass_saved(pid, st, passes, selection)})
+        outputs = cost.output_range(cost.observed_outputs(self.cfg.cache_dir, self.cfg.model))
+        result = cost.estimate(self.cfg.model, system_tokens, rows, outputs,
+                               passes, mode=getattr(self.cfg, "extraction_mode", "four_pass"))
+        result["text"] = cost.summary_text(self.cfg.model, system_tokens, count.exact, outputs, result)
+        if show:
+            print(result["text"], flush=True)
+        return result
+
+    def check_schemas(self, until="resolve", show=True) -> dict:
+        """Confirm the API accepts every output schema the stages up to `until` will send (a few tokens each;
+        a schema that passed before is remembered). Raises SchemaTooComplex naming any refused schema."""
+        stop = STAGES.index(until)
+        names = []
+        if stop >= STAGES.index("visuals"):
+            if self.cfg.table_vision != "never":
+                names.append("page_tables")
+            if self.cfg.figure_vision:
+                names.append("figure_description")
+        names += [n for n, s in (("samples_processes", "pass1"), ("measurements", "pass2"), ("relations", "pass3"),
+                                 ("applications_comparisons", "pass3")) if stop >= STAGES.index(s)]
+        if self.cfg.extraction_mode == "algorithmic":
+            from .algorithmic_context import CONTEXT_SCHEMAS
+            chosen = {n: self.schemas[n] for n in names if n in ("page_tables", "figure_description")}
+            if stop >= STAGES.index("pass3"):
+                chosen.update(CONTEXT_SCHEMAS)
+        else:
+            chosen = {n: self.schemas[n] for n in names}
+        status = self.llm.check_schemas(chosen)
+        if show and status:
+            print("Output schemas:", ", ".join(f"{k} {v}" for k, v in status.items()), flush=True)
+        return status
+
+    def run_all(self, until="resolve", force=(), papers=None, stop_on_error=False, max_cost_usd=None) -> dict:
+        """Run the stages for each paper. Before the first Claude call, the cost estimate is printed;
+        with max_cost_usd (argument or Config), the run stops if the high estimate is above it."""
+        results, errors = {}, {}
+        self.update_checksums()
+        if STAGES.index(until) >= STAGES.index("visuals"):
+            from .cost import CostLimitExceeded
+            # Resolve source-selection manifests without constructing an LLM
+            # client or contacting any token-counting API. Only after source selection
+            # should schema checks/cost estimation reach model infrastructure.
+            est = self.estimate_cost(papers, until)
+            self.check_schemas(until)
+            limit = max_cost_usd if max_cost_usd is not None else self.cfg.max_cost_usd
+            if limit is not None and est["high_usd"] > limit:
+                raise CostLimitExceeded(f"High estimate ${est['high_usd']:.2f} is above max_cost_usd=${limit:.2f}. "
+                                        "Raise the limit or run fewer papers.")
+        for pdf in papers or self.papers():
+            print(f"[{pdf.name}]", flush=True)
+            try:
+                results[paper_id_from_filename(pdf)] = self.run_paper(pdf, until=until, force=force)
+            except Exception as exc:
+                errors[pdf.name] = f"{type(exc).__name__}: {exc}"
+                print("  ERROR:", errors[pdf.name], flush=True)
+                if stop_on_error:
+                    traceback.print_exc()
+                    raise
+        return {"results": results, "errors": errors}
+
+    # ------------------------------------------------------------------
+    def link_materials(self, results: dict, force: bool = False) -> dict:
+        """Run only the materials_link stage for papers that already have a saved `resolve` output.
+
+        Nothing earlier is re-run and no Claude call is made, so this is safe on a finished batch
+        (e.g. after load_results). Uses the same fingerprint as run_paper, so both share one saved
+        stage. Updates `results` in place and returns it."""
+        for pid, r in results.items():
+            res, st = r.get("resolve"), r.get("structure")
+            if not res or not st:
+                continue
+            store = StageStore(self.cfg.outputs_dir, pid)
+            fp = sha256_json({"v": PIPELINE_VERSION, "stage": "materials_link",
+                              "up": res.get("_fingerprint"), "mp": self.mp_lookup.fingerprint()})
+            cached = None if force else store.load("materials_link", fp)
+            r["materials_link"] = cached if cached is not None else store.save(
+                "materials_link", link_paper(res, st, self.mp_lookup), fp)
+        return results
+
+    def export(self, results: dict, out_dir: Path | None = None, prune_classes=True) -> dict:
+        """Write data/graph/: nodes.jsonl, relationships.jsonl, graph.ttl, review_queue.csv,
+        ontology_gaps.csv, run_manifest.json."""
+        out_dir = Path(out_dir or self.cfg.graph_dir)
+        resolved = {pid: r["resolve"] for pid, r in results.items() if "resolve" in r}
+        links = {pid: r["materials_link"] for pid, r in results.items() if r.get("materials_link")}
+        def graph_for(statuses, destination):
+            gb = GraphBuilder(self.profile, include_statuses=statuses)
+            for pid, res in resolved.items():
+                gb.add_paper(pid, results[pid].get("meta", {}), res, links=links.get(pid))
+            if prune_classes:
+                gb.prune_unused_classes()
+            info = gb.write(destination)
+            info["rdf_triples"] = gb.write_turtle(destination / "graph.ttl")
+            return info
+        # The canonical graph contains only mechanically auto-accepted assertions.
+        # They remain unverified scientific facts; reviewed/provisional claims are segregated.
+        info = graph_for(("auto_accepted",), out_dir)
+        candidate_dir = out_dir / "candidates"
+        info["candidate_graph"] = graph_for(("auto_accepted", "needs_review"), candidate_dir)
+        info["review_queue_rows"] = write_review_queue(resolved, out_dir / "review_queue.csv", links=links)
+        if links:
+            info["materials_link_rows"] = write_links_csv(links, out_dir / "materials_links.csv")
+        info["ontology_gap_rows"] = len(write_ontology_gaps(resolved, out_dir / "ontology_gaps.csv"))
+        write_json(out_dir / "run_manifest.json", self.manifest())
+        return info
+
+
+def load_results(outputs_dir: Path) -> dict:
+    """Reload saved stage outputs (e.g. in a fresh session) without running anything."""
+    res = {}
+    for d in sorted(Path(outputs_dir).iterdir()):
+        if d.is_dir() and not d.name.startswith("_"):
+            r = {"paper_id": d.name}
+            for s in STAGES:
+                p = d / f"{s}.json"
+                if p.exists():
+                    r[s] = read_json(p)
+            if "ingest" in r and "structure" in r:
+                r["meta"] = {"title": r["structure"].get("title"), "pdf": r["ingest"]["source"]["pdf"],
+                             "sha256": r["ingest"]["source"]["sha256"]}
+            res[d.name] = r
+    return res
